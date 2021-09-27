@@ -3,7 +3,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 63.25, 64, 0.25, 64, 0.25, 1.25, 63.25, 1.25 )
+points = PoolVector2Array( 64, 28.25, 0, 29.25, 0.25, 1.25, 63.25, 1.25 )
 
 [resource]
 0/name = ""

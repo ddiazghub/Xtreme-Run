@@ -12,17 +12,25 @@ public class Player : KinematicBody2D
     public int MovementSpeed;
     //Help
     [Export]
-    public int TopJumpSpeed;
+    public int TopFallSpeed;
     
     [Export]
     public float MaxJumpTime;
-    
+
+    [Signal]
+    public delegate void Dead();
 
     private bool _canJump = true;
     private bool _jumping = false;
     private bool _right = true;
+    private bool _onJumpObject = false;
+    private bool _released = true;
+    private bool _sliding = false;
     private Vector2 _linearVelocity = new Vector2();
     private Area2D _groundCollisionCheck;
+    private Area2D _frontCollisionCheck;
+    private Area2D _jumpObjectCollisionCheck;
+    private Timer _slideTimer;
     private AnimatedSprite _animation;
     private float _jumptime = 0;
 
@@ -30,15 +38,46 @@ public class Player : KinematicBody2D
     {
         this._animation = this.GetNode<AnimatedSprite>("Animation");
         this._animation.Play("running");
+        this._slideTimer = this.GetNode<Timer>("SlideTimer");
+        this._slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
         this._groundCollisionCheck = this.GetNode<Area2D>("GroundCollisionCheck");
         this._groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
+        this._groundCollisionCheck.Connect("body_exited", this, nameof(this.OnGroundCollisionCheckBodyExited));
+        this._jumpObjectCollisionCheck = this.GetNode<Area2D>("JumpObjectCollisionCheck");
+        this._jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
+        this._jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnJumpObjectCollisionCheckAreaExited));
+        this._frontCollisionCheck = this.GetNode<Area2D>("FrontCollisionCheck");
+        this._frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        if (Input.IsActionPressed("jump") && this._canJump)
+        GD.Print(this._frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled);
+        if (Input.IsActionPressed("jump") && !this._sliding)
         {
-            this._jumping = true;
+            if (this._canJump || (this._onJumpObject && this._released))
+            {
+                this._jumping = true;
+                this._released = false;
+                this._canJump = false;
+                this._jumptime = 0;
+            }
+        }
+
+        if (Input.IsActionJustReleased("jump") )
+        {
+            this._released = true;
+        }
+
+        if (Input.IsActionPressed("down") && this.IsOnFloor() && !this._sliding)
+        {
+            this._animation.Play("sliding");
+            this._frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = true;
+            this._frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").Disabled = false;
+            this.GetNode<CollisionShape2D>("RunningCollision").Disabled = true;
+            this.GetNode<CollisionShape2D>("SlidingCollision").Disabled = false;
+            this._sliding = true;
+            this._slideTimer.Start();
         }
 
         if (this._jumping)
@@ -48,7 +87,6 @@ public class Player : KinematicBody2D
             if (this._jumptime > this.MaxJumpTime)
             {
                 this._jumping = false;
-                this._canJump = false;
             }
 
             this._jumptime += delta;
@@ -60,15 +98,15 @@ public class Player : KinematicBody2D
             this._linearVelocity.x = this.MovementSpeed;
 
         if (this._linearVelocity.y > -10000 && this._linearVelocity.y < 10000)
-            this._linearVelocity.y += this.Gravity / 3;
+            this._linearVelocity.y += this.Gravity / 5;
         else
             this._linearVelocity.y += this.Gravity;
         
-        if (this._linearVelocity.y > this.TopJumpSpeed)
-            this._linearVelocity.y = this.TopJumpSpeed;
+        if (this._linearVelocity.y > this.TopFallSpeed)
+            this._linearVelocity.y = this.TopFallSpeed;
 
-        if (this._linearVelocity.y < -this.TopJumpSpeed)
-            this._linearVelocity.y = -this.TopJumpSpeed;
+        if (this._linearVelocity.y < -this.JumpForce)
+            this._linearVelocity.y = -this.JumpForce;
 
         this.MoveAndSlide(this._linearVelocity * delta, Vector2.Up);
     }
@@ -78,8 +116,68 @@ public class Player : KinematicBody2D
         if (body.IsInGroup("solid"))
         {
             this._canJump = true;
+            this._frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = false;
+        }
+    }
+
+    public void OnGroundCollisionCheckBodyExited(Node body)
+    {
+        if (body.IsInGroup("solid")) 
+        {
+            this._frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = true;
+
+            if (!this._jumping)
+            {
+                this._canJump = false;
+                this._linearVelocity.y = 5000;
+            }
+        }
+    }
+
+    public void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
+    {
+        if (area.IsInGroup("jump"))
+        {
+            this._onJumpObject = true;
+        }
+
+        if (area.IsInGroup("jump_auto"))
+        {
+            this._jumping = true;
+            this._released = false;
+            this._canJump = false;
             this._jumptime = 0;
         }
+    }
+
+    public void OnJumpObjectCollisionCheckAreaExited(Area2D area)
+    {
+        this._onJumpObject = false;
+        if (area.IsInGroup("jump") && !this.IsOnFloor())
+        {
+            this._canJump = false;
+        }
+    }
+
+    public void OnFrontCollisionCheckBodyEntered(Node body)
+    {
+        if (body.IsInGroup("solid"))
+        {
+            EmitSignal("Dead");
+        }
+    }
+
+    public void OnSlideTimerTimeout()
+    {
+        this._animation.Play("running");
+        if (this.IsOnFloor())
+            this._frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = false;
+        this._frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").Disabled = true;
+        this.GetNode<CollisionShape2D>("RunningCollision").Disabled = false;
+        this.GetNode<CollisionShape2D>("SlidingCollision").Disabled = true;
+        this._frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").Disabled = false;
+        this._sliding = false;
+
     }
     /*
 
