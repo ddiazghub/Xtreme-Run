@@ -49,5 +49,6 @@ public class Main : Node2D
         this.positions.Clear();
         this._camera.Position = this._player.Position;
         this._player.Position = new Vector2(-1060.44f, 596.183f);
+        this._player.ChangeState(PlayerStates.RUNNING);
     }
 }

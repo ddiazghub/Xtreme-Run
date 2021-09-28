@@ -1,7 +1,7 @@
-using Godot;
+/*using Godot;
 using System;
 
-public class Player : KinematicBody2D
+public class PlayerFSM : KinematicBody2D
 {
     public PlayerState state;
     public PlayerStateFactory stateFactory;
@@ -9,16 +9,10 @@ public class Player : KinematicBody2D
 
     [Signal]
     public delegate void Dead();
-
     public override void _Ready()
     {
-        this.stateFactory = new PlayerStateFactory();
+        this.stateFactory = new PlayerStateFactory(this);
         this.ChangeState(PlayerStates.RUNNING);
-    }
-
-    public override void _Process(float delta)
-    {
-        GD.Print(this.state.GetState());
     }
 
     public void ChangeState(PlayerStates state)
@@ -28,19 +22,11 @@ public class Player : KinematicBody2D
             this.state.QueueFree();
         }
 
-
         this.state = this.stateFactory.New(state);
-        this.AddChild(this.state);
-        this.state.Setup();
     }
 }
-
-
-/*using Godot;
-using System;
-
-public class Player : KinematicBody2D
-{
+*/
+/*
     [Export]
     public int JumpForce;
     [Export]
@@ -64,16 +50,16 @@ public class Player : KinematicBody2D
     private bool _onJumpObject = false;
     private bool _released = true;
     private bool _sliding = false;
-    private Vector2 _linearVelocity = new Vector2();
     private Area2D _groundCollisionCheck;
     private Area2D _frontCollisionCheck;
     private Area2D _jumpObjectCollisionCheck;
     private Timer _slideTimer;
     private AnimatedSprite _animation;
     private float _jumptime = 0;
+*/
 
-    public override void _Ready()
-    {
+/*
+
         this._animation = this.GetNode<AnimatedSprite>("Animation");
         this._animation.Play("running");
         this._slideTimer = this.GetNode<Timer>("SlideTimer");
@@ -87,6 +73,7 @@ public class Player : KinematicBody2D
         this._frontCollisionCheck = this.GetNode<Area2D>("FrontCollisionCheck");
         this._frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
     }
+
 
     public override void _PhysicsProcess(float delta)
     {
@@ -217,7 +204,6 @@ public class Player : KinematicBody2D
         this._sliding = false;
 
     }
-*//*
 
  Grounded?
 var grounded = false 
@@ -294,5 +280,4 @@ func _on_ground_check_body_exit( body ):
             force.x += 1;
         }
     }
-    */
-
+}*/

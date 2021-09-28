@@ -11,11 +11,6 @@ script = ExtResource( 3 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1060.44, 596.183 )
-JumpForce = 80000
-Gravity = 10000
-MovementSpeed = 44000
-TopFallSpeed = 100000
-MaxJumpTime = 0.04
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( -471.724, 477.735 )

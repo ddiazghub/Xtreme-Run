@@ -31,25 +31,25 @@ animations = [ {
 radius = 21.0826
 height = 59.3771
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 21.248
 height = 0.0
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 15.1032, 3.33448 )
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=5]
 radius = 5.54322
 height = 82.8847
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=6]
 radius = 5.91085
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 4.75434
 height = 31.4427
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=8]
 radius = 28.9089
 height = 50.1984
 
@@ -72,7 +72,7 @@ shape = SubResource( 2 )
 
 [node name="SlidingCollision" type="CollisionShape2D" parent="."]
 position = Vector2( 8.46354, 28.0633 )
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="GroundCollisionCheck" type="Area2D" parent="."]
@@ -83,32 +83,32 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GroundCollisionCheck"]
 position = Vector2( 7.48002, 46.7997 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="FrontCollisionCheck" type="Area2D" parent="."]
 
 [node name="RunningCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
 position = Vector2( 26.3478, -6.06492 )
-shape = SubResource( 8 )
+shape = SubResource( 5 )
 
 [node name="SlidingCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
 position = Vector2( 26.4737, 26.4322 )
-shape = SubResource( 9 )
-disabled = true
+shape = SubResource( 6 )
 
 [node name="JumpingCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
 position = Vector2( 25.6868, 3.11877 )
-shape = SubResource( 10 )
-disabled = true
+shape = SubResource( 7 )
 
 [node name="JumpObjectCollisionCheck" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JumpObjectCollisionCheck"]
 position = Vector2( 7.57662, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="SlideTimer" type="Timer" parent="."]
 wait_time = 0.5
+
+[node name="JumpTimer" type="Timer" parent="."]
