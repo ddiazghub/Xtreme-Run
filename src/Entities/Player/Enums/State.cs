@@ -1,6 +1,6 @@
-public enum State {
-    RUNNING,
-    MAIN_ACTION,
+public enum PersistentState {
+    ON_GROUND,
+    ON_AIR,
     SECONDARY_ACTION,
     FALLING
 }

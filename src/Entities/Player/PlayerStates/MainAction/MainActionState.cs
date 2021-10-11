@@ -15,7 +15,7 @@ public class MainActionState: PlayerState {
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
 
-        this.SetHitbox(State.MAIN_ACTION);
+        this.SetHitbox(PersistentState.ON_AIR);
         
         this.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
         this.jumpTimer.WaitTime = this.maxJumpTime;
@@ -105,7 +105,7 @@ public class MainActionState: PlayerState {
 
         if (!this.jumping)
         {
-            this.player.ChangeState(State.RUNNING);
+            this.player.ChangePersistentState(PersistentState.ON_GROUND);
         }
     }
 
