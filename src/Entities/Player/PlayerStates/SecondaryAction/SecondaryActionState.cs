@@ -11,7 +11,7 @@ public class SecondaryActionState: PlayerState {
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
 
-        this.SetHitbox(PersistentState.SECONDARY_ACTION);
+        this.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
 
         this.slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
         this.slideTimer.Start();
@@ -44,16 +44,16 @@ public class SecondaryActionState: PlayerState {
 
         if (area.IsInGroup("jump_auto"))
         {
-            this.player.ChangePersistentState(PersistentState.ON_AIR);
+            this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);
         }
     }
 
     public void OnSlideTimerTimeout()
     {
         if (this.player.IsOnFloor())
-            this.player.ChangePersistentState(PersistentState.ON_GROUND);
+            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         else
-            this.player.ChangePersistentState(PersistentState.ON_AIR);
+            this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);
     }
 
     public override string GetState()

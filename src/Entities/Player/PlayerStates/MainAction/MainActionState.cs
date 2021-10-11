@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+/*
 public class MainActionState: PlayerState {
     private bool onJumpPad = false;
     public bool jumping = true;
@@ -15,7 +15,7 @@ public class MainActionState: PlayerState {
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
 
-        this.SetHitbox(PersistentState.ON_AIR);
+        this.SetHitbox(PlayerPersistentState.ON_AIR);
         
         this.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
         this.jumpTimer.WaitTime = this.maxJumpTime;
@@ -105,12 +105,8 @@ public class MainActionState: PlayerState {
 
         if (!this.jumping)
         {
-            this.player.ChangePersistentState(PersistentState.ON_GROUND);
+            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         }
     }
-
-    public override string GetState()
-    {
-        return "Jumping";
-    }
 }
+*/

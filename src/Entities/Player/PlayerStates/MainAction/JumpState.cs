@@ -1,20 +1,16 @@
 using Godot;
 using System;
 
-public class JumpingState: PlayerState {
+public class Jump: PlayerState {
     private bool onJumpPad = false;
-    public bool jumping = true;
-    public bool canJump = false;
+    public bool jumping = false;
+    public bool canUseJumpPad = true;
 
 
     public override void _Init()
     {
         this.player.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
         this.player.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnJumpObjectCollisionCheckAreaExited));
-        this.player.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
-        this.player.groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
-
-        this.player.SetHitbox(PersistentState.ON_AIR);
         
         this.player.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
         this.player.jumpTimer.WaitTime = this.player.maxJumpTime;
@@ -24,23 +20,25 @@ public class JumpingState: PlayerState {
     public override void _StatePhysicsProcess(float delta)
     {
         if (Input.IsActionJustReleased("action_main")) {
-            this.canJump = true;
+            this.canUseJumpPad = true;
         }
 
-        if (Input.IsActionPressed("action_main") && this.onJumpPad && this.canJump)
-        {
-            this.onJumpPad = false;
-            this.jumping = true;
-            this.player.jumpTimer.Start();
-            this.canJump = false;
-        }
+        if (Input.IsActionPressed("action_main")) {
+            if (this.player.persistentState is OnGroundState) {
+                this.jumping = true;
+                this.player.jumpTimer.Start();
+                this.canUseJumpPad = false;
+            }
 
-        if (Input.IsActionPressed("action_secondary"))
-        {
-            this.jumping = false;
-            this.player.linearVelocity.y = 100000;
+            if (this.player.persistentState is OnAirState) {
+                if (this.onJumpPad && this.canUseJumpPad) {
+                    this.jumping = true;
+                    this.onJumpPad = false;
+                    this.player.jumpTimer.Start();
+                    this.canUseJumpPad = false;
+                }
+            }
         }
-
 
         if (this.jumping)
         {
@@ -53,13 +51,6 @@ public class JumpingState: PlayerState {
         this.jumping = false;
     }
 
-    public void OnFrontCollisionCheckBodyEntered(Node body)
-    {
-        if (body.IsInGroup("solid") || body.IsInGroup("hazard"))
-        {
-            this.player.EmitSignal("Dead");
-        }
-    }
 
     public void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
     {
@@ -80,18 +71,6 @@ public class JumpingState: PlayerState {
         if (area.IsInGroup("jump"))
         {
             this.onJumpPad = false;
-        }
-    }
-
-    public void OnGroundCollisionCheckBodyEntered(Node body)
-    {
-        if (body.IsInGroup("hazard")) {
-            this.player.EmitSignal("Dead");
-        }
-
-        if (!this.jumping)
-        {
-            this.player.ChangePersistentState(PersistentState.ON_GROUND);
         }
     }
 }

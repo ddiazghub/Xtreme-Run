@@ -2,28 +2,18 @@ using Godot;
 using System;
 
 public class PlayerStateFactory {
-    public PlayerState New(PersistentState state)
+    public PlayerState New(PlayerPersistentState state)
     {
         PlayerState newState = null;
 
         switch (state)
         {
-            case PersistentState.ON_GROUND:
+            case PlayerPersistentState.ON_GROUND:
                 newState = new OnGroundState();
                 break;
 
-            case PersistentState.ON_AIR:
-                newState = new MainActionState();
-                break;
-
-            case PersistentState.SECONDARY_ACTION:
-                newState = new SecondaryActionState();
-                break;
-                
-            case PersistentState.FALLING:
-                newState = new MainActionState();
-                ((MainActionState) newState).jumping = false;
-                ((MainActionState) newState).canJump = true;
+            case PlayerPersistentState.ON_AIR:
+                newState = new OnAirState();
                 break;
         }
 
@@ -37,11 +27,11 @@ public class PlayerStateFactory {
         switch (state)
         {
             case PlayerMainAction.JUMP:
-                newState = new OnGroundState();
+                newState = new Jump();
                 break;
 
             case PlayerMainAction.JETPACK:
-                newState = new MainActionState();
+                newState = new Jump();
                 break;
 
             case PlayerMainAction.GLIDE:
@@ -49,9 +39,7 @@ public class PlayerStateFactory {
                 break;
                 
             case PlayerMainAction.TELEPORT:
-                newState = new MainActionState();
-                ((MainActionState) newState).jumping = false;
-                ((MainActionState) newState).canJump = true;
+                newState = new Jump();
                 break;
         }
 
@@ -69,17 +57,15 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerSecondaryAction.SWITCH_GRAVITY:
-                newState = new MainActionState();
+                newState = new Jump();
                 break;
 
             case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:
-                newState = new SecondaryActionState();
+                newState = new Jump();
                 break;
                 
             case PlayerSecondaryAction.SPAWN_BLOCKS:
-                newState = new MainActionState();
-                ((MainActionState) newState).jumping = false;
-                ((MainActionState) newState).canJump = true;
+                newState = new Jump();
                 break;
         }
 

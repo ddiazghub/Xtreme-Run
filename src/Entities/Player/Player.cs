@@ -34,7 +34,7 @@ public class Player : KinematicBody2D
         this.frontCollisionCheck = this.GetNode<Area2D>("FrontCollisionCheck");
 
         this.stateFactory = new PlayerStateFactory();
-        this.ChangePersistentState(PersistentState.ON_GROUND);
+        this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         this.ChangeMainAction(PlayerMainAction.JUMP);
         this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
     }
@@ -47,7 +47,7 @@ public class Player : KinematicBody2D
         this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
     }
 
-    public void ChangePersistentState(PersistentState state)
+    public void ChangePersistentState(PlayerPersistentState state)
     {
         if (this.persistentState != null)
         {
@@ -84,9 +84,9 @@ public class Player : KinematicBody2D
         this.secondaryAction.Setup();
     }
 
-    public void SetHitbox(PersistentState state) {
+    public void SetHitbox(PlayerPersistentState state) {
         switch (state) {
-            case PersistentState.ON_GROUND:
+            case PlayerPersistentState.ON_GROUND:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", false);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
@@ -94,7 +94,7 @@ public class Player : KinematicBody2D
                 this.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
                 break;
 
-            case PersistentState.ON_AIR:
+            case PlayerPersistentState.ON_AIR:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", false);
@@ -102,7 +102,7 @@ public class Player : KinematicBody2D
                 this.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
                 break;
 
-            case PersistentState.SECONDARY_ACTION:
+            case PlayerPersistentState.SECONDARY_ACTION:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", false);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
