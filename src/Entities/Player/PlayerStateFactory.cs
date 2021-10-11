@@ -15,8 +15,15 @@ public class PlayerStateFactory {
             case PlayerStates.JUMPING:
                 newState = new JumpingState();
                 break;
+
             case PlayerStates.SLIDING:
                 newState = new SlidingState();
+                break;
+                
+            case PlayerStates.FALLING:
+                newState = new JumpingState();
+                ((JumpingState) newState).jumping = false;
+                ((JumpingState) newState).canJump = true;
                 break;
         }
 

@@ -10,12 +10,8 @@ public class SlidingState: PlayerState {
         
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
-        
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = true;
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").Disabled = false;
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").Disabled = true;
-        this.player.GetNode<CollisionShape2D>("RunningCollision").Disabled = true;
-        this.player.GetNode<CollisionShape2D>("SlidingCollision").Disabled = false;
+
+        this.SetHitbox(PlayerStates.SLIDING);
 
         this.slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
         this.slideTimer.Start();
@@ -31,7 +27,7 @@ public class SlidingState: PlayerState {
 
     public void OnFrontCollisionCheckBodyEntered(Node body)
     {
-        if (body.IsInGroup("solid"))
+        if (body.IsInGroup("solid") || body.IsInGroup("hazard"))
         {
             this.player.EmitSignal("Dead");
         }

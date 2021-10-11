@@ -16,27 +16,25 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "running",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "sliding",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "running",
+"speed": 12.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 21.0826
-height = 59.3771
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18.2351, 47.7398 )
 
-[sub_resource type="CapsuleShape2D" id=3]
-radius = 21.248
-height = 0.0
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 18.3606, 19.0323 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 15.1032, 3.33448 )
+extents = Vector2( 18.0653, 4.62672 )
 
 [sub_resource type="CapsuleShape2D" id=5]
 radius = 5.54322
@@ -67,11 +65,11 @@ __meta__ = {
 }
 
 [node name="RunningCollision" type="CollisionShape2D" parent="."]
-position = Vector2( 8.13491, -0.795654 )
+position = Vector2( 3.97312, 1.81337 )
 shape = SubResource( 2 )
 
 [node name="SlidingCollision" type="CollisionShape2D" parent="."]
-position = Vector2( 8.46354, 28.0633 )
+position = Vector2( 4.14748, 30.1967 )
 shape = SubResource( 3 )
 disabled = true
 
@@ -82,7 +80,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GroundCollisionCheck"]
-position = Vector2( 7.48002, 46.7997 )
+position = Vector2( 3.80921, 47.1334 )
 shape = SubResource( 4 )
 
 [node name="FrontCollisionCheck" type="Area2D" parent="."]

@@ -29,7 +29,7 @@ public class TileSetMaker : Node
                 tileSet.TileSetTexture(id, this._texture);
                 tileSet.TileSetRegion(id, region);
 
-                ResourceSaver.Save("res://src/Maps/Tiles/tiles.tres", tileSet);
+                ResourceSaver.Save("res://src/Maps/Tiles/tiles1.tres", tileSet);
             }
         }
     }

@@ -10,12 +10,9 @@ public class RunningState: PlayerState {
         
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
+        this.groundCollisionCheck.Connect("body_exited", this, nameof(this.OnGroundCollisionCheckBodyExited));
 
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").Disabled = false;
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").Disabled = true;
-        this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").Disabled = true;
-        this.player.GetNode<CollisionShape2D>("RunningCollision").Disabled = false;
-        this.player.GetNode<CollisionShape2D>("SlidingCollision").Disabled = true;
+        this.SetHitbox(PlayerStates.RUNNING);
     }
 
     public override void _StatePhysicsProcess(float delta)
@@ -25,7 +22,7 @@ public class RunningState: PlayerState {
             this.player.ChangeState(PlayerStates.JUMPING);
         }
 
-        if (Input.IsActionPressed("down"))
+        if (Input.IsActionPressed("alt"))
         {
             this.player.ChangeState(PlayerStates.SLIDING);
         }
@@ -39,7 +36,7 @@ public class RunningState: PlayerState {
 
     public void OnFrontCollisionCheckBodyEntered(Node body)
     {
-        if (body.IsInGroup("solid"))
+        if (body.IsInGroup("solid") || body.IsInGroup("hazard"))
         {
             this.player.EmitSignal("Dead");
         }
@@ -57,6 +54,14 @@ public class RunningState: PlayerState {
         if (area.IsInGroup("jump_auto"))
         {
             this.player.ChangeState(PlayerStates.JUMPING);
+        }
+    }
+
+    public void OnGroundCollisionCheckBodyExited(Node body)
+    {
+        if (body.IsInGroup("solid")) 
+        {
+            this.player.ChangeState(PlayerStates.FALLING);
         }
     }
 

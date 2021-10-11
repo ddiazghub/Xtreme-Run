@@ -9,8 +9,8 @@ public abstract class PlayerState: Node2D {
     protected Timer slideTimer;
     protected Timer jumpTimer;
     protected AnimatedSprite animation;
-    public int jumpForce = 80000;
-    public int movementSpeed = 44000;
+    public int jumpForce = 100000;
+    public int movementSpeed = 42800;
     public int topFallSpeed = 100000;
     public float maxJumpTime = 0.04f;
     public bool right = true;
@@ -45,6 +45,33 @@ public abstract class PlayerState: Node2D {
         this.player.MoveAndSlide(this.player.linearVelocity * delta, Vector2.Up);
     }
 
+    public void SetHitbox(PlayerStates state) {
+        switch (state) {
+            case PlayerStates.RUNNING:
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", false);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
+                this.player.GetNode<CollisionShape2D>("RunningCollision").SetDeferred("disabled", false);
+                this.player.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
+                break;
+
+            case PlayerStates.JUMPING:
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", false);
+                this.player.GetNode<CollisionShape2D>("RunningCollision").SetDeferred("disabled", false);
+                this.player.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
+                break;
+
+            case PlayerStates.SLIDING:
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", false);
+                this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
+                this.player.GetNode<CollisionShape2D>("RunningCollision").SetDeferred("disabled", true);
+                this.player.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", false);
+                break;
+        }
+    }
     public abstract void _Init();
     public abstract void _StatePhysicsProcess(float delta);
 

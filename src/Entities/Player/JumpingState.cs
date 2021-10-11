@@ -3,7 +3,8 @@ using System;
 
 public class JumpingState: PlayerState {
     private bool onJumpPad = false;
-    private bool jumping = true;
+    public bool jumping = true;
+    public bool canJump = false;
 
 
     public override void _Init()
@@ -13,6 +14,9 @@ public class JumpingState: PlayerState {
         this.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnJumpObjectCollisionCheckAreaExited));
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
+
+        this.SetHitbox(PlayerStates.JUMPING);
+        
         this.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
         this.jumpTimer.WaitTime = this.maxJumpTime;
         this.jumpTimer.Start();
@@ -22,11 +26,24 @@ public class JumpingState: PlayerState {
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (Input.IsActionPressed("jump") && this.onJumpPad)
+        if (Input.IsActionJustReleased("jump")) {
+            this.canJump = true;
+        }
+
+        if (Input.IsActionPressed("jump") && this.onJumpPad && this.canJump)
         {
+            this.onJumpPad = false;
             this.jumping = true;
             this.jumpTimer.Start();
+            this.canJump = false;
         }
+
+        if (Input.IsActionPressed("alt"))
+        {
+            this.jumping = false;
+            this.player.linearVelocity.y = 100000;
+        }
+
 
         if (this.jumping)
         {
@@ -52,7 +69,7 @@ public class JumpingState: PlayerState {
 
     public void OnFrontCollisionCheckBodyEntered(Node body)
     {
-        if (body.IsInGroup("solid"))
+        if (body.IsInGroup("solid") || body.IsInGroup("hazard"))
         {
             this.player.EmitSignal("Dead");
         }
@@ -82,6 +99,10 @@ public class JumpingState: PlayerState {
 
     public void OnGroundCollisionCheckBodyEntered(Node body)
     {
+        if (body.IsInGroup("hazard")) {
+            this.player.EmitSignal("Dead");
+        }
+
         if (!this.jumping)
         {
             this.player.ChangeState(PlayerStates.RUNNING);

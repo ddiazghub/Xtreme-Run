@@ -4,6 +4,8 @@ using System;
 public class Player : KinematicBody2D
 {
     public PlayerState state;
+    public PlayerMainAction mainAction;
+    public PlayerSecondaryAction secondaryAction;
     public PlayerStateFactory stateFactory;
     public Vector2 linearVelocity = new Vector2();
 
@@ -18,7 +20,7 @@ public class Player : KinematicBody2D
 
     public override void _Process(float delta)
     {
-        GD.Print(this.state.GetState());
+        GD.Print(this.linearVelocity);
     }
 
     public void ChangeState(PlayerStates state)
