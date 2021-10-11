@@ -2,28 +2,28 @@ using Godot;
 using System;
 
 public class PlayerStateFactory {
-    public PlayerState New(PlayerStates state)
+    public PlayerState New(State state)
     {
         PlayerState newState = null;
 
         switch (state)
         {
-            case PlayerStates.RUNNING:
+            case State.RUNNING:
                 newState = new RunningState();
                 break;
 
-            case PlayerStates.JUMPING:
-                newState = new JumpingState();
+            case State.MAIN_ACTION:
+                newState = new MainActionState();
                 break;
 
-            case PlayerStates.SLIDING:
-                newState = new SlidingState();
+            case State.SECONDARY_ACTION:
+                newState = new SecondaryActionState();
                 break;
                 
-            case PlayerStates.FALLING:
-                newState = new JumpingState();
-                ((JumpingState) newState).jumping = false;
-                ((JumpingState) newState).canJump = true;
+            case State.FALLING:
+                newState = new MainActionState();
+                ((MainActionState) newState).jumping = false;
+                ((MainActionState) newState).canJump = true;
                 break;
         }
 

@@ -4,8 +4,8 @@ using System;
 public class Player : KinematicBody2D
 {
     public PlayerState state;
-    public PlayerMainAction mainAction;
-    public PlayerSecondaryAction secondaryAction;
+    public PlayerMainAction mainAction = PlayerMainAction.JUMP;
+    public PlayerSecondaryAction secondaryAction = PlayerSecondaryAction.FASTFALL_AND_ROLL;
     public PlayerStateFactory stateFactory;
     public Vector2 linearVelocity = new Vector2();
 
@@ -15,7 +15,7 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         this.stateFactory = new PlayerStateFactory();
-        this.ChangeState(PlayerStates.RUNNING);
+        this.ChangeState(State.RUNNING);
     }
 
     public override void _Process(float delta)
@@ -23,7 +23,7 @@ public class Player : KinematicBody2D
         GD.Print(this.linearVelocity);
     }
 
-    public void ChangeState(PlayerStates state)
+    public void ChangeState(State state)
     {
         if (this.state != null)
         {

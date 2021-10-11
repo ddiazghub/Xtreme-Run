@@ -1,33 +1,24 @@
 using Godot;
 using System;
 
-public class RunningState: PlayerState {
+public class SecondaryActionState: PlayerState {
 
 
     public override void _Init()
     {
-        this.animation.Play("running");
+        this.animation.Play("sliding");
         
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
-        this.groundCollisionCheck.Connect("body_exited", this, nameof(this.OnGroundCollisionCheckBodyExited));
 
-        this.SetHitbox(PlayerStates.RUNNING);
+        this.SetHitbox(State.SECONDARY_ACTION);
+
+        this.slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
+        this.slideTimer.Start();
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (Input.IsActionPressed("jump"))
-        {
-            this.player.ChangeState(PlayerStates.JUMPING);
-        }
-
-        if (Input.IsActionPressed("alt"))
-        {
-            this.player.ChangeState(PlayerStates.SLIDING);
-        }
-
-
         if (this.right)
             this.player.linearVelocity.x = this.movementSpeed;
         else
@@ -53,20 +44,20 @@ public class RunningState: PlayerState {
 
         if (area.IsInGroup("jump_auto"))
         {
-            this.player.ChangeState(PlayerStates.JUMPING);
+            this.player.ChangeState(State.MAIN_ACTION);
         }
     }
 
-    public void OnGroundCollisionCheckBodyExited(Node body)
+    public void OnSlideTimerTimeout()
     {
-        if (body.IsInGroup("solid")) 
-        {
-            this.player.ChangeState(PlayerStates.FALLING);
-        }
+        if (this.player.IsOnFloor())
+            this.player.ChangeState(State.RUNNING);
+        else
+            this.player.ChangeState(State.MAIN_ACTION);
     }
 
     public override string GetState()
     {
-        return "Running";
+        return "Sliding";
     }
 }

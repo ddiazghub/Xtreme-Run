@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class JumpingState: PlayerState {
+public class MainActionState: PlayerState {
     private bool onJumpPad = false;
     public bool jumping = true;
     public bool canJump = false;
@@ -15,7 +15,7 @@ public class JumpingState: PlayerState {
         this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
         this.groundCollisionCheck.Connect("body_entered", this, nameof(this.OnGroundCollisionCheckBodyEntered));
 
-        this.SetHitbox(PlayerStates.JUMPING);
+        this.SetHitbox(State.MAIN_ACTION);
         
         this.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
         this.jumpTimer.WaitTime = this.maxJumpTime;
@@ -26,11 +26,11 @@ public class JumpingState: PlayerState {
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (Input.IsActionJustReleased("jump")) {
+        if (Input.IsActionJustReleased("action_main")) {
             this.canJump = true;
         }
 
-        if (Input.IsActionPressed("jump") && this.onJumpPad && this.canJump)
+        if (Input.IsActionPressed("action_main") && this.onJumpPad && this.canJump)
         {
             this.onJumpPad = false;
             this.jumping = true;
@@ -38,7 +38,7 @@ public class JumpingState: PlayerState {
             this.canJump = false;
         }
 
-        if (Input.IsActionPressed("alt"))
+        if (Input.IsActionPressed("action_secondary"))
         {
             this.jumping = false;
             this.player.linearVelocity.y = 100000;
@@ -105,7 +105,7 @@ public class JumpingState: PlayerState {
 
         if (!this.jumping)
         {
-            this.player.ChangeState(PlayerStates.RUNNING);
+            this.player.ChangeState(State.RUNNING);
         }
     }
 

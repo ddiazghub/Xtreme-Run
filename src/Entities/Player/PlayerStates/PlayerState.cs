@@ -27,27 +27,26 @@ public abstract class PlayerState: Node2D {
         this.jumpObjectCollisionCheck = this.player.GetNode<Area2D>("JumpObjectCollisionCheck");
         this.frontCollisionCheck = this.player.GetNode<Area2D>("FrontCollisionCheck");
 
-
-
-
         this._Init();
     }
 
     public override void _PhysicsProcess(float delta)
     {
         this._StatePhysicsProcess(delta);
+        this.ApplyGravity();
+        this.player.MoveAndSlide(this.player.linearVelocity * delta, Vector2.Up);
+    }
 
+    public void ApplyGravity() {
         if (this.player.linearVelocity.y > -10000 && this.player.linearVelocity.y < 10000)
             this.player.linearVelocity.y += this.gravity / 5;
         else
             this.player.linearVelocity.y += this.gravity;
-
-        this.player.MoveAndSlide(this.player.linearVelocity * delta, Vector2.Up);
     }
 
-    public void SetHitbox(PlayerStates state) {
+    public void SetHitbox(State state) {
         switch (state) {
-            case PlayerStates.RUNNING:
+            case State.RUNNING:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", false);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
@@ -55,7 +54,7 @@ public abstract class PlayerState: Node2D {
                 this.player.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
                 break;
 
-            case PlayerStates.JUMPING:
+            case State.MAIN_ACTION:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", false);
@@ -63,7 +62,7 @@ public abstract class PlayerState: Node2D {
                 this.player.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
                 break;
 
-            case PlayerStates.SLIDING:
+            case State.SECONDARY_ACTION:
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("RunningCollisionShape").SetDeferred("disabled", true);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("SlidingCollisionShape").SetDeferred("disabled", false);
                 this.frontCollisionCheck.GetNode<CollisionShape2D>("JumpingCollisionShape").SetDeferred("disabled", true);
