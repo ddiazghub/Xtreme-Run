@@ -2,9 +2,9 @@ using Godot;
 using System;
 
 public class PlayerStateFactory {
-    public PlayerState New(PlayerPersistentState state)
+    public PersistentState New(PlayerPersistentState state)
     {
-        PlayerState newState = null;
+        PersistentState newState = null;
 
         switch (state)
         {
@@ -20,9 +20,9 @@ public class PlayerStateFactory {
         return newState;
     }
 
-    public PlayerState New(PlayerMainAction state)
+    public MainAction New(PlayerMainAction state)
     {
-        PlayerState newState = null;
+        MainAction newState = null;
 
         switch (state)
         {
@@ -46,9 +46,9 @@ public class PlayerStateFactory {
         return newState;
     }
 
-    public PlayerState New(PlayerSecondaryAction state)
+    public SecondaryAction New(PlayerSecondaryAction state)
     {
-        PlayerState newState = null;
+        SecondaryAction newState = null;
 
         switch (state)
         {
@@ -57,15 +57,15 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerSecondaryAction.SWITCH_GRAVITY:
-                newState = new Jump();
+                newState = new FastFallAndRoll();
                 break;
 
             case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:
-                newState = new Jump();
+                newState = new FastFallAndRoll();
                 break;
                 
             case PlayerSecondaryAction.SPAWN_BLOCKS:
-                newState = new Jump();
+                newState = new FastFallAndRoll();
                 break;
         }
 

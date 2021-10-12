@@ -17,9 +17,9 @@ public class Player : KinematicBody2D
     public Timer startTimer;
     public bool blocked;
     public AnimatedSprite animation;
-    public PlayerState persistentState;
-    public PlayerState mainAction;
-    public PlayerState secondaryAction;
+    public PersistentState persistentState;
+    public MainAction mainAction;
+    public SecondaryAction secondaryAction;
     public PlayerStateFactory stateFactory;
     public Vector2 linearVelocity = new Vector2();
 
