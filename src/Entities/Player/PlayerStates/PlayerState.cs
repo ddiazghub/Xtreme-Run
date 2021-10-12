@@ -14,4 +14,12 @@ public abstract class PlayerState: Node2D {
     public abstract void _StatePhysicsProcess(float delta);
 
     public abstract void _Init();
+
+    public virtual void Block() {
+
+    }
+
+    public virtual void UnBlock() {
+        
+    }
 }

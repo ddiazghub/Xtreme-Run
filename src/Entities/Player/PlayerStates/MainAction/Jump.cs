@@ -5,7 +5,7 @@ public class Jump: PlayerState {
     private bool onJumpPad = false;
     public bool jumping = false;
     public bool canUseJumpPad = true;
-
+    private bool blocked = false;
 
     public override void _Init()
     {
@@ -23,7 +23,7 @@ public class Jump: PlayerState {
             this.canUseJumpPad = true;
         }
 
-        if (Input.IsActionPressed("action_main")) {
+        if (Input.IsActionPressed("action_main") && !this.blocked) {
             if (this.player.persistentState is OnGroundState) {
                 this.jumping = true;
                 this.player.jumpTimer.Start();
@@ -44,6 +44,16 @@ public class Jump: PlayerState {
         {
             this.player.linearVelocity.y -= this.player.jumpForce;
         }
+    }
+
+    public override void Block()
+    {
+        this.blocked = true;
+    }
+
+    public override void UnBlock()
+    {
+        this.blocked = false;
     }
 
     public void OnJumpTimerTimeout()

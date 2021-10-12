@@ -35,7 +35,7 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerMainAction.GLIDE:
-                newState = new SecondaryActionState();
+                newState = new Jump();
                 break;
                 
             case PlayerMainAction.TELEPORT:
@@ -53,7 +53,7 @@ public class PlayerStateFactory {
         switch (state)
         {
             case PlayerSecondaryAction.FASTFALL_AND_ROLL:
-                newState = new OnGroundState();
+                newState = new FastFallAndRoll();
                 break;
 
             case PlayerSecondaryAction.SWITCH_GRAVITY:

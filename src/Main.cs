@@ -40,7 +40,9 @@ public class Main : Node2D
     public override void _Draw()
     {
         this.positions.Add(this._player.Position);
-        this.DrawPolyline(this.positions.ToArray(), Color.Color8(0, 0, 255));
+
+        if (this.positions.Count > 2) 
+            this.DrawPolyline(this.positions.ToArray(), Color.Color8(0, 0, 255));
 
     }
 
@@ -49,6 +51,6 @@ public class Main : Node2D
         this.positions.Clear();
         this._camera.Position = this._player.Position;
         this._player.Position = new Vector2(-1060.44f, 596.183f);
-        this._player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
+        this._player._Ready();
     }
 }

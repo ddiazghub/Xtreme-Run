@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+/*
 public class SecondaryActionState: PlayerState {
 
 
@@ -35,12 +35,10 @@ public class SecondaryActionState: PlayerState {
 
     public void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
     {
-        /*
         if (area.IsInGroup("jump"))
         {
             this._onJumpObject = true;
         }
-        */
 
         if (area.IsInGroup("jump_auto"))
         {
@@ -61,3 +59,4 @@ public class SecondaryActionState: PlayerState {
         return "Sliding";
     }
 }
+*/

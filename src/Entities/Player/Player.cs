@@ -14,6 +14,8 @@ public class Player : KinematicBody2D
     public Area2D jumpObjectCollisionCheck;
     public Timer slideTimer;
     public Timer jumpTimer;
+    public Timer startTimer;
+    public bool blocked = true;
     public AnimatedSprite animation;
     public PlayerState persistentState;
     public PlayerState mainAction;
@@ -27,24 +29,31 @@ public class Player : KinematicBody2D
     public override void _Ready()
     {
         this.animation = this.GetNode<AnimatedSprite>("Animation");
+        this.startTimer = this.GetNode<Timer>("StartTimer");
         this.slideTimer = this.GetNode<Timer>("SlideTimer");
         this.jumpTimer = this.GetNode<Timer>("JumpTimer");
         this.groundCollisionCheck = this.GetNode<Area2D>("GroundCollisionCheck");
         this.jumpObjectCollisionCheck = this.GetNode<Area2D>("JumpObjectCollisionCheck");
         this.frontCollisionCheck = this.GetNode<Area2D>("FrontCollisionCheck");
 
+        this.startTimer.Connect("timeout", this, nameof(this.OnStartTimerTimeout));
+
         this.stateFactory = new PlayerStateFactory();
         this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         this.ChangeMainAction(PlayerMainAction.JUMP);
         this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
+
+        this.startTimer.Start();
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        this.persistentState._StatePhysicsProcess(delta);
-        this.mainAction._StatePhysicsProcess(delta);
-        this.secondaryAction._StatePhysicsProcess(delta);
-        this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
+        if (!this.blocked) {
+            this.persistentState._StatePhysicsProcess(delta);
+            this.mainAction._StatePhysicsProcess(delta);
+            this.secondaryAction._StatePhysicsProcess(delta);
+            this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
+        }
     }
 
     public void ChangePersistentState(PlayerPersistentState state)
@@ -110,6 +119,10 @@ public class Player : KinematicBody2D
                 this.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", false);
                 break;
         }
+    }
+
+    public void OnStartTimerTimeout() {
+        this.blocked = false;
     }
 }
 
