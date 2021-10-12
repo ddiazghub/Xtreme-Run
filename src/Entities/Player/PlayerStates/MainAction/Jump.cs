@@ -23,7 +23,7 @@ public class Jump: PlayerState {
             this.canUseJumpPad = true;
         }
 
-        if (Input.IsActionPressed("action_main") && !this.blocked) {
+        if (Input.IsActionPressed("action_main") && !(this.blocked || this.player.blocked)) {
             if (this.player.persistentState is OnGroundState) {
                 this.jumping = true;
                 this.player.jumpTimer.Start();

@@ -17,7 +17,7 @@ public class FastFallAndRoll: PlayerState {
             this.blocked = false;
         }
 
-        if (Input.IsActionPressed("action_secondary") && !this.blocked)
+        if (Input.IsActionPressed("action_secondary") && !(this.blocked || this.player.blocked))
         {
             if (this.player.persistentState is OnGroundState) {
                 this.player.animation.Play("sliding");

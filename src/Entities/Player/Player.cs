@@ -15,7 +15,7 @@ public class Player : KinematicBody2D
     public Timer slideTimer;
     public Timer jumpTimer;
     public Timer startTimer;
-    public bool blocked = true;
+    public bool blocked;
     public AnimatedSprite animation;
     public PlayerState persistentState;
     public PlayerState mainAction;
@@ -44,16 +44,17 @@ public class Player : KinematicBody2D
         this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
 
         this.startTimer.Start();
+
+        this.blocked = true;
     }
 
     public override void _PhysicsProcess(float delta)
     {
-        if (!this.blocked) {
-            this.persistentState._StatePhysicsProcess(delta);
-            this.mainAction._StatePhysicsProcess(delta);
-            this.secondaryAction._StatePhysicsProcess(delta);
-            this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
-        }
+        GD.Print(this.linearVelocity);
+        this.persistentState._StatePhysicsProcess(delta);
+        this.mainAction._StatePhysicsProcess(delta);
+        this.secondaryAction._StatePhysicsProcess(delta);
+        this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
     }
 
     public void ChangePersistentState(PlayerPersistentState state)
