@@ -5,8 +5,8 @@ public class Player : KinematicBody2D
 {
     [Export] public int jumpForce = 100000;
     [Export] public int movementSpeed = 42800;
-    [Export] public int topFallSpeed = 100000;
     [Export] public float maxJumpTime = 0.04f;
+    [Export] public float maxFallSpeed = 100000;
     [Export] public bool right = true;
     [Export] public int gravity = 10000;
     public Area2D groundCollisionCheck;
@@ -40,7 +40,7 @@ public class Player : KinematicBody2D
 
         this.stateFactory = new PlayerStateFactory();
         this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
-        this.ChangeMainAction(PlayerMainAction.JUMP);
+        this.ChangeMainAction(PlayerMainAction.JETPACK);
         this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
 
         this.startTimer.Start();
@@ -54,7 +54,7 @@ public class Player : KinematicBody2D
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
-        this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
+        this.MoveAndSlide(this.linearVelocity * delta, Vector2.Down);
     }
 
     public void ChangePersistentState(PlayerPersistentState state)

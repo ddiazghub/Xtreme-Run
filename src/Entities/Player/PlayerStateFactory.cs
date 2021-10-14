@@ -31,7 +31,7 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerMainAction.JETPACK:
-                newState = new Jump();
+                newState = new Jetpack();
                 break;
 
             case PlayerMainAction.GLIDE:

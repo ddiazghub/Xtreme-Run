@@ -15,16 +15,16 @@ public class OnAirState: PersistentState {
     {
         base._StatePhysicsProcess(delta);
 
-        if (this.player.linearVelocity.y > this.player.topFallSpeed)
-            this.player.linearVelocity.y = this.player.topFallSpeed;
-
-        if (this.player.linearVelocity.y < -this.player.jumpForce)
-            this.player.linearVelocity.y = -this.player.jumpForce;
-
         if (this.player.linearVelocity.y > -10000 && this.player.linearVelocity.y < 10000)
             this.player.linearVelocity.y += this.player.gravity / 5;
         else
             this.player.linearVelocity.y += this.player.gravity;
+
+        if (this.player.linearVelocity.y > this.player.maxFallSpeed)
+            this.player.linearVelocity.y = this.player.maxFallSpeed;
+
+        if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
+            this.player.linearVelocity.y = -this.player.maxFallSpeed;
     }
 
     public override void OnGroundCollisionCheckBodyEntered(Node body)

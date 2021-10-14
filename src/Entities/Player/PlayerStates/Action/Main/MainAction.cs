@@ -20,7 +20,8 @@ public abstract class MainAction: PlayerState {
     public override void _StatePhysicsProcess(float delta)
     {
         if (Input.IsActionJustReleased("action_main")) {
-            this.canUseJumpPad = true;
+
+            this._ActionReleased();
         }
 
         if (Input.IsActionPressed("action_main") && !(this.blocked || this.player.blocked)) {
@@ -54,6 +55,11 @@ public abstract class MainAction: PlayerState {
             this.player.jumpTimer.Start();
             this.canUseJumpPad = false;
         }
+    }
+
+    public virtual void _ActionReleased()
+    {
+        this.canUseJumpPad = true;
     }
 
     public abstract void _ActionProcess(float delta);
