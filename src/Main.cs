@@ -22,6 +22,11 @@ public class Main : Node2D
 
     public override void _Process(float delta)
     {
+        if (Input.IsActionPressed("action_main"))
+        {
+            GD.Print(this.GetGlobalMousePosition());
+        }
+
         this.Update();
         float newCameraY = this._camera.Position.y;
 

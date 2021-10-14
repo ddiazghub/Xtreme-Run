@@ -15,6 +15,11 @@ public class OnAirState: PersistentState {
     {
         base._StatePhysicsProcess(delta);
 
+        if (this.player.IsOnFloor())
+        {
+            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
+        }
+
         if (this.player.linearVelocity.y > -10000 && this.player.linearVelocity.y < 10000)
             this.player.linearVelocity.y += this.player.gravity / 5;
         else
@@ -25,18 +30,5 @@ public class OnAirState: PersistentState {
 
         if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
             this.player.linearVelocity.y = -this.player.maxFallSpeed;
-    }
-
-    public override void OnGroundCollisionCheckBodyEntered(Node body)
-    {
-        base.OnGroundCollisionCheckBodyEntered(body);
-
-        if (body.IsInGroup("solid")) {
-            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
-        }
-    }
-
-    public override void OnGroundCollisionCheckBodyExited(Node body) {
-        
     }
 }

@@ -17,11 +17,8 @@ public class OnGroundState: PersistentState {
     public override void _StatePhysicsProcess(float delta)
     {
         base._StatePhysicsProcess(delta);
-    }
 
-    public override void OnGroundCollisionCheckBodyExited(Node body)
-    {
-        if (body.IsInGroup("solid")) 
+        if (!this.player.IsOnFloor())
         {
             this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);
         }

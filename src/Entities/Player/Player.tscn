@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://res/Sprites/run6.png" type="Texture" id=1]
 [ext_resource path="res://res/Sprites/run1.png" type="Texture" id=2]
@@ -33,20 +33,6 @@ extents = Vector2( 18.2351, 47.7398 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 18.3606, 19.0323 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 18.0653, 4.62672 )
-
-[sub_resource type="CapsuleShape2D" id=5]
-radius = 5.54322
-height = 82.8847
-
-[sub_resource type="CapsuleShape2D" id=6]
-radius = 5.91085
-
-[sub_resource type="CapsuleShape2D" id=7]
-radius = 4.75434
-height = 31.4427
-
 [sub_resource type="CapsuleShape2D" id=8]
 radius = 28.9089
 height = 50.1984
@@ -72,30 +58,6 @@ shape = SubResource( 2 )
 position = Vector2( 3.97312, 30.1967 )
 shape = SubResource( 3 )
 disabled = true
-
-[node name="GroundCollisionCheck" type="Area2D" parent="."]
-gravity = 0.0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundCollisionCheck"]
-position = Vector2( 3.80921, 47.1334 )
-shape = SubResource( 4 )
-
-[node name="FrontCollisionCheck" type="Area2D" parent="."]
-
-[node name="RunningCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
-position = Vector2( 26.3478, -6.06492 )
-shape = SubResource( 5 )
-
-[node name="SlidingCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
-position = Vector2( 26.4737, 26.4322 )
-shape = SubResource( 6 )
-
-[node name="JumpingCollisionShape" type="CollisionShape2D" parent="FrontCollisionCheck"]
-position = Vector2( 25.6868, 3.11877 )
-shape = SubResource( 7 )
 
 [node name="JumpObjectCollisionCheck" type="Area2D" parent="."]
 

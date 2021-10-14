@@ -4,7 +4,7 @@ using System;
 public class Jetpack: MainAction {
     public override void _Init()
     {
-        this.player.jumpForce = 12000;
+        this.player.jumpForce = 13500;
         this.player.maxJumpTime = 1f;
         this.player.maxFallSpeed = 50000;
     
@@ -15,7 +15,7 @@ public class Jetpack: MainAction {
     {
         base._ActionReleased();
 
-        this.jumping = false;
+        this.performingAction = false;
     }
     public override void _ActionProcess(float delta)
     {

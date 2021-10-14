@@ -35,11 +35,11 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerMainAction.GLIDE:
-                newState = new Jump();
+                newState = new Glide();
                 break;
                 
             case PlayerMainAction.TELEPORT:
-                newState = new Jump();
+                newState = new Teleport();
                 break;
         }
 

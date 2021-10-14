@@ -2,10 +2,10 @@ using Godot;
 using System;
 
 public abstract class MainAction: PlayerState {
-    private bool onJumpPad = false;
-    public bool jumping = false;
-    public bool canUseJumpPad = true;
-    private bool blocked = false;
+    protected bool onActionPad = false;
+    public bool performingAction = false;
+    public bool canUseActionPad = true;
+    protected bool blocked = false;
 
     public override void _Init()
     {
@@ -34,7 +34,7 @@ public abstract class MainAction: PlayerState {
             }
         }
 
-        if (this.jumping)
+        if (this.performingAction)
         {
             this._ActionProcess(delta);
         }
@@ -42,24 +42,24 @@ public abstract class MainAction: PlayerState {
 
     public virtual void _ActionOnGround()
     {
-        this.jumping = true;
+        this.performingAction = true;
         this.player.jumpTimer.Start();
-        this.canUseJumpPad = false;
+        this.canUseActionPad = false;
     }
 
     public virtual void _ActionOnAir()
     {
-        if (this.onJumpPad && this.canUseJumpPad) {
-            this.jumping = true;
-            this.onJumpPad = false;
+        if (this.onActionPad && this.canUseActionPad) {
+            this.performingAction = true;
+            this.onActionPad = false;
             this.player.jumpTimer.Start();
-            this.canUseJumpPad = false;
+            this.canUseActionPad = false;
         }
     }
 
     public virtual void _ActionReleased()
     {
-        this.canUseJumpPad = true;
+        this.canUseActionPad = true;
     }
 
     public abstract void _ActionProcess(float delta);
@@ -76,7 +76,7 @@ public abstract class MainAction: PlayerState {
 
     public virtual void OnJumpTimerTimeout()
     {
-        this.jumping = false;
+        this.performingAction = false;
     }
 
 
@@ -84,12 +84,12 @@ public abstract class MainAction: PlayerState {
     {
         if (area.IsInGroup("jump"))
         {
-            this.onJumpPad = true;
+            this.onActionPad = true;
         }
 
         if (area.IsInGroup("jump_auto"))
         {
-            this.jumping = true;
+            this.performingAction = true;
             this.player.jumpTimer.Start();
         }
     }
@@ -98,7 +98,7 @@ public abstract class MainAction: PlayerState {
     {
         if (area.IsInGroup("jump"))
         {
-            this.onJumpPad = false;
+            this.onActionPad = false;
         }
     }
 }
