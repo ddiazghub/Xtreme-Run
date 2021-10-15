@@ -10,9 +10,14 @@ public abstract class PersistentState: PlayerState {
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (this.player.IsOnWall() || this.player.IsOnCeiling())
+        if (this.player.IsOnWall())
         {
-            this.player.EmitSignal("Dead");
+            GD.Print("On wall");
+        }
+
+        if (this.player.IsOnCeiling())
+        {
+            GD.Print("On ceiling");
         }
 
         for (int i = 0; i < this.player.GetSlideCount(); i++)

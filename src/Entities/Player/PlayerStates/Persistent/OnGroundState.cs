@@ -9,7 +9,7 @@ public class OnGroundState: PersistentState {
         base._Init();
         this.player.animation.Play("running");
 
-        this.player.linearVelocity.y = 3000;
+        this.player.linearVelocity.y = this.player.gravity / 3;
 
         this.player.SetHitbox(PlayerPersistentState.ON_GROUND);
     }

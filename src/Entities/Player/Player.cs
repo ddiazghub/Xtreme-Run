@@ -10,8 +10,8 @@ public class Player : KinematicBody2D
     [Export] public bool right = true;
     [Export] public int gravity = 10000;
     public Area2D jumpObjectCollisionCheck;
-    public Timer slideTimer;
-    public Timer jumpTimer;
+    public Timer secondaryActionTimer;
+    public Timer mainActionTimer;
     public Timer startTimer;
     public bool blocked;
     public bool invertedGravity = false;
@@ -20,6 +20,8 @@ public class Player : KinematicBody2D
     public MainAction mainAction;
     public SecondaryAction secondaryAction;
     public PlayerStateFactory stateFactory;
+    public CollisionShape2D runningCollision;
+    public CollisionShape2D rollingCollision;
     public Vector2 linearVelocity = new Vector2();
 
     [Signal]
@@ -29,24 +31,30 @@ public class Player : KinematicBody2D
     {
         this.animation = this.GetNode<AnimatedSprite>("Animation");
         this.startTimer = this.GetNode<Timer>("StartTimer");
-        this.slideTimer = this.GetNode<Timer>("SlideTimer");
-        this.jumpTimer = this.GetNode<Timer>("JumpTimer");
+        this.secondaryActionTimer = this.GetNode<Timer>("SlideTimer");
+        this.mainActionTimer = this.GetNode<Timer>("JumpTimer");
         this.jumpObjectCollisionCheck = this.GetNode<Area2D>("JumpObjectCollisionCheck");
+        this.runningCollision = this.GetNode<CollisionShape2D>("RunningCollision");
+        this.rollingCollision = this.GetNode<CollisionShape2D>("SlidingCollision");
 
         this.startTimer.Connect("timeout", this, nameof(this.OnStartTimerTimeout));
 
         this.stateFactory = new PlayerStateFactory();
         this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         this.ChangeMainAction(PlayerMainAction.TELEPORT);
-        this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
+        this.ChangeSecondaryAction(PlayerSecondaryAction.SWITCH_GRAVITY);
 
         this.startTimer.Start();
 
         this.blocked = true;
+
+        if (this.invertedGravity)
+            this.invertGravity();
     }
 
     public override void _PhysicsProcess(float delta)
     {
+        GD.Print(this.persistentState.GetType());
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
@@ -91,6 +99,21 @@ public class Player : KinematicBody2D
         this.secondaryAction = this.stateFactory.New(action);
         this.AddChild(this.secondaryAction);
         this.secondaryAction.Setup();
+    }
+
+    public void invertGravity()
+    {
+        this.animation.FlipV = !this.animation.FlipV;
+        this.invertedGravity = !this.invertedGravity;
+        this.runningCollision.Position = new Vector2(this.runningCollision.Position.x, -this.runningCollision.Position.y);
+        this.rollingCollision.Position = new Vector2(this.rollingCollision.Position.x, -this.rollingCollision.Position.y);
+        this.jumpForce = -this.jumpForce;
+        this.gravity = -this.gravity;
+
+        if (this.mainAction is Teleport)
+        {
+            ((Teleport) this.mainAction).TELEPORT_DISTANCE = -((Teleport) this.mainAction).TELEPORT_DISTANCE;
+        }
     }
 
     public void SetHitbox(PlayerPersistentState state) {

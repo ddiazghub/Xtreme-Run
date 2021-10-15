@@ -2,18 +2,18 @@ using Godot;
 using System;
 
 public abstract class SecondaryAction: PlayerState {
-    private bool blocked = false;
+    protected bool blocked = false;
     public bool performingAction = false;
 
     public override void _Init()
     {
-        this.player.slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
+        this.player.secondaryActionTimer.Connect("timeout", this, nameof(this.OnSecondaryActionTimerTimeout));
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
         if (Input.IsActionJustReleased("action_secondary") && this.blocked) {
-            this.blocked = false;
+            this._ActionReleased();
         }
 
         if (Input.IsActionPressed("action_secondary") && !(this.blocked || this.player.blocked))
@@ -21,7 +21,7 @@ public abstract class SecondaryAction: PlayerState {
             if (this.player.persistentState is OnGroundState) {
                 this._ActionOnGround();
                 this.performingAction = true;
-                this.player.slideTimer.Start();
+                this.player.secondaryActionTimer.Start();
                 this.player.mainAction.Block();
                 this.blocked = true;
             }
@@ -36,6 +36,11 @@ public abstract class SecondaryAction: PlayerState {
 
     public abstract void _ActionOnAir();
 
+    public virtual void _ActionReleased()
+    {
+        this.blocked = false;
+    }
+
     public void Block()
     {
         this.blocked = true;
@@ -46,7 +51,7 @@ public abstract class SecondaryAction: PlayerState {
         this.blocked = false;
     }
 
-    public virtual void OnSlideTimerTimeout()
+    public virtual void OnSecondaryActionTimerTimeout()
     {
         this.player.animation.Play("running");
         this.player.mainAction.UnBlock();

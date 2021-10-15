@@ -57,7 +57,7 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerSecondaryAction.SWITCH_GRAVITY:
-                newState = new FastFallAndRoll();
+                newState = new SwitchGravity();
                 break;
 
             case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:

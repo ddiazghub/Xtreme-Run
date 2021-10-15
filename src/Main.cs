@@ -12,6 +12,7 @@ public class Main : Node2D
 
     public override void _Ready()
     {
+        this.GetTree().DebugCollisionsHint = true;
         this._player = this.GetNode<Player>("Player");
         this._camera = this.GetNode<Camera2D>("Camera");
 

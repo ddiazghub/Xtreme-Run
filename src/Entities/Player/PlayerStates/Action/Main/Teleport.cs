@@ -2,9 +2,14 @@ using Godot;
 using System;
 
 public class Teleport: MainAction {
-    private int TELEPORT_DISTANCE = 256;
+    public int TELEPORT_DISTANCE = 256;
     public override void _Init()
     {
+        if (this.player.invertedGravity)
+        {
+            this.TELEPORT_DISTANCE = -this.TELEPORT_DISTANCE; 
+        }
+
         this.player.jumpForce = 100000;
         this.player.maxJumpTime = 0.04f;
         this.player.maxFallSpeed = 100000;
@@ -41,7 +46,7 @@ public class Teleport: MainAction {
 
     }
 
-    public override void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
+    public override void OnMainActionObjectCollisionCheckAreaEntered(Area2D area)
     {
         if (area.IsInGroup("jump"))
         {
@@ -55,7 +60,7 @@ public class Teleport: MainAction {
         }
     }
 
-    public override void OnJumpTimerTimeout()
+    public override void OnMainActionTimerTimeout()
     {
     }
 }

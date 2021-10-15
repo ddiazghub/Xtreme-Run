@@ -13,8 +13,8 @@ public class FastFallAndRoll: SecondaryAction {
         this.player.linearVelocity.y = 100000;
     }
 
-    public override void OnSlideTimerTimeout()
+    public override void OnSecondaryActionTimerTimeout()
     {
-        base.OnSlideTimerTimeout();
+        base.OnSecondaryActionTimerTimeout();
     }
 }

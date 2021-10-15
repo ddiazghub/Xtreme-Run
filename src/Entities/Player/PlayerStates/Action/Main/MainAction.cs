@@ -9,27 +9,29 @@ public abstract class MainAction: PlayerState {
 
     public override void _Init()
     {
-        this.player.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
-        this.player.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnJumpObjectCollisionCheckAreaExited));
+        this.player.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnMainActionObjectCollisionCheckAreaEntered));
+        this.player.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnMainActionObjectCollisionCheckAreaExited));
         
-        this.player.jumpTimer.Connect("timeout", this, nameof(this.OnJumpTimerTimeout));
-        this.player.jumpTimer.WaitTime = this.player.maxJumpTime;
-        this.player.jumpTimer.Start();
+        this.player.mainActionTimer.Connect("timeout", this, nameof(this.OnMainActionTimerTimeout));
+        this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
+        this.player.mainActionTimer.Start();
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (Input.IsActionJustReleased("action_main")) {
-
+        if (Input.IsActionJustReleased("action_main"))
+        {
             this._ActionReleased();
         }
 
         if (Input.IsActionPressed("action_main") && !(this.blocked || this.player.blocked)) {
-            if (this.player.persistentState is OnGroundState) {
+            if (this.player.persistentState is OnGroundState)
+            {
                 this._ActionOnGround();
             }
 
-            if (this.player.persistentState is OnAirState) {
+            if (this.player.persistentState is OnAirState)
+            {
                 this._ActionOnAir();
             }
         }
@@ -43,7 +45,7 @@ public abstract class MainAction: PlayerState {
     public virtual void _ActionOnGround()
     {
         this.performingAction = true;
-        this.player.jumpTimer.Start();
+        this.player.mainActionTimer.Start();
         this.canUseActionPad = false;
     }
 
@@ -52,7 +54,7 @@ public abstract class MainAction: PlayerState {
         if (this.onActionPad && this.canUseActionPad) {
             this.performingAction = true;
             this.onActionPad = false;
-            this.player.jumpTimer.Start();
+            this.player.mainActionTimer.Start();
             this.canUseActionPad = false;
         }
     }
@@ -74,13 +76,13 @@ public abstract class MainAction: PlayerState {
         this.blocked = false;
     }
 
-    public virtual void OnJumpTimerTimeout()
+    public virtual void OnMainActionTimerTimeout()
     {
         this.performingAction = false;
     }
 
 
-    public virtual void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
+    public virtual void OnMainActionObjectCollisionCheckAreaEntered(Area2D area)
     {
         if (area.IsInGroup("jump"))
         {
@@ -90,11 +92,11 @@ public abstract class MainAction: PlayerState {
         if (area.IsInGroup("jump_auto"))
         {
             this.performingAction = true;
-            this.player.jumpTimer.Start();
+            this.player.mainActionTimer.Start();
         }
     }
 
-    public virtual void OnJumpObjectCollisionCheckAreaExited(Area2D area)
+    public virtual void OnMainActionObjectCollisionCheckAreaExited(Area2D area)
     {
         if (area.IsInGroup("jump"))
         {
