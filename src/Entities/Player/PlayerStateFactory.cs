@@ -61,11 +61,11 @@ public class PlayerStateFactory {
                 break;
 
             case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:
-                newState = new FastFallAndRoll();
+                newState = new TeleportAndSwitchGravity();
                 break;
                 
-            case PlayerSecondaryAction.SPAWN_BLOCKS:
-                newState = new FastFallAndRoll();
+            case PlayerSecondaryAction.SPAWN_PLATFORMS:
+                newState = new SpawnPlatforms();
                 break;
         }
 

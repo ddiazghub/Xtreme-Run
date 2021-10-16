@@ -13,6 +13,7 @@ public class Teleport: MainAction {
         this.player.jumpForce = 100000;
         this.player.maxJumpTime = 0.04f;
         this.player.maxFallSpeed = 100000;
+        this.player.gravity = 10000;
     
         base._Init();
     }

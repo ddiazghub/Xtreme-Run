@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Maps/Tiles/Level1Tileset.tres" type="TileSet" id=1]
+
+[node name="Level1Tileset" type="TileMap" groups=[
+"solid",
+]]
+tile_set = ExtResource( 1 )
+format = 1
+tile_data = PoolIntArray( 131070, 0, 0 )

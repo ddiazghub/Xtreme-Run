@@ -17,13 +17,13 @@ public class Glide: MainAction {
         this.player.jumpForce = 100000;
         this.player.maxJumpTime = 0.04f;
         this.player.maxFallSpeed = 100000;
+        this.player.gravity = 10000;
 
         base._Init();
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
-        GD.Print(this.state.ToString());
         if (Input.IsActionJustReleased("action_main")) {
 
             this._ActionReleased();
@@ -31,7 +31,10 @@ public class Glide: MainAction {
 
         if (Input.IsActionJustPressed("action_secondary"))
         {
-            this.player.gravity = 10000;
+            if (this.player.invertedGravity)
+                    this.player.gravity = -10000;
+                else
+                    this.player.gravity = 10000;
         }
 
         if (Input.IsActionPressed("action_main") && (this.state == GlideStates.NOTHING || this.state == GlideStates.CAN_GLIDE) && !this.player.blocked) {
@@ -97,7 +100,11 @@ public class Glide: MainAction {
                 break;
             
             case GlideStates.GLIDING:
-                this.player.gravity = 10000;
+                if (this.player.invertedGravity)
+                    this.player.gravity = -10000;
+                else
+                    this.player.gravity = 10000;
+
                 this.state = GlideStates.NOTHING2;
                 this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
                 break;
@@ -126,7 +133,11 @@ public class Glide: MainAction {
                 break;
             
             case GlideStates.GLIDING:
-                this.player.gravity = 10000;
+                if (this.player.invertedGravity)
+                    this.player.gravity = -10000;
+                else
+                    this.player.gravity = 10000;
+
                 this.state = GlideStates.NOTHING2;
                 this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
                 break;

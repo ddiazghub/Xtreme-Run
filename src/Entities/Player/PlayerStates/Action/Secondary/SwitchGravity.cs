@@ -29,6 +29,8 @@ public class SwitchGravity: SecondaryAction {
             this.player.gravity = -10000;
         else
             this.player.gravity = 10000;
+
+        this.player.secondaryActionTimer.Stop();
     }
 
     public void invertGravity()

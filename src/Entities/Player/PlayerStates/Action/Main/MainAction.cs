@@ -47,6 +47,7 @@ public abstract class MainAction: PlayerState {
         this.performingAction = true;
         this.player.mainActionTimer.Start();
         this.canUseActionPad = false;
+        this.player.linearVelocity.y = 0;
     }
 
     public virtual void _ActionOnAir()
@@ -56,6 +57,7 @@ public abstract class MainAction: PlayerState {
             this.onActionPad = false;
             this.player.mainActionTimer.Start();
             this.canUseActionPad = false;
+            this.player.linearVelocity.y = 0;
         }
     }
 
@@ -93,6 +95,7 @@ public abstract class MainAction: PlayerState {
         {
             this.performingAction = true;
             this.player.mainActionTimer.Start();
+            this.player.linearVelocity.y = 0;
         }
     }
 

@@ -7,6 +7,7 @@ public abstract class SecondaryAction: PlayerState {
 
     public override void _Init()
     {
+        this.player.secondaryActionTimer.Stop();
         this.player.secondaryActionTimer.Connect("timeout", this, nameof(this.OnSecondaryActionTimerTimeout));
     }
 
@@ -22,7 +23,6 @@ public abstract class SecondaryAction: PlayerState {
                 this._ActionOnGround();
                 this.performingAction = true;
                 this.player.secondaryActionTimer.Start();
-                this.player.mainAction.Block();
                 this.blocked = true;
             }
 
@@ -57,6 +57,7 @@ public abstract class SecondaryAction: PlayerState {
         this.player.mainAction.UnBlock();
         this.performingAction = false;
         this.player.SetHitbox(PlayerPersistentState.ON_GROUND);
+        this.player.secondaryActionTimer.Stop();
     }
 }
 /*

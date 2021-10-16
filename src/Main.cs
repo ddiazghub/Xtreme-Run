@@ -23,10 +23,6 @@ public class Main : Node2D
 
     public override void _Process(float delta)
     {
-        if (Input.IsActionPressed("action_main"))
-        {
-            GD.Print(this.GetGlobalMousePosition());
-        }
 
         this.Update();
         float newCameraY = this._camera.Position.y;
@@ -53,10 +49,10 @@ public class Main : Node2D
     }
 
     public void OnPlayerDead()
-    {
+    {/*
         this.positions.Clear();
         this._camera.Position = this._player.Position;
-        this._player.Position = new Vector2(-1060.44f, 596.183f);
-        this._player._Ready();
+        this._player.Position = new Vector2(-6864f, 520f);
+        this._player._Ready();*/
     }
 }

@@ -3,18 +3,19 @@ using System;
 
 public class Player : KinematicBody2D
 {
-    [Export] public int jumpForce = 100000;
+    [Export] public int jumpForce = 70000;
     [Export] public int movementSpeed = 42800;
     [Export] public float maxJumpTime = 0.04f;
-    [Export] public float maxFallSpeed = 100000;
-    [Export] public bool right = true;
+    [Export] public float maxFallSpeed = 70000;
     [Export] public int gravity = 10000;
     public Area2D jumpObjectCollisionCheck;
+    public Area2D teleportCollisionCheck;
     public Timer secondaryActionTimer;
     public Timer mainActionTimer;
     public Timer startTimer;
     public bool blocked;
     public bool invertedGravity = false;
+    public bool invincible;
     public AnimatedSprite animation;
     public PersistentState persistentState;
     public MainAction mainAction;
@@ -34,6 +35,7 @@ public class Player : KinematicBody2D
         this.secondaryActionTimer = this.GetNode<Timer>("SlideTimer");
         this.mainActionTimer = this.GetNode<Timer>("JumpTimer");
         this.jumpObjectCollisionCheck = this.GetNode<Area2D>("JumpObjectCollisionCheck");
+        this.teleportCollisionCheck = this.GetNode<Area2D>("TeleportCollisionCheck");
         this.runningCollision = this.GetNode<CollisionShape2D>("RunningCollision");
         this.rollingCollision = this.GetNode<CollisionShape2D>("SlidingCollision");
 
@@ -41,12 +43,14 @@ public class Player : KinematicBody2D
 
         this.stateFactory = new PlayerStateFactory();
         this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
-        this.ChangeMainAction(PlayerMainAction.TELEPORT);
-        this.ChangeSecondaryAction(PlayerSecondaryAction.SWITCH_GRAVITY);
+        this.ChangeMainAction(PlayerMainAction.JUMP);
+        this.ChangeSecondaryAction(PlayerSecondaryAction.FASTFALL_AND_ROLL);
 
         this.startTimer.Start();
 
+        this.Visible = true;
         this.blocked = true;
+        this.invincible = false;
 
         if (this.invertedGravity)
             this.invertGravity();
@@ -54,7 +58,14 @@ public class Player : KinematicBody2D
 
     public override void _PhysicsProcess(float delta)
     {
-        GD.Print(this.persistentState.GetType());
+        if (this.IsOnWall())
+            GD.Print("On wall");
+
+        if (this.IsOnCeiling())
+            GD.Print("On ceiling");
+
+        GD.Print(this.invertedGravity);
+
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
