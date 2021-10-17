@@ -1,6 +1,3 @@
-using Godot;
-using System;
-
 public class PlayerStateFactory {
     public PersistentState New(PlayerPersistentState state)
     {

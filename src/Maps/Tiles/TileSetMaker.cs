@@ -13,6 +13,8 @@ public class TileSetMaker : Node
         int textureHeight = this._texture.GetHeight() / (int) this._tileSize.y;
 
         TileSet tileSet = new TileSet();
+        int id = 0;
+
         for (int x = 0; x < textureWidth; x++)
         {
             for (int y = 0; y < textureHeight; y++)
@@ -24,13 +26,17 @@ public class TileSetMaker : Node
                     this._tileSize.y
                 );
 
-                int id = x + y * 10;
                 tileSet.CreateTile(id);
                 tileSet.TileSetTexture(id, this._texture);
                 tileSet.TileSetRegion(id, region);
-
-                ResourceSaver.Save("res://src/Maps/Tiles/tiles1.tres", tileSet);
+                RectangleShape2D shape = new RectangleShape2D();
+                shape.Extents = _tileSize / 2;
+                tileSet.TileSetShape(id, id, shape);
+                tileSet.TileSetShapeOffset(id, id, _tileSize / 2);
+                id++;
             }
         }
+
+        ResourceSaver.Save("res://src/Maps/Tiles/level2tiles.tres", tileSet);
     }
 }
