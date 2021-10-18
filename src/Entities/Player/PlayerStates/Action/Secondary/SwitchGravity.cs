@@ -26,9 +26,9 @@ public class SwitchGravity: SecondaryAction {
     public override void OnSecondaryActionTimerTimeout()
     {
         if (this.player.invertedGravity)
-            this.player.gravity = -10000;
+            this.player.gravity = -this.player.DEFAULT_GRAVITY;
         else
-            this.player.gravity = 10000;
+            this.player.gravity = this.player.DEFAULT_GRAVITY;
 
         this.player.secondaryActionTimer.Stop();
     }
@@ -39,9 +39,9 @@ public class SwitchGravity: SecondaryAction {
         this.player.secondaryActionTimer.Start();
 
         if (this.player.invertedGravity)
-            this.player.gravity = -8000;
+            this.player.gravity = -this.player.DEFAULT_GRAVITY + 50;
         else
-            this.player.gravity = 8000;
+            this.player.gravity = this.player.DEFAULT_GRAVITY - 50;
 
         this.blocked = true;
     }

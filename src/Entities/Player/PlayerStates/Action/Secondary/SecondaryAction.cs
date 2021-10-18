@@ -56,7 +56,6 @@ public abstract class SecondaryAction: PlayerState {
         this.player.animation.Play("running");
         this.player.mainAction.UnBlock();
         this.performingAction = false;
-        this.player.SetHitbox(PlayerPersistentState.ON_GROUND);
         this.player.secondaryActionTimer.Stop();
     }
 }

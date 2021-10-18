@@ -20,7 +20,7 @@ public class OnAirState: PersistentState {
             this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         }
 
-        if (this.player.linearVelocity.y > -10000 && this.player.linearVelocity.y < 10000)
+        if (this.player.linearVelocity.y > -this.player.DEFAULT_GRAVITY && this.player.linearVelocity.y < this.player.DEFAULT_GRAVITY)
             this.player.linearVelocity.y += this.player.gravity / 5;
         else
             this.player.linearVelocity.y += this.player.gravity;

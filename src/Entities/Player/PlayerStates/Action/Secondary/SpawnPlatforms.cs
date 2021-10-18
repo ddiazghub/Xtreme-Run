@@ -18,7 +18,7 @@ public class SpawnPlatforms: SecondaryAction {
     {
         SpawnedPlatform platform = this.platformScene.Instance<SpawnedPlatform>();
         
-        int verticalSpace = this.player.linearVelocity.y > 40000 || this.player.linearVelocity.y < -40000 ? 30 : 128;
+        int verticalSpace = this.player.linearVelocity.y > 667 || this.player.linearVelocity.y < -667 ? 30 : 128;
         if (player.invertedGravity)
             platform.Position = new Vector2( this.player.Position.x + 1.2f * ((RectangleShape2D) platform.GetNode<CollisionShape2D>("CollisionShape2D").Shape).Extents.x, this.player.Position.y - (((CapsuleShape2D) this.player.runningCollision.Shape).Height / 2 + verticalSpace));
         else

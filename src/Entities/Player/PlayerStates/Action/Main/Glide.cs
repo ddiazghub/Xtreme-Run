@@ -14,10 +14,10 @@ public class Glide: MainAction {
 
     public override void _Init()
     {
-        this.player.jumpForce = 100000;
-        this.player.maxJumpTime = 0.04f;
-        this.player.maxFallSpeed = 100000;
-        this.player.gravity = 10000;
+        this.player.jumpForce = this.player.DEFAULT_JUMPFORCE;
+        this.player.maxJumpTime = this.player.DEFAULT_MAX_JUMP_TIME;
+        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
+        this.player.gravity = this.player.DEFAULT_GRAVITY;
 
         base._Init();
     }
@@ -32,9 +32,9 @@ public class Glide: MainAction {
         if (Input.IsActionJustPressed("action_secondary"))
         {
             if (this.player.invertedGravity)
-                    this.player.gravity = -10000;
+                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = 10000;
+                    this.player.gravity = this.player.DEFAULT_GRAVITY;
         }
 
         if (Input.IsActionPressed("action_main") && (this.state == GlideStates.NOTHING || this.state == GlideStates.CAN_GLIDE) && !this.player.blocked) {
@@ -101,9 +101,9 @@ public class Glide: MainAction {
             
             case GlideStates.GLIDING:
                 if (this.player.invertedGravity)
-                    this.player.gravity = -10000;
+                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = 10000;
+                    this.player.gravity = this.player.DEFAULT_GRAVITY;
 
                 this.state = GlideStates.NOTHING2;
                 this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
@@ -134,9 +134,9 @@ public class Glide: MainAction {
             
             case GlideStates.GLIDING:
                 if (this.player.invertedGravity)
-                    this.player.gravity = -10000;
+                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = 10000;
+                    this.player.gravity = this.player.DEFAULT_GRAVITY;
 
                 this.state = GlideStates.NOTHING2;
                 this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;

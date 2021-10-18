@@ -4,10 +4,10 @@ using System;
 public class Jetpack: MainAction {
     public override void _Init()
     {
-        this.player.gravity = 10000;
-        this.player.jumpForce = 13500;
+        this.player.gravity = this.player.DEFAULT_GRAVITY;
+        this.player.jumpForce = 225;
         this.player.maxJumpTime = 1f;
-        this.player.maxFallSpeed = 50000;
+        this.player.maxFallSpeed = 833;
     
         base._Init();
     }

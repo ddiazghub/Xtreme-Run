@@ -12,7 +12,12 @@ public class Main : Node2D
     {
         this.GetTree().DebugCollisionsHint = true;
         this.sceneFactory = new SceneFactory();
-        this.ChangeScene(GameScenes.LEVEL1);
+        this.ChangeScene(GameScenes.MAIN_MENU);
+    }
+
+    public override void _Process(float delta)
+    {
+        GD.Print(Engine.GetFramesPerSecond());
     }
 
     public void ChangeScene(GameScenes scene)

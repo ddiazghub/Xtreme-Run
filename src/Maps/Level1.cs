@@ -12,7 +12,6 @@ public class Level1 : Node2D
 
     public override void _Ready()
     {
-        this.GetTree().DebugCollisionsHint = true;
         this.player = this.GetNode<Player>("Player");
         this.camera = this.GetNode<Camera2D>("Camera");
         this.background = this.GetNode<Sprite>("Background");
@@ -29,8 +28,6 @@ public class Level1 : Node2D
 
     public override void _Process(float delta)
     {
-        GD.Print(this.startPos);
-        
         this.Update();
         float newCameraY = this.camera.Position.y;
 

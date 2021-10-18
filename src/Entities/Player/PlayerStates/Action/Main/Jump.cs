@@ -6,10 +6,10 @@ public class Jump: MainAction {
     {
         base._Init();
 
-        this.player.jumpForce = 70000;
-        this.player.maxJumpTime = 0.04f;
-        this.player.maxFallSpeed = 70000;
-        this.player.gravity = 10000;
+        this.player.jumpForce = this.player.DEFAULT_JUMPFORCE;
+        this.player.maxJumpTime = this.player.DEFAULT_MAX_JUMP_TIME;
+        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
+        this.player.gravity = this.player.DEFAULT_GRAVITY;
     }
     public override void _ActionProcess(float delta)
     {

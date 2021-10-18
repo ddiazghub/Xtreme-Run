@@ -10,7 +10,7 @@ public class TeleportAndSwitchGravity: SecondaryAction {
 
     public override void _ActionOnGround()
     {
-        this.player.maxFallSpeed = 500000;
+        this.player.maxFallSpeed = 8333;
         this.player.Visible = false;
         this.player.linearVelocity.y -= 1000 * this.player.gravity;
         this.player.secondaryActionTimer.Start();
@@ -30,7 +30,7 @@ public class TeleportAndSwitchGravity: SecondaryAction {
 
     public override void OnSecondaryActionTimerTimeout()
     {
-        this.player.maxFallSpeed = 100000;
+        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
         this.player.linearVelocity.y = 0;
         this.player.Visible = true;
         this.player.invincible = false;

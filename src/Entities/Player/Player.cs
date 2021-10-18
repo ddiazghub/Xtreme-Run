@@ -3,11 +3,11 @@ using System;
 
 public class Player : KinematicBody2D
 {
-    [Export] public int jumpForce = 70000;
-    [Export] public int movementSpeed = 42800;
-    [Export] public float maxJumpTime = 0.04f;
-    [Export] public float maxFallSpeed = 70000;
-    [Export] public int gravity = 10000;
+    [Export] public int jumpForce;
+    [Export] public int movementSpeed;
+    [Export] public float maxJumpTime;
+    [Export] public float maxFallSpeed;
+    [Export] public int gravity;
     public Area2D jumpObjectCollisionCheck;
     public Area2D teleportCollisionCheck;
     public Timer secondaryActionTimer;
@@ -24,6 +24,10 @@ public class Player : KinematicBody2D
     public CollisionShape2D runningCollision;
     public CollisionShape2D rollingCollision;
     public Vector2 linearVelocity = new Vector2();
+    public readonly int DEFAULT_JUMPFORCE = 1280;
+    public readonly int DEFAULT_GRAVITY = 210;
+    public readonly int DEFAULT_MOVEMENT_SPEED = 700;
+    public readonly float DEFAULT_MAX_JUMP_TIME = 0.04f;
 
     [Signal]
     public delegate void Dead();
@@ -51,6 +55,11 @@ public class Player : KinematicBody2D
         this.Visible = true;
         this.blocked = true;
         this.invincible = false;
+        this.jumpForce = this.DEFAULT_JUMPFORCE;
+        this.maxFallSpeed = this.DEFAULT_JUMPFORCE;
+        this.gravity = this.DEFAULT_GRAVITY;
+        this.maxJumpTime = this.DEFAULT_MAX_JUMP_TIME;
+        this.movementSpeed = this.DEFAULT_MOVEMENT_SPEED;
 
         if (this.invertedGravity)
             this.invertGravity();
@@ -58,22 +67,22 @@ public class Player : KinematicBody2D
 
     public override void _PhysicsProcess(float delta)
     {
-        if (this.IsOnWall())
+        /*if (this.IsOnWall())
             GD.Print("On wall");
 
         if (this.IsOnCeiling())
             GD.Print("On ceiling");
 
-        GD.Print(this.invertedGravity);
+        GD.Print(this.invertedGravity);*/
 
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
 
         if (this.invertedGravity)
-            this.MoveAndSlide(this.linearVelocity * delta, Vector2.Down);
+            this.MoveAndSlide(this.linearVelocity, Vector2.Down, floorMaxAngle: Mathf.Deg2Rad(60));
         else
-            this.MoveAndSlide(this.linearVelocity * delta, Vector2.Up);
+            this.MoveAndSlide(this.linearVelocity, Vector2.Up);
     }
 
     public void ChangePersistentState(PlayerPersistentState state)
