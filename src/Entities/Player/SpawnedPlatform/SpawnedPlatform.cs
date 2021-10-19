@@ -7,6 +7,7 @@ public class SpawnedPlatform : StaticBody2D
 
     public override void _Ready()
     {
+        this.Scale *= new Vector2(1.5f, 1);
         this.destroyTimer = this.GetNode<Timer>("DestroyTimer");
         this.destroyTimer.Connect("timeout", this, nameof(this.OnDestroyTimerTimeout));
     }

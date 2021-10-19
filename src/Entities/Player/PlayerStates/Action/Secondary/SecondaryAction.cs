@@ -21,9 +21,6 @@ public abstract class SecondaryAction: PlayerState {
         {
             if (this.player.persistentState is OnGroundState) {
                 this._ActionOnGround();
-                this.performingAction = true;
-                this.player.secondaryActionTimer.Start();
-                this.blocked = true;
             }
 
             if (this.player.persistentState is OnAirState) {
@@ -32,7 +29,13 @@ public abstract class SecondaryAction: PlayerState {
         }
     }
 
-    public abstract void _ActionOnGround();
+    public virtual void _ActionOnGround()
+    {
+        this.performingAction = true;
+        this.player.secondaryActionTimer.Start();
+        this.blocked = true;
+    }
+        
 
     public abstract void _ActionOnAir();
 

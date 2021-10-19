@@ -17,7 +17,6 @@ public class Main : Node2D
 
     public override void _Process(float delta)
     {
-        GD.Print(Engine.GetFramesPerSecond());
     }
 
     public void ChangeScene(GameScenes scene)

@@ -12,6 +12,7 @@ public class SwitchGravity: SecondaryAction {
     {
         this.player.linearVelocity.y -= 2 * this.player.gravity;
         this.invertGravity();
+        base._ActionOnGround();
     }
 
     public override void _ActionOnAir()

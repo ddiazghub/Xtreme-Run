@@ -28,6 +28,8 @@ public class Level2 : Node2D
 
     public override void _Process(float delta)
     {
+        GD.Print(this.player.linearVelocity);
+        
         this.Update();
         float newCameraY = this.camera.Position.y;
 

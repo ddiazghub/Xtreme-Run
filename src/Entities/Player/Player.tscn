@@ -78,7 +78,7 @@ wait_time = 0.5
 [node name="JumpTimer" type="Timer" parent="."]
 
 [node name="StartTimer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 
 [node name="TeleportCollisionCheck" type="Area2D" parent="."]
 

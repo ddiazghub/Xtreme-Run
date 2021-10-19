@@ -3,11 +3,11 @@ using System;
 
 public class Player : KinematicBody2D
 {
-    [Export] public int jumpForce;
-    [Export] public int movementSpeed;
-    [Export] public float maxJumpTime;
-    [Export] public float maxFallSpeed;
-    [Export] public int gravity;
+    [Export] public int jumpForce = 1280;
+    [Export] public int movementSpeed = 700;
+    [Export] public float maxJumpTime = 0.04f;
+    [Export] public float maxFallSpeed = 1280;
+    [Export] public int gravity = 210;
     public Area2D jumpObjectCollisionCheck;
     public Area2D teleportCollisionCheck;
     public Timer secondaryActionTimer;

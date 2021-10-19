@@ -16,6 +16,7 @@ public class TeleportAndSwitchGravity: SecondaryAction {
         this.player.secondaryActionTimer.Start();
         this.player.invincible = true;
         this.invertGravity();
+        base._ActionOnGround();
     }
 
     public override void _ActionOnAir()

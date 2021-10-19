@@ -11,7 +11,7 @@ public abstract class PersistentState: PlayerState {
 
     public override void _StatePhysicsProcess(float delta)
     {
-        if (this.player.Position.y > 2000 || this.player.Position.y < -2000)
+        if (this.player.Position.y > 4000 || this.player.Position.y < -4000)
             this.player.EmitSignal("Dead");
 
         if (!this.player.invincible)

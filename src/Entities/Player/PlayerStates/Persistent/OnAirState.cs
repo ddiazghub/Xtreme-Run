@@ -25,10 +25,21 @@ public class OnAirState: PersistentState {
         else
             this.player.linearVelocity.y += this.player.gravity;
 
-        if (this.player.linearVelocity.y > this.player.maxFallSpeed)
-            this.player.linearVelocity.y = this.player.maxFallSpeed;
+        if (this.player.invertedGravity)
+        {
+            if (this.player.linearVelocity.y > this.player.jumpForce)
+                this.player.linearVelocity.y = this.player.jumpForce;
 
-        if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
-            this.player.linearVelocity.y = -this.player.maxFallSpeed;
+            if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
+                this.player.linearVelocity.y = -this.player.maxFallSpeed;
+        }
+        else
+        {
+            if (this.player.linearVelocity.y > this.player.maxFallSpeed)
+                this.player.linearVelocity.y = this.player.maxFallSpeed;
+
+            if (this.player.linearVelocity.y < -this.player.jumpForce)
+                this.player.linearVelocity.y = -this.player.jumpForce;
+        }
     }
 }

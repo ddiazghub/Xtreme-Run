@@ -8,6 +8,7 @@ public class FastFallAndRoll: SecondaryAction {
         this.player.animation.Play("sliding");
         this.player.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
         this.player.secondaryActionTimer.WaitTime = 0.6f;
+        base._ActionOnGround();
     }
 
     public override void _ActionOnAir()
