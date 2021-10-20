@@ -15,7 +15,7 @@ public class FastFallAndRoll: SecondaryAction {
     {
         this.player.maxFallSpeed = 1.5f * this.player.DEFAULT_JUMPFORCE;
         this.player.linearVelocity.y = 1.5f * this.player.DEFAULT_JUMPFORCE;
-        this.player.secondaryActionTimer.WaitTime = 0.4f;
+        this.player.secondaryActionTimer.WaitTime = 0.1f;
         this.player.secondaryActionTimer.Start();
     }
 

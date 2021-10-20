@@ -28,8 +28,11 @@ public class Level2 : Node2D
 
     public override void _Process(float delta)
     {
-        GD.Print(this.player.linearVelocity);
-        
+        GD.Print("Linear velocity: " + this.player.linearVelocity.ToString());
+        GD.Print("Gravity: " + this.player.gravity);
+        GD.Print("Jump Force: " + this.player.jumpForce);
+        GD.Print("Max Jump time: " + this.player.maxJumpTime);
+        GD.Print("Max fall Speed: " + this.player.maxFallSpeed);
         this.Update();
         float newCameraY = this.camera.Position.y;
 

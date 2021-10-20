@@ -11,8 +11,8 @@ public class Jetpack: MainAction {
     {
         this.player.gravity = this.player.DEFAULT_GRAVITY;
         this.player.jumpForce = this.JETPACK_JUMPFORCE;
-            this.player.maxJumpTime = this.JETPACK_MAX_JUMP_TIME;
-            this.player.maxFallSpeed = this.JETPACK_MAX_FALL_SPEED;
+        this.player.maxJumpTime = this.JETPACK_MAX_JUMP_TIME;
+        this.player.maxFallSpeed = this.JETPACK_MAX_FALL_SPEED;
     
         base._Init();
     }

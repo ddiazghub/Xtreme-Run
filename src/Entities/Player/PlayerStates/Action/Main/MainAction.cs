@@ -14,11 +14,12 @@ public abstract class MainAction: PlayerState {
         
         this.player.mainActionTimer.Connect("timeout", this, nameof(this.OnMainActionTimerTimeout));
         this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
-        this.player.mainActionTimer.Start();
+        this.player.mainActionTimer.Stop();
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
+        GD.Print(this.performingAction);
         if (Input.IsActionJustReleased("action_main"))
         {
             this._ActionReleased();
