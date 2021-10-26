@@ -17,7 +17,7 @@ public class OnGroundState: PersistentState {
     public override void _StatePhysicsProcess(float delta)
     {
         base._StatePhysicsProcess(delta);
-
+        
         if (!this.player.IsOnFloor())
         {
             this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);

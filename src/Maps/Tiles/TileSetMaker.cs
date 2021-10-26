@@ -37,6 +37,6 @@ public class TileSetMaker : Node
             }
         }
 
-        ResourceSaver.Save("res://src/Maps/Tiles/level2tiles.tres", tileSet);
+        ResourceSaver.Save("res://src/Maps/Tiles/level3tiles.tres", tileSet);
     }
 }

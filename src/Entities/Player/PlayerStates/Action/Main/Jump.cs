@@ -14,6 +14,7 @@ public class Jump: MainAction {
     
     public override void _ActionProcess(float delta)
     {
+        GD.Print("Jumping");
         this.player.linearVelocity.y -= this.player.jumpForce;
     }
 }

@@ -31,7 +31,6 @@ public abstract class SecondaryAction: PlayerState {
 
     public virtual void _ActionOnGround()
     {
-        this.performingAction = true;
         this.player.secondaryActionTimer.Start();
         this.blocked = true;
     }
@@ -58,7 +57,6 @@ public abstract class SecondaryAction: PlayerState {
     {
         this.player.animation.Play("running");
         this.player.mainAction.UnBlock();
-        this.performingAction = false;
         this.player.secondaryActionTimer.Stop();
     }
 }
