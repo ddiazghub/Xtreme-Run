@@ -34,7 +34,11 @@ public class Level3 : Node2D
         GD.Print("Max Jump time: " + this.player.maxJumpTime);
         GD.Print("Max fall Speed: " + this.player.maxFallSpeed);
         GD.Print("Persistent State: " + this.player.persistentState.GetType());
+        GD.Print("Main action: " + this.player.mainAction.performingAction);
+        GD.Print("Secondary action: " + this.player.secondaryAction.blocked);
 
+
+    
         this.Update();
         float newCameraY = this.camera.Position.y;
 

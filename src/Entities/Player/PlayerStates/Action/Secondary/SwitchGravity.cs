@@ -8,6 +8,18 @@ public class SwitchGravity: SecondaryAction {
         this.player.secondaryActionTimer.WaitTime = 0.5f;
     }
 
+    public override void _StatePhysicsProcess(float delta)
+    {
+        base._StatePhysicsProcess(delta);
+
+        if (this.player.secondaryActionTimer.TimeLeft != 0 && this.player.IsOnFloor())
+            if (this.player.invertedGravity)
+                this.player.gravity = -this.player.DEFAULT_GRAVITY;
+            else
+                this.player.gravity = this.player.DEFAULT_GRAVITY;
+
+            this.player.secondaryActionTimer.Stop();
+    }
     public override void _ActionOnGround()
     {
         this.player.linearVelocity.y = -2 * this.player.gravity;

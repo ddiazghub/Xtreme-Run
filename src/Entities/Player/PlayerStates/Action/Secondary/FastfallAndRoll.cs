@@ -14,7 +14,11 @@ public class FastFallAndRoll: SecondaryAction {
     public override void _ActionOnAir()
     {
         this.player.maxFallSpeed = 1.5f * this.player.DEFAULT_JUMPFORCE;
-        this.player.linearVelocity.y = 1.5f * this.player.DEFAULT_JUMPFORCE;
+
+        if (this.player.invertedGravity)
+            this.player.linearVelocity.y = -1.5f * this.player.DEFAULT_JUMPFORCE;
+        else
+            this.player.linearVelocity.y = 1.5f * this.player.DEFAULT_JUMPFORCE;
         this.player.secondaryActionTimer.WaitTime = 0.1f;
         this.player.secondaryActionTimer.Start();
     }

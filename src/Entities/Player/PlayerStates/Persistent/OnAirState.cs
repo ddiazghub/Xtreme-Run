@@ -20,15 +20,15 @@ public class OnAirState: PersistentState {
             this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         }
 
-        if (this.player.linearVelocity.y > -this.player.DEFAULT_GRAVITY && this.player.linearVelocity.y < this.player.DEFAULT_GRAVITY)
+        if (Math.Abs(this.player.linearVelocity.y) < this.player.DEFAULT_GRAVITY)
             this.player.linearVelocity.y += this.player.gravity / 5;
         else
             this.player.linearVelocity.y += this.player.gravity;
 
         if (this.player.invertedGravity)
         {
-            if (this.player.linearVelocity.y > this.player.jumpForce)
-                this.player.linearVelocity.y = this.player.jumpForce;
+            if (this.player.linearVelocity.y > -this.player.jumpForce)
+                this.player.linearVelocity.y = -this.player.jumpForce;
 
             if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
                 this.player.linearVelocity.y = -this.player.maxFallSpeed;

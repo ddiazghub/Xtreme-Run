@@ -76,6 +76,7 @@ public class Player : KinematicBody2D
 
         GD.Print(this.invertedGravity);*/
 
+
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
@@ -83,7 +84,7 @@ public class Player : KinematicBody2D
         if (this.invertedGravity)
             this.MoveAndSlide(this.linearVelocity, Vector2.Down, floorMaxAngle: Mathf.Deg2Rad(60));
         else
-            this.MoveAndSlide(this.linearVelocity, Vector2.Up);
+            this.MoveAndSlide(this.linearVelocity, Vector2.Up, floorMaxAngle: Mathf.Deg2Rad(60));
     }
 
     public void ChangePersistentState(PlayerPersistentState state)

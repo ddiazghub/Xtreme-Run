@@ -2,8 +2,7 @@ using Godot;
 using System;
 
 public abstract class SecondaryAction: PlayerState {
-    protected bool blocked = false;
-    public bool performingAction = false;
+    public bool blocked = false;
 
     public override void _Init()
     {

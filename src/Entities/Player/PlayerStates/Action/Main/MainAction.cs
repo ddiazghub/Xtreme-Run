@@ -19,6 +19,7 @@ public abstract class MainAction: PlayerState {
 
     public override void _StatePhysicsProcess(float delta)
     {
+
         if (Input.IsActionJustReleased("action_main"))
         {
             this._ActionReleased();

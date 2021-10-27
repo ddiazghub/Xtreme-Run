@@ -21,6 +21,7 @@ public abstract class PersistentState: PlayerState {
                 this.player.EmitSignal("Dead");
             }
 
+
             for (int i = 0; i < this.player.GetSlideCount(); i++)
             {
                 if (((Node) this.player.GetSlideCollision(i).Collider).IsInGroup("hazard"))
