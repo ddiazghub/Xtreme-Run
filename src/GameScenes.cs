@@ -1,4 +1,5 @@
 public enum GameScenes {
+    PROFILE_SELECT,
     MAIN_MENU,
     LEVEL_SELECT,
     SHOP,

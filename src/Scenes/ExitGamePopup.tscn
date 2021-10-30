@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Scenes/ExitGamePopup.cs" type="Script" id=1]
+
+[node name="ExitGamePopup" type="ConfirmationDialog"]
+margin_right = 162.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Salir"
+dialog_text = "¿Desea salir del juego?"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

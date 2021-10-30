@@ -1,108 +1,172 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://res/Fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/Scenes/MainMenu.cs" type="Script" id=2]
+[ext_resource path="res://src/Scenes/ExitGamePopup.tscn" type="PackedScene" id=3]
+[ext_resource path="res://res/Sprites/gui/label_HP_bg.png" type="Texture" id=4]
+[ext_resource path="res://res/Sprites/gui/emeralds_icon.png" type="Texture" id=5]
+[ext_resource path="res://src/Scenes/PointsCounter.cs" type="Script" id=6]
+[ext_resource path="res://res/Sprites/level1/BG.png" type="Texture" id=7]
+[ext_resource path="res://res/Sprites/Logo.png" type="Texture" id=8]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button Hover.png" type="Texture" id=9]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png" type="Texture" id=10]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Home Square Button Pressed.png" type="Texture" id=11]
+[ext_resource path="res://res/Sprites/level3/city_tileset/city_tileset/city_bg.png" type="Texture" id=12]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button Hover.png" type="Texture" id=13]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button Pressed.png" type="Texture" id=14]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/On Off Square Button Pressed.png" type="Texture" id=15]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button.png" type="Texture" id=16]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/On Off Square Button.png" type="Texture" id=17]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Home Square Button.png" type="Texture" id=18]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/On Off Square Button Hover.png" type="Texture" id=19]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Home Square Button Hover.png" type="Texture" id=20]
+[ext_resource path="res://res/Sprites/level2/steampunk_tileset/steamworld.png" type="Texture" id=21]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button Pressed.png" type="Texture" id=22]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+} ]
 
 [sub_resource type="DynamicFont" id=1]
-size = 92
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.262745, 0.286275, 0.286275, 1 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 32
+size = 24
 font_data = ExtResource( 1 )
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Background" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.513726 )
+show_behind_parent = true
+position = Vector2( 640, 360 )
+frames = SubResource( 2 )
+animation = "2"
+
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="GUI"]
-margin_right = 1280.0
-margin_bottom = 720.0
-color = Color( 0, 0.384314, 0.988235, 1 )
+[node name="PointsCounter" type="MarginContainer" parent="GUI"]
+margin_left = 1130.0
+margin_top = 40.0
+margin_right = 1234.0
+margin_bottom = 86.0
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="GUI"]
-margin_left = 296.0
-margin_top = 104.0
-margin_right = 944.0
-margin_bottom = 215.0
+[node name="Background" type="NinePatchRect" parent="GUI/PointsCounter"]
+margin_right = 104.0
+margin_bottom = 46.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="GUI/PointsCounter/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = -80.0
+margin_bottom = -32.0
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "JUEGO ._.XD"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="GUI/PointsCounter/Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = -16.0
+margin_right = 8.0
+margin_bottom = 18.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="GUI"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -296.0
+margin_top = 120.0
+margin_right = 304.0
+margin_bottom = 222.0
+texture = ExtResource( 8 )
+stretch_mode = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayButton" type="Button" parent="GUI"]
-margin_left = 472.0
-margin_top = 296.0
-margin_right = 808.0
-margin_bottom = 360.0
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "JUGAR"
+[node name="ExitGamePopup" parent="GUI" instance=ExtResource( 3 )]
+visible = true
+margin_bottom = 58.0
+
+[node name="Buttons" type="HBoxContainer" parent="GUI"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -376.0
+margin_bottom = -176.0
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShopButton" type="Button" parent="GUI"]
-margin_left = 472.0
-margin_top = 392.0
-margin_right = 808.0
-margin_bottom = 456.0
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "TIENDA"
+[node name="PlayButton" type="TextureButton" parent="GUI/Buttons"]
+margin_left = 234.0
+margin_right = 434.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 22 )
+texture_hover = ExtResource( 13 )
+stretch_mode = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="IDKButton" type="Button" parent="GUI"]
-margin_left = 472.0
-margin_top = 480.0
-margin_right = 808.0
-margin_bottom = 544.0
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "NO C XD"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ShopButton" type="TextureButton" parent="GUI/Buttons"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 20 )
+stretch_mode = 3
 
-[node name="ExitButton" type="Button" parent="GUI"]
-margin_left = 472.0
-margin_top = 568.0
-margin_right = 808.0
-margin_bottom = 632.0
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
-custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
-text = "CERRAR JUEGO"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="IDKButton" type="TextureButton" parent="GUI/Buttons"]
+margin_left = 642.0
+margin_right = 842.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 9 )
+
+[node name="ExitButton" type="TextureButton" parent="GUI/Buttons"]
+margin_left = 846.0
+margin_right = 1046.0
+margin_bottom = 200.0
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 19 )
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 640, 360 )

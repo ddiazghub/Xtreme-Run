@@ -1,8 +1,6 @@
 using Godot;
 using System;
 
-using System.Collections.Generic;
-
 public class Main : Node2D
 {
     private Node2D currentScene;
@@ -12,7 +10,7 @@ public class Main : Node2D
     {
         this.GetTree().DebugCollisionsHint = true;
         this.sceneFactory = new SceneFactory();
-        this.ChangeScene(GameScenes.MAIN_MENU);
+        this.ChangeScene(GameScenes.PROFILE_SELECT);
     }
 
     public override void _Process(float delta)
