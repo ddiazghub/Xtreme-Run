@@ -23,25 +23,25 @@
 [ext_resource path="res://res/Sprites/level2/steampunk_tileset/steamworld.png" type="Texture" id=21]
 [ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button Pressed.png" type="Texture" id=22]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
 "name": "1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "2",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
 } ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 24
 font_data = ExtResource( 1 )
 
@@ -52,7 +52,7 @@ script = ExtResource( 2 )
 modulate = Color( 1, 1, 1, 0.513726 )
 show_behind_parent = true
 position = Vector2( 640, 360 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "2"
 
 [node name="GUI" type="CanvasLayer" parent="."]
@@ -82,7 +82,7 @@ margin_left = 16.0
 margin_top = 8.0
 margin_right = -80.0
 margin_bottom = -32.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0"
 __meta__ = {
@@ -126,14 +126,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -376.0
 margin_bottom = -176.0
+custom_constants/separation = 40
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" type="TextureButton" parent="GUI/Buttons"]
-margin_left = 234.0
-margin_right = 434.0
+margin_left = 180.0
+margin_right = 380.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 22 )
@@ -144,8 +145,8 @@ __meta__ = {
 }
 
 [node name="ShopButton" type="TextureButton" parent="GUI/Buttons"]
-margin_left = 438.0
-margin_right = 638.0
+margin_left = 420.0
+margin_right = 620.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 11 )
@@ -153,16 +154,16 @@ texture_hover = ExtResource( 20 )
 stretch_mode = 3
 
 [node name="IDKButton" type="TextureButton" parent="GUI/Buttons"]
-margin_left = 642.0
-margin_right = 842.0
+margin_left = 660.0
+margin_right = 860.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 9 )
 
 [node name="ExitButton" type="TextureButton" parent="GUI/Buttons"]
-margin_left = 846.0
-margin_right = 1046.0
+margin_left = 900.0
+margin_right = 1100.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 15 )
