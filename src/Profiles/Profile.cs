@@ -23,6 +23,11 @@ public class Profile {
         File.WriteAllBytes(Path.Combine(SAVES_DIRECTORY, this.Info.ID.ToString() + ".sav"), this.Info.ToBytes());
     }
 
+    public void LogOut()
+    {
+        this.Info = null;
+    }
+
     public static Profile CurrentSession
     {
         get
