@@ -15,6 +15,8 @@ public class Main : Node2D
 
     public override void _Process(float delta)
     {
+        if (Profile.CurrentSession.Info != null)
+            Profile.CurrentSession.Info.Avatar.Print();
     }
 
     public void ChangeScene(GameScenes scene)
