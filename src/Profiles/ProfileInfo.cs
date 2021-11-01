@@ -25,12 +25,12 @@ public class ProfileInfo {
         set;
     }
 
-    public Dictionary<int, bool> OwnedItems
+    public bool[] OwnedItems
     {
         get;
     }
 
-    public Dictionary<int, int> LevelProgress
+    public int[] LevelProgress
     {
         get;
     }
@@ -63,7 +63,7 @@ public class ProfileInfo {
             return;
         }
 
-        this.Name = Encoding.ASCII.GetString(buffer, SaveFileInfo.PROFILE_NAME, SaveFileInfo.PROFILE_NAME_MAX_SIZE).TrimEnd();
+        this.Name = Encoding.ASCII.GetString(buffer, SaveFileInfo.PROFILE_NAME, SaveFileInfo.PROFILE_NAME_MAX_SIZE).Replace("\0", "");
         
         this.Avatar = new Avatar(
             Convert.ToBoolean(buffer[SaveFileInfo.AVATAR_GENDER]),
@@ -73,31 +73,25 @@ public class ProfileInfo {
         );
 
         this.Points = BitConverter.ToUInt32(buffer, SaveFileInfo.POINTS);
-        this.OwnedItems = new Dictionary<int, bool>();
         byte[] ownedItemsBuffer = new byte[SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH];
         Array.Copy(buffer, SaveFileInfo.OWNED_ITEMS, ownedItemsBuffer, 0, SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH);
+        this.OwnedItems = new bool[SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH];
 
-        for (int i = 0; i < ownedItemsBuffer.Length; i++)
-        {
-            this.OwnedItems.Add(i, false);
+        for (int i = 0; i < SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH; i++)
+            this.OwnedItems[i] = Convert.ToBoolean(ownedItemsBuffer[i]);
 
-            if (Convert.ToBoolean(ownedItemsBuffer[i]))
-            {
-                this.OwnedItems[i] = true;
-            }
-        }
-
-        this.LevelProgress = new Dictionary<int, int>();
-        this.LevelProgress.Add(0, buffer[SaveFileInfo.LEVEL1_PROGRESS]);
-        this.LevelProgress.Add(1, buffer[SaveFileInfo.LEVEL2_PROGRESS]);
-        this.LevelProgress.Add(2, buffer[SaveFileInfo.LEVEL3_PROGRESS]);
+        this.LevelProgress = new int[] {
+            buffer[SaveFileInfo.LEVEL1_PROGRESS],
+            buffer[SaveFileInfo.LEVEL2_PROGRESS],
+            buffer[SaveFileInfo.LEVEL3_PROGRESS]
+        };
     }
 
     public byte[] ToBytes()
     {
         byte[] buffer = new byte[SaveFileInfo.SIZE];
 
-        Encoding.ASCII.GetBytes(this.Name.PadRight(20)).CopyTo(buffer, SaveFileInfo.PROFILE_NAME);
+        Encoding.ASCII.GetBytes(this.Name.PadRight(SaveFileInfo.PROFILE_NAME_MAX_SIZE)).CopyTo(buffer, SaveFileInfo.PROFILE_NAME);
         buffer[SaveFileInfo.AVATAR_GENDER] = Convert.ToByte(this.Avatar.male);
         buffer[SaveFileInfo.AVATAR_COLOR_SKIN] = (byte) this.Avatar.skinColor;
         buffer[SaveFileInfo.AVATAR_COLOR_TOP] = (byte) this.Avatar.topColor;
@@ -105,18 +99,53 @@ public class ProfileInfo {
 
         BitConverter.GetBytes(this.Points).CopyTo(buffer, SaveFileInfo.POINTS);
 
-        foreach (int id in this.OwnedItems.Keys)
+        for (int i = 0; i < this.OwnedItems.Length; i++)
         {
-            if (this.OwnedItems[id])
+            if (this.OwnedItems[i])
             {
-                buffer[SaveFileInfo.OWNED_ITEMS + id] = Convert.ToByte(true);
+                buffer[SaveFileInfo.OWNED_ITEMS + i] = Convert.ToByte(true);
             }
         }
 
-        buffer[SaveFileInfo.LEVEL1_PROGRESS] = (byte) this.LevelProgress[0];
-        buffer[SaveFileInfo.LEVEL2_PROGRESS] = (byte) this.LevelProgress[1];
-        buffer[SaveFileInfo.LEVEL3_PROGRESS] = (byte) this.LevelProgress[2];
+        for (int i = 0; i < this.LevelProgress.Length; i++)
+        {
+            buffer[SaveFileInfo.LEVEL1_PROGRESS + i] = (byte) this.LevelProgress[0];
+        }
 
         return buffer;
+    }
+
+    public List<int> CompletedLevels()
+    {
+        List<int> completed = new List<int>();
+
+        for (int i = 0; i < this.LevelProgress.Length; i++)
+        {
+            if (this.LevelProgress[i] >= 100)
+            {
+                this.LevelProgress[i] = 100;
+                completed.Add(i);
+            }
+        }
+
+        return completed;
+    }
+
+    public bool LevelIsUnlocked(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                return true;
+            
+            case 2:
+                return this.OwnedItems[15];
+
+            case 3:
+                return this.OwnedItems[16];
+            
+            default:
+                return false;
+        }
     }
 }

@@ -10,18 +10,28 @@ public class CreateProfileDialog : ConfirmationDialog
         this.GetOk().Text = "Confirmar";
         this.GetCancel().Text = "Cancelar";
 
-        this.Connect("confirmed", this, nameof(this.OnExitGamePopupConfirmed));
-        this.Connect("about_to_show", this, nameof(this.OnExitGamePopupAboutToShow));
+        this.Connect("confirmed", this, nameof(this.OnCreateProfileDialogConfirmed));
+        this.Connect("about_to_show", this, nameof(this.OnCreateProfileDialogAboutToShow));
     }
 
-    public void OnExitGamePopupConfirmed()
+    public void OnCreateProfileDialogConfirmed()
     {
-        Profile.Create(this.profileID, this.GetNode<LineEdit>("LineEdit").Text);
+        string name = this.GetNode<LineEdit>("LineEdit").Text;
+
+        if (!Profile.NameIsAvailable(name))
+        {
+            this.GetParent().GetNode<AcceptDialog>("FailedAlert").PopupCentered();
+            this.GetCancel().Pressed = true;
+            
+            return;
+        }
+
+        Profile.Create(this.profileID, name);
         Profile.CurrentSession.Load(this.profileID);
         this.GetParent().GetParent().GetParent<Main>().ChangeScene(GameScenes.MAIN_MENU);
     }
 
-    public void OnExitGamePopupAboutToShow()
+    public void OnCreateProfileDialogAboutToShow()
     {
         this.GetNode<LineEdit>("LineEdit").Clear();
     }

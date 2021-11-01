@@ -50,6 +50,7 @@ public class Profile {
         else
             return profile;
     }
+
     public static void Create(int id, string name)
     {
         if (!Directory.Exists(SAVES_DIRECTORY))
@@ -61,6 +62,9 @@ public class Profile {
 
         Encoding.ASCII.GetBytes(name).CopyTo(buffer, SaveFileInfo.PROFILE_NAME);
         buffer[SaveFileInfo.AVATAR_GENDER] = 1;
+        buffer[SaveFileInfo.AVATAR_COLOR_SKIN] = 15;
+        buffer[SaveFileInfo.AVATAR_COLOR_TOP] = 15;
+        buffer[SaveFileInfo.AVATAR_COLOR_BOTTOM] = 15;
 
         FileStream file = File.Create(Path.Combine(SAVES_DIRECTORY, id.ToString() + ".sav"));
         file.Write(buffer, 0, SaveFileInfo.SIZE);
@@ -75,5 +79,21 @@ public class Profile {
     public static bool Exists(int id)
     {
         return File.Exists(Path.Combine(SAVES_DIRECTORY, id.ToString() + ".sav"));
+    }
+
+    public static bool NameIsAvailable(string name)
+    {
+        for (int i = 0; i < 6; i++)
+        {   
+            if (Profile.Exists(i))
+            {
+                ProfileInfo profile = Profile.Get(i);
+                
+                if (profile != null && profile.Name.Equals(name))
+                    return false;
+            }
+        }
+
+        return true;
     }
 }

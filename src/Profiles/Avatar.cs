@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using System.Collections.Generic;
 
 public class Avatar {
     public bool male;
@@ -49,6 +50,47 @@ public class Avatar {
                 this.bottomColor = color;
                 break;
         }
+    }
+
+    public Texture ToTexture()
+    {
+        string pathToImage;
+        Dictionary<string, Color[]> colors;
+
+        if (this.male)
+        {
+            pathToImage = "res://res/Sprites/player/idle.png";
+            colors = Palette.DEFAULT_COLORS_MALE;
+        }
+        else
+        {
+            pathToImage = "res://res/Sprites/player/idlef.png";
+            colors = Palette.DEFAULT_COLORS_FEMALE;
+        }
+
+        List<PaletteSwapEntry> swaps = new List<PaletteSwapEntry>();
+
+        foreach (string key in colors.Keys)
+        {
+            if (this.GetColor(key) < 15)
+            {
+                foreach (Color color in colors[key])
+                {
+                    swaps.Add(new PaletteSwapEntry(color, Palette.Instance.PaletteColors[this.GetColor(key)], Palette.DEFAULT_THRESHOLD));
+                }
+            }
+        }
+
+        Image avatar = PaletteSwapShader.Instance.PaletteSwap(ResourceLoader.Load<Texture>(pathToImage).GetData(), swaps);
+        ImageTexture avatarTexture = new ImageTexture();
+        avatarTexture.CreateFromImage(avatar);
+
+        return avatarTexture;
+    }
+
+    public Avatar Clone()
+    {
+        return new Avatar(this.male, this.skinColor, this.topColor, this.bottomColor);
     }
 
     public void Print()

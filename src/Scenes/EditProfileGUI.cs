@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class EditProfileGUI : NinePatchRect
 {
-    
-    private Image skinColorPalette = ResourceLoader.Load<Texture>("res://res/Sprites/player/skin_color/skin_color_palette.jpg").GetData();
-    private Image clothingColorPalette = ResourceLoader.Load<Texture>("res://res/Sprites/player/clothing_color/clothing_color.png").GetData();
+    [Signal]
+    public delegate void ProfileChanged();
     private Texture lockSprite = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/lock.png");
-    
+    private Avatar editedAvatar = Profile.CurrentSession.Info.Avatar.Clone();
+
     private string[] keys = {
         "Skin",
         "Top",
@@ -22,7 +22,7 @@ public class EditProfileGUI : NinePatchRect
 
     public override void _Ready()
     {
-        this.Hide();
+        this.RectGlobalPosition = (Main.WINDOW_SIZE / 2) - (this.RectSize / 2);
 
         this.selected = new Dictionary<string, int>();
         this.colorSelectors = new Dictionary<string, TextureRect>();
@@ -42,47 +42,25 @@ public class EditProfileGUI : NinePatchRect
         this.GetNode<LineEdit>("LineEdit").Text = Profile.CurrentSession.Info.Name;
         this.GetNode<OptionButton>("Panel/Gender").Selected = Convert.ToInt32(Profile.CurrentSession.Info.Avatar.male);
 
-        this.skinColorPalette.Lock();
-        this.clothingColorPalette.Lock();
-
-        int skinColorNumber = (int) skinColorPalette.GetSize().x;
-        int clothingColorNumber = (int) clothingColorPalette.GetSize().x;
-
         foreach (string key in this.keys)
         {
             int end = 0;
             int start = 0;
-            Image palette = null;
 
             if (key.Equals("Skin"))
-            {
                 end = 5;
-                palette = this.skinColorPalette;
-            }
 
             if (key.Equals("Top") || key.Equals("Bottom"))
             {
                 start = 5;
                 end = 15;
-                palette = this.clothingColorPalette;
             }
 
             for (int i = start; i < end; i++)
             {
                 TextureButton button = new TextureButton();
                 button.Name = i.ToString();
-
-                Image color = new Image();
-                color.Create(40, 40, false, Image.Format.Rgba8);
-
-                if (key.Equals("Skin"))
-                    color.Fill(palette.GetPixel(i, 0));
-                else
-                    color.Fill(palette.GetPixel(i - 5, 0));
-
-                ImageTexture texture = new ImageTexture();
-                texture.CreateFromImage(color);
-                button.TextureNormal = texture;
+                button.TextureNormal = Palette.Instance.TextureFromColor(i, new Vector2(40, 40));
 
                 this.GetNode("Panel/" + key).AddChild(button);
 
@@ -93,8 +71,11 @@ public class EditProfileGUI : NinePatchRect
             }
         }
 
+        this.UpdateAvatar();
+
         this.GetNode("Cancel").Connect("pressed", this, nameof(this.OnCancelPressed));
         this.GetNode("Panel/Save").Connect("pressed", this, nameof(this.OnSavePressed));
+        this.GetNode("Panel/Gender").Connect("item_selected", this, nameof(this.OnGenderItemSelected));
     }
 
     public override void _Process(float delta)
@@ -122,6 +103,9 @@ public class EditProfileGUI : NinePatchRect
             }
         }
 
+        if (Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected) != this.editedAvatar.male)
+            this.UpdateAvatar();
+
         if (this.UnsavedChanges())
             this.GetNode<TextureButton>("Panel/Save").Disabled = false;
         else
@@ -133,7 +117,7 @@ public class EditProfileGUI : NinePatchRect
         ProfileInfo profile = Profile.CurrentSession.Info;
 
         if (!profile.Name.Equals(this.GetNode<LineEdit>("LineEdit").Text) ||
-            !(Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected) == profile.Avatar.male))
+            !(this.editedAvatar.male == profile.Avatar.male))
         {
             return true;    
         }
@@ -149,6 +133,18 @@ public class EditProfileGUI : NinePatchRect
         return false;
     }
 
+    public void UpdateAvatar()
+    {
+        this.editedAvatar.male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
+
+        foreach (string key in this.selected.Keys)
+        {
+            this.editedAvatar.SetColor(key, this.selected[key]);
+        }
+
+        this.GetNode<TextureRect>("Avatar").Texture = this.editedAvatar.ToTexture();
+    }
+
     public void OnColorPressed()
     {
         foreach (string key in this.keys)
@@ -162,20 +158,40 @@ public class EditProfileGUI : NinePatchRect
                 {
                     this.selected[key] = button.Name.ToInt();
                     this.colorSelectors[key].RectGlobalPosition = button.RectGlobalPosition - new Vector2(5, 5);
+                    this.UpdateAvatar();
                 }
             }
         }
     }
 
+    public void OnGenderItemSelected(int index)
+    {
+        this.editedAvatar.male = Convert.ToBoolean(index);
+        this.UpdateAvatar();
+    }
+
     public void OnCancelPressed()
     {
-        this.Hide();
+        this.QueueFree();
     }
 
     public void OnSavePressed()
     {
         ProfileInfo profile = Profile.CurrentSession.Info;
-        profile.Name = this.GetNode<LineEdit>("LineEdit").Text;
+        string newName = this.GetNode<LineEdit>("LineEdit").Text;
+        
+        if (!profile.Name.Equals(newName))
+        {
+            if (!Profile.NameIsAvailable(newName))
+            {
+                this.GetNode<AcceptDialog>("FailedAlert").PopupCentered();
+
+                return;
+            }
+
+            profile.Name = this.GetNode<LineEdit>("LineEdit").Text;
+        }
+
         profile.Avatar.male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
 
         foreach (string key in this.selected.Keys)
@@ -186,5 +202,6 @@ public class EditProfileGUI : NinePatchRect
         Profile.CurrentSession.Save();
         
         this.GetNode<AcceptDialog>("SavedAlert").PopupCentered();
+        this.EmitSignal("ProfileChanged");
     }
 }

@@ -3,15 +3,20 @@ using System;
 
 public class ShopGUI : NinePatchRect
 {
+    [Signal]
+    public delegate void ProfileChanged();
     private UInt32[] itemCost;
-    
-    private Image skinColorPalette = ResourceLoader.Load<Texture>("res://res/Sprites/player/skin_color/skin_color_palette.jpg").GetData();
-    private Image clothingColorPalette = ResourceLoader.Load<Texture>("res://res/Sprites/player/clothing_color/clothing_color.png").GetData();
     private Texture checkTick = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/store_check.png");
     private int selected = -1;
+    private string[] keys = {
+        "Skin",
+        "Clothing",
+        "Keys"
+    };
 
     public override void _Ready()
     {
+        this.RectGlobalPosition = (Main.WINDOW_SIZE / 2) - (this.RectSize / 2);
         this.itemCost = new UInt32[SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH];
 
         for (int i = 0; i < this.itemCost.Length; i++)
@@ -25,68 +30,54 @@ public class ShopGUI : NinePatchRect
         }
 
         this.GetNode<TextureRect>("StoreSelect").Hide();
-        this.skinColorPalette.Lock();
-        this.clothingColorPalette.Lock();
 
         this.GetNode<TextureButton>("Cancel").Connect("pressed", this, nameof(this.OnCancelPressed));
-        this.Hide();
-        int skinColorNumber = (int) skinColorPalette.GetSize().x;
-        int clothingColorNumber = (int) clothingColorPalette.GetSize().x;
 
-        for (int i = 0; i < skinColorNumber; i++)
+        foreach (string key in this.keys)
         {
-            TextureButton button = new TextureButton();
-            button.Name = i.ToString();
+            int end = 0;
+            int start = 0;
 
-            Image color = new Image();
-            color.Create(64, 64, false, Image.Format.Rgba8);
-            color.Fill(this.skinColorPalette.GetPixel(i, 0));
-            ImageTexture texture = new ImageTexture();
-            texture.CreateFromImage(color);
-            button.TextureNormal = texture;
+            if (key.Equals("Skin"))
+                end = 5;
 
-            this.GetNode("SkinColors/Colors").AddChild(button);
-            button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
-
-            if (Profile.CurrentSession.Info.OwnedItems[i])
+            if (key.Equals("Clothing"))
             {
-                TextureRect textureRect = new TextureRect();
-                textureRect.Texture = this.checkTick;
-                button.AddChild(textureRect);
+                start = 5;
+                end = 15;
             }
-        }
 
-        for (int i = 5; i < clothingColorNumber + 5; i++)
-        {
-            TextureButton button = new TextureButton();
-            button.Name = i.ToString();
-            Image color = new Image();
-            color.Create(64, 64, false, Image.Format.Rgba8);
-            color.Fill(this.clothingColorPalette.GetPixel(i - 5, 0));
-            ImageTexture texture = new ImageTexture();
-            texture.CreateFromImage(color);
-            button.TextureNormal = texture;
-            this.GetNode("ClothingColors/Colors").AddChild(button);
-            button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
-
-            if (Profile.CurrentSession.Info.OwnedItems[i])
+            if (key.Equals("Keys"))
             {
-                TextureRect textureRect = new TextureRect();
-                textureRect.Texture = this.checkTick;
-                button.AddChild(textureRect);
+                start = 15;
+                end = 17;
             }
-        }
 
-        for (int i = 15; i < 17; i++)
-        {
-            TextureButton button = this.GetNode<TextureButton>("LevelKeys/Keys/" + i);
-            button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
-
-            if (Profile.CurrentSession.Info.OwnedItems[i])
+            for (int i = start; i < end; i++)
             {
-                TextureRect textureRect = new TextureRect();
-                textureRect.Texture = this.checkTick;
-                button.AddChild(textureRect);
+                TextureButton button;
+
+                if (key.Equals("Keys"))
+                {
+                    button = this.GetNode<TextureButton>("Keys/Buttons/" + i);
+                }
+                else
+                {
+                    button = new TextureButton();
+                    button.Name = i.ToString();
+                    button.TextureNormal = Palette.Instance.TextureFromColor(i, new Vector2(64, 64));
+
+                    this.GetNode(key + "/Buttons").AddChild(button);
+                }
+
+                button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
+
+                if (Profile.CurrentSession.Info.OwnedItems[i])
+                {
+                    TextureRect textureRect = new TextureRect();
+                    textureRect.Texture = this.checkTick;
+                    button.AddChild(textureRect);
+                }
             }
         }
 
@@ -95,51 +86,27 @@ public class ShopGUI : NinePatchRect
 
     public void OnItemButtonPressed()
     {
-        int skinButtonCount = this.GetNode("SkinColors/Colors").GetChildCount();
-        Godot.Collections.Array children = this.GetNode("SkinColors/Colors").GetChildren();
-
-        for (int i = 0; i < skinButtonCount; i++)
+        foreach (string key in this.keys)
         {
-            if (((TextureButton) children[i]).GetChildCount() == 0 && ((TextureButton) children[i]).Pressed)
+            int buttonCount = this.GetNode(key + "/Buttons").GetChildCount();
+            Godot.Collections.Array<TextureButton> children = new Godot.Collections.Array<TextureButton>(this.GetNode(key + "/Buttons").GetChildren());
+            
+            foreach (TextureButton button in children)
             {
-                this.selected = ((Node) children[i]).Name.ToInt();
-                this.GetNode<TextureRect>("StoreSelect").RectGlobalPosition = ((TextureButton) children[i]).RectGlobalPosition - new Vector2(5, 5);
-                this.GetNode<PointsCounter>("PointsCounter").Set(this.itemCost[this.selected]);
+                if (button.GetChildCount() == 0 && button.Pressed)
+                {
+                    this.selected = button.Name.ToInt();
+                    this.GetNode<TextureRect>("StoreSelect").RectGlobalPosition = button.RectGlobalPosition - new Vector2(5, 5);
+                    this.GetNode<PointsCounter>("PointsCounter").Set(this.itemCost[this.selected]);
+                    this.GetNode<TextureRect>("StoreSelect").Show();
+                }
             }
         }
-
-        int clothingButtonCount = this.GetNode("ClothingColors/Colors").GetChildCount();
-        children = this.GetNode("ClothingColors/Colors").GetChildren();
-
-        for (int i = 0; i < clothingButtonCount; i++)
-        {
-            if (((TextureButton) children[i]).GetChildCount() == 0 && ((TextureButton) children[i]).Pressed)
-            {
-                this.selected = ((Node) children[i]).Name.ToInt();
-                this.GetNode<TextureRect>("StoreSelect").RectGlobalPosition = ((TextureButton) children[i]).RectGlobalPosition - new Vector2(5, 5);
-                this.GetNode<PointsCounter>("PointsCounter").Set(this.itemCost[this.selected]);
-            }
-        }
-
-        int keyButtonCount = this.GetNode("LevelKeys/Keys").GetChildCount();
-        children = this.GetNode("LevelKeys/Keys").GetChildren();
-
-        for (int i = 0; i < keyButtonCount; i++)
-        {
-            if (((TextureButton) children[i]).GetChildCount() == 0 && ((TextureButton) children[i]).Pressed)
-            {
-                this.selected = ((Node) children[i]).Name.ToInt();
-                this.GetNode<TextureRect>("StoreSelect").RectGlobalPosition = ((TextureButton) children[i]).RectGlobalPosition - new Vector2(5, 5);
-                this.GetNode<PointsCounter>("PointsCounter").Set(this.itemCost[this.selected]);
-            }
-        }
-
-        this.GetNode<TextureRect>("StoreSelect").Show();
     }
 
     public void OnCancelPressed()
     {
-        this.Hide();
+        this.QueueFree();
     }
 
     public void OnBuyPressed()
@@ -155,18 +122,16 @@ public class ShopGUI : NinePatchRect
             Profile.CurrentSession.Info.OwnedItems[this.selected] = true;
             Profile.CurrentSession.Save();
 
-            this.GetParent().GetNode<PointsCounter>("PointsCounter").Set(Profile.CurrentSession.Info.Points);
-
             TextureRect textureRect = new TextureRect();
             TextureButton button;
             textureRect.Texture = this.checkTick;
 
             if (this.selected < 5)
-                button = this.GetNode<TextureButton>("SkinColors/Colors/" + this.selected);
+                button = this.GetNode<TextureButton>("Skin/Buttons/" + this.selected);
             else if (this.selected < 15)
-                button = this.GetNode<TextureButton>("ClothingColors/Colors/" + this.selected);
+                button = this.GetNode<TextureButton>("Clothing/Buttons/" + this.selected);
             else
-                button = this.GetNode<TextureButton>("LevelKeys/Keys/" + this.selected);
+                button = this.GetNode<TextureButton>("Keys/Buttons/" + this.selected);
 
             button.AddChild(textureRect);
             this.selected = -1;
@@ -178,5 +143,6 @@ public class ShopGUI : NinePatchRect
             this.GetNode<AcceptDialog>("AcceptDialog").PopupCentered();
         }
 
+        this.EmitSignal("ProfileChanged");
     }
 }

@@ -11,12 +11,18 @@ public class ProfileGUI : NinePatchRect
 
     public override void _Ready()
     {
-        Label label = this.GetNode<Label>("ProfileName");
-        label.Text = Profile.CurrentSession.Info.Name;
-
         this.GetNode("Shop").Connect("pressed", this, nameof(this.OnShopPressed));
         this.GetNode("LogOut").Connect("pressed", this, nameof(this.OnLogOutPressed));
         this.GetNode("Edit").Connect("pressed", this, nameof(this.OnEditPressed));
+
+        this.UpdateUI();
+    }
+
+    public void UpdateUI()
+    {
+        this.GetNode<Label>("Completed").Text = Profile.CurrentSession.Info.CompletedLevels().Count + "/3 completado";
+        this.GetNode<Label>("ProfileName").Text = Profile.CurrentSession.Info.Name;
+        this.GetNode<TextureRect>("Avatar").Texture = Profile.CurrentSession.Info.Avatar.ToTexture();
     }
 
     public void OnShopPressed()

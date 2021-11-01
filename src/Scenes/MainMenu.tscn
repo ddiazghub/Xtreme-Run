@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://src/Scenes/PointsCounter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Scenes/MainMenu.cs" type="Script" id=2]
@@ -9,8 +9,8 @@
 [ext_resource path="res://res/Sprites/level1/BG.png" type="Texture" id=7]
 [ext_resource path="res://res/Sprites/Logo.png" type="Texture" id=8]
 [ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Exit Button.png" type="Texture" id=9]
-[ext_resource path="res://src/Scenes/ShopGUI.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Scenes/EditProfileGUI.tscn" type="PackedScene" id=11]
+[ext_resource path="res://res/Fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://src/Scenes/LevelPicker.cs" type="Script" id=11]
 [ext_resource path="res://res/Sprites/level3/city_tileset/city_tileset/city_bg.png" type="Texture" id=12]
 [ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button Hover.png" type="Texture" id=13]
 [ext_resource path="res://res/Sprites/gui/Menu Buttons/Square Buttons/Square Buttons/Play Square Button.png" type="Texture" id=16]
@@ -34,6 +34,13 @@ animations = [ {
 "name": "0",
 "speed": 5.0
 } ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 10 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 2 )
@@ -76,7 +83,7 @@ margin_left = -448.0
 margin_top = -608.0
 margin_right = 448.0
 mouse_filter = 2
-custom_constants/separation = 170
+custom_constants/separation = 101
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true,
@@ -94,9 +101,9 @@ __meta__ = {
 }
 
 [node name="Buttons" type="HBoxContainer" parent="GUI/VBoxContainer"]
-margin_top = 272.0
+margin_top = 203.0
 margin_right = 896.0
-margin_bottom = 422.0
+margin_bottom = 353.0
 mouse_filter = 2
 custom_constants/separation = 50
 __meta__ = {
@@ -122,26 +129,18 @@ texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 
-[node name="ShopGUI" parent="GUI" instance=ExtResource( 10 )]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -400.0
-margin_top = -300.0
-margin_right = 400.0
-margin_bottom = 300.0
-
-[node name="EditProfileGUI" parent="GUI" instance=ExtResource( 11 )]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -500.0
-margin_top = -300.0
-margin_right = 500.0
-margin_bottom = 300.0
-
-[node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 640, 360 )
+[node name="LevelPicker" type="SpinBox" parent="GUI"]
+margin_left = 152.0
+margin_top = 552.0
+margin_right = 600.0
+margin_bottom = 616.0
+theme = SubResource( 3 )
+min_value = 1.0
+max_value = 3.0
+value = 1.0
+prefix = "Nivel"
+suffix = ": Caminata pacífica"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

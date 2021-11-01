@@ -245,6 +245,16 @@ __meta__ = {
 
 [node name="ExitGamePopup" parent="GUI" instance=ExtResource( 4 )]
 
+[node name="FailedAlert" type="AcceptDialog" parent="GUI"]
+visible = true
+margin_right = 293.0
+margin_bottom = 58.0
+window_title = "Nombre no disponible"
+dialog_text = "Ya existe un perfil con el nombre ingresado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CreateProfileDialog" type="ConfirmationDialog" parent="GUI"]
 visible = true
 margin_right = 195.0

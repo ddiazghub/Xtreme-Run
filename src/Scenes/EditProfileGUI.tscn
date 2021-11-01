@@ -301,3 +301,13 @@ margin_right = 83.0
 margin_bottom = 58.0
 window_title = "Guardado Exitoso"
 dialog_text = "Se ha actualizado la información de su perfil exitosamente"
+
+[node name="FailedAlert" type="AcceptDialog" parent="."]
+visible = true
+margin_right = 83.0
+margin_bottom = 58.0
+window_title = "Nombre no disponible"
+dialog_text = "Ya existe un perfil con el nombre ingresado"
+__meta__ = {
+"_edit_use_anchors_": false
+}

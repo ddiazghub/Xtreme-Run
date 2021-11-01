@@ -66,7 +66,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SkinColors" type="VBoxContainer" parent="."]
+[node name="Skin" type="VBoxContainer" parent="."]
 margin_left = 32.0
 margin_top = 104.0
 margin_right = 760.0
@@ -77,7 +77,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="SkinColors"]
+[node name="Label" type="Label" parent="Skin"]
 margin_right = 728.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 2 )
@@ -86,13 +86,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Colors" type="HBoxContainer" parent="SkinColors"]
+[node name="Buttons" type="HBoxContainer" parent="Skin"]
 margin_top = 43.0
 margin_right = 728.0
 margin_bottom = 43.0
 custom_constants/separation = 10
 
-[node name="ClothingColors" type="VBoxContainer" parent="."]
+[node name="Clothing" type="VBoxContainer" parent="."]
 margin_left = 32.0
 margin_top = 232.0
 margin_right = 760.0
@@ -103,7 +103,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="ClothingColors"]
+[node name="Label" type="Label" parent="Clothing"]
 margin_right = 728.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 2 )
@@ -112,13 +112,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Colors" type="HBoxContainer" parent="ClothingColors"]
+[node name="Buttons" type="HBoxContainer" parent="Clothing"]
 margin_top = 43.0
 margin_right = 728.0
 margin_bottom = 43.0
 custom_constants/separation = 10
 
-[node name="LevelKeys" type="VBoxContainer" parent="."]
+[node name="Keys" type="VBoxContainer" parent="."]
 margin_left = 32.0
 margin_top = 360.0
 margin_right = 760.0
@@ -129,7 +129,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="LevelKeys"]
+[node name="Label" type="Label" parent="Keys"]
 margin_right = 728.0
 margin_bottom = 28.0
 custom_fonts/font = SubResource( 2 )
@@ -138,18 +138,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Keys" type="HBoxContainer" parent="LevelKeys"]
+[node name="Buttons" type="HBoxContainer" parent="Keys"]
 margin_top = 43.0
 margin_right = 728.0
 margin_bottom = 107.0
 custom_constants/separation = 10
 
-[node name="15" type="TextureButton" parent="LevelKeys/Keys"]
+[node name="15" type="TextureButton" parent="Keys/Buttons"]
 margin_right = 64.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 7 )
 
-[node name="16" type="TextureButton" parent="LevelKeys/Keys"]
+[node name="16" type="TextureButton" parent="Keys/Buttons"]
 self_modulate = Color( 1, 0.109804, 0.109804, 1 )
 margin_left = 74.0
 margin_right = 138.0
