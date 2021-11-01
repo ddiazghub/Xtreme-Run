@@ -8,6 +8,8 @@ public class Avatar {
     public int topColor;
     public int bottomColor;
 
+    public static readonly Texture EMPTY_SAVE_AVATAR = ResourceLoader.Load<Texture>("res://res/Sprites/player/shadow.png");
+
     public Avatar(bool male, int skinColor, int topColor, int bottomColor)
     {
         this.male = male;

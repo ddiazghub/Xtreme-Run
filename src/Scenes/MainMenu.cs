@@ -22,6 +22,8 @@ public class MainMenu : Node2D
         this.GetNode("GUI/LevelPicker").Connect("ValueChanged", this, nameof(this.OnLevelPickerValueChanged));
 
         this.GetNode<AnimatedSprite>("Background").Play(((int) this.GetNode<SpinBox>("GUI/LevelPicker").Value - 1).ToString());
+        this.GetNode<SpinBox>("GUI/LevelPicker").GetLineEdit().MouseFilter = Control.MouseFilterEnum.Ignore;
+
         this.UpdateUI();
     }
 
@@ -41,7 +43,7 @@ public class MainMenu : Node2D
 
     public void OnPlayButtonPressed()
     {
-        this.GetParent<Main>().ChangeScene(GameScenes.LEVEL_SELECT);
+        this.GetParent<Main>().ChangeScene((GameScenes) Enum.Parse(typeof(GameScenes), "LEVEL" + (int) this.GetNode<SpinBox>("GUI/LevelPicker").Value));
     }
 
     public void OnProfileGUIShopPressed()

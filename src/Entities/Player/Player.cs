@@ -68,15 +68,6 @@ public class Player : KinematicBody2D
 
     public override void _PhysicsProcess(float delta)
     {
-        /*if (this.IsOnWall())
-            GD.Print("On wall");
-
-        if (this.IsOnCeiling())
-            GD.Print("On ceiling");
-
-        GD.Print(this.invertedGravity);*/
-
-
         this.persistentState._StatePhysicsProcess(delta);
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
@@ -160,5 +151,6 @@ public class Player : KinematicBody2D
 
     public void OnStartTimerTimeout() {
         this.blocked = false;
+        this.startTimer.Stop();
     }
 }

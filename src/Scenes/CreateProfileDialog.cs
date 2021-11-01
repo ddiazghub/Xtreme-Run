@@ -3,10 +3,16 @@ using System;
 
 public class CreateProfileDialog : ConfirmationDialog
 {
-    public int profileID;
+    [Signal]
+    public delegate void CreationFailed();
+
+    private int profileID;
 
     public override void _Ready()
     {
+        if (this.GetParent() is ProfileSelectEntry)
+            this.profileID = this.GetParent<ProfileSelectEntry>().ProfileID;
+
         this.GetOk().Text = "Confirmar";
         this.GetCancel().Text = "Cancelar";
 
@@ -20,7 +26,7 @@ public class CreateProfileDialog : ConfirmationDialog
 
         if (!Profile.NameIsAvailable(name))
         {
-            this.GetParent().GetNode<AcceptDialog>("FailedAlert").PopupCentered();
+            this.EmitSignal("CreationFailed");
             this.GetCancel().Pressed = true;
             
             return;
@@ -28,7 +34,7 @@ public class CreateProfileDialog : ConfirmationDialog
 
         Profile.Create(this.profileID, name);
         Profile.CurrentSession.Load(this.profileID);
-        this.GetParent().GetParent().GetParent<Main>().ChangeScene(GameScenes.MAIN_MENU);
+        this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.MAIN_MENU);
     }
 
     public void OnCreateProfileDialogAboutToShow()

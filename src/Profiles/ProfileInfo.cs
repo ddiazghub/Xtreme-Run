@@ -51,6 +51,41 @@ public class ProfileInfo {
         }
     }
 
+    public List<int> CompletedLevels
+    {
+        get
+        {
+            List<int> completed = new List<int>();
+
+            for (int i = 0; i < this.LevelProgress.Length; i++)
+            {
+                if (this.LevelProgress[i] >= 100)
+                {
+                    this.LevelProgress[i] = 100;
+                    completed.Add(i);
+                }
+            }
+
+            return completed;
+        }
+    }
+
+    public int NumberOfOwnedItems
+    {
+        get
+        {
+            int owned = 0;
+
+            for (int i = 0; i < this.OwnedItems.Length; i++)
+            {
+                if (this.OwnedItems[i])
+                    owned++;
+            }
+
+            return owned;
+        }
+    }
+
     public ProfileInfo(string saveFilePath)
     {
         this.ID = Convert.ToInt32(Path.GetFileNameWithoutExtension(saveFilePath));
@@ -113,22 +148,6 @@ public class ProfileInfo {
         }
 
         return buffer;
-    }
-
-    public List<int> CompletedLevels()
-    {
-        List<int> completed = new List<int>();
-
-        for (int i = 0; i < this.LevelProgress.Length; i++)
-        {
-            if (this.LevelProgress[i] >= 100)
-            {
-                this.LevelProgress[i] = 100;
-                completed.Add(i);
-            }
-        }
-
-        return completed;
     }
 
     public bool LevelIsUnlocked(int level)

@@ -90,7 +90,7 @@ public class EditProfileGUI : NinePatchRect
                 if (button.GetChildCount() == 0 && button.Name.ToInt() == this.selected[key])
                     this.colorSelectors[key].RectGlobalPosition = button.RectGlobalPosition - new Vector2(5, 5);
                 
-                if (!Profile.CurrentSession.Info.OwnedItems[button.Name.ToInt()] && button.GetChildCount() == 0)
+                if (!(button.Name.ToInt() == 15 || button.Name.ToInt() == 16) && !Profile.CurrentSession.Info.OwnedItems[button.Name.ToInt()] && button.GetChildCount() == 0)
                 {
                     TextureRect textureRect = new TextureRect();
                     textureRect.Texture = this.lockSprite;

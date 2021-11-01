@@ -6,6 +6,7 @@ using System.Text;
 public class Profile {
     private static Profile session;
     public static readonly string SAVES_DIRECTORY = Path.Combine(Environment.GetEnvironmentVariable("HOMEPATH"), "XtremeRun", "Saves");
+    public static readonly int MAX_NUMBER_OF_SAVES = 6;
 
     public ProfileInfo Info
     {

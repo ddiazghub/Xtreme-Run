@@ -19,9 +19,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "1",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
@@ -29,9 +29,9 @@ animations = [ {
 "name": "2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "0",
+"name": "1",
 "speed": 5.0
 } ]
 
@@ -139,7 +139,7 @@ min_value = 1.0
 max_value = 3.0
 value = 1.0
 prefix = "Nivel"
-suffix = ": Caminata pacífica"
+suffix = ": Caminata Pacífica"
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

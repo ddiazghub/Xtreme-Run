@@ -1,0 +1,209 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://res/Sprites/gui/label_HP_bg_white.png" type="Texture" id=1]
+[ext_resource path="res://res/Sprites/player/idle.png" type="Texture" id=2]
+[ext_resource path="res://res/Sprites/gui/label_HP_bg.png" type="Texture" id=3]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/cancel_hover_pressed.png" type="Texture" id=4]
+[ext_resource path="res://res/Fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://res/Sprites/gui/label_HP_bg_gray.png" type="Texture" id=6]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/cancel.png" type="Texture" id=7]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/cancel_hover.png" type="Texture" id=8]
+[ext_resource path="res://src/Scenes/PointsCounter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Scenes/ProfileSelectEntry.cs" type="Script" id=10]
+[ext_resource path="res://res/Sprites/gui/Menu Buttons/cancel_disabled.png" type="Texture" id=11]
+[ext_resource path="res://src/Scenes/CreateProfileDialog.cs" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 5 )
+
+[node name="ProfileSelectEntry" type="Button"]
+self_modulate = Color( 0.913725, 0.913725, 0.913725, 1 )
+margin_right = 392.0
+margin_bottom = 256.0
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProfileName" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 16.0
+margin_right = 56.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="TextureButton" parent="."]
+margin_left = 360.0
+margin_top = -8.0
+margin_right = 412.0
+margin_bottom = 44.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 8 )
+texture_disabled = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Avatar" type="TextureRect" parent="."]
+margin_left = 40.0
+margin_top = 56.0
+margin_right = 184.0
+margin_bottom = 232.0
+mouse_filter = 2
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Avatar"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_bottom = -3.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Avatar/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Completed" type="Label" parent="."]
+margin_left = 200.0
+margin_top = 56.0
+margin_right = 360.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0/3 completado"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Completed"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Completed/NinePatchRect"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Objects" type="Label" parent="."]
+margin_left = 200.0
+margin_top = 112.0
+margin_right = 360.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0/17 objetos"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Objects"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Objects/NinePatchRect"]
+self_modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointsCounter" parent="." instance=ExtResource( 9 )]
+margin_left = 224.0
+margin_top = 176.0
+margin_right = 328.0
+margin_bottom = 222.0
+mouse_filter = 2
+
+[node name="Front" type="CanvasLayer" parent="."]
+
+[node name="FailedAlert" type="AcceptDialog" parent="Front"]
+margin_right = 293.0
+margin_bottom = 58.0
+window_title = "Nombre no disponible"
+dialog_text = "Ya existe un perfil con el nombre ingresado"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateProfileDialog" type="ConfirmationDialog" parent="Front"]
+margin_right = 195.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Crear Perfil"
+dialog_text = "Ingrese el nombre del perfil"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Front/CreateProfileDialog"]
+margin_left = 8.0
+margin_top = 22.0
+margin_right = 187.0
+margin_bottom = 46.0
+
+[node name="DeleteDialog" type="ConfirmationDialog" parent="Front"]
+margin_right = 157.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 150, 52.5 )
+window_title = "Borrar Perfil"
+dialog_text = "Desea borrar el perfil?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
