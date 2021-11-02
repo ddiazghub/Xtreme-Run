@@ -1,0 +1,4 @@
+<map id="Node" name="Node">
+<area shape="rect" id="node1" title=" " alt="" coords="59,5,111,83"/>
+<area shape="rect" id="node2" href="$class_tile_set_maker.html" title="Node for making tilesets from an image." alt="" coords="5,131,165,237"/>
+</map>

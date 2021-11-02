@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_profile_select.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,10 +83,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_profile_select-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ProfileSelect Class Reference</div></div>
 </div><!--header-->
@@ -76,9 +97,23 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ProfileSelect:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_profile_select.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_profile_select__inherit__graph.png" border="0" usemap="#a_profile_select_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_profile_select_inherit__map" id="a_profile_select_inherit__map">
+<area shape="rect" title="Scene that displays a menu where profiles can be created, loaded and deleted." alt="" coords="5,131,192,237"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="65,5,133,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ProfileSelect:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select__coll__graph.png" border="0" usemap="#a_profile_select_coll__map" alt="Collaboration graph"/></div>
+<map name="a_profile_select_coll__map" id="a_profile_select_coll__map">
+<area shape="rect" title="Scene that displays a menu where profiles can be created, loaded and deleted." alt="" coords="13,287,175,393"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="5,139,73,217"/>
+<area shape="rect" href="class_exit_game_popup.html" title="Confirms if the player wants to exit the game." alt="" coords="97,132,336,224"/>
+<area shape="rect" href="class_confirmation_dialog.html" title=" " alt="" coords="151,5,282,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -86,11 +121,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a515df791d64afdf822a4b385694808f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a6b440025c061ead559d5a832a4ed42"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile_select.html#a7a6b440025c061ead559d5a832a4ed42">_Process</a> (float delta)</td></tr>
 <tr class="separator:a7a6b440025c061ead559d5a832a4ed42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9968abb4c478c9600d4d8ba90b680245"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_exit_game_popup.html">ExitGamePopup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile_select.html#a9968abb4c478c9600d4d8ba90b680245">exitPopup</a></td></tr>
+<tr class="memdesc:a9968abb4c478c9600d4d8ba90b680245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Popups that confirms if the player wants to quit the game.  <a href="class_profile_select.html#a9968abb4c478c9600d4d8ba90b680245">More...</a><br /></td></tr>
+<tr class="separator:a9968abb4c478c9600d4d8ba90b680245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Scene that displays a menu where profiles can be created, loaded and deleted. </p>
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_8cs_source.html#l00007">7</a> of file <a class="el" href="_profile_select_8cs_source.html">ProfileSelect.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7a6b440025c061ead559d5a832a4ed42" name="a7a6b440025c061ead559d5a832a4ed42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a6b440025c061ead559d5a832a4ed42">&#9670;&nbsp;</a></span>_Process()</h2>
@@ -107,8 +146,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_8cs_source.html#l00019">19</a> of file <a class="el" href="_profile_select_8cs_source.html">ProfileSelect.cs</a>.</p>
 
 </div>
 </div>
@@ -127,17 +164,44 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_profile_select_8cs_source.html#l00014">14</a> of file <a class="el" href="_profile_select_8cs_source.html">ProfileSelect.cs</a>.</p>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a9968abb4c478c9600d4d8ba90b680245" name="a9968abb4c478c9600d4d8ba90b680245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9968abb4c478c9600d4d8ba90b680245">&#9670;&nbsp;</a></span>exitPopup</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_exit_game_popup.html">ExitGamePopup</a> ProfileSelect.exitPopup</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Popups that confirms if the player wants to quit the game. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_profile_select_8cs_source.html">ProfileSelect.cs</a></li>
+<li>src/Scenes/<a class="el" href="_profile_select_8cs.html">ProfileSelect.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_profile_select.html">ProfileSelect</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

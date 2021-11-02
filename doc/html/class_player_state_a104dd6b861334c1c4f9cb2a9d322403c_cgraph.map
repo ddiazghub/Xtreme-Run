@@ -1,0 +1,4 @@
+<map id="PlayerState.Setup" name="PlayerState.Setup">
+<area shape="rect" id="node1" title="Setups the state and initializes it." alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="181,5,300,32"/>
+</map>

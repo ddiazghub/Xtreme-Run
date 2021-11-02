@@ -5,10 +5,24 @@
 Base node for a game level scene.  
 
 
-Inheritance diagram for Level\+:\begin{figure}[H]
+
+
+Inheritance diagram for Level\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_level}
+\includegraphics[height=550pt]{class_level__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Level\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -42,21 +56,46 @@ void \mbox{\hyperlink{class_level_a462cabf043b2870fda20d5a7c25e6d40}{On\+Hud\+Pa
 \item 
 void \mbox{\hyperlink{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}{On\+Pause\+Menu\+Restart\+Pressed}} ()
 \item 
-void \mbox{\hyperlink{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}{On\+End\+Position\+Body\+Entered}} (Node body)
+void \mbox{\hyperlink{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}{On\+End\+Position\+Body\+Entered}} (\mbox{\hyperlink{class_node}{Node}} body)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ Vector2 $>$ \mbox{\hyperlink{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}{positions}} = new List$<$Vector2$>$()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Packed\+Scene \mbox{\hyperlink{class_level_a5d1b3eb59f1d1ce798aac611dceb8e46}{Player}}
+\begin{DoxyCompactList}\small\item\em The player scene from which to load instances. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_a08e6603e6ab77dc1ca2d58c2ed8221a0}{Level\+Number}} = 0
+\begin{DoxyCompactList}\small\item\em The level\textquotesingle{}s number. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_level_af8c0b7dafc8db3cd326e0a572d7ad9d1}{points\+Multiplier}} = 1f
+\begin{DoxyCompactList}\small\item\em A value that will be multiplied with the points earned. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_level_afc1da9f25bc1fc21e1be996b75c04db0}{player}}
+\begin{DoxyCompactList}\small\item\em The currently active player in the level. \end{DoxyCompactList}\item 
+Camera2D \mbox{\hyperlink{class_level_a025cdb541293de7e6c481f39fd78f0d2}{camera}}
+\begin{DoxyCompactList}\small\item\em The game\textquotesingle{}s camera. \end{DoxyCompactList}\item 
+Animated\+Sprite \mbox{\hyperlink{class_level_a8135b0cfe9ef72bb2c97d548a357e28f}{background}}
+\begin{DoxyCompactList}\small\item\em The level\textquotesingle{}s background. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pause_menu}{Pause\+Menu}} \mbox{\hyperlink{class_level_a414b9257e19142655a85889f1fbda951}{pause\+Menu}}
+\begin{DoxyCompactList}\small\item\em The level\textquotesingle{}s pause menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_level_complete}{Level\+Complete}} \mbox{\hyperlink{class_level_a84ddf86ee474ffdfd98cc2b1aa43814b}{level\+Complete\+Menu}}
+\begin{DoxyCompactList}\small\item\em Menu that will be shown when level is completed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_h_u_d}{Game\+HUD}} \mbox{\hyperlink{class_level_ab4df515c7712f237f0b4b326cff89aed}{hud}}
+\begin{DoxyCompactList}\small\item\em Game hud. \end{DoxyCompactList}\item 
+Position2D \mbox{\hyperlink{class_level_af314bba2710e5eedac3985ca0c726ac4}{start\+Position}}
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s spawn position. \end{DoxyCompactList}\item 
+Area2D \mbox{\hyperlink{class_level_afcebe2e8e72888d60547614609520969}{end\+Position}}
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s position where the level ends. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_ab66639867e8a2ed0cd9ed25ecc518461}{attempt\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em The number of times the player has attempted the level. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_level_abc95c07752147fca666c789118606a4e}{progress}} = 0
+\begin{DoxyCompactList}\small\item\em The current progress the player has on the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Base node for a game level scene. 
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_level_ab147d68f7a06156f6a0cd595bf58f75d}\label{class_level_ab147d68f7a06156f6a0cd595bf58f75d}} 
@@ -65,30 +104,34 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00008}{8}} of file \mbox{
 \doxysubsubsection{\texorpdfstring{\_Draw()}{\_Draw()}}
 {\footnotesize\ttfamily override void Level.\+\_\+\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00118}{118}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
 \mbox{\Hypertarget{class_level_adf87a658b5a922295a3bbab87f5820b5}\label{class_level_adf87a658b5a922295a3bbab87f5820b5}} 
 \index{Level@{Level}!\_Process@{\_Process}}
 \index{\_Process@{\_Process}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{\_Process()}{\_Process()}}
 {\footnotesize\ttfamily override void Level.\+\_\+\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_adf87a658b5a922295a3bbab87f5820b5_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a9b982efc154865a30a5c589d72f0a900}\label{class_level_a9b982efc154865a30a5c589d72f0a900}} 
 \index{Level@{Level}!\_Ready@{\_Ready}}
 \index{\_Ready@{\_Ready}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Level.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a9b982efc154865a30a5c589d72f0a900_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a866f3830aa6da6db116ecd9204b1b7a6}\label{class_level_a866f3830aa6da6db116ecd9204b1b7a6}} 
 \index{Level@{Level}!GetPoints@{GetPoints}}
 \index{GetPoints@{GetPoints}!Level@{Level}}
@@ -102,10 +145,14 @@ Gets the number of points that the player has earned on the current run.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00168}{168}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a866f3830aa6da6db116ecd9204b1b7a6_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18}\label{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18}} 
 \index{Level@{Level}!MoveViewPort@{MoveViewPort}}
 \index{MoveViewPort@{MoveViewPort}!Level@{Level}}
@@ -116,70 +163,130 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00168}{168}} of file \mbo
 
 Moves the camera and the background to follow the player. 
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00176}{176}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}\label{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}} 
 \index{Level@{Level}!OnEndPositionBodyEntered@{OnEndPositionBodyEntered}}
 \index{OnEndPositionBodyEntered@{OnEndPositionBodyEntered}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnEndPositionBodyEntered()}{OnEndPositionBodyEntered()}}
-{\footnotesize\ttfamily void Level.\+On\+End\+Position\+Body\+Entered (\begin{DoxyParamCaption}\item[{Node}]{body }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Level.\+On\+End\+Position\+Body\+Entered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_node}{Node}}}]{body }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00240}{240}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_aa0e6bfa6d80ec968a1995f395e016a0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_aa0e6bfa6d80ec968a1995f395e016a0b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae}\label{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae}} 
 \index{Level@{Level}!OnHudPauseMouseEntered@{OnHudPauseMouseEntered}}
 \index{OnHudPauseMouseEntered@{OnHudPauseMouseEntered}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnHudPauseMouseEntered()}{OnHudPauseMouseEntered()}}
 {\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Mouse\+Entered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00225}{225}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a462cabf043b2870fda20d5a7c25e6d40}\label{class_level_a462cabf043b2870fda20d5a7c25e6d40}} 
 \index{Level@{Level}!OnHudPauseMouseExited@{OnHudPauseMouseExited}}
 \index{OnHudPauseMouseExited@{OnHudPauseMouseExited}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnHudPauseMouseExited()}{OnHudPauseMouseExited()}}
 {\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Mouse\+Exited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00230}{230}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_level_a462cabf043b2870fda20d5a7c25e6d40_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a08ef0cf0dd18af04729d4d01deaeea66}\label{class_level_a08ef0cf0dd18af04729d4d01deaeea66}} 
 \index{Level@{Level}!OnHudPausePressed@{OnHudPausePressed}}
 \index{OnHudPausePressed@{OnHudPausePressed}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnHudPausePressed()}{OnHudPausePressed()}}
 {\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00220}{220}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a08ef0cf0dd18af04729d4d01deaeea66_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_level_a08ef0cf0dd18af04729d4d01deaeea66_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}\label{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}} 
 \index{Level@{Level}!OnPauseMenuRestartPressed@{OnPauseMenuRestartPressed}}
 \index{OnPauseMenuRestartPressed@{OnPauseMenuRestartPressed}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnPauseMenuRestartPressed()}{OnPauseMenuRestartPressed()}}
 {\footnotesize\ttfamily void Level.\+On\+Pause\+Menu\+Restart\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00235}{235}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a4ecafdfb8a186ec3bffe2cae913616f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_level_a4ecafdfb8a186ec3bffe2cae913616f8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a6807430e5f1f262aca25e7bc40fbac90}\label{class_level_a6807430e5f1f262aca25e7bc40fbac90}} 
 \index{Level@{Level}!OnPlayerDead@{OnPlayerDead}}
 \index{OnPlayerDead@{OnPlayerDead}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{OnPlayerDead()}{OnPlayerDead()}}
 {\footnotesize\ttfamily void Level.\+On\+Player\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00215}{215}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a6807430e5f1f262aca25e7bc40fbac90_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}\label{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}} 
 \index{Level@{Level}!Pause@{Pause}}
 \index{Pause@{Pause}!Level@{Level}}
@@ -190,10 +297,22 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00215}{215}} of file \mbo
 
 Pauses the game. 
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00197}{197}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_level_ae81c01f79951151a432bbdbf1cdb3dd8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a20b2f496054effcd20120b8cb37c14dc}\label{class_level_a20b2f496054effcd20120b8cb37c14dc}} 
 \index{Level@{Level}!Restart@{Restart}}
 \index{Restart@{Restart}!Level@{Level}}
@@ -204,10 +323,22 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00197}{197}} of file \mbo
 
 Restarts the level, resets the player\textquotesingle{}s position and the hud. 
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00129}{129}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a20b2f496054effcd20120b8cb37c14dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a20b2f496054effcd20120b8cb37c14dc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a4bb15a932ab317c90d5de0623b9f8d88}\label{class_level_a4bb15a932ab317c90d5de0623b9f8d88}} 
 \index{Level@{Level}!SaveData@{SaveData}}
 \index{SaveData@{SaveData}!Level@{Level}}
@@ -218,10 +349,22 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00129}{129}} of file \mbo
 
 Saves the player\textquotesingle{}s progress. 
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00205}{205}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_level_a4bb15a932ab317c90d5de0623b9f8d88_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a4bb15a932ab317c90d5de0623b9f8d88_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_a209b18b3eef463ac8dc4caf19d869f11}\label{class_level_a209b18b3eef463ac8dc4caf19d869f11}} 
 \index{Level@{Level}!UpdateProgress@{UpdateProgress}}
 \index{UpdateProgress@{UpdateProgress}!Level@{Level}}
@@ -232,22 +375,152 @@ Definition at line \mbox{\hyperlink{_level_8cs_source_l00205}{205}} of file \mbo
 
 Calculates the progress that the player currently has on the level. 
 
-
-
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{class_level_a209b18b3eef463ac8dc4caf19d869f11_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_ab66639867e8a2ed0cd9ed25ecc518461}\label{class_level_ab66639867e8a2ed0cd9ed25ecc518461}} 
+\index{Level@{Level}!attemptCount@{attemptCount}}
+\index{attemptCount@{attemptCount}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{attemptCount}{attemptCount}}
+{\footnotesize\ttfamily int Level.\+attempt\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of times the player has attempted the level. 
+
+\mbox{\Hypertarget{class_level_a8135b0cfe9ef72bb2c97d548a357e28f}\label{class_level_a8135b0cfe9ef72bb2c97d548a357e28f}} 
+\index{Level@{Level}!background@{background}}
+\index{background@{background}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily Animated\+Sprite Level.\+background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The level\textquotesingle{}s background. 
+
+\mbox{\Hypertarget{class_level_a025cdb541293de7e6c481f39fd78f0d2}\label{class_level_a025cdb541293de7e6c481f39fd78f0d2}} 
+\index{Level@{Level}!camera@{camera}}
+\index{camera@{camera}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{camera}{camera}}
+{\footnotesize\ttfamily Camera2D Level.\+camera\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The game\textquotesingle{}s camera. 
+
+\mbox{\Hypertarget{class_level_afcebe2e8e72888d60547614609520969}\label{class_level_afcebe2e8e72888d60547614609520969}} 
+\index{Level@{Level}!endPosition@{endPosition}}
+\index{endPosition@{endPosition}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{endPosition}{endPosition}}
+{\footnotesize\ttfamily Area2D Level.\+end\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The player\textquotesingle{}s position where the level ends. 
+
+\mbox{\Hypertarget{class_level_ab4df515c7712f237f0b4b326cff89aed}\label{class_level_ab4df515c7712f237f0b4b326cff89aed}} 
+\index{Level@{Level}!hud@{hud}}
+\index{hud@{hud}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{hud}{hud}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_h_u_d}{Game\+HUD}} Level.\+hud\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game hud. 
+
+\mbox{\Hypertarget{class_level_a84ddf86ee474ffdfd98cc2b1aa43814b}\label{class_level_a84ddf86ee474ffdfd98cc2b1aa43814b}} 
+\index{Level@{Level}!levelCompleteMenu@{levelCompleteMenu}}
+\index{levelCompleteMenu@{levelCompleteMenu}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{levelCompleteMenu}{levelCompleteMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_level_complete}{Level\+Complete}} Level.\+level\+Complete\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Menu that will be shown when level is completed. 
+
+\mbox{\Hypertarget{class_level_a08e6603e6ab77dc1ca2d58c2ed8221a0}\label{class_level_a08e6603e6ab77dc1ca2d58c2ed8221a0}} 
+\index{Level@{Level}!LevelNumber@{LevelNumber}}
+\index{LevelNumber@{LevelNumber}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{LevelNumber}{LevelNumber}}
+{\footnotesize\ttfamily int Level.\+Level\+Number = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The level\textquotesingle{}s number. 
+
+\mbox{\Hypertarget{class_level_a414b9257e19142655a85889f1fbda951}\label{class_level_a414b9257e19142655a85889f1fbda951}} 
+\index{Level@{Level}!pauseMenu@{pauseMenu}}
+\index{pauseMenu@{pauseMenu}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{pauseMenu}{pauseMenu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pause_menu}{Pause\+Menu}} Level.\+pause\+Menu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The level\textquotesingle{}s pause menu. 
+
+\mbox{\Hypertarget{class_level_a5d1b3eb59f1d1ce798aac611dceb8e46}\label{class_level_a5d1b3eb59f1d1ce798aac611dceb8e46}} 
+\index{Level@{Level}!Player@{Player}}
+\index{Player@{Player}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily Packed\+Scene Level.\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The player scene from which to load instances. 
+
+\mbox{\Hypertarget{class_level_afc1da9f25bc1fc21e1be996b75c04db0}\label{class_level_afc1da9f25bc1fc21e1be996b75c04db0}} 
+\index{Level@{Level}!player@{player}}
+\index{player@{player}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} Level.\+player\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The currently active player in the level. 
+
+\mbox{\Hypertarget{class_level_af8c0b7dafc8db3cd326e0a572d7ad9d1}\label{class_level_af8c0b7dafc8db3cd326e0a572d7ad9d1}} 
+\index{Level@{Level}!pointsMultiplier@{pointsMultiplier}}
+\index{pointsMultiplier@{pointsMultiplier}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{pointsMultiplier}{pointsMultiplier}}
+{\footnotesize\ttfamily float Level.\+points\+Multiplier = 1f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A value that will be multiplied with the points earned. 
+
 \mbox{\Hypertarget{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}\label{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}} 
 \index{Level@{Level}!positions@{positions}}
 \index{positions@{positions}!Level@{Level}}
 \doxysubsubsection{\texorpdfstring{positions}{positions}}
 {\footnotesize\ttfamily List$<$Vector2$>$ Level.\+positions = new List$<$Vector2$>$()}
 
+\mbox{\Hypertarget{class_level_abc95c07752147fca666c789118606a4e}\label{class_level_abc95c07752147fca666c789118606a4e}} 
+\index{Level@{Level}!progress@{progress}}
+\index{progress@{progress}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{progress}{progress}}
+{\footnotesize\ttfamily double Level.\+progress = 0\hspace{0.3cm}{\ttfamily [private]}}
 
 
-Definition at line \mbox{\hyperlink{_level_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+The current progress the player has on the level. 
+
+\mbox{\Hypertarget{class_level_af314bba2710e5eedac3985ca0c726ac4}\label{class_level_af314bba2710e5eedac3985ca0c726ac4}} 
+\index{Level@{Level}!startPosition@{startPosition}}
+\index{startPosition@{startPosition}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{startPosition}{startPosition}}
+{\footnotesize\ttfamily Position2D Level.\+start\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The player\textquotesingle{}s spawn position. 
 
 
 

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_persistent_state.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,14 +96,25 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for PersistentState:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_persistent_state.png" usemap="#PersistentState_map" alt=""/>
-  <map id="PersistentState_map" name="PersistentState_map">
-<area href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="PlayerState" shape="rect" coords="54,56,153,80"/>
-<area href="class_on_air_state.html" title="Persisten state when the player is on air." alt="OnAirState" shape="rect" coords="0,168,99,192"/>
-<area href="class_on_ground_state.html" title="Persistent state when the player is grounded." alt="OnGroundState" shape="rect" coords="109,168,208,192"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_persistent_state__inherit__graph.png" border="0" usemap="#a_persistent_state_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_persistent_state_inherit__map" id="a_persistent_state_inherit__map">
+<area shape="rect" title="Class that represents a player persistent state. Can be on air or on ground." alt="" coords="105,300,315,436"/>
+<area shape="rect" href="class_on_air_state.html" title="Persisten state when the player is on air." alt="" coords="5,484,199,591"/>
+<area shape="rect" href="class_on_ground_state.html" title="Persistent state when the player is grounded." alt="" coords="223,484,416,591"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="112,131,308,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="176,5,244,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for PersistentState:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_persistent_state__coll__graph.png" border="0" usemap="#a_persistent_state_coll__map" alt="Collaboration graph"/></div>
+<map name="a_persistent_state_coll__map" id="a_persistent_state_coll__map">
+<area shape="rect" title="Class that represents a player persistent state. Can be on air or on ground." alt="" coords="5,300,216,436"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="13,131,209,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="77,5,145,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -109,8 +140,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class that represents a player persistent state. Can be on air or on ground. </p>
-
-<p class="definition">Definition at line <a class="el" href="_persistent_state_8cs_source.html#l00008">8</a> of file <a class="el" href="_persistent_state_8cs_source.html">PersistentState.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa3bb922abb6c7a699b5990b1b9d83afc" name="aa3bb922abb6c7a699b5990b1b9d83afc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3bb922abb6c7a699b5990b1b9d83afc">&#9670;&nbsp;</a></span>_Init()</h2>
@@ -138,8 +167,20 @@ Additional Inherited Members</h2></td></tr>
 <p>Setups the state and initializes it. </p>
 
 <p>Implements <a class="el" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e">PlayerState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_persistent_state_8cs_source.html#l00011">11</a> of file <a class="el" href="_persistent_state_8cs_source.html">PersistentState.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_persistent_state_aa3bb922abb6c7a699b5990b1b9d83afc_cgraph.png" border="0" usemap="#aclass_persistent_state_aa3bb922abb6c7a699b5990b1b9d83afc_cgraph" alt=""/></div>
+<map name="aclass_persistent_state_aa3bb922abb6c7a699b5990b1b9d83afc_cgraph" id="aclass_persistent_state_aa3bb922abb6c7a699b5990b1b9d83afc_cgraph">
+<area shape="rect" title="Setups the state and initializes it." alt="" coords="5,31,145,57"/>
+<area shape="rect" href="class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,23,412,65"/>
+<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="477,5,649,32"/>
+<area shape="rect" href="class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="460,56,667,83"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="715,5,877,32"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="732,56,860,83"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="925,56,1044,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -176,8 +217,15 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_player_state.html#a1bddd210d96db25cb49b3a0b3edd5265">PlayerState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_persistent_state_8cs_source.html#l00016">16</a> of file <a class="el" href="_persistent_state_8cs_source.html">PersistentState.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_persistent_state_a197779850b8a9fbef055982249582ef3_icgraph.png" border="0" usemap="#aclass_persistent_state_a197779850b8a9fbef055982249582ef3_icgraph" alt=""/></div>
+<map name="aclass_persistent_state_a197779850b8a9fbef055982249582ef3_icgraph" id="aclass_persistent_state_a197779850b8a9fbef055982249582ef3_icgraph">
+<area shape="rect" title="The physics process that will be called each frame for the state." alt="" coords="219,5,420,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -196,18 +244,42 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_persistent_state_8cs_source.html#l00041">41</a> of file <a class="el" href="_persistent_state_8cs_source.html">PersistentState.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_cgraph.png" border="0" usemap="#aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_cgraph" alt=""/></div>
+<map name="aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_cgraph" id="aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,224,65"/>
+<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="289,5,461,32"/>
+<area shape="rect" href="class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="272,56,479,83"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="527,5,689,32"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="544,56,672,83"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="737,56,856,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_icgraph.png" border="0" usemap="#aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_icgraph" alt=""/></div>
+<map name="aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_icgraph" id="aclass_persistent_state_ae3c6d56cc272ef31022f735aa4888b86_icgraph">
+<area shape="rect" title=" " alt="" coords="193,5,412,47"/>
+<area shape="rect" href="class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,13,145,39"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/PlayerStates/Persistent/<a class="el" href="_persistent_state_8cs_source.html">PersistentState.cs</a></li>
+<li>src/Entities/Player/PlayerStates/Persistent/<a class="el" href="_persistent_state_8cs.html">PersistentState.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_persistent_state.html">PersistentState</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,5 @@
+<map id="TeleportAndSwitchGravity._ActionOnGround" name="TeleportAndSwitchGravity._ActionOnGround">
+<area shape="rect" id="node1" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node2" href="$class_teleport_and_switch_gravity.html#a49809a107376cd8ad243ca3631c258a4" title="Invert&#39;s the player&#39;s gravity." alt="" coords="228,5,432,47"/>
+<area shape="rect" id="node3" href="$class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="480,13,613,39"/>
+</map>

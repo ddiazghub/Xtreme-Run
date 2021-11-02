@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['teleport_5fdistance_0',['TELEPORT_DISTANCE',['../class_teleport.html#a4262864228863630057ea5411f0b992b',1,'Teleport']]],
-  ['teleportcollisioncheck_1',['teleportCollisionCheck',['../class_player.html#a4d0da6c92bf522df4a9d0b97b209b09b',1,'Player']]],
-  ['texture_2',['Texture',['../class_tile_set_maker.html#a9150369a075015feebbf166531104343',1,'TileSetMaker']]],
-  ['threshold_3',['threshold',['../class_palette_swap_entry.html#a98f303ecceb89ffec4c538c48269a4ec',1,'PaletteSwapEntry']]],
-  ['tilesize_4',['TileSize',['../class_tile_set_maker.html#add080d0b5e2582cd3bfe8b7a534ea7a3',1,'TileSetMaker']]],
-  ['topcolor_5',['TopColor',['../class_avatar.html#ab97d2d7a4d5aaf7c767eeb4852ad1c49',1,'Avatar']]]
+  ['pausemenu_0',['pauseMenu',['../class_level.html#a414b9257e19142655a85889f1fbda951',1,'Level']]],
+  ['platformscene_1',['PlatformScene',['../class_spawn_platforms.html#a907b6a7456095772af3765d68af5cdc4',1,'SpawnPlatforms']]],
+  ['player_2',['Player',['../class_level.html#a5d1b3eb59f1d1ce798aac611dceb8e46',1,'Level']]],
+  ['player_3',['player',['../class_level.html#afc1da9f25bc1fc21e1be996b75c04db0',1,'Level']]],
+  ['points_4',['POINTS',['../class_save_file_info.html#a9e0844e2686e0945287c6f69f6995e75',1,'SaveFileInfo']]],
+  ['pointsmultiplier_5',['pointsMultiplier',['../class_level.html#af8c0b7dafc8db3cd326e0a572d7ad9d1',1,'Level']]],
+  ['positions_6',['positions',['../class_level.html#a68bdb4fa6a0a7d317daaaf44c06599f2',1,'Level']]],
+  ['profile_5fname_7',['PROFILE_NAME',['../class_save_file_info.html#ac86f3be4472c55654a02487258ba7d32',1,'SaveFileInfo']]],
+  ['profile_5fname_5fmax_5fsize_8',['PROFILE_NAME_MAX_SIZE',['../class_save_file_info.html#a79f57147d656897bffc591effa801806',1,'SaveFileInfo']]],
+  ['profileid_9',['profileID',['../class_create_profile_dialog.html#a3a907d3b5f0b25c8760135a75ab67c16',1,'CreateProfileDialog']]],
+  ['profileid_10',['ProfileID',['../class_profile_select_entry.html#a1f010ec4952fdc771b4e352c84d4087e',1,'ProfileSelectEntry']]],
+  ['progress_11',['progress',['../class_level.html#abc95c07752147fca666c789118606a4e',1,'Level']]]
 ];

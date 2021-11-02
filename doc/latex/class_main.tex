@@ -2,13 +2,27 @@
 \label{class_main}\index{Main@{Main}}
 
 
-The main Node of the game. It is a state machine that executes a single scene at a time.  
+The main \mbox{\hyperlink{class_node}{Node}} of the game. It is a state machine that executes a single scene at a time.  
 
 
-Inheritance diagram for Main\+:\begin{figure}[H]
+
+
+Inheritance diagram for Main\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_main}
+\includegraphics[width=248pt]{class_main__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -26,16 +40,17 @@ static readonly Vector2 \mbox{\hyperlink{class_main_aa2f640712c026469e26fc7954f1
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-Node2D \mbox{\hyperlink{class_main_a9a9683bfcc0bfd6ab74ca38a1b6ad1ff}{Scene}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\mbox{\hyperlink{class_node2_d}{Node2D}} \mbox{\hyperlink{class_main_a9a9683bfcc0bfd6ab74ca38a1b6ad1ff}{Scene}}\hspace{0.3cm}{\ttfamily  \mbox{[}getprivate set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scene_factory}{Scene\+Factory}} \mbox{\hyperlink{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}{scene\+Factory}}
+\begin{DoxyCompactList}\small\item\em Factory for creating new scene instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-The main Node of the game. It is a state machine that executes a single scene at a time. 
-
-Definition at line \mbox{\hyperlink{_main_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_main_8cs_source}{Main.\+cs}}.
-
-
+The main \mbox{\hyperlink{class_node}{Node}} of the game. It is a state machine that executes a single scene at a time. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_main_afa38a52a0b6f8e0362539aea9114f285}\label{class_main_afa38a52a0b6f8e0362539aea9114f285}} 
@@ -44,10 +59,14 @@ Definition at line \mbox{\hyperlink{_main_8cs_source_l00008}{8}} of file \mbox{\
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Main.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_main_8cs_source}{Main.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_afa38a52a0b6f8e0362539aea9114f285_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_aff56bc272e79a2419d64fd18356b052b}\label{class_main_aff56bc272e79a2419d64fd18356b052b}} 
 \index{Main@{Main}!ChangeScene@{ChangeScene}}
 \index{ChangeScene@{ChangeScene}!Main@{Main}}
@@ -63,13 +82,35 @@ Changes the currently active game scene.
 {\em scene} & The new scene.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_main_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_main_8cs_source}{Main.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_main_aff56bc272e79a2419d64fd18356b052b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{class_main_aff56bc272e79a2419d64fd18356b052b_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}\label{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}} 
+\index{Main@{Main}!sceneFactory@{sceneFactory}}
+\index{sceneFactory@{sceneFactory}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{sceneFactory}{sceneFactory}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene_factory}{Scene\+Factory}} Main.\+scene\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Factory for creating new scene instances. 
+
 \mbox{\Hypertarget{class_main_aa2f640712c026469e26fc7954f11be5d}\label{class_main_aa2f640712c026469e26fc7954f11be5d}} 
 \index{Main@{Main}!WINDOW\_SIZE@{WINDOW\_SIZE}}
 \index{WINDOW\_SIZE@{WINDOW\_SIZE}!Main@{Main}}
@@ -82,24 +123,16 @@ Size of the game\textquotesingle{}s window.
 
 
 
-Definition at line \mbox{\hyperlink{_main_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_main_8cs_source}{Main.\+cs}}.
-
-
-
 \doxysubsection{Property Documentation}
 \mbox{\Hypertarget{class_main_a9a9683bfcc0bfd6ab74ca38a1b6ad1ff}\label{class_main_a9a9683bfcc0bfd6ab74ca38a1b6ad1ff}} 
 \index{Main@{Main}!Scene@{Scene}}
 \index{Scene@{Scene}!Main@{Main}}
 \doxysubsubsection{\texorpdfstring{Scene}{Scene}}
-{\footnotesize\ttfamily Node2D Main.\+Scene\hspace{0.3cm}{\ttfamily [get]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node2_d}{Node2D}} Main.\+Scene\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
 The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3. 
-
-
-
-Definition at line \mbox{\hyperlink{_main_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_main_8cs_source}{Main.\+cs}}.
 
 
 

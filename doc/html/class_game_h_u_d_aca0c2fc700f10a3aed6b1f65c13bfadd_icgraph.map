@@ -1,0 +1,4 @@
+<map id="GameHUD.SetActions" name="GameHUD.SetActions">
+<area shape="rect" id="node1" title="Sets the player actions to display on the hud." alt="" coords="164,5,316,32"/>
+<area shape="rect" id="node2" href="$class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>

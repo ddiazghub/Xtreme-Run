@@ -1,0 +1,5 @@
+<map id="Main._Ready" name="Main._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene." alt="" coords="152,5,287,32"/>
+<area shape="rect" id="node3" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="335,5,467,32"/>
+</map>

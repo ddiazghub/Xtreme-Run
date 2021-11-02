@@ -1,0 +1,4 @@
+<map id="LevelPicker" name="LevelPicker">
+<area shape="rect" id="node1" title="Node for picking a level on the main menu." alt="" coords="5,131,211,252"/>
+<area shape="rect" id="node2" href="$class_spin_box.html" title=" " alt="" coords="73,5,143,83"/>
+</map>

@@ -48,11 +48,11 @@ public class Glide: MainAction {
         }
 
         if (Input.IsActionPressed("action_main") && (this.state == GlideStates.NOTHING || this.state == GlideStates.CAN_GLIDE) && !this.Player.Blocked) {
-            if (this.Player.persistentState is OnGroundState) {
+            if (this.Player.PersistentState is OnGroundState) {
                 this._ActionOnGround();
             }
 
-            if (this.Player.persistentState is OnAirState) {
+            if (this.Player.PersistentState is OnAirState) {
                 this._ActionOnAir();
             }
         }

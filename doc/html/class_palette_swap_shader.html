@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_palette_swap_shader.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +83,11 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_palette_swap_shader-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">PaletteSwapShader Class Reference</div></div>
 </div><!--header-->
@@ -74,6 +95,14 @@ $(function() {
 
 <p>"Shader" for swapping colors in game textures.  
  <a href="class_palette_swap_shader.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for PaletteSwapShader:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_palette_swap_shader__coll__graph.png" border="0" usemap="#a_palette_swap_shader_coll__map" alt="Collaboration graph"/></div>
+<map name="a_palette_swap_shader_coll__map" id="a_palette_swap_shader_coll__map">
+<area shape="rect" title="&quot;Shader&quot; for swapping colors in game textures." alt="" coords="5,5,212,127"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -86,11 +115,14 @@ Properties</h2></td></tr>
 <tr class="memitem:a339e9ac1c07f19e42fa8d80870566c83"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_palette_swap_shader.html">PaletteSwapShader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_swap_shader.html#a339e9ac1c07f19e42fa8d80870566c83">Instance</a><code> [get]</code></td></tr>
 <tr class="memdesc:a339e9ac1c07f19e42fa8d80870566c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the shader instance.  <a href="class_palette_swap_shader.html#a339e9ac1c07f19e42fa8d80870566c83">More...</a><br /></td></tr>
 <tr class="separator:a339e9ac1c07f19e42fa8d80870566c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a7e478f9c7aacb5f6ec83042378d6095e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_palette_swap_shader.html">PaletteSwapShader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_swap_shader.html#a7e478f9c7aacb5f6ec83042378d6095e">instance</a></td></tr>
+<tr class="separator:a7e478f9c7aacb5f6ec83042378d6095e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >"Shader" for swapping colors in game textures. </p>
-
-<p class="definition">Definition at line <a class="el" href="_palette_swap_shader_8cs_source.html#l00008">8</a> of file <a class="el" href="_palette_swap_shader_8cs_source.html">PaletteSwapShader.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae747173cd2a85fa21e35129e67630275" name="ae747173cd2a85fa21e35129e67630275"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae747173cd2a85fa21e35129e67630275">&#9670;&nbsp;</a></span>PaletteSwap()</h2>
@@ -127,8 +159,48 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_palette_swap_shader_ae747173cd2a85fa21e35129e67630275_icgraph.png" border="0" usemap="#aclass_palette_swap_shader_ae747173cd2a85fa21e35129e67630275_icgraph" alt=""/></div>
+<map name="aclass_palette_swap_shader_ae747173cd2a85fa21e35129e67630275_icgraph" id="aclass_palette_swap_shader_ae747173cd2a85fa21e35129e67630275_icgraph">
+<area shape="rect" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="853,224,1067,251"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="687,224,805,251"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="455,107,639,133"/>
+<area shape="rect" href="class_profile_g_u_i.html#a63df12299905cd375c56ba1e2292dcd6" title="Updates the information currently displayed on the GUI." alt="" coords="478,224,615,251"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="455,275,638,301"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e" title=" " alt="" coords="224,5,387,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,107,156,133"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="204,107,407,133"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="210,158,401,199"/>
+<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="241,224,369,251"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,297,146,338"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="213,326,397,367"/>
+</map>
+</div>
 
-<p class="definition">Definition at line <a class="el" href="_palette_swap_shader_8cs_source.html#l00018">18</a> of file <a class="el" href="_palette_swap_shader_8cs_source.html">PaletteSwapShader.cs</a>.</p>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7e478f9c7aacb5f6ec83042378d6095e" name="a7e478f9c7aacb5f6ec83042378d6095e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e478f9c7aacb5f6ec83042378d6095e">&#9670;&nbsp;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_palette_swap_shader.html">PaletteSwapShader</a> PaletteSwapShader.instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -155,17 +227,19 @@ Properties</h2></td></tr>
 
 <p>Gets the shader instance. </p>
 
-<p class="definition">Definition at line <a class="el" href="_palette_swap_shader_8cs_source.html#l00066">66</a> of file <a class="el" href="_palette_swap_shader_8cs_source.html">PaletteSwapShader.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Shaders/<a class="el" href="_palette_swap_shader_8cs_source.html">PaletteSwapShader.cs</a></li>
+<li>src/Shaders/<a class="el" href="_palette_swap_shader_8cs.html">PaletteSwapShader.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_palette_swap_shader.html">PaletteSwapShader</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

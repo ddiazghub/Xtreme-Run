@@ -5,17 +5,31 @@
 The player node. It is a state machine that executes 3 states at each given time. The first state is a physical state (On ground, on air), while the other 2 are actions that the player can perform at a given time (Kind of like powers).  
 
 
-Inheritance diagram for Player\+:\begin{figure}[H]
+
+
+Inheritance diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_player}
+\includegraphics[height=550pt]{class_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 delegate void \mbox{\hyperlink{class_player_ad26d3c4010754f6af7948560a2a233c8}{Dead}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted if the player dies. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_player_ae192a478a80f0e93e01339d62cdd6f6d}{\+\_\+\+Ready}} ()
 \item 
 override void \mbox{\hyperlink{class_player_a5c41f7a6b92001f593ccb5d8574371e5}{\+\_\+\+Physics\+Process}} (float delta)
@@ -36,41 +50,33 @@ void \mbox{\hyperlink{class_player_a48409f2ac61578d5ed6a8acab3990da4}{On\+Start\
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{Jump\+Force}} = 1280
-\item 
+\begin{DoxyCompactList}\small\item\em The force/speed of the player\textquotesingle{}s jump. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_player_a5a0c8762d9753c0108e520d2cd4c4194}{Movement\+Speed}} = 700
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s movement speed. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_player_a55a2743162dfad1ccf058979e3454cf0}{Max\+Jump\+Time}} = 0.\+04f
-\item 
+\begin{DoxyCompactList}\small\item\em The maximum duration of the player\textquotesingle{}s jump. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_player_af93facbeac2019c5bc7bfb2493041109}{Max\+Fall\+Speed}} = 1280
-\item 
+\begin{DoxyCompactList}\small\item\em The maximum falling speed of the player. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_player_afa430a3e8bae8353eb0ed928c9919c95}{Gravity}} = 210
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s gravity. This gets added each frame to the player\textquotesingle{}s vertical linear velocity. \end{DoxyCompactList}\item 
 Area2D \mbox{\hyperlink{class_player_a4d70330236aa5cff44570ad6063433f0}{jump\+Object\+Collision\+Check}}
-\item 
+\begin{DoxyCompactList}\small\item\em Area2D to check if the player has entered any jump objects. \end{DoxyCompactList}\item 
 Area2D \mbox{\hyperlink{class_player_a4d0da6c92bf522df4a9d0b97b209b09b}{teleport\+Collision\+Check}}
-\item 
+\begin{DoxyCompactList}\small\item\em Area2D to check if the player will die on teleport. \end{DoxyCompactList}\item 
 Timer \mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondary\+Action\+Timer}}
-\item 
+\begin{DoxyCompactList}\small\item\em Timer to perform event after a secondary action was executed. \end{DoxyCompactList}\item 
 Timer \mbox{\hyperlink{class_player_a0bb14eb9e541dc0cabe7e067931e2cde}{main\+Action\+Timer}}
-\item 
+\begin{DoxyCompactList}\small\item\em Timer to perform event after a main action was executed. \end{DoxyCompactList}\item 
 Timer \mbox{\hyperlink{class_player_ab41212894186e98612be4e15d08ad121}{start\+Timer}}
-\item 
+\begin{DoxyCompactList}\small\item\em This timer enables input on the player on timeout. \end{DoxyCompactList}\item 
 Animated\+Sprite \mbox{\hyperlink{class_player_a8fc34dcdff8f033cb587661d07f13fa5}{animation}}
-\item 
-\mbox{\hyperlink{class_persistent_state}{Persistent\+State}} \mbox{\hyperlink{class_player_a6e483237354681df23922459b1f4f5f1}{persistent\+State}}
-\item 
-\mbox{\hyperlink{class_main_action}{Main\+Action}} \mbox{\hyperlink{class_player_a3f11ade4b7fa1b93671326424ff0f1db}{main\+Action}}
-\item 
-\mbox{\hyperlink{class_secondary_action}{Secondary\+Action}} \mbox{\hyperlink{class_player_ad45db217656b2cfb1f10db610ff134bd}{secondary\+Action}}
-\item 
-\mbox{\hyperlink{class_player_state_factory}{Player\+State\+Factory}} \mbox{\hyperlink{class_player_a4580768fe6a6cb084e2e987588682d2c}{state\+Factory}}
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s animation. \end{DoxyCompactList}\item 
 Collision\+Shape2D \mbox{\hyperlink{class_player_aa1f1a3e2e5bc1c6267dadd817f00af5d}{running\+Collision}}
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s default collision shape. \end{DoxyCompactList}\item 
 Collision\+Shape2D \mbox{\hyperlink{class_player_ab5f7f8e003fed1e7b293f5b6f069648b}{rolling\+Collision}}
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s collision shape while performing a roll action. \end{DoxyCompactList}\item 
 Vector2 \mbox{\hyperlink{class_player_adfe24c4a8a6124eef02a636f042917dd}{linear\+Velocity}} = new Vector2(0, 0)
-\item 
+\begin{DoxyCompactList}\small\item\em The player\textquotesingle{}s linear velocity vector. \end{DoxyCompactList}\item 
 readonly int \mbox{\hyperlink{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}{DEFAULT\+\_\+\+JUMPFORCE}} = 1280
 \item 
 readonly int \mbox{\hyperlink{class_player_aaa96158303a2e4619809dd824b6002ec}{DEFAULT\+\_\+\+GRAVITY}} = 210
@@ -78,28 +84,35 @@ readonly int \mbox{\hyperlink{class_player_aaa96158303a2e4619809dd824b6002ec}{DE
 readonly int \mbox{\hyperlink{class_player_a1a02648b66f2ff24777751e242a260c0}{DEFAULT\+\_\+\+MOVEMENT\+\_\+\+SPEED}} = 700
 \item 
 readonly float \mbox{\hyperlink{class_player_ae354c1568fb2f116e290e1a8fde5271a}{DEFAULT\+\_\+\+MAX\+\_\+\+JUMP\+\_\+\+TIME}} = 0.\+04f
-\item 
-\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} \mbox{\hyperlink{class_player_a290302698c5b551aa04ea96c785c3489}{main\+Action\+Type}}
-\item 
-\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} \mbox{\hyperlink{class_player_a31ec83e10d195fecf9c06420b077ee94}{secondary\+Action\+Type}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_persistent_state}{Persistent\+State}} \mbox{\hyperlink{class_player_a9cb4641c4d481f73d88fb07d479f4c84}{Persistent\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current persistent state of the player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_action}{Main\+Action}} \mbox{\hyperlink{class_player_ab8b54cc99ed363971d75ab6c506016be}{Main\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The main action the player can currently perform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_secondary_action}{Secondary\+Action}} \mbox{\hyperlink{class_player_aa21dcf6dffae0e8c8575890e4d8e6d07}{Secondary\+Action}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The secondary action the player can currently perform. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} \mbox{\hyperlink{class_player_aa2d4269e3e9b3042032012c05502ff76}{Main\+Action\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of the main action that the player can currently execute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} \mbox{\hyperlink{class_player_ac3acd90d6c0eb2ee07ccec066d448cf7}{Secondary\+Action\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The type of the secondary action that the player can currently execute. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_player_a94853daaad74e83561ada70dc0c4e92e}{Blocked}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em If true, then the player can\textquotesingle{}t perform any actions. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_player_a9c06a72ba615b0e764ad4ff428e8119d}{Inverted\+Gravity}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then the player\textquotesingle{}s gravity vector is inverted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_af9af5996f690a82ffea195f2c9a46d0c}{Invincible}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em If true, then the player can\textquotesingle{}t die. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_player_af9af5996f690a82ffea195f2c9a46d0c}{Invincible}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_player_state_factory}{Player\+State\+Factory}} \mbox{\hyperlink{class_player_a4580768fe6a6cb084e2e987588682d2c}{state\+Factory}}
+\begin{DoxyCompactList}\small\item\em Factory for creating new player state instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The player node. It is a state machine that executes 3 states at each given time. The first state is a physical state (On ground, on air), while the other 2 are actions that the player can perform at a given time (Kind of like powers). 
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_player_a5c41f7a6b92001f593ccb5d8574371e5}\label{class_player_a5c41f7a6b92001f593ccb5d8574371e5}} 
@@ -108,20 +121,28 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00009}{9}} of file \mbox
 \doxysubsubsection{\texorpdfstring{\_PhysicsProcess()}{\_PhysicsProcess()}}
 {\footnotesize\ttfamily override void Player.\+\_\+\+Physics\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00079}{79}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a5c41f7a6b92001f593ccb5d8574371e5_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_ae192a478a80f0e93e01339d62cdd6f6d}\label{class_player_ae192a478a80f0e93e01339d62cdd6f6d}} 
 \index{Player@{Player}!\_Ready@{\_Ready}}
 \index{\_Ready@{\_Ready}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Player.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_a383ca70b33e3f3a19573dc0c260c1150}\label{class_player_a383ca70b33e3f3a19573dc0c260c1150}} 
 \index{Player@{Player}!ChangeMainAction@{ChangeMainAction}}
 \index{ChangeMainAction@{ChangeMainAction}!Player@{Player}}
@@ -137,10 +158,22 @@ Changes the current main action the player can perform.
 {\em state} & The new action.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00111}{111}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a383ca70b33e3f3a19573dc0c260c1150_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_ae2226638af8907c89812bdb4b7eefede}\label{class_player_ae2226638af8907c89812bdb4b7eefede}} 
 \index{Player@{Player}!ChangePersistentState@{ChangePersistentState}}
 \index{ChangePersistentState@{ChangePersistentState}!Player@{Player}}
@@ -156,10 +189,22 @@ Changes the current persistent state.
 {\em state} & The new state.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00095}{95}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ae2226638af8907c89812bdb4b7eefede_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ae2226638af8907c89812bdb4b7eefede_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_aa90d185e163489f864480c9c72b7fbb8}\label{class_player_aa90d185e163489f864480c9c72b7fbb8}} 
 \index{Player@{Player}!ChangeSecondaryAction@{ChangeSecondaryAction}}
 \index{ChangeSecondaryAction@{ChangeSecondaryAction}!Player@{Player}}
@@ -175,15 +220,31 @@ Changes the current secondary action the player can perform.
 {\em state} & The new action.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00128}{128}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa90d185e163489f864480c9c72b7fbb8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_aa90d185e163489f864480c9c72b7fbb8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_ad26d3c4010754f6af7948560a2a233c8}\label{class_player_ad26d3c4010754f6af7948560a2a233c8}} 
 \index{Player@{Player}!Dead@{Dead}}
 \index{Dead@{Dead}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{Dead()}{Dead()}}
 {\footnotesize\ttfamily delegate void Player.\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emitted if the player dies. 
 
 \mbox{\Hypertarget{class_player_ad50972081bd91a62aa2c099b27462d37}\label{class_player_ad50972081bd91a62aa2c099b27462d37}} 
 \index{Player@{Player}!InvertGravity@{InvertGravity}}
@@ -195,20 +256,28 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00128}{128}} of file \mb
 
 Invert\textquotesingle{}s the player\textquotesingle{}s gravity. 
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00144}{144}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_ad50972081bd91a62aa2c099b27462d37_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_a48409f2ac61578d5ed6a8acab3990da4}\label{class_player_a48409f2ac61578d5ed6a8acab3990da4}} 
 \index{Player@{Player}!OnStartTimerTimeout@{OnStartTimerTimeout}}
 \index{OnStartTimerTimeout@{OnStartTimerTimeout}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{OnStartTimerTimeout()}{OnStartTimerTimeout()}}
 {\footnotesize\ttfamily void Player.\+On\+Start\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00183}{183}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_player_a48409f2ac61578d5ed6a8acab3990da4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_player_a4d955d72d1768541f5ac99f19ffe1381}\label{class_player_a4d955d72d1768541f5ac99f19ffe1381}} 
 \index{Player@{Player}!SetHitbox@{SetHitbox}}
 \index{SetHitbox@{SetHitbox}!Player@{Player}}
@@ -224,10 +293,14 @@ Sets a hitbox on the player depending on the state.
 {\em state} & The player\textquotesingle{}s state.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00163}{163}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_a4d955d72d1768541f5ac99f19ffe1381_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -239,7 +312,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00163}{163}} of file \mb
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s animation. 
 
 \mbox{\Hypertarget{class_player_aaa96158303a2e4619809dd824b6002ec}\label{class_player_aaa96158303a2e4619809dd824b6002ec}} 
 \index{Player@{Player}!DEFAULT\_GRAVITY@{DEFAULT\_GRAVITY}}
@@ -247,19 +320,11 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00025}{25}} of file \mbo
 \doxysubsubsection{\texorpdfstring{DEFAULT\_GRAVITY}{DEFAULT\_GRAVITY}}
 {\footnotesize\ttfamily readonly int Player.\+DEFAULT\+\_\+\+GRAVITY = 210}
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
 \mbox{\Hypertarget{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}\label{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}} 
 \index{Player@{Player}!DEFAULT\_JUMPFORCE@{DEFAULT\_JUMPFORCE}}
 \index{DEFAULT\_JUMPFORCE@{DEFAULT\_JUMPFORCE}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_JUMPFORCE}{DEFAULT\_JUMPFORCE}}
 {\footnotesize\ttfamily readonly int Player.\+DEFAULT\+\_\+\+JUMPFORCE = 1280}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
 
 \mbox{\Hypertarget{class_player_ae354c1568fb2f116e290e1a8fde5271a}\label{class_player_ae354c1568fb2f116e290e1a8fde5271a}} 
 \index{Player@{Player}!DEFAULT\_MAX\_JUMP\_TIME@{DEFAULT\_MAX\_JUMP\_TIME}}
@@ -267,19 +332,11 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00033}{33}} of file \mbo
 \doxysubsubsection{\texorpdfstring{DEFAULT\_MAX\_JUMP\_TIME}{DEFAULT\_MAX\_JUMP\_TIME}}
 {\footnotesize\ttfamily readonly float Player.\+DEFAULT\+\_\+\+MAX\+\_\+\+JUMP\+\_\+\+TIME = 0.\+04f}
 
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
 \mbox{\Hypertarget{class_player_a1a02648b66f2ff24777751e242a260c0}\label{class_player_a1a02648b66f2ff24777751e242a260c0}} 
 \index{Player@{Player}!DEFAULT\_MOVEMENT\_SPEED@{DEFAULT\_MOVEMENT\_SPEED}}
 \index{DEFAULT\_MOVEMENT\_SPEED@{DEFAULT\_MOVEMENT\_SPEED}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{DEFAULT\_MOVEMENT\_SPEED}{DEFAULT\_MOVEMENT\_SPEED}}
 {\footnotesize\ttfamily readonly int Player.\+DEFAULT\+\_\+\+MOVEMENT\+\_\+\+SPEED = 700}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
 
 \mbox{\Hypertarget{class_player_afa430a3e8bae8353eb0ed928c9919c95}\label{class_player_afa430a3e8bae8353eb0ed928c9919c95}} 
 \index{Player@{Player}!Gravity@{Gravity}}
@@ -289,7 +346,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00035}{35}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s gravity. This gets added each frame to the player\textquotesingle{}s vertical linear velocity. 
 
 \mbox{\Hypertarget{class_player_acf06cc8b10f69a33e33f0750443e09bc}\label{class_player_acf06cc8b10f69a33e33f0750443e09bc}} 
 \index{Player@{Player}!JumpForce@{JumpForce}}
@@ -299,7 +356,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00015}{15}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The force/speed of the player\textquotesingle{}s jump. 
 
 \mbox{\Hypertarget{class_player_a4d70330236aa5cff44570ad6063433f0}\label{class_player_a4d70330236aa5cff44570ad6063433f0}} 
 \index{Player@{Player}!jumpObjectCollisionCheck@{jumpObjectCollisionCheck}}
@@ -309,7 +366,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00011}{11}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+Area2D to check if the player has entered any jump objects. 
 
 \mbox{\Hypertarget{class_player_adfe24c4a8a6124eef02a636f042917dd}\label{class_player_adfe24c4a8a6124eef02a636f042917dd}} 
 \index{Player@{Player}!linearVelocity@{linearVelocity}}
@@ -319,17 +376,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00020}{20}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-\mbox{\Hypertarget{class_player_a3f11ade4b7fa1b93671326424ff0f1db}\label{class_player_a3f11ade4b7fa1b93671326424ff0f1db}} 
-\index{Player@{Player}!mainAction@{mainAction}}
-\index{mainAction@{mainAction}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{mainAction}{mainAction}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_main_action}{Main\+Action}} Player.\+main\+Action}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s linear velocity vector. 
 
 \mbox{\Hypertarget{class_player_a0bb14eb9e541dc0cabe7e067931e2cde}\label{class_player_a0bb14eb9e541dc0cabe7e067931e2cde}} 
 \index{Player@{Player}!mainActionTimer@{mainActionTimer}}
@@ -339,17 +386,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00027}{27}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-\mbox{\Hypertarget{class_player_a290302698c5b551aa04ea96c785c3489}\label{class_player_a290302698c5b551aa04ea96c785c3489}} 
-\index{Player@{Player}!mainActionType@{mainActionType}}
-\index{mainActionType@{mainActionType}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{mainActionType}{mainActionType}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} Player.\+main\+Action\+Type}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+Timer to perform event after a main action was executed. 
 
 \mbox{\Hypertarget{class_player_af93facbeac2019c5bc7bfb2493041109}\label{class_player_af93facbeac2019c5bc7bfb2493041109}} 
 \index{Player@{Player}!MaxFallSpeed@{MaxFallSpeed}}
@@ -359,7 +396,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00037}{37}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The maximum falling speed of the player. 
 
 \mbox{\Hypertarget{class_player_a55a2743162dfad1ccf058979e3454cf0}\label{class_player_a55a2743162dfad1ccf058979e3454cf0}} 
 \index{Player@{Player}!MaxJumpTime@{MaxJumpTime}}
@@ -369,7 +406,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00014}{14}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The maximum duration of the player\textquotesingle{}s jump. 
 
 \mbox{\Hypertarget{class_player_a5a0c8762d9753c0108e520d2cd4c4194}\label{class_player_a5a0c8762d9753c0108e520d2cd4c4194}} 
 \index{Player@{Player}!MovementSpeed@{MovementSpeed}}
@@ -379,17 +416,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00013}{13}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-\mbox{\Hypertarget{class_player_a6e483237354681df23922459b1f4f5f1}\label{class_player_a6e483237354681df23922459b1f4f5f1}} 
-\index{Player@{Player}!persistentState@{persistentState}}
-\index{persistentState@{persistentState}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{persistentState}{persistentState}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_persistent_state}{Persistent\+State}} Player.\+persistent\+State}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s movement speed. 
 
 \mbox{\Hypertarget{class_player_ab5f7f8e003fed1e7b293f5b6f069648b}\label{class_player_ab5f7f8e003fed1e7b293f5b6f069648b}} 
 \index{Player@{Player}!rollingCollision@{rollingCollision}}
@@ -399,7 +426,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00026}{26}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s collision shape while performing a roll action. 
 
 \mbox{\Hypertarget{class_player_aa1f1a3e2e5bc1c6267dadd817f00af5d}\label{class_player_aa1f1a3e2e5bc1c6267dadd817f00af5d}} 
 \index{Player@{Player}!runningCollision@{runningCollision}}
@@ -409,17 +436,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00031}{31}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-\mbox{\Hypertarget{class_player_ad45db217656b2cfb1f10db610ff134bd}\label{class_player_ad45db217656b2cfb1f10db610ff134bd}} 
-\index{Player@{Player}!secondaryAction@{secondaryAction}}
-\index{secondaryAction@{secondaryAction}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{secondaryAction}{secondaryAction}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_secondary_action}{Secondary\+Action}} Player.\+secondary\+Action}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+The player\textquotesingle{}s default collision shape. 
 
 \mbox{\Hypertarget{class_player_aa8a2d620862a3bff5e279a59eb8e1433}\label{class_player_aa8a2d620862a3bff5e279a59eb8e1433}} 
 \index{Player@{Player}!secondaryActionTimer@{secondaryActionTimer}}
@@ -429,17 +446,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00028}{28}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
-
-\mbox{\Hypertarget{class_player_a31ec83e10d195fecf9c06420b077ee94}\label{class_player_a31ec83e10d195fecf9c06420b077ee94}} 
-\index{Player@{Player}!secondaryActionType@{secondaryActionType}}
-\index{secondaryActionType@{secondaryActionType}!Player@{Player}}
-\doxysubsubsection{\texorpdfstring{secondaryActionType}{secondaryActionType}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} Player.\+secondary\+Action\+Type}
-
-
-
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+Timer to perform event after a secondary action was executed. 
 
 \mbox{\Hypertarget{class_player_ab41212894186e98612be4e15d08ad121}\label{class_player_ab41212894186e98612be4e15d08ad121}} 
 \index{Player@{Player}!startTimer@{startTimer}}
@@ -449,17 +456,17 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00038}{38}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+This timer enables input on the player on timeout. 
 
 \mbox{\Hypertarget{class_player_a4580768fe6a6cb084e2e987588682d2c}\label{class_player_a4580768fe6a6cb084e2e987588682d2c}} 
 \index{Player@{Player}!stateFactory@{stateFactory}}
 \index{stateFactory@{stateFactory}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{stateFactory}{stateFactory}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_player_state_factory}{Player\+State\+Factory}} Player.\+state\+Factory}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_state_factory}{Player\+State\+Factory}} Player.\+state\+Factory\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+Factory for creating new player state instances. 
 
 \mbox{\Hypertarget{class_player_a4d0da6c92bf522df4a9d0b97b209b09b}\label{class_player_a4d0da6c92bf522df4a9d0b97b209b09b}} 
 \index{Player@{Player}!teleportCollisionCheck@{teleportCollisionCheck}}
@@ -469,7 +476,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00029}{29}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+Area2D to check if the player will die on teleport. 
 
 
 
@@ -482,7 +489,7 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00021}{21}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+If true, then the player can\textquotesingle{}t perform any actions. 
 
 \mbox{\Hypertarget{class_player_a9c06a72ba615b0e764ad4ff428e8119d}\label{class_player_a9c06a72ba615b0e764ad4ff428e8119d}} 
 \index{Player@{Player}!InvertedGravity@{InvertedGravity}}
@@ -492,17 +499,67 @@ Definition at line \mbox{\hyperlink{_player_8cs_source_l00040}{40}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+If true, then the player\textquotesingle{}s gravity vector is inverted. 
 
 \mbox{\Hypertarget{class_player_af9af5996f690a82ffea195f2c9a46d0c}\label{class_player_af9af5996f690a82ffea195f2c9a46d0c}} 
 \index{Player@{Player}!Invincible@{Invincible}}
 \index{Invincible@{Invincible}!Player@{Player}}
 \doxysubsubsection{\texorpdfstring{Invincible}{Invincible}}
-{\footnotesize\ttfamily bool Player.\+Invincible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily bool Player.\+Invincible = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
-Definition at line \mbox{\hyperlink{_player_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_player_8cs_source}{Player.\+cs}}.
+If true, then the player can\textquotesingle{}t die. 
+
+\mbox{\Hypertarget{class_player_ab8b54cc99ed363971d75ab6c506016be}\label{class_player_ab8b54cc99ed363971d75ab6c506016be}} 
+\index{Player@{Player}!MainAction@{MainAction}}
+\index{MainAction@{MainAction}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{MainAction}{MainAction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_main_action}{Main\+Action}} Player.\+Main\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The main action the player can currently perform. 
+
+\mbox{\Hypertarget{class_player_aa2d4269e3e9b3042032012c05502ff76}\label{class_player_aa2d4269e3e9b3042032012c05502ff76}} 
+\index{Player@{Player}!MainActionType@{MainActionType}}
+\index{MainActionType@{MainActionType}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{MainActionType}{MainActionType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} Player.\+Main\+Action\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of the main action that the player can currently execute. 
+
+\mbox{\Hypertarget{class_player_a9cb4641c4d481f73d88fb07d479f4c84}\label{class_player_a9cb4641c4d481f73d88fb07d479f4c84}} 
+\index{Player@{Player}!PersistentState@{PersistentState}}
+\index{PersistentState@{PersistentState}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{PersistentState}{PersistentState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_persistent_state}{Persistent\+State}} Player.\+Persistent\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The current persistent state of the player. 
+
+\mbox{\Hypertarget{class_player_aa21dcf6dffae0e8c8575890e4d8e6d07}\label{class_player_aa21dcf6dffae0e8c8575890e4d8e6d07}} 
+\index{Player@{Player}!SecondaryAction@{SecondaryAction}}
+\index{SecondaryAction@{SecondaryAction}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SecondaryAction}{SecondaryAction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_secondary_action}{Secondary\+Action}} Player.\+Secondary\+Action\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The secondary action the player can currently perform. 
+
+\mbox{\Hypertarget{class_player_ac3acd90d6c0eb2ee07ccec066d448cf7}\label{class_player_ac3acd90d6c0eb2ee07ccec066d448cf7}} 
+\index{Player@{Player}!SecondaryActionType@{SecondaryActionType}}
+\index{SecondaryActionType@{SecondaryActionType}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SecondaryActionType}{SecondaryActionType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} Player.\+Secondary\+Action\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The type of the secondary action that the player can currently execute. 
 
 
 

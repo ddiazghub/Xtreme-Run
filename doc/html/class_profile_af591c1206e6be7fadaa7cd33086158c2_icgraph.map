@@ -1,0 +1,7 @@
+<map id="Profile.NameIsAvailable" name="Profile.NameIsAvailable">
+<area shape="rect" id="node1" title="Checks if a profile name is available." alt="" coords="452,42,609,69"/>
+<area shape="rect" id="node2" href="$class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,5,399,47"/>
+<area shape="rect" id="node4" href="$class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,71,404,98"/>
+<area shape="rect" id="node3" href="$class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,5,149,47"/>
+<area shape="rect" id="node5" href="$class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,71,156,98"/>
+</map>

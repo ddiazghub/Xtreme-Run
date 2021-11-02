@@ -1,0 +1,4 @@
+<map id="Avatar.Clone" name="Avatar.Clone">
+<area shape="rect" id="node1" title="Clones the avatar." alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node2" href="$class_avatar.html#a05399ad1121eec3010368f54ca8ad9fc" title="Creates a new avatar from the supplied data." alt="" coords="148,5,247,32"/>
+</map>

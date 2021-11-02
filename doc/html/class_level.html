@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_level.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +83,11 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_level-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Level Class Reference</div></div>
 </div><!--header-->
@@ -77,9 +98,41 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Level:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_level.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_level__inherit__graph.png" border="0" usemap="#a_level_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_level_inherit__map" id="a_level_inherit__map">
+<area shape="rect" title="Base node for a game level scene." alt="" coords="5,131,249,633"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="93,5,161,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Level:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level__coll__graph.png" border="0" usemap="#a_level_coll__map" alt="Collaboration graph"/></div>
+<map name="a_level_coll__map" id="a_level_coll__map">
+<area shape="rect" title="Base node for a game level scene." alt="" coords="1603,799,1847,1111"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="5,490,73,567"/>
+<area shape="rect" title=" " alt="" coords="97,490,200,567"/>
+<area shape="rect" title=" " alt="" coords="1440,57,1479,134"/>
+<area shape="rect" href="class_player.html" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="923,321,1156,736"/>
+<area shape="rect" title=" " alt="" coords="248,57,295,134"/>
+<area shape="rect" href="class_kinematic_body2_d.html" title=" " alt="" coords="1112,57,1239,134"/>
+<area shape="rect" title=" " alt="" coords="485,57,551,134"/>
+<area shape="rect" title=" " alt="" coords="1263,57,1317,134"/>
+<area shape="rect" title=" " alt="" coords="1556,57,1667,134"/>
+<area shape="rect" title=" " alt="" coords="651,57,775,134"/>
+<area shape="rect" title=" " alt="" coords="799,57,866,134"/>
+<area shape="rect" href="class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="890,5,1087,185"/>
+<area shape="rect" title=" " alt="" coords="1754,490,1837,567"/>
+<area shape="rect" href="class_pause_menu.html" title="Menu that will be shown on pause." alt="" coords="1861,446,2071,611"/>
+<area shape="rect" title=" " alt="" coords="2029,57,2138,134"/>
+<area shape="rect" href="class_level_complete.html" title="Menu that will be shown when a level is completed." alt="" coords="2095,461,2306,597"/>
+<area shape="rect" href="class_game_h_u_d.html" title="The hud that shows when the player is in a level." alt="" coords="2330,365,2565,692"/>
+<area shape="rect" href="class_canvas_layer.html" title=" " alt="" coords="2399,57,2495,134"/>
+<area shape="rect" title=" " alt="" coords="2589,490,2674,567"/>
+<area shape="rect" title=" " alt="" coords="2698,490,2749,567"/>
+<area shape="rect" title=" " alt="" coords="2789,490,2849,567"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -117,18 +170,58 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a462cabf043b2870fda20d5a7c25e6d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ecafdfb8a186ec3bffe2cae913616f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8">OnPauseMenuRestartPressed</a> ()</td></tr>
 <tr class="separator:a4ecafdfb8a186ec3bffe2cae913616f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0e6bfa6d80ec968a1995f395e016a0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#aa0e6bfa6d80ec968a1995f395e016a0b">OnEndPositionBodyEntered</a> (Node body)</td></tr>
+<tr class="memitem:aa0e6bfa6d80ec968a1995f395e016a0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#aa0e6bfa6d80ec968a1995f395e016a0b">OnEndPositionBodyEntered</a> (<a class="el" href="class_node.html">Node</a> body)</td></tr>
 <tr class="separator:aa0e6bfa6d80ec968a1995f395e016a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a68bdb4fa6a0a7d317daaaf44c06599f2"><td class="memItemLeft" align="right" valign="top">List&lt; Vector2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a68bdb4fa6a0a7d317daaaf44c06599f2">positions</a> = new List&lt;Vector2&gt;()</td></tr>
 <tr class="separator:a68bdb4fa6a0a7d317daaaf44c06599f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a5d1b3eb59f1d1ce798aac611dceb8e46"><td class="memItemLeft" align="right" valign="top">PackedScene&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a5d1b3eb59f1d1ce798aac611dceb8e46">Player</a></td></tr>
+<tr class="memdesc:a5d1b3eb59f1d1ce798aac611dceb8e46"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player scene from which to load instances.  <a href="class_level.html#a5d1b3eb59f1d1ce798aac611dceb8e46">More...</a><br /></td></tr>
+<tr class="separator:a5d1b3eb59f1d1ce798aac611dceb8e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e6603e6ab77dc1ca2d58c2ed8221a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a08e6603e6ab77dc1ca2d58c2ed8221a0">LevelNumber</a> = 0</td></tr>
+<tr class="memdesc:a08e6603e6ab77dc1ca2d58c2ed8221a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level's number.  <a href="class_level.html#a08e6603e6ab77dc1ca2d58c2ed8221a0">More...</a><br /></td></tr>
+<tr class="separator:a08e6603e6ab77dc1ca2d58c2ed8221a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c0b7dafc8db3cd326e0a572d7ad9d1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#af8c0b7dafc8db3cd326e0a572d7ad9d1">pointsMultiplier</a> = 1f</td></tr>
+<tr class="memdesc:af8c0b7dafc8db3cd326e0a572d7ad9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value that will be multiplied with the points earned.  <a href="class_level.html#af8c0b7dafc8db3cd326e0a572d7ad9d1">More...</a><br /></td></tr>
+<tr class="separator:af8c0b7dafc8db3cd326e0a572d7ad9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc1da9f25bc1fc21e1be996b75c04db0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#afc1da9f25bc1fc21e1be996b75c04db0">player</a></td></tr>
+<tr class="memdesc:afc1da9f25bc1fc21e1be996b75c04db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently active player in the level.  <a href="class_level.html#afc1da9f25bc1fc21e1be996b75c04db0">More...</a><br /></td></tr>
+<tr class="separator:afc1da9f25bc1fc21e1be996b75c04db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025cdb541293de7e6c481f39fd78f0d2"><td class="memItemLeft" align="right" valign="top">Camera2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a025cdb541293de7e6c481f39fd78f0d2">camera</a></td></tr>
+<tr class="memdesc:a025cdb541293de7e6c481f39fd78f0d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The game's camera.  <a href="class_level.html#a025cdb541293de7e6c481f39fd78f0d2">More...</a><br /></td></tr>
+<tr class="separator:a025cdb541293de7e6c481f39fd78f0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8135b0cfe9ef72bb2c97d548a357e28f"><td class="memItemLeft" align="right" valign="top">AnimatedSprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a8135b0cfe9ef72bb2c97d548a357e28f">background</a></td></tr>
+<tr class="memdesc:a8135b0cfe9ef72bb2c97d548a357e28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level's background.  <a href="class_level.html#a8135b0cfe9ef72bb2c97d548a357e28f">More...</a><br /></td></tr>
+<tr class="separator:a8135b0cfe9ef72bb2c97d548a357e28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414b9257e19142655a85889f1fbda951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_pause_menu.html">PauseMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a414b9257e19142655a85889f1fbda951">pauseMenu</a></td></tr>
+<tr class="memdesc:a414b9257e19142655a85889f1fbda951"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level's pause menu.  <a href="class_level.html#a414b9257e19142655a85889f1fbda951">More...</a><br /></td></tr>
+<tr class="separator:a414b9257e19142655a85889f1fbda951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84ddf86ee474ffdfd98cc2b1aa43814b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_level_complete.html">LevelComplete</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#a84ddf86ee474ffdfd98cc2b1aa43814b">levelCompleteMenu</a></td></tr>
+<tr class="memdesc:a84ddf86ee474ffdfd98cc2b1aa43814b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu that will be shown when level is completed.  <a href="class_level.html#a84ddf86ee474ffdfd98cc2b1aa43814b">More...</a><br /></td></tr>
+<tr class="separator:a84ddf86ee474ffdfd98cc2b1aa43814b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4df515c7712f237f0b4b326cff89aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_h_u_d.html">GameHUD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ab4df515c7712f237f0b4b326cff89aed">hud</a></td></tr>
+<tr class="memdesc:ab4df515c7712f237f0b4b326cff89aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game hud.  <a href="class_level.html#ab4df515c7712f237f0b4b326cff89aed">More...</a><br /></td></tr>
+<tr class="separator:ab4df515c7712f237f0b4b326cff89aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af314bba2710e5eedac3985ca0c726ac4"><td class="memItemLeft" align="right" valign="top">Position2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#af314bba2710e5eedac3985ca0c726ac4">startPosition</a></td></tr>
+<tr class="memdesc:af314bba2710e5eedac3985ca0c726ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's spawn position.  <a href="class_level.html#af314bba2710e5eedac3985ca0c726ac4">More...</a><br /></td></tr>
+<tr class="separator:af314bba2710e5eedac3985ca0c726ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcebe2e8e72888d60547614609520969"><td class="memItemLeft" align="right" valign="top">Area2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#afcebe2e8e72888d60547614609520969">endPosition</a></td></tr>
+<tr class="memdesc:afcebe2e8e72888d60547614609520969"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's position where the level ends.  <a href="class_level.html#afcebe2e8e72888d60547614609520969">More...</a><br /></td></tr>
+<tr class="separator:afcebe2e8e72888d60547614609520969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66639867e8a2ed0cd9ed25ecc518461"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#ab66639867e8a2ed0cd9ed25ecc518461">attemptCount</a> = 0</td></tr>
+<tr class="memdesc:ab66639867e8a2ed0cd9ed25ecc518461"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of times the player has attempted the level.  <a href="class_level.html#ab66639867e8a2ed0cd9ed25ecc518461">More...</a><br /></td></tr>
+<tr class="separator:ab66639867e8a2ed0cd9ed25ecc518461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc95c07752147fca666c789118606a4e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_level.html#abc95c07752147fca666c789118606a4e">progress</a> = 0</td></tr>
+<tr class="memdesc:abc95c07752147fca666c789118606a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current progress the player has on the level.  <a href="class_level.html#abc95c07752147fca666c789118606a4e">More...</a><br /></td></tr>
+<tr class="separator:abc95c07752147fca666c789118606a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base node for a game level scene. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00008">8</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab147d68f7a06156f6a0cd595bf58f75d" name="ab147d68f7a06156f6a0cd595bf58f75d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab147d68f7a06156f6a0cd595bf58f75d">&#9670;&nbsp;</a></span>_Draw()</h2>
@@ -144,8 +237,6 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00118">118</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
 
 </div>
 </div>
@@ -164,8 +255,24 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00102">102</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_adf87a658b5a922295a3bbab87f5820b5_cgraph.png" border="0" usemap="#aclass_level_adf87a658b5a922295a3bbab87f5820b5_cgraph" alt=""/></div>
+<map name="aclass_level_adf87a658b5a922295a3bbab87f5820b5_cgraph" id="aclass_level_adf87a658b5a922295a3bbab87f5820b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,157,116,184"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="187,5,301,32"/>
+<area shape="rect" href="class_level.html#a37da9eda7a3cd74e5a8c4d5e92e83b18" title="Moves the camera and the background to follow the player." alt="" coords="175,56,313,83"/>
+<area shape="rect" href="class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="198,107,290,133"/>
+<area shape="rect" href="class_game_h_u_d.html#aca0c2fc700f10a3aed6b1f65c13bfadd" title="Sets the player actions to display on the hud." alt="" coords="168,157,320,184"/>
+<area shape="rect" href="class_game_h_u_d.html#a511dd4c57dc75287bfa056bdbba46d95" title="Sets the number of points to display in the points counter." alt="" coords="171,208,317,235"/>
+<area shape="rect" href="class_game_h_u_d.html#ad76c722e11f1eae273e8096f843646fb" title="Sets the progress to display in the level progress bar." alt="" coords="164,259,324,285"/>
+<area shape="rect" href="class_level.html#a209b18b3eef463ac8dc4caf19d869f11" title="Calculates the progress that the player currently has on the level." alt="" coords="170,309,318,336"/>
+<area shape="rect" href="class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="399,107,558,133"/>
+<area shape="rect" href="class_main_action.html#aa5e2b5f2a44a4d622e64878af6240e99" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="372,157,585,184"/>
+<area shape="rect" href="class_secondary_action.html#ad8f2e602a06f1350c9bc0a5b25ff5c83" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="383,209,574,250"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -183,8 +290,28 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00081">81</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a9b982efc154865a30a5c589d72f0a900_cgraph.png" border="0" usemap="#aclass_level_a9b982efc154865a30a5c589d72f0a900_cgraph" alt=""/></div>
+<map name="aclass_level_a9b982efc154865a30a5c589d72f0a900_cgraph" id="aclass_level_a9b982efc154865a30a5c589d72f0a900_cgraph">
+<area shape="rect" title=" " alt="" coords="5,132,104,159"/>
+<area shape="rect" href="class_level.html#aa0e6bfa6d80ec968a1995f395e016a0b" title=" " alt="" coords="152,5,369,32"/>
+<area shape="rect" href="class_level.html#a2cd7ebf61994f7cc65f672f8cc0b20ae" title=" " alt="" coords="153,56,369,83"/>
+<area shape="rect" href="class_level.html#a462cabf043b2870fda20d5a7c25e6d40" title=" " alt="" coords="157,107,365,133"/>
+<area shape="rect" href="class_level.html#a08ef0cf0dd18af04729d4d01deaeea66" title=" " alt="" coords="171,157,351,184"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="169,209,352,250"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="456,256,553,283"/>
+<area shape="rect" href="class_level_complete.html#a09a2c3c46fd610cd3796d716414b91f9" title="Pauses the game and shows this menu." alt="" coords="417,5,592,32"/>
+<area shape="rect" href="class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="459,157,551,184"/>
+<area shape="rect" href="class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="641,157,800,184"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="651,227,790,253"/>
+<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="665,277,776,304"/>
+<area shape="rect" href="class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="640,328,801,355"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="849,252,963,279"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="861,303,951,329"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -205,8 +332,20 @@ Public Attributes</h2></td></tr>
 
 <p>Gets the number of points that the player has earned on the current run. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00168">168</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a866f3830aa6da6db116ecd9204b1b7a6_icgraph.png" border="0" usemap="#aclass_level_a866f3830aa6da6db116ecd9204b1b7a6_icgraph" alt=""/></div>
+<map name="aclass_level_a866f3830aa6da6db116ecd9204b1b7a6_icgraph" id="aclass_level_a866f3830aa6da6db116ecd9204b1b7a6_icgraph">
+<area shape="rect" title="Gets the number of points that the player has earned on the current run." alt="" coords="687,44,800,71"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="528,19,639,46"/>
+<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="528,70,639,96"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -226,8 +365,15 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Moves the camera and the background to follow the player. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00176">176</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18_icgraph.png" border="0" usemap="#aclass_level_a37da9eda7a3cd74e5a8c4d5e92e83b18_icgraph" alt=""/></div>
+<map name="aclass_level_a37da9eda7a3cd74e5a8c4d5e92e83b18_icgraph" id="aclass_level_a37da9eda7a3cd74e5a8c4d5e92e83b18_icgraph">
+<area shape="rect" title="Moves the camera and the background to follow the player." alt="" coords="164,5,301,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -240,14 +386,30 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Level.OnEndPositionBodyEntered </td>
           <td>(</td>
-          <td class="paramtype">Node&#160;</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a>&#160;</td>
           <td class="paramname"><em>body</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00240">240</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_aa0e6bfa6d80ec968a1995f395e016a0b_cgraph.png" border="0" usemap="#aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_cgraph" alt=""/></div>
+<map name="aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_cgraph" id="aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,223,32"/>
+<area shape="rect" href="class_level_complete.html#a09a2c3c46fd610cd3796d716414b91f9" title="Pauses the game and shows this menu." alt="" coords="271,5,445,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_aa0e6bfa6d80ec968a1995f395e016a0b_icgraph.png" border="0" usemap="#aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_icgraph" alt=""/></div>
+<map name="aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_icgraph" id="aclass_level_aa0e6bfa6d80ec968a1995f395e016a0b_icgraph">
+<area shape="rect" title=" " alt="" coords="152,5,369,32"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -265,8 +427,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00225">225</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae_icgraph.png" border="0" usemap="#aclass_level_a2cd7ebf61994f7cc65f672f8cc0b20ae_icgraph" alt=""/></div>
+<map name="aclass_level_a2cd7ebf61994f7cc65f672f8cc0b20ae_icgraph" id="aclass_level_a2cd7ebf61994f7cc65f672f8cc0b20ae_icgraph">
+<area shape="rect" title=" " alt="" coords="152,5,368,32"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -284,8 +453,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00230">230</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a462cabf043b2870fda20d5a7c25e6d40_icgraph.png" border="0" usemap="#aclass_level_a462cabf043b2870fda20d5a7c25e6d40_icgraph" alt=""/></div>
+<map name="aclass_level_a462cabf043b2870fda20d5a7c25e6d40_icgraph" id="aclass_level_a462cabf043b2870fda20d5a7c25e6d40_icgraph">
+<area shape="rect" title=" " alt="" coords="152,5,360,32"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -303,8 +479,25 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00220">220</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a08ef0cf0dd18af04729d4d01deaeea66_cgraph.png" border="0" usemap="#aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_cgraph" alt=""/></div>
+<map name="aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_cgraph" id="aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,185,32"/>
+<area shape="rect" href="class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="233,5,325,32"/>
+<area shape="rect" href="class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="373,5,532,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a08ef0cf0dd18af04729d4d01deaeea66_icgraph.png" border="0" usemap="#aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_icgraph" alt=""/></div>
+<map name="aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_icgraph" id="aclass_level_a08ef0cf0dd18af04729d4d01deaeea66_icgraph">
+<area shape="rect" title=" " alt="" coords="152,5,332,32"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -322,8 +515,29 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00235">235</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a4ecafdfb8a186ec3bffe2cae913616f8_cgraph.png" border="0" usemap="#aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_cgraph" alt=""/></div>
+<map name="aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_cgraph" id="aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,188,65"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="236,31,333,57"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="393,5,531,32"/>
+<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="407,56,517,83"/>
+<area shape="rect" href="class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="381,107,543,133"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="591,31,704,57"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="602,81,693,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a4ecafdfb8a186ec3bffe2cae913616f8_icgraph.png" border="0" usemap="#aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_icgraph" alt=""/></div>
+<map name="aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_icgraph" id="aclass_level_a4ecafdfb8a186ec3bffe2cae913616f8_icgraph">
+<area shape="rect" title=" " alt="" coords="152,5,335,47"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,13,104,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -341,8 +555,30 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00215">215</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a6807430e5f1f262aca25e7bc40fbac90_cgraph.png" border="0" usemap="#aclass_level_a6807430e5f1f262aca25e7bc40fbac90_cgraph" alt=""/></div>
+<map name="aclass_level_a6807430e5f1f262aca25e7bc40fbac90_cgraph" id="aclass_level_a6807430e5f1f262aca25e7bc40fbac90_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,144,83"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="192,56,289,83"/>
+<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="363,31,473,57"/>
+<area shape="rect" href="class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="337,81,499,108"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="547,5,660,32"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="558,56,649,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph.png" border="0" usemap="#aclass_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph" alt=""/></div>
+<map name="aclass_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph" id="aclass_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph">
+<area shape="rect" title=" " alt="" coords="528,5,667,32"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,5,480,32"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,27,335,69"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -362,8 +598,26 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pauses the game. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00197">197</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_ae81c01f79951151a432bbdbf1cdb3dd8_cgraph.png" border="0" usemap="#aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_cgraph" alt=""/></div>
+<map name="aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_cgraph" id="aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_cgraph">
+<area shape="rect" title="Pauses the game." alt="" coords="5,5,97,32"/>
+<area shape="rect" href="class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="145,5,304,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph.png" border="0" usemap="#aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph" alt=""/></div>
+<map name="aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph" id="aclass_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph">
+<area shape="rect" title="Pauses the game." alt="" coords="380,31,472,57"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="187,5,297,32"/>
+<area shape="rect" href="class_level.html#a08ef0cf0dd18af04729d4d01deaeea66" title=" " alt="" coords="152,56,332,83"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,56,104,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -383,8 +637,30 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Restarts the level, resets the player's position and the hud. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00129">129</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a20b2f496054effcd20120b8cb37c14dc_cgraph.png" border="0" usemap="#aclass_level_a20b2f496054effcd20120b8cb37c14dc_cgraph" alt=""/></div>
+<map name="aclass_level_a20b2f496054effcd20120b8cb37c14dc_cgraph" id="aclass_level_a20b2f496054effcd20120b8cb37c14dc_cgraph">
+<area shape="rect" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="5,31,103,57"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="162,5,301,32"/>
+<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="176,56,287,83"/>
+<area shape="rect" href="class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="151,107,312,133"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="360,31,473,57"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="371,81,462,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a20b2f496054effcd20120b8cb37c14dc_icgraph.png" border="0" usemap="#aclass_level_a20b2f496054effcd20120b8cb37c14dc_icgraph" alt=""/></div>
+<map name="aclass_level_a20b2f496054effcd20120b8cb37c14dc_icgraph" id="aclass_level_a20b2f496054effcd20120b8cb37c14dc_icgraph">
+<area shape="rect" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -404,8 +680,28 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Saves the player's progress. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00205">205</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a4bb15a932ab317c90d5de0623b9f8d88_cgraph.png" border="0" usemap="#aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_cgraph" alt=""/></div>
+<map name="aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_cgraph" id="aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_cgraph">
+<area shape="rect" title="Saves the player&#39;s progress." alt="" coords="5,31,116,57"/>
+<area shape="rect" href="class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="164,5,277,32"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="175,56,266,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a4bb15a932ab317c90d5de0623b9f8d88_icgraph.png" border="0" usemap="#aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_icgraph" alt=""/></div>
+<map name="aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_icgraph" id="aclass_level_a4bb15a932ab317c90d5de0623b9f8d88_icgraph">
+<area shape="rect" title="Saves the player&#39;s progress." alt="" coords="528,70,639,96"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -425,12 +721,283 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the progress that the player currently has on the level. </p>
-
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00154">154</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_level_a209b18b3eef463ac8dc4caf19d869f11_icgraph.png" border="0" usemap="#aclass_level_a209b18b3eef463ac8dc4caf19d869f11_icgraph" alt=""/></div>
+<map name="aclass_level_a209b18b3eef463ac8dc4caf19d869f11_icgraph" id="aclass_level_a209b18b3eef463ac8dc4caf19d869f11_icgraph">
+<area shape="rect" title="Calculates the progress that the player currently has on the level." alt="" coords="164,5,312,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab66639867e8a2ed0cd9ed25ecc518461" name="ab66639867e8a2ed0cd9ed25ecc518461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab66639867e8a2ed0cd9ed25ecc518461">&#9670;&nbsp;</a></span>attemptCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level.attemptCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of times the player has attempted the level. </p>
+
+</div>
+</div>
+<a id="a8135b0cfe9ef72bb2c97d548a357e28f" name="a8135b0cfe9ef72bb2c97d548a357e28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8135b0cfe9ef72bb2c97d548a357e28f">&#9670;&nbsp;</a></span>background</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnimatedSprite Level.background</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The level's background. </p>
+
+</div>
+</div>
+<a id="a025cdb541293de7e6c481f39fd78f0d2" name="a025cdb541293de7e6c481f39fd78f0d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025cdb541293de7e6c481f39fd78f0d2">&#9670;&nbsp;</a></span>camera</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Camera2D Level.camera</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The game's camera. </p>
+
+</div>
+</div>
+<a id="afcebe2e8e72888d60547614609520969" name="afcebe2e8e72888d60547614609520969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcebe2e8e72888d60547614609520969">&#9670;&nbsp;</a></span>endPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Area2D Level.endPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The player's position where the level ends. </p>
+
+</div>
+</div>
+<a id="ab4df515c7712f237f0b4b326cff89aed" name="ab4df515c7712f237f0b4b326cff89aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4df515c7712f237f0b4b326cff89aed">&#9670;&nbsp;</a></span>hud</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_h_u_d.html">GameHUD</a> Level.hud</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Game hud. </p>
+
+</div>
+</div>
+<a id="a84ddf86ee474ffdfd98cc2b1aa43814b" name="a84ddf86ee474ffdfd98cc2b1aa43814b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84ddf86ee474ffdfd98cc2b1aa43814b">&#9670;&nbsp;</a></span>levelCompleteMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_level_complete.html">LevelComplete</a> Level.levelCompleteMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Menu that will be shown when level is completed. </p>
+
+</div>
+</div>
+<a id="a08e6603e6ab77dc1ca2d58c2ed8221a0" name="a08e6603e6ab77dc1ca2d58c2ed8221a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e6603e6ab77dc1ca2d58c2ed8221a0">&#9670;&nbsp;</a></span>LevelNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Level.LevelNumber = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The level's number. </p>
+
+</div>
+</div>
+<a id="a414b9257e19142655a85889f1fbda951" name="a414b9257e19142655a85889f1fbda951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a414b9257e19142655a85889f1fbda951">&#9670;&nbsp;</a></span>pauseMenu</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pause_menu.html">PauseMenu</a> Level.pauseMenu</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The level's pause menu. </p>
+
+</div>
+</div>
+<a id="a5d1b3eb59f1d1ce798aac611dceb8e46" name="a5d1b3eb59f1d1ce798aac611dceb8e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1b3eb59f1d1ce798aac611dceb8e46">&#9670;&nbsp;</a></span>Player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PackedScene Level.Player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The player scene from which to load instances. </p>
+
+</div>
+</div>
+<a id="afc1da9f25bc1fc21e1be996b75c04db0" name="afc1da9f25bc1fc21e1be996b75c04db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc1da9f25bc1fc21e1be996b75c04db0">&#9670;&nbsp;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_player.html">Player</a> Level.player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The currently active player in the level. </p>
+
+</div>
+</div>
+<a id="af8c0b7dafc8db3cd326e0a572d7ad9d1" name="af8c0b7dafc8db3cd326e0a572d7ad9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c0b7dafc8db3cd326e0a572d7ad9d1">&#9670;&nbsp;</a></span>pointsMultiplier</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Level.pointsMultiplier = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A value that will be multiplied with the points earned. </p>
+
+</div>
+</div>
 <a id="a68bdb4fa6a0a7d317daaaf44c06599f2" name="a68bdb4fa6a0a7d317daaaf44c06599f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68bdb4fa6a0a7d317daaaf44c06599f2">&#9670;&nbsp;</a></span>positions</h2>
 
@@ -443,17 +1010,67 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_level_8cs_source.html#l00069">69</a> of file <a class="el" href="_level_8cs_source.html">Level.cs</a>.</p>
+</div>
+</div>
+<a id="abc95c07752147fca666c789118606a4e" name="abc95c07752147fca666c789118606a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc95c07752147fca666c789118606a4e">&#9670;&nbsp;</a></span>progress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Level.progress = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current progress the player has on the level. </p>
+
+</div>
+</div>
+<a id="af314bba2710e5eedac3985ca0c726ac4" name="af314bba2710e5eedac3985ca0c726ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af314bba2710e5eedac3985ca0c726ac4">&#9670;&nbsp;</a></span>startPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Position2D Level.startPosition</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The player's spawn position. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Maps/<a class="el" href="_level_8cs_source.html">Level.cs</a></li>
+<li>src/Maps/<a class="el" href="_level_8cs.html">Level.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_level.html">Level</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

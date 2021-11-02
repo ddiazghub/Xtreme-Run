@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rollingcollision_0',['rollingCollision',['../class_player.html#ab5f7f8e003fed1e7b293f5b6f069648b',1,'Player']]],
-  ['runningcollision_1',['runningCollision',['../class_player.html#aa1f1a3e2e5bc1c6267dadd817f00af5d',1,'Player']]]
+  ['newcolor_0',['newColor',['../class_palette_swap_entry.html#afd787e859a6e32067d6203f78b95e457',1,'PaletteSwapEntry']]],
+  ['number_5fof_5fcolors_1',['NUMBER_OF_COLORS',['../class_palette.html#a881cd59cc1cc4f18f383bba4bc9c7857',1,'Palette']]]
 ];

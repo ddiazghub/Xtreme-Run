@@ -1,0 +1,4 @@
+<map id="MainAction.OnMainActionObjectCollisionCheckAreaExited" name="MainAction.OnMainActionObjectCollisionCheckAreaExited">
+<area shape="rect" id="node1" title=" " alt="" coords="168,5,379,47"/>
+<area shape="rect" id="node2" href="$class_main_action.html#a5d77225f0db8bd9c5a5c1f120ef3ce95" title="Setups the state and initializes it." alt="" coords="5,13,120,39"/>
+</map>

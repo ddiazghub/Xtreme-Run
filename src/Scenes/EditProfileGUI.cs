@@ -2,22 +2,49 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public class EditProfileGUI : NinePatchRect
-{
+/// <summary>
+///     GUI that allows the player to edit their profile data and customize their avatar.
+/// </summary>
+public class EditProfileGUI : NinePatchRect {
+
+    /// <summary>
+    ///     Emitted if the user profile's data was modified.
+    /// </summary>
     [Signal]
     public delegate void ProfileChanged();
+
+    /// <summary>
+    ///     Sprite for labeling items which have not been unlocked yet.
+    /// </summary>
     private Texture lockSprite = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/lock.png");
+    
+    /// <summary>
+    ///     A copy of the player's avatar which will be edited.
+    /// </summary>
     private Avatar editedAvatar = Profile.CurrentSession.Info.Avatar.Clone();
 
+    /// <summary>
+    ///     Keys for labeling colors.
+    /// </summary>
     private string[] keys = {
         "Skin",
         "Top",
         "Bottom"
     };
 
+    /// <summary>
+    ///     The ids of the currently selected colors for skin, top, and bottom.
+    /// </summary>
     private Dictionary<string, int> selected;
+
+    /// <summary>
+    ///     Icons for labeling the currently selected colors.
+    /// </summary>/
     private Dictionary<string, TextureRect> colorSelectors;
 
+    /// <summary>
+    ///     The id of the avatar default colors.
+    /// </summary>
     private readonly int DEFAULT_COLOR = 15;
 
     public override void _Ready()
@@ -112,6 +139,10 @@ public class EditProfileGUI : NinePatchRect
             this.GetNode<TextureButton>("Panel/Save").Disabled = true;
     }
 
+    /// <summary>
+    ///     Checks if the player has edited their avatar and the changes haven't been saved.
+    /// </summary>
+    /// <returns>True if the changes are unsaved, false otherwise.</returns>
     public bool UnsavedChanges()
     {
         ProfileInfo profile = Profile.CurrentSession.Info;
@@ -133,6 +164,9 @@ public class EditProfileGUI : NinePatchRect
         return false;
     }
 
+    /// <summary>
+    ///     Updates the data of the avatar being edited depending on user input. Displays the new avatar.
+    /// </summary>
     public void UpdateAvatar()
     {
         this.editedAvatar.Male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);

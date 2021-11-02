@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -49,6 +53,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_s.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,10 +91,14 @@ $(function() {
 <li>SaveData()&#160;:&#160;<a class="el" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88">Level</a></li>
 <li>SAVES_DIRECTORY&#160;:&#160;<a class="el" href="class_profile.html#a60b5ca4f4cd43bd91af9f5ac46f6c647">Profile</a></li>
 <li>Scene&#160;:&#160;<a class="el" href="class_main.html#a9a9683bfcc0bfd6ab74ca38a1b6ad1ff">Main</a></li>
+<li>sceneFactory&#160;:&#160;<a class="el" href="class_main.html#a4e01ee6e74012ec1eebf4744eb2640ad">Main</a></li>
 <li>SceneFactory()&#160;:&#160;<a class="el" href="class_scene_factory.html#a079c0b6302987a374a561495752bfdc7">SceneFactory</a></li>
-<li>secondaryAction&#160;:&#160;<a class="el" href="class_player.html#ad45db217656b2cfb1f10db610ff134bd">Player</a></li>
+<li>scenes&#160;:&#160;<a class="el" href="class_scene_factory.html#a540b4e92010488e1b1c51042b7fc856e">SceneFactory</a></li>
+<li>SecondaryAction&#160;:&#160;<a class="el" href="class_player.html#aa21dcf6dffae0e8c8575890e4d8e6d07">Player</a></li>
 <li>secondaryActionTimer&#160;:&#160;<a class="el" href="class_player.html#aa8a2d620862a3bff5e279a59eb8e1433">Player</a></li>
-<li>secondaryActionType&#160;:&#160;<a class="el" href="class_player.html#a31ec83e10d195fecf9c06420b077ee94">Player</a></li>
+<li>SecondaryActionType&#160;:&#160;<a class="el" href="class_player.html#ac3acd90d6c0eb2ee07ccec066d448cf7">Player</a></li>
+<li>selected&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#a7784b52bb3c578a7fe5cfa36832b9d53">EditProfileGUI</a>, <a class="el" href="class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e">ShopGUI</a></li>
+<li>session&#160;:&#160;<a class="el" href="class_profile.html#a20e872388fa79e657a2bd86ad28d46a5">Profile</a></li>
 <li>Set()&#160;:&#160;<a class="el" href="class_attempts_counter.html#a4cdb5bb63a2ef619112652644b397be7">AttemptsCounter</a>, <a class="el" href="class_points_counter.html#a30a660fc6cb45333b015d6439bd7bc87">PointsCounter</a></li>
 <li>SetActions()&#160;:&#160;<a class="el" href="class_game_h_u_d.html#aca0c2fc700f10a3aed6b1f65c13bfadd">GameHUD</a></li>
 <li>SetAttempts()&#160;:&#160;<a class="el" href="class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a">GameHUD</a></li>
@@ -83,16 +107,22 @@ $(function() {
 <li>SetPoints()&#160;:&#160;<a class="el" href="class_game_h_u_d.html#a511dd4c57dc75287bfa056bdbba46d95">GameHUD</a></li>
 <li>SetProgress()&#160;:&#160;<a class="el" href="class_game_h_u_d.html#ad76c722e11f1eae273e8096f843646fb">GameHUD</a></li>
 <li>Setup()&#160;:&#160;<a class="el" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c">PlayerState</a></li>
+<li>shop&#160;:&#160;<a class="el" href="class_main_menu.html#a670bcafdf8f5e35b41e31c08fb26fbbd">MainMenu</a></li>
 <li>ShopPressed()&#160;:&#160;<a class="el" href="class_profile_g_u_i.html#a1cae5c390923b22eafb7abfa81a74767">ProfileGUI</a></li>
 <li>ShowMenu()&#160;:&#160;<a class="el" href="class_level_complete.html#a09a2c3c46fd610cd3796d716414b91f9">LevelComplete</a>, <a class="el" href="class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa">PauseMenu</a></li>
 <li>SkinColor&#160;:&#160;<a class="el" href="class_avatar.html#a267cad98d66d8c4cb7008c967f9dd176">Avatar</a></li>
+<li>startPosition&#160;:&#160;<a class="el" href="class_level.html#af314bba2710e5eedac3985ca0c726ac4">Level</a></li>
 <li>startTimer&#160;:&#160;<a class="el" href="class_player.html#ab41212894186e98612be4e15d08ad121">Player</a></li>
+<li>state&#160;:&#160;<a class="el" href="class_glide.html#aa63b3baef2fcfcc7606a987b09dcf4c0">Glide</a></li>
 <li>stateFactory&#160;:&#160;<a class="el" href="class_player.html#a4580768fe6a6cb084e2e987588682d2c">Player</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

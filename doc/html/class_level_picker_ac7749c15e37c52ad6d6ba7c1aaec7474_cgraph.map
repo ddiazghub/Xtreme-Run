@@ -1,0 +1,5 @@
+<map id="LevelPicker._Ready" name="LevelPicker._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$class_level_picker.html#a1b5abdf1b94c7fe1410ca560a3eb247e" title=" " alt="" coords="189,5,383,32"/>
+<area shape="rect" id="node3" href="$class_profile_info.html#a81e55ae4a4e4b6d23593a365d61c8104" title="Checks if the level is unlocked, that is if the level&#39;s key has been bought from the store." alt="" coords="431,5,605,32"/>
+</map>

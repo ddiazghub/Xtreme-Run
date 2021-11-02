@@ -1,0 +1,5 @@
+<map id="SecondaryAction.GetTypeAsStringEsp" name="SecondaryAction.GetTypeAsStringEsp">
+<area shape="rect" id="node1" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="364,5,555,47"/>
+<area shape="rect" id="node2" href="$class_game_h_u_d.html#aca0c2fc700f10a3aed6b1f65c13bfadd" title="Sets the player actions to display on the hud." alt="" coords="164,13,316,39"/>
+<area shape="rect" id="node3" href="$class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,13,116,39"/>
+</map>

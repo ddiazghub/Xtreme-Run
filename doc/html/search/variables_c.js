@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['persistentstate_0',['persistentState',['../class_player.html#a6e483237354681df23922459b1f4f5f1',1,'Player']]],
-  ['platformscene_1',['PlatformScene',['../class_spawn_platforms.html#a907b6a7456095772af3765d68af5cdc4',1,'SpawnPlatforms']]],
-  ['positions_2',['positions',['../class_level.html#a68bdb4fa6a0a7d317daaaf44c06599f2',1,'Level']]],
-  ['profileid_3',['ProfileID',['../class_profile_select_entry.html#a1f010ec4952fdc771b4e352c84d4087e',1,'ProfileSelectEntry']]]
+  ['mainactiontimer_0',['mainActionTimer',['../class_player.html#a0bb14eb9e541dc0cabe7e067931e2cde',1,'Player']]],
+  ['max_5fnumber_5fof_5fsaves_1',['MAX_NUMBER_OF_SAVES',['../class_profile.html#a0603d28949b8c323d8bae91ea138d6f7',1,'Profile']]],
+  ['maxfallspeed_2',['MaxFallSpeed',['../class_player.html#af93facbeac2019c5bc7bfb2493041109',1,'Player']]],
+  ['maxjumptime_3',['MaxJumpTime',['../class_player.html#a55a2743162dfad1ccf058979e3454cf0',1,'Player']]],
+  ['movementspeed_4',['MovementSpeed',['../class_player.html#a5a0c8762d9753c0108e520d2cd4c4194',1,'Player']]]
 ];

@@ -1,0 +1,9 @@
+<map id="SecondaryAction" name="SecondaryAction">
+<area shape="rect" id="node1" title="Class that represents an action the player can perform as secondary action." alt="" coords="375,300,583,553"/>
+<area shape="rect" id="node4" href="$class_fast_fall_and_roll.html" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="" coords="5,638,224,759"/>
+<area shape="rect" id="node5" href="$class_spawn_platforms.html" title="Secondary action that allows the player to spawn platforms while on air." alt="" coords="248,623,467,774"/>
+<area shape="rect" id="node6" href="$class_switch_gravity.html" title="Secondary action that allows the player to invert the direction of gravity." alt="" coords="491,601,709,796"/>
+<area shape="rect" id="node7" href="$class_teleport_and_switch_gravity.html" title="Secondary action that allows the player to teleport and invert the direction of gravity." alt="" coords="733,616,952,781"/>
+<area shape="rect" id="node2" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="381,131,577,252"/>
+<area shape="rect" id="node3" href="$class_node2_d.html" title=" " alt="" coords="445,5,513,83"/>
+</map>

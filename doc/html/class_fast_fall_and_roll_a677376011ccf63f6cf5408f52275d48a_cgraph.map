@@ -1,0 +1,4 @@
+<map id="FastFallAndRoll._ActionOnGround" name="FastFallAndRoll._ActionOnGround">
+<area shape="rect" id="node1" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node2" href="$class_player.html#a4d955d72d1768541f5ac99f19ffe1381" title="Sets a hitbox on the player depending on the state." alt="" coords="232,13,352,39"/>
+</map>

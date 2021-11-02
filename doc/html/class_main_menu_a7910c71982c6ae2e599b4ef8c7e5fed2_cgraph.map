@@ -1,0 +1,5 @@
+<map id="MainMenu.OnProfileGUIEditPressed" name="MainMenu.OnProfileGUIEditPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$class_main_menu.html#a399217040b4956e00f8983443bf18c83" title=" " alt="" coords="237,13,428,39"/>
+<area shape="rect" id="node3" href="$class_main_menu.html#a17961f230885c7cb83f86bb88be4973c" title=" " alt="" coords="476,13,615,39"/>
+</map>

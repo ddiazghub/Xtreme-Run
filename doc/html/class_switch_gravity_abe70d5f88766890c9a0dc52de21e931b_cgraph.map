@@ -1,0 +1,4 @@
+<map id="SwitchGravity.invertGravity" name="SwitchGravity.invertGravity">
+<area shape="rect" id="node1" title="Invert&#39;s the player&#39;s gravity." alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="228,5,361,32"/>
+</map>

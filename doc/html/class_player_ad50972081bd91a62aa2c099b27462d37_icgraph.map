@@ -1,0 +1,9 @@
+<map id="Player.InvertGravity" name="Player.InvertGravity">
+<area shape="rect" id="node1" title="Invert&#39;s the player&#39;s gravity." alt="" coords="513,56,647,83"/>
+<area shape="rect" id="node2" href="$class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="310,5,417,32"/>
+<area shape="rect" id="node3" href="$class_switch_gravity.html#abe70d5f88766890c9a0dc52de21e931b" title="Invert&#39;s the player&#39;s gravity." alt="" coords="276,56,451,83"/>
+<area shape="rect" id="node6" href="$class_teleport_and_switch_gravity.html#a49809a107376cd8ad243ca3631c258a4" title="Invert&#39;s the player&#39;s gravity." alt="" coords="261,107,465,149"/>
+<area shape="rect" id="node4" href="$class_switch_gravity.html#a79517966cb67a2f3282bdcaf1fbaaf76" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="18,5,201,32"/>
+<area shape="rect" id="node5" href="$class_switch_gravity.html#a3266c22e1cce5dfc640584b53dcd31d8" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,56,213,83"/>
+<area shape="rect" id="node7" href="$class_teleport_and_switch_gravity.html#aa307d371dea032532bf619e102972791" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="22,107,197,149"/>
+</map>

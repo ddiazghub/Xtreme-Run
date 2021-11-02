@@ -2,13 +2,27 @@
 \label{class_attempts_counter}\index{AttemptsCounter@{AttemptsCounter}}
 
 
-Node for displaying the number of times the player has attempted a level.  
+\mbox{\hyperlink{class_node}{Node}} for displaying the number of times the player has attempted a level.  
 
 
-Inheritance diagram for Attempts\+Counter\+:\begin{figure}[H]
+
+
+Inheritance diagram for Attempts\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_attempts_counter}
+\includegraphics[width=214pt]{class_attempts_counter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Attempts\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{class_attempts_counter__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -18,14 +32,19 @@ override void \mbox{\hyperlink{class_attempts_counter_a99139deffda97733aace25133
 \item 
 void \mbox{\hyperlink{class_attempts_counter_a4cdb5bb63a2ef619112652644b397be7}{Set}} (int attempts)
 \begin{DoxyCompactList}\small\item\em Sets a new number of attempts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_attempts_counter_a613ec57665663954934ea83359759270}{initial\+Position}}
+\item 
+Vector2 \mbox{\hyperlink{class_attempts_counter_a6daaf379b805eca02ae5aa4122488a0b}{rect\+Initial\+Position}}
+\item 
+Nine\+Patch\+Rect \mbox{\hyperlink{class_attempts_counter_a20aac0de951febf7727200faaec3debe}{rect}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Node for displaying the number of times the player has attempted a level. 
-
-Definition at line \mbox{\hyperlink{_attempts_counter_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_attempts_counter_8cs_source}{Attempts\+Counter.\+cs}}.
-
-
+\mbox{\hyperlink{class_node}{Node}} for displaying the number of times the player has attempted a level. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_attempts_counter_a99139deffda97733aace251332587621}\label{class_attempts_counter_a99139deffda97733aace251332587621}} 
@@ -33,10 +52,6 @@ Definition at line \mbox{\hyperlink{_attempts_counter_8cs_source_l00007}{7}} of 
 \index{\_Ready@{\_Ready}!AttemptsCounter@{AttemptsCounter}}
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Attempts\+Counter.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definition at line \mbox{\hyperlink{_attempts_counter_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_attempts_counter_8cs_source}{Attempts\+Counter.\+cs}}.
 
 \mbox{\Hypertarget{class_attempts_counter_a4cdb5bb63a2ef619112652644b397be7}\label{class_attempts_counter_a4cdb5bb63a2ef619112652644b397be7}} 
 \index{AttemptsCounter@{AttemptsCounter}!Set@{Set}}
@@ -55,7 +70,24 @@ Sets a new number of attempts.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_attempts_counter_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_attempts_counter_8cs_source}{Attempts\+Counter.\+cs}}.
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_attempts_counter_a613ec57665663954934ea83359759270}\label{class_attempts_counter_a613ec57665663954934ea83359759270}} 
+\index{AttemptsCounter@{AttemptsCounter}!initialPosition@{initialPosition}}
+\index{initialPosition@{initialPosition}!AttemptsCounter@{AttemptsCounter}}
+\doxysubsubsection{\texorpdfstring{initialPosition}{initialPosition}}
+{\footnotesize\ttfamily Vector2 Attempts\+Counter.\+initial\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_attempts_counter_a20aac0de951febf7727200faaec3debe}\label{class_attempts_counter_a20aac0de951febf7727200faaec3debe}} 
+\index{AttemptsCounter@{AttemptsCounter}!rect@{rect}}
+\index{rect@{rect}!AttemptsCounter@{AttemptsCounter}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily Nine\+Patch\+Rect Attempts\+Counter.\+rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_attempts_counter_a6daaf379b805eca02ae5aa4122488a0b}\label{class_attempts_counter_a6daaf379b805eca02ae5aa4122488a0b}} 
+\index{AttemptsCounter@{AttemptsCounter}!rectInitialPosition@{rectInitialPosition}}
+\index{rectInitialPosition@{rectInitialPosition}!AttemptsCounter@{AttemptsCounter}}
+\doxysubsubsection{\texorpdfstring{rectInitialPosition}{rectInitialPosition}}
+{\footnotesize\ttfamily Vector2 Attempts\+Counter.\+rect\+Initial\+Position\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

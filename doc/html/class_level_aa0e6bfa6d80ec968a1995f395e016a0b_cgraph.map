@@ -1,0 +1,4 @@
+<map id="Level.OnEndPositionBodyEntered" name="Level.OnEndPositionBodyEntered">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,223,32"/>
+<area shape="rect" id="node2" href="$class_level_complete.html#a09a2c3c46fd610cd3796d716414b91f9" title="Pauses the game and shows this menu." alt="" coords="271,5,445,32"/>
+</map>

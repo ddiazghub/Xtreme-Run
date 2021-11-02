@@ -1,0 +1,7 @@
+<map id="Player.SetHitbox" name="Player.SetHitbox">
+<area shape="rect" id="node1" title="Sets a hitbox on the player depending on the state." alt="" coords="251,97,371,123"/>
+<area shape="rect" id="node2" href="$class_fast_fall_and_roll.html#a677376011ccf63f6cf5408f52275d48a" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="15,5,193,47"/>
+<area shape="rect" id="node3" href="$class_on_air_state.html#a4981def48203f62c802d6803e829fbbb" title="Setups the state and initializes it." alt="" coords="47,71,161,98"/>
+<area shape="rect" id="node4" href="$class_on_ground_state.html#af9b72404be0c026cc9da18396aa214d2" title="Setups the state and initializes it." alt="" coords="34,122,174,149"/>
+<area shape="rect" id="node5" href="$class_fast_fall_and_roll.html#a4ee1aec7ed7f5bfe9ec6bf798a16023d" title=" " alt="" coords="5,173,203,215"/>
+</map>

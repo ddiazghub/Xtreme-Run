@@ -1,0 +1,7 @@
+<map id="GameHUD.SetAttempts" name="GameHUD.SetAttempts">
+<area shape="rect" id="node1" title="Sets the number of attempts to display on the attempts counter." alt="" coords="528,70,689,96"/>
+<area shape="rect" id="node2" href="$class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" id="node3" href="$class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" id="node4" href="$class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" id="node5" href="$class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>

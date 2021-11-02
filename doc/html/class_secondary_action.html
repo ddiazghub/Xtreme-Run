@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_secondary_action.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -78,16 +98,27 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for SecondaryAction:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_secondary_action.png" usemap="#SecondaryAction_map" alt=""/>
-  <map id="SecondaryAction_map" name="SecondaryAction_map">
-<area href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="PlayerState" shape="rect" coords="253,56,412,80"/>
-<area href="class_fast_fall_and_roll.html" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="FastFallAndRoll" shape="rect" coords="0,168,159,192"/>
-<area href="class_spawn_platforms.html" title="Secondary action that allows the player to spawn platforms while on air." alt="SpawnPlatforms" shape="rect" coords="169,168,328,192"/>
-<area href="class_switch_gravity.html" title="Secondary action that allows the player to invert the direction of gravity." alt="SwitchGravity" shape="rect" coords="338,168,497,192"/>
-<area href="class_teleport_and_switch_gravity.html" title="Secondary action that allows the player to teleport and invert the direction of gravity." alt="TeleportAndSwitchGravity" shape="rect" coords="507,168,666,192"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_secondary_action__inherit__graph.png" border="0" usemap="#a_secondary_action_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_secondary_action_inherit__map" id="a_secondary_action_inherit__map">
+<area shape="rect" title="Class that represents an action the player can perform as secondary action." alt="" coords="375,300,583,553"/>
+<area shape="rect" href="class_fast_fall_and_roll.html" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="" coords="5,638,224,759"/>
+<area shape="rect" href="class_spawn_platforms.html" title="Secondary action that allows the player to spawn platforms while on air." alt="" coords="248,623,467,774"/>
+<area shape="rect" href="class_switch_gravity.html" title="Secondary action that allows the player to invert the direction of gravity." alt="" coords="491,601,709,796"/>
+<area shape="rect" href="class_teleport_and_switch_gravity.html" title="Secondary action that allows the player to teleport and invert the direction of gravity." alt="" coords="733,616,952,781"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="381,131,577,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="445,5,513,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for SecondaryAction:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action__coll__graph.png" border="0" usemap="#a_secondary_action_coll__map" alt="Collaboration graph"/></div>
+<map name="a_secondary_action_coll__map" id="a_secondary_action_coll__map">
+<area shape="rect" title="Class that represents an action the player can perform as secondary action." alt="" coords="5,300,213,553"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="11,131,207,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="75,5,143,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -134,8 +165,6 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class that represents an action the player can perform as secondary action. </p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00007">7</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a70a639090f6e4f4b92b0116a21484673" name="a70a639090f6e4f4b92b0116a21484673"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a70a639090f6e4f4b92b0116a21484673">&#9670;&nbsp;</a></span>_ActionOnAir()</h2>
@@ -163,6 +192,16 @@ Properties</h2></td></tr>
 <p>The action that will be executed if the player inputs the action's keys and the player's persistent state is on air. </p>
 
 <p>Implemented in <a class="el" href="class_fast_fall_and_roll.html#a63c245a9215306232f86d96c50b9fb20">FastFallAndRoll</a>, <a class="el" href="class_spawn_platforms.html#ae11d1949e82b9a316f530ac977d432b8">SpawnPlatforms</a>, <a class="el" href="class_switch_gravity.html#a79517966cb67a2f3282bdcaf1fbaaf76">SwitchGravity</a>, and <a class="el" href="class_teleport_and_switch_gravity.html#ad74396e09855f299b756fd9a11ea95b9">TeleportAndSwitchGravity</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a70a639090f6e4f4b92b0116a21484673_icgraph.png" border="0" usemap="#aclass_secondary_action_a70a639090f6e4f4b92b0116a21484673_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_a70a639090f6e4f4b92b0116a21484673_icgraph" id="aclass_secondary_action_a70a639090f6e4f4b92b0116a21484673_icgraph">
+<area shape="rect" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="477,13,680,39"/>
+<area shape="rect" href="class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,5,429,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -192,8 +231,16 @@ Properties</h2></td></tr>
 <p>The action that will be executed if the player inputs the action's keys and the player's persistent state is on ground. </p>
 
 <p>Reimplemented in <a class="el" href="class_fast_fall_and_roll.html#a677376011ccf63f6cf5408f52275d48a">FastFallAndRoll</a>, <a class="el" href="class_spawn_platforms.html#a2a9b1a8f7dc1af458b60059ba08bc847">SpawnPlatforms</a>, <a class="el" href="class_switch_gravity.html#a3266c22e1cce5dfc640584b53dcd31d8">SwitchGravity</a>, and <a class="el" href="class_teleport_and_switch_gravity.html#aa307d371dea032532bf619e102972791">TeleportAndSwitchGravity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00042">42</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a2d779a636107f20c7b8566d359d47e2c_icgraph.png" border="0" usemap="#aclass_secondary_action_a2d779a636107f20c7b8566d359d47e2c_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_a2d779a636107f20c7b8566d359d47e2c_icgraph" id="aclass_secondary_action_a2d779a636107f20c7b8566d359d47e2c_icgraph">
+<area shape="rect" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="477,5,664,47"/>
+<area shape="rect" href="class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,5,429,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -223,8 +270,16 @@ Properties</h2></td></tr>
 <p>The action that will be executed once the player stops pressing the action's input keyboard/mouse buttons. </p>
 
 <p>Reimplemented in <a class="el" href="class_spawn_platforms.html#a3eeaa79c708598234334fda9cb7f156e">SpawnPlatforms</a>, <a class="el" href="class_switch_gravity.html#a21fcb39af6df6d3786a2843d1e7cfcbb">SwitchGravity</a>, and <a class="el" href="class_teleport_and_switch_gravity.html#ab8ef1a89a937fb3a90c88b65d4c028bb">TeleportAndSwitchGravity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00056">56</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf_icgraph.png" border="0" usemap="#aclass_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf_icgraph" id="aclass_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf_icgraph">
+<area shape="rect" title="The action that will be executed once the player stops pressing the action&#39;s input keyboard/mouse but..." alt="" coords="477,13,700,39"/>
+<area shape="rect" href="class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,5,429,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -256,8 +311,15 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e">PlayerState</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_spawn_platforms.html#a223516f8a535749e901f616dd804bb4f">SpawnPlatforms</a>, <a class="el" href="class_switch_gravity.html#ae2eeee76ac6fd739b6181e1d80bcf54b">SwitchGravity</a>, and <a class="el" href="class_teleport_and_switch_gravity.html#a5a48df9387198b5ea63957f884a513f8">TeleportAndSwitchGravity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00015">15</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a82ec8c6b3487e5507aa926f412d76945_cgraph.png" border="0" usemap="#aclass_secondary_action_a82ec8c6b3487e5507aa926f412d76945_cgraph" alt=""/></div>
+<map name="aclass_secondary_action_a82ec8c6b3487e5507aa926f412d76945_cgraph" id="aclass_secondary_action_a82ec8c6b3487e5507aa926f412d76945_cgraph">
+<area shape="rect" title="Setups the state and initializes it." alt="" coords="5,13,155,39"/>
+<area shape="rect" href="class_secondary_action.html#ab1436a4c4523473d3199412de76ec830" title=" " alt="" coords="203,5,407,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -296,8 +358,26 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="class_player_state.html#a1bddd210d96db25cb49b3a0b3edd5265">PlayerState</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_switch_gravity.html#a2d96d7d7d7c08aed0d22908002299ddc">SwitchGravity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00021">21</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a91411ef181aa4993006fcb37cc70225d_cgraph.png" border="0" usemap="#aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_cgraph" alt=""/></div>
+<map name="aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_cgraph" id="aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_cgraph">
+<area shape="rect" title="The physics process that will be called each frame for the state." alt="" coords="5,57,216,98"/>
+<area shape="rect" href="class_secondary_action.html#a70a639090f6e4f4b92b0116a21484673" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="274,5,477,32"/>
+<area shape="rect" href="class_secondary_action.html#a2d779a636107f20c7b8566d359d47e2c" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="282,57,469,98"/>
+<area shape="rect" href="class_secondary_action.html#a167568a42e1a355f2d49b5a9dcfd4baf" title="The action that will be executed once the player stops pressing the action&#39;s input keyboard/mouse but..." alt="" coords="264,123,487,149"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_a91411ef181aa4993006fcb37cc70225d_icgraph.png" border="0" usemap="#aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_icgraph" id="aclass_secondary_action_a91411ef181aa4993006fcb37cc70225d_icgraph">
+<area shape="rect" title="The physics process that will be called each frame for the state." alt="" coords="219,5,429,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -333,8 +413,15 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string depending on the action type.</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00067">67</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d_icgraph.png" border="0" usemap="#aclass_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d_icgraph" id="aclass_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d_icgraph">
+<area shape="rect" title="Gets the given action&#39;s type as a string. This is because the player animations corresponding to each..." alt="" coords="219,5,409,47"/>
+<area shape="rect" href="class_secondary_action_pickup.html#ac6f8adbcf3675f978c5467ea06ae6ea8" title=" " alt="" coords="5,5,171,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -370,8 +457,16 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string in spanish depending on the action type.</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00094">94</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83_icgraph.png" border="0" usemap="#aclass_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83_icgraph" id="aclass_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83_icgraph">
+<area shape="rect" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="364,5,555,47"/>
+<area shape="rect" href="class_game_h_u_d.html#aca0c2fc700f10a3aed6b1f65c13bfadd" title="Sets the player actions to display on the hud." alt="" coords="164,13,316,39"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,13,116,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -399,8 +494,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_fast_fall_and_roll.html#a4ee1aec7ed7f5bfe9ec6bf798a16023d">FastFallAndRoll</a>, <a class="el" href="class_spawn_platforms.html#a6c1b2b02211d0597d497209ae78ddca0">SpawnPlatforms</a>, <a class="el" href="class_switch_gravity.html#a92a60def3fa4553e04f9511c3e892be6">SwitchGravity</a>, and <a class="el" href="class_teleport_and_switch_gravity.html#afb088693fcb444dc8a536a1f37988a53">TeleportAndSwitchGravity</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00115">115</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_ab1436a4c4523473d3199412de76ec830_icgraph.png" border="0" usemap="#aclass_secondary_action_ab1436a4c4523473d3199412de76ec830_icgraph" alt=""/></div>
+<map name="aclass_secondary_action_ab1436a4c4523473d3199412de76ec830_icgraph" id="aclass_secondary_action_ab1436a4c4523473d3199412de76ec830_icgraph">
+<area shape="rect" title=" " alt="" coords="203,5,407,47"/>
+<area shape="rect" href="class_secondary_action.html#a82ec8c6b3487e5507aa926f412d76945" title="Setups the state and initializes it." alt="" coords="5,13,155,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -427,17 +529,19 @@ Properties</h2></td></tr>
 
 <p>Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_secondary_action_8cs_source.html#l00013">13</a> of file <a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/PlayerStates/Action/Secondary/<a class="el" href="_secondary_action_8cs_source.html">SecondaryAction.cs</a></li>
+<li>src/Entities/Player/PlayerStates/Action/Secondary/<a class="el" href="_secondary_action_8cs.html">SecondaryAction.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_secondary_action.html">SecondaryAction</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

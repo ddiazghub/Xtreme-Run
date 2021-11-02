@@ -1,0 +1,4 @@
+<map id="SecondaryAction.GetTypeAsString" name="SecondaryAction.GetTypeAsString">
+<area shape="rect" id="node1" title="Gets the given action&#39;s type as a string. This is because the player animations corresponding to each..." alt="" coords="219,5,409,47"/>
+<area shape="rect" id="node2" href="$class_secondary_action_pickup.html#ac6f8adbcf3675f978c5467ea06ae6ea8" title=" " alt="" coords="5,5,171,47"/>
+</map>

@@ -5,10 +5,24 @@
 Platforms that the player can spawn with the spawn platforms secondary action. They destroy themselves after half a second.  
 
 
-Inheritance diagram for Spawned\+Platform\+:\begin{figure}[H]
+
+
+Inheritance diagram for Spawned\+Platform\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_spawned_platform}
+\includegraphics[width=236pt]{class_spawned_platform__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Spawned\+Platform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_spawned_platform__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -18,14 +32,15 @@ override void \mbox{\hyperlink{class_spawned_platform_a5e915c7b81f6b338b20e3fd92
 \item 
 void \mbox{\hyperlink{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}{On\+Destroy\+Timer\+Timeout}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Timer \mbox{\hyperlink{class_spawned_platform_ae7e460e4480e4df9ef220ae4850fd017}{destroy\+Timer}}
+\begin{DoxyCompactList}\small\item\em The timer for destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Platforms that the player can spawn with the spawn platforms secondary action. They destroy themselves after half a second. 
-
-Definition at line \mbox{\hyperlink{_spawned_platform_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_spawned_platform_8cs_source}{Spawned\+Platform.\+cs}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_spawned_platform_a5e915c7b81f6b338b20e3fd92c7bcad5}\label{class_spawned_platform_a5e915c7b81f6b338b20e3fd92c7bcad5}} 
@@ -34,19 +49,40 @@ Definition at line \mbox{\hyperlink{_spawned_platform_8cs_source_l00008}{8}} of 
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Spawned\+Platform.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_spawned_platform_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_spawned_platform_8cs_source}{Spawned\+Platform.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spawned_platform_a5e915c7b81f6b338b20e3fd92c7bcad5_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}\label{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}} 
 \index{SpawnedPlatform@{SpawnedPlatform}!OnDestroyTimerTimeout@{OnDestroyTimerTimeout}}
 \index{OnDestroyTimerTimeout@{OnDestroyTimerTimeout}!SpawnedPlatform@{SpawnedPlatform}}
 \doxysubsubsection{\texorpdfstring{OnDestroyTimerTimeout()}{OnDestroyTimerTimeout()}}
 {\footnotesize\ttfamily void Spawned\+Platform.\+On\+Destroy\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f_icgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line \mbox{\hyperlink{_spawned_platform_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_spawned_platform_8cs_source}{Spawned\+Platform.\+cs}}.
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_spawned_platform_ae7e460e4480e4df9ef220ae4850fd017}\label{class_spawned_platform_ae7e460e4480e4df9ef220ae4850fd017}} 
+\index{SpawnedPlatform@{SpawnedPlatform}!destroyTimer@{destroyTimer}}
+\index{destroyTimer@{destroyTimer}!SpawnedPlatform@{SpawnedPlatform}}
+\doxysubsubsection{\texorpdfstring{destroyTimer}{destroyTimer}}
+{\footnotesize\ttfamily Timer Spawned\+Platform.\+destroy\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The timer for destruction. 
 
 
 

@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,115,133"/>
+<area shape="rect" id="node2" href="$class_edit_profile_g_u_i.html" title="GUI that allows the player to edit their profile data and customize their avatar." alt="" coords="165,5,267,32"/>
+<area shape="rect" id="node3" href="$class_level_complete.html" title="Menu that will be shown when a level is completed." alt="" coords="163,56,269,83"/>
+<area shape="rect" id="node4" href="$class_pause_menu.html" title="Menu that will be shown on pause." alt="" coords="171,107,261,133"/>
+<area shape="rect" id="node5" href="$class_profile_g_u_i.html" title="Panel that displays the data of the currently active profile." alt="" coords="176,157,256,184"/>
+<area shape="rect" id="node6" href="$class_shop_g_u_i.html" title="The shop from which the player can buy items." alt="" coords="179,208,253,235"/>
+</map>

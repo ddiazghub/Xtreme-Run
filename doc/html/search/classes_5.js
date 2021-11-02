@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jetpack_0',['Jetpack',['../class_jetpack.html',1,'']]],
-  ['jump_1',['Jump',['../class_jump.html',1,'']]]
+  ['gamehud_0',['GameHUD',['../class_game_h_u_d.html',1,'']]],
+  ['glide_1',['Glide',['../class_glide.html',1,'']]]
 ];

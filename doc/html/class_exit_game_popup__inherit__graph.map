@@ -1,0 +1,4 @@
+<map id="ExitGamePopup" name="ExitGamePopup">
+<area shape="rect" id="node1" title="Confirms if the player wants to exit the game." alt="" coords="5,131,244,223"/>
+<area shape="rect" id="node2" href="$class_confirmation_dialog.html" title=" " alt="" coords="59,5,190,83"/>
+</map>

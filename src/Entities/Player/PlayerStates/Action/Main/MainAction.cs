@@ -46,12 +46,12 @@ public abstract class MainAction: PlayerState {
         }
 
         if (Input.IsActionPressed("action_main") && !(this.Blocked || this.Player.Blocked)) {
-            if (this.Player.persistentState is OnGroundState)
+            if (this.Player.PersistentState is OnGroundState)
             {
                 this._ActionOnGround();
             }
 
-            if (this.Player.persistentState is OnAirState)
+            if (this.Player.PersistentState is OnAirState)
             {
                 this._ActionOnAir();
             }

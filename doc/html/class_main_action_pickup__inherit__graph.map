@@ -1,0 +1,4 @@
+<map id="MainActionPickup" name="MainActionPickup">
+<area shape="rect" id="node1" title="Pickup for player main action." alt="" coords="5,131,173,223"/>
+<area shape="rect" id="node2" title=" " alt="" coords="57,5,122,83"/>
+</map>

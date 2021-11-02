@@ -1,0 +1,11 @@
+<map id="Player._Ready" name="Player._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,112,133"/>
+<area shape="rect" id="node2" href="$class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="177,5,349,32"/>
+<area shape="rect" id="node6" href="$class_player.html#ae2226638af8907c89812bdb4b7eefede" title="Changes the current persistent state." alt="" coords="165,56,362,83"/>
+<area shape="rect" id="node7" href="$class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="160,107,367,133"/>
+<area shape="rect" id="node8" href="$class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="197,157,330,184"/>
+<area shape="rect" id="node9" href="$class_player.html#a48409f2ac61578d5ed6a8acab3990da4" title=" " alt="" coords="170,208,357,235"/>
+<area shape="rect" id="node3" href="$class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="415,31,577,57"/>
+<area shape="rect" id="node4" href="$class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="432,81,560,108"/>
+<area shape="rect" id="node5" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="625,81,744,108"/>
+</map>

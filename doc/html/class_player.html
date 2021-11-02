@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_player.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,12 +83,12 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_player-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Player Class Reference</div></div>
 </div><!--header-->
@@ -78,13 +99,34 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Player:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_player.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_player__inherit__graph.png" border="0" usemap="#a_player_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_player_inherit__map" id="a_player_inherit__map">
+<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="5,131,239,956"/>
+<area shape="rect" href="class_kinematic_body2_d.html" title=" " alt="" coords="59,5,185,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Player:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#a_player_coll__map" alt="Collaboration graph"/></div>
+<map name="a_player_coll__map" id="a_player_coll__map">
+<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="701,321,935,736"/>
+<area shape="rect" href="class_kinematic_body2_d.html" title=" " alt="" coords="5,57,132,134"/>
+<area shape="rect" title=" " alt="" coords="156,57,195,134"/>
+<area shape="rect" title=" " alt="" coords="384,57,431,134"/>
+<area shape="rect" title=" " alt="" coords="589,57,655,134"/>
+<area shape="rect" title=" " alt="" coords="791,57,845,134"/>
+<area shape="rect" title=" " alt="" coords="895,57,1005,134"/>
+<area shape="rect" title=" " alt="" coords="1029,57,1153,134"/>
+<area shape="rect" title=" " alt="" coords="1183,57,1250,134"/>
+<area shape="rect" href="class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="1274,5,1471,185"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad26d3c4010754f6af7948560a2a233c8"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad26d3c4010754f6af7948560a2a233c8">Dead</a> ()</td></tr>
+<tr class="memdesc:ad26d3c4010754f6af7948560a2a233c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted if the player dies.  <a href="class_player.html#ad26d3c4010754f6af7948560a2a233c8">More...</a><br /></td></tr>
 <tr class="separator:ad26d3c4010754f6af7948560a2a233c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae192a478a80f0e93e01339d62cdd6f6d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d">_Ready</a> ()</td></tr>
 <tr class="separator:ae192a478a80f0e93e01339d62cdd6f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,40 +153,46 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:acf06cc8b10f69a33e33f0750443e09bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#acf06cc8b10f69a33e33f0750443e09bc">JumpForce</a> = 1280</td></tr>
+<tr class="memdesc:acf06cc8b10f69a33e33f0750443e09bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The force/speed of the player's jump.  <a href="class_player.html#acf06cc8b10f69a33e33f0750443e09bc">More...</a><br /></td></tr>
 <tr class="separator:acf06cc8b10f69a33e33f0750443e09bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a0c8762d9753c0108e520d2cd4c4194"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5a0c8762d9753c0108e520d2cd4c4194">MovementSpeed</a> = 700</td></tr>
+<tr class="memdesc:a5a0c8762d9753c0108e520d2cd4c4194"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's movement speed.  <a href="class_player.html#a5a0c8762d9753c0108e520d2cd4c4194">More...</a><br /></td></tr>
 <tr class="separator:a5a0c8762d9753c0108e520d2cd4c4194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a2743162dfad1ccf058979e3454cf0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a55a2743162dfad1ccf058979e3454cf0">MaxJumpTime</a> = 0.04f</td></tr>
+<tr class="memdesc:a55a2743162dfad1ccf058979e3454cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum duration of the player's jump.  <a href="class_player.html#a55a2743162dfad1ccf058979e3454cf0">More...</a><br /></td></tr>
 <tr class="separator:a55a2743162dfad1ccf058979e3454cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af93facbeac2019c5bc7bfb2493041109"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af93facbeac2019c5bc7bfb2493041109">MaxFallSpeed</a> = 1280</td></tr>
+<tr class="memdesc:af93facbeac2019c5bc7bfb2493041109"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum falling speed of the player.  <a href="class_player.html#af93facbeac2019c5bc7bfb2493041109">More...</a><br /></td></tr>
 <tr class="separator:af93facbeac2019c5bc7bfb2493041109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa430a3e8bae8353eb0ed928c9919c95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#afa430a3e8bae8353eb0ed928c9919c95">Gravity</a> = 210</td></tr>
+<tr class="memdesc:afa430a3e8bae8353eb0ed928c9919c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's gravity. This gets added each frame to the player's vertical linear velocity.  <a href="class_player.html#afa430a3e8bae8353eb0ed928c9919c95">More...</a><br /></td></tr>
 <tr class="separator:afa430a3e8bae8353eb0ed928c9919c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d70330236aa5cff44570ad6063433f0"><td class="memItemLeft" align="right" valign="top">Area2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4d70330236aa5cff44570ad6063433f0">jumpObjectCollisionCheck</a></td></tr>
+<tr class="memdesc:a4d70330236aa5cff44570ad6063433f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Area2D to check if the player has entered any jump objects.  <a href="class_player.html#a4d70330236aa5cff44570ad6063433f0">More...</a><br /></td></tr>
 <tr class="separator:a4d70330236aa5cff44570ad6063433f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d0da6c92bf522df4a9d0b97b209b09b"><td class="memItemLeft" align="right" valign="top">Area2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4d0da6c92bf522df4a9d0b97b209b09b">teleportCollisionCheck</a></td></tr>
+<tr class="memdesc:a4d0da6c92bf522df4a9d0b97b209b09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Area2D to check if the player will die on teleport.  <a href="class_player.html#a4d0da6c92bf522df4a9d0b97b209b09b">More...</a><br /></td></tr>
 <tr class="separator:a4d0da6c92bf522df4a9d0b97b209b09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8a2d620862a3bff5e279a59eb8e1433"><td class="memItemLeft" align="right" valign="top">Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa8a2d620862a3bff5e279a59eb8e1433">secondaryActionTimer</a></td></tr>
+<tr class="memdesc:aa8a2d620862a3bff5e279a59eb8e1433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer to perform event after a secondary action was executed.  <a href="class_player.html#aa8a2d620862a3bff5e279a59eb8e1433">More...</a><br /></td></tr>
 <tr class="separator:aa8a2d620862a3bff5e279a59eb8e1433"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb14eb9e541dc0cabe7e067931e2cde"><td class="memItemLeft" align="right" valign="top">Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a0bb14eb9e541dc0cabe7e067931e2cde">mainActionTimer</a></td></tr>
+<tr class="memdesc:a0bb14eb9e541dc0cabe7e067931e2cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer to perform event after a main action was executed.  <a href="class_player.html#a0bb14eb9e541dc0cabe7e067931e2cde">More...</a><br /></td></tr>
 <tr class="separator:a0bb14eb9e541dc0cabe7e067931e2cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41212894186e98612be4e15d08ad121"><td class="memItemLeft" align="right" valign="top">Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab41212894186e98612be4e15d08ad121">startTimer</a></td></tr>
+<tr class="memdesc:ab41212894186e98612be4e15d08ad121"><td class="mdescLeft">&#160;</td><td class="mdescRight">This timer enables input on the player on timeout.  <a href="class_player.html#ab41212894186e98612be4e15d08ad121">More...</a><br /></td></tr>
 <tr class="separator:ab41212894186e98612be4e15d08ad121"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc34dcdff8f033cb587661d07f13fa5"><td class="memItemLeft" align="right" valign="top">AnimatedSprite&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a8fc34dcdff8f033cb587661d07f13fa5">animation</a></td></tr>
+<tr class="memdesc:a8fc34dcdff8f033cb587661d07f13fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's animation.  <a href="class_player.html#a8fc34dcdff8f033cb587661d07f13fa5">More...</a><br /></td></tr>
 <tr class="separator:a8fc34dcdff8f033cb587661d07f13fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e483237354681df23922459b1f4f5f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_persistent_state.html">PersistentState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a6e483237354681df23922459b1f4f5f1">persistentState</a></td></tr>
-<tr class="separator:a6e483237354681df23922459b1f4f5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f11ade4b7fa1b93671326424ff0f1db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_main_action.html">MainAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a3f11ade4b7fa1b93671326424ff0f1db">mainAction</a></td></tr>
-<tr class="separator:a3f11ade4b7fa1b93671326424ff0f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad45db217656b2cfb1f10db610ff134bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_secondary_action.html">SecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad45db217656b2cfb1f10db610ff134bd">secondaryAction</a></td></tr>
-<tr class="separator:ad45db217656b2cfb1f10db610ff134bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4580768fe6a6cb084e2e987588682d2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_state_factory.html">PlayerStateFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4580768fe6a6cb084e2e987588682d2c">stateFactory</a></td></tr>
-<tr class="separator:a4580768fe6a6cb084e2e987588682d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f1a3e2e5bc1c6267dadd817f00af5d"><td class="memItemLeft" align="right" valign="top">CollisionShape2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa1f1a3e2e5bc1c6267dadd817f00af5d">runningCollision</a></td></tr>
+<tr class="memdesc:aa1f1a3e2e5bc1c6267dadd817f00af5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's default collision shape.  <a href="class_player.html#aa1f1a3e2e5bc1c6267dadd817f00af5d">More...</a><br /></td></tr>
 <tr class="separator:aa1f1a3e2e5bc1c6267dadd817f00af5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5f7f8e003fed1e7b293f5b6f069648b"><td class="memItemLeft" align="right" valign="top">CollisionShape2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab5f7f8e003fed1e7b293f5b6f069648b">rollingCollision</a></td></tr>
+<tr class="memdesc:ab5f7f8e003fed1e7b293f5b6f069648b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's collision shape while performing a roll action.  <a href="class_player.html#ab5f7f8e003fed1e7b293f5b6f069648b">More...</a><br /></td></tr>
 <tr class="separator:ab5f7f8e003fed1e7b293f5b6f069648b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfe24c4a8a6124eef02a636f042917dd"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#adfe24c4a8a6124eef02a636f042917dd">linearVelocity</a> = new Vector2(0, 0)</td></tr>
+<tr class="memdesc:adfe24c4a8a6124eef02a636f042917dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's linear velocity vector.  <a href="class_player.html#adfe24c4a8a6124eef02a636f042917dd">More...</a><br /></td></tr>
 <tr class="separator:adfe24c4a8a6124eef02a636f042917dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79a2bd665eb8c1be87d3c4d16c7a17ca"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a79a2bd665eb8c1be87d3c4d16c7a17ca">DEFAULT_JUMPFORCE</a> = 1280</td></tr>
 <tr class="separator:a79a2bd665eb8c1be87d3c4d16c7a17ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,24 +202,42 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1a02648b66f2ff24777751e242a260c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae354c1568fb2f116e290e1a8fde5271a"><td class="memItemLeft" align="right" valign="top">readonly float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae354c1568fb2f116e290e1a8fde5271a">DEFAULT_MAX_JUMP_TIME</a> = 0.04f</td></tr>
 <tr class="separator:ae354c1568fb2f116e290e1a8fde5271a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a290302698c5b551aa04ea96c785c3489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9">PlayerMainAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a290302698c5b551aa04ea96c785c3489">mainActionType</a></td></tr>
-<tr class="separator:a290302698c5b551aa04ea96c785c3489"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31ec83e10d195fecf9c06420b077ee94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a31ec83e10d195fecf9c06420b077ee94">secondaryActionType</a></td></tr>
-<tr class="separator:a31ec83e10d195fecf9c06420b077ee94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
+<tr class="memitem:a9cb4641c4d481f73d88fb07d479f4c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_persistent_state.html">PersistentState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9cb4641c4d481f73d88fb07d479f4c84">PersistentState</a><code> [getset]</code></td></tr>
+<tr class="memdesc:a9cb4641c4d481f73d88fb07d479f4c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current persistent state of the player.  <a href="class_player.html#a9cb4641c4d481f73d88fb07d479f4c84">More...</a><br /></td></tr>
+<tr class="separator:a9cb4641c4d481f73d88fb07d479f4c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b54cc99ed363971d75ab6c506016be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_main_action.html">MainAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab8b54cc99ed363971d75ab6c506016be">MainAction</a><code> [getset]</code></td></tr>
+<tr class="memdesc:ab8b54cc99ed363971d75ab6c506016be"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main action the player can currently perform.  <a href="class_player.html#ab8b54cc99ed363971d75ab6c506016be">More...</a><br /></td></tr>
+<tr class="separator:ab8b54cc99ed363971d75ab6c506016be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21dcf6dffae0e8c8575890e4d8e6d07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_secondary_action.html">SecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa21dcf6dffae0e8c8575890e4d8e6d07">SecondaryAction</a><code> [getset]</code></td></tr>
+<tr class="memdesc:aa21dcf6dffae0e8c8575890e4d8e6d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secondary action the player can currently perform.  <a href="class_player.html#aa21dcf6dffae0e8c8575890e4d8e6d07">More...</a><br /></td></tr>
+<tr class="separator:aa21dcf6dffae0e8c8575890e4d8e6d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2d4269e3e9b3042032012c05502ff76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9">PlayerMainAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#aa2d4269e3e9b3042032012c05502ff76">MainActionType</a><code> [getset]</code></td></tr>
+<tr class="memdesc:aa2d4269e3e9b3042032012c05502ff76"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the main action that the player can currently execute.  <a href="class_player.html#aa2d4269e3e9b3042032012c05502ff76">More...</a><br /></td></tr>
+<tr class="separator:aa2d4269e3e9b3042032012c05502ff76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3acd90d6c0eb2ee07ccec066d448cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac3acd90d6c0eb2ee07ccec066d448cf7">SecondaryActionType</a><code> [getset]</code></td></tr>
+<tr class="memdesc:ac3acd90d6c0eb2ee07ccec066d448cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the secondary action that the player can currently execute.  <a href="class_player.html#ac3acd90d6c0eb2ee07ccec066d448cf7">More...</a><br /></td></tr>
+<tr class="separator:ac3acd90d6c0eb2ee07ccec066d448cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94853daaad74e83561ada70dc0c4e92e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a94853daaad74e83561ada70dc0c4e92e">Blocked</a><code> [getset]</code></td></tr>
+<tr class="memdesc:a94853daaad74e83561ada70dc0c4e92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, then the player can't perform any actions.  <a href="class_player.html#a94853daaad74e83561ada70dc0c4e92e">More...</a><br /></td></tr>
 <tr class="separator:a94853daaad74e83561ada70dc0c4e92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c06a72ba615b0e764ad4ff428e8119d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a9c06a72ba615b0e764ad4ff428e8119d">InvertedGravity</a> = false<code> [getset]</code></td></tr>
+<tr class="memdesc:a9c06a72ba615b0e764ad4ff428e8119d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, then the player's gravity vector is inverted.  <a href="class_player.html#a9c06a72ba615b0e764ad4ff428e8119d">More...</a><br /></td></tr>
 <tr class="separator:a9c06a72ba615b0e764ad4ff428e8119d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9af5996f690a82ffea195f2c9a46d0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af9af5996f690a82ffea195f2c9a46d0c">Invincible</a><code> [getset]</code></td></tr>
+<tr class="memitem:af9af5996f690a82ffea195f2c9a46d0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#af9af5996f690a82ffea195f2c9a46d0c">Invincible</a> = false<code> [getset]</code></td></tr>
+<tr class="memdesc:af9af5996f690a82ffea195f2c9a46d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, then the player can't die.  <a href="class_player.html#af9af5996f690a82ffea195f2c9a46d0c">More...</a><br /></td></tr>
 <tr class="separator:af9af5996f690a82ffea195f2c9a46d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4580768fe6a6cb084e2e987588682d2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_player_state_factory.html">PlayerStateFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4580768fe6a6cb084e2e987588682d2c">stateFactory</a></td></tr>
+<tr class="memdesc:a4580768fe6a6cb084e2e987588682d2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory for creating new player state instances.  <a href="class_player.html#a4580768fe6a6cb084e2e987588682d2c">More...</a><br /></td></tr>
+<tr class="separator:a4580768fe6a6cb084e2e987588682d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The player node. It is a state machine that executes 3 states at each given time. The first state is a physical state (On ground, on air), while the other 2 are actions that the player can perform at a given time (Kind of like powers). </p>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00009">9</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5c41f7a6b92001f593ccb5d8574371e5" name="a5c41f7a6b92001f593ccb5d8574371e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c41f7a6b92001f593ccb5d8574371e5">&#9670;&nbsp;</a></span>_PhysicsProcess()</h2>
@@ -188,8 +254,24 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00079">79</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a5c41f7a6b92001f593ccb5d8574371e5_cgraph.png" border="0" usemap="#aclass_player_a5c41f7a6b92001f593ccb5d8574371e5_cgraph" alt=""/></div>
+<map name="aclass_player_a5c41f7a6b92001f593ccb5d8574371e5_cgraph" id="aclass_player_a5c41f7a6b92001f593ccb5d8574371e5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,237,171,264"/>
+<area shape="rect" href="class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="236,99,412,141"/>
+<area shape="rect" href="class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,230,429,271"/>
+<area shape="rect" href="class_persistent_state.html#a197779850b8a9fbef055982249582ef3" title="The physics process that will be called each frame for the state." alt="" coords="223,295,425,337"/>
+<area shape="rect" href="class_main_action.html#a61b3c6152e024c014e7d810feb94fc74" title=" " alt="" coords="505,5,673,32"/>
+<area shape="rect" href="class_main_action.html#a0d3e4403cb876a28ae3383daba402fce" title=" " alt="" coords="491,56,686,83"/>
+<area shape="rect" href="class_main_action.html#abad27d048abd3f377cf7f2e1e15f6975" title="The process that will be executed each frame while the action is being performed." alt="" coords="497,107,680,133"/>
+<area shape="rect" href="class_main_action.html#a9b80ccc09b82cb5b35dc22a1a6f9b85f" title=" " alt="" coords="494,157,683,184"/>
+<area shape="rect" href="class_secondary_action.html#a70a639090f6e4f4b92b0116a21484673" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="487,208,690,235"/>
+<area shape="rect" href="class_secondary_action.html#a2d779a636107f20c7b8566d359d47e2c" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="495,259,682,301"/>
+<area shape="rect" href="class_secondary_action.html#a167568a42e1a355f2d49b5a9dcfd4baf" title="The action that will be executed once the player stops pressing the action&#39;s input keyboard/mouse but..." alt="" coords="477,325,700,352"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -207,8 +289,22 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00045">45</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph.png" border="0" usemap="#aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph" alt=""/></div>
+<map name="aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph" id="aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,107,112,133"/>
+<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="177,5,349,32"/>
+<area shape="rect" href="class_player.html#ae2226638af8907c89812bdb4b7eefede" title="Changes the current persistent state." alt="" coords="165,56,362,83"/>
+<area shape="rect" href="class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="160,107,367,133"/>
+<area shape="rect" href="class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="197,157,330,184"/>
+<area shape="rect" href="class_player.html#a48409f2ac61578d5ed6a8acab3990da4" title=" " alt="" coords="170,208,357,235"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="415,31,577,57"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="432,81,560,108"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="625,81,744,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -235,8 +331,28 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00111">111</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph.png" border="0" usemap="#aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph" alt=""/></div>
+<map name="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph" id="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph">
+<area shape="rect" title="Changes the current main action the player can perform." alt="" coords="5,31,177,57"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="225,5,388,32"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="243,56,371,83"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="436,56,555,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a383ca70b33e3f3a19573dc0c260c1150_icgraph.png" border="0" usemap="#aclass_player_a383ca70b33e3f3a19573dc0c260c1150_icgraph" alt=""/></div>
+<map name="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_icgraph" id="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_icgraph">
+<area shape="rect" title="Changes the current main action the player can perform." alt="" coords="460,35,632,61"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="249,5,356,32"/>
+<area shape="rect" href="class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,57,412,98"/>
+<area shape="rect" href="class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,64,145,91"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -263,8 +379,28 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00095">95</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ae2226638af8907c89812bdb4b7eefede_cgraph.png" border="0" usemap="#aclass_player_ae2226638af8907c89812bdb4b7eefede_cgraph" alt=""/></div>
+<map name="aclass_player_ae2226638af8907c89812bdb4b7eefede_cgraph" id="aclass_player_ae2226638af8907c89812bdb4b7eefede_cgraph">
+<area shape="rect" title="Changes the current persistent state." alt="" coords="5,31,203,57"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="251,5,413,32"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="268,56,396,83"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="461,56,580,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ae2226638af8907c89812bdb4b7eefede_icgraph.png" border="0" usemap="#aclass_player_ae2226638af8907c89812bdb4b7eefede_icgraph" alt=""/></div>
+<map name="aclass_player_ae2226638af8907c89812bdb4b7eefede_icgraph" id="aclass_player_ae2226638af8907c89812bdb4b7eefede_icgraph">
+<area shape="rect" title="Changes the current persistent state." alt="" coords="255,64,452,91"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="53,5,159,32"/>
+<area shape="rect" href="class_on_air_state.html#a8fc8b56eac0dd06f4976543b32420f57" title="The physics process that will be called each frame for the state." alt="" coords="19,57,193,98"/>
+<area shape="rect" href="class_on_ground_state.html#ab00fe4c5fbbe3d27cf9e7cdf726e2614" title="The physics process that will be called each frame for the state." alt="" coords="5,122,207,163"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -291,8 +427,28 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00128">128</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_aa90d185e163489f864480c9c72b7fbb8_cgraph.png" border="0" usemap="#aclass_player_aa90d185e163489f864480c9c72b7fbb8_cgraph" alt=""/></div>
+<map name="aclass_player_aa90d185e163489f864480c9c72b7fbb8_cgraph" id="aclass_player_aa90d185e163489f864480c9c72b7fbb8_cgraph">
+<area shape="rect" title="Changes the current secondary action the player can perform." alt="" coords="5,31,212,57"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="260,5,423,32"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="277,56,405,83"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="471,56,589,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_aa90d185e163489f864480c9c72b7fbb8_icgraph.png" border="0" usemap="#aclass_player_aa90d185e163489f864480c9c72b7fbb8_icgraph" alt=""/></div>
+<map name="aclass_player_aa90d185e163489f864480c9c72b7fbb8_icgraph" id="aclass_player_aa90d185e163489f864480c9c72b7fbb8_icgraph">
+<area shape="rect" title="Changes the current secondary action the player can perform." alt="" coords="460,35,667,61"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="249,5,356,32"/>
+<area shape="rect" href="class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,57,412,98"/>
+<area shape="rect" href="class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,64,145,91"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -310,6 +466,8 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Emitted if the player dies. </p>
 
 </div>
 </div>
@@ -329,8 +487,20 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Invert's the player's gravity. </p>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00144">144</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_ad50972081bd91a62aa2c099b27462d37_icgraph.png" border="0" usemap="#aclass_player_ad50972081bd91a62aa2c099b27462d37_icgraph" alt=""/></div>
+<map name="aclass_player_ad50972081bd91a62aa2c099b27462d37_icgraph" id="aclass_player_ad50972081bd91a62aa2c099b27462d37_icgraph">
+<area shape="rect" title="Invert&#39;s the player&#39;s gravity." alt="" coords="513,56,647,83"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="310,5,417,32"/>
+<area shape="rect" href="class_switch_gravity.html#abe70d5f88766890c9a0dc52de21e931b" title="Invert&#39;s the player&#39;s gravity." alt="" coords="276,56,451,83"/>
+<area shape="rect" href="class_teleport_and_switch_gravity.html#a49809a107376cd8ad243ca3631c258a4" title="Invert&#39;s the player&#39;s gravity." alt="" coords="261,107,465,149"/>
+<area shape="rect" href="class_switch_gravity.html#a79517966cb67a2f3282bdcaf1fbaaf76" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="18,5,201,32"/>
+<area shape="rect" href="class_switch_gravity.html#a3266c22e1cce5dfc640584b53dcd31d8" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,56,213,83"/>
+<area shape="rect" href="class_teleport_and_switch_gravity.html#aa307d371dea032532bf619e102972791" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="22,107,197,149"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -348,8 +518,15 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00183">183</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a48409f2ac61578d5ed6a8acab3990da4_icgraph.png" border="0" usemap="#aclass_player_a48409f2ac61578d5ed6a8acab3990da4_icgraph" alt=""/></div>
+<map name="aclass_player_a48409f2ac61578d5ed6a8acab3990da4_icgraph" id="aclass_player_a48409f2ac61578d5ed6a8acab3990da4_icgraph">
+<area shape="rect" title=" " alt="" coords="160,5,347,32"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="5,5,112,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -376,8 +553,18 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00163">163</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a4d955d72d1768541f5ac99f19ffe1381_icgraph.png" border="0" usemap="#aclass_player_a4d955d72d1768541f5ac99f19ffe1381_icgraph" alt=""/></div>
+<map name="aclass_player_a4d955d72d1768541f5ac99f19ffe1381_icgraph" id="aclass_player_a4d955d72d1768541f5ac99f19ffe1381_icgraph">
+<area shape="rect" title="Sets a hitbox on the player depending on the state." alt="" coords="251,97,371,123"/>
+<area shape="rect" href="class_fast_fall_and_roll.html#a677376011ccf63f6cf5408f52275d48a" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="15,5,193,47"/>
+<area shape="rect" href="class_on_air_state.html#a4981def48203f62c802d6803e829fbbb" title="Setups the state and initializes it." alt="" coords="47,71,161,98"/>
+<area shape="rect" href="class_on_ground_state.html#af9b72404be0c026cc9da18396aa214d2" title="Setups the state and initializes it." alt="" coords="34,122,174,149"/>
+<area shape="rect" href="class_fast_fall_and_roll.html#a4ee1aec7ed7f5bfe9ec6bf798a16023d" title=" " alt="" coords="5,173,203,215"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -394,7 +581,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00025">25</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's animation. </p>
 
 </div>
 </div>
@@ -410,8 +597,6 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00034">34</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
 </div>
 </div>
 <a id="a79a2bd665eb8c1be87d3c4d16c7a17ca" name="a79a2bd665eb8c1be87d3c4d16c7a17ca"></a>
@@ -425,8 +610,6 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00033">33</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -442,8 +625,6 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00036">36</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
 </div>
 </div>
 <a id="a1a02648b66f2ff24777751e242a260c0" name="a1a02648b66f2ff24777751e242a260c0"></a>
@@ -457,8 +638,6 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00035">35</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
 
 </div>
 </div>
@@ -474,7 +653,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00015">15</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's gravity. This gets added each frame to the player's vertical linear velocity. </p>
 
 </div>
 </div>
@@ -490,7 +669,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00011">11</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The force/speed of the player's jump. </p>
 
 </div>
 </div>
@@ -506,7 +685,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00020">20</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Area2D to check if the player has entered any jump objects. </p>
 
 </div>
 </div>
@@ -522,23 +701,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00032">32</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
-</div>
-</div>
-<a id="a3f11ade4b7fa1b93671326424ff0f1db" name="a3f11ade4b7fa1b93671326424ff0f1db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f11ade4b7fa1b93671326424ff0f1db">&#9670;&nbsp;</a></span>mainAction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_main_action.html">MainAction</a> Player.mainAction</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00027">27</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's linear velocity vector. </p>
 
 </div>
 </div>
@@ -554,23 +717,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00023">23</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
-</div>
-</div>
-<a id="a290302698c5b551aa04ea96c785c3489" name="a290302698c5b551aa04ea96c785c3489"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a290302698c5b551aa04ea96c785c3489">&#9670;&nbsp;</a></span>mainActionType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9">PlayerMainAction</a> Player.mainActionType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00037">37</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Timer to perform event after a main action was executed. </p>
 
 </div>
 </div>
@@ -586,7 +733,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00014">14</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The maximum falling speed of the player. </p>
 
 </div>
 </div>
@@ -602,7 +749,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00013">13</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The maximum duration of the player's jump. </p>
 
 </div>
 </div>
@@ -618,23 +765,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00012">12</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
-</div>
-</div>
-<a id="a6e483237354681df23922459b1f4f5f1" name="a6e483237354681df23922459b1f4f5f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e483237354681df23922459b1f4f5f1">&#9670;&nbsp;</a></span>persistentState</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_persistent_state.html">PersistentState</a> Player.persistentState</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00026">26</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's movement speed. </p>
 
 </div>
 </div>
@@ -650,7 +781,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00031">31</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's collision shape while performing a roll action. </p>
 
 </div>
 </div>
@@ -666,23 +797,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00030">30</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
-</div>
-</div>
-<a id="ad45db217656b2cfb1f10db610ff134bd" name="ad45db217656b2cfb1f10db610ff134bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad45db217656b2cfb1f10db610ff134bd">&#9670;&nbsp;</a></span>secondaryAction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_secondary_action.html">SecondaryAction</a> Player.secondaryAction</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00028">28</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>The player's default collision shape. </p>
 
 </div>
 </div>
@@ -698,23 +813,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00022">22</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
-
-</div>
-</div>
-<a id="a31ec83e10d195fecf9c06420b077ee94" name="a31ec83e10d195fecf9c06420b077ee94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31ec83e10d195fecf9c06420b077ee94">&#9670;&nbsp;</a></span>secondaryActionType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a> Player.secondaryActionType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00038">38</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Timer to perform event after a secondary action was executed. </p>
 
 </div>
 </div>
@@ -730,7 +829,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00024">24</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>This timer enables input on the player on timeout. </p>
 
 </div>
 </div>
@@ -739,14 +838,22 @@ Properties</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_player_state_factory.html">PlayerStateFactory</a> Player.stateFactory</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00029">29</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Factory for creating new player state instances. </p>
 
 </div>
 </div>
@@ -762,7 +869,7 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00021">21</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>Area2D to check if the player will die on teleport. </p>
 
 </div>
 </div>
@@ -787,7 +894,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00040">40</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>If true, then the player can't perform any actions. </p>
 
 </div>
 </div>
@@ -811,7 +918,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00041">41</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>If true, then the player's gravity vector is inverted. </p>
 
 </div>
 </div>
@@ -825,7 +932,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Player.Invincible</td>
+          <td class="memname">bool Player.Invincible = false</td>
         </tr>
       </table>
   </td>
@@ -835,17 +942,141 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_player_8cs_source.html#l00042">42</a> of file <a class="el" href="_player_8cs_source.html">Player.cs</a>.</p>
+<p>If true, then the player can't die. </p>
+
+</div>
+</div>
+<a id="ab8b54cc99ed363971d75ab6c506016be" name="ab8b54cc99ed363971d75ab6c506016be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b54cc99ed363971d75ab6c506016be">&#9670;&nbsp;</a></span>MainAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_main_action.html">MainAction</a> Player.MainAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The main action the player can currently perform. </p>
+
+</div>
+</div>
+<a id="aa2d4269e3e9b3042032012c05502ff76" name="aa2d4269e3e9b3042032012c05502ff76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d4269e3e9b3042032012c05502ff76">&#9670;&nbsp;</a></span>MainActionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9">PlayerMainAction</a> Player.MainActionType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of the main action that the player can currently execute. </p>
+
+</div>
+</div>
+<a id="a9cb4641c4d481f73d88fb07d479f4c84" name="a9cb4641c4d481f73d88fb07d479f4c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb4641c4d481f73d88fb07d479f4c84">&#9670;&nbsp;</a></span>PersistentState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_persistent_state.html">PersistentState</a> Player.PersistentState</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The current persistent state of the player. </p>
+
+</div>
+</div>
+<a id="aa21dcf6dffae0e8c8575890e4d8e6d07" name="aa21dcf6dffae0e8c8575890e4d8e6d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21dcf6dffae0e8c8575890e4d8e6d07">&#9670;&nbsp;</a></span>SecondaryAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_secondary_action.html">SecondaryAction</a> Player.SecondaryAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The secondary action the player can currently perform. </p>
+
+</div>
+</div>
+<a id="ac3acd90d6c0eb2ee07ccec066d448cf7" name="ac3acd90d6c0eb2ee07ccec066d448cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3acd90d6c0eb2ee07ccec066d448cf7">&#9670;&nbsp;</a></span>SecondaryActionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a> Player.SecondaryActionType</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The type of the secondary action that the player can currently execute. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/<a class="el" href="_player_8cs_source.html">Player.cs</a></li>
+<li>src/Entities/Player/<a class="el" href="_player_8cs.html">Player.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_player.html">Player</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

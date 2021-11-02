@@ -1,0 +1,6 @@
+<map id="Player.ChangeSecondaryAction" name="Player.ChangeSecondaryAction">
+<area shape="rect" id="node1" title="Changes the current secondary action the player can perform." alt="" coords="5,31,212,57"/>
+<area shape="rect" id="node2" href="$class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="260,5,423,32"/>
+<area shape="rect" id="node3" href="$class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="277,56,405,83"/>
+<area shape="rect" id="node4" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="471,56,589,83"/>
+</map>

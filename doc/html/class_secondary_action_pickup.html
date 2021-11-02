@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_secondary_action_pickup.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,11 +83,11 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_secondary_action_pickup-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SecondaryActionPickup Class Reference</div></div>
 </div><!--header-->
@@ -77,9 +98,22 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for SecondaryActionPickup:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_secondary_action_pickup.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_secondary_action_pickup__inherit__graph.png" border="0" usemap="#a_secondary_action_pickup_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_secondary_action_pickup_inherit__map" id="a_secondary_action_pickup_inherit__map">
+<area shape="rect" title="Pickup for player secondary action." alt="" coords="5,131,208,223"/>
+<area shape="rect" title=" " alt="" coords="74,5,139,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for SecondaryActionPickup:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_pickup__coll__graph.png" border="0" usemap="#a_secondary_action_pickup_coll__map" alt="Collaboration graph"/></div>
+<map name="a_secondary_action_pickup_coll__map" id="a_secondary_action_pickup_coll__map">
+<area shape="rect" title="Pickup for player secondary action." alt="" coords="5,145,208,223"/>
+<area shape="rect" title=" " alt="" coords="6,5,71,83"/>
+<area shape="rect" title=" " alt="" coords="95,5,254,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -91,11 +125,15 @@ Properties</h2></td></tr>
 <tr class="memitem:a0a202dab78d2f57ab0fc26ee01c74db2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_secondary_action_pickup.html#a0a202dab78d2f57ab0fc26ee01c74db2">Type</a><code> [getset]</code></td></tr>
 <tr class="memdesc:a0a202dab78d2f57ab0fc26ee01c74db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pickup's type.  <a href="class_secondary_action_pickup.html#a0a202dab78d2f57ab0fc26ee01c74db2">More...</a><br /></td></tr>
 <tr class="separator:a0a202dab78d2f57ab0fc26ee01c74db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a81545c9e563205381baaef594a5ca747"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747">type</a> = <a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88afc48036436ec734942514222eb39baed">PlayerSecondaryAction.FASTFALL_AND_ROLL</a></td></tr>
+<tr class="memdesc:a81545c9e563205381baaef594a5ca747"><td class="mdescLeft">&#160;</td><td class="mdescRight">The pickup's type.  <a href="class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747">More...</a><br /></td></tr>
+<tr class="separator:a81545c9e563205381baaef594a5ca747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Pickup for player secondary action. </p>
-
-<p class="definition">Definition at line <a class="el" href="_secondary_action_pickup_8cs_source.html#l00007">7</a> of file <a class="el" href="_secondary_action_pickup_8cs_source.html">SecondaryActionPickup.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac6f8adbcf3675f978c5467ea06ae6ea8" name="ac6f8adbcf3675f978c5467ea06ae6ea8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6f8adbcf3675f978c5467ea06ae6ea8">&#9670;&nbsp;</a></span>_Ready()</h2>
@@ -111,8 +149,40 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8_cgraph.png" border="0" usemap="#aclass_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8_cgraph" alt=""/></div>
+<map name="aclass_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8_cgraph" id="aclass_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,171,47"/>
+<area shape="rect" href="class_secondary_action.html#ad95829ffc55ac6b517a5fe37eb282f4d" title="Gets the given action&#39;s type as a string. This is because the player animations corresponding to each..." alt="" coords="219,5,409,47"/>
+</map>
+</div>
 
-<p class="definition">Definition at line <a class="el" href="_secondary_action_pickup_8cs_source.html#l00032">32</a> of file <a class="el" href="_secondary_action_pickup_8cs_source.html">SecondaryActionPickup.cs</a>.</p>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a81545c9e563205381baaef594a5ca747" name="a81545c9e563205381baaef594a5ca747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81545c9e563205381baaef594a5ca747">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88">PlayerSecondaryAction</a> SecondaryActionPickup.type = <a class="el" href="_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88afc48036436ec734942514222eb39baed">PlayerSecondaryAction.FASTFALL_AND_ROLL</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The pickup's type. </p>
 
 </div>
 </div>
@@ -139,17 +209,19 @@ Properties</h2></td></tr>
 
 <p>The pickup's type. </p>
 
-<p class="definition">Definition at line <a class="el" href="_secondary_action_pickup_8cs_source.html#l00018">18</a> of file <a class="el" href="_secondary_action_pickup_8cs_source.html">SecondaryActionPickup.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Pickups/<a class="el" href="_secondary_action_pickup_8cs_source.html">SecondaryActionPickup.cs</a></li>
+<li>src/Entities/Pickups/<a class="el" href="_secondary_action_pickup_8cs.html">SecondaryActionPickup.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_secondary_action_pickup.html">SecondaryActionPickup</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

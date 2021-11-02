@@ -1,0 +1,4 @@
+<map id="PauseMenu.OnCancelPressed" name="PauseMenu.OnCancelPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,205,32"/>
+<area shape="rect" id="node2" href="$class_pause_menu.html#ad9b30c3c2ba00ffd78fe82e6592d30cc" title=" " alt="" coords="253,5,464,32"/>
+</map>

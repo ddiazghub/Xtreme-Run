@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_kinematic_body2_d.html" title=" " alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$class_player.html" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="180,5,239,32"/>
+</map>

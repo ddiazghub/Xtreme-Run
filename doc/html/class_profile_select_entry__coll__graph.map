@@ -1,0 +1,5 @@
+<map id="ProfileSelectEntry" name="ProfileSelectEntry">
+<area shape="rect" id="node1" title="Button that and allows the profile to be selected and displays a profile&#39;s data." alt="" coords="5,145,221,311"/>
+<area shape="rect" id="node2" href="$class_button.html" title=" " alt="" coords="47,5,107,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="131,5,170,83"/>
+</map>

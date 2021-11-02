@@ -1,0 +1,6 @@
+<map id="Profile.Delete" name="Profile.Delete">
+<area shape="rect" id="node1" title="Deletes an existing profile save file." alt="" coords="416,42,515,69"/>
+<area shape="rect" id="node2" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="184,5,368,47"/>
+<area shape="rect" id="node4" href="$class_profile_info.html#a64d5028a0453e904021a62e9280060b0" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="207,71,345,98"/>
+<area shape="rect" id="node3" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+</map>

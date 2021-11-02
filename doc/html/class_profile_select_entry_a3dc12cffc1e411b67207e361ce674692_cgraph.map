@@ -1,0 +1,15 @@
+<map id="ProfileSelectEntry._Ready" name="ProfileSelectEntry._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,129,136,171"/>
+<area shape="rect" id="node2" href="$class_profile_select_entry.html#abf344a648fc7e68522a3181a6664c26c" title=" " alt="" coords="189,5,374,47"/>
+<area shape="rect" id="node3" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="189,71,373,112"/>
+<area shape="rect" id="node5" href="$class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="427,137,609,163"/>
+<area shape="rect" id="node11" href="$class_profile_select_entry.html#adadc348a0e9eb9a3c0cc64417b66f0a4" title=" " alt="" coords="189,188,373,229"/>
+<area shape="rect" id="node12" href="$class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="184,254,379,281"/>
+<area shape="rect" id="node4" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="469,78,567,105"/>
+<area shape="rect" id="node6" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="667,191,766,218"/>
+<area shape="rect" id="node7" href="$class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="675,89,758,115"/>
+<area shape="rect" id="node8" href="$class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="657,139,776,166"/>
+<area shape="rect" id="node9" href="$class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="874,114,987,141"/>
+<area shape="rect" id="node10" href="$class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="824,165,1037,191"/>
+<area shape="rect" id="node13" href="$class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="473,254,563,281"/>
+</map>

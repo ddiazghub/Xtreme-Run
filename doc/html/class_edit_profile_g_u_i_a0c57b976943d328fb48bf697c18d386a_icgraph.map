@@ -1,0 +1,7 @@
+<map id="EditProfileGUI.UpdateAvatar" name="EditProfileGUI.UpdateAvatar">
+<area shape="rect" id="node1" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="455,81,639,108"/>
+<area shape="rect" id="node2" href="$class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e" title=" " alt="" coords="224,5,387,32"/>
+<area shape="rect" id="node3" href="$class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,107,156,133"/>
+<area shape="rect" id="node4" href="$class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="204,107,407,133"/>
+<area shape="rect" id="node5" href="$class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="210,158,401,199"/>
+</map>

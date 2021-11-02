@@ -5,21 +5,32 @@
 This class generates scenes for the main class.  
 
 
+
+
+Collaboration diagram for Scene\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{class_scene_factory__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_scene_factory_a079c0b6302987a374a561495752bfdc7}{Scene\+Factory}} ()
 \begin{DoxyCompactList}\small\item\em Creates a new scene factory. Loads each scene and stores it in the scenes dictionary. \end{DoxyCompactList}\item 
-Node2D \mbox{\hyperlink{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}{New}} (\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}} scene)
+\mbox{\hyperlink{class_node2_d}{Node2D}} \mbox{\hyperlink{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}{New}} (\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}} scene)
 \begin{DoxyCompactList}\small\item\em Creates a new scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ \mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}, Packed\+Scene $>$ \mbox{\hyperlink{class_scene_factory_a540b4e92010488e1b1c51042b7fc856e}{scenes}}
+\begin{DoxyCompactList}\small\item\em A dictionary that maps each Game\+Scenes enum value to it\textquotesingle{}s corresponding scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This class generates scenes for the main class. 
-
-Definition at line \mbox{\hyperlink{_scene_factory_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_scene_factory_8cs_source}{Scene\+Factory.\+cs}}.
-
-
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_scene_factory_a079c0b6302987a374a561495752bfdc7}\label{class_scene_factory_a079c0b6302987a374a561495752bfdc7}} 
@@ -34,16 +45,12 @@ Creates a new scene factory. Loads each scene and stores it in the scenes dictio
 
 
 
-Definition at line \mbox{\hyperlink{_scene_factory_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_scene_factory_8cs_source}{Scene\+Factory.\+cs}}.
-
-
-
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}\label{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}} 
 \index{SceneFactory@{SceneFactory}!New@{New}}
 \index{New@{New}!SceneFactory@{SceneFactory}}
 \doxysubsubsection{\texorpdfstring{New()}{New()}}
-{\footnotesize\ttfamily Node2D Scene\+Factory.\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}}]{scene }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_node2_d}{Node2D}} Scene\+Factory.\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}}]{scene }\end{DoxyParamCaption})}
 
 
 
@@ -57,9 +64,26 @@ Creates a new scene.
 \begin{DoxyReturn}{Returns}
 A new instance of the scene.
 \end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d_icgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line \mbox{\hyperlink{_scene_factory_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_scene_factory_8cs_source}{Scene\+Factory.\+cs}}.
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_scene_factory_a540b4e92010488e1b1c51042b7fc856e}\label{class_scene_factory_a540b4e92010488e1b1c51042b7fc856e}} 
+\index{SceneFactory@{SceneFactory}!scenes@{scenes}}
+\index{scenes@{scenes}!SceneFactory@{SceneFactory}}
+\doxysubsubsection{\texorpdfstring{scenes}{scenes}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}, Packed\+Scene$>$ Scene\+Factory.\+scenes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A dictionary that maps each Game\+Scenes enum value to it\textquotesingle{}s corresponding scene. 
 
 
 

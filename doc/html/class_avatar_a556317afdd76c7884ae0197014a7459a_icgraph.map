@@ -1,0 +1,13 @@
+<map id="Avatar.ToTexture" name="Avatar.ToTexture">
+<area shape="rect" id="node1" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="687,224,805,251"/>
+<area shape="rect" id="node2" href="$class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="455,107,639,133"/>
+<area shape="rect" id="node7" href="$class_profile_g_u_i.html#a63df12299905cd375c56ba1e2292dcd6" title="Updates the information currently displayed on the GUI." alt="" coords="478,224,615,251"/>
+<area shape="rect" id="node9" href="$class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="455,275,638,301"/>
+<area shape="rect" id="node3" href="$class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e" title=" " alt="" coords="224,5,387,32"/>
+<area shape="rect" id="node4" href="$class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,107,156,133"/>
+<area shape="rect" id="node5" href="$class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="204,107,407,133"/>
+<area shape="rect" id="node6" href="$class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="210,158,401,199"/>
+<area shape="rect" id="node8" href="$class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="241,224,369,251"/>
+<area shape="rect" id="node10" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,297,146,338"/>
+<area shape="rect" id="node11" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="213,326,397,367"/>
+</map>

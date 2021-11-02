@@ -1,0 +1,13 @@
+<map id="Player._PhysicsProcess" name="Player._PhysicsProcess">
+<area shape="rect" id="node1" title=" " alt="" coords="5,237,171,264"/>
+<area shape="rect" id="node2" href="$class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="236,99,412,141"/>
+<area shape="rect" id="node7" href="$class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,230,429,271"/>
+<area shape="rect" id="node11" href="$class_persistent_state.html#a197779850b8a9fbef055982249582ef3" title="The physics process that will be called each frame for the state." alt="" coords="223,295,425,337"/>
+<area shape="rect" id="node3" href="$class_main_action.html#a61b3c6152e024c014e7d810feb94fc74" title=" " alt="" coords="505,5,673,32"/>
+<area shape="rect" id="node4" href="$class_main_action.html#a0d3e4403cb876a28ae3383daba402fce" title=" " alt="" coords="491,56,686,83"/>
+<area shape="rect" id="node5" href="$class_main_action.html#abad27d048abd3f377cf7f2e1e15f6975" title="The process that will be executed each frame while the action is being performed." alt="" coords="497,107,680,133"/>
+<area shape="rect" id="node6" href="$class_main_action.html#a9b80ccc09b82cb5b35dc22a1a6f9b85f" title=" " alt="" coords="494,157,683,184"/>
+<area shape="rect" id="node8" href="$class_secondary_action.html#a70a639090f6e4f4b92b0116a21484673" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="487,208,690,235"/>
+<area shape="rect" id="node9" href="$class_secondary_action.html#a2d779a636107f20c7b8566d359d47e2c" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="495,259,682,301"/>
+<area shape="rect" id="node10" href="$class_secondary_action.html#a167568a42e1a355f2d49b5a9dcfd4baf" title="The action that will be executed once the player stops pressing the action&#39;s input keyboard/mouse but..." alt="" coords="477,325,700,352"/>
+</map>

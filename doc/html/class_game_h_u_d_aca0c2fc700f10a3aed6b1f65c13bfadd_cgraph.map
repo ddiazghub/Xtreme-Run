@@ -1,0 +1,5 @@
+<map id="GameHUD.SetActions" name="GameHUD.SetActions">
+<area shape="rect" id="node1" title="Sets the player actions to display on the hud." alt="" coords="5,35,157,61"/>
+<area shape="rect" id="node2" href="$class_main_action.html#aa5e2b5f2a44a4d622e64878af6240e99" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="205,5,419,32"/>
+<area shape="rect" id="node3" href="$class_secondary_action.html#ad8f2e602a06f1350c9bc0a5b25ff5c83" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="217,57,407,98"/>
+</map>

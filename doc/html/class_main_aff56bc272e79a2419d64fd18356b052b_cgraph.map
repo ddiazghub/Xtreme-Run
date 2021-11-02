@@ -1,0 +1,4 @@
+<map id="Main.ChangeScene" name="Main.ChangeScene">
+<area shape="rect" id="node1" title="Changes the currently active game scene." alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node2" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="188,5,320,32"/>
+</map>

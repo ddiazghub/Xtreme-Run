@@ -1,0 +1,5 @@
+<map id="SecondaryAction" name="SecondaryAction">
+<area shape="rect" id="node1" title="Class that represents an action the player can perform as secondary action." alt="" coords="5,300,213,553"/>
+<area shape="rect" id="node2" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="11,131,207,252"/>
+<area shape="rect" id="node3" href="$class_node2_d.html" title=" " alt="" coords="75,5,143,83"/>
+</map>

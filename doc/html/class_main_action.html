@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_main_action.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -79,16 +99,28 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for MainAction:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_main_action.png" usemap="#MainAction_map" alt=""/>
-  <map id="MainAction_map" name="MainAction_map">
-<area href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="PlayerState" shape="rect" coords="130,56,207,80"/>
-<area href="class_glide.html" title="Main action that allows the player to glide for some time." alt="Glide" shape="rect" coords="0,168,77,192"/>
-<area href="class_jetpack.html" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="Jetpack" shape="rect" coords="87,168,164,192"/>
-<area href="class_jump.html" title="Main action that allows the player to jump." alt="Jump" shape="rect" coords="174,168,251,192"/>
-<area href="class_teleport.html" title="Main action that allows the player to teleport a small distance above them." alt="Teleport" shape="rect" coords="261,168,338,192"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_main_action__inherit__graph.png" border="0" usemap="#a_main_action_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_main_action_inherit__map" id="a_main_action_inherit__map">
+<area shape="rect" title="Class that represents an action the player can perform as main action." alt="" coords="364,300,583,700"/>
+<area shape="rect" href="class_glide.html" title="Main action that allows the player to glide for some time." alt="" coords="5,763,224,1016"/>
+<area shape="rect" href="class_jetpack.html" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="248,748,467,1031"/>
+<area shape="rect" href="class_jump.html" title="Main action that allows the player to jump." alt="" coords="491,836,691,943"/>
+<area shape="rect" href="class_teleport.html" title="Main action that allows the player to teleport a small distance above them." alt="" coords="715,777,933,1001"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="375,131,571,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="439,5,507,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for MainAction:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action__coll__graph.png" border="0" usemap="#a_main_action_coll__map" alt="Collaboration graph"/></div>
+<map name="a_main_action_coll__map" id="a_main_action_coll__map">
+<area shape="rect" title="Class that represents an action the player can perform as main action." alt="" coords="102,316,321,701"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="5,132,201,253"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="69,5,137,83"/>
+<area shape="rect" title=" " alt="" coords="225,154,272,231"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,8 +183,6 @@ Properties</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Class that represents an action the player can perform as main action. </p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00007">7</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a61b3c6152e024c014e7d810feb94fc74" name="a61b3c6152e024c014e7d810feb94fc74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a61b3c6152e024c014e7d810feb94fc74">&#9670;&nbsp;</a></span>_ActionOnAir()</h2>
@@ -178,8 +208,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_glide.html#a701b0bc067e81b3d3fca24aaf4293088">Glide</a>, and <a class="el" href="class_teleport.html#a0e8ff81f32dd5408d50ab5881fe6a2f6">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00074">74</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a61b3c6152e024c014e7d810feb94fc74_icgraph.png" border="0" usemap="#aclass_main_action_a61b3c6152e024c014e7d810feb94fc74_icgraph" alt=""/></div>
+<map name="aclass_main_action_a61b3c6152e024c014e7d810feb94fc74_icgraph" id="aclass_main_action_a61b3c6152e024c014e7d810feb94fc74_icgraph">
+<area shape="rect" title=" " alt="" coords="443,13,611,39"/>
+<area shape="rect" href="class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="219,5,395,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -207,8 +245,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_glide.html#a807e0e90013a5c0f6b509a565efeff27">Glide</a>, and <a class="el" href="class_teleport.html#aa1335939a5f0597c9bf0cbb0ff418220">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00066">66</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a0d3e4403cb876a28ae3383daba402fce_icgraph.png" border="0" usemap="#aclass_main_action_a0d3e4403cb876a28ae3383daba402fce_icgraph" alt=""/></div>
+<map name="aclass_main_action_a0d3e4403cb876a28ae3383daba402fce_icgraph" id="aclass_main_action_a0d3e4403cb876a28ae3383daba402fce_icgraph">
+<area shape="rect" title=" " alt="" coords="443,13,637,39"/>
+<area shape="rect" href="class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="219,5,395,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -245,6 +291,16 @@ Properties</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="class_glide.html#a14d5f2b568b6a3573166ffe8384a5be5">Glide</a>, <a class="el" href="class_jetpack.html#a2f099459f3cdeef59c2a73a86edb334c">Jetpack</a>, <a class="el" href="class_jump.html#a44577960ec4edd622c95a6f5b76dfacb">Jump</a>, and <a class="el" href="class_teleport.html#ab64216d083c55dfc26ed7f236ed34a03">Teleport</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_abad27d048abd3f377cf7f2e1e15f6975_icgraph.png" border="0" usemap="#aclass_main_action_abad27d048abd3f377cf7f2e1e15f6975_icgraph" alt=""/></div>
+<map name="aclass_main_action_abad27d048abd3f377cf7f2e1e15f6975_icgraph" id="aclass_main_action_abad27d048abd3f377cf7f2e1e15f6975_icgraph">
+<area shape="rect" title="The process that will be executed each frame while the action is being performed." alt="" coords="443,13,625,39"/>
+<area shape="rect" href="class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="219,5,395,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -272,8 +328,16 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_glide.html#a2353d380d6897004724d34c31838f798">Glide</a>, <a class="el" href="class_jetpack.html#a66a6e0bb7ff231a6e843f9f67a4d7642">Jetpack</a>, and <a class="el" href="class_teleport.html#a777418072ec29926a6c0bb7596782952">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00085">85</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f_icgraph.png" border="0" usemap="#aclass_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f_icgraph" alt=""/></div>
+<map name="aclass_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f_icgraph" id="aclass_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f_icgraph">
+<area shape="rect" title=" " alt="" coords="443,13,632,39"/>
+<area shape="rect" href="class_main_action.html#ab2261aec55fea5dc4490545410b8b279" title="The physics process that will be called each frame for the state." alt="" coords="219,5,395,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -305,8 +369,17 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e">PlayerState</a>.</p>
 
 <p>Reimplemented in <a class="el" href="class_teleport.html#ac3436447bedf6cb700213b8c7f9641df">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00030">30</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95_cgraph.png" border="0" usemap="#aclass_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95_cgraph" alt=""/></div>
+<map name="aclass_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95_cgraph" id="aclass_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95_cgraph">
+<area shape="rect" title="Setups the state and initializes it." alt="" coords="5,78,120,105"/>
+<area shape="rect" href="class_main_action.html#a7171ab2e310ea4e2b6de08ca9e7c8a68" title=" " alt="" coords="168,5,379,47"/>
+<area shape="rect" href="class_main_action.html#a2cb93724e1d5758c7544649f39bdcb67" title=" " alt="" coords="168,71,379,112"/>
+<area shape="rect" href="class_main_action.html#a17693bd0c6cc2a114af83d0f843baaa4" title=" " alt="" coords="171,136,376,177"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -343,8 +416,27 @@ Properties</h2></td></tr>
 </dl>
 
 <p>Implements <a class="el" href="class_player_state.html#a1bddd210d96db25cb49b3a0b3edd5265">PlayerState</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00040">40</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_ab2261aec55fea5dc4490545410b8b279_cgraph.png" border="0" usemap="#aclass_main_action_ab2261aec55fea5dc4490545410b8b279_cgraph" alt=""/></div>
+<map name="aclass_main_action_ab2261aec55fea5dc4490545410b8b279_cgraph" id="aclass_main_action_ab2261aec55fea5dc4490545410b8b279_cgraph">
+<area shape="rect" title="The physics process that will be called each frame for the state." alt="" coords="5,74,181,115"/>
+<area shape="rect" href="class_main_action.html#a61b3c6152e024c014e7d810feb94fc74" title=" " alt="" coords="243,5,411,32"/>
+<area shape="rect" href="class_main_action.html#a0d3e4403cb876a28ae3383daba402fce" title=" " alt="" coords="229,56,424,83"/>
+<area shape="rect" href="class_main_action.html#abad27d048abd3f377cf7f2e1e15f6975" title="The process that will be executed each frame while the action is being performed." alt="" coords="235,107,418,133"/>
+<area shape="rect" href="class_main_action.html#a9b80ccc09b82cb5b35dc22a1a6f9b85f" title=" " alt="" coords="232,157,421,184"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_ab2261aec55fea5dc4490545410b8b279_icgraph.png" border="0" usemap="#aclass_main_action_ab2261aec55fea5dc4490545410b8b279_icgraph" alt=""/></div>
+<map name="aclass_main_action_ab2261aec55fea5dc4490545410b8b279_icgraph" id="aclass_main_action_ab2261aec55fea5dc4490545410b8b279_icgraph">
+<area shape="rect" title="The physics process that will be called each frame for the state." alt="" coords="219,5,395,47"/>
+<area shape="rect" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -380,8 +472,15 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string depending on the action type.</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00102">102</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a9f2f79c690df2047472ab6e4936b354d_icgraph.png" border="0" usemap="#aclass_main_action_a9f2f79c690df2047472ab6e4936b354d_icgraph" alt=""/></div>
+<map name="aclass_main_action_a9f2f79c690df2047472ab6e4936b354d_icgraph" id="aclass_main_action_a9f2f79c690df2047472ab6e4936b354d_icgraph">
+<area shape="rect" title="Gets the given action&#39;s type as a string. This is because the player animations corresponding to each..." alt="" coords="228,5,419,32"/>
+<area shape="rect" href="class_main_action_pickup.html#ace99a7be9c5d758c06c29cc28de73802" title=" " alt="" coords="5,5,180,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -417,8 +516,16 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A string in spanish depending on the action type.</dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00129">129</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_aa5e2b5f2a44a4d622e64878af6240e99_icgraph.png" border="0" usemap="#aclass_main_action_aa5e2b5f2a44a4d622e64878af6240e99_icgraph" alt=""/></div>
+<map name="aclass_main_action_aa5e2b5f2a44a4d622e64878af6240e99_icgraph" id="aclass_main_action_aa5e2b5f2a44a4d622e64878af6240e99_icgraph">
+<area shape="rect" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="364,5,577,32"/>
+<area shape="rect" href="class_game_h_u_d.html#aca0c2fc700f10a3aed6b1f65c13bfadd" title="Sets the player actions to display on the hud." alt="" coords="164,5,316,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -447,8 +554,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_glide.html#ac7d01853752f27addde9526b665b3d62">Glide</a>, <a class="el" href="class_jetpack.html#a1a4d6a6693480ef6ed70627399da3e25">Jetpack</a>, and <a class="el" href="class_teleport.html#ae1d16e9d16358e23e6ae55b942d1f312">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00156">156</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68_icgraph.png" border="0" usemap="#aclass_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68_icgraph" alt=""/></div>
+<map name="aclass_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68_icgraph" id="aclass_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68_icgraph">
+<area shape="rect" title=" " alt="" coords="168,5,379,47"/>
+<area shape="rect" href="class_main_action.html#a5d77225f0db8bd9c5a5c1f120ef3ce95" title="Setups the state and initializes it." alt="" coords="5,13,120,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -475,8 +589,15 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00171">171</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a2cb93724e1d5758c7544649f39bdcb67_icgraph.png" border="0" usemap="#aclass_main_action_a2cb93724e1d5758c7544649f39bdcb67_icgraph" alt=""/></div>
+<map name="aclass_main_action_a2cb93724e1d5758c7544649f39bdcb67_icgraph" id="aclass_main_action_a2cb93724e1d5758c7544649f39bdcb67_icgraph">
+<area shape="rect" title=" " alt="" coords="168,5,379,47"/>
+<area shape="rect" href="class_main_action.html#a5d77225f0db8bd9c5a5c1f120ef3ce95" title="Setups the state and initializes it." alt="" coords="5,13,120,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -504,8 +625,15 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="class_glide.html#a721ca45c8d7ddfeb0b25f726540c770d">Glide</a>, <a class="el" href="class_jetpack.html#ae5d732914ec97154f9f14d12e96730d3">Jetpack</a>, and <a class="el" href="class_teleport.html#ab8724fd67974a34636592398ba31beac">Teleport</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00150">150</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_main_action_a17693bd0c6cc2a114af83d0f843baaa4_icgraph.png" border="0" usemap="#aclass_main_action_a17693bd0c6cc2a114af83d0f843baaa4_icgraph" alt=""/></div>
+<map name="aclass_main_action_a17693bd0c6cc2a114af83d0f843baaa4_icgraph" id="aclass_main_action_a17693bd0c6cc2a114af83d0f843baaa4_icgraph">
+<area shape="rect" title=" " alt="" coords="168,5,373,47"/>
+<area shape="rect" href="class_main_action.html#a5d77225f0db8bd9c5a5c1f120ef3ce95" title="Setups the state and initializes it." alt="" coords="5,13,120,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -523,8 +651,6 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>True if the player can use jump pads. </p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00022">22</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
 
 </div>
 </div>
@@ -551,8 +677,6 @@ Properties</h2></td></tr>
 
 <p>Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. </p>
 
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00028">28</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
-
 </div>
 </div>
 <a id="a2149878bc7d0a4debaf0692581b990d4" name="a2149878bc7d0a4debaf0692581b990d4"></a>
@@ -576,8 +700,6 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>True if the player is currently on a jump pad. </p>
-
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00012">12</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
 
 </div>
 </div>
@@ -603,17 +725,19 @@ Properties</h2></td></tr>
 
 <p>True if the player is currently performing a main action. </p>
 
-<p class="definition">Definition at line <a class="el" href="_main_action_8cs_source.html#l00017">17</a> of file <a class="el" href="_main_action_8cs_source.html">MainAction.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/PlayerStates/Action/Main/<a class="el" href="_main_action_8cs_source.html">MainAction.cs</a></li>
+<li>src/Entities/Player/PlayerStates/Action/Main/<a class="el" href="_main_action_8cs.html">MainAction.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_main_action.html">MainAction</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

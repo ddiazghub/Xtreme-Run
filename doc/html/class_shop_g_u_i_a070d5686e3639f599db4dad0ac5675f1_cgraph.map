@@ -1,0 +1,8 @@
+<map id="ShopGUI._Ready" name="ShopGUI._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,128,108"/>
+<area shape="rect" id="node2" href="$class_shop_g_u_i.html#ac7b20c05193df04c7c0d9387823a11cf" title=" " alt="" coords="196,5,363,32"/>
+<area shape="rect" id="node4" href="$class_shop_g_u_i.html#ab993141e4f22e2df8e1c7239da6f4828" title=" " alt="" coords="188,56,371,83"/>
+<area shape="rect" id="node5" href="$class_shop_g_u_i.html#a16b59adaaf6be46aaf26fd1ae39bf982" title=" " alt="" coords="176,107,383,133"/>
+<area shape="rect" id="node6" href="$class_palette.html#ab973750bb28f3de18132de170c08c092" title="Creates a rectangular shape and fills it with the color with the given id." alt="" coords="194,157,365,184"/>
+<area shape="rect" id="node3" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="431,5,521,32"/>
+</map>

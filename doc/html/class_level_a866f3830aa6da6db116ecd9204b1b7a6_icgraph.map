@@ -1,0 +1,9 @@
+<map id="Level.GetPoints" name="Level.GetPoints">
+<area shape="rect" id="node1" title="Gets the number of points that the player has earned on the current run." alt="" coords="687,44,800,71"/>
+<area shape="rect" id="node2" href="$class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="528,19,639,46"/>
+<area shape="rect" id="node3" href="$class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="528,70,639,96"/>
+<area shape="rect" id="node4" href="$class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" id="node5" href="$class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" id="node6" href="$class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" id="node7" href="$class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>

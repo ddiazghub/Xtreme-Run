@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -49,6 +53,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_vars.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,20 +88,31 @@ $(function() {
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>animation&#160;:&#160;<a class="el" href="class_player.html#a8fc34dcdff8f033cb587661d07f13fa5">Player</a></li>
+<li>attemptCount&#160;:&#160;<a class="el" href="class_level.html#ab66639867e8a2ed0cd9ed25ecc518461">Level</a></li>
+<li>AVATAR_COLOR_BOTTOM&#160;:&#160;<a class="el" href="class_save_file_info.html#abc5665de7ee4d5eacd4f5c46ebc04774">SaveFileInfo</a></li>
+<li>AVATAR_COLOR_SKIN&#160;:&#160;<a class="el" href="class_save_file_info.html#a1099045cd97ebb17e88a6d1c86814b73">SaveFileInfo</a></li>
+<li>AVATAR_COLOR_TOP&#160;:&#160;<a class="el" href="class_save_file_info.html#a01916e8415c2fe39ec87221cd97a6a88">SaveFileInfo</a></li>
+<li>AVATAR_GENDER&#160;:&#160;<a class="el" href="class_save_file_info.html#a3a879091bdb902b1800a8c4d5db193f3">SaveFileInfo</a></li>
 </ul>
 
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>background&#160;:&#160;<a class="el" href="class_level.html#a8135b0cfe9ef72bb2c97d548a357e28f">Level</a></li>
 <li>BottomColor&#160;:&#160;<a class="el" href="class_avatar.html#af14516033bd4b5bcb567506d3e480dca">Avatar</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>camera&#160;:&#160;<a class="el" href="class_level.html#a025cdb541293de7e6c481f39fd78f0d2">Level</a></li>
 <li>CanUseActionPad&#160;:&#160;<a class="el" href="class_main_action.html#a94fb5bad42a45b95401d737c0b4ebb22">MainAction</a></li>
+<li>checkTick&#160;:&#160;<a class="el" href="class_shop_g_u_i.html#ab34b159241bbb12917f9a4dc4bbef6ff">ShopGUI</a></li>
+<li>colorSelectors&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#ac7f99f4c653484ff65acfc1cd5812bf2">EditProfileGUI</a></li>
+<li>currentValue&#160;:&#160;<a class="el" href="class_level_picker.html#a04127c209f65cf36607f0dc4c5310d2a">LevelPicker</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>DEFAULT_COLOR&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#ab865259bc1415523fd4089d94aab1173">EditProfileGUI</a></li>
 <li>DEFAULT_COLORS_FEMALE&#160;:&#160;<a class="el" href="class_palette.html#abbd927c544d691dd9cd193d0f2d733e4">Palette</a></li>
 <li>DEFAULT_COLORS_MALE&#160;:&#160;<a class="el" href="class_palette.html#a83dcff72ec74e3643896ae30fda9efb8">Palette</a></li>
 <li>DEFAULT_GRAVITY&#160;:&#160;<a class="el" href="class_player.html#aaa96158303a2e4619809dd824b6002ec">Player</a></li>
@@ -89,15 +120,21 @@ $(function() {
 <li>DEFAULT_MAX_JUMP_TIME&#160;:&#160;<a class="el" href="class_player.html#ae354c1568fb2f116e290e1a8fde5271a">Player</a></li>
 <li>DEFAULT_MOVEMENT_SPEED&#160;:&#160;<a class="el" href="class_player.html#a1a02648b66f2ff24777751e242a260c0">Player</a></li>
 <li>DEFAULT_THRESHOLD&#160;:&#160;<a class="el" href="class_palette.html#a44a68690ee2f0d0a89d0e8198644b80e">Palette</a></li>
+<li>destroyTimer&#160;:&#160;<a class="el" href="class_spawned_platform.html#ae7e460e4480e4df9ef220ae4850fd017">SpawnedPlatform</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>editedAvatar&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">EditProfileGUI</a></li>
+<li>editProfile&#160;:&#160;<a class="el" href="class_main_menu.html#a7b25973d3c9841a4af05e4029ee6bacc">MainMenu</a></li>
 <li>EMPTY_SAVE_AVATAR&#160;:&#160;<a class="el" href="class_avatar.html#aadcbb7a0039fa394ff780e83b53fb811">Avatar</a></li>
+<li>endPosition&#160;:&#160;<a class="el" href="class_level.html#afcebe2e8e72888d60547614609520969">Level</a></li>
+<li>exitPopup&#160;:&#160;<a class="el" href="class_profile_select.html#a9968abb4c478c9600d4d8ba90b680245">ProfileSelect</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>FILE_SIZE&#160;:&#160;<a class="el" href="class_save_file_info.html#a3c4e6b85015ddeebef746bb0a327b748">SaveFileInfo</a></li>
 <li>FilePath&#160;:&#160;<a class="el" href="class_tile_set_maker.html#a7d9c284c8bd5000e02f397ea7e424d05">TileSetMaker</a></li>
 </ul>
 
@@ -107,21 +144,46 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>hud&#160;:&#160;<a class="el" href="class_level.html#ab4df515c7712f237f0b4b326cff89aed">Level</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>iconInitialPosition&#160;:&#160;<a class="el" href="class_points_counter.html#a560f1efcaf2f41e051be47247c799d31">PointsCounter</a></li>
+<li>initialPosition&#160;:&#160;<a class="el" href="class_attempts_counter.html#a613ec57665663954934ea83359759270">AttemptsCounter</a>, <a class="el" href="class_points_counter.html#aa547f9078e67d490f2fbaeace187ab1f">PointsCounter</a></li>
+<li>instance&#160;:&#160;<a class="el" href="class_palette.html#a19b0a9a61540107b15f065154ba3db1f">Palette</a>, <a class="el" href="class_palette_swap_shader.html#a7e478f9c7aacb5f6ec83042378d6095e">PaletteSwapShader</a></li>
+<li>itemCost&#160;:&#160;<a class="el" href="class_shop_g_u_i.html#a8bf98d564883ae5927975a1790027d45">ShopGUI</a></li>
+</ul>
+
+
 <h3><a id="index_j" name="index_j"></a>- j -</h3><ul>
+<li>JETPACK_JUMPFORCE&#160;:&#160;<a class="el" href="class_jetpack.html#a6bc0838d8be006e5e230a933b0fa7846">Jetpack</a></li>
+<li>JETPACK_MAX_FALL_SPEED&#160;:&#160;<a class="el" href="class_jetpack.html#a98845c84a1f1c61c5b761e20548a0045">Jetpack</a></li>
+<li>JETPACK_MAX_JUMP_TIME&#160;:&#160;<a class="el" href="class_jetpack.html#a1734b5941d022650d31e100707ef6005">Jetpack</a></li>
 <li>JumpForce&#160;:&#160;<a class="el" href="class_player.html#acf06cc8b10f69a33e33f0750443e09bc">Player</a></li>
 <li>jumpObjectCollisionCheck&#160;:&#160;<a class="el" href="class_player.html#a4d70330236aa5cff44570ad6063433f0">Player</a></li>
 </ul>
 
 
+<h3><a id="index_k" name="index_k"></a>- k -</h3><ul>
+<li>keys&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#ae220751a04eedbf192ff9df579fbbcc6">EditProfileGUI</a>, <a class="el" href="class_shop_g_u_i.html#ab49dca7c086e1c7e21895a0517192bdc">ShopGUI</a></li>
+</ul>
+
+
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LEVEL1_PROGRESS&#160;:&#160;<a class="el" href="class_save_file_info.html#a88826262dbf83ff99c49406bf9ac8d28">SaveFileInfo</a></li>
+<li>LEVEL2_PROGRESS&#160;:&#160;<a class="el" href="class_save_file_info.html#a95bbf967cf5a874f60264ddbc48d20f1">SaveFileInfo</a></li>
+<li>LEVEL3_PROGRESS&#160;:&#160;<a class="el" href="class_save_file_info.html#ad37b953d2a3e25a86487c40f6d439612">SaveFileInfo</a></li>
+<li>levelCompleteMenu&#160;:&#160;<a class="el" href="class_level.html#a84ddf86ee474ffdfd98cc2b1aa43814b">Level</a></li>
+<li>LevelNumber&#160;:&#160;<a class="el" href="class_level.html#a08e6603e6ab77dc1ca2d58c2ed8221a0">Level</a></li>
 <li>linearVelocity&#160;:&#160;<a class="el" href="class_player.html#adfe24c4a8a6124eef02a636f042917dd">Player</a></li>
+<li>lockSprite&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d">EditProfileGUI</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>mainAction&#160;:&#160;<a class="el" href="class_player.html#a3f11ade4b7fa1b93671326424ff0f1db">Player</a></li>
 <li>mainActionTimer&#160;:&#160;<a class="el" href="class_player.html#a0bb14eb9e541dc0cabe7e067931e2cde">Player</a></li>
-<li>mainActionType&#160;:&#160;<a class="el" href="class_player.html#a290302698c5b551aa04ea96c785c3489">Player</a></li>
 <li>MAX_NUMBER_OF_SAVES&#160;:&#160;<a class="el" href="class_profile.html#a0603d28949b8c323d8bae91ea138d6f7">Profile</a></li>
 <li>MaxFallSpeed&#160;:&#160;<a class="el" href="class_player.html#af93facbeac2019c5bc7bfb2493041109">Player</a></li>
 <li>MaxJumpTime&#160;:&#160;<a class="el" href="class_player.html#a55a2743162dfad1ccf058979e3454cf0">Player</a></li>
@@ -136,19 +198,32 @@ $(function() {
 
 
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>onAutoJump&#160;:&#160;<a class="el" href="class_jetpack.html#a4969731141376da478d221ff417cf3a3">Jetpack</a></li>
 <li>original&#160;:&#160;<a class="el" href="class_palette_swap_entry.html#ac2f6caf7822e94b37b9f480901e2c813">PaletteSwapEntry</a></li>
+<li>OWNED_ITEMS&#160;:&#160;<a class="el" href="class_save_file_info.html#aae1fcea482e56652da383883a158f46a">SaveFileInfo</a></li>
+<li>OWNED_ITEMS_BUFFER_LENGTH&#160;:&#160;<a class="el" href="class_save_file_info.html#a7ae7464cc54480d6bf1914000d8f60a9">SaveFileInfo</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>persistentState&#160;:&#160;<a class="el" href="class_player.html#a6e483237354681df23922459b1f4f5f1">Player</a></li>
+<li>pauseMenu&#160;:&#160;<a class="el" href="class_level.html#a414b9257e19142655a85889f1fbda951">Level</a></li>
 <li>PlatformScene&#160;:&#160;<a class="el" href="class_spawn_platforms.html#a907b6a7456095772af3765d68af5cdc4">SpawnPlatforms</a></li>
+<li>Player&#160;:&#160;<a class="el" href="class_level.html#a5d1b3eb59f1d1ce798aac611dceb8e46">Level</a></li>
+<li>player&#160;:&#160;<a class="el" href="class_level.html#afc1da9f25bc1fc21e1be996b75c04db0">Level</a></li>
+<li>POINTS&#160;:&#160;<a class="el" href="class_save_file_info.html#a9e0844e2686e0945287c6f69f6995e75">SaveFileInfo</a></li>
+<li>pointsMultiplier&#160;:&#160;<a class="el" href="class_level.html#af8c0b7dafc8db3cd326e0a572d7ad9d1">Level</a></li>
 <li>positions&#160;:&#160;<a class="el" href="class_level.html#a68bdb4fa6a0a7d317daaaf44c06599f2">Level</a></li>
+<li>PROFILE_NAME&#160;:&#160;<a class="el" href="class_save_file_info.html#ac86f3be4472c55654a02487258ba7d32">SaveFileInfo</a></li>
+<li>PROFILE_NAME_MAX_SIZE&#160;:&#160;<a class="el" href="class_save_file_info.html#a79f57147d656897bffc591effa801806">SaveFileInfo</a></li>
+<li>profileID&#160;:&#160;<a class="el" href="class_create_profile_dialog.html#a3a907d3b5f0b25c8760135a75ab67c16">CreateProfileDialog</a></li>
 <li>ProfileID&#160;:&#160;<a class="el" href="class_profile_select_entry.html#a1f010ec4952fdc771b4e352c84d4087e">ProfileSelectEntry</a></li>
+<li>progress&#160;:&#160;<a class="el" href="class_level.html#abc95c07752147fca666c789118606a4e">Level</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
+<li>rect&#160;:&#160;<a class="el" href="class_attempts_counter.html#a20aac0de951febf7727200faaec3debe">AttemptsCounter</a></li>
+<li>rectInitialPosition&#160;:&#160;<a class="el" href="class_attempts_counter.html#a6daaf379b805eca02ae5aa4122488a0b">AttemptsCounter</a></li>
 <li>rollingCollision&#160;:&#160;<a class="el" href="class_player.html#ab5f7f8e003fed1e7b293f5b6f069648b">Player</a></li>
 <li>runningCollision&#160;:&#160;<a class="el" href="class_player.html#aa1f1a3e2e5bc1c6267dadd817f00af5d">Player</a></li>
 </ul>
@@ -156,11 +231,16 @@ $(function() {
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>SAVES_DIRECTORY&#160;:&#160;<a class="el" href="class_profile.html#a60b5ca4f4cd43bd91af9f5ac46f6c647">Profile</a></li>
-<li>secondaryAction&#160;:&#160;<a class="el" href="class_player.html#ad45db217656b2cfb1f10db610ff134bd">Player</a></li>
+<li>sceneFactory&#160;:&#160;<a class="el" href="class_main.html#a4e01ee6e74012ec1eebf4744eb2640ad">Main</a></li>
+<li>scenes&#160;:&#160;<a class="el" href="class_scene_factory.html#a540b4e92010488e1b1c51042b7fc856e">SceneFactory</a></li>
 <li>secondaryActionTimer&#160;:&#160;<a class="el" href="class_player.html#aa8a2d620862a3bff5e279a59eb8e1433">Player</a></li>
-<li>secondaryActionType&#160;:&#160;<a class="el" href="class_player.html#a31ec83e10d195fecf9c06420b077ee94">Player</a></li>
+<li>selected&#160;:&#160;<a class="el" href="class_edit_profile_g_u_i.html#a7784b52bb3c578a7fe5cfa36832b9d53">EditProfileGUI</a>, <a class="el" href="class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e">ShopGUI</a></li>
+<li>session&#160;:&#160;<a class="el" href="class_profile.html#a20e872388fa79e657a2bd86ad28d46a5">Profile</a></li>
+<li>shop&#160;:&#160;<a class="el" href="class_main_menu.html#a670bcafdf8f5e35b41e31c08fb26fbbd">MainMenu</a></li>
 <li>SkinColor&#160;:&#160;<a class="el" href="class_avatar.html#a267cad98d66d8c4cb7008c967f9dd176">Avatar</a></li>
+<li>startPosition&#160;:&#160;<a class="el" href="class_level.html#af314bba2710e5eedac3985ca0c726ac4">Level</a></li>
 <li>startTimer&#160;:&#160;<a class="el" href="class_player.html#ab41212894186e98612be4e15d08ad121">Player</a></li>
+<li>state&#160;:&#160;<a class="el" href="class_glide.html#aa63b3baef2fcfcc7606a987b09dcf4c0">Glide</a></li>
 <li>stateFactory&#160;:&#160;<a class="el" href="class_player.html#a4580768fe6a6cb084e2e987588682d2c">Player</a></li>
 </ul>
 
@@ -172,6 +252,7 @@ $(function() {
 <li>threshold&#160;:&#160;<a class="el" href="class_palette_swap_entry.html#a98f303ecceb89ffec4c538c48269a4ec">PaletteSwapEntry</a></li>
 <li>TileSize&#160;:&#160;<a class="el" href="class_tile_set_maker.html#add080d0b5e2582cd3bfe8b7a534ea7a3">TileSetMaker</a></li>
 <li>TopColor&#160;:&#160;<a class="el" href="class_avatar.html#ab97d2d7a4d5aaf7c767eeb4852ad1c49">Avatar</a></li>
+<li>type&#160;:&#160;<a class="el" href="class_main_action_pickup.html#aefe07e06bcc922e7f7c6104885dd9636">MainActionPickup</a>, <a class="el" href="class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747">SecondaryActionPickup</a></li>
 </ul>
 
 
@@ -179,9 +260,12 @@ $(function() {
 <li>WINDOW_SIZE&#160;:&#160;<a class="el" href="class_main.html#aa2f640712c026469e26fc7954f11be5d">Main</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

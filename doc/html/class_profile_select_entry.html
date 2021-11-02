@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_profile_select_entry.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -72,14 +92,27 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Button that and allows the profile to be selected and displays a profile's data.  
+<p><a class="el" href="class_button.html">Button</a> that and allows the profile to be selected and displays a profile's data.  
  <a href="class_profile_select_entry.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for ProfileSelectEntry:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_profile_select_entry.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_profile_select_entry__inherit__graph.png" border="0" usemap="#a_profile_select_entry_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_profile_select_entry_inherit__map" id="a_profile_select_entry_inherit__map">
+<area shape="rect" title="Button that and allows the profile to be selected and displays a profile&#39;s data." alt="" coords="5,131,221,296"/>
+<area shape="rect" href="class_button.html" title=" " alt="" coords="83,5,143,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ProfileSelectEntry:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry__coll__graph.png" border="0" usemap="#a_profile_select_entry_coll__map" alt="Collaboration graph"/></div>
+<map name="a_profile_select_entry_coll__map" id="a_profile_select_entry_coll__map">
+<area shape="rect" title="Button that and allows the profile to be selected and displays a profile&#39;s data." alt="" coords="5,145,221,311"/>
+<area shape="rect" href="class_button.html" title=" " alt="" coords="47,5,107,83"/>
+<area shape="rect" title=" " alt="" coords="131,5,170,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -104,9 +137,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1f010ec4952fdc771b4e352c84d4087e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Button that and allows the profile to be selected and displays a profile's data. </p>
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00007">7</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="textblock"><p ><a class="el" href="class_button.html">Button</a> that and allows the profile to be selected and displays a profile's data. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3dc12cffc1e411b67207e361ce674692" name="a3dc12cffc1e411b67207e361ce674692"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3dc12cffc1e411b67207e361ce674692">&#9670;&nbsp;</a></span>_Ready()</h2>
@@ -122,8 +153,26 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00015">15</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_a3dc12cffc1e411b67207e361ce674692_cgraph.png" border="0" usemap="#aclass_profile_select_entry_a3dc12cffc1e411b67207e361ce674692_cgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_a3dc12cffc1e411b67207e361ce674692_cgraph" id="aclass_profile_select_entry_a3dc12cffc1e411b67207e361ce674692_cgraph">
+<area shape="rect" title=" " alt="" coords="5,129,136,171"/>
+<area shape="rect" href="class_profile_select_entry.html#abf344a648fc7e68522a3181a6664c26c" title=" " alt="" coords="189,5,374,47"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="189,71,373,112"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="427,137,609,163"/>
+<area shape="rect" href="class_profile_select_entry.html#adadc348a0e9eb9a3c0cc64417b66f0a4" title=" " alt="" coords="189,188,373,229"/>
+<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="184,254,379,281"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="469,78,567,105"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="667,191,766,218"/>
+<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="675,89,758,115"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="657,139,776,166"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="874,114,987,141"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="824,165,1037,191"/>
+<area shape="rect" href="class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="473,254,563,281"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -141,8 +190,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00062">62</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_abf344a648fc7e68522a3181a6664c26c_icgraph.png" border="0" usemap="#aclass_profile_select_entry_abf344a648fc7e68522a3181a6664c26c_icgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_abf344a648fc7e68522a3181a6664c26c_icgraph" id="aclass_profile_select_entry_abf344a648fc7e68522a3181a6664c26c_icgraph">
+<area shape="rect" title=" " alt="" coords="184,5,369,47"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -160,8 +216,30 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00056">56</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_cgraph.png" border="0" usemap="#aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_cgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_cgraph" id="aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,189,65"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="279,5,378,32"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="237,56,420,83"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="478,5,577,32"/>
+<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="486,56,569,83"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="468,107,587,133"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="685,81,798,108"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="635,132,848,159"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_icgraph.png" border="0" usemap="#aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_icgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_icgraph" id="aclass_profile_select_entry_ae2810d40cdca8a83f0cf442006bfaa9e_icgraph">
+<area shape="rect" title=" " alt="" coords="184,5,368,47"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -179,8 +257,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00051">51</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_adadc348a0e9eb9a3c0cc64417b66f0a4_icgraph.png" border="0" usemap="#aclass_profile_select_entry_adadc348a0e9eb9a3c0cc64417b66f0a4_icgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_adadc348a0e9eb9a3c0cc64417b66f0a4_icgraph" id="aclass_profile_select_entry_adadc348a0e9eb9a3c0cc64417b66f0a4_icgraph">
+<area shape="rect" title=" " alt="" coords="184,5,368,47"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -198,8 +283,25 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00067">67</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_cgraph.png" border="0" usemap="#aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_cgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_cgraph" id="aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,200,57"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="248,5,347,32"/>
+<area shape="rect" href="class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="252,56,343,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_icgraph.png" border="0" usemap="#aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_icgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_icgraph" id="aclass_profile_select_entry_a88978332d17f63b02b3dc4476e01c6a4_icgraph">
+<area shape="rect" title=" " alt="" coords="184,13,379,39"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -219,8 +321,29 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the data currently displayed on the button. </p>
-
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00030">30</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_cgraph.png" border="0" usemap="#aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_cgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_cgraph" id="aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_cgraph">
+<area shape="rect" title="Updates the data currently displayed on the button." alt="" coords="5,56,188,83"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="246,5,345,32"/>
+<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="254,56,337,83"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="236,107,355,133"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="453,81,566,108"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="403,132,616,159"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_icgraph.png" border="0" usemap="#aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_icgraph" alt=""/></div>
+<map name="aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_icgraph" id="aclass_profile_select_entry_a455e5a4a8662aea7e31b6492fb437b50_icgraph">
+<area shape="rect" title="Updates the data currently displayed on the button." alt="" coords="416,13,599,39"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="184,35,368,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -239,17 +362,19 @@ Public Attributes</h2></td></tr>
 
 <p>The profile's id. </p>
 
-<p class="definition">Definition at line <a class="el" href="_profile_select_entry_8cs_source.html#l00013">13</a> of file <a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_profile_select_entry_8cs_source.html">ProfileSelectEntry.cs</a></li>
+<li>src/Scenes/<a class="el" href="_profile_select_entry_8cs.html">ProfileSelectEntry.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_profile_select_entry.html">ProfileSelectEntry</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

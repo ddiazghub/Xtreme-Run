@@ -1,0 +1,7 @@
+<map id="Main" name="Main">
+<area shape="rect" id="node1" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="19,315,243,421"/>
+<area shape="rect" id="node2" href="$class_node2_d.html" title=" " alt="" coords="5,160,73,237"/>
+<area shape="rect" id="node3" title=" " alt="" coords="98,160,165,237"/>
+<area shape="rect" id="node4" href="$class_scene_factory.html" title="This class generates scenes for the main class." alt="" coords="189,145,381,252"/>
+<area shape="rect" id="node5" title=" " alt="" coords="241,5,329,83"/>
+</map>

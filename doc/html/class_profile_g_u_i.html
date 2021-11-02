@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_profile_g_u_i.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,9 +96,21 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ProfileGUI:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_profile_g_u_i.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_profile_g_u_i__inherit__graph.png" border="0" usemap="#a_profile_g_u_i_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_profile_g_u_i_inherit__map" id="a_profile_g_u_i_inherit__map">
+<area shape="rect" title="Panel that displays the data of the currently active profile." alt="" coords="5,131,204,296"/>
+<area shape="rect" title=" " alt="" coords="50,5,159,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ProfileGUI:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i__coll__graph.png" border="0" usemap="#a_profile_g_u_i_coll__map" alt="Collaboration graph"/></div>
+<map name="a_profile_g_u_i_coll__map" id="a_profile_g_u_i_coll__map">
+<area shape="rect" title="Panel that displays the data of the currently active profile." alt="" coords="5,131,204,296"/>
+<area shape="rect" title=" " alt="" coords="50,5,159,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -102,8 +134,6 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Panel that displays the data of the currently active profile. </p>
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00007">7</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6dc0dca54016fefc6c4919a7e372cf6e" name="a6dc0dca54016fefc6c4919a7e372cf6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6dc0dca54016fefc6c4919a7e372cf6e">&#9670;&nbsp;</a></span>_Ready()</h2>
@@ -119,8 +149,22 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00021">21</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e_cgraph.png" border="0" usemap="#aclass_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e_cgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e_cgraph" id="aclass_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,133,108"/>
+<area shape="rect" href="class_profile_g_u_i.html#a7ce6425fc897f70f57a3a342e699a72b" title=" " alt="" coords="191,5,363,32"/>
+<area shape="rect" href="class_profile_g_u_i.html#ad835b6812c257c3f5c9c6a23892e0770" title=" " alt="" coords="181,56,372,83"/>
+<area shape="rect" href="class_profile_g_u_i.html#a590b9e765f2e1a195e65235798dd5fa4" title=" " alt="" coords="187,107,366,133"/>
+<area shape="rect" href="class_profile_g_u_i.html#a63df12299905cd375c56ba1e2292dcd6" title="Updates the information currently displayed on the GUI." alt="" coords="208,157,345,184"/>
+<area shape="rect" href="class_profile.html#a8fa9b755af65c98f5ce709c749579ab5" title="Logs out of the current profile." alt="" coords="427,56,531,83"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="420,157,539,184"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="637,132,750,159"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="587,183,800,209"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -157,8 +201,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00045">45</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b_icgraph.png" border="0" usemap="#aclass_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b_icgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b_icgraph" id="aclass_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b_icgraph">
+<area shape="rect" title=" " alt="" coords="181,5,353,32"/>
+<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="5,5,133,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -176,8 +227,24 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00050">50</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_cgraph.png" border="0" usemap="#aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_cgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_cgraph" id="aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_profile.html#a8fa9b755af65c98f5ce709c749579ab5" title="Logs out of the current profile." alt="" coords="244,5,348,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_icgraph.png" border="0" usemap="#aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_icgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_icgraph" id="aclass_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770_icgraph">
+<area shape="rect" title=" " alt="" coords="181,5,372,32"/>
+<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="5,5,133,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -195,8 +262,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00040">40</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4_icgraph.png" border="0" usemap="#aclass_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4_icgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4_icgraph" id="aclass_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4_icgraph">
+<area shape="rect" title=" " alt="" coords="181,5,360,32"/>
+<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="5,5,133,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -235,18 +309,40 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Updates the information currently displayed on the GUI. </p>
-
-<p class="definition">Definition at line <a class="el" href="_profile_g_u_i_8cs_source.html#l00033">33</a> of file <a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_cgraph.png" border="0" usemap="#aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_cgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_cgraph" id="aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_cgraph">
+<area shape="rect" title="Updates the information currently displayed on the GUI." alt="" coords="5,31,143,57"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="191,31,309,57"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="407,5,521,32"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="357,56,571,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_icgraph.png" border="0" usemap="#aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_icgraph" alt=""/></div>
+<map name="aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_icgraph" id="aclass_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6_icgraph">
+<area shape="rect" title="Updates the information currently displayed on the GUI." alt="" coords="181,5,319,32"/>
+<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="5,5,133,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_profile_g_u_i_8cs_source.html">ProfileGUI.cs</a></li>
+<li>src/Scenes/<a class="el" href="_profile_g_u_i_8cs.html">ProfileGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_profile_g_u_i.html">ProfileGUI</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

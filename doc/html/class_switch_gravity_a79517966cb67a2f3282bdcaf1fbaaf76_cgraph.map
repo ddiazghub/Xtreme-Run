@@ -1,0 +1,5 @@
+<map id="SwitchGravity._ActionOnAir" name="SwitchGravity._ActionOnAir">
+<area shape="rect" id="node1" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" href="$class_switch_gravity.html#abe70d5f88766890c9a0dc52de21e931b" title="Invert&#39;s the player&#39;s gravity." alt="" coords="236,5,411,32"/>
+<area shape="rect" id="node3" href="$class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="459,5,592,32"/>
+</map>

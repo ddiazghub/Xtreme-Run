@@ -1,0 +1,7 @@
+<map id="EditProfileGUI.UpdateAvatar" name="EditProfileGUI.UpdateAvatar">
+<area shape="rect" id="node1" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="5,31,189,57"/>
+<area shape="rect" id="node2" href="$class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="241,5,353,32"/>
+<area shape="rect" id="node3" href="$class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="237,56,356,83"/>
+<area shape="rect" id="node4" href="$class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="454,31,567,57"/>
+<area shape="rect" id="node5" href="$class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="404,81,617,108"/>
+</map>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_game_h_u_d.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,9 +96,21 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for GameHUD:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_game_h_u_d.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_game_h_u_d__inherit__graph.png" border="0" usemap="#a_game_h_u_d_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_game_h_u_d_inherit__map" id="a_game_h_u_d_inherit__map">
+<area shape="rect" title="The hud that shows when the player is in a level." alt="" coords="5,131,240,457"/>
+<area shape="rect" href="class_canvas_layer.html" title=" " alt="" coords="75,5,171,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for GameHUD:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d__coll__graph.png" border="0" usemap="#a_game_h_u_d_coll__map" alt="Collaboration graph"/></div>
+<map name="a_game_h_u_d_coll__map" id="a_game_h_u_d_coll__map">
+<area shape="rect" title="The hud that shows when the player is in a level." alt="" coords="5,131,240,457"/>
+<area shape="rect" href="class_canvas_layer.html" title=" " alt="" coords="75,5,171,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -114,8 +146,6 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The hud that shows when the player is in a level. </p>
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00007">7</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae27ae16bd96db64b23a7df4d83f08026" name="ae27ae16bd96db64b23a7df4d83f08026"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae27ae16bd96db64b23a7df4d83f08026">&#9670;&nbsp;</a></span>_Ready()</h2>
@@ -131,8 +161,17 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00027">27</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_ae27ae16bd96db64b23a7df4d83f08026_cgraph.png" border="0" usemap="#aclass_game_h_u_d_ae27ae16bd96db64b23a7df4d83f08026_cgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_ae27ae16bd96db64b23a7df4d83f08026_cgraph" id="aclass_game_h_u_d_ae27ae16bd96db64b23a7df4d83f08026_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,137,83"/>
+<area shape="rect" href="class_game_h_u_d.html#a0d307f074a3fc08d2d46626445ca8041" title=" " alt="" coords="185,5,412,32"/>
+<area shape="rect" href="class_game_h_u_d.html#a182e186269a8e128619312c89dca36fd" title=" " alt="" coords="189,56,408,83"/>
+<area shape="rect" href="class_game_h_u_d.html#a317071a9133c94c6efcbe8c81ee17516" title=" " alt="" coords="203,107,394,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -150,8 +189,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00086">86</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_a0d307f074a3fc08d2d46626445ca8041_icgraph.png" border="0" usemap="#aclass_game_h_u_d_a0d307f074a3fc08d2d46626445ca8041_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_a0d307f074a3fc08d2d46626445ca8041_icgraph" id="aclass_game_h_u_d_a0d307f074a3fc08d2d46626445ca8041_icgraph">
+<area shape="rect" title=" " alt="" coords="185,5,412,32"/>
+<area shape="rect" href="class_game_h_u_d.html#ae27ae16bd96db64b23a7df4d83f08026" title=" " alt="" coords="5,5,137,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -169,8 +215,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00091">91</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_a182e186269a8e128619312c89dca36fd_icgraph.png" border="0" usemap="#aclass_game_h_u_d_a182e186269a8e128619312c89dca36fd_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_a182e186269a8e128619312c89dca36fd_icgraph" id="aclass_game_h_u_d_a182e186269a8e128619312c89dca36fd_icgraph">
+<area shape="rect" title=" " alt="" coords="185,5,404,32"/>
+<area shape="rect" href="class_game_h_u_d.html#ae27ae16bd96db64b23a7df4d83f08026" title=" " alt="" coords="5,5,137,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -188,8 +241,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00081">81</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_a317071a9133c94c6efcbe8c81ee17516_icgraph.png" border="0" usemap="#aclass_game_h_u_d_a317071a9133c94c6efcbe8c81ee17516_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_a317071a9133c94c6efcbe8c81ee17516_icgraph" id="aclass_game_h_u_d_a317071a9133c94c6efcbe8c81ee17516_icgraph">
+<area shape="rect" title=" " alt="" coords="185,5,376,32"/>
+<area shape="rect" href="class_game_h_u_d.html#ae27ae16bd96db64b23a7df4d83f08026" title=" " alt="" coords="5,5,137,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -284,8 +344,25 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00066">66</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_cgraph.png" border="0" usemap="#aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_cgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_cgraph" id="aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_cgraph">
+<area shape="rect" title="Sets the player actions to display on the hud." alt="" coords="5,35,157,61"/>
+<area shape="rect" href="class_main_action.html#aa5e2b5f2a44a4d622e64878af6240e99" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="205,5,419,32"/>
+<area shape="rect" href="class_secondary_action.html#ad8f2e602a06f1350c9bc0a5b25ff5c83" title="Gets the given action&#39;s type as a string in spanish. This is for displaying on the GUI." alt="" coords="217,57,407,98"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_icgraph.png" border="0" usemap="#aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_icgraph" id="aclass_game_h_u_d_aca0c2fc700f10a3aed6b1f65c13bfadd_icgraph">
+<area shape="rect" title="Sets the player actions to display on the hud." alt="" coords="164,5,316,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -312,8 +389,18 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00056">56</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_a1b64a3c74071717408c1c809a4a6804a_icgraph.png" border="0" usemap="#aclass_game_h_u_d_a1b64a3c74071717408c1c809a4a6804a_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_a1b64a3c74071717408c1c809a4a6804a_icgraph" id="aclass_game_h_u_d_a1b64a3c74071717408c1c809a4a6804a_icgraph">
+<area shape="rect" title="Sets the number of attempts to display on the attempts counter." alt="" coords="528,70,689,96"/>
+<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="383,70,480,96"/>
+<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,11,104,38"/>
+<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,33,335,74"/>
+<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,99,313,126"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -340,8 +427,15 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00038">38</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_a511dd4c57dc75287bfa056bdbba46d95_icgraph.png" border="0" usemap="#aclass_game_h_u_d_a511dd4c57dc75287bfa056bdbba46d95_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_a511dd4c57dc75287bfa056bdbba46d95_icgraph" id="aclass_game_h_u_d_a511dd4c57dc75287bfa056bdbba46d95_icgraph">
+<area shape="rect" title="Sets the number of points to display in the points counter." alt="" coords="164,5,309,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -368,18 +462,29 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_game_h_u_d_8cs_source.html#l00047">47</a> of file <a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_h_u_d_ad76c722e11f1eae273e8096f843646fb_icgraph.png" border="0" usemap="#aclass_game_h_u_d_ad76c722e11f1eae273e8096f843646fb_icgraph" alt=""/></div>
+<map name="aclass_game_h_u_d_ad76c722e11f1eae273e8096f843646fb_icgraph" id="aclass_game_h_u_d_ad76c722e11f1eae273e8096f843646fb_icgraph">
+<area shape="rect" title="Sets the progress to display in the level progress bar." alt="" coords="164,5,324,32"/>
+<area shape="rect" href="class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="5,5,116,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_game_h_u_d_8cs_source.html">GameHUD.cs</a></li>
+<li>src/Scenes/<a class="el" href="_game_h_u_d_8cs.html">GameHUD.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_game_h_u_d.html">GameHUD</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

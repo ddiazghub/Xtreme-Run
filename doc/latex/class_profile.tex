@@ -5,6 +5,16 @@
 Class that contains the the currently active profile.  
 
 
+
+
+Collaboration diagram for Profile\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,18 +47,19 @@ static readonly int \mbox{\hyperlink{class_profile_a0603d28949b8c323d8bae91ea138
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_profile_info}{Profile\+Info}} \mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\mbox{\hyperlink{class_profile_info}{Profile\+Info}} \mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}getprivate set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Data of the active profile. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{Current\+Session}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Gets the singleton instance of the currently active profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_a20e872388fa79e657a2bd86ad28d46a5}{session}}
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Class that contains the the currently active profile. 
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_profile_ac35fe897f5723f01593341c9c39d8e3e}\label{class_profile_ac35fe897f5723f01593341c9c39d8e3e}} 
@@ -68,10 +79,14 @@ Creates a new profile.
 {\em name} & The profile name.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00096}{96}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_ac35fe897f5723f01593341c9c39d8e3e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_a65e989b8d3b98a068c286831391f5e6b}\label{class_profile_a65e989b8d3b98a068c286831391f5e6b}} 
 \index{Profile@{Profile}!Delete@{Delete}}
 \index{Delete@{Delete}!Profile@{Profile}}
@@ -87,10 +102,14 @@ Deletes an existing profile save file.
 {\em id} & The profile\textquotesingle{}s id.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00120}{120}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_a65e989b8d3b98a068c286831391f5e6b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_a1611ed62259b932927164f5bff513c4b}\label{class_profile_a1611ed62259b932927164f5bff513c4b}} 
 \index{Profile@{Profile}!Exists@{Exists}}
 \index{Exists@{Exists}!Profile@{Profile}}
@@ -109,10 +128,14 @@ Checks if the profile exists.
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00130}{130}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_a1611ed62259b932927164f5bff513c4b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_a7070938f6f0941e62f75fb916b13c36c}\label{class_profile_a7070938f6f0941e62f75fb916b13c36c}} 
 \index{Profile@{Profile}!Get@{Get}}
 \index{Get@{Get}!Profile@{Profile}}
@@ -131,10 +154,14 @@ Loads the profile with the given id and returns it\textquotesingle{}s data.
 \begin{DoxyReturn}{Returns}
 The profile\textquotesingle{}s data, null if the profile doesn\textquotesingle{}t exist.
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_ab295a3d5ae7494b681e0333bb4166516}\label{class_profile_ab295a3d5ae7494b681e0333bb4166516}} 
 \index{Profile@{Profile}!Load@{Load}}
 \index{Load@{Load}!Profile@{Profile}}
@@ -150,10 +177,14 @@ Loads a profile with the given id and makes it the active profile.
 {\em id} & The id of the profile to load.\\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_a8fa9b755af65c98f5ce709c749579ab5}\label{class_profile_a8fa9b755af65c98f5ce709c749579ab5}} 
 \index{Profile@{Profile}!LogOut@{LogOut}}
 \index{LogOut@{LogOut}!Profile@{Profile}}
@@ -164,10 +195,14 @@ Definition at line \mbox{\hyperlink{_profile_8cs_source_l00039}{39}} of file \mb
 
 Logs out of the current profile. 
 
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00055}{55}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_af591c1206e6be7fadaa7cd33086158c2}\label{class_profile_af591c1206e6be7fadaa7cd33086158c2}} 
 \index{Profile@{Profile}!NameIsAvailable@{NameIsAvailable}}
 \index{NameIsAvailable@{NameIsAvailable}!Profile@{Profile}}
@@ -186,10 +221,22 @@ Checks if a profile name is available.
 \begin{DoxyReturn}{Returns}
 True if no profile has the name already, else false.
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00140}{140}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_af591c1206e6be7fadaa7cd33086158c2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}\label{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}} 
 \index{Profile@{Profile}!Save@{Save}}
 \index{Save@{Save}!Profile@{Profile}}
@@ -200,10 +247,14 @@ Definition at line \mbox{\hyperlink{_profile_8cs_source_l00140}{140}} of file \m
 
 Saves the the currently active profile by writing to the save file. 
 
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -217,10 +268,6 @@ Definition at line \mbox{\hyperlink{_profile_8cs_source_l00047}{47}} of file \mb
 
 Maximum number of profiles that can be saved. 
 
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
 \mbox{\Hypertarget{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}\label{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}} 
 \index{Profile@{Profile}!SAVES\_DIRECTORY@{SAVES\_DIRECTORY}}
 \index{SAVES\_DIRECTORY@{SAVES\_DIRECTORY}!Profile@{Profile}}
@@ -231,9 +278,15 @@ Definition at line \mbox{\hyperlink{_profile_8cs_source_l00024}{24}} of file \mb
 
 Directory where the profiles will be stored. 
 
+\mbox{\Hypertarget{class_profile_a20e872388fa79e657a2bd86ad28d46a5}\label{class_profile_a20e872388fa79e657a2bd86ad28d46a5}} 
+\index{Profile@{Profile}!session@{session}}
+\index{session@{session}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{session}{session}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_profile}{Profile}} Profile.\+session\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
+
+Singleton instance. 
 
 
 
@@ -248,23 +301,15 @@ Definition at line \mbox{\hyperlink{_profile_8cs_source_l00019}{19}} of file \mb
 
 Gets the singleton instance of the currently active profile. 
 
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00063}{63}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
-
 \mbox{\Hypertarget{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}\label{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}} 
 \index{Profile@{Profile}!Info@{Info}}
 \index{Info@{Info}!Profile@{Profile}}
 \doxysubsubsection{\texorpdfstring{Info}{Info}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_profile_info}{Profile\+Info}} Profile.\+Info\hspace{0.3cm}{\ttfamily [get]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_profile_info}{Profile\+Info}} Profile.\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
 Data of the active profile. 
-
-
-
-Definition at line \mbox{\hyperlink{_profile_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_profile_8cs_source}{Profile.\+cs}}.
 
 
 

@@ -5,10 +5,24 @@
 The main menu of the game.  
 
 
-Inheritance diagram for Main\+Menu\+:\begin{figure}[H]
+
+
+Inheritance diagram for Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_main_menu}
+\includegraphics[width=256pt]{class_main_menu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{class_main_menu__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -32,14 +46,17 @@ void \mbox{\hyperlink{class_main_menu_a399217040b4956e00f8983443bf18c83}{On\+Pro
 \item 
 void \mbox{\hyperlink{class_main_menu_a40a69fad4764d8777974773aad65fae5}{On\+Level\+Picker\+Value\+Changed}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Packed\+Scene \mbox{\hyperlink{class_main_menu_a7b25973d3c9841a4af05e4029ee6bacc}{edit\+Profile}} = Resource\+Loader.\+Load$<$Packed\+Scene$>$(\char`\"{}res\+://src/Scenes/Edit\+Profile\+GUI.\+tscn\char`\"{})
+\begin{DoxyCompactList}\small\item\em The panel for editing the player\textquotesingle{}s profile. \end{DoxyCompactList}\item 
+Packed\+Scene \mbox{\hyperlink{class_main_menu_a670bcafdf8f5e35b41e31c08fb26fbbd}{shop}} = Resource\+Loader.\+Load$<$Packed\+Scene$>$(\char`\"{}res\+://src/Scenes/Shop\+GUI.\+tscn\char`\"{})
+\begin{DoxyCompactList}\small\item\em The panel that contains the game\textquotesingle{}s shop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 The main menu of the game. 
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_main_menu_a35a95291fb13d88d38f491c5a10fbd7a}\label{class_main_menu_a35a95291fb13d88d38f491c5a10fbd7a}} 
@@ -48,89 +65,164 @@ Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00007}{7}} of file \m
 \doxysubsubsection{\texorpdfstring{\_Process()}{\_Process()}}
 {\footnotesize\ttfamily override void Main\+Menu.\+\_\+\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
 \mbox{\Hypertarget{class_main_menu_a6e4d205f960117692bcee0d9708b3709}\label{class_main_menu_a6e4d205f960117692bcee0d9708b3709}} 
 \index{MainMenu@{MainMenu}!\_Ready@{\_Ready}}
 \index{\_Ready@{\_Ready}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Main\+Menu.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a6e4d205f960117692bcee0d9708b3709_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_af8ed217d174c1df8bb007112303ec7fb}\label{class_main_menu_af8ed217d174c1df8bb007112303ec7fb}} 
 \index{MainMenu@{MainMenu}!OnExitButtonPressed@{OnExitButtonPressed}}
 \index{OnExitButtonPressed@{OnExitButtonPressed}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnExitButtonPressed()}{OnExitButtonPressed()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Exit\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_af8ed217d174c1df8bb007112303ec7fb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a40a69fad4764d8777974773aad65fae5}\label{class_main_menu_a40a69fad4764d8777974773aad65fae5}} 
 \index{MainMenu@{MainMenu}!OnLevelPickerValueChanged@{OnLevelPickerValueChanged}}
 \index{OnLevelPickerValueChanged@{OnLevelPickerValueChanged}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnLevelPickerValueChanged()}{OnLevelPickerValueChanged()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Level\+Picker\+Value\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a40a69fad4764d8777974773aad65fae5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a87e8abea9896111e446f12ac5acdb9db}\label{class_main_menu_a87e8abea9896111e446f12ac5acdb9db}} 
 \index{MainMenu@{MainMenu}!OnPlayButtonPressed@{OnPlayButtonPressed}}
 \index{OnPlayButtonPressed@{OnPlayButtonPressed}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnPlayButtonPressed()}{OnPlayButtonPressed()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Play\+Button\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a87e8abea9896111e446f12ac5acdb9db_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a399217040b4956e00f8983443bf18c83}\label{class_main_menu_a399217040b4956e00f8983443bf18c83}} 
 \index{MainMenu@{MainMenu}!OnProfileChanged@{OnProfileChanged}}
 \index{OnProfileChanged@{OnProfileChanged}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnProfileChanged()}{OnProfileChanged()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Profile\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00071}{71}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a399217040b4956e00f8983443bf18c83_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a399217040b4956e00f8983443bf18c83_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a7910c71982c6ae2e599b4ef8c7e5fed2}\label{class_main_menu_a7910c71982c6ae2e599b4ef8c7e5fed2}} 
 \index{MainMenu@{MainMenu}!OnProfileGUIEditPressed@{OnProfileGUIEditPressed}}
 \index{OnProfileGUIEditPressed@{OnProfileGUIEditPressed}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnProfileGUIEditPressed()}{OnProfileGUIEditPressed()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Profile\+GUIEdit\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a7910c71982c6ae2e599b4ef8c7e5fed2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a7910c71982c6ae2e599b4ef8c7e5fed2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a63d071fa78d43ba97f5f1044d43f952b}\label{class_main_menu_a63d071fa78d43ba97f5f1044d43f952b}} 
 \index{MainMenu@{MainMenu}!OnProfileGUIShopPressed@{OnProfileGUIShopPressed}}
 \index{OnProfileGUIShopPressed@{OnProfileGUIShopPressed}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{OnProfileGUIShopPressed()}{OnProfileGUIShopPressed()}}
 {\footnotesize\ttfamily void Main\+Menu.\+On\+Profile\+GUIShop\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a63d071fa78d43ba97f5f1044d43f952b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a63d071fa78d43ba97f5f1044d43f952b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_main_menu_a17961f230885c7cb83f86bb88be4973c}\label{class_main_menu_a17961f230885c7cb83f86bb88be4973c}} 
 \index{MainMenu@{MainMenu}!UpdateUI@{UpdateUI}}
 \index{UpdateUI@{UpdateUI}!MainMenu@{MainMenu}}
 \doxysubsubsection{\texorpdfstring{UpdateUI()}{UpdateUI()}}
 {\footnotesize\ttfamily void Main\+Menu.\+Update\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_main_menu_a17961f230885c7cb83f86bb88be4973c_icgraph}
+\end{center}
+\end{figure}
 
 
-Definition at line \mbox{\hyperlink{_main_menu_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_main_menu_8cs_source}{Main\+Menu.\+cs}}.
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_menu_a7b25973d3c9841a4af05e4029ee6bacc}\label{class_main_menu_a7b25973d3c9841a4af05e4029ee6bacc}} 
+\index{MainMenu@{MainMenu}!editProfile@{editProfile}}
+\index{editProfile@{editProfile}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{editProfile}{editProfile}}
+{\footnotesize\ttfamily Packed\+Scene Main\+Menu.\+edit\+Profile = Resource\+Loader.\+Load$<$Packed\+Scene$>$(\char`\"{}res\+://src/Scenes/Edit\+Profile\+GUI.\+tscn\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The panel for editing the player\textquotesingle{}s profile. 
+
+\mbox{\Hypertarget{class_main_menu_a670bcafdf8f5e35b41e31c08fb26fbbd}\label{class_main_menu_a670bcafdf8f5e35b41e31c08fb26fbbd}} 
+\index{MainMenu@{MainMenu}!shop@{shop}}
+\index{shop@{shop}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{shop}{shop}}
+{\footnotesize\ttfamily Packed\+Scene Main\+Menu.\+shop = Resource\+Loader.\+Load$<$Packed\+Scene$>$(\char`\"{}res\+://src/Scenes/Shop\+GUI.\+tscn\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The panel that contains the game\textquotesingle{}s shop. 
 
 
 

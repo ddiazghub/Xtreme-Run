@@ -1,0 +1,22 @@
+<map id="Node2D" name="Node2D">
+<area shape="rect" id="node1" title=" " alt="" coords="762,5,830,83"/>
+<area shape="rect" id="node2" href="$class_level.html" title="Base node for a game level scene." alt="" coords="177,131,421,633"/>
+<area shape="rect" id="node3" href="$class_level_select.html" title=" " alt="" coords="445,343,533,421"/>
+<area shape="rect" id="node4" href="$class_main.html" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="557,307,781,457"/>
+<area shape="rect" id="node5" href="$class_main_menu.html" title="The main menu of the game." alt="" coords="805,270,1040,494"/>
+<area shape="rect" id="node6" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="1065,321,1261,443"/>
+<area shape="rect" id="node20" href="$class_profile_select.html" title="Scene that displays a menu where profiles can be created, loaded and deleted." alt="" coords="1285,329,1472,435"/>
+<area shape="rect" id="node7" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="481,681,700,1081"/>
+<area shape="rect" id="node12" href="$class_persistent_state.html" title="Class that represents a player persistent state. Can be on air or on ground." alt="" coords="1057,813,1268,949"/>
+<area shape="rect" id="node15" href="$class_secondary_action.html" title="Class that represents an action the player can perform as secondary action." alt="" coords="1641,755,1849,1008"/>
+<area shape="rect" id="node8" href="$class_glide.html" title="Main action that allows the player to glide for some time." alt="" coords="5,1144,224,1397"/>
+<area shape="rect" id="node9" href="$class_jetpack.html" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="248,1129,467,1412"/>
+<area shape="rect" id="node10" href="$class_jump.html" title="Main action that allows the player to jump." alt="" coords="491,1217,691,1324"/>
+<area shape="rect" id="node11" href="$class_teleport.html" title="Main action that allows the player to teleport a small distance above them." alt="" coords="715,1159,933,1383"/>
+<area shape="rect" id="node13" href="$class_on_air_state.html" title="Persisten state when the player is on air." alt="" coords="958,1217,1151,1324"/>
+<area shape="rect" id="node14" href="$class_on_ground_state.html" title="Persistent state when the player is grounded." alt="" coords="1175,1217,1369,1324"/>
+<area shape="rect" id="node16" href="$class_fast_fall_and_roll.html" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="" coords="1393,1210,1612,1331"/>
+<area shape="rect" id="node17" href="$class_spawn_platforms.html" title="Secondary action that allows the player to spawn platforms while on air." alt="" coords="1636,1195,1855,1346"/>
+<area shape="rect" id="node18" href="$class_switch_gravity.html" title="Secondary action that allows the player to invert the direction of gravity." alt="" coords="1879,1173,2097,1368"/>
+<area shape="rect" id="node19" href="$class_teleport_and_switch_gravity.html" title="Secondary action that allows the player to teleport and invert the direction of gravity." alt="" coords="2121,1188,2340,1353"/>
+</map>

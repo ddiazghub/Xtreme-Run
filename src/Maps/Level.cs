@@ -110,7 +110,7 @@ public class Level : Node2D
             this.Pause();
         }
 
-        this.hud.SetActions(this.player.mainActionType, this.player.secondaryActionType);
+        this.hud.SetActions(this.player.MainActionType, this.player.SecondaryActionType);
         this.hud.SetProgress(this.progress);
         this.hud.SetPoints(this.GetPoints());
     }

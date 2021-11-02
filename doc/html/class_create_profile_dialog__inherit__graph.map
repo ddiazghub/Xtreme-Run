@@ -1,0 +1,4 @@
+<map id="CreateProfileDialog" name="CreateProfileDialog">
+<area shape="rect" id="node1" title="Popup for the creation of new profiles." alt="" coords="5,131,209,281"/>
+<area shape="rect" id="node2" href="$class_confirmation_dialog.html" title=" " alt="" coords="42,5,173,83"/>
+</map>

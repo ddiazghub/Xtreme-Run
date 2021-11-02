@@ -1,0 +1,4 @@
+<map id="KinematicBody2D" name="KinematicBody2D">
+<area shape="rect" id="node1" title=" " alt="" coords="59,5,185,83"/>
+<area shape="rect" id="node2" href="$class_player.html" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="5,131,239,956"/>
+</map>

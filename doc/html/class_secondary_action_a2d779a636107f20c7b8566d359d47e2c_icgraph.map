@@ -1,0 +1,5 @@
+<map id="SecondaryAction._ActionOnGround" name="SecondaryAction._ActionOnGround">
+<area shape="rect" id="node1" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="477,5,664,47"/>
+<area shape="rect" id="node2" href="$class_secondary_action.html#a91411ef181aa4993006fcb37cc70225d" title="The physics process that will be called each frame for the state." alt="" coords="219,5,429,47"/>
+<area shape="rect" id="node3" href="$class_player.html#a5c41f7a6b92001f593ccb5d8574371e5" title=" " alt="" coords="5,13,171,39"/>
+</map>

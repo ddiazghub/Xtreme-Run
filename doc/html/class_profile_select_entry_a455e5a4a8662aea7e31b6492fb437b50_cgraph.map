@@ -1,0 +1,8 @@
+<map id="ProfileSelectEntry.UpdateUI" name="ProfileSelectEntry.UpdateUI">
+<area shape="rect" id="node1" title="Updates the data currently displayed on the button." alt="" coords="5,56,188,83"/>
+<area shape="rect" id="node2" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="246,5,345,32"/>
+<area shape="rect" id="node3" href="$class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="254,56,337,83"/>
+<area shape="rect" id="node4" href="$class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="236,107,355,133"/>
+<area shape="rect" id="node5" href="$class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="453,81,566,108"/>
+<area shape="rect" id="node6" href="$class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="403,132,616,159"/>
+</map>

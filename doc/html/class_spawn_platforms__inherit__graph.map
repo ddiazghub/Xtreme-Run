@@ -1,0 +1,6 @@
+<map id="SpawnPlatforms" name="SpawnPlatforms">
+<area shape="rect" id="node1" title="Secondary action that allows the player to spawn platforms while on air." alt="" coords="5,601,224,752"/>
+<area shape="rect" id="node2" href="$class_secondary_action.html" title="Class that represents an action the player can perform as secondary action." alt="" coords="11,300,219,553"/>
+<area shape="rect" id="node3" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
+<area shape="rect" id="node4" href="$class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
+</map>

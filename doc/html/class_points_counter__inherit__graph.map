@@ -1,0 +1,4 @@
+<map id="PointsCounter" name="PointsCounter">
+<area shape="rect" id="node1" title="Node for displaying a number of points." alt="" coords="5,131,185,237"/>
+<area shape="rect" id="node2" href="$class_margin_container.html" title=" " alt="" coords="37,5,153,83"/>
+</map>

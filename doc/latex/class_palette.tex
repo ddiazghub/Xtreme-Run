@@ -5,6 +5,16 @@
 Class that contains data related to colors.  
 
 
+
+
+Collaboration diagram for Palette\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_palette__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,16 +34,35 @@ static readonly Dictionary$<$ string, Color\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperl
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-Color\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{Palette\+Colors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+Color\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{Palette\+Colors}}\hspace{0.3cm}{\ttfamily  \mbox{[}getprivate set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The available colors for avatar customization. \end{DoxyCompactList}\item 
 static \mbox{\hyperlink{class_palette}{Palette}} \mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Gets the game\textquotesingle{}s palette. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_palette_a120e25208802689792e39b37283dea4c}{Palette}} ()
+\begin{DoxyCompactList}\small\item\em Loads palettes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_palette}{Palette}} \mbox{\hyperlink{class_palette_a19b0a9a61540107b15f065154ba3db1f}{instance}}
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Class that contains data related to colors. 
 
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_palette_a120e25208802689792e39b37283dea4c}\label{class_palette_a120e25208802689792e39b37283dea4c}} 
+\index{Palette@{Palette}!Palette@{Palette}}
+\index{Palette@{Palette}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{Palette()}{Palette()}}
+{\footnotesize\ttfamily Palette.\+Palette (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads palettes. 
 
 
 
@@ -58,10 +87,14 @@ Creates a rectangular shape and fills it with the color with the given id.
 \begin{DoxyReturn}{Returns}
 An rectangular image texture filled with the color.
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00122}{122}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_palette_ab973750bb28f3de18132de170c08c092_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}
@@ -97,10 +130,6 @@ Definition at line \mbox{\hyperlink{_palette_8cs_source_l00122}{122}} of file \m
 
 Default skin, top and bottom colors for female avatar. 
 
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
-
 \mbox{\Hypertarget{class_palette_a83dcff72ec74e3643896ae30fda9efb8}\label{class_palette_a83dcff72ec74e3643896ae30fda9efb8}} 
 \index{Palette@{Palette}!DEFAULT\_COLORS\_MALE@{DEFAULT\_COLORS\_MALE}}
 \index{DEFAULT\_COLORS\_MALE@{DEFAULT\_COLORS\_MALE}!Palette@{Palette}}
@@ -135,10 +164,6 @@ Definition at line \mbox{\hyperlink{_palette_8cs_source_l00051}{51}} of file \mb
 
 Default skin, top and bottom colors for male avatar. 
 
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
-
 \mbox{\Hypertarget{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}\label{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}} 
 \index{Palette@{Palette}!DEFAULT\_THRESHOLD@{DEFAULT\_THRESHOLD}}
 \index{DEFAULT\_THRESHOLD@{DEFAULT\_THRESHOLD}!Palette@{Palette}}
@@ -149,9 +174,15 @@ Definition at line \mbox{\hyperlink{_palette_8cs_source_l00027}{27}} of file \mb
 
 The default threshold difference for doing a palette swap. 
 
+\mbox{\Hypertarget{class_palette_a19b0a9a61540107b15f065154ba3db1f}\label{class_palette_a19b0a9a61540107b15f065154ba3db1f}} 
+\index{Palette@{Palette}!instance@{instance}}
+\index{instance@{instance}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_palette}{Palette}} Palette.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+Singleton instance. 
 
 \mbox{\Hypertarget{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}\label{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}} 
 \index{Palette@{Palette}!NUMBER\_OF\_COLORS@{NUMBER\_OF\_COLORS}}
@@ -162,10 +193,6 @@ Definition at line \mbox{\hyperlink{_palette_8cs_source_l00022}{22}} of file \mb
 
 
 The number of available colors for the player\textquotesingle{}s avatar. 
-
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
 
 
 
@@ -180,23 +207,15 @@ Definition at line \mbox{\hyperlink{_palette_8cs_source_l00017}{17}} of file \mb
 
 Gets the game\textquotesingle{}s palette. 
 
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00105}{105}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
-
 \mbox{\Hypertarget{class_palette_ac5cd23ad275bc2a794539c1208fb5318}\label{class_palette_ac5cd23ad275bc2a794539c1208fb5318}} 
 \index{Palette@{Palette}!PaletteColors@{PaletteColors}}
 \index{PaletteColors@{PaletteColors}!Palette@{Palette}}
 \doxysubsubsection{\texorpdfstring{PaletteColors}{PaletteColors}}
-{\footnotesize\ttfamily Color \mbox{[}$\,$\mbox{]} Palette.\+Palette\+Colors\hspace{0.3cm}{\ttfamily [get]}}
+{\footnotesize\ttfamily Color \mbox{[}$\,$\mbox{]} Palette.\+Palette\+Colors\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
 The available colors for avatar customization. 
-
-
-
-Definition at line \mbox{\hyperlink{_palette_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
 
 
 

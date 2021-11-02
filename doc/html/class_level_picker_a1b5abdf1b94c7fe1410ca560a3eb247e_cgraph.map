@@ -1,0 +1,4 @@
+<map id="LevelPicker.OnValueChanged" name="LevelPicker.OnValueChanged">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node2" href="$class_profile_info.html#a81e55ae4a4e4b6d23593a365d61c8104" title="Checks if the level is unlocked, that is if the level&#39;s key has been bought from the store." alt="" coords="247,5,421,32"/>
+</map>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_jump.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,13 +96,26 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Jump:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_jump.png" usemap="#Jump_map" alt=""/>
-  <map id="Jump_map" name="Jump_map">
-<area href="class_main_action.html" title="Class that represents an action the player can perform as main action." alt="MainAction" shape="rect" coords="0,112,77,136"/>
-<area href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="PlayerState" shape="rect" coords="0,56,77,80"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_jump__inherit__graph.png" border="0" usemap="#a_jump_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_jump_inherit__map" id="a_jump_inherit__map">
+<area shape="rect" title="Main action that allows the player to jump." alt="" coords="15,748,215,855"/>
+<area shape="rect" href="class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="5,300,224,700"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for Jump:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_jump__coll__graph.png" border="0" usemap="#a_jump_coll__map" alt="Collaboration graph"/></div>
+<map name="a_jump_coll__map" id="a_jump_coll__map">
+<area shape="rect" title="Main action that allows the player to jump." alt="" coords="111,751,311,857"/>
+<area shape="rect" href="class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="102,316,321,701"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="5,132,201,253"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="69,5,137,83"/>
+<area shape="rect" title=" " alt="" coords="225,154,272,231"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -146,8 +179,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_main.html" title="The main Node of the game. It is a state machine that executes a single scene at a time.">Main</a> action that allows the player to jump. </p>
-
-<p class="definition">Definition at line <a class="el" href="_jump_8cs_source.html#l00007">7</a> of file <a class="el" href="_jump_8cs_source.html">Jump.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a44577960ec4edd622c95a6f5b76dfacb" name="a44577960ec4edd622c95a6f5b76dfacb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44577960ec4edd622c95a6f5b76dfacb">&#9670;&nbsp;</a></span>_ActionProcess()</h2>
@@ -183,8 +214,6 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_main_action.html#abad27d048abd3f377cf7f2e1e15f6975">MainAction</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_jump_8cs_source.html#l00018">18</a> of file <a class="el" href="_jump_8cs_source.html">Jump.cs</a>.</p>
-
 </div>
 </div>
 <a id="a1c628cf6144679785b27250e8b496234" name="a1c628cf6144679785b27250e8b496234"></a>
@@ -214,17 +243,19 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e">PlayerState</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_jump_8cs_source.html#l00008">8</a> of file <a class="el" href="_jump_8cs_source.html">Jump.cs</a>.</p>
-
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/PlayerStates/Action/Main/<a class="el" href="_jump_8cs_source.html">Jump.cs</a></li>
+<li>src/Entities/Player/PlayerStates/Action/Main/<a class="el" href="_jump_8cs.html">Jump.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_jump.html">Jump</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

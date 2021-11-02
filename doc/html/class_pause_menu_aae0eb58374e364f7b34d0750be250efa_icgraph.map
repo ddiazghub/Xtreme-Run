@@ -1,0 +1,7 @@
+<map id="PauseMenu.ShowMenu" name="PauseMenu.ShowMenu">
+<area shape="rect" id="node1" title="Pauses the game and shows this menu." alt="" coords="520,31,679,57"/>
+<area shape="rect" id="node2" href="$class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="380,31,472,57"/>
+<area shape="rect" id="node3" href="$class_level.html#adf87a658b5a922295a3bbab87f5820b5" title=" " alt="" coords="187,5,297,32"/>
+<area shape="rect" id="node4" href="$class_level.html#a08ef0cf0dd18af04729d4d01deaeea66" title=" " alt="" coords="152,56,332,83"/>
+<area shape="rect" id="node5" href="$class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,56,104,83"/>
+</map>

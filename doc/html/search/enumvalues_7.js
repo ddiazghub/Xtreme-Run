@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['secondary_5faction_0',['SECONDARY_ACTION',['../_player_persistent_state_8cs.html#ac15b5e32be30dad517e8866c7eb9af83aaa0b6ba74bc6de26e5e664849e8eb3df',1,'PlayerPersistentState.cs']]],
-  ['spawn_5fplatforms_1',['SPAWN_PLATFORMS',['../_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88a74133f8e3275536c6f31e3b6188f86b2',1,'PlayerSecondaryAction.cs']]],
-  ['switch_5fgravity_2',['SWITCH_GRAVITY',['../_player_secondary_action_8cs.html#a92b46946fafc071a922f285614a74b88a8a13068c0247721af765f2b9970a220f',1,'PlayerSecondaryAction.cs']]]
+  ['on_5fair_0',['ON_AIR',['../_player_persistent_state_8cs.html#ac15b5e32be30dad517e8866c7eb9af83ae3f1ff649ef0732c2ba1f5da8e97581a',1,'PlayerPersistentState.cs']]],
+  ['on_5fground_1',['ON_GROUND',['../_player_persistent_state_8cs.html#ac15b5e32be30dad517e8866c7eb9af83a1f318f91e5ed96e34964105b41b19d1a',1,'PlayerPersistentState.cs']]]
 ];

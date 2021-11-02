@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_scene_factory.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,10 +83,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_scene_factory-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SceneFactory Class Reference</div></div>
 </div><!--header-->
@@ -73,20 +94,33 @@ $(function() {
 
 <p>This class generates scenes for the main class.  
  <a href="class_scene_factory.html#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for SceneFactory:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_factory__coll__graph.png" border="0" usemap="#a_scene_factory_coll__map" alt="Collaboration graph"/></div>
+<map name="a_scene_factory_coll__map" id="a_scene_factory_coll__map">
+<area shape="rect" title="This class generates scenes for the main class." alt="" coords="5,145,197,252"/>
+<area shape="rect" title=" " alt="" coords="57,5,145,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a079c0b6302987a374a561495752bfdc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_factory.html#a079c0b6302987a374a561495752bfdc7">SceneFactory</a> ()</td></tr>
 <tr class="memdesc:a079c0b6302987a374a561495752bfdc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new scene factory. Loads each scene and stores it in the scenes dictionary.  <a href="class_scene_factory.html#a079c0b6302987a374a561495752bfdc7">More...</a><br /></td></tr>
 <tr class="separator:a079c0b6302987a374a561495752bfdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa71c8ef1cc97cc029f7b54512187ae7d"><td class="memItemLeft" align="right" valign="top">Node2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d">New</a> (<a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a> scene)</td></tr>
+<tr class="memitem:aa71c8ef1cc97cc029f7b54512187ae7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node2_d.html">Node2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d">New</a> (<a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a> scene)</td></tr>
 <tr class="memdesc:aa71c8ef1cc97cc029f7b54512187ae7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new scene.  <a href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d">More...</a><br /></td></tr>
 <tr class="separator:aa71c8ef1cc97cc029f7b54512187ae7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a540b4e92010488e1b1c51042b7fc856e"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; <a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a>, PackedScene &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene_factory.html#a540b4e92010488e1b1c51042b7fc856e">scenes</a></td></tr>
+<tr class="memdesc:a540b4e92010488e1b1c51042b7fc856e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dictionary that maps each GameScenes enum value to it's corresponding scene.  <a href="class_scene_factory.html#a540b4e92010488e1b1c51042b7fc856e">More...</a><br /></td></tr>
+<tr class="separator:a540b4e92010488e1b1c51042b7fc856e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This class generates scenes for the main class. </p>
-
-<p class="definition">Definition at line <a class="el" href="_scene_factory_8cs_source.html#l00008">8</a> of file <a class="el" href="_scene_factory_8cs_source.html">SceneFactory.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a079c0b6302987a374a561495752bfdc7" name="a079c0b6302987a374a561495752bfdc7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a079c0b6302987a374a561495752bfdc7">&#9670;&nbsp;</a></span>SceneFactory()</h2>
@@ -105,8 +139,6 @@ Public Member Functions</h2></td></tr>
 
 <p>Creates a new scene factory. Loads each scene and stores it in the scenes dictionary. </p>
 
-<p class="definition">Definition at line <a class="el" href="_scene_factory_8cs_source.html#l00018">18</a> of file <a class="el" href="_scene_factory_8cs_source.html">SceneFactory.cs</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -117,7 +149,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Node2D SceneFactory.New </td>
+          <td class="memname"><a class="el" href="class_node2_d.html">Node2D</a> SceneFactory.New </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a>&#160;</td>
           <td class="paramname"><em>scene</em></td><td>)</td>
@@ -134,18 +166,55 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A new instance of the scene.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d_icgraph.png" border="0" usemap="#aclass_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d_icgraph" alt=""/></div>
+<map name="aclass_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d_icgraph" id="aclass_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d_icgraph">
+<area shape="rect" title="Creates a new scene." alt="" coords="335,5,467,32"/>
+<area shape="rect" href="class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene." alt="" coords="152,5,287,32"/>
+<area shape="rect" href="class_main.html#afa38a52a0b6f8e0362539aea9114f285" title=" " alt="" coords="5,5,104,32"/>
+</map>
+</div>
 
-<p class="definition">Definition at line <a class="el" href="_scene_factory_8cs_source.html#l00034">34</a> of file <a class="el" href="_scene_factory_8cs_source.html">SceneFactory.cs</a>.</p>
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a540b4e92010488e1b1c51042b7fc856e" name="a540b4e92010488e1b1c51042b7fc856e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a540b4e92010488e1b1c51042b7fc856e">&#9670;&nbsp;</a></span>scenes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;<a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a>, PackedScene&gt; SceneFactory.scenes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A dictionary that maps each GameScenes enum value to it's corresponding scene. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/<a class="el" href="_scene_factory_8cs_source.html">SceneFactory.cs</a></li>
+<li>src/<a class="el" href="_scene_factory_8cs.html">SceneFactory.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_scene_factory.html">SceneFactory</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

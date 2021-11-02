@@ -8,38 +8,132 @@ using System;
 /// </summary>
 public class Player : KinematicBody2D
 {
+    /// <summary>
+    ///     The force/speed of the player's jump.
+    /// </summary>
     [Export] public int JumpForce = 1280;
+
+    /// <summary>
+    ///     The player's movement speed.
+    /// </summary>
     [Export] public int MovementSpeed = 700;
+
+    /// <summary>
+    ///     The maximum duration of the player's jump.
+    /// </summary>
     [Export] public float MaxJumpTime = 0.04f;
+
+    /// <summary>
+    ///     The maximum falling speed of the player.
+    /// </summary>
     [Export] public float MaxFallSpeed = 1280;
+
+    /// <summary>
+    ///     The player's gravity. This gets added each frame to the player's vertical linear velocity.
+    /// </summary>
     [Export] public int Gravity = 210;
 
+    /// <summary>
+    ///     Emitted if the player dies.
+    /// </summary>
     [Signal]
     public delegate void Dead();
 
+    /// <summary>
+    ///     Area2D to check if the player has entered any jump objects.
+    /// </summary>
     public Area2D jumpObjectCollisionCheck;
+
+    /// <summary>
+    ///     Area2D to check if the player will die on teleport.
+    /// </summary>
     public Area2D teleportCollisionCheck;
+
+    /// <summary>
+    ///     Timer to perform event after a secondary action was executed.
+    /// </summary>
     public Timer secondaryActionTimer;
+
+    /// <summary>
+    ///     Timer to perform event after a main action was executed.
+    /// </summary>
     public Timer mainActionTimer;
+
+    /// <summary>
+    ///     This timer enables input on the player on timeout.
+    /// </summary>
     public Timer startTimer;
+
+    /// <summary>
+    ///     The player's animation.
+    /// </summary>
     public AnimatedSprite animation;
-    public PersistentState persistentState;
-    public MainAction mainAction;
-    public SecondaryAction secondaryAction;
-    public PlayerStateFactory stateFactory;
+
+    /// <summary>
+    ///     The player's default collision shape.
+    /// </summary>
     public CollisionShape2D runningCollision;
+
+    /// <summary>
+    ///     The player's collision shape while performing a roll action.
+    /// </summary>
     public CollisionShape2D rollingCollision;
+
+    /// <summary>
+    ///     The player's linear velocity vector.
+    /// </summary>
     public Vector2 linearVelocity = new Vector2(0, 0);
+
+    // Default constants.
     public readonly int DEFAULT_JUMPFORCE = 1280;
     public readonly int DEFAULT_GRAVITY = 210;
     public readonly int DEFAULT_MOVEMENT_SPEED = 700;
     public readonly float DEFAULT_MAX_JUMP_TIME = 0.04f;
-    public PlayerMainAction mainActionType;
-    public PlayerSecondaryAction secondaryActionType;
 
+    /// <summary>
+    ///     Factory for creating new player state instances.
+    /// </summary>
+    private PlayerStateFactory stateFactory;
+
+    /// <summary>
+    ///     The current persistent state of the player.
+    /// </summary>
+    public PersistentState PersistentState { get; set; }
+
+    /// <summary>
+    ///     The main action the player can currently perform.
+    /// </summary>
+    public MainAction MainAction { get; set; }
+
+    /// <summary>
+    ///     The secondary action the player can currently perform.
+    /// </summary>
+    public SecondaryAction SecondaryAction { get; set; }
+
+    /// <summary>
+    ///     The type of the main action that the player can currently execute.
+    /// </summary>
+    public PlayerMainAction MainActionType { get; set; }
+
+    /// <summary>
+    ///     The type of the secondary action that the player can currently execute.
+    /// </summary>
+    public PlayerSecondaryAction SecondaryActionType { get; set; }
+
+    /// <summary>
+    ///     If true, then the player can't perform any actions.
+    /// </summary>
     public bool Blocked { get; set; }
+
+    /// <summary>
+    ///     If true, then the player's gravity vector is inverted.
+    /// </summary>
     public bool InvertedGravity { get; set; } = false;
-    public bool Invincible { get; set; }
+
+    /// <summary>
+    ///     If true, then the player can't die.
+    /// </summary>
+    public bool Invincible { get; set; } = false;
 
 
     public override void _Ready()
@@ -78,9 +172,9 @@ public class Player : KinematicBody2D
 
     public override void _PhysicsProcess(float delta)
     {
-        this.persistentState._StatePhysicsProcess(delta);
-        this.mainAction._StatePhysicsProcess(delta);
-        this.secondaryAction._StatePhysicsProcess(delta);
+        this.PersistentState._StatePhysicsProcess(delta);
+        this.MainAction._StatePhysicsProcess(delta);
+        this.SecondaryAction._StatePhysicsProcess(delta);
 
         if (this.InvertedGravity)
             this.MoveAndSlide(this.linearVelocity, Vector2.Down, floorMaxAngle: Mathf.Deg2Rad(60));
@@ -94,14 +188,14 @@ public class Player : KinematicBody2D
     /// <param name="state">The new state.</param>
     public void ChangePersistentState(PlayerPersistentState state)
     {
-        if (this.persistentState != null)
+        if (this.PersistentState != null)
         {
-            this.persistentState.QueueFree();
+            this.PersistentState.QueueFree();
         }
 
-        this.persistentState = this.stateFactory.New(state);
-        this.AddChild(this.persistentState);
-        this.persistentState.Setup();
+        this.PersistentState = this.stateFactory.New(state);
+        this.AddChild(this.PersistentState);
+        this.PersistentState.Setup();
     }
 
     /// <summary>
@@ -110,15 +204,15 @@ public class Player : KinematicBody2D
     /// <param name="state">The new action.</param>
     public void ChangeMainAction(PlayerMainAction action)
     {
-        if (this.mainAction != null)
+        if (this.MainAction != null)
         {
-            this.mainAction.QueueFree();
+            this.MainAction.QueueFree();
         }
 
-        this.mainActionType = action;
-        this.mainAction = this.stateFactory.New(action);
-        this.AddChild(this.mainAction);
-        this.mainAction.Setup();
+        this.MainActionType = action;
+        this.MainAction = this.stateFactory.New(action);
+        this.AddChild(this.MainAction);
+        this.MainAction.Setup();
     }
 
     /// <summary>
@@ -127,15 +221,15 @@ public class Player : KinematicBody2D
     /// <param name="state">The new action.</param>
     public void ChangeSecondaryAction(PlayerSecondaryAction action)
     {
-        if (this.secondaryAction != null)
+        if (this.SecondaryAction != null)
         {
-            this.secondaryAction.QueueFree();
+            this.SecondaryAction.QueueFree();
         }
 
-        this.secondaryActionType = action;
-        this.secondaryAction = this.stateFactory.New(action);
-        this.AddChild(this.secondaryAction);
-        this.secondaryAction.Setup();
+        this.SecondaryActionType = action;
+        this.SecondaryAction = this.stateFactory.New(action);
+        this.AddChild(this.SecondaryAction);
+        this.SecondaryAction.Setup();
     }
 
     /// <summary>
@@ -150,9 +244,9 @@ public class Player : KinematicBody2D
         this.JumpForce = -this.JumpForce;
         this.Gravity = -this.Gravity;
 
-        if (this.mainAction is Teleport)
+        if (this.MainAction is Teleport)
         {
-            ((Teleport) this.mainAction).TELEPORT_DISTANCE = -((Teleport) this.mainAction).TELEPORT_DISTANCE;
+            ((Teleport) this.MainAction).TELEPORT_DISTANCE = -((Teleport) this.MainAction).TELEPORT_DISTANCE;
         }
     }
 
@@ -168,12 +262,6 @@ public class Player : KinematicBody2D
                 break;
 
             case PlayerPersistentState.ON_AIR:
-                
-                this.GetNode<CollisionShape2D>("RunningCollision").SetDeferred("disabled", false);
-                this.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", true);
-                break;
-
-            case PlayerPersistentState.SECONDARY_ACTION:
                 this.GetNode<CollisionShape2D>("RunningCollision").SetDeferred("disabled", true);
                 this.GetNode<CollisionShape2D>("SlidingCollision").SetDeferred("disabled", false);
                 break;

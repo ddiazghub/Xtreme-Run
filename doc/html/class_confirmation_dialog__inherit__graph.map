@@ -1,0 +1,5 @@
+<map id="ConfirmationDialog" name="ConfirmationDialog">
+<area shape="rect" id="node1" title=" " alt="" coords="165,5,295,83"/>
+<area shape="rect" id="node2" href="$class_create_profile_dialog.html" title="Popup for the creation of new profiles." alt="" coords="5,131,209,281"/>
+<area shape="rect" id="node3" href="$class_exit_game_popup.html" title="Confirms if the player wants to exit the game." alt="" coords="233,160,472,252"/>
+</map>

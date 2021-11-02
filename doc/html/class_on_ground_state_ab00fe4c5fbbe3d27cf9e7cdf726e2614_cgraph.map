@@ -1,0 +1,7 @@
+<map id="OnGroundState._StatePhysicsProcess" name="OnGroundState._StatePhysicsProcess">
+<area shape="rect" id="node1" title="The physics process that will be called each frame for the state." alt="" coords="5,23,207,65"/>
+<area shape="rect" id="node2" href="$class_player.html#ae2226638af8907c89812bdb4b7eefede" title="Changes the current persistent state." alt="" coords="255,31,452,57"/>
+<area shape="rect" id="node3" href="$class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="500,5,663,32"/>
+<area shape="rect" id="node4" href="$class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="517,56,645,83"/>
+<area shape="rect" id="node5" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="711,56,829,83"/>
+</map>

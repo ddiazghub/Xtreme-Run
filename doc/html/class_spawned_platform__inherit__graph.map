@@ -1,0 +1,4 @@
+<map id="SpawnedPlatform" name="SpawnedPlatform">
+<area shape="rect" id="node1" title="Platforms that the player can spawn with the spawn platforms secondary action. They destroy themselve..." alt="" coords="5,131,213,223"/>
+<area shape="rect" id="node2" href="$class_static_body2_d.html" title=" " alt="" coords="58,5,161,83"/>
+</map>

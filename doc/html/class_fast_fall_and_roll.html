@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_fast_fall_and_roll.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,7 +83,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -76,13 +96,25 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for FastFallAndRoll:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_fast_fall_and_roll.png" usemap="#FastFallAndRoll_map" alt=""/>
-  <map id="FastFallAndRoll_map" name="FastFallAndRoll_map">
-<area href="class_secondary_action.html" title="Class that represents an action the player can perform as secondary action." alt="SecondaryAction" shape="rect" coords="0,112,110,136"/>
-<area href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="PlayerState" shape="rect" coords="0,56,110,80"/>
-  </map>
-</div></div>
+<div class="center"><img src="class_fast_fall_and_roll__inherit__graph.png" border="0" usemap="#a_fast_fall_and_roll_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_fast_fall_and_roll_inherit__map" id="a_fast_fall_and_roll_inherit__map">
+<area shape="rect" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="" coords="5,601,224,723"/>
+<area shape="rect" href="class_secondary_action.html" title="Class that represents an action the player can perform as secondary action." alt="" coords="11,300,219,553"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for FastFallAndRoll:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fast_fall_and_roll__coll__graph.png" border="0" usemap="#a_fast_fall_and_roll_coll__map" alt="Collaboration graph"/></div>
+<map name="a_fast_fall_and_roll_coll__map" id="a_fast_fall_and_roll_coll__map">
+<area shape="rect" title="Secondary action that allows the player to fall faster and dodge obstacles by rolling." alt="" coords="5,601,224,723"/>
+<area shape="rect" href="class_secondary_action.html" title="Class that represents an action the player can perform as secondary action." alt="" coords="11,300,219,553"/>
+<area shape="rect" href="class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,8 +161,6 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Secondary action that allows the player to fall faster and dodge obstacles by rolling. </p>
-
-<p class="definition">Definition at line <a class="el" href="_fastfall_and_roll_8cs_source.html#l00007">7</a> of file <a class="el" href="_fastfall_and_roll_8cs_source.html">FastfallAndRoll.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a63c245a9215306232f86d96c50b9fb20" name="a63c245a9215306232f86d96c50b9fb20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63c245a9215306232f86d96c50b9fb20">&#9670;&nbsp;</a></span>_ActionOnAir()</h2>
@@ -158,8 +188,6 @@ Additional Inherited Members</h2></td></tr>
 <p>The action that will be executed if the player inputs the action's keys and the player's persistent state is on air. </p>
 
 <p>Implements <a class="el" href="class_secondary_action.html#a70a639090f6e4f4b92b0116a21484673">SecondaryAction</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_fastfall_and_roll_8cs_source.html#l00017">17</a> of file <a class="el" href="_fastfall_and_roll_8cs_source.html">FastfallAndRoll.cs</a>.</p>
 
 </div>
 </div>
@@ -189,8 +217,15 @@ Additional Inherited Members</h2></td></tr>
 <p>The action that will be executed if the player inputs the action's keys and the player's persistent state is on ground. </p>
 
 <p>Reimplemented from <a class="el" href="class_secondary_action.html#a2d779a636107f20c7b8566d359d47e2c">SecondaryAction</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_fastfall_and_roll_8cs_source.html#l00008">8</a> of file <a class="el" href="_fastfall_and_roll_8cs_source.html">FastfallAndRoll.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fast_fall_and_roll_a677376011ccf63f6cf5408f52275d48a_cgraph.png" border="0" usemap="#aclass_fast_fall_and_roll_a677376011ccf63f6cf5408f52275d48a_cgraph" alt=""/></div>
+<map name="aclass_fast_fall_and_roll_a677376011ccf63f6cf5408f52275d48a_cgraph" id="aclass_fast_fall_and_roll_a677376011ccf63f6cf5408f52275d48a_cgraph">
+<area shape="rect" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="5,5,184,47"/>
+<area shape="rect" href="class_player.html#a4d955d72d1768541f5ac99f19ffe1381" title="Sets a hitbox on the player depending on the state." alt="" coords="232,13,352,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -218,18 +253,29 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="class_secondary_action.html#ab1436a4c4523473d3199412de76ec830">SecondaryAction</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_fastfall_and_roll_8cs_source.html#l00029">29</a> of file <a class="el" href="_fastfall_and_roll_8cs_source.html">FastfallAndRoll.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fast_fall_and_roll_a4ee1aec7ed7f5bfe9ec6bf798a16023d_cgraph.png" border="0" usemap="#aclass_fast_fall_and_roll_a4ee1aec7ed7f5bfe9ec6bf798a16023d_cgraph" alt=""/></div>
+<map name="aclass_fast_fall_and_roll_a4ee1aec7ed7f5bfe9ec6bf798a16023d_cgraph" id="aclass_fast_fall_and_roll_a4ee1aec7ed7f5bfe9ec6bf798a16023d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" href="class_player.html#a4d955d72d1768541f5ac99f19ffe1381" title="Sets a hitbox on the player depending on the state." alt="" coords="251,13,371,39"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Entities/Player/PlayerStates/Action/Secondary/<a class="el" href="_fastfall_and_roll_8cs_source.html">FastfallAndRoll.cs</a></li>
+<li>src/Entities/Player/PlayerStates/Action/Secondary/<a class="el" href="_fastfall_and_roll_8cs.html">FastfallAndRoll.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_fast_fall_and_roll.html">FastFallAndRoll</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

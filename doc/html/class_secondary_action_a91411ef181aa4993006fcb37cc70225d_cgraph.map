@@ -1,0 +1,6 @@
+<map id="SecondaryAction._StatePhysicsProcess" name="SecondaryAction._StatePhysicsProcess">
+<area shape="rect" id="node1" title="The physics process that will be called each frame for the state." alt="" coords="5,57,216,98"/>
+<area shape="rect" id="node2" href="$class_secondary_action.html#a70a639090f6e4f4b92b0116a21484673" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="274,5,477,32"/>
+<area shape="rect" id="node3" href="$class_secondary_action.html#a2d779a636107f20c7b8566d359d47e2c" title="The action that will be executed if the player inputs the action&#39;s keys and the player&#39;s persistent s..." alt="" coords="282,57,469,98"/>
+<area shape="rect" id="node4" href="$class_secondary_action.html#a167568a42e1a355f2d49b5a9dcfd4baf" title="The action that will be executed once the player stops pressing the action&#39;s input keyboard/mouse but..." alt="" coords="264,123,487,149"/>
+</map>

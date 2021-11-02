@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['editprofilegui_0',['EditProfileGUI',['../class_edit_profile_g_u_i.html',1,'']]],
-  ['exitgamepopup_1',['ExitGamePopup',['../class_exit_game_popup.html',1,'']]]
+  ['canvaslayer_0',['CanvasLayer',['../class_canvas_layer.html',1,'']]],
+  ['confirmationdialog_1',['ConfirmationDialog',['../class_confirmation_dialog.html',1,'']]],
+  ['createprofiledialog_2',['CreateProfileDialog',['../class_create_profile_dialog.html',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="MainMenu" name="MainMenu">
+<area shape="rect" id="node1" title="The main menu of the game." alt="" coords="5,160,240,369"/>
+<area shape="rect" id="node2" href="$class_node2_d.html" title=" " alt="" coords="34,5,102,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="126,5,229,83"/>
+</map>

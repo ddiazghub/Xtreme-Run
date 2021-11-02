@@ -1,0 +1,7 @@
+<map id="EditProfileGUI.OnSavePressed" name="EditProfileGUI.OnSavePressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,205,83"/>
+<area shape="rect" id="node2" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="253,31,411,57"/>
+<area shape="rect" id="node5" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="287,81,377,108"/>
+<area shape="rect" id="node3" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="459,5,557,32"/>
+<area shape="rect" id="node4" href="$class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="467,56,549,83"/>
+</map>

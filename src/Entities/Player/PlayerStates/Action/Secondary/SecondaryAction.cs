@@ -26,11 +26,11 @@ public abstract class SecondaryAction: PlayerState {
 
         if (Input.IsActionPressed("action_secondary") && !(this.Blocked || this.Player.Blocked))
         {
-            if (this.Player.persistentState is OnGroundState) {
+            if (this.Player.PersistentState is OnGroundState) {
                 this._ActionOnGround();
             }
 
-            if (this.Player.persistentState is OnAirState) {
+            if (this.Player.PersistentState is OnAirState) {
                 this._ActionOnAir();
             }
         }
@@ -115,7 +115,7 @@ public abstract class SecondaryAction: PlayerState {
     public virtual void OnSecondaryActionTimerTimeout()
     {
         this.Player.animation.Play("running");
-        this.Player.mainAction.Blocked = false;
+        this.Player.MainAction.Blocked = false;
         this.Player.secondaryActionTimer.Stop();
     }
 }

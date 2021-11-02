@@ -1,0 +1,4 @@
+<map id="CanvasLayer" name="CanvasLayer">
+<area shape="rect" id="node1" title=" " alt="" coords="75,5,171,83"/>
+<area shape="rect" id="node2" href="$class_game_h_u_d.html" title="The hud that shows when the player is in a level." alt="" coords="5,131,240,457"/>
+</map>

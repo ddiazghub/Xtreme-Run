@@ -1,0 +1,11 @@
+<map id="PlayerState.Setup" name="PlayerState.Setup">
+<area shape="rect" id="node1" title="Setups the state and initializes it." alt="" coords="715,137,843,163"/>
+<area shape="rect" id="node2" href="$class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="477,187,649,214"/>
+<area shape="rect" id="node6" href="$class_player.html#ae2226638af8907c89812bdb4b7eefede" title="Changes the current persistent state." alt="" coords="465,82,662,109"/>
+<area shape="rect" id="node9" href="$class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="460,137,667,163"/>
+<area shape="rect" id="node3" href="$class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="249,137,356,163"/>
+<area shape="rect" id="node4" href="$class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,188,412,229"/>
+<area shape="rect" id="node5" href="$class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,195,145,222"/>
+<area shape="rect" id="node7" href="$class_on_air_state.html#a8fc8b56eac0dd06f4976543b32420f57" title="The physics process that will be called each frame for the state." alt="" coords="215,5,390,47"/>
+<area shape="rect" id="node8" href="$class_on_ground_state.html#ab00fe4c5fbbe3d27cf9e7cdf726e2614" title="The physics process that will be called each frame for the state." alt="" coords="202,71,403,112"/>
+</map>

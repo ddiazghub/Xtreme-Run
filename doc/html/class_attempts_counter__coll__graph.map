@@ -1,0 +1,6 @@
+<map id="AttemptsCounter" name="AttemptsCounter">
+<area shape="rect" id="node1" title="Node for displaying the number of times the player has attempted a level." alt="" coords="36,160,196,252"/>
+<area shape="rect" id="node2" href="$class_label.html" title=" " alt="" coords="5,5,59,83"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,5,149,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="196,5,305,83"/>
+</map>

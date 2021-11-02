@@ -1,24 +1,43 @@
 \hypertarget{class_edit_profile_g_u_i}{}\doxysection{Edit\+Profile\+GUI Class Reference}
 \label{class_edit_profile_g_u_i}\index{EditProfileGUI@{EditProfileGUI}}
-Inheritance diagram for Edit\+Profile\+GUI\+:\begin{figure}[H]
+
+
+GUI that allows the player to edit their profile data and customize their avatar.  
+
+
+
+
+Inheritance diagram for Edit\+Profile\+GUI\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_edit_profile_g_u_i}
+\includegraphics[width=236pt]{class_edit_profile_g_u_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Edit\+Profile\+GUI\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 delegate void \mbox{\hyperlink{class_edit_profile_g_u_i_af257feffa6ba5f4681f5d315059f4cd2}{Profile\+Changed}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted if the user profile\textquotesingle{}s data was modified. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32}{\+\_\+\+Ready}} ()
 \item 
 override void \mbox{\hyperlink{class_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e}{\+\_\+\+Process}} (float delta)
 \item 
 bool \mbox{\hyperlink{class_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644}{Unsaved\+Changes}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the player has edited their avatar and the changes haven\textquotesingle{}t been saved. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a}{Update\+Avatar}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Updates the data of the avatar being edited depending on user input. Displays the new avatar. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b}{On\+Color\+Pressed}} ()
 \item 
 void \mbox{\hyperlink{class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381}{On\+Gender\+Item\+Selected}} (int index)
@@ -27,14 +46,25 @@ void \mbox{\hyperlink{class_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde
 \item 
 void \mbox{\hyperlink{class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35}{On\+Save\+Pressed}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Texture \mbox{\hyperlink{class_edit_profile_g_u_i_ab36def60f18be3b0682a8ce7bc77b84d}{lock\+Sprite}} = Resource\+Loader.\+Load$<$Texture$>$(\char`\"{}res\+://res/Sprites/player/level\+\_\+keys/lock.\+png\char`\"{})
+\begin{DoxyCompactList}\small\item\em Sprite for labeling items which have not been unlocked yet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_edit_profile_g_u_i_ae13ff8ee928424405695287532c2eef8}{edited\+Avatar}} = Profile.\+Current\+Session.\+Info.\+Avatar.\+Clone()
+\begin{DoxyCompactList}\small\item\em A copy of the player\textquotesingle{}s avatar which will be edited. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_edit_profile_g_u_i_ae220751a04eedbf192ff9df579fbbcc6}{keys}}
+\begin{DoxyCompactList}\small\item\em Keys for labeling colors. \end{DoxyCompactList}\item 
+Dictionary$<$ string, int $>$ \mbox{\hyperlink{class_edit_profile_g_u_i_a7784b52bb3c578a7fe5cfa36832b9d53}{selected}}
+\begin{DoxyCompactList}\small\item\em The ids of the currently selected colors for skin, top, and bottom. \end{DoxyCompactList}\item 
+Dictionary$<$ string, Texture\+Rect $>$ \mbox{\hyperlink{class_edit_profile_g_u_i_ac7f99f4c653484ff65acfc1cd5812bf2}{color\+Selectors}}
+\begin{DoxyCompactList}\small\item\em Icons for labeling the currently selected colors. \end{DoxyCompactList}\item 
+readonly int \mbox{\hyperlink{class_edit_profile_g_u_i_ab865259bc1415523fd4089d94aab1173}{DEFAULT\+\_\+\+COLOR}} = 15
+\begin{DoxyCompactList}\small\item\em The id of the avatar default colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00005}{5}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
-
+GUI that allows the player to edit their profile data and customize their avatar. 
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e}\label{class_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e}} 
@@ -43,65 +73,117 @@ Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00005}{5}} o
 \doxysubsubsection{\texorpdfstring{\_Process()}{\_Process()}}
 {\footnotesize\ttfamily override void Edit\+Profile\+GUI.\+\_\+\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32}\label{class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32}} 
 \index{EditProfileGUI@{EditProfileGUI}!\_Ready@{\_Ready}}
 \index{\_Ready@{\_Ready}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
 {\footnotesize\ttfamily override void Edit\+Profile\+GUI.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde}\label{class_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde}} 
 \index{EditProfileGUI@{EditProfileGUI}!OnCancelPressed@{OnCancelPressed}}
 \index{OnCancelPressed@{OnCancelPressed}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{OnCancelPressed()}{OnCancelPressed()}}
 {\footnotesize\ttfamily void Edit\+Profile\+GUI.\+On\+Cancel\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00173}{173}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b}\label{class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b}} 
 \index{EditProfileGUI@{EditProfileGUI}!OnColorPressed@{OnColorPressed}}
 \index{OnColorPressed@{OnColorPressed}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{OnColorPressed()}{OnColorPressed()}}
 {\footnotesize\ttfamily void Edit\+Profile\+GUI.\+On\+Color\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00148}{148}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381}\label{class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381}} 
 \index{EditProfileGUI@{EditProfileGUI}!OnGenderItemSelected@{OnGenderItemSelected}}
 \index{OnGenderItemSelected@{OnGenderItemSelected}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{OnGenderItemSelected()}{OnGenderItemSelected()}}
 {\footnotesize\ttfamily void Edit\+Profile\+GUI.\+On\+Gender\+Item\+Selected (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00167}{167}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35}\label{class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35}} 
 \index{EditProfileGUI@{EditProfileGUI}!OnSavePressed@{OnSavePressed}}
 \index{OnSavePressed@{OnSavePressed}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{OnSavePressed()}{OnSavePressed()}}
 {\footnotesize\ttfamily void Edit\+Profile\+GUI.\+On\+Save\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
-
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00178}{178}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
-
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_af257feffa6ba5f4681f5d315059f4cd2}\label{class_edit_profile_g_u_i_af257feffa6ba5f4681f5d315059f4cd2}} 
 \index{EditProfileGUI@{EditProfileGUI}!ProfileChanged@{ProfileChanged}}
 \index{ProfileChanged@{ProfileChanged}!EditProfileGUI@{EditProfileGUI}}
 \doxysubsubsection{\texorpdfstring{ProfileChanged()}{ProfileChanged()}}
 {\footnotesize\ttfamily delegate void Edit\+Profile\+GUI.\+Profile\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emitted if the user profile\textquotesingle{}s data was modified. 
 
 \mbox{\Hypertarget{class_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644}\label{class_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644}} 
 \index{EditProfileGUI@{EditProfileGUI}!UnsavedChanges@{UnsavedChanges}}
@@ -111,8 +193,19 @@ Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00178}{178}}
 
 
 
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00115}{115}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
+Checks if the player has edited their avatar and the changes haven\textquotesingle{}t been saved. 
 
+\begin{DoxyReturn}{Returns}
+True if the changes are unsaved, false otherwise.
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a}\label{class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a}} 
 \index{EditProfileGUI@{EditProfileGUI}!UpdateAvatar@{UpdateAvatar}}
 \index{UpdateAvatar@{UpdateAvatar}!EditProfileGUI@{EditProfileGUI}}
@@ -121,7 +214,95 @@ Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00115}{115}}
 
 
 
-Definition at line \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source_l00136}{136}} of file \mbox{\hyperlink{_edit_profile_g_u_i_8cs_source}{Edit\+Profile\+GUI.\+cs}}.
+Updates the data of the avatar being edited depending on user input. Displays the new avatar. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_edit_profile_g_u_i_ac7f99f4c653484ff65acfc1cd5812bf2}\label{class_edit_profile_g_u_i_ac7f99f4c653484ff65acfc1cd5812bf2}} 
+\index{EditProfileGUI@{EditProfileGUI}!colorSelectors@{colorSelectors}}
+\index{colorSelectors@{colorSelectors}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{colorSelectors}{colorSelectors}}
+{\footnotesize\ttfamily Dictionary$<$string, Texture\+Rect$>$ Edit\+Profile\+GUI.\+color\+Selectors\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Icons for labeling the currently selected colors. 
+
+/ \mbox{\Hypertarget{class_edit_profile_g_u_i_ab865259bc1415523fd4089d94aab1173}\label{class_edit_profile_g_u_i_ab865259bc1415523fd4089d94aab1173}} 
+\index{EditProfileGUI@{EditProfileGUI}!DEFAULT\_COLOR@{DEFAULT\_COLOR}}
+\index{DEFAULT\_COLOR@{DEFAULT\_COLOR}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_COLOR}{DEFAULT\_COLOR}}
+{\footnotesize\ttfamily readonly int Edit\+Profile\+GUI.\+DEFAULT\+\_\+\+COLOR = 15\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The id of the avatar default colors. 
+
+\mbox{\Hypertarget{class_edit_profile_g_u_i_ae13ff8ee928424405695287532c2eef8}\label{class_edit_profile_g_u_i_ae13ff8ee928424405695287532c2eef8}} 
+\index{EditProfileGUI@{EditProfileGUI}!editedAvatar@{editedAvatar}}
+\index{editedAvatar@{editedAvatar}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{editedAvatar}{editedAvatar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avatar}{Avatar}} Edit\+Profile\+GUI.\+edited\+Avatar = Profile.\+Current\+Session.\+Info.\+Avatar.\+Clone()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A copy of the player\textquotesingle{}s avatar which will be edited. 
+
+\mbox{\Hypertarget{class_edit_profile_g_u_i_ae220751a04eedbf192ff9df579fbbcc6}\label{class_edit_profile_g_u_i_ae220751a04eedbf192ff9df579fbbcc6}} 
+\index{EditProfileGUI@{EditProfileGUI}!keys@{keys}}
+\index{keys@{keys}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{keys}{keys}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Edit\+Profile\+GUI.\+keys\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}Skin"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}Top"{}},}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}Bottom"{}}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Keys for labeling colors. 
+
+\mbox{\Hypertarget{class_edit_profile_g_u_i_ab36def60f18be3b0682a8ce7bc77b84d}\label{class_edit_profile_g_u_i_ab36def60f18be3b0682a8ce7bc77b84d}} 
+\index{EditProfileGUI@{EditProfileGUI}!lockSprite@{lockSprite}}
+\index{lockSprite@{lockSprite}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{lockSprite}{lockSprite}}
+{\footnotesize\ttfamily Texture Edit\+Profile\+GUI.\+lock\+Sprite = Resource\+Loader.\+Load$<$Texture$>$(\char`\"{}res\+://res/Sprites/player/level\+\_\+keys/lock.\+png\char`\"{})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sprite for labeling items which have not been unlocked yet. 
+
+\mbox{\Hypertarget{class_edit_profile_g_u_i_a7784b52bb3c578a7fe5cfa36832b9d53}\label{class_edit_profile_g_u_i_a7784b52bb3c578a7fe5cfa36832b9d53}} 
+\index{EditProfileGUI@{EditProfileGUI}!selected@{selected}}
+\index{selected@{selected}!EditProfileGUI@{EditProfileGUI}}
+\doxysubsubsection{\texorpdfstring{selected}{selected}}
+{\footnotesize\ttfamily Dictionary$<$string, int$>$ Edit\+Profile\+GUI.\+selected\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The ids of the currently selected colors for skin, top, and bottom. 
 
 
 

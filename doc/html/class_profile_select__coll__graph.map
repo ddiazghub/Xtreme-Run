@@ -1,0 +1,6 @@
+<map id="ProfileSelect" name="ProfileSelect">
+<area shape="rect" id="node1" title="Scene that displays a menu where profiles can be created, loaded and deleted." alt="" coords="13,287,175,393"/>
+<area shape="rect" id="node2" href="$class_node2_d.html" title=" " alt="" coords="5,139,73,217"/>
+<area shape="rect" id="node3" href="$class_exit_game_popup.html" title="Confirms if the player wants to exit the game." alt="" coords="97,132,336,224"/>
+<area shape="rect" id="node4" href="$class_confirmation_dialog.html" title=" " alt="" coords="151,5,282,83"/>
+</map>

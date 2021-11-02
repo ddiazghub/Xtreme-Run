@@ -1,0 +1,6 @@
+<map id="Player.ChangePersistentState" name="Player.ChangePersistentState">
+<area shape="rect" id="node1" title="Changes the current persistent state." alt="" coords="255,64,452,91"/>
+<area shape="rect" id="node2" href="$class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="53,5,159,32"/>
+<area shape="rect" id="node3" href="$class_on_air_state.html#a8fc8b56eac0dd06f4976543b32420f57" title="The physics process that will be called each frame for the state." alt="" coords="19,57,193,98"/>
+<area shape="rect" id="node4" href="$class_on_ground_state.html#ab00fe4c5fbbe3d27cf9e7cdf726e2614" title="The physics process that will be called each frame for the state." alt="" coords="5,122,207,163"/>
+</map>

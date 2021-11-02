@@ -1,0 +1,5 @@
+<map id="ProfileSelectEntry.OnPressed" name="ProfileSelectEntry.OnPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,200,57"/>
+<area shape="rect" id="node2" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="248,5,347,32"/>
+<area shape="rect" id="node3" href="$class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="252,56,343,83"/>
+</map>

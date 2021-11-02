@@ -1,0 +1,9 @@
+<map id="EditProfileGUI._Process" name="EditProfileGUI._Process">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect" id="node2" href="$class_edit_profile_g_u_i.html#a54726f386c9921c011c5defc5341c644" title="Checks if the player has edited their avatar and the changes haven&#39;t been saved." alt="" coords="216,5,423,32"/>
+<area shape="rect" id="node3" href="$class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="227,56,411,83"/>
+<area shape="rect" id="node4" href="$class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="474,31,586,57"/>
+<area shape="rect" id="node5" href="$class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="471,81,589,108"/>
+<area shape="rect" id="node6" href="$class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="687,56,801,83"/>
+<area shape="rect" id="node7" href="$class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="637,107,851,133"/>
+</map>

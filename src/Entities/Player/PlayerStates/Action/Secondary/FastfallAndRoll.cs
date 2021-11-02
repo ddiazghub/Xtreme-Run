@@ -7,9 +7,9 @@ using System;
 public class FastFallAndRoll: SecondaryAction {
     public override void _ActionOnGround()
     {
-        this.Player.mainAction.Blocked = true;
+        this.Player.MainAction.Blocked = true;
         this.Player.animation.Play("sliding");
-        this.Player.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
+        this.Player.SetHitbox(PlayerPersistentState.ON_AIR);
         this.Player.secondaryActionTimer.WaitTime = 0.6f;
         base._ActionOnGround();
     }

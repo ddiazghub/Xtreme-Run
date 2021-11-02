@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_shop_g_u_i.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,10 +83,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_shop_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ShopGUI Class Reference</div></div>
 </div><!--header-->
@@ -76,9 +97,25 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for ShopGUI:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_shop_g_u_i.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_shop_g_u_i__inherit__graph.png" border="0" usemap="#a_shop_g_u_i_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_shop_g_u_i_inherit__map" id="a_shop_g_u_i_inherit__map">
+<area shape="rect" title="The shop from which the player can buy items." alt="" coords="5,131,213,311"/>
+<area shape="rect" title=" " alt="" coords="55,5,164,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ShopGUI:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i__coll__graph.png" border="0" usemap="#a_shop_g_u_i_coll__map" alt="Collaboration graph"/></div>
+<map name="a_shop_g_u_i_coll__map" id="a_shop_g_u_i_coll__map">
+<area shape="rect" title="The shop from which the player can buy items." alt="" coords="160,145,368,281"/>
+<area shape="rect" title=" " alt="" coords="5,5,115,83"/>
+<area shape="rect" title=" " alt="" coords="139,5,205,83"/>
+<area shape="rect" title=" " alt="" coords="231,5,297,83"/>
+<area shape="rect" title=" " alt="" coords="343,5,382,83"/>
+<area shape="rect" title=" " alt="" coords="419,5,482,83"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -93,11 +130,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab993141e4f22e2df8e1c7239da6f4828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b20c05193df04c7c0d9387823a11cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shop_g_u_i.html#ac7b20c05193df04c7c0d9387823a11cf">OnBuyPressed</a> ()</td></tr>
 <tr class="separator:ac7b20c05193df04c7c0d9387823a11cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8bf98d564883ae5927975a1790027d45"><td class="memItemLeft" align="right" valign="top">UInt32[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shop_g_u_i.html#a8bf98d564883ae5927975a1790027d45">itemCost</a></td></tr>
+<tr class="memdesc:a8bf98d564883ae5927975a1790027d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array containing the cost of each item.  <a href="class_shop_g_u_i.html#a8bf98d564883ae5927975a1790027d45">More...</a><br /></td></tr>
+<tr class="separator:a8bf98d564883ae5927975a1790027d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab34b159241bbb12917f9a4dc4bbef6ff"><td class="memItemLeft" align="right" valign="top">Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shop_g_u_i.html#ab34b159241bbb12917f9a4dc4bbef6ff">checkTick</a> = ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/store_check.png&quot;)</td></tr>
+<tr class="memdesc:ab34b159241bbb12917f9a4dc4bbef6ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image texture of the check for labeling owned items.  <a href="class_shop_g_u_i.html#ab34b159241bbb12917f9a4dc4bbef6ff">More...</a><br /></td></tr>
+<tr class="separator:ab34b159241bbb12917f9a4dc4bbef6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22cf6ed357c8d2aa5fa9f56212f0cf6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e">selected</a> = -1</td></tr>
+<tr class="memdesc:a22cf6ed357c8d2aa5fa9f56212f0cf6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The currently selected item.  <a href="class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e">More...</a><br /></td></tr>
+<tr class="separator:a22cf6ed357c8d2aa5fa9f56212f0cf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49dca7c086e1c7e21895a0517192bdc"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shop_g_u_i.html#ab49dca7c086e1c7e21895a0517192bdc">keys</a></td></tr>
+<tr class="memdesc:ab49dca7c086e1c7e21895a0517192bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keys for labeling items.  <a href="class_shop_g_u_i.html#ab49dca7c086e1c7e21895a0517192bdc">More...</a><br /></td></tr>
+<tr class="separator:ab49dca7c086e1c7e21895a0517192bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The shop from which the player can buy items. </p>
-
-<p class="definition">Definition at line <a class="el" href="_shop_g_u_i_8cs_source.html#l00007">7</a> of file <a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a070d5686e3639f599db4dad0ac5675f1" name="a070d5686e3639f599db4dad0ac5675f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a070d5686e3639f599db4dad0ac5675f1">&#9670;&nbsp;</a></span>_Ready()</h2>
@@ -113,8 +163,19 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_shop_g_u_i_8cs_source.html#l00039">39</a> of file <a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1_cgraph.png" border="0" usemap="#aclass_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1_cgraph" alt=""/></div>
+<map name="aclass_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1_cgraph" id="aclass_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,81,128,108"/>
+<area shape="rect" href="class_shop_g_u_i.html#ac7b20c05193df04c7c0d9387823a11cf" title=" " alt="" coords="196,5,363,32"/>
+<area shape="rect" href="class_shop_g_u_i.html#ab993141e4f22e2df8e1c7239da6f4828" title=" " alt="" coords="188,56,371,83"/>
+<area shape="rect" href="class_shop_g_u_i.html#a16b59adaaf6be46aaf26fd1ae39bf982" title=" " alt="" coords="176,107,383,133"/>
+<area shape="rect" href="class_palette.html#ab973750bb28f3de18132de170c08c092" title="Creates a rectangular shape and fills it with the color with the given id." alt="" coords="194,157,365,184"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="431,5,521,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -132,8 +193,24 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_shop_g_u_i_8cs_source.html#l00134">134</a> of file <a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_cgraph.png" border="0" usemap="#aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_cgraph" alt=""/></div>
+<map name="aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_cgraph" id="aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,172,32"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="220,5,311,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_icgraph.png" border="0" usemap="#aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_icgraph" alt=""/></div>
+<map name="aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_icgraph" id="aclass_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf_icgraph">
+<area shape="rect" title=" " alt="" coords="176,5,343,32"/>
+<area shape="rect" href="class_shop_g_u_i.html#a070d5686e3639f599db4dad0ac5675f1" title=" " alt="" coords="5,5,128,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -151,8 +228,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_shop_g_u_i_8cs_source.html#l00129">129</a> of file <a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828_icgraph.png" border="0" usemap="#aclass_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828_icgraph" alt=""/></div>
+<map name="aclass_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828_icgraph" id="aclass_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828_icgraph">
+<area shape="rect" title=" " alt="" coords="176,5,359,32"/>
+<area shape="rect" href="class_shop_g_u_i.html#a070d5686e3639f599db4dad0ac5675f1" title=" " alt="" coords="5,5,128,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -170,8 +254,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_shop_g_u_i_8cs_source.html#l00109">109</a> of file <a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982_icgraph.png" border="0" usemap="#aclass_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982_icgraph" alt=""/></div>
+<map name="aclass_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982_icgraph" id="aclass_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982_icgraph">
+<area shape="rect" title=" " alt="" coords="176,5,383,32"/>
+<area shape="rect" href="class_shop_g_u_i.html#a070d5686e3639f599db4dad0ac5675f1" title=" " alt="" coords="5,5,128,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -194,13 +285,119 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab34b159241bbb12917f9a4dc4bbef6ff" name="ab34b159241bbb12917f9a4dc4bbef6ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab34b159241bbb12917f9a4dc4bbef6ff">&#9670;&nbsp;</a></span>checkTick</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture ShopGUI.checkTick = ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/store_check.png&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Image texture of the check for labeling owned items. </p>
+
+</div>
+</div>
+<a id="a8bf98d564883ae5927975a1790027d45" name="a8bf98d564883ae5927975a1790027d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf98d564883ae5927975a1790027d45">&#9670;&nbsp;</a></span>itemCost</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UInt32 [] ShopGUI.itemCost</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Array containing the cost of each item. </p>
+
+</div>
+</div>
+<a id="ab49dca7c086e1c7e21895a0517192bdc" name="ab49dca7c086e1c7e21895a0517192bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49dca7c086e1c7e21895a0517192bdc">&#9670;&nbsp;</a></span>keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] ShopGUI.keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;Skin&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Clothing&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Keys&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Keys for labeling items. </p>
+
+</div>
+</div>
+<a id="a22cf6ed357c8d2aa5fa9f56212f0cf6e" name="a22cf6ed357c8d2aa5fa9f56212f0cf6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22cf6ed357c8d2aa5fa9f56212f0cf6e">&#9670;&nbsp;</a></span>selected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ShopGUI.selected = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The currently selected item. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_shop_g_u_i_8cs_source.html">ShopGUI.cs</a></li>
+<li>src/Scenes/<a class="el" href="_shop_g_u_i_8cs.html">ShopGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_shop_g_u_i.html">ShopGUI</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

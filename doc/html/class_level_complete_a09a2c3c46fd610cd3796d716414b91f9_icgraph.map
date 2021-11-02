@@ -1,0 +1,5 @@
+<map id="LevelComplete.ShowMenu" name="LevelComplete.ShowMenu">
+<area shape="rect" id="node1" title="Pauses the game and shows this menu." alt="" coords="417,5,592,32"/>
+<area shape="rect" id="node2" href="$class_level.html#aa0e6bfa6d80ec968a1995f395e016a0b" title=" " alt="" coords="152,5,369,32"/>
+<area shape="rect" id="node3" href="$class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,5,104,32"/>
+</map>

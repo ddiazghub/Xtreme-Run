@@ -1,19 +1,15 @@
 var searchData=
 [
-  ['level_0',['Level',['../class_level.html',1,'']]],
-  ['level_2ecs_1',['Level.cs',['../_level_8cs.html',1,'']]],
-  ['level1_2',['LEVEL1',['../_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090ae987463bf0418539b306409f86997a21',1,'GameScenes.cs']]],
-  ['level2_3',['LEVEL2',['../_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090aa31e8d4009e094c0f20bda3944e71966',1,'GameScenes.cs']]],
-  ['level3_4',['LEVEL3',['../_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090ac28cb8d5acec5dae4fc3905ce468e738',1,'GameScenes.cs']]],
-  ['levelcomplete_5',['LevelComplete',['../class_level_complete.html',1,'']]],
-  ['levelcomplete_2ecs_6',['LevelComplete.cs',['../_level_complete_8cs.html',1,'']]],
-  ['levelisunlocked_7',['LevelIsUnlocked',['../class_profile_info.html#a81e55ae4a4e4b6d23593a365d61c8104',1,'ProfileInfo']]],
-  ['levelpicker_8',['LevelPicker',['../class_level_picker.html',1,'']]],
-  ['levelpicker_2ecs_9',['LevelPicker.cs',['../_level_picker_8cs.html',1,'']]],
-  ['levelprogress_10',['LevelProgress',['../class_profile_info.html#a7ad69ceb4d49fcef5f003480813e3103',1,'ProfileInfo']]],
-  ['levelselect_11',['LevelSelect',['../class_level_select.html',1,'']]],
-  ['levelselect_2ecs_12',['LevelSelect.cs',['../_level_select_8cs.html',1,'']]],
-  ['linearvelocity_13',['linearVelocity',['../class_player.html#adfe24c4a8a6124eef02a636f042917dd',1,'Player']]],
-  ['load_14',['Load',['../class_profile.html#ab295a3d5ae7494b681e0333bb4166516',1,'Profile']]],
-  ['logout_15',['LogOut',['../class_profile.html#a8fa9b755af65c98f5ce709c749579ab5',1,'Profile']]]
+  ['jetpack_0',['Jetpack',['../class_jetpack.html',1,'']]],
+  ['jetpack_1',['JETPACK',['../_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9ac09e5fe838864a6dd40e886135d0dc97',1,'PlayerMainAction.cs']]],
+  ['jetpack_2ecs_2',['Jetpack.cs',['../_jetpack_8cs.html',1,'']]],
+  ['jetpack_5fjumpforce_3',['JETPACK_JUMPFORCE',['../class_jetpack.html#a6bc0838d8be006e5e230a933b0fa7846',1,'Jetpack']]],
+  ['jetpack_5fmax_5ffall_5fspeed_4',['JETPACK_MAX_FALL_SPEED',['../class_jetpack.html#a98845c84a1f1c61c5b761e20548a0045',1,'Jetpack']]],
+  ['jetpack_5fmax_5fjump_5ftime_5',['JETPACK_MAX_JUMP_TIME',['../class_jetpack.html#a1734b5941d022650d31e100707ef6005',1,'Jetpack']]],
+  ['jump_6',['Jump',['../class_jump.html',1,'']]],
+  ['jump_7',['JUMP',['../_player_main_action_8cs.html#adbd1afd3268279088266e6463135cac9a40222410c7347ec4b6bcaba3bcb21f3b',1,'PlayerMainAction.cs']]],
+  ['jump_2ecs_8',['Jump.cs',['../_jump_8cs.html',1,'']]],
+  ['jumpforce_9',['JumpForce',['../class_player.html#acf06cc8b10f69a33e33f0750443e09bc',1,'Player']]],
+  ['jumping_10',['JUMPING',['../class_glide.html#a2e178dffa2e63a3e1864b5780c9180aba6de49bfda8068b7bc3b0c0e3d2e43134',1,'Glide']]],
+  ['jumpobjectcollisioncheck_11',['jumpObjectCollisionCheck',['../class_player.html#a4d70330236aa5cff44570ad6063433f0',1,'Player']]]
 ];

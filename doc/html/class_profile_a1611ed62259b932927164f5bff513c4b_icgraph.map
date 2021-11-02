@@ -1,0 +1,13 @@
+<map id="Profile.Exists" name="Profile.Exists">
+<area shape="rect" id="node1" title="Checks if the profile exists." alt="" coords="683,147,781,174"/>
+<area shape="rect" id="node2" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,71,622,98"/>
+<area shape="rect" id="node7" href="$class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,122,401,149"/>
+<area shape="rect" id="node9" href="$class_profile_info.html#a64d5028a0453e904021a62e9280060b0" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="474,173,613,199"/>
+<area shape="rect" id="node10" href="$class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,223,635,250"/>
+<area shape="rect" id="node3" href="$class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,5,399,47"/>
+<area shape="rect" id="node5" href="$class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,71,404,98"/>
+<area shape="rect" id="node4" href="$class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,5,149,47"/>
+<area shape="rect" id="node6" href="$class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,71,156,98"/>
+<area shape="rect" id="node8" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,165,146,207"/>
+<area shape="rect" id="node11" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,224,396,265"/>
+</map>

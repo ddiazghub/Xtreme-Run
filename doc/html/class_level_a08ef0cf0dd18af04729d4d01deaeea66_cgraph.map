@@ -1,0 +1,5 @@
+<map id="Level.OnHudPausePressed" name="Level.OnHudPausePressed">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="233,5,325,32"/>
+<area shape="rect" id="node3" href="$class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="373,5,532,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PauseMenu.OnRestartPressed" name="PauseMenu.OnRestartPressed">
+<area shape="rect" id="node1" title=" " alt="" coords="192,5,395,32"/>
+<area shape="rect" id="node2" href="$class_pause_menu.html#a4cc5227b00082bc3ea16922842ed6295" title=" " alt="" coords="5,5,144,32"/>
+</map>

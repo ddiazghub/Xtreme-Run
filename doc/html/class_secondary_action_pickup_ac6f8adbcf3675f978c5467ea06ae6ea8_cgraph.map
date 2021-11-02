@@ -1,0 +1,4 @@
+<map id="SecondaryActionPickup._Ready" name="SecondaryActionPickup._Ready">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,171,47"/>
+<area shape="rect" id="node2" href="$class_secondary_action.html#ad95829ffc55ac6b517a5fe37eb282f4d" title="Gets the given action&#39;s type as a string. This is because the player animations corresponding to each..." alt="" coords="219,5,409,47"/>
+</map>

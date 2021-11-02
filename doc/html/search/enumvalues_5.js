@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['on_5fair_0',['ON_AIR',['../_player_persistent_state_8cs.html#ac15b5e32be30dad517e8866c7eb9af83ae3f1ff649ef0732c2ba1f5da8e97581a',1,'PlayerPersistentState.cs']]],
-  ['on_5fground_1',['ON_GROUND',['../_player_persistent_state_8cs.html#ac15b5e32be30dad517e8866c7eb9af83a1f318f91e5ed96e34964105b41b19d1a',1,'PlayerPersistentState.cs']]]
+  ['main_5fmenu_0',['MAIN_MENU',['../_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090aa16d505f03a4b6f35486f65f6a61317e',1,'GameScenes.cs']]]
 ];

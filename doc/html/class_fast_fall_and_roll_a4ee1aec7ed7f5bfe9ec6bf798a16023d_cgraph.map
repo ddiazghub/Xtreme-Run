@@ -1,0 +1,4 @@
+<map id="FastFallAndRoll.OnSecondaryActionTimerTimeout" name="FastFallAndRoll.OnSecondaryActionTimerTimeout">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$class_player.html#a4d955d72d1768541f5ac99f19ffe1381" title="Sets a hitbox on the player depending on the state." alt="" coords="251,13,371,39"/>
+</map>

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;idk</span>
+   <div id="projectname">Xtreme Run<span id="projectnumber">&#160;Version: idk</span>
    </div>
    <div id="projectbrief">PC game developed on Godot with C#.</div>
   </td>
@@ -48,6 +52,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_edit_profile_g_u_i.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -62,32 +83,56 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_edit_profile_g_u_i-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EditProfileGUI Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>GUI that allows the player to edit their profile data and customize their avatar.  
+ <a href="class_edit_profile_g_u_i.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for EditProfileGUI:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_edit_profile_g_u_i.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_edit_profile_g_u_i__inherit__graph.png" border="0" usemap="#a_edit_profile_g_u_i_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_edit_profile_g_u_i_inherit__map" id="a_edit_profile_g_u_i_inherit__map">
+<area shape="rect" title="GUI that allows the player to edit their profile data and customize their avatar." alt="" coords="5,131,213,472"/>
+<area shape="rect" title=" " alt="" coords="55,5,164,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for EditProfileGUI:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i__coll__graph.png" border="0" usemap="#a_edit_profile_g_u_i_coll__map" alt="Collaboration graph"/></div>
+<map name="a_edit_profile_g_u_i_coll__map" id="a_edit_profile_g_u_i_coll__map">
+<area shape="rect" title="GUI that allows the player to edit their profile data and customize their avatar." alt="" coords="223,432,431,656"/>
+<area shape="rect" title=" " alt="" coords="5,226,115,303"/>
+<area shape="rect" title=" " alt="" coords="139,226,205,303"/>
+<area shape="rect" href="class_avatar.html" title="This class represents a customizable player avatar." alt="" coords="402,175,577,355"/>
+<area shape="rect" title=" " alt="" coords="294,5,333,83"/>
+<area shape="rect" title=" " alt="" coords="412,5,567,83"/>
+<area shape="rect" title=" " alt="" coords="601,226,663,303"/>
+<area shape="rect" title=" " alt="" coords="688,226,776,303"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af257feffa6ba5f4681f5d315059f4cd2"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2">ProfileChanged</a> ()</td></tr>
+<tr class="memdesc:af257feffa6ba5f4681f5d315059f4cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted if the user profile's data was modified.  <a href="class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2">More...</a><br /></td></tr>
 <tr class="separator:af257feffa6ba5f4681f5d315059f4cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2708ce86420d102c0f76583100611d32"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32">_Ready</a> ()</td></tr>
 <tr class="separator:a2708ce86420d102c0f76583100611d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1473f46ade313ff644af04f27f49555e"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e">_Process</a> (float delta)</td></tr>
 <tr class="separator:a1473f46ade313ff644af04f27f49555e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54726f386c9921c011c5defc5341c644"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a54726f386c9921c011c5defc5341c644">UnsavedChanges</a> ()</td></tr>
+<tr class="memdesc:a54726f386c9921c011c5defc5341c644"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the player has edited their avatar and the changes haven't been saved.  <a href="class_edit_profile_g_u_i.html#a54726f386c9921c011c5defc5341c644">More...</a><br /></td></tr>
 <tr class="separator:a54726f386c9921c011c5defc5341c644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c57b976943d328fb48bf697c18d386a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a">UpdateAvatar</a> ()</td></tr>
+<tr class="memdesc:a0c57b976943d328fb48bf697c18d386a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the data of the avatar being edited depending on user input. Displays the new avatar.  <a href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a">More...</a><br /></td></tr>
 <tr class="separator:a0c57b976943d328fb48bf697c18d386a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1f1583bb34d1d218900d1904098d98b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b">OnColorPressed</a> ()</td></tr>
 <tr class="separator:aa1f1583bb34d1d218900d1904098d98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,10 +142,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae62a6598f2588467732b64a847b40bde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b00cca39e0201eff072264a55291a35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35">OnSavePressed</a> ()</td></tr>
 <tr class="separator:a4b00cca39e0201eff072264a55291a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab36def60f18be3b0682a8ce7bc77b84d"><td class="memItemLeft" align="right" valign="top">Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d">lockSprite</a> = ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/lock.png&quot;)</td></tr>
+<tr class="memdesc:ab36def60f18be3b0682a8ce7bc77b84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite for labeling items which have not been unlocked yet.  <a href="class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d">More...</a><br /></td></tr>
+<tr class="separator:ab36def60f18be3b0682a8ce7bc77b84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae13ff8ee928424405695287532c2eef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_avatar.html">Avatar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">editedAvatar</a> = Profile.CurrentSession.Info.Avatar.Clone()</td></tr>
+<tr class="memdesc:ae13ff8ee928424405695287532c2eef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of the player's avatar which will be edited.  <a href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">More...</a><br /></td></tr>
+<tr class="separator:ae13ff8ee928424405695287532c2eef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae220751a04eedbf192ff9df579fbbcc6"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ae220751a04eedbf192ff9df579fbbcc6">keys</a></td></tr>
+<tr class="memdesc:ae220751a04eedbf192ff9df579fbbcc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keys for labeling colors.  <a href="class_edit_profile_g_u_i.html#ae220751a04eedbf192ff9df579fbbcc6">More...</a><br /></td></tr>
+<tr class="separator:ae220751a04eedbf192ff9df579fbbcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7784b52bb3c578a7fe5cfa36832b9d53"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#a7784b52bb3c578a7fe5cfa36832b9d53">selected</a></td></tr>
+<tr class="memdesc:a7784b52bb3c578a7fe5cfa36832b9d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ids of the currently selected colors for skin, top, and bottom.  <a href="class_edit_profile_g_u_i.html#a7784b52bb3c578a7fe5cfa36832b9d53">More...</a><br /></td></tr>
+<tr class="separator:a7784b52bb3c578a7fe5cfa36832b9d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f99f4c653484ff65acfc1cd5812bf2"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, TextureRect &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ac7f99f4c653484ff65acfc1cd5812bf2">colorSelectors</a></td></tr>
+<tr class="memdesc:ac7f99f4c653484ff65acfc1cd5812bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Icons for labeling the currently selected colors.  <a href="class_edit_profile_g_u_i.html#ac7f99f4c653484ff65acfc1cd5812bf2">More...</a><br /></td></tr>
+<tr class="separator:ac7f99f4c653484ff65acfc1cd5812bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab865259bc1415523fd4089d94aab1173"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ab865259bc1415523fd4089d94aab1173">DEFAULT_COLOR</a> = 15</td></tr>
+<tr class="memdesc:ab865259bc1415523fd4089d94aab1173"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id of the avatar default colors.  <a href="class_edit_profile_g_u_i.html#ab865259bc1415523fd4089d94aab1173">More...</a><br /></td></tr>
+<tr class="separator:ab865259bc1415523fd4089d94aab1173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00005">5</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="textblock"><p >GUI that allows the player to edit their profile data and customize their avatar. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1473f46ade313ff644af04f27f49555e" name="a1473f46ade313ff644af04f27f49555e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1473f46ade313ff644af04f27f49555e">&#9670;&nbsp;</a></span>_Process()</h2>
@@ -117,8 +182,20 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00081">81</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e_cgraph" id="aclass_edit_profile_g_u_i_a1473f46ade313ff644af04f27f49555e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,168,57"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a54726f386c9921c011c5defc5341c644" title="Checks if the player has edited their avatar and the changes haven&#39;t been saved." alt="" coords="216,5,423,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="227,56,411,83"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="474,31,586,57"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="471,81,589,108"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="687,56,801,83"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="637,107,851,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -136,8 +213,28 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00023">23</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph" id="aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph">
+<area shape="rect" title=" " alt="" coords="5,177,156,204"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="913,54,1026,81"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#ae62a6598f2588467732b64a847b40bde" title=" " alt="" coords="204,76,416,102"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="209,126,411,153"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="464,134,648,161"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="215,228,405,270"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="210,294,410,321"/>
+<area shape="rect" href="class_palette.html#ab973750bb28f3de18132de170c08c092" title="Creates a rectangular shape and fills it with the color with the given id." alt="" coords="225,345,395,372"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="699,84,811,110"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="696,134,815,161"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="863,134,1076,161"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="477,269,635,296"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="511,320,601,346"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="706,244,805,270"/>
+<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="714,294,797,321"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -155,8 +252,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00173">173</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde_icgraph" id="aclass_edit_profile_g_u_i_ae62a6598f2588467732b64a847b40bde_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,416,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -174,8 +278,28 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00148">148</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_cgraph" id="aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,208,57"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="256,31,440,57"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="491,5,603,32"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="488,56,607,83"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="705,31,818,57"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="655,81,868,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_icgraph" id="aclass_edit_profile_g_u_i_aa1f1583bb34d1d218900d1904098d98b_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,407,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -194,8 +318,28 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00167">167</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_cgraph" id="aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_cgraph">
+<area shape="rect" title=" " alt="" coords="5,23,196,65"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="244,31,428,57"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="479,5,591,32"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="476,56,595,83"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="693,31,806,57"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="643,81,856,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_icgraph" id="aclass_edit_profile_g_u_i_abe027814d99058c40f06aa61ecbef381_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,395,47"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,13,156,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -213,8 +357,27 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00178">178</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph" id="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,205,83"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="253,31,411,57"/>
+<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="287,81,377,108"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="459,5,557,32"/>
+<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="467,56,549,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_icgraph" id="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_icgraph">
+<area shape="rect" title=" " alt="" coords="204,5,404,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -233,6 +396,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Emitted if the user profile's data was modified. </p>
+
 </div>
 </div>
 <a id="a54726f386c9921c011c5defc5341c644" name="a54726f386c9921c011c5defc5341c644"></a>
@@ -250,7 +415,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00115">115</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<p>Checks if the player has edited their avatar and the changes haven't been saved. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the changes are unsaved, false otherwise.</dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644_icgraph" id="aclass_edit_profile_g_u_i_a54726f386c9921c011c5defc5341c644_icgraph">
+<area shape="rect" title="Checks if the player has edited their avatar and the changes haven&#39;t been saved." alt="" coords="216,5,423,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e" title=" " alt="" coords="5,5,168,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -269,17 +444,196 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_edit_profile_g_u_i_8cs_source.html#l00136">136</a> of file <a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a>.</p>
+<p>Updates the data of the avatar being edited depending on user input. Displays the new avatar. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_cgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_cgraph" id="aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_cgraph">
+<area shape="rect" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="5,31,189,57"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="241,5,353,32"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="237,56,356,83"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="454,31,567,57"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="404,81,617,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_icgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_icgraph" alt=""/></div>
+<map name="aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_icgraph" id="aclass_edit_profile_g_u_i_a0c57b976943d328fb48bf697c18d386a_icgraph">
+<area shape="rect" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="455,81,639,108"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a1473f46ade313ff644af04f27f49555e" title=" " alt="" coords="224,5,387,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,107,156,133"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="204,107,407,133"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="210,158,401,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac7f99f4c653484ff65acfc1cd5812bf2" name="ac7f99f4c653484ff65acfc1cd5812bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f99f4c653484ff65acfc1cd5812bf2">&#9670;&nbsp;</a></span>colorSelectors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, TextureRect&gt; EditProfileGUI.colorSelectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Icons for labeling the currently selected colors. </p>
+<p >/ </p>
+
+</div>
+</div>
+<a id="ab865259bc1415523fd4089d94aab1173" name="ab865259bc1415523fd4089d94aab1173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab865259bc1415523fd4089d94aab1173">&#9670;&nbsp;</a></span>DEFAULT_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int EditProfileGUI.DEFAULT_COLOR = 15</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The id of the avatar default colors. </p>
+
+</div>
+</div>
+<a id="ae13ff8ee928424405695287532c2eef8" name="ae13ff8ee928424405695287532c2eef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae13ff8ee928424405695287532c2eef8">&#9670;&nbsp;</a></span>editedAvatar</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_avatar.html">Avatar</a> EditProfileGUI.editedAvatar = Profile.CurrentSession.Info.Avatar.Clone()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A copy of the player's avatar which will be edited. </p>
+
+</div>
+</div>
+<a id="ae220751a04eedbf192ff9df579fbbcc6" name="ae220751a04eedbf192ff9df579fbbcc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae220751a04eedbf192ff9df579fbbcc6">&#9670;&nbsp;</a></span>keys</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] EditProfileGUI.keys</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        <span class="stringliteral">&quot;Skin&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Top&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;Bottom&quot;</span></div>
+<div class="line">    }</div>
+</div><!-- fragment -->
+<p>Keys for labeling colors. </p>
+
+</div>
+</div>
+<a id="ab36def60f18be3b0682a8ce7bc77b84d" name="ab36def60f18be3b0682a8ce7bc77b84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36def60f18be3b0682a8ce7bc77b84d">&#9670;&nbsp;</a></span>lockSprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture EditProfileGUI.lockSprite = ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/lock.png&quot;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sprite for labeling items which have not been unlocked yet. </p>
+
+</div>
+</div>
+<a id="a7784b52bb3c578a7fe5cfa36832b9d53" name="a7784b52bb3c578a7fe5cfa36832b9d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7784b52bb3c578a7fe5cfa36832b9d53">&#9670;&nbsp;</a></span>selected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dictionary&lt;string, int&gt; EditProfileGUI.selected</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The ids of the currently selected colors for skin, top, and bottom. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/Scenes/<a class="el" href="_edit_profile_g_u_i_8cs_source.html">EditProfileGUI.cs</a></li>
+<li>src/Scenes/<a class="el" href="_edit_profile_g_u_i_8cs.html">EditProfileGUI.cs</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_edit_profile_g_u_i.html">EditProfileGUI</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
+  </ul>
+</div>
 </body>
 </html>

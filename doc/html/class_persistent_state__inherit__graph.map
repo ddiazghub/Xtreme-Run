@@ -1,0 +1,7 @@
+<map id="PersistentState" name="PersistentState">
+<area shape="rect" id="node1" title="Class that represents a player persistent state. Can be on air or on ground." alt="" coords="105,300,315,436"/>
+<area shape="rect" id="node4" href="$class_on_air_state.html" title="Persisten state when the player is on air." alt="" coords="5,484,199,591"/>
+<area shape="rect" id="node5" href="$class_on_ground_state.html" title="Persistent state when the player is grounded." alt="" coords="223,484,416,591"/>
+<area shape="rect" id="node2" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="112,131,308,252"/>
+<area shape="rect" id="node3" href="$class_node2_d.html" title=" " alt="" coords="176,5,244,83"/>
+</map>
