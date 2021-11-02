@@ -3,31 +3,25 @@ using System;
 
 public class SecondaryActionPickup : Area2D
 {
-    [Export] public string Type;
+    private PlayerSecondaryAction type = PlayerSecondaryAction.FASTFALL_AND_ROLL;
+    
+    [Export]
+    public PlayerSecondaryAction Type
+    {
+        get
+        {
+            return this.type;
+        }
+
+        set
+        {
+            this.GetNode<AnimatedSprite>("Sprite").Play(SecondaryAction.GetTypeAsString(value));
+            this.type = value;
+        }
+    }
 
     public override void _Ready()
     {
-        this.GetNode<AnimatedSprite>("Sprite").Play(this.Type);
-    }
-    
-    public PlayerSecondaryAction GetPickupType()
-    {
-        switch (this.Type)
-        {
-            case "roll":
-                return PlayerSecondaryAction.FASTFALL_AND_ROLL;
-            
-            case "switchGravity":
-                return PlayerSecondaryAction.SWITCH_GRAVITY;
-            
-            case "tpAndSwitchGravity":
-                return PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY;
-
-            case "spawnPlatforms":
-                return PlayerSecondaryAction.SPAWN_PLATFORMS;
-            
-            default:
-                return PlayerSecondaryAction.FASTFALL_AND_ROLL;
-        }
+        this.GetNode<AnimatedSprite>("Sprite").Play(SecondaryAction.GetTypeAsString(this.Type));
     }
 }

@@ -58,64 +58,47 @@ public abstract class SecondaryAction: PlayerState {
         this.player.mainAction.UnBlock();
         this.player.secondaryActionTimer.Stop();
     }
-}
-/*
-public class SecondaryActionState: PlayerState {
 
-
-    public override void _Init()
+    
+    public static string GetTypeAsString(PlayerSecondaryAction action)
     {
-        this.animation.Play("sliding");
-        
-        this.frontCollisionCheck.Connect("body_entered", this, nameof(this.OnFrontCollisionCheckBodyEntered));
-        this.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnJumpObjectCollisionCheckAreaEntered));
-
-        this.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
-
-        this.slideTimer.Connect("timeout", this, nameof(this.OnSlideTimerTimeout));
-        this.slideTimer.Start();
-    }
-
-    public override void _StatePhysicsProcess(float delta)
-    {
-        if (this.right)
-            this.player.linearVelocity.x = this.movementSpeed;
-        else
-            this.player.linearVelocity.x = -this.movementSpeed;
-    }
-
-    public void OnFrontCollisionCheckBodyEntered(Node body)
-    {
-        if (body.IsInGroup("solid") || body.IsInGroup("hazard"))
+        switch (action)
         {
-            this.player.EmitSignal("Dead");
+            case PlayerSecondaryAction.FASTFALL_AND_ROLL:
+                return "roll";
+            
+            case PlayerSecondaryAction.SWITCH_GRAVITY:
+                return "switchGravity";
+            
+            case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:
+                return "tpAndSwitchGravity";
+
+            case PlayerSecondaryAction.SPAWN_PLATFORMS:
+                return "spawnPlatforms";
+            
+            default:
+                return "roll";
         }
     }
 
-    public void OnJumpObjectCollisionCheckAreaEntered(Area2D area)
+    public static string GetTypeAsStringEsp(PlayerSecondaryAction action)
     {
-        if (area.IsInGroup("jump"))
+        switch (action)
         {
-            this._onJumpObject = true;
+            case PlayerSecondaryAction.FASTFALL_AND_ROLL:
+                return "Caer/Esquivar";
+            
+            case PlayerSecondaryAction.SWITCH_GRAVITY:
+                return "Cambiar Gravedad";
+            
+            case PlayerSecondaryAction.TELEPORT_AND_SWITCH_GRAVITY:
+                return "TP/Cambiar Gravedad";
+
+            case PlayerSecondaryAction.SPAWN_PLATFORMS:
+                return "Crear Plataformas";
+            
+            default:
+                return "Caer/Esquivar";
         }
-
-        if (area.IsInGroup("jump_auto"))
-        {
-            this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);
-        }
-    }
-
-    public void OnSlideTimerTimeout()
-    {
-        if (this.player.IsOnFloor())
-            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
-        else
-            this.player.ChangePersistentState(PlayerPersistentState.ON_AIR);
-    }
-
-    public override string GetState()
-    {
-        return "Sliding";
     }
 }
-*/

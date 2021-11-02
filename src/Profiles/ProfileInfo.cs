@@ -39,13 +39,11 @@ public class ProfileInfo {
     {
         get
         {
-            for (int i = 0; i < 2; i++)
-            {
-                if (this.LevelProgress[i] != 100)
-                {
-                    return i;
-                }
-            }
+            if (this.LevelProgress[0] != 100 || this.LevelProgress[0] == 100 && !this.OwnedItems[15])
+                return 0;
+            
+            if (this.LevelProgress[1] != 100 || !this.OwnedItems[16] && this.LevelProgress[1] == 100)
+                return 1;
 
             return 2;
         }

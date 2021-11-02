@@ -41,7 +41,9 @@ height = 50.1984
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 18.5506, 17.8082 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true

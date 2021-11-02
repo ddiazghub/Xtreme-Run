@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://res/Sprites/level1/BG.png" type="Texture" id=1]
+[ext_resource path="res://res/Sprites/level2/steampunk_tileset/steamworld.png" type="Texture" id=2]
+[ext_resource path="res://src/Maps/Level.cs" type="Script" id=3]
+[ext_resource path="res://res/Sprites/level3/city_tileset/city_tileset/city_bg.png" type="Texture" id=4]
+[ext_resource path="res://src/Scenes/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Scenes/GameHUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Scenes/LevelComplete.tscn" type="PackedScene" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 88, 104 )
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+
+[node name="Background" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "0"
+
+[node name="Start" type="Position2D" parent="."]
+position = Vector2( 72, 584 )
+
+[node name="End" type="Area2D" parent="."]
+position = Vector2( 38816, 376 )
+
+[node name="Shape" type="CollisionShape2D" parent="End"]
+position = Vector2( 416, -272 )
+shape = SubResource( 2 )
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Front" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="PauseMenu" parent="Front" instance=ExtResource( 7 )]
+visible = false
+margin_left = -1280.0
+margin_top = -720.0
+margin_right = -720.0
+margin_bottom = -248.0
+
+[node name="LevelComplete" parent="Front" instance=ExtResource( 9 )]
+
+[node name="GameHUD" parent="." instance=ExtResource( 8 )]

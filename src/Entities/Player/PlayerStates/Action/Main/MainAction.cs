@@ -107,4 +107,46 @@ public abstract class MainAction: PlayerState {
             this.onActionPad = false;
         }
     }
+
+    public static string GetTypeAsString(PlayerMainAction action)
+    {
+        switch (action)
+        {
+            case PlayerMainAction.JUMP:
+                return "jump";
+            
+            case PlayerMainAction.JETPACK:
+                return "jetpack";
+            
+            case PlayerMainAction.GLIDE:
+                return "glide";
+
+            case PlayerMainAction.TELEPORT:
+                return "teleport";
+            
+            default:
+                return "jump";
+        }
+    }
+
+    public static string GetTypeAsStringEsp(PlayerMainAction action)
+    {
+        switch (action)
+        {
+            case PlayerMainAction.JUMP:
+                return "Salto";
+            
+            case PlayerMainAction.JETPACK:
+                return "Jetpack";
+            
+            case PlayerMainAction.GLIDE:
+                return "Planear";
+
+            case PlayerMainAction.TELEPORT:
+                return "Teleportación";
+            
+            default:
+                return "Salto";
+        }
+    }
 }

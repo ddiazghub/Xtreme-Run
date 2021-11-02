@@ -28,6 +28,8 @@ public class Player : KinematicBody2D
     public readonly int DEFAULT_GRAVITY = 210;
     public readonly int DEFAULT_MOVEMENT_SPEED = 700;
     public readonly float DEFAULT_MAX_JUMP_TIME = 0.04f;
+    public PlayerMainAction mainActionType;
+    public PlayerSecondaryAction secondaryActionType;
 
     [Signal]
     public delegate void Dead();
@@ -97,6 +99,7 @@ public class Player : KinematicBody2D
             this.mainAction.QueueFree();
         }
 
+        this.mainActionType = action;
         this.mainAction = this.stateFactory.New(action);
         this.AddChild(this.mainAction);
         this.mainAction.Setup();
@@ -109,6 +112,7 @@ public class Player : KinematicBody2D
             this.secondaryAction.QueueFree();
         }
 
+        this.secondaryActionType = action;
         this.secondaryAction = this.stateFactory.New(action);
         this.AddChild(this.secondaryAction);
         this.secondaryAction.Setup();

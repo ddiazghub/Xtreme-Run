@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public class Level1 : Node2D
+public class Level : Node2D
 {
     [Export]
     PackedScene Player;
@@ -12,29 +12,34 @@ public class Level1 : Node2D
     float pointsMultiplier = 1f;
     private Player player;
     private Camera2D camera;
-    private Sprite background;
+    private AnimatedSprite background;
     private PauseMenu pauseMenu;
+    private LevelComplete levelCompleteMenu;
     private GameHUD hud;
     private Position2D startPosition;
     private Area2D endPosition;
     public List<Vector2> positions = new List<Vector2>();
     private int attemptCount = 0;
-    private int earnedPoints = 0;
+    private double progress = 0;
 
     public override void _Ready()
     {
         this.camera = this.GetNode<Camera2D>("Camera");
-        this.background = this.GetNode<Sprite>("Background");
+        this.background = this.GetNode<AnimatedSprite>("Background");
         this.pauseMenu = this.GetNode<PauseMenu>("Front/PauseMenu");
         this.hud = this.GetNode<GameHUD>("GameHUD");
         this.startPosition = this.GetNode<Position2D>("Start");
         this.endPosition = this.GetNode<Area2D>("End");
+        this.levelCompleteMenu = this.GetNode<LevelComplete>("Front/LevelComplete");
 
         this.hud.Connect("PausePressed", this, nameof(this.OnHudPausePressed));
         this.hud.Connect("PauseMouseEntered", this, nameof(this.OnHudPauseMouseEntered));
         this.hud.Connect("PauseMouseExited", this, nameof(this.OnHudPauseMouseExited));
         this.pauseMenu.Connect("RestartPressed", this, nameof(this.OnPauseMenuRestartPressed));
+        this.levelCompleteMenu.Connect("RestartPressed", this, nameof(this.OnPauseMenuRestartPressed));
+        this.endPosition.Connect("body_entered", this, nameof(this.OnEndPositionBodyEntered));
 
+        this.background.Play(this.LevelNumber.ToString());
         this.Restart();
     }
 
@@ -42,12 +47,16 @@ public class Level1 : Node2D
     {
         this.Update();
         this.MoveViewPort();
-        this.GetProgressAndPoints();
+        this.UpdateProgress();
 
         if (Input.IsActionPressed("ui_cancel"))
         {
             this.Pause();
         }
+
+        this.hud.SetActions(this.player.mainActionType, this.player.secondaryActionType);
+        this.hud.SetProgress(this.progress);
+        this.hud.SetPoints(this.GetPoints());
     }
 
     public override void _Draw()
@@ -60,6 +69,8 @@ public class Level1 : Node2D
 
     public void Restart()
     {
+        this.SaveData();
+
         if (this.player != null)
         {
             this.player.QueueFree();
@@ -78,14 +89,19 @@ public class Level1 : Node2D
         this.player.Connect("Dead", this, nameof(this.OnPlayerDead));
     }
 
-    public void GetProgressAndPoints()
+    public void UpdateProgress()
     {
         float distance = this.endPosition.Position.x - this.startPosition.Position.x;
         float currentDistance = this.player.Position.x - this.startPosition.Position.x;
-        float progress = (currentDistance / distance) * 100;
-        int points = Mathf.Clamp((int) ((progress - Profile.CurrentSession.Info.LevelProgress[this.LevelNumber]) * this.pointsMultiplier) * 100, 0, Int32.MaxValue);
-        this.hud.SetPoints(points);
-        this.hud.SetProgress((double) progress);
+        this.progress = (currentDistance / distance) * 100;
+
+        if (this.progress > 100)
+            this.progress = 100;
+    }
+
+    public int GetPoints()
+    {
+        return Mathf.Clamp((int) (this.progress - Profile.CurrentSession.Info.LevelProgress[this.LevelNumber]), 0, 100) * (int) (100 * this.pointsMultiplier);
     }
     public void MoveViewPort()
     {
@@ -107,8 +123,17 @@ public class Level1 : Node2D
 
     public void Pause()
     {
-        this.pauseMenu.Show();
-        this.GetTree().Paused = true;
+        this.pauseMenu.ShowMenu();
+    }
+
+    public void SaveData()
+    {
+        if (this.progress > Profile.CurrentSession.Info.LevelProgress[this.LevelNumber])
+        {
+            Profile.CurrentSession.Info.Points += (UInt32) this.GetPoints();
+            Profile.CurrentSession.Info.LevelProgress[this.LevelNumber] = (int) this.progress;
+            Profile.CurrentSession.Save();
+        }
     }
 
     public void OnPlayerDead()
@@ -134,5 +159,13 @@ public class Level1 : Node2D
     public void OnPauseMenuRestartPressed()
     {
         this.Restart();
+    }
+
+    public void OnEndPositionBodyEntered(Node body)
+    {
+        if (body.IsInGroup("player"))
+        {
+            this.levelCompleteMenu.ShowMenu();
+        }
     }
 }

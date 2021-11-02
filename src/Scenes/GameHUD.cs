@@ -34,6 +34,21 @@ public class GameHUD : CanvasLayer
         this.GetNode<AttemptsCounter>("AttemptsCounter").Set(number);
     }
 
+    public void SetActions(PlayerMainAction main, PlayerSecondaryAction secondary)
+    {
+        if (main != this.GetNode<MainActionPickup>("MainAction").Type)
+        {
+        this.GetNode<MainActionPickup>("MainAction").Type = main;
+        this.GetNode<Label>("MainAction/MainLabel").Text = MainAction.GetTypeAsStringEsp(main);
+        }
+        
+        if (secondary != this.GetNode<SecondaryActionPickup>("SecondaryAction").Type)
+        {
+            this.GetNode<SecondaryActionPickup>("SecondaryAction").Type = secondary;
+            this.GetNode<Label>("SecondaryAction/SecondaryLabel").Text = SecondaryAction.GetTypeAsStringEsp(secondary);
+        }
+    }
+
     public void OnPausePressed()
     {
         this.EmitSignal("PausePressed");

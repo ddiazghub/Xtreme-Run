@@ -4,7 +4,7 @@ using System;
 public class Main : Node2D
 {
     public static readonly Vector2 WINDOW_SIZE = new Vector2(1280, 720);
-    private Node2D currentScene;
+    public Node2D currentScene;
     private SceneFactory sceneFactory;
 
     public override void _Ready()

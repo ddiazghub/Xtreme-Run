@@ -14,6 +14,8 @@ public class LevelPicker : SpinBox
         currentValue = this.Value;
 
         this.Connect("value_changed", this, nameof(this.OnValueChanged));
+
+        this.OnValueChanged(this.Value);
     }
 
     public void OnValueChanged(double value)
