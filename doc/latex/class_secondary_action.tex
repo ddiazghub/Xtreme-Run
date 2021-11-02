@@ -1,0 +1,229 @@
+\hypertarget{class_secondary_action}{}\doxysection{Secondary\+Action Class Reference}
+\label{class_secondary_action}\index{SecondaryAction@{SecondaryAction}}
+
+
+Class that represents an action the player can perform as secondary action.  
+
+
+Inheritance diagram for Secondary\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.353293cm]{class_secondary_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}{\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}{\+\_\+\+State\+Physics\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The physics process that will be called each frame for the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}{\+\_\+\+Action\+On\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on ground. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}{\+\_\+\+Action\+On\+Air}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on air. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}{\+\_\+\+Action\+Released}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed once the player stops pressing the action\textquotesingle{}s input keyboard/mouse buttons. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_secondary_action_ab1436a4c4523473d3199412de76ec830}{On\+Secondary\+Action\+Timer\+Timeout}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}{Get\+Type\+As\+String}} (\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Gets the given action\textquotesingle{}s type as a string. This is because the player animations corresponding to each action has these names. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83}{Get\+Type\+As\+String\+Esp}} (\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Gets the given action\textquotesingle{}s type as a string in spanish. This is for displaying on the GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{Blocked}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents an action the player can perform as secondary action. 
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}\label{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}} 
+\index{SecondaryAction@{SecondaryAction}!\_ActionOnAir@{\_ActionOnAir}}
+\index{\_ActionOnAir@{\_ActionOnAir}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnAir()}{\_ActionOnAir()}}
+{\footnotesize\ttfamily abstract void Secondary\+Action.\+\_\+\+Action\+On\+Air (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on air. 
+
+
+
+Implemented in \mbox{\hyperlink{class_fast_fall_and_roll_a63c245a9215306232f86d96c50b9fb20}{Fast\+Fall\+And\+Roll}}, \mbox{\hyperlink{class_spawn_platforms_ae11d1949e82b9a316f530ac977d432b8}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_a79517966cb67a2f3282bdcaf1fbaaf76}{Switch\+Gravity}}, and \mbox{\hyperlink{class_teleport_and_switch_gravity_ad74396e09855f299b756fd9a11ea95b9}{Teleport\+And\+Switch\+Gravity}}.
+
+\mbox{\Hypertarget{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}\label{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}} 
+\index{SecondaryAction@{SecondaryAction}!\_ActionOnGround@{\_ActionOnGround}}
+\index{\_ActionOnGround@{\_ActionOnGround}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnGround()}{\_ActionOnGround()}}
+{\footnotesize\ttfamily virtual void Secondary\+Action.\+\_\+\+Action\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on ground. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_fast_fall_and_roll_a677376011ccf63f6cf5408f52275d48a}{Fast\+Fall\+And\+Roll}}, \mbox{\hyperlink{class_spawn_platforms_a2a9b1a8f7dc1af458b60059ba08bc847}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_a3266c22e1cce5dfc640584b53dcd31d8}{Switch\+Gravity}}, and \mbox{\hyperlink{class_teleport_and_switch_gravity_aa307d371dea032532bf619e102972791}{Teleport\+And\+Switch\+Gravity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}\label{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}} 
+\index{SecondaryAction@{SecondaryAction}!\_ActionReleased@{\_ActionReleased}}
+\index{\_ActionReleased@{\_ActionReleased}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionReleased()}{\_ActionReleased()}}
+{\footnotesize\ttfamily virtual void Secondary\+Action.\+\_\+\+Action\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The action that will be executed once the player stops pressing the action\textquotesingle{}s input keyboard/mouse buttons. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spawn_platforms_a3eeaa79c708598234334fda9cb7f156e}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_a21fcb39af6df6d3786a2843d1e7cfcbb}{Switch\+Gravity}}, and \mbox{\hyperlink{class_teleport_and_switch_gravity_ab8ef1a89a937fb3a90c88b65d4c028bb}{Teleport\+And\+Switch\+Gravity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}\label{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}} 
+\index{SecondaryAction@{SecondaryAction}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily override void Secondary\+Action.\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Implements \mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{Player\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spawn_platforms_a223516f8a535749e901f616dd804bb4f}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_ae2eeee76ac6fd739b6181e1d80bcf54b}{Switch\+Gravity}}, and \mbox{\hyperlink{class_teleport_and_switch_gravity_a5a48df9387198b5ea63957f884a513f8}{Teleport\+And\+Switch\+Gravity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}\label{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}} 
+\index{SecondaryAction@{SecondaryAction}!\_StatePhysicsProcess@{\_StatePhysicsProcess}}
+\index{\_StatePhysicsProcess@{\_StatePhysicsProcess}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{\_StatePhysicsProcess()}{\_StatePhysicsProcess()}}
+{\footnotesize\ttfamily override void Secondary\+Action.\+\_\+\+State\+Physics\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The physics process that will be called each frame for the state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since the last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{Player\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_switch_gravity_a2d96d7d7d7c08aed0d22908002299ddc}{Switch\+Gravity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}\label{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}} 
+\index{SecondaryAction@{SecondaryAction}!GetTypeAsString@{GetTypeAsString}}
+\index{GetTypeAsString@{GetTypeAsString}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{GetTypeAsString()}{GetTypeAsString()}}
+{\footnotesize\ttfamily static string Secondary\+Action.\+Get\+Type\+As\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the given action\textquotesingle{}s type as a string. This is because the player animations corresponding to each action has these names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The enum value of the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string depending on the action type.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83}\label{class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83}} 
+\index{SecondaryAction@{SecondaryAction}!GetTypeAsStringEsp@{GetTypeAsStringEsp}}
+\index{GetTypeAsStringEsp@{GetTypeAsStringEsp}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{GetTypeAsStringEsp()}{GetTypeAsStringEsp()}}
+{\footnotesize\ttfamily static string Secondary\+Action.\+Get\+Type\+As\+String\+Esp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{Player\+Secondary\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the given action\textquotesingle{}s type as a string in spanish. This is for displaying on the GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The enum value of the action\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string in spanish depending on the action type.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00094}{94}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_secondary_action_ab1436a4c4523473d3199412de76ec830}\label{class_secondary_action_ab1436a4c4523473d3199412de76ec830}} 
+\index{SecondaryAction@{SecondaryAction}!OnSecondaryActionTimerTimeout@{OnSecondaryActionTimerTimeout}}
+\index{OnSecondaryActionTimerTimeout@{OnSecondaryActionTimerTimeout}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{OnSecondaryActionTimerTimeout()}{OnSecondaryActionTimerTimeout()}}
+{\footnotesize\ttfamily virtual void Secondary\+Action.\+On\+Secondary\+Action\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_fast_fall_and_roll_a4ee1aec7ed7f5bfe9ec6bf798a16023d}{Fast\+Fall\+And\+Roll}}, \mbox{\hyperlink{class_spawn_platforms_a6c1b2b02211d0597d497209ae78ddca0}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_a92a60def3fa4553e04f9511c3e892be6}{Switch\+Gravity}}, and \mbox{\hyperlink{class_teleport_and_switch_gravity_afb088693fcb444dc8a536a1f37988a53}{Teleport\+And\+Switch\+Gravity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00115}{115}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}\label{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}} 
+\index{SecondaryAction@{SecondaryAction}!Blocked@{Blocked}}
+\index{Blocked@{Blocked}!SecondaryAction@{SecondaryAction}}
+\doxysubsubsection{\texorpdfstring{Blocked}{Blocked}}
+{\footnotesize\ttfamily bool Secondary\+Action.\+Blocked = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. 
+
+
+
+Definition at line \mbox{\hyperlink{_secondary_action_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_secondary_action_8cs_source}{Secondary\+Action.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entities/\+Player/\+Player\+States/\+Action/\+Secondary/\mbox{\hyperlink{_secondary_action_8cs}{Secondary\+Action.\+cs}}\end{DoxyCompactItemize}

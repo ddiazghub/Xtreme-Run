@@ -1,8 +1,14 @@
 using Godot;
 using System;
 
-public class PauseMenu : NinePatchRect
-{
+/// <summary>
+///     Menu that will be shown on pause.
+/// </summary>
+public class PauseMenu : NinePatchRect {
+
+    /// <summary>
+    ///     Signal that will be emitted when the restart button is pressed.
+    /// </summary>
     [Signal]
     public delegate void RestartPressed();
 
@@ -18,6 +24,9 @@ public class PauseMenu : NinePatchRect
         this.GetNode("Quit").Connect("pressed", this, nameof(this.OnQuitPressed));
     }
 
+    /// <summary>
+    ///     Pauses the game and shows this menu.
+    /// </summary>
     public void ShowMenu()
     {
         this.Show();
@@ -45,7 +54,7 @@ public class PauseMenu : NinePatchRect
     public void OnQuitPressed()
     {
         this.GetTree().Paused = false;
-        ((Level) this.GetTree().Root.GetNode<Main>("Main").currentScene).SaveData();
+        ((Level) this.GetTree().Root.GetNode<Main>("Main").Scene).SaveData();
         this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.MAIN_MENU);
     }
 }

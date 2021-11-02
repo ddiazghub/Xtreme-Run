@@ -1,8 +1,14 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Scene that displays a menu where profiles can be created, loaded and deleted.
+/// </summary>
 public class ProfileSelect : Node2D
 {
+    /// <summary>
+    ///     Popups that confirms if the player wants to quit the game.
+    /// </summary>
     private ExitGamePopup exitPopup;
 
     public override void _Ready()

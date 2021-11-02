@@ -1,0 +1,24 @@
+\hypertarget{_exit_game_popup_8cs_source}{}\doxysection{Exit\+Game\+Popup.\+cs}
+\label{_exit_game_popup_8cs_source}\index{src/Scenes/ExitGamePopup.cs@{src/Scenes/ExitGamePopup.cs}}
+\mbox{\hyperlink{_exit_game_popup_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00007}\mbox{\hyperlink{class_exit_game_popup}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_exit_game_popup}{ExitGamePopup}} : ConfirmationDialog}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00009}\mbox{\hyperlink{class_exit_game_popup_a18cc2ab5c871235f3049d1f8f036606d}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_exit_game_popup_a18cc2ab5c871235f3049d1f8f036606d}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00011}00011         this.GetOk().Text = \textcolor{stringliteral}{"{}Confirmar"{}};}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00012}00012         this.GetCancel().Text = \textcolor{stringliteral}{"{}Cancelar"{}};}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00014}00014         this.Connect(\textcolor{stringliteral}{"{}confirmed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_exit_game_popup_ae3860bc0823259a74c9a13bcecea801a}{OnExitGamePopupConfirmed}}));}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00015}00015     \}}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00017}\mbox{\hyperlink{class_exit_game_popup_ae3860bc0823259a74c9a13bcecea801a}{00017}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_exit_game_popup_ae3860bc0823259a74c9a13bcecea801a}{OnExitGamePopupConfirmed}}()}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00019}00019         this.GetTree().Quit(0);}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{_exit_game_popup_8cs_source_l00021}00021 \}}
+
+\end{DoxyCode}

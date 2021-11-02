@@ -1,0 +1,158 @@
+\hypertarget{_shop_g_u_i_8cs_source}{}\doxysection{Shop\+GUI.\+cs}
+\label{_shop_g_u_i_8cs_source}\index{src/Scenes/ShopGUI.cs@{src/Scenes/ShopGUI.cs}}
+\mbox{\hyperlink{_shop_g_u_i_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00007}\mbox{\hyperlink{class_shop_g_u_i}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_shop_g_u_i}{ShopGUI}} : NinePatchRect}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00012}00012     [Signal]}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00013}\mbox{\hyperlink{class_shop_g_u_i_a3afd1cedc36ef4900dcd83db77fc50d9}{00013}}     \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shop_g_u_i_a3afd1cedc36ef4900dcd83db77fc50d9}{ProfileChanged}}();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00018}00018     \textcolor{keyword}{private} UInt32[] itemCost;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00023}00023     \textcolor{keyword}{private} Texture checkTick = ResourceLoader.Load<Texture>(\textcolor{stringliteral}{"{}res://res/Sprites/player/level\_keys/store\_check.png"{}});}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00024}00024     }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00028}00028     \textcolor{keyword}{private} \textcolor{keywordtype}{int} selected = -\/1;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00033}00033     \textcolor{keyword}{private} \textcolor{keywordtype}{string}[] keys = \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00034}00034         \textcolor{stringliteral}{"{}Skin"{}},}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00035}00035         \textcolor{stringliteral}{"{}Clothing"{}},}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00036}00036         \textcolor{stringliteral}{"{}Keys"{}}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00037}00037     \};}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00039}\mbox{\hyperlink{class_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1}{00039}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shop_g_u_i_a070d5686e3639f599db4dad0ac5675f1}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00041}00041         this.RectGlobalPosition = (\mbox{\hyperlink{class_main}{Main}}.\mbox{\hyperlink{class_main_aa2f640712c026469e26fc7954f11be5d}{WINDOW\_SIZE}} / 2) -\/ (this.RectSize / 2);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00042}00042         this.itemCost = \textcolor{keyword}{new} UInt32[SaveFileInfo.OWNED\_ITEMS\_BUFFER\_LENGTH];}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00044}00044         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < this.itemCost.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00045}00045         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00046}00046             \textcolor{keywordflow}{if} (i < 15)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00047}00047                 this.itemCost[i] = 700;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00048}00048             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i == 15)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00049}00049                 this.itemCost[i] = 5000;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00050}00050             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i == 16)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00051}00051                 this.itemCost[i] = 7500;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00052}00052         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00054}00054         this.GetNode<TextureRect>(\textcolor{stringliteral}{"{}StoreSelect"{}}).Hide();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00056}00056         this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Cancel"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828}{OnCancelPressed}}));}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00058}00058         \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} key \textcolor{keywordflow}{in} this.keys)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00059}00059         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00060}00060             \textcolor{keywordtype}{int} end = 0;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00061}00061             \textcolor{keywordtype}{int} start = 0;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00063}00063             \textcolor{keywordflow}{if} (key.Equals(\textcolor{stringliteral}{"{}Skin"{}}))}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00064}00064                 end = 5;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00066}00066             \textcolor{keywordflow}{if} (key.Equals(\textcolor{stringliteral}{"{}Clothing"{}}))}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00067}00067             \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00068}00068                 start = 5;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00069}00069                 end = 15;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00070}00070             \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00072}00072             \textcolor{keywordflow}{if} (key.Equals(\textcolor{stringliteral}{"{}Keys"{}}))}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00073}00073             \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00074}00074                 start = 15;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00075}00075                 end = 17;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00076}00076             \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00078}00078             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = start; i < end; i++)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00079}00079             \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00080}00080                 TextureButton button;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00082}00082                 \textcolor{keywordflow}{if} (key.Equals(\textcolor{stringliteral}{"{}Keys"{}}))}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00083}00083                 \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00084}00084                     button = this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Keys/Buttons/"{}} + i);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00085}00085                 \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00086}00086                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00087}00087                 \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00088}00088                     button = \textcolor{keyword}{new} TextureButton();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00089}00089                     button.Name = i.ToString();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00090}00090                     button.TextureNormal = \mbox{\hyperlink{class_palette}{Palette}}.\mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{Instance}}.\mbox{\hyperlink{class_palette_ab973750bb28f3de18132de170c08c092}{TextureFromColor}}(i, \textcolor{keyword}{new} Vector2(64, 64));}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00092}00092                     this.GetNode(key + \textcolor{stringliteral}{"{}/Buttons"{}}).AddChild(button);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00093}00093                 \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00095}00095                 button.Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982}{OnItemButtonPressed}}));}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00097}00097                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a23b8a612ac7dd13b9da286326d06c63c}{OwnedItems}}[i])}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00098}00098                 \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00099}00099                     TextureRect textureRect = \textcolor{keyword}{new} TextureRect();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00100}00100                     textureRect.Texture = this.checkTick;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00101}00101                     button.AddChild(textureRect);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00102}00102                 \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00103}00103             \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00104}00104         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00106}00106         this.GetNode(\textcolor{stringliteral}{"{}Buy"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf}{OnBuyPressed}}));}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00107}00107     \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00109}\mbox{\hyperlink{class_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982}{00109}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shop_g_u_i_a16b59adaaf6be46aaf26fd1ae39bf982}{OnItemButtonPressed}}()}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00110}00110     \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00111}00111         \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} key \textcolor{keywordflow}{in} this.keys)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00112}00112         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00113}00113             \textcolor{keywordtype}{int} buttonCount = this.GetNode(key + \textcolor{stringliteral}{"{}/Buttons"{}}).GetChildCount();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00114}00114             Godot.Collections.Array<TextureButton> children = \textcolor{keyword}{new} Godot.Collections.Array<TextureButton>(this.GetNode(key + \textcolor{stringliteral}{"{}/Buttons"{}}).GetChildren());}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00115}00115             }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00116}00116             \textcolor{keywordflow}{foreach} (TextureButton button \textcolor{keywordflow}{in} children)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00117}00117             \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00118}00118                 \textcolor{keywordflow}{if} (button.GetChildCount() == 0 \&\& button.Pressed)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00119}00119                 \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00120}00120                     this.selected = button.Name.ToInt();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00121}00121                     this.GetNode<TextureRect>(\textcolor{stringliteral}{"{}StoreSelect"{}}).RectGlobalPosition = button.RectGlobalPosition -\/ \textcolor{keyword}{new} Vector2(5, 5);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00122}00122                     this.GetNode<PointsCounter>(\textcolor{stringliteral}{"{}PointsCounter"{}}).Set(this.itemCost[this.selected]);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00123}00123                     this.GetNode<TextureRect>(\textcolor{stringliteral}{"{}StoreSelect"{}}).Show();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00124}00124                 \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00125}00125             \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00126}00126         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00127}00127     \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00129}\mbox{\hyperlink{class_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828}{00129}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shop_g_u_i_ab993141e4f22e2df8e1c7239da6f4828}{OnCancelPressed}}()}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00130}00130     \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00131}00131         this.QueueFree();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00134}\mbox{\hyperlink{class_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf}{00134}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shop_g_u_i_ac7b20c05193df04c7c0d9387823a11cf}{OnBuyPressed}}()}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00135}00135     \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00136}00136         \textcolor{keywordflow}{if} (this.selected == -\/1)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00137}00137         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00138}00138             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00139}00139         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00141}00141         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}{Points}} >= \textcolor{keyword}{this}.itemCost[\textcolor{keyword}{this}.selected])}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00142}00142         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00143}00143             \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}{Points}} = \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}{Points}} -\/ (UInt32) this.itemCost[this.selected];}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00144}00144             \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a23b8a612ac7dd13b9da286326d06c63c}{OwnedItems}}[this.selected] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00145}00145             \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}{Save}}();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00147}00147             TextureRect textureRect = \textcolor{keyword}{new} TextureRect();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00148}00148             TextureButton button;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00149}00149             textureRect.Texture = this.checkTick;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00151}00151             \textcolor{keywordflow}{if} (this.selected < 5)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00152}00152                 button = this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Skin/Buttons/"{}} + this.selected);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00153}00153             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (this.selected < 15)}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00154}00154                 button = this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Clothing/Buttons/"{}} + this.selected);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00155}00155             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00156}00156                 button = this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Keys/Buttons/"{}} + this.selected);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00158}00158             button.AddChild(textureRect);}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00159}00159             this.selected = -\/1;}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00160}00160             this.GetNode<TextureRect>(\textcolor{stringliteral}{"{}StoreSelect"{}}).Hide();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00161}00161             this.GetNode<AcceptDialog>(\textcolor{stringliteral}{"{}AcceptDialog2"{}}).PopupCentered();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00162}00162         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00163}00163         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00164}00164         \{}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00165}00165             this.GetNode<AcceptDialog>(\textcolor{stringliteral}{"{}AcceptDialog"{}}).PopupCentered();}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00166}00166         \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00168}00168         this.EmitSignal(\textcolor{stringliteral}{"{}ProfileChanged"{}});}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00169}00169     \}}
+\DoxyCodeLine{\Hypertarget{_shop_g_u_i_8cs_source_l00170}00170 \}}
+
+\end{DoxyCode}

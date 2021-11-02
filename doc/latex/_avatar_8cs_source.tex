@@ -1,0 +1,107 @@
+\hypertarget{_avatar_8cs_source}{}\doxysection{Avatar.\+cs}
+\label{_avatar_8cs_source}\index{src/Profiles/Avatar.cs@{src/Profiles/Avatar.cs}}
+\mbox{\hyperlink{_avatar_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00002}00002 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00008}\mbox{\hyperlink{class_avatar}{00008}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_avatar}{Avatar}} \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00013}\mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{00013}}     \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00018}\mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{00018}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{SkinColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00023}\mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{00023}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{TopColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00028}\mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{00028}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{BottomColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00033}\mbox{\hyperlink{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}{00033}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly Texture \mbox{\hyperlink{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}{EMPTY\_SAVE\_AVATAR}} = ResourceLoader.Load<Texture>(\textcolor{stringliteral}{"{}res://res/Sprites/player/shadow.png"{}});}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00042}\mbox{\hyperlink{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}{00042}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}{Avatar}}(\textcolor{keywordtype}{bool} male, \textcolor{keywordtype}{int} skinColor, \textcolor{keywordtype}{int} topColor, \textcolor{keywordtype}{int} bottomColor)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00044}00044         this.\mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}} = male;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00045}00045         this.SkinColor = skinColor;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00046}00046         this.TopColor = topColor;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00047}00047         this.BottomColor = bottomColor;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00055}\mbox{\hyperlink{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}{00055}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}{GetColor}}(\textcolor{keywordtype}{string} key)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00057}00057         \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00058}00058         \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00059}00059             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Skin"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00060}00060                 \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{SkinColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00062}00062             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Top"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00063}00063                 \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{TopColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00064}00064             }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00065}00065             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Bottom"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00066}00066                 \textcolor{keywordflow}{return} this.\mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{BottomColor}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00067}00067             }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00068}00068             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00069}00069                 \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00070}00070         \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00071}00071     \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00077}\mbox{\hyperlink{class_avatar_a27818736da2c886b8a891d3009b43752}{00077}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_avatar_a27818736da2c886b8a891d3009b43752}{SetColor}}(\textcolor{keywordtype}{string} key, \textcolor{keywordtype}{int} color)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00078}00078     \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00079}00079         \textcolor{keywordflow}{switch} (key)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00080}00080         \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00081}00081             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Skin"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00082}00082                 this.SkinColor = color;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00083}00083                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00085}00085             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Top"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00086}00086                 this.TopColor = color;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00087}00087                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00088}00088             }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00089}00089             \textcolor{keywordflow}{case} \textcolor{stringliteral}{"{}Bottom"{}}:}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00090}00090                 this.BottomColor = color;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00091}00091                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00092}00092         \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00093}00093     \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00100}\mbox{\hyperlink{class_avatar_a556317afdd76c7884ae0197014a7459a}{00100}}     \textcolor{keyword}{public} Texture \mbox{\hyperlink{class_avatar_a556317afdd76c7884ae0197014a7459a}{ToTexture}}()}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00101}00101     \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00102}00102         \textcolor{keywordtype}{string} pathToImage;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00103}00103         Dictionary<string, Color[]> colors;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00105}00105         \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}})}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00106}00106         \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00107}00107             pathToImage = \textcolor{stringliteral}{"{}res://res/Sprites/player/idle.png"{}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00108}00108             colors = \mbox{\hyperlink{class_palette}{Palette}}.\mbox{\hyperlink{class_palette_a83dcff72ec74e3643896ae30fda9efb8}{DEFAULT\_COLORS\_MALE}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00109}00109         \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00110}00110         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00111}00111         \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00112}00112             pathToImage = \textcolor{stringliteral}{"{}res://res/Sprites/player/idlef.png"{}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00113}00113             colors = \mbox{\hyperlink{class_palette}{Palette}}.\mbox{\hyperlink{class_palette_abbd927c544d691dd9cd193d0f2d733e4}{DEFAULT\_COLORS\_FEMALE}};}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00114}00114         \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00116}00116         List<PaletteSwapEntry> swaps = \textcolor{keyword}{new} List<PaletteSwapEntry>();}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00118}00118         \textcolor{keywordflow}{foreach} (\textcolor{keywordtype}{string} key \textcolor{keywordflow}{in} colors.Keys)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00119}00119         \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00120}00120             \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}{GetColor}}(key) < 15)}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00121}00121             \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00122}00122                 \textcolor{keywordflow}{foreach} (Color color \textcolor{keywordflow}{in} colors[key])}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00123}00123                 \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00124}00124                     swaps.Add(\textcolor{keyword}{new} \mbox{\hyperlink{class_palette_swap_entry}{PaletteSwapEntry}}(color, \mbox{\hyperlink{class_palette}{Palette}}.\mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{Instance}}.\mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}[\textcolor{keyword}{this}.GetColor(key)], \mbox{\hyperlink{class_palette}{Palette}}.\mbox{\hyperlink{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}{DEFAULT\_THRESHOLD}}));}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00125}00125                 \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00127}00127         \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00129}00129         Image avatar = \mbox{\hyperlink{class_palette_swap_shader}{PaletteSwapShader}}.\mbox{\hyperlink{class_palette_swap_shader_a339e9ac1c07f19e42fa8d80870566c83}{Instance}}.\mbox{\hyperlink{class_palette_swap_shader_ae747173cd2a85fa21e35129e67630275}{PaletteSwap}}(ResourceLoader.Load<Texture>(pathToImage).GetData(), swaps);}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00130}00130         ImageTexture avatarTexture = \textcolor{keyword}{new} ImageTexture();}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00131}00131         avatarTexture.CreateFromImage(avatar);}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00133}00133         \textcolor{keywordflow}{return} avatarTexture;}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00134}00134     \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00140}\mbox{\hyperlink{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}{00140}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}{Clone}}()}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00141}00141     \{}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00142}00142         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}{Avatar}}(this.\mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}}, this.SkinColor, this.TopColor, this.BottomColor);}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00143}00143     \}}
+\DoxyCodeLine{\Hypertarget{_avatar_8cs_source_l00144}00144 \}}
+
+\end{DoxyCode}

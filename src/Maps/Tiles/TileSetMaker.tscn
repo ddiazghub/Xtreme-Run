@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://res/Sprites/level3/level3tiles.png" type="Texture" id=1]
+[gd_scene load_steps=2 format=2]
 
 [sub_resource type="CSharpScript" id=1]
 resource_name = "TileSetMaker"
@@ -29,6 +27,3 @@ public class TileSetMaker : Node
 
 [node name="TileSetMaker" type="Node"]
 script = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )

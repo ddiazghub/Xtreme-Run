@@ -40,7 +40,7 @@ public class EditProfileGUI : NinePatchRect
         }
         
         this.GetNode<LineEdit>("LineEdit").Text = Profile.CurrentSession.Info.Name;
-        this.GetNode<OptionButton>("Panel/Gender").Selected = Convert.ToInt32(Profile.CurrentSession.Info.Avatar.male);
+        this.GetNode<OptionButton>("Panel/Gender").Selected = Convert.ToInt32(Profile.CurrentSession.Info.Avatar.Male);
 
         foreach (string key in this.keys)
         {
@@ -103,7 +103,7 @@ public class EditProfileGUI : NinePatchRect
             }
         }
 
-        if (Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected) != this.editedAvatar.male)
+        if (Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected) != this.editedAvatar.Male)
             this.UpdateAvatar();
 
         if (this.UnsavedChanges())
@@ -117,7 +117,7 @@ public class EditProfileGUI : NinePatchRect
         ProfileInfo profile = Profile.CurrentSession.Info;
 
         if (!profile.Name.Equals(this.GetNode<LineEdit>("LineEdit").Text) ||
-            !(this.editedAvatar.male == profile.Avatar.male))
+            !(this.editedAvatar.Male == profile.Avatar.Male))
         {
             return true;    
         }
@@ -135,7 +135,7 @@ public class EditProfileGUI : NinePatchRect
 
     public void UpdateAvatar()
     {
-        this.editedAvatar.male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
+        this.editedAvatar.Male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
 
         foreach (string key in this.selected.Keys)
         {
@@ -166,7 +166,7 @@ public class EditProfileGUI : NinePatchRect
 
     public void OnGenderItemSelected(int index)
     {
-        this.editedAvatar.male = Convert.ToBoolean(index);
+        this.editedAvatar.Male = Convert.ToBoolean(index);
         this.UpdateAvatar();
     }
 
@@ -192,7 +192,7 @@ public class EditProfileGUI : NinePatchRect
             profile.Name = this.GetNode<LineEdit>("LineEdit").Text;
         }
 
-        profile.Avatar.male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
+        profile.Avatar.Male = Convert.ToBoolean(this.GetNode<OptionButton>("Panel/Gender").Selected);
 
         foreach (string key in this.selected.Keys)
         {

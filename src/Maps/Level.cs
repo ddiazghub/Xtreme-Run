@@ -2,24 +2,80 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+///     Base node for a game level scene.
+/// </summary>
 public class Level : Node2D
 {
+    /// <summary>
+    ///     The player scene from which to load instances.
+    /// </summary>
     [Export]
     PackedScene Player;
+
+    /// <summary>
+    ///     The level's number.
+    /// </summary>
     [Export]
     int LevelNumber = 0;
+
+    /// <summary>
+    ///     A value that will be multiplied with the points earned.
+    /// </summary>
     [Export]
     float pointsMultiplier = 1f;
+
+    /// <summary>
+    ///     The currently active player in the level.
+    /// </summary>
     private Player player;
+
+    /// <summary>
+    ///     The game's camera.
+    /// </summary>
     private Camera2D camera;
+
+    /// <summary>
+    ///     The level's background.
+    /// </summary>
     private AnimatedSprite background;
+
+    /// <summary>
+    ///     The level's pause menu.
+    /// </summary>
     private PauseMenu pauseMenu;
+
+    /// <summary>
+    ///     Menu that will be shown when level is completed.
+    /// </summary>
     private LevelComplete levelCompleteMenu;
+
+    /// <summary>
+    ///     Game hud.
+    /// </summary>
     private GameHUD hud;
+
+    /// <summary>
+    ///     The player's spawn position.
+    /// </summary>
     private Position2D startPosition;
+
+    /// <summary>
+    ///     The player's position where the level ends.
+    /// </summary>
     private Area2D endPosition;
+
+
     public List<Vector2> positions = new List<Vector2>();
+
+    /// <summary>
+    ///     The number of times the player has attempted the level.
+    /// </summary>
     private int attemptCount = 0;
+
+    /// <summary>
+    ///     The current progress the player has on the level.
+    /// </summary>
     private double progress = 0;
 
     public override void _Ready()
@@ -67,6 +123,9 @@ public class Level : Node2D
             this.DrawPolyline(this.positions.ToArray(), Color.Color8(255, 255, 255));
     }
 
+    /// <summary>
+    ///     Restarts the level, resets the player's position and the hud.
+    /// </summary>
     public void Restart()
     {
         this.SaveData();
@@ -89,6 +148,9 @@ public class Level : Node2D
         this.player.Connect("Dead", this, nameof(this.OnPlayerDead));
     }
 
+    /// <summary>
+    ///     Calculates the progress that the player currently has on the level.
+    /// </summary>
     public void UpdateProgress()
     {
         float distance = this.endPosition.Position.x - this.startPosition.Position.x;
@@ -99,10 +161,18 @@ public class Level : Node2D
             this.progress = 100;
     }
 
+    /// <summary>
+    ///     Gets the number of points that the player has earned on the current run.
+    /// </summary>
+    /// <returns></returns>
     public int GetPoints()
     {
         return Mathf.Clamp((int) (this.progress - Profile.CurrentSession.Info.LevelProgress[this.LevelNumber]), 0, 100) * (int) (100 * this.pointsMultiplier);
     }
+
+    /// <summary>
+    ///     Moves the camera and the background to follow the player.
+    /// </summary>
     public void MoveViewPort()
     {
         float newCameraY = this.camera.Position.y;
@@ -121,11 +191,17 @@ public class Level : Node2D
         this.background.Position = this.camera.Position;
     }
 
+    /// <summary>
+    ///     Pauses the game.
+    /// </summary>
     public void Pause()
     {
         this.pauseMenu.ShowMenu();
     }
 
+    /// <summary>
+    ///     Saves the player's progress.
+    /// </summary>
     public void SaveData()
     {
         if (this.progress > Profile.CurrentSession.Info.LevelProgress[this.LevelNumber])
@@ -148,12 +224,12 @@ public class Level : Node2D
 
     public void OnHudPauseMouseEntered()
     {
-        this.player.blocked = true;
+        this.player.Blocked = true;
     }
 
     public void OnHudPauseMouseExited()
     {
-        this.player.blocked = false;
+        this.player.Blocked = false;
     }
 
     public void OnPauseMenuRestartPressed()

@@ -1,11 +1,20 @@
 using Godot;
 using System;
 
-public class ProfileGUI : NinePatchRect
-{
+/// <summary>
+///     Panel that displays the data of the currently active profile.
+/// </summary>
+public class ProfileGUI : NinePatchRect {
+
+    /// <summary>
+    ///     Emitted when the shop button is pressed.
+    /// </summary>
     [Signal]
     public delegate void ShopPressed();
 
+    /// <summary>
+    ///     Emitted when the edit profile button is pressed.
+    /// </summary>
     [Signal]
     public delegate void EditPressed();
 
@@ -18,6 +27,9 @@ public class ProfileGUI : NinePatchRect
         this.UpdateUI();
     }
 
+    /// <summary>
+    ///     Updates the information currently displayed on the GUI.
+    /// </summary>
     public void UpdateUI()
     {
         this.GetNode<Label>("Completed").Text = Profile.CurrentSession.Info.CompletedLevels.Count + "/3 completado";

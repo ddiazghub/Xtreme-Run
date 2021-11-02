@@ -1,0 +1,144 @@
+\hypertarget{class_teleport_and_switch_gravity}{}\doxysection{Teleport\+And\+Switch\+Gravity Class Reference}
+\label{class_teleport_and_switch_gravity}\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+
+
+Secondary action that allows the player to teleport and invert the direction of gravity.  
+
+
+Inheritance diagram for Teleport\+And\+Switch\+Gravity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_teleport_and_switch_gravity}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_teleport_and_switch_gravity_a5a48df9387198b5ea63957f884a513f8}{\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_teleport_and_switch_gravity_aa307d371dea032532bf619e102972791}{\+\_\+\+Action\+On\+Ground}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on ground. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_teleport_and_switch_gravity_ad74396e09855f299b756fd9a11ea95b9}{\+\_\+\+Action\+On\+Air}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on air. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_teleport_and_switch_gravity_ab8ef1a89a937fb3a90c88b65d4c028bb}{\+\_\+\+Action\+Released}} ()
+\begin{DoxyCompactList}\small\item\em The action that will be executed once the player stops pressing the action\textquotesingle{}s input keyboard/mouse buttons. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_teleport_and_switch_gravity_afb088693fcb444dc8a536a1f37988a53}{On\+Secondary\+Action\+Timer\+Timeout}} ()
+\item 
+void \mbox{\hyperlink{class_teleport_and_switch_gravity_a49809a107376cd8ad243ca3631c258a4}{invert\+Gravity}} ()
+\begin{DoxyCompactList}\small\item\em Invert\textquotesingle{}s the player\textquotesingle{}s gravity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Secondary action that allows the player to teleport and invert the direction of gravity. 
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_ad74396e09855f299b756fd9a11ea95b9}\label{class_teleport_and_switch_gravity_ad74396e09855f299b756fd9a11ea95b9}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!\_ActionOnAir@{\_ActionOnAir}}
+\index{\_ActionOnAir@{\_ActionOnAir}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnAir()}{\_ActionOnAir()}}
+{\footnotesize\ttfamily override void Teleport\+And\+Switch\+Gravity.\+\_\+\+Action\+On\+Air (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on air. 
+
+
+
+Implements \mbox{\hyperlink{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}{Secondary\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_aa307d371dea032532bf619e102972791}\label{class_teleport_and_switch_gravity_aa307d371dea032532bf619e102972791}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!\_ActionOnGround@{\_ActionOnGround}}
+\index{\_ActionOnGround@{\_ActionOnGround}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnGround()}{\_ActionOnGround()}}
+{\footnotesize\ttfamily override void Teleport\+And\+Switch\+Gravity.\+\_\+\+Action\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The action that will be executed if the player inputs the action\textquotesingle{}s keys and the player\textquotesingle{}s persistent state is on ground. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}{Secondary\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_ab8ef1a89a937fb3a90c88b65d4c028bb}\label{class_teleport_and_switch_gravity_ab8ef1a89a937fb3a90c88b65d4c028bb}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!\_ActionReleased@{\_ActionReleased}}
+\index{\_ActionReleased@{\_ActionReleased}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{\_ActionReleased()}{\_ActionReleased()}}
+{\footnotesize\ttfamily override void Teleport\+And\+Switch\+Gravity.\+\_\+\+Action\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The action that will be executed once the player stops pressing the action\textquotesingle{}s input keyboard/mouse buttons. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}{Secondary\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_a5a48df9387198b5ea63957f884a513f8}\label{class_teleport_and_switch_gravity_a5a48df9387198b5ea63957f884a513f8}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily override void Teleport\+And\+Switch\+Gravity.\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}{Secondary\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_a49809a107376cd8ad243ca3631c258a4}\label{class_teleport_and_switch_gravity_a49809a107376cd8ad243ca3631c258a4}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!invertGravity@{invertGravity}}
+\index{invertGravity@{invertGravity}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{invertGravity()}{invertGravity()}}
+{\footnotesize\ttfamily void Teleport\+And\+Switch\+Gravity.\+invert\+Gravity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Invert\textquotesingle{}s the player\textquotesingle{}s gravity. 
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+\mbox{\Hypertarget{class_teleport_and_switch_gravity_afb088693fcb444dc8a536a1f37988a53}\label{class_teleport_and_switch_gravity_afb088693fcb444dc8a536a1f37988a53}} 
+\index{TeleportAndSwitchGravity@{TeleportAndSwitchGravity}!OnSecondaryActionTimerTimeout@{OnSecondaryActionTimerTimeout}}
+\index{OnSecondaryActionTimerTimeout@{OnSecondaryActionTimerTimeout}!TeleportAndSwitchGravity@{TeleportAndSwitchGravity}}
+\doxysubsubsection{\texorpdfstring{OnSecondaryActionTimerTimeout()}{OnSecondaryActionTimerTimeout()}}
+{\footnotesize\ttfamily override void Teleport\+And\+Switch\+Gravity.\+On\+Secondary\+Action\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_secondary_action_ab1436a4c4523473d3199412de76ec830}{Secondary\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_teleport_and_switch_gravity_8cs_source}{Teleport\+And\+Switch\+Gravity.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entities/\+Player/\+Player\+States/\+Action/\+Secondary/\mbox{\hyperlink{_teleport_and_switch_gravity_8cs}{Teleport\+And\+Switch\+Gravity.\+cs}}\end{DoxyCompactItemize}

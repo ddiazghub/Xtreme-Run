@@ -1,0 +1,233 @@
+\hypertarget{class_avatar}{}\doxysection{Avatar Class Reference}
+\label{class_avatar}\index{Avatar@{Avatar}}
+
+
+This class represents a customizable player avatar.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}{Avatar}} (bool male, int skin\+Color, int top\+Color, int bottom\+Color)
+\begin{DoxyCompactList}\small\item\em Creates a new avatar from the supplied data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}{Get\+Color}} (string key)
+\begin{DoxyCompactList}\small\item\em Gets one of the avatar\textquotesingle{}s colors from a given string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_avatar_a27818736da2c886b8a891d3009b43752}{Set\+Color}} (string key, int color)
+\begin{DoxyCompactList}\small\item\em Sets one of the avatar\textquotesingle{}s colors from a given string. \end{DoxyCompactList}\item 
+Texture \mbox{\hyperlink{class_avatar_a556317afdd76c7884ae0197014a7459a}{To\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Performs a palette swap on the default avatar, swapping the default colors for the colors specified in each property. Converts the avatar into an image texture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Clones the avatar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{Skin\+Color}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s skin color. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{Top\+Color}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s bottom color. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{Bottom\+Color}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s top color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly Texture \mbox{\hyperlink{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}{EMPTY\+\_\+\+SAVE\+\_\+\+AVATAR}} = Resource\+Loader.\+Load$<$Texture$>$(\char`\"{}res\+://res/Sprites/player/shadow.\+png\char`\"{})
+\begin{DoxyCompactList}\small\item\em Default avatar for non-\/created profiles. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The avatar\textquotesingle{}s Gender. True if male, false if female. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a customizable player avatar. 
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}\label{class_avatar_a05399ad1121eec3010368f54ca8ad9fc}} 
+\index{Avatar@{Avatar}!Avatar@{Avatar}}
+\index{Avatar@{Avatar}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{Avatar()}{Avatar()}}
+{\footnotesize\ttfamily Avatar.\+Avatar (\begin{DoxyParamCaption}\item[{bool}]{male,  }\item[{int}]{skin\+Color,  }\item[{int}]{top\+Color,  }\item[{int}]{bottom\+Color }\end{DoxyParamCaption})}
+
+
+
+Creates a new avatar from the supplied data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em male} & The avatar\textquotesingle{}s Gender. True if male, false if female.\\
+\hline
+{\em skin\+Color} & Id of the avatar\textquotesingle{}s skin color.\\
+\hline
+{\em top\+Color} & Id of the avatar\textquotesingle{}s bottom color.\\
+\hline
+{\em bottom\+Color} & Default avatar for non-\/created profiles.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}\label{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}} 
+\index{Avatar@{Avatar}!Clone@{Clone}}
+\index{Clone@{Clone}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avatar}{Avatar}} Avatar.\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clones the avatar. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the avatar.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00140}{140}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}\label{class_avatar_afe361a71356eeb5a67ce7974bd8881d7}} 
+\index{Avatar@{Avatar}!GetColor@{GetColor}}
+\index{GetColor@{GetColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{GetColor()}{GetColor()}}
+{\footnotesize\ttfamily int Avatar.\+Get\+Color (\begin{DoxyParamCaption}\item[{string}]{key }\end{DoxyParamCaption})}
+
+
+
+Gets one of the avatar\textquotesingle{}s colors from a given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Can be Skin, Top or Bottom.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color corresponding to the string.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00055}{55}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_a27818736da2c886b8a891d3009b43752}\label{class_avatar_a27818736da2c886b8a891d3009b43752}} 
+\index{Avatar@{Avatar}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Avatar.\+Set\+Color (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{int}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets one of the avatar\textquotesingle{}s colors from a given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Can be Skin, Top or Bottom.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_a556317afdd76c7884ae0197014a7459a}\label{class_avatar_a556317afdd76c7884ae0197014a7459a}} 
+\index{Avatar@{Avatar}!ToTexture@{ToTexture}}
+\index{ToTexture@{ToTexture}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{ToTexture()}{ToTexture()}}
+{\footnotesize\ttfamily Texture Avatar.\+To\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs a palette swap on the default avatar, swapping the default colors for the colors specified in each property. Converts the avatar into an image texture. 
+
+\begin{DoxyReturn}{Returns}
+The avatar as an image texture.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00100}{100}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_avatar_af14516033bd4b5bcb567506d3e480dca}\label{class_avatar_af14516033bd4b5bcb567506d3e480dca}} 
+\index{Avatar@{Avatar}!BottomColor@{BottomColor}}
+\index{BottomColor@{BottomColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{BottomColor}{BottomColor}}
+{\footnotesize\ttfamily int Avatar.\+Bottom\+Color}
+
+
+
+Id of the avatar\textquotesingle{}s top color. 
+
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}\label{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}} 
+\index{Avatar@{Avatar}!EMPTY\_SAVE\_AVATAR@{EMPTY\_SAVE\_AVATAR}}
+\index{EMPTY\_SAVE\_AVATAR@{EMPTY\_SAVE\_AVATAR}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{EMPTY\_SAVE\_AVATAR}{EMPTY\_SAVE\_AVATAR}}
+{\footnotesize\ttfamily readonly Texture Avatar.\+EMPTY\+\_\+\+SAVE\+\_\+\+AVATAR = Resource\+Loader.\+Load$<$Texture$>$(\char`\"{}res\+://res/Sprites/player/shadow.\+png\char`\"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default avatar for non-\/created profiles. 
+
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}\label{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}} 
+\index{Avatar@{Avatar}!SkinColor@{SkinColor}}
+\index{SkinColor@{SkinColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{SkinColor}{SkinColor}}
+{\footnotesize\ttfamily int Avatar.\+Skin\+Color}
+
+
+
+Id of the avatar\textquotesingle{}s skin color. 
+
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+\mbox{\Hypertarget{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}\label{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}} 
+\index{Avatar@{Avatar}!TopColor@{TopColor}}
+\index{TopColor@{TopColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{TopColor}{TopColor}}
+{\footnotesize\ttfamily int Avatar.\+Top\+Color}
+
+
+
+Id of the avatar\textquotesingle{}s bottom color. 
+
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_avatar_ac867c076ca88765a4601c440687a42c9}\label{class_avatar_ac867c076ca88765a4601c440687a42c9}} 
+\index{Avatar@{Avatar}!Male@{Male}}
+\index{Male@{Male}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{Male}{Male}}
+{\footnotesize\ttfamily bool Avatar.\+Male\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The avatar\textquotesingle{}s Gender. True if male, false if female. 
+
+
+
+Definition at line \mbox{\hyperlink{_avatar_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_avatar_8cs_source}{Avatar.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Profiles/\mbox{\hyperlink{_avatar_8cs}{Avatar.\+cs}}\end{DoxyCompactItemize}

@@ -1,46 +1,53 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Main action that allows the player to teleport a small distance above them.
+/// </summary>
 public class Teleport: MainAction {
+    
+    /// <summary>
+    ///     Default teleport distance.
+    /// </summary>
     public int TELEPORT_DISTANCE = 256;
     public override void _Init()
     {
-        if (this.player.invertedGravity)
+        if (this.Player.InvertedGravity)
         {
             this.TELEPORT_DISTANCE = -this.TELEPORT_DISTANCE; 
         }
 
-        this.player.jumpForce = this.player.DEFAULT_JUMPFORCE;
-        this.player.maxJumpTime = this.player.DEFAULT_MAX_JUMP_TIME;
-        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
-        this.player.gravity = this.player.DEFAULT_GRAVITY;
+        this.Player.JumpForce = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.MaxJumpTime = this.Player.DEFAULT_MAX_JUMP_TIME;
+        this.Player.MaxFallSpeed = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
     
         base._Init();
     }
 
     public override void _ActionOnGround()
     {
-        if (!this.performingAction)
+        if (!this.PerformingAction)
         {
-            this.player.Position = new Vector2(this.player.Position.x, this.player.Position.y - this.TELEPORT_DISTANCE);
-            this.performingAction = true;
+            this.Player.Position = new Vector2(this.Player.Position.x, this.Player.Position.y - this.TELEPORT_DISTANCE);
+            this.PerformingAction = true;
         }
     }
 
     public override void _ActionOnAir()
     {
-        if (this.onActionPad && this.canUseActionPad && !this.performingAction) {
-            this.player.linearVelocity.y = 3000;
-            this.player.Position = new Vector2(this.player.Position.x, this.player.Position.y - this.TELEPORT_DISTANCE);
-            this.performingAction = true;
-            this.onActionPad = false;
-            this.canUseActionPad = false;
+        if (this.OnActionPad && this.CanUseActionPad && !this.PerformingAction) {
+            this.Player.linearVelocity.y = 3000;
+            this.Player.Position = new Vector2(this.Player.Position.x, this.Player.Position.y - this.TELEPORT_DISTANCE);
+            this.PerformingAction = true;
+            this.OnActionPad = false;
+            this.CanUseActionPad = false;
         }
     }
 
     public override void _ActionReleased()
     {
-        this.performingAction = false;
+        this.PerformingAction = false;
     }
     public override void _ActionProcess(float delta)
     {
@@ -51,13 +58,13 @@ public class Teleport: MainAction {
     {
         if (area.IsInGroup("jump"))
         {
-            this.onActionPad = true;
+            this.OnActionPad = true;
         }
 
         if (area.IsInGroup("jump_auto"))
         {
-            this.player.linearVelocity.y = 3000;
-            this.player.Position = new Vector2(this.player.Position.x, this.player.Position.y - this.TELEPORT_DISTANCE);
+            this.Player.linearVelocity.y = 3000;
+            this.Player.Position = new Vector2(this.Player.Position.x, this.Player.Position.y - this.TELEPORT_DISTANCE);
         }
     }
 

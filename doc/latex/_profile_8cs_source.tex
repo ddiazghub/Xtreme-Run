@@ -1,0 +1,109 @@
+\hypertarget{_profile_8cs_source}{}\doxysection{Profile.\+cs}
+\label{_profile_8cs_source}\index{src/Profiles/Profile.cs@{src/Profiles/Profile.cs}}
+\mbox{\hyperlink{_profile_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00003}00003 \textcolor{keyword}{using} System.IO;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00009}\mbox{\hyperlink{class_profile}{00009}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_profile}{Profile}} \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00014}00014     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{class_profile}{Profile}} session;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00019}\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{00019}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly \textcolor{keywordtype}{string} \mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}} = Path.Combine(Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}HOMEPATH"{}}), \textcolor{stringliteral}{"{}XtremeRun"{}}, \textcolor{stringliteral}{"{}Saves"{}});}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00020}00020     }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00024}\mbox{\hyperlink{class_profile_a0603d28949b8c323d8bae91ea138d6f7}{00024}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly \textcolor{keywordtype}{int} \mbox{\hyperlink{class_profile_a0603d28949b8c323d8bae91ea138d6f7}{MAX\_NUMBER\_OF\_SAVES}} = 6;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00029}\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{00029}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_profile_info}{ProfileInfo}} \mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00031}00031         \textcolor{keyword}{get};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00032}00032         \textcolor{keyword}{private} \textcolor{keyword}{set};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00033}00033     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00039}\mbox{\hyperlink{class_profile_ab295a3d5ae7494b681e0333bb4166516}{00039}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_ab295a3d5ae7494b681e0333bb4166516}{Load}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00040}00040     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00041}00041         this.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_profile_info}{ProfileInfo}}(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keywordtype}{id}.ToString() + \textcolor{stringliteral}{"{}.sav"{}}));}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00047}\mbox{\hyperlink{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}{00047}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}{Save}}()}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00049}00049         File.WriteAllBytes(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keyword}{this}.Info.ID.ToString() + \textcolor{stringliteral}{"{}.sav"{}}), \textcolor{keyword}{this}.Info.ToBytes());}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00055}\mbox{\hyperlink{class_profile_a8fa9b755af65c98f5ce709c749579ab5}{00055}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_a8fa9b755af65c98f5ce709c749579ab5}{LogOut}}()}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00057}00057         this.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00058}00058     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00063}\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{00063}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00064}00064     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00065}00065         \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00066}00066         \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00067}00067             \textcolor{keywordflow}{if} (session == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00068}00068             \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00069}00069                 session = \textcolor{keyword}{new} \mbox{\hyperlink{class_profile}{Profile}}();}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00070}00070             \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00072}00072             \textcolor{keywordflow}{return} session;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00073}00073         \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00074}00074     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00081}\mbox{\hyperlink{class_profile_a7070938f6f0941e62f75fb916b13c36c}{00081}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_profile_info}{ProfileInfo}} \mbox{\hyperlink{class_profile_a7070938f6f0941e62f75fb916b13c36c}{Get}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00082}00082     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00083}00083         \mbox{\hyperlink{class_profile_info}{ProfileInfo}} profile = \textcolor{keyword}{new} \mbox{\hyperlink{class_profile_info}{ProfileInfo}}(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keywordtype}{id}.ToString() + \textcolor{stringliteral}{"{}.sav"{}}));}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00084}00084         }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00085}00085         \textcolor{keywordflow}{if} (profile.\mbox{\hyperlink{class_profile_info_a862fe52de0c6b90f0ecebd88e66aca58}{ID}} == 6)}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00086}00086             \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00087}00087         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00088}00088             \textcolor{keywordflow}{return} profile;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00089}00089     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00096}\mbox{\hyperlink{class_profile_ac35fe897f5723f01593341c9c39d8e3e}{00096}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_ac35fe897f5723f01593341c9c39d8e3e}{Create}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} name)}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00097}00097     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00098}00098         \textcolor{keywordflow}{if} (!Directory.Exists(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}))}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00099}00099         \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00100}00100             Directory.CreateDirectory(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}});}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00101}00101         \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00103}00103         \textcolor{keywordtype}{byte}[] buffer = \textcolor{keyword}{new} \textcolor{keywordtype}{byte}[SaveFileInfo.FILE\_SIZE];}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00105}00105         Encoding.ASCII.GetBytes(name).CopyTo(buffer, SaveFileInfo.PROFILE\_NAME);}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00106}00106         buffer[SaveFileInfo.AVATAR\_GENDER] = 1;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00107}00107         buffer[SaveFileInfo.AVATAR\_COLOR\_SKIN] = 15;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00108}00108         buffer[SaveFileInfo.AVATAR\_COLOR\_TOP] = 15;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00109}00109         buffer[SaveFileInfo.AVATAR\_COLOR\_BOTTOM] = 15;}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00111}00111         FileStream file = File.Create(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keywordtype}{id}.ToString() + \textcolor{stringliteral}{"{}.sav"{}}));}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00112}00112         file.Write(buffer, 0, SaveFileInfo.FILE\_SIZE);}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00113}00113         file.Close();}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00114}00114     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00120}\mbox{\hyperlink{class_profile_a65e989b8d3b98a068c286831391f5e6b}{00120}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_a65e989b8d3b98a068c286831391f5e6b}{Delete}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00121}00121     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00122}00122         File.Delete(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keywordtype}{id}.ToString() + \textcolor{stringliteral}{"{}.sav"{}}));}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00123}00123     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00130}\mbox{\hyperlink{class_profile_a1611ed62259b932927164f5bff513c4b}{00130}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_profile_a1611ed62259b932927164f5bff513c4b}{Exists}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00131}00131     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00132}00132         \textcolor{keywordflow}{return} File.Exists(Path.Combine(\mbox{\hyperlink{class_profile_a60b5ca4f4cd43bd91af9f5ac46f6c647}{SAVES\_DIRECTORY}}, \textcolor{keywordtype}{id}.ToString() + \textcolor{stringliteral}{"{}.sav"{}}));}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00133}00133     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00140}\mbox{\hyperlink{class_profile_af591c1206e6be7fadaa7cd33086158c2}{00140}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_profile_af591c1206e6be7fadaa7cd33086158c2}{NameIsAvailable}}(\textcolor{keywordtype}{string} name)}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00141}00141     \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00142}00142         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 6; i++)}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00143}00143         \{   }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00144}00144             \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a1611ed62259b932927164f5bff513c4b}{Exists}}(i))}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00145}00145             \{}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00146}00146                 \mbox{\hyperlink{class_profile_info}{ProfileInfo}} profile = \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a7070938f6f0941e62f75fb916b13c36c}{Get}}(i);}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00147}00147                 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00148}00148                 \textcolor{keywordflow}{if} (profile != \textcolor{keyword}{null} \&\& profile.\mbox{\hyperlink{class_profile_info_af1ba331b8cf5fd72c3810474cd8398e7}{Name}}.Equals(name))}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00149}00149                     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00150}00150             \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00151}00151         \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00153}00153         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00154}00154     \}}
+\DoxyCodeLine{\Hypertarget{_profile_8cs_source_l00155}00155 \}}
+
+\end{DoxyCode}

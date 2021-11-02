@@ -1,7 +1,14 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Main action that allows the player to glide for some time.
+/// </summary> 
 public class Glide: MainAction {
+
+    /// <summary>
+    ///     Each state that the glide action can have.
+    /// </summary>
     private enum GlideStates {
         JUMPING,
         NOTHING,
@@ -10,14 +17,17 @@ public class Glide: MainAction {
         NOTHING2
     }
 
+    /// <summary>
+    ///     The state in which the glide action is currently.
+    /// </summary>
     private GlideStates state = GlideStates.NOTHING;
 
     public override void _Init()
     {
-        this.player.jumpForce = this.player.DEFAULT_JUMPFORCE;
-        this.player.maxJumpTime = this.player.DEFAULT_MAX_JUMP_TIME;
-        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
-        this.player.gravity = this.player.DEFAULT_GRAVITY;
+        this.Player.JumpForce = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.MaxJumpTime = this.Player.DEFAULT_MAX_JUMP_TIME;
+        this.Player.MaxFallSpeed = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
 
         base._Init();
     }
@@ -31,18 +41,18 @@ public class Glide: MainAction {
 
         if (Input.IsActionJustPressed("action_secondary"))
         {
-            if (this.player.invertedGravity)
-                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
+            if (this.Player.InvertedGravity)
+                    this.Player.Gravity = -this.Player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = this.player.DEFAULT_GRAVITY;
+                    this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
         }
 
-        if (Input.IsActionPressed("action_main") && (this.state == GlideStates.NOTHING || this.state == GlideStates.CAN_GLIDE) && !this.player.blocked) {
-            if (this.player.persistentState is OnGroundState) {
+        if (Input.IsActionPressed("action_main") && (this.state == GlideStates.NOTHING || this.state == GlideStates.CAN_GLIDE) && !this.Player.Blocked) {
+            if (this.Player.persistentState is OnGroundState) {
                 this._ActionOnGround();
             }
 
-            if (this.player.persistentState is OnAirState) {
+            if (this.Player.persistentState is OnAirState) {
                 this._ActionOnAir();
             }
         }
@@ -52,41 +62,41 @@ public class Glide: MainAction {
             this._ActionProcess(delta);
         }
 
-        if (this.player.IsOnFloor())
+        if (this.Player.IsOnFloor())
             this.state = GlideStates.NOTHING;
     }
 
     public override void _ActionOnGround()
     {
         this.state = GlideStates.JUMPING;
-        this.player.mainActionTimer.Start();
-        this.canUseActionPad = false;
+        this.Player.mainActionTimer.Start();
+        this.CanUseActionPad = false;
     }
     public override void _ActionOnAir()
     {
-        if (this.onActionPad && this.canUseActionPad) {
+        if (this.OnActionPad && this.CanUseActionPad) {
             if (this.state == GlideStates.GLIDING)
-                this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
+                this.Player.mainActionTimer.WaitTime = this.Player.MaxJumpTime;
 
             this.state = GlideStates.JUMPING;
-            this.onActionPad = false;
-            this.player.mainActionTimer.Start();
-            this.canUseActionPad = false;
+            this.OnActionPad = false;
+            this.Player.mainActionTimer.Start();
+            this.CanUseActionPad = false;
         }
 
         if (this.state == GlideStates.CAN_GLIDE)
         {
             this.state = GlideStates.GLIDING;
-            this.player.gravity = 0;
-            this.player.mainActionTimer.WaitTime = 1f;
-            this.player.mainActionTimer.Start();
+            this.Player.Gravity = 0;
+            this.Player.mainActionTimer.WaitTime = 1f;
+            this.Player.mainActionTimer.Start();
         }
 
-        if (this.onActionPad && this.canUseActionPad) {
+        if (this.OnActionPad && this.CanUseActionPad) {
             this.state = GlideStates.JUMPING;
-            this.onActionPad = false;
-            this.player.mainActionTimer.Start();
-            this.canUseActionPad = false;
+            this.OnActionPad = false;
+            this.Player.mainActionTimer.Start();
+            this.CanUseActionPad = false;
         }
     }
     public override void _ActionReleased()
@@ -100,13 +110,13 @@ public class Glide: MainAction {
                 break;
             
             case GlideStates.GLIDING:
-                if (this.player.invertedGravity)
-                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
+                if (this.Player.InvertedGravity)
+                    this.Player.Gravity = -this.Player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = this.player.DEFAULT_GRAVITY;
+                    this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
 
                 this.state = GlideStates.NOTHING2;
-                this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
+                this.Player.mainActionTimer.WaitTime = this.Player.MaxJumpTime;
                 break;
         }
     }
@@ -115,11 +125,11 @@ public class Glide: MainAction {
         switch (this.state)
         {
             case GlideStates.JUMPING:
-                this.player.linearVelocity.y -= this.player.jumpForce;
+                this.Player.linearVelocity.y -= this.Player.JumpForce;
                 break;
             
             case GlideStates.GLIDING:
-                this.player.linearVelocity.y = 0;
+                this.Player.linearVelocity.y = 0;
                 break;
         }
     }
@@ -133,13 +143,13 @@ public class Glide: MainAction {
                 break;
             
             case GlideStates.GLIDING:
-                if (this.player.invertedGravity)
-                    this.player.gravity = -this.player.DEFAULT_GRAVITY;
+                if (this.Player.InvertedGravity)
+                    this.Player.Gravity = -this.Player.DEFAULT_GRAVITY;
                 else
-                    this.player.gravity = this.player.DEFAULT_GRAVITY;
+                    this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
 
                 this.state = GlideStates.NOTHING2;
-                this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
+                this.Player.mainActionTimer.WaitTime = this.Player.MaxJumpTime;
                 break;
         }
     }
@@ -148,16 +158,16 @@ public class Glide: MainAction {
     {
         if (area.IsInGroup("jump"))
         {
-            this.onActionPad = true;
+            this.OnActionPad = true;
         }
 
         if (area.IsInGroup("jump_auto"))
         {
             if (this.state == GlideStates.GLIDING)
-                this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
+                this.Player.mainActionTimer.WaitTime = this.Player.MaxJumpTime;
 
             this.state = GlideStates.JUMPING;
-            this.player.mainActionTimer.Start();
+            this.Player.mainActionTimer.Start();
         }
     }
 }

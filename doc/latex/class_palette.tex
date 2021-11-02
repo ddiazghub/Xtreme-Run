@@ -1,0 +1,205 @@
+\hypertarget{class_palette}{}\doxysection{Palette Class Reference}
+\label{class_palette}\index{Palette@{Palette}}
+
+
+Class that contains data related to colors.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Texture \mbox{\hyperlink{class_palette_ab973750bb28f3de18132de170c08c092}{Texture\+From\+Color}} (int id, Vector2 size)
+\begin{DoxyCompactList}\small\item\em Creates a rectangular shape and fills it with the color with the given id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly int \mbox{\hyperlink{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}{NUMBER\+\_\+\+OF\+\_\+\+COLORS}} = 15
+\begin{DoxyCompactList}\small\item\em The number of available colors for the player\textquotesingle{}s avatar. \end{DoxyCompactList}\item 
+static readonly Color \mbox{\hyperlink{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}{DEFAULT\+\_\+\+THRESHOLD}} = new Color(0.\+1f, 0.\+1f, 0.\+1f)
+\begin{DoxyCompactList}\small\item\em The default threshold difference for doing a palette swap. \end{DoxyCompactList}\item 
+static readonly Dictionary$<$ string, Color\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_palette_a83dcff72ec74e3643896ae30fda9efb8}{DEFAULT\+\_\+\+COLORS\+\_\+\+MALE}}
+\begin{DoxyCompactList}\small\item\em Default skin, top and bottom colors for male avatar. \end{DoxyCompactList}\item 
+static readonly Dictionary$<$ string, Color\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_palette_abbd927c544d691dd9cd193d0f2d733e4}{DEFAULT\+\_\+\+COLORS\+\_\+\+FEMALE}}
+\begin{DoxyCompactList}\small\item\em Default skin, top and bottom colors for female avatar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Color\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{Palette\+Colors}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The available colors for avatar customization. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_palette}{Palette}} \mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the game\textquotesingle{}s palette. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains data related to colors. 
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_palette_ab973750bb28f3de18132de170c08c092}\label{class_palette_ab973750bb28f3de18132de170c08c092}} 
+\index{Palette@{Palette}!TextureFromColor@{TextureFromColor}}
+\index{TextureFromColor@{TextureFromColor}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{TextureFromColor()}{TextureFromColor()}}
+{\footnotesize\ttfamily Texture Palette.\+Texture\+From\+Color (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{Vector2}]{size }\end{DoxyParamCaption})}
+
+
+
+Creates a rectangular shape and fills it with the color with the given id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The color\textquotesingle{}s id.\\
+\hline
+{\em size} & The rectangle\textquotesingle{}s size.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An rectangular image texture filled with the color.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00122}{122}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_palette_abbd927c544d691dd9cd193d0f2d733e4}\label{class_palette_abbd927c544d691dd9cd193d0f2d733e4}} 
+\index{Palette@{Palette}!DEFAULT\_COLORS\_FEMALE@{DEFAULT\_COLORS\_FEMALE}}
+\index{DEFAULT\_COLORS\_FEMALE@{DEFAULT\_COLORS\_FEMALE}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_COLORS\_FEMALE}{DEFAULT\_COLORS\_FEMALE}}
+{\footnotesize\ttfamily readonly Dictionary$<$string, Color\mbox{[}$\,$\mbox{]}$>$ Palette.\+DEFAULT\+\_\+\+COLORS\+\_\+\+FEMALE\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} Dictionary<string, Color[]>()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Skin"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(223, 161, 113) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (248, 179, 123) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (204, 118, 79) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (192, 112, 77) / 255}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Top"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(88, 128, 204) / 255}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Bottom"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(96, 96, 96) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (154, 133, 113) / 255}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Default skin, top and bottom colors for female avatar. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+\mbox{\Hypertarget{class_palette_a83dcff72ec74e3643896ae30fda9efb8}\label{class_palette_a83dcff72ec74e3643896ae30fda9efb8}} 
+\index{Palette@{Palette}!DEFAULT\_COLORS\_MALE@{DEFAULT\_COLORS\_MALE}}
+\index{DEFAULT\_COLORS\_MALE@{DEFAULT\_COLORS\_MALE}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_COLORS\_MALE}{DEFAULT\_COLORS\_MALE}}
+{\footnotesize\ttfamily readonly Dictionary$<$string, Color\mbox{[}$\,$\mbox{]}$>$ Palette.\+DEFAULT\+\_\+\+COLORS\+\_\+\+MALE\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new} Dictionary<string, Color[]>()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Skin"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(223, 161, 113) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (220, 126, 82) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (220, 191, 165) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (245, 156, 120) / 255,}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Top"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(42, 90, 57) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (30, 53, 52) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (53, 81, 67) / 255,}
+\DoxyCodeLine{        \},}
+\DoxyCodeLine{}
+\DoxyCodeLine{        [\textcolor{stringliteral}{"{}Bottom"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color(158, 77, 82) / 255,}
+\DoxyCodeLine{            \textcolor{keyword}{new} Color (82, 59, 64) / 255}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Default skin, top and bottom colors for male avatar. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+\mbox{\Hypertarget{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}\label{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}} 
+\index{Palette@{Palette}!DEFAULT\_THRESHOLD@{DEFAULT\_THRESHOLD}}
+\index{DEFAULT\_THRESHOLD@{DEFAULT\_THRESHOLD}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_THRESHOLD}{DEFAULT\_THRESHOLD}}
+{\footnotesize\ttfamily readonly Color Palette.\+DEFAULT\+\_\+\+THRESHOLD = new Color(0.\+1f, 0.\+1f, 0.\+1f)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The default threshold difference for doing a palette swap. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+\mbox{\Hypertarget{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}\label{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}} 
+\index{Palette@{Palette}!NUMBER\_OF\_COLORS@{NUMBER\_OF\_COLORS}}
+\index{NUMBER\_OF\_COLORS@{NUMBER\_OF\_COLORS}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_COLORS}{NUMBER\_OF\_COLORS}}
+{\footnotesize\ttfamily readonly int Palette.\+NUMBER\+\_\+\+OF\+\_\+\+COLORS = 15\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The number of available colors for the player\textquotesingle{}s avatar. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_palette_a25336192634062811d8659ee0ad065c6}\label{class_palette_a25336192634062811d8659ee0ad065c6}} 
+\index{Palette@{Palette}!Instance@{Instance}}
+\index{Instance@{Instance}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_palette}{Palette}} Palette.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Gets the game\textquotesingle{}s palette. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00105}{105}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+\mbox{\Hypertarget{class_palette_ac5cd23ad275bc2a794539c1208fb5318}\label{class_palette_ac5cd23ad275bc2a794539c1208fb5318}} 
+\index{Palette@{Palette}!PaletteColors@{PaletteColors}}
+\index{PaletteColors@{PaletteColors}!Palette@{Palette}}
+\doxysubsubsection{\texorpdfstring{PaletteColors}{PaletteColors}}
+{\footnotesize\ttfamily Color \mbox{[}$\,$\mbox{]} Palette.\+Palette\+Colors\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The available colors for avatar customization. 
+
+
+
+Definition at line \mbox{\hyperlink{_palette_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_palette_8cs_source}{Palette.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Shaders/\mbox{\hyperlink{_palette_8cs}{Palette.\+cs}}\end{DoxyCompactItemize}

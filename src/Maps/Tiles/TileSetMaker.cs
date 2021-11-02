@@ -1,16 +1,33 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Node for making tilesets from an image.
+/// </summary>
 public class TileSetMaker : Node
 {
-    private Vector2 _tileSize = new Vector2(64, 64);
-    private Texture _texture;
+    /// <summary>
+    ///     The size of each tile.
+    /// </summary>
+    [Export]
+    public Vector2 TileSize = new Vector2(64, 64);
+
+    /// <summary>
+    ///     The image texture from which to create the tileset.
+    /// </summary>
+    [Export]
+    public Texture Texture;
+
+    /// <summary>
+    ///     The path where the tileset will be save.
+    /// </summary>
+    [Export]
+    public string FilePath = "res://src/Maps/Tiles/tiles.tres";
 
     public override void _Ready()
     {
-        this._texture = this.GetNode<Sprite>("Sprite").Texture;
-        int textureWidth = this._texture.GetWidth() / (int) this._tileSize.x;
-        int textureHeight = this._texture.GetHeight() / (int) this._tileSize.y;
+        int textureWidth = this.Texture.GetWidth() / (int) this.TileSize.x;
+        int textureHeight = this.Texture.GetHeight() / (int) this.TileSize.y;
 
         TileSet tileSet = new TileSet();
         int id = 0;
@@ -20,23 +37,23 @@ public class TileSetMaker : Node
             for (int y = 0; y < textureHeight; y++)
             {
                 Rect2 region = new Rect2(
-                    x * this._tileSize.x,
-                    y * this._tileSize.y,
-                    this._tileSize.x,
-                    this._tileSize.y
+                    x * this.TileSize.x,
+                    y * this.TileSize.y,
+                    this.TileSize.x,
+                    this.TileSize.y
                 );
 
                 tileSet.CreateTile(id);
-                tileSet.TileSetTexture(id, this._texture);
+                tileSet.TileSetTexture(id, this.Texture);
                 tileSet.TileSetRegion(id, region);
                 RectangleShape2D shape = new RectangleShape2D();
-                shape.Extents = _tileSize / 2;
+                shape.Extents = TileSize / 2;
                 tileSet.TileSetShape(id, id, shape);
-                tileSet.TileSetShapeOffset(id, id, _tileSize / 2);
+                tileSet.TileSetShapeOffset(id, id, TileSize / 2);
                 id++;
             }
         }
 
-        ResourceSaver.Save("res://src/Maps/Tiles/level3tiles.tres", tileSet);
+        ResourceSaver.Save(this.FilePath, tileSet);
     }
 }

@@ -1,0 +1,242 @@
+\hypertarget{class_profile_info}{}\doxysection{Profile\+Info Class Reference}
+\label{class_profile_info}\index{ProfileInfo@{ProfileInfo}}
+
+
+Class that contains the information of a player profile.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_profile_info_a64d5028a0453e904021a62e9280060b0}{Profile\+Info}} (string save\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Loads an existing profile from a file. If the profile doesn\textquotesingle{}t exist or the save file is corrupted, returns a profile with an id of 6. \end{DoxyCompactList}\item 
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_info_aa76d6f6543ff022b504863c8c3be9a89}{To\+Bytes}} ()
+\begin{DoxyCompactList}\small\item\em Writes the profile data to an array of bytes for saving in a file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profile_info_a81e55ae4a4e4b6d23593a365d61c8104}{Level\+Is\+Unlocked}} (int level)
+\begin{DoxyCompactList}\small\item\em Checks if the level is unlocked, that is if the level\textquotesingle{}s key has been bought from the store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_profile_info_a862fe52de0c6b90f0ecebd88e66aca58}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile id. Can be any number between 0 and 5. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_profile_info_af1ba331b8cf5fd72c3810474cd8398e7}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_profile_info_aeecc75ddc542bf84ec93284c40ff76e1}{Avatar}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile\textquotesingle{}s avatar. \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}{Points}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of points that the profile currently owns. \end{DoxyCompactList}\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_info_a23b8a612ac7dd13b9da286326d06c63c}{Owned\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of booleans in which each index corresponds to a store item\textquotesingle{}s id. Each element is true if the item was bought from the store and is currently owned and false otherwise. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_info_a7ad69ceb4d49fcef5f003480813e3103}{Level\+Progress}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_profile_info_a805ee5a226f8b409c061491779ed325e}{Current\+Level}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The level the player is currently in, that being the first level the player hasn\textquotesingle{}t completed or level 3 if all have been completed. \end{DoxyCompactList}\item 
+List$<$ int $>$ \mbox{\hyperlink{class_profile_info_a9bcca121ff10dd2e8874e112bbf4efd5}{Completed\+Levels}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of the levels the player has completed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_profile_info_a94b36da8925007bc7e2c938dc564077c}{Number\+Of\+Owned\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items the player has bought from the store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains the information of a player profile. 
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_profile_info_a64d5028a0453e904021a62e9280060b0}\label{class_profile_info_a64d5028a0453e904021a62e9280060b0}} 
+\index{ProfileInfo@{ProfileInfo}!ProfileInfo@{ProfileInfo}}
+\index{ProfileInfo@{ProfileInfo}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{ProfileInfo()}{ProfileInfo()}}
+{\footnotesize\ttfamily Profile\+Info.\+Profile\+Info (\begin{DoxyParamCaption}\item[{string}]{save\+File\+Path }\end{DoxyParamCaption})}
+
+
+
+Loads an existing profile from a file. If the profile doesn\textquotesingle{}t exist or the save file is corrupted, returns a profile with an id of 6. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em save\+File\+Path} & Path to the file where the profile is saved.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00125}{125}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_profile_info_a81e55ae4a4e4b6d23593a365d61c8104}\label{class_profile_info_a81e55ae4a4e4b6d23593a365d61c8104}} 
+\index{ProfileInfo@{ProfileInfo}!LevelIsUnlocked@{LevelIsUnlocked}}
+\index{LevelIsUnlocked@{LevelIsUnlocked}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{LevelIsUnlocked()}{LevelIsUnlocked()}}
+{\footnotesize\ttfamily bool Profile\+Info.\+Level\+Is\+Unlocked (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Checks if the level is unlocked, that is if the level\textquotesingle{}s key has been bought from the store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level\textquotesingle{}s number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the level is unlocked, else false.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00205}{205}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_aa76d6f6543ff022b504863c8c3be9a89}\label{class_profile_info_aa76d6f6543ff022b504863c8c3be9a89}} 
+\index{ProfileInfo@{ProfileInfo}!ToBytes@{ToBytes}}
+\index{ToBytes@{ToBytes}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{ToBytes()}{ToBytes()}}
+{\footnotesize\ttfamily byte\mbox{[}$\,$\mbox{]} Profile\+Info.\+To\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Writes the profile data to an array of bytes for saving in a file. 
+
+\begin{DoxyReturn}{Returns}
+A byte buffer containing the profile data
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00172}{172}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_profile_info_aeecc75ddc542bf84ec93284c40ff76e1}\label{class_profile_info_aeecc75ddc542bf84ec93284c40ff76e1}} 
+\index{ProfileInfo@{ProfileInfo}!Avatar@{Avatar}}
+\index{Avatar@{Avatar}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{Avatar}{Avatar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avatar}{Avatar}} Profile\+Info.\+Avatar\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The profile\textquotesingle{}s avatar. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a9bcca121ff10dd2e8874e112bbf4efd5}\label{class_profile_info_a9bcca121ff10dd2e8874e112bbf4efd5}} 
+\index{ProfileInfo@{ProfileInfo}!CompletedLevels@{CompletedLevels}}
+\index{CompletedLevels@{CompletedLevels}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{CompletedLevels}{CompletedLevels}}
+{\footnotesize\ttfamily List$<$int$>$ Profile\+Info.\+Completed\+Levels\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+A list of the levels the player has completed. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00082}{82}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a805ee5a226f8b409c061491779ed325e}\label{class_profile_info_a805ee5a226f8b409c061491779ed325e}} 
+\index{ProfileInfo@{ProfileInfo}!CurrentLevel@{CurrentLevel}}
+\index{CurrentLevel@{CurrentLevel}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{CurrentLevel}{CurrentLevel}}
+{\footnotesize\ttfamily int Profile\+Info.\+Current\+Level\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The level the player is currently in, that being the first level the player hasn\textquotesingle{}t completed or level 3 if all have been completed. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a862fe52de0c6b90f0ecebd88e66aca58}\label{class_profile_info_a862fe52de0c6b90f0ecebd88e66aca58}} 
+\index{ProfileInfo@{ProfileInfo}!ID@{ID}}
+\index{ID@{ID}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Profile\+Info.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The profile id. Can be any number between 0 and 5. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a7ad69ceb4d49fcef5f003480813e3103}\label{class_profile_info_a7ad69ceb4d49fcef5f003480813e3103}} 
+\index{ProfileInfo@{ProfileInfo}!LevelProgress@{LevelProgress}}
+\index{LevelProgress@{LevelProgress}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{LevelProgress}{LevelProgress}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Profile\+Info.\+Level\+Progress\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_af1ba331b8cf5fd72c3810474cd8398e7}\label{class_profile_info_af1ba331b8cf5fd72c3810474cd8398e7}} 
+\index{ProfileInfo@{ProfileInfo}!Name@{Name}}
+\index{Name@{Name}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Profile\+Info.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The profile name. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a94b36da8925007bc7e2c938dc564077c}\label{class_profile_info_a94b36da8925007bc7e2c938dc564077c}} 
+\index{ProfileInfo@{ProfileInfo}!NumberOfOwnedItems@{NumberOfOwnedItems}}
+\index{NumberOfOwnedItems@{NumberOfOwnedItems}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{NumberOfOwnedItems}{NumberOfOwnedItems}}
+{\footnotesize\ttfamily int Profile\+Info.\+Number\+Of\+Owned\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The number of items the player has bought from the store. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00104}{104}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a23b8a612ac7dd13b9da286326d06c63c}\label{class_profile_info_a23b8a612ac7dd13b9da286326d06c63c}} 
+\index{ProfileInfo@{ProfileInfo}!OwnedItems@{OwnedItems}}
+\index{OwnedItems@{OwnedItems}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{OwnedItems}{OwnedItems}}
+{\footnotesize\ttfamily bool \mbox{[}$\,$\mbox{]} Profile\+Info.\+Owned\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+An array of booleans in which each index corresponds to a store item\textquotesingle{}s id. Each element is true if the item was bought from the store and is currently owned and false otherwise. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+\mbox{\Hypertarget{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}\label{class_profile_info_a5cffb9b9c750919f0d0c88227ab78c58}} 
+\index{ProfileInfo@{ProfileInfo}!Points@{Points}}
+\index{Points@{Points}!ProfileInfo@{ProfileInfo}}
+\doxysubsubsection{\texorpdfstring{Points}{Points}}
+{\footnotesize\ttfamily UInt32 Profile\+Info.\+Points\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of points that the profile currently owns. 
+
+
+
+Definition at line \mbox{\hyperlink{_profile_info_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_profile_info_8cs_source}{Profile\+Info.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Profiles/\mbox{\hyperlink{_profile_info_8cs}{Profile\+Info.\+cs}}\end{DoxyCompactItemize}

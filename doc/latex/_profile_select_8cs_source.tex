@@ -1,0 +1,26 @@
+\hypertarget{_profile_select_8cs_source}{}\doxysection{Profile\+Select.\+cs}
+\label{_profile_select_8cs_source}\index{src/Scenes/ProfileSelect.cs@{src/Scenes/ProfileSelect.cs}}
+\mbox{\hyperlink{_profile_select_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00007}\mbox{\hyperlink{class_profile_select}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_profile_select}{ProfileSelect}} : Node2D}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00012}00012     \textcolor{keyword}{private} \mbox{\hyperlink{class_exit_game_popup}{ExitGamePopup}} exitPopup;}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00014}\mbox{\hyperlink{class_profile_select_a515df791d64afdf822a4b385694808f2}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_select_a515df791d64afdf822a4b385694808f2}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00016}00016         this.exitPopup = this.GetNode<ExitGamePopup>(\textcolor{stringliteral}{"{}GUI/ExitGamePopup"{}});}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00017}00017     \}}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00019}\mbox{\hyperlink{class_profile_select_a7a6b440025c061ead559d5a832a4ed42}{00019}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_select_a7a6b440025c061ead559d5a832a4ed42}{\_Process}}(\textcolor{keywordtype}{float} delta)}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00021}00021         \textcolor{keywordflow}{if} (Input.IsActionPressed(\textcolor{stringliteral}{"{}ui\_cancel"{}}))}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00022}00022         \{}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00023}00023             this.exitPopup.PopupCentered();}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00024}00024         \}}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_profile_select_8cs_source_l00026}00026 \}}
+
+\end{DoxyCode}

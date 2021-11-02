@@ -1,0 +1,256 @@
+\hypertarget{class_level}{}\doxysection{Level Class Reference}
+\label{class_level}\index{Level@{Level}}
+
+
+Base node for a game level scene.  
+
+
+Inheritance diagram for Level\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_level}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_level_a9b982efc154865a30a5c589d72f0a900}{\+\_\+\+Ready}} ()
+\item 
+override void \mbox{\hyperlink{class_level_adf87a658b5a922295a3bbab87f5820b5}{\+\_\+\+Process}} (float delta)
+\item 
+override void \mbox{\hyperlink{class_level_ab147d68f7a06156f6a0cd595bf58f75d}{\+\_\+\+Draw}} ()
+\item 
+void \mbox{\hyperlink{class_level_a20b2f496054effcd20120b8cb37c14dc}{Restart}} ()
+\begin{DoxyCompactList}\small\item\em Restarts the level, resets the player\textquotesingle{}s position and the hud. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_a209b18b3eef463ac8dc4caf19d869f11}{Update\+Progress}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the progress that the player currently has on the level. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_level_a866f3830aa6da6db116ecd9204b1b7a6}{Get\+Points}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of points that the player has earned on the current run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18}{Move\+View\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Moves the camera and the background to follow the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}{Pause}} ()
+\begin{DoxyCompactList}\small\item\em Pauses the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_a4bb15a932ab317c90d5de0623b9f8d88}{Save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Saves the player\textquotesingle{}s progress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_level_a6807430e5f1f262aca25e7bc40fbac90}{On\+Player\+Dead}} ()
+\item 
+void \mbox{\hyperlink{class_level_a08ef0cf0dd18af04729d4d01deaeea66}{On\+Hud\+Pause\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae}{On\+Hud\+Pause\+Mouse\+Entered}} ()
+\item 
+void \mbox{\hyperlink{class_level_a462cabf043b2870fda20d5a7c25e6d40}{On\+Hud\+Pause\+Mouse\+Exited}} ()
+\item 
+void \mbox{\hyperlink{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}{On\+Pause\+Menu\+Restart\+Pressed}} ()
+\item 
+void \mbox{\hyperlink{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}{On\+End\+Position\+Body\+Entered}} (Node body)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Vector2 $>$ \mbox{\hyperlink{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}{positions}} = new List$<$Vector2$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base node for a game level scene. 
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_ab147d68f7a06156f6a0cd595bf58f75d}\label{class_level_ab147d68f7a06156f6a0cd595bf58f75d}} 
+\index{Level@{Level}!\_Draw@{\_Draw}}
+\index{\_Draw@{\_Draw}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{\_Draw()}{\_Draw()}}
+{\footnotesize\ttfamily override void Level.\+\_\+\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00118}{118}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_adf87a658b5a922295a3bbab87f5820b5}\label{class_level_adf87a658b5a922295a3bbab87f5820b5}} 
+\index{Level@{Level}!\_Process@{\_Process}}
+\index{\_Process@{\_Process}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{\_Process()}{\_Process()}}
+{\footnotesize\ttfamily override void Level.\+\_\+\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a9b982efc154865a30a5c589d72f0a900}\label{class_level_a9b982efc154865a30a5c589d72f0a900}} 
+\index{Level@{Level}!\_Ready@{\_Ready}}
+\index{\_Ready@{\_Ready}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
+{\footnotesize\ttfamily override void Level.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a866f3830aa6da6db116ecd9204b1b7a6}\label{class_level_a866f3830aa6da6db116ecd9204b1b7a6}} 
+\index{Level@{Level}!GetPoints@{GetPoints}}
+\index{GetPoints@{GetPoints}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetPoints()}{GetPoints()}}
+{\footnotesize\ttfamily int Level.\+Get\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of points that the player has earned on the current run. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00168}{168}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18}\label{class_level_a37da9eda7a3cd74e5a8c4d5e92e83b18}} 
+\index{Level@{Level}!MoveViewPort@{MoveViewPort}}
+\index{MoveViewPort@{MoveViewPort}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{MoveViewPort()}{MoveViewPort()}}
+{\footnotesize\ttfamily void Level.\+Move\+View\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Moves the camera and the background to follow the player. 
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00176}{176}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}\label{class_level_aa0e6bfa6d80ec968a1995f395e016a0b}} 
+\index{Level@{Level}!OnEndPositionBodyEntered@{OnEndPositionBodyEntered}}
+\index{OnEndPositionBodyEntered@{OnEndPositionBodyEntered}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnEndPositionBodyEntered()}{OnEndPositionBodyEntered()}}
+{\footnotesize\ttfamily void Level.\+On\+End\+Position\+Body\+Entered (\begin{DoxyParamCaption}\item[{Node}]{body }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00240}{240}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae}\label{class_level_a2cd7ebf61994f7cc65f672f8cc0b20ae}} 
+\index{Level@{Level}!OnHudPauseMouseEntered@{OnHudPauseMouseEntered}}
+\index{OnHudPauseMouseEntered@{OnHudPauseMouseEntered}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnHudPauseMouseEntered()}{OnHudPauseMouseEntered()}}
+{\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Mouse\+Entered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00225}{225}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a462cabf043b2870fda20d5a7c25e6d40}\label{class_level_a462cabf043b2870fda20d5a7c25e6d40}} 
+\index{Level@{Level}!OnHudPauseMouseExited@{OnHudPauseMouseExited}}
+\index{OnHudPauseMouseExited@{OnHudPauseMouseExited}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnHudPauseMouseExited()}{OnHudPauseMouseExited()}}
+{\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Mouse\+Exited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00230}{230}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a08ef0cf0dd18af04729d4d01deaeea66}\label{class_level_a08ef0cf0dd18af04729d4d01deaeea66}} 
+\index{Level@{Level}!OnHudPausePressed@{OnHudPausePressed}}
+\index{OnHudPausePressed@{OnHudPausePressed}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnHudPausePressed()}{OnHudPausePressed()}}
+{\footnotesize\ttfamily void Level.\+On\+Hud\+Pause\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00220}{220}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}\label{class_level_a4ecafdfb8a186ec3bffe2cae913616f8}} 
+\index{Level@{Level}!OnPauseMenuRestartPressed@{OnPauseMenuRestartPressed}}
+\index{OnPauseMenuRestartPressed@{OnPauseMenuRestartPressed}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnPauseMenuRestartPressed()}{OnPauseMenuRestartPressed()}}
+{\footnotesize\ttfamily void Level.\+On\+Pause\+Menu\+Restart\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00235}{235}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a6807430e5f1f262aca25e7bc40fbac90}\label{class_level_a6807430e5f1f262aca25e7bc40fbac90}} 
+\index{Level@{Level}!OnPlayerDead@{OnPlayerDead}}
+\index{OnPlayerDead@{OnPlayerDead}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnPlayerDead()}{OnPlayerDead()}}
+{\footnotesize\ttfamily void Level.\+On\+Player\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00215}{215}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}\label{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}} 
+\index{Level@{Level}!Pause@{Pause}}
+\index{Pause@{Pause}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Level.\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pauses the game. 
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00197}{197}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a20b2f496054effcd20120b8cb37c14dc}\label{class_level_a20b2f496054effcd20120b8cb37c14dc}} 
+\index{Level@{Level}!Restart@{Restart}}
+\index{Restart@{Restart}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Restart()}{Restart()}}
+{\footnotesize\ttfamily void Level.\+Restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restarts the level, resets the player\textquotesingle{}s position and the hud. 
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00129}{129}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a4bb15a932ab317c90d5de0623b9f8d88}\label{class_level_a4bb15a932ab317c90d5de0623b9f8d88}} 
+\index{Level@{Level}!SaveData@{SaveData}}
+\index{SaveData@{SaveData}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{SaveData()}{SaveData()}}
+{\footnotesize\ttfamily void Level.\+Save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the player\textquotesingle{}s progress. 
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00205}{205}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+\mbox{\Hypertarget{class_level_a209b18b3eef463ac8dc4caf19d869f11}\label{class_level_a209b18b3eef463ac8dc4caf19d869f11}} 
+\index{Level@{Level}!UpdateProgress@{UpdateProgress}}
+\index{UpdateProgress@{UpdateProgress}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{UpdateProgress()}{UpdateProgress()}}
+{\footnotesize\ttfamily void Level.\+Update\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calculates the progress that the player currently has on the level. 
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}\label{class_level_a68bdb4fa6a0a7d317daaaf44c06599f2}} 
+\index{Level@{Level}!positions@{positions}}
+\index{positions@{positions}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{positions}{positions}}
+{\footnotesize\ttfamily List$<$Vector2$>$ Level.\+positions = new List$<$Vector2$>$()}
+
+
+
+Definition at line \mbox{\hyperlink{_level_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_level_8cs_source}{Level.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Maps/\mbox{\hyperlink{_level_8cs}{Level.\+cs}}\end{DoxyCompactItemize}

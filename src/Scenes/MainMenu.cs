@@ -1,22 +1,25 @@
 using Godot;
 using System;
 
+/// <summary>
+///     The main menu of the game.
+/// </summary>
 public class MainMenu : Node2D
 {
+    /// <summary>
+    ///     The panel for editing the player's profile.
+    /// </summary>
     private PackedScene editProfile = ResourceLoader.Load<PackedScene>("res://src/Scenes/EditProfileGUI.tscn");
+    
+    /// <summary>
+    ///     The panel that contains the game's shop.
+    /// </summary>
     private PackedScene shop = ResourceLoader.Load<PackedScene>("res://src/Scenes/ShopGUI.tscn");
-    private TextureButton playButton;
-    private TextureButton exitButton;
-    private ConfirmationDialog exitPopup;
 
     public override void _Ready()
     {
-        this.playButton = this.GetNode<TextureButton>("GUI/VBoxContainer/Buttons/PlayButton");
-        this.exitButton = this.GetNode<TextureButton>("GUI/VBoxContainer/Buttons/ExitButton");
-        this.exitPopup = this.GetNode<ConfirmationDialog>("GUI/ExitGamePopup");
-
-        this.playButton.Connect("pressed", this, nameof(this.OnPlayButtonPressed));
-        this.exitButton.Connect("pressed", this, nameof(this.OnExitButtonPressed));
+        this.GetNode<TextureButton>("GUI/VBoxContainer/Buttons/PlayButton").Connect("pressed", this, nameof(this.OnPlayButtonPressed));
+        this.GetNode<TextureButton>("GUI/VBoxContainer/Buttons/ExitButton").Connect("pressed", this, nameof(this.OnExitButtonPressed));
         this.GetNode("GUI/ProfileGUI").Connect("ShopPressed", this, nameof(this.OnProfileGUIShopPressed));
         this.GetNode("GUI/ProfileGUI").Connect("EditPressed", this, nameof(this.OnProfileGUIEditPressed));
         this.GetNode("GUI/LevelPicker").Connect("ValueChanged", this, nameof(this.OnLevelPickerValueChanged));
@@ -31,7 +34,7 @@ public class MainMenu : Node2D
     {
         if (Input.IsActionPressed("ui_cancel"))
         {
-            this.exitPopup.PopupCentered();
+            this.GetNode<ConfirmationDialog>("GUI/ExitGamePopup").PopupCentered();
         }
     }
 
@@ -62,7 +65,7 @@ public class MainMenu : Node2D
 
     public void OnExitButtonPressed()
     {
-        this.exitPopup.PopupCentered();
+        this.GetNode<ConfirmationDialog>("GUI/ExitGamePopup").PopupCentered();
     }
 
     public void OnProfileChanged()

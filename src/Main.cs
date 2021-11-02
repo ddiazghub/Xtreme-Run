@@ -1,10 +1,29 @@
 using Godot;
 using System;
 
-public class Main : Node2D
-{
+/// <summary>
+///     The main Node of the game.
+///     It is a state machine that executes a single scene at a time.
+/// </summary>
+public class Main : Node2D {
+
+    /// <summary>
+    ///     Size of the game's window.
+    /// </summary>
     public static readonly Vector2 WINDOW_SIZE = new Vector2(1280, 720);
-    public Node2D currentScene;
+
+    /// <summary>
+    ///     The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3.
+    /// </summary>
+    public Node2D Scene
+    {
+        get;
+        private set;
+    }
+
+    /// <summary>
+    ///     Factory for creating new scene instances.
+    /// </summary>
     private SceneFactory sceneFactory;
 
     public override void _Ready()
@@ -14,18 +33,18 @@ public class Main : Node2D
         this.ChangeScene(GameScenes.PROFILE_SELECT);
     }
 
-    public override void _Process(float delta)
-    {
-    }
-
+    /// <summary>
+    ///     Changes the currently active game scene.
+    /// </summary>
+    /// <param name="scene">The new scene.</param>
     public void ChangeScene(GameScenes scene)
     {
-        if (this.currentScene != null)
+        if (this.Scene != null)
         {
-            this.currentScene.QueueFree();
+            this.Scene.QueueFree();
         }
 
-        this.currentScene = this.sceneFactory.New(scene);
-        this.AddChild(this.currentScene);
+        this.Scene = this.sceneFactory.New(scene);
+        this.AddChild(this.Scene);
     }
 }

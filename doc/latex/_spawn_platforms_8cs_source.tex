@@ -1,0 +1,51 @@
+\hypertarget{_spawn_platforms_8cs_source}{}\doxysection{Spawn\+Platforms.\+cs}
+\label{_spawn_platforms_8cs_source}\index{src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs@{src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs}}
+\mbox{\hyperlink{_spawn_platforms_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00007}\mbox{\hyperlink{class_spawn_platforms}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_spawn_platforms}{SpawnPlatforms}}: \mbox{\hyperlink{class_secondary_action}{SecondaryAction}} \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00012}\mbox{\hyperlink{class_spawn_platforms_a907b6a7456095772af3765d68af5cdc4}{00012}}     [Export] \textcolor{keyword}{public} PackedScene \mbox{\hyperlink{class_spawn_platforms_a907b6a7456095772af3765d68af5cdc4}{PlatformScene}} = ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Entities/Player/SpawnedPlatform/SpawnedPlatform.tscn"{}});}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00013}00013     }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00014}\mbox{\hyperlink{class_spawn_platforms_a223516f8a535749e901f616dd804bb4f}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawn_platforms_a223516f8a535749e901f616dd804bb4f}{\_Init}}()}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00016}00016         base.\_Init();}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00017}00017         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondaryActionTimer}}.WaitTime = 1f;}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00020}\mbox{\hyperlink{class_spawn_platforms_a2a9b1a8f7dc1af458b60059ba08bc847}{00020}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawn_platforms_a2a9b1a8f7dc1af458b60059ba08bc847}{\_ActionOnGround}}()}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00023}00023     }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00025}\mbox{\hyperlink{class_spawn_platforms_ae11d1949e82b9a316f530ac977d432b8}{00025}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawn_platforms_ae11d1949e82b9a316f530ac977d432b8}{\_ActionOnAir}}()}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00026}00026     \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00027}00027         \mbox{\hyperlink{class_spawned_platform}{SpawnedPlatform}} platform = this.PlatformScene.Instance<\mbox{\hyperlink{class_spawned_platform}{SpawnedPlatform}}>();}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00028}00028         }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00029}00029         \textcolor{keywordtype}{int} verticalSpace = 30;}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00031}00031         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a9c06a72ba615b0e764ad4ff428e8119d}{InvertedGravity}})}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00033}00033             platform.Position = \textcolor{keyword}{new} Vector2( this.\mbox{\hyperlink{class_player}{Player}}.Position.x + 1.2f * ((RectangleShape2D) platform.GetNode<CollisionShape2D>(\textcolor{stringliteral}{"{}CollisionShape2D"{}}).Shape).Extents.x, \textcolor{keyword}{this}.Player.Position.y -\/ (((CapsuleShape2D) \textcolor{keyword}{this}.Player.runningCollision.Shape).Height / 2 + verticalSpace));}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00035}00035         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00037}00037             platform.Position = \textcolor{keyword}{new} Vector2( this.\mbox{\hyperlink{class_player}{Player}}.Position.x + 1.2f * ((RectangleShape2D) platform.GetNode<CollisionShape2D>(\textcolor{stringliteral}{"{}CollisionShape2D"{}}).Shape).Extents.x, \textcolor{keyword}{this}.Player.Position.y + (((CapsuleShape2D) \textcolor{keyword}{this}.Player.runningCollision.Shape).Height / 2 + verticalSpace));}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00038}00038         \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00039}00039         }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00040}00040         this.\mbox{\hyperlink{class_player}{Player}}.GetParent().AddChild(platform);}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00041}00041         this.\mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{Blocked}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00044}\mbox{\hyperlink{class_spawn_platforms_a3eeaa79c708598234334fda9cb7f156e}{00044}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawn_platforms_a3eeaa79c708598234334fda9cb7f156e}{\_ActionReleased}}()}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00046}00046         base.\_ActionReleased();}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00048}\mbox{\hyperlink{class_spawn_platforms_a6c1b2b02211d0597d497209ae78ddca0}{00048}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawn_platforms_a6c1b2b02211d0597d497209ae78ddca0}{OnSecondaryActionTimerTimeout}}()}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_spawn_platforms_8cs_source_l00051}00051 \}}
+
+\end{DoxyCode}

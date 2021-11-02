@@ -1,11 +1,20 @@
 using Godot;
 using System;
 
-public class CreateProfileDialog : ConfirmationDialog
-{
+/// <summary>
+///     Popup for the creation of new profiles.
+/// </summary>
+public class CreateProfileDialog : ConfirmationDialog {
+    
+    /// <summary>
+    ///     Emitted if the profiled wasn't created succesfully.
+    /// </summary>
     [Signal]
     public delegate void CreationFailed();
 
+    /// <summary>
+    ///     The id of the profile to create.
+    /// </summary>
     private int profileID;
 
     public override void _Ready()

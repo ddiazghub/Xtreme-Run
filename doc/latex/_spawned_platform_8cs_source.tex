@@ -1,0 +1,25 @@
+\hypertarget{_spawned_platform_8cs_source}{}\doxysection{Spawned\+Platform.\+cs}
+\label{_spawned_platform_8cs_source}\index{src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs@{src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs}}
+\mbox{\hyperlink{_spawned_platform_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00008}\mbox{\hyperlink{class_spawned_platform}{00008}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_spawned_platform}{SpawnedPlatform}} : StaticBody2D}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00013}00013     \textcolor{keyword}{private} Timer destroyTimer;}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00015}\mbox{\hyperlink{class_spawned_platform_a5e915c7b81f6b338b20e3fd92c7bcad5}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawned_platform_a5e915c7b81f6b338b20e3fd92c7bcad5}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00017}00017         this.Scale *= \textcolor{keyword}{new} Vector2(1.5f, 1);}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00018}00018         this.destroyTimer = this.GetNode<Timer>(\textcolor{stringliteral}{"{}DestroyTimer"{}});}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00019}00019         this.destroyTimer.Connect(\textcolor{stringliteral}{"{}timeout"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}{OnDestroyTimerTimeout}}));}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00020}00020     \}}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00022}\mbox{\hyperlink{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}{00022}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_spawned_platform_a68da967a2be8ba98d0909e05304ba71f}{OnDestroyTimerTimeout}}()}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00023}00023     \{}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00024}00024         this.QueueFree();}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_spawned_platform_8cs_source_l00026}00026 \}}
+
+\end{DoxyCode}

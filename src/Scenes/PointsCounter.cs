@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Node for displaying a number of points.
+/// </summary>
 public class PointsCounter : MarginContainer
 {
     private Vector2 initialPosition;
@@ -12,6 +15,10 @@ public class PointsCounter : MarginContainer
         this.iconInitialPosition = this.GetNode<TextureRect>("Background/Icon").RectPosition;
     }
 
+    /// <summary>
+    ///     Sets a new number of points to display.
+    /// </summary>
+    /// <param name="points">Number of points.</param>
     public void Set(UInt32 points)
     {
         this.RectSize = new Vector2(104, 46);
@@ -30,11 +37,5 @@ public class PointsCounter : MarginContainer
         this.RectPosition += new Vector2(-labelSize, 0);
         icon.RectPosition += new Vector2(labelSize, 0);
         label.Text = text;
-    }
-
-    public void Reset()
-    {
-        this.RectSize = new Vector2(104, 46);
-        this.GetNode<Label>("Background/Label").Text = "0";
     }
 }

@@ -1,0 +1,185 @@
+\hypertarget{class_glide}{}\doxysection{Glide Class Reference}
+\label{class_glide}\index{Glide@{Glide}}
+
+
+\mbox{\hyperlink{class_main}{Main}} action that allows the player to glide for some time.  
+
+
+Inheritance diagram for Glide\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_glide}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_glide_a12360a9f1b649403f8e018ba7347ed76}{\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_glide_aa56164cb76d7401b99ab8f2ba5dcc397}{\+\_\+\+State\+Physics\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The physics process that will be called each frame for the state. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_glide_a807e0e90013a5c0f6b509a565efeff27}{\+\_\+\+Action\+On\+Ground}} ()
+\item 
+override void \mbox{\hyperlink{class_glide_a701b0bc067e81b3d3fca24aaf4293088}{\+\_\+\+Action\+On\+Air}} ()
+\item 
+override void \mbox{\hyperlink{class_glide_a2353d380d6897004724d34c31838f798}{\+\_\+\+Action\+Released}} ()
+\item 
+override void \mbox{\hyperlink{class_glide_a14d5f2b568b6a3573166ffe8384a5be5}{\+\_\+\+Action\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The process that will be executed each frame while the action is being performed. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_glide_a721ca45c8d7ddfeb0b25f726540c770d}{On\+Main\+Action\+Timer\+Timeout}} ()
+\item 
+override void \mbox{\hyperlink{class_glide_ac7d01853752f27addde9526b665b3d62}{On\+Main\+Action\+Object\+Collision\+Check\+Area\+Entered}} (Area2D area)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_main}{Main}} action that allows the player to glide for some time. 
+
+~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_glide_a701b0bc067e81b3d3fca24aaf4293088}\label{class_glide_a701b0bc067e81b3d3fca24aaf4293088}} 
+\index{Glide@{Glide}!\_ActionOnAir@{\_ActionOnAir}}
+\index{\_ActionOnAir@{\_ActionOnAir}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnAir()}{\_ActionOnAir()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+Action\+On\+Air (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_main_action_a61b3c6152e024c014e7d810feb94fc74}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_a807e0e90013a5c0f6b509a565efeff27}\label{class_glide_a807e0e90013a5c0f6b509a565efeff27}} 
+\index{Glide@{Glide}!\_ActionOnGround@{\_ActionOnGround}}
+\index{\_ActionOnGround@{\_ActionOnGround}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnGround()}{\_ActionOnGround()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+Action\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_main_action_a0d3e4403cb876a28ae3383daba402fce}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_a14d5f2b568b6a3573166ffe8384a5be5}\label{class_glide_a14d5f2b568b6a3573166ffe8384a5be5}} 
+\index{Glide@{Glide}!\_ActionProcess@{\_ActionProcess}}
+\index{\_ActionProcess@{\_ActionProcess}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_ActionProcess()}{\_ActionProcess()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+Action\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The process that will be executed each frame while the action is being performed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_main_action_abad27d048abd3f377cf7f2e1e15f6975}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00123}{123}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_a2353d380d6897004724d34c31838f798}\label{class_glide_a2353d380d6897004724d34c31838f798}} 
+\index{Glide@{Glide}!\_ActionReleased@{\_ActionReleased}}
+\index{\_ActionReleased@{\_ActionReleased}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_ActionReleased()}{\_ActionReleased()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+Action\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_a12360a9f1b649403f8e018ba7347ed76}\label{class_glide_a12360a9f1b649403f8e018ba7347ed76}} 
+\index{Glide@{Glide}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Implements \mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{Player\+State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_aa56164cb76d7401b99ab8f2ba5dcc397}\label{class_glide_aa56164cb76d7401b99ab8f2ba5dcc397}} 
+\index{Glide@{Glide}!\_StatePhysicsProcess@{\_StatePhysicsProcess}}
+\index{\_StatePhysicsProcess@{\_StatePhysicsProcess}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{\_StatePhysicsProcess()}{\_StatePhysicsProcess()}}
+{\footnotesize\ttfamily override void Glide.\+\_\+\+State\+Physics\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The physics process that will be called each frame for the state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since the last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{Player\+State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_ac7d01853752f27addde9526b665b3d62}\label{class_glide_ac7d01853752f27addde9526b665b3d62}} 
+\index{Glide@{Glide}!OnMainActionObjectCollisionCheckAreaEntered@{OnMainActionObjectCollisionCheckAreaEntered}}
+\index{OnMainActionObjectCollisionCheckAreaEntered@{OnMainActionObjectCollisionCheckAreaEntered}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{OnMainActionObjectCollisionCheckAreaEntered()}{OnMainActionObjectCollisionCheckAreaEntered()}}
+{\footnotesize\ttfamily override void Glide.\+On\+Main\+Action\+Object\+Collision\+Check\+Area\+Entered (\begin{DoxyParamCaption}\item[{Area2D}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00157}{157}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+\mbox{\Hypertarget{class_glide_a721ca45c8d7ddfeb0b25f726540c770d}\label{class_glide_a721ca45c8d7ddfeb0b25f726540c770d}} 
+\index{Glide@{Glide}!OnMainActionTimerTimeout@{OnMainActionTimerTimeout}}
+\index{OnMainActionTimerTimeout@{OnMainActionTimerTimeout}!Glide@{Glide}}
+\doxysubsubsection{\texorpdfstring{OnMainActionTimerTimeout()}{OnMainActionTimerTimeout()}}
+{\footnotesize\ttfamily override void Glide.\+On\+Main\+Action\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_main_action_a17693bd0c6cc2a114af83d0f843baaa4}{Main\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{_glide_8cs_source_l00137}{137}} of file \mbox{\hyperlink{_glide_8cs_source}{Glide.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entities/\+Player/\+Player\+States/\+Action/\+Main/\mbox{\hyperlink{_glide_8cs}{Glide.\+cs}}\end{DoxyCompactItemize}

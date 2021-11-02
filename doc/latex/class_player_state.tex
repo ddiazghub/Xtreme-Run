@@ -1,0 +1,106 @@
+\hypertarget{class_player_state}{}\doxysection{Player\+State Class Reference}
+\label{class_player_state}\index{PlayerState@{PlayerState}}
+
+
+Class that contains the base structure for a state that the player can have.  
+
+
+Inheritance diagram for Player\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.912176cm]{class_player_state}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_state_a104dd6b861334c1c4f9cb2a9d322403c}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{\+\_\+\+State\+Physics\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The physics process that will be called each frame for the state. \end{DoxyCompactList}\item 
+abstract void \mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_player_state_a8fc13ad7ffde3b39b92acddabf17dc7b}{Player}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The player that owns the current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains the base structure for a state that the player can have. 
+
+Definition at line \mbox{\hyperlink{_player_state_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_player_state_8cs_source}{Player\+State.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_state_a7c94c3f0cc97f388f281c524523d311e}\label{class_player_state_a7c94c3f0cc97f388f281c524523d311e}} 
+\index{PlayerState@{PlayerState}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!PlayerState@{PlayerState}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily abstract void Player\+State.\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Implemented in \mbox{\hyperlink{class_glide_a12360a9f1b649403f8e018ba7347ed76}{Glide}}, \mbox{\hyperlink{class_jetpack_a71bdeb3eeccdbca43f304ae31b5c206b}{Jetpack}}, \mbox{\hyperlink{class_jump_a1c628cf6144679785b27250e8b496234}{Jump}}, \mbox{\hyperlink{class_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95}{Main\+Action}}, \mbox{\hyperlink{class_teleport_ac3436447bedf6cb700213b8c7f9641df}{Teleport}}, \mbox{\hyperlink{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}{Secondary\+Action}}, \mbox{\hyperlink{class_spawn_platforms_a223516f8a535749e901f616dd804bb4f}{Spawn\+Platforms}}, \mbox{\hyperlink{class_switch_gravity_ae2eeee76ac6fd739b6181e1d80bcf54b}{Switch\+Gravity}}, \mbox{\hyperlink{class_teleport_and_switch_gravity_a5a48df9387198b5ea63957f884a513f8}{Teleport\+And\+Switch\+Gravity}}, \mbox{\hyperlink{class_on_air_state_a4981def48203f62c802d6803e829fbbb}{On\+Air\+State}}, \mbox{\hyperlink{class_on_ground_state_af9b72404be0c026cc9da18396aa214d2}{On\+Ground\+State}}, and \mbox{\hyperlink{class_persistent_state_aa3bb922abb6c7a699b5990b1b9d83afc}{Persistent\+State}}.
+
+\mbox{\Hypertarget{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}\label{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}} 
+\index{PlayerState@{PlayerState}!\_StatePhysicsProcess@{\_StatePhysicsProcess}}
+\index{\_StatePhysicsProcess@{\_StatePhysicsProcess}!PlayerState@{PlayerState}}
+\doxysubsubsection{\texorpdfstring{\_StatePhysicsProcess()}{\_StatePhysicsProcess()}}
+{\footnotesize\ttfamily abstract void Player\+State.\+\_\+\+State\+Physics\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The physics process that will be called each frame for the state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since the last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_glide_aa56164cb76d7401b99ab8f2ba5dcc397}{Glide}}, \mbox{\hyperlink{class_main_action_ab2261aec55fea5dc4490545410b8b279}{Main\+Action}}, \mbox{\hyperlink{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}{Secondary\+Action}}, \mbox{\hyperlink{class_switch_gravity_a2d96d7d7d7c08aed0d22908002299ddc}{Switch\+Gravity}}, \mbox{\hyperlink{class_on_air_state_a8fc8b56eac0dd06f4976543b32420f57}{On\+Air\+State}}, \mbox{\hyperlink{class_on_ground_state_ab00fe4c5fbbe3d27cf9e7cdf726e2614}{On\+Ground\+State}}, and \mbox{\hyperlink{class_persistent_state_a197779850b8a9fbef055982249582ef3}{Persistent\+State}}.
+
+\mbox{\Hypertarget{class_player_state_a104dd6b861334c1c4f9cb2a9d322403c}\label{class_player_state_a104dd6b861334c1c4f9cb2a9d322403c}} 
+\index{PlayerState@{PlayerState}!Setup@{Setup}}
+\index{Setup@{Setup}!PlayerState@{PlayerState}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Player\+State.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Definition at line \mbox{\hyperlink{_player_state_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_player_state_8cs_source}{Player\+State.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_player_state_a8fc13ad7ffde3b39b92acddabf17dc7b}\label{class_player_state_a8fc13ad7ffde3b39b92acddabf17dc7b}} 
+\index{PlayerState@{PlayerState}!Player@{Player}}
+\index{Player@{Player}!PlayerState@{PlayerState}}
+\doxysubsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} Player\+State.\+Player\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+The player that owns the current state. 
+
+
+
+Definition at line \mbox{\hyperlink{_player_state_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_player_state_8cs_source}{Player\+State.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entities/\+Player/\+Player\+States/\mbox{\hyperlink{_player_state_8cs}{Player\+State.\+cs}}\end{DoxyCompactItemize}

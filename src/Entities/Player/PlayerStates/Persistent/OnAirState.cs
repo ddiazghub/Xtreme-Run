@@ -1,45 +1,48 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Persisten state when the player is on air.
+/// </summary>
 public class OnAirState: PersistentState {
 
 
     public override void _Init()
     {
         base._Init();
-        this.player.animation.Play("running");
-        this.player.SetHitbox(PlayerPersistentState.ON_AIR);
+        this.Player.animation.Play("running");
+        this.Player.SetHitbox(PlayerPersistentState.ON_AIR);
     }
 
     public override void _StatePhysicsProcess(float delta)
     {
         base._StatePhysicsProcess(delta);
 
-        if (this.player.IsOnFloor())
+        if (this.Player.IsOnFloor())
         {
-            this.player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
+            this.Player.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         }
 
-        if (Math.Abs(this.player.linearVelocity.y) < this.player.DEFAULT_GRAVITY)
-            this.player.linearVelocity.y += this.player.gravity / 5;
+        if (Math.Abs(this.Player.linearVelocity.y) < this.Player.DEFAULT_GRAVITY)
+            this.Player.linearVelocity.y += this.Player.Gravity / 5;
         else
-            this.player.linearVelocity.y += this.player.gravity;
+            this.Player.linearVelocity.y += this.Player.Gravity;
 
-        if (this.player.invertedGravity)
+        if (this.Player.InvertedGravity)
         {
-            if (this.player.linearVelocity.y > -this.player.jumpForce)
-                this.player.linearVelocity.y = -this.player.jumpForce;
+            if (this.Player.linearVelocity.y > -this.Player.JumpForce)
+                this.Player.linearVelocity.y = -this.Player.JumpForce;
 
-            if (this.player.linearVelocity.y < -this.player.maxFallSpeed)
-                this.player.linearVelocity.y = -this.player.maxFallSpeed;
+            if (this.Player.linearVelocity.y < -this.Player.MaxFallSpeed)
+                this.Player.linearVelocity.y = -this.Player.MaxFallSpeed;
         }
         else
         {
-            if (this.player.linearVelocity.y > this.player.maxFallSpeed)
-                this.player.linearVelocity.y = this.player.maxFallSpeed;
+            if (this.Player.linearVelocity.y > this.Player.MaxFallSpeed)
+                this.Player.linearVelocity.y = this.Player.MaxFallSpeed;
 
-            if (this.player.linearVelocity.y < -this.player.jumpForce)
-                this.player.linearVelocity.y = -this.player.jumpForce;
+            if (this.Player.linearVelocity.y < -this.Player.JumpForce)
+                this.Player.linearVelocity.y = -this.Player.JumpForce;
         }
     }
 }

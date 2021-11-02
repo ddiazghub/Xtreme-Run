@@ -1,20 +1,23 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Secondary action that allows the player to teleport and invert the direction of gravity.
+/// </summary>
 public class TeleportAndSwitchGravity: SecondaryAction {
     public override void _Init()
     {
         base._Init();
-        this.player.secondaryActionTimer.WaitTime = 0.04f;
+        this.Player.secondaryActionTimer.WaitTime = 0.04f;
     }
 
     public override void _ActionOnGround()
     {
-        this.player.maxFallSpeed = 8333;
-        this.player.Visible = false;
-        this.player.linearVelocity.y -= 1000 * this.player.gravity;
-        this.player.secondaryActionTimer.Start();
-        this.player.invincible = true;
+        this.Player.MaxFallSpeed = 8333;
+        this.Player.Visible = false;
+        this.Player.linearVelocity.y -= 1000 * this.Player.Gravity;
+        this.Player.secondaryActionTimer.Start();
+        this.Player.Invincible = true;
         this.invertGravity();
         base._ActionOnGround();
     }
@@ -31,18 +34,21 @@ public class TeleportAndSwitchGravity: SecondaryAction {
 
     public override void OnSecondaryActionTimerTimeout()
     {
-        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
-        this.player.linearVelocity.y = 0;
-        this.player.Visible = true;
-        this.player.invincible = false;
-        this.player.secondaryActionTimer.Stop();
+        this.Player.MaxFallSpeed = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.linearVelocity.y = 0;
+        this.Player.Visible = true;
+        this.Player.Invincible = false;
+        this.Player.secondaryActionTimer.Stop();
     }
 
+    /// <summary>
+    ///     Invert's the player's gravity.
+    /// </summary>
     public void invertGravity()
     {
-        this.player.invertGravity();
-        this.player.secondaryActionTimer.Start();
+        this.Player.InvertGravity();
+        this.Player.secondaryActionTimer.Start();
 
-        this.blocked = true;
+        this.Blocked = true;
     }
 }

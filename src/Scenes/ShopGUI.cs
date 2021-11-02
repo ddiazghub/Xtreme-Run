@@ -1,13 +1,35 @@
 using Godot;
 using System;
 
+/// <summary>
+///     The shop from which the player can buy items.
+/// </summary>
 public class ShopGUI : NinePatchRect
 {
+    /// <summary>
+    ///     Emitted if the player profile changed. (If an item was bought)
+    /// </summary>
     [Signal]
     public delegate void ProfileChanged();
+
+    /// <summary>
+    ///     Array containing the cost of each item.
+    /// </summary>
     private UInt32[] itemCost;
+
+    /// <summary>
+    ///     Image texture of the check for labeling owned items.
+    /// </summary>
     private Texture checkTick = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/store_check.png");
+    
+    /// <summary>
+    ///     The currently selected item.
+    /// </summary>
     private int selected = -1;
+
+    /// <summary>
+    ///     Keys for labeling items.
+    /// </summary>
     private string[] keys = {
         "Skin",
         "Clothing",

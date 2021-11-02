@@ -1,0 +1,106 @@
+\hypertarget{_palette_8cs_source}{}\doxysection{Palette.\+cs}
+\label{_palette_8cs_source}\index{src/Shaders/Palette.cs@{src/Shaders/Palette.cs}}
+\mbox{\hyperlink{_palette_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00008}\mbox{\hyperlink{class_palette}{00008}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_palette}{Palette}} \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00012}00012     \textcolor{keyword}{private} \textcolor{keyword}{static} \mbox{\hyperlink{class_palette}{Palette}} instance;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00017}\mbox{\hyperlink{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}{00017}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly \textcolor{keywordtype}{int} \mbox{\hyperlink{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}{NUMBER\_OF\_COLORS}} = 15;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00022}\mbox{\hyperlink{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}{00022}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly Color \mbox{\hyperlink{class_palette_a44a68690ee2f0d0a89d0e8198644b80e}{DEFAULT\_THRESHOLD}} = \textcolor{keyword}{new} Color(0.1f, 0.1f, 0.1f);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00027}\mbox{\hyperlink{class_palette_a83dcff72ec74e3643896ae30fda9efb8}{00027}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly Dictionary<string, Color[]> \mbox{\hyperlink{class_palette_a83dcff72ec74e3643896ae30fda9efb8}{DEFAULT\_COLORS\_MALE}} = \textcolor{keyword}{new} Dictionary<string, Color[]>()}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00029}00029         [\textcolor{stringliteral}{"{}Skin"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00030}00030             \textcolor{keyword}{new} Color(223, 161, 113) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00031}00031             \textcolor{keyword}{new} Color (220, 126, 82) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00032}00032             \textcolor{keyword}{new} Color (220, 191, 165) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00033}00033             \textcolor{keyword}{new} Color (245, 156, 120) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00034}00034         \},}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00036}00036         [\textcolor{stringliteral}{"{}Top"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00037}00037             \textcolor{keyword}{new} Color(42, 90, 57) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00038}00038             \textcolor{keyword}{new} Color (30, 53, 52) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00039}00039             \textcolor{keyword}{new} Color (53, 81, 67) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00040}00040         \},}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00042}00042         [\textcolor{stringliteral}{"{}Bottom"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00043}00043             \textcolor{keyword}{new} Color(158, 77, 82) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00044}00044             \textcolor{keyword}{new} Color (82, 59, 64) / 255}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00046}00046     \};}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00051}\mbox{\hyperlink{class_palette_abbd927c544d691dd9cd193d0f2d733e4}{00051}}     \textcolor{keyword}{public} \textcolor{keyword}{static} readonly Dictionary<string, Color[]> \mbox{\hyperlink{class_palette_abbd927c544d691dd9cd193d0f2d733e4}{DEFAULT\_COLORS\_FEMALE}} = \textcolor{keyword}{new} Dictionary<string, Color[]>()}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00053}00053         [\textcolor{stringliteral}{"{}Skin"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00054}00054             \textcolor{keyword}{new} Color(223, 161, 113) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00055}00055             \textcolor{keyword}{new} Color (248, 179, 123) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00056}00056             \textcolor{keyword}{new} Color (204, 118, 79) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00057}00057             \textcolor{keyword}{new} Color (192, 112, 77) / 255}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00058}00058         \},}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00060}00060         [\textcolor{stringliteral}{"{}Top"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00061}00061             \textcolor{keyword}{new} Color(88, 128, 204) / 255}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00062}00062         \},}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00064}00064         [\textcolor{stringliteral}{"{}Bottom"{}}] = \textcolor{keyword}{new} Color[] \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00065}00065             \textcolor{keyword}{new} Color(96, 96, 96) / 255,}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00066}00066             \textcolor{keyword}{new} Color (154, 133, 113) / 255}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00068}00068     \};}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00073}\mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{00073}}     \textcolor{keyword}{public} Color[] \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00074}00074     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00075}00075         \textcolor{keyword}{get};}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00076}00076         \textcolor{keyword}{private} \textcolor{keyword}{set};}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00077}00077     \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00082}00082     \textcolor{keyword}{private} \mbox{\hyperlink{class_palette}{Palette}}()}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00083}00083     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00084}00084         this.\mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}} = \textcolor{keyword}{new} Color[\mbox{\hyperlink{class_palette_a881cd59cc1cc4f18f383bba4bc9c7857}{NUMBER\_OF\_COLORS}}];}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00086}00086         Image skinColorPalette = ResourceLoader.Load<Texture>(\textcolor{stringliteral}{"{}res://res/Sprites/player/skin\_color/skin\_color\_palette.jpg"{}}).GetData();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00087}00087         Image clothingColorPalette = ResourceLoader.Load<Texture>(\textcolor{stringliteral}{"{}res://res/Sprites/player/clothing\_color/clothing\_color.png"{}}).GetData();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00088}00088         }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00089}00089         skinColorPalette.Lock();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00090}00090         clothingColorPalette.Lock();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00092}00092         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}.Length; i++)}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00093}00093             \textcolor{keywordflow}{if} (i < 5)}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00094}00094                 \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}[i] = skinColorPalette.GetPixel(i, 0);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00095}00095             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00096}00096                 \mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}[i] = clothingColorPalette.GetPixel(i -\/ 5, 0);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00098}00098         skinColorPalette.Unlock();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00099}00099         clothingColorPalette.Unlock();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00100}00100     \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00105}\mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{00105}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \mbox{\hyperlink{class_palette}{Palette}} \mbox{\hyperlink{class_palette_a25336192634062811d8659ee0ad065c6}{Instance}}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00106}00106     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00107}00107         \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00108}00108         \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00109}00109             \textcolor{keywordflow}{if} (instance == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00110}00110                 instance = \textcolor{keyword}{new} \mbox{\hyperlink{class_palette}{Palette}}();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00112}00112             \textcolor{keywordflow}{return} instance;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00113}00113         \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00114}00114     \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00122}\mbox{\hyperlink{class_palette_ab973750bb28f3de18132de170c08c092}{00122}}     \textcolor{keyword}{public} Texture \mbox{\hyperlink{class_palette_ab973750bb28f3de18132de170c08c092}{TextureFromColor}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, Vector2 size)}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00123}00123     \{}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00124}00124         Image color = \textcolor{keyword}{new} Image();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00125}00125         color.Create((\textcolor{keywordtype}{int}) size.x, (\textcolor{keywordtype}{int}) size.y, \textcolor{keyword}{false}, Image.Format.Rgba8);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00126}00126         color.Fill(this.\mbox{\hyperlink{class_palette_ac5cd23ad275bc2a794539c1208fb5318}{PaletteColors}}[\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00128}00128         ImageTexture texture = \textcolor{keyword}{new} ImageTexture();}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00129}00129         texture.CreateFromImage(color);}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00131}00131         \textcolor{keywordflow}{return} texture;}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00132}00132     \}}
+\DoxyCodeLine{\Hypertarget{_palette_8cs_source_l00133}00133 \}}
+
+\end{DoxyCode}

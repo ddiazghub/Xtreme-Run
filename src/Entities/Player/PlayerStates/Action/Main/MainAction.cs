@@ -1,20 +1,40 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Class that represents an action the player can perform as main action.
+/// </summary>
 public abstract class MainAction: PlayerState {
-    protected bool onActionPad = false;
-    public bool performingAction = false;
-    public bool canUseActionPad = true;
-    protected bool blocked = false;
+
+    /// <summary>
+    ///     True if the player is currently on a jump pad.
+    /// </summary>
+    protected bool OnActionPad { get; set; } = false;
+
+    /// <summary>
+    ///    True if the player is currently performing a main action.
+    /// </summary>
+    public bool PerformingAction { get;  set; } = false;
+
+    /// <summary>
+    ///     True if the player can use jump pads.
+    /// </summary>
+    public bool CanUseActionPad = true;
+
+    /// <summary>
+    ///     Checks if the current action is blocked/disabled.
+    ///     If true, the action will not be performed on input events.
+    /// </summary>
+    public bool Blocked { get; set; } = false;
 
     public override void _Init()
     {
-        this.player.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnMainActionObjectCollisionCheckAreaEntered));
-        this.player.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnMainActionObjectCollisionCheckAreaExited));
+        this.Player.jumpObjectCollisionCheck.Connect("area_entered", this, nameof(this.OnMainActionObjectCollisionCheckAreaEntered));
+        this.Player.jumpObjectCollisionCheck.Connect("area_exited", this, nameof(this.OnMainActionObjectCollisionCheckAreaExited));
         
-        this.player.mainActionTimer.Connect("timeout", this, nameof(this.OnMainActionTimerTimeout));
-        this.player.mainActionTimer.WaitTime = this.player.maxJumpTime;
-        this.player.mainActionTimer.Stop();
+        this.Player.mainActionTimer.Connect("timeout", this, nameof(this.OnMainActionTimerTimeout));
+        this.Player.mainActionTimer.WaitTime = this.Player.MaxJumpTime;
+        this.Player.mainActionTimer.Stop();
     }
 
     public override void _StatePhysicsProcess(float delta)
@@ -25,19 +45,19 @@ public abstract class MainAction: PlayerState {
             this._ActionReleased();
         }
 
-        if (Input.IsActionPressed("action_main") && !(this.blocked || this.player.blocked)) {
-            if (this.player.persistentState is OnGroundState)
+        if (Input.IsActionPressed("action_main") && !(this.Blocked || this.Player.Blocked)) {
+            if (this.Player.persistentState is OnGroundState)
             {
                 this._ActionOnGround();
             }
 
-            if (this.player.persistentState is OnAirState)
+            if (this.Player.persistentState is OnAirState)
             {
                 this._ActionOnAir();
             }
         }
 
-        if (this.performingAction)
+        if (this.PerformingAction)
         {
             this._ActionProcess(delta);
         }
@@ -45,69 +65,40 @@ public abstract class MainAction: PlayerState {
 
     public virtual void _ActionOnGround()
     {
-        this.performingAction = true;
-        this.player.mainActionTimer.Start();
-        this.canUseActionPad = false;
-        this.player.linearVelocity.y = 0;
+        this.PerformingAction = true;
+        this.Player.mainActionTimer.Start();
+        this.CanUseActionPad = false;
+        this.Player.linearVelocity.y = 0;
     }
 
     public virtual void _ActionOnAir()
     {
-        if (this.onActionPad && this.canUseActionPad) {
-            this.performingAction = true;
-            this.onActionPad = false;
-            this.player.mainActionTimer.Start();
-            this.canUseActionPad = false;
-            this.player.linearVelocity.y = 0;
+        if (this.OnActionPad && this.CanUseActionPad) {
+            this.PerformingAction = true;
+            this.OnActionPad = false;
+            this.Player.mainActionTimer.Start();
+            this.CanUseActionPad = false;
+            this.Player.linearVelocity.y = 0;
         }
     }
 
     public virtual void _ActionReleased()
     {
-        this.canUseActionPad = true;
+        this.CanUseActionPad = true;
     }
 
+    /// <summary>
+    ///     The process that will be executed each frame while the action is being performed.
+    /// </summary>
+    /// <param name="delta">Time since last frame.</param>
     public abstract void _ActionProcess(float delta);
 
-    public void Block()
-    {
-        this.blocked = true;
-    }
-
-    public void UnBlock()
-    {
-        this.blocked = false;
-    }
-
-    public virtual void OnMainActionTimerTimeout()
-    {
-        this.performingAction = false;
-    }
-
-
-    public virtual void OnMainActionObjectCollisionCheckAreaEntered(Area2D area)
-    {
-        if (area.IsInGroup("jump"))
-        {
-            this.onActionPad = true;
-        }
-
-        if (area.IsInGroup("jump_auto"))
-        {
-            this.performingAction = true;
-            this.player.mainActionTimer.Start();
-            this.player.linearVelocity.y = 0;
-        }
-    }
-
-    public virtual void OnMainActionObjectCollisionCheckAreaExited(Area2D area)
-    {
-        if (area.IsInGroup("jump"))
-        {
-            this.onActionPad = false;
-        }
-    }
-
+    /// <summary>
+    ///     Gets the given action's type as a string.
+    ///     This is because the player animations corresponding to each action has these names.
+    /// </summary>
+    /// <param name="action">The enum value of the action.</param>
+    /// <returns>A string depending on the action type.</returns>
     public static string GetTypeAsString(PlayerMainAction action)
     {
         switch (action)
@@ -129,6 +120,12 @@ public abstract class MainAction: PlayerState {
         }
     }
 
+    /// <summary>
+    ///     Gets the given action's type as a string in spanish.
+    ///     This is for displaying on the GUI.
+    /// </summary>
+    /// <param name="action">The enum value of the action</param>
+    /// <returns>A string in spanish depending on the action type.</returns>
     public static string GetTypeAsStringEsp(PlayerMainAction action)
     {
         switch (action)
@@ -147,6 +144,35 @@ public abstract class MainAction: PlayerState {
             
             default:
                 return "Salto";
+        }
+    }
+
+    public virtual void OnMainActionTimerTimeout()
+    {
+        this.PerformingAction = false;
+    }
+
+
+    public virtual void OnMainActionObjectCollisionCheckAreaEntered(Area2D area)
+    {
+        if (area.IsInGroup("jump"))
+        {
+            this.OnActionPad = true;
+        }
+
+        if (area.IsInGroup("jump_auto"))
+        {
+            this.PerformingAction = true;
+            this.Player.mainActionTimer.Start();
+            this.Player.linearVelocity.y = 0;
+        }
+    }
+
+    public virtual void OnMainActionObjectCollisionCheckAreaExited(Area2D area)
+    {
+        if (area.IsInGroup("jump"))
+        {
+            this.OnActionPad = false;
         }
     }
 }

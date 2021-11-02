@@ -1,0 +1,33 @@
+\hypertarget{_secondary_action_pickup_8cs_source}{}\doxysection{Secondary\+Action\+Pickup.\+cs}
+\label{_secondary_action_pickup_8cs_source}\index{src/Entities/Pickups/SecondaryActionPickup.cs@{src/Entities/Pickups/SecondaryActionPickup.cs}}
+\mbox{\hyperlink{_secondary_action_pickup_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00007}\mbox{\hyperlink{class_secondary_action_pickup}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_secondary_action_pickup}{SecondaryActionPickup}} : Area2D}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00012}00012     \textcolor{keyword}{private} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}} type = \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.FASTFALL\_AND\_ROLL;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00013}00013     }
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00017}00017     [Export]}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00018}\mbox{\hyperlink{class_secondary_action_pickup_a0a202dab78d2f57ab0fc26ee01c74db2}{00018}}     \textcolor{keyword}{public} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}} \mbox{\hyperlink{class_secondary_action_pickup_a0a202dab78d2f57ab0fc26ee01c74db2}{Type}}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00020}00020         \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00021}00021         \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00022}00022             \textcolor{keywordflow}{return} this.type;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00025}00025         \textcolor{keyword}{set}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00026}00026         \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00027}00027             this.GetNode<AnimatedSprite>(\textcolor{stringliteral}{"{}Sprite"{}}).Play(\mbox{\hyperlink{class_secondary_action}{SecondaryAction}}.\mbox{\hyperlink{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}{GetTypeAsString}}(value));}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00028}00028             this.type = value;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00029}00029         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00032}\mbox{\hyperlink{class_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8}{00032}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_pickup_ac6f8adbcf3675f978c5467ea06ae6ea8}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00034}00034         this.GetNode<AnimatedSprite>(\textcolor{stringliteral}{"{}Sprite"{}}).Play(\mbox{\hyperlink{class_secondary_action}{SecondaryAction}}.\mbox{\hyperlink{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}{GetTypeAsString}}(\textcolor{keyword}{this}.Type));}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_pickup_8cs_source_l00036}00036 \}}
+
+\end{DoxyCode}

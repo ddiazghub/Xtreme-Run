@@ -1,8 +1,14 @@
 using Godot;
 using System;
 
-public class ProfileSelectEntry : Button
-{
+/// <summary>
+///     Button that and allows the profile to be selected and displays a profile's data.
+/// </summary>
+public class ProfileSelectEntry : Button {
+
+    /// <summary>
+    ///     The profile's id.
+    /// </summary>
     [Export]
     public int ProfileID = 0;
 
@@ -18,6 +24,9 @@ public class ProfileSelectEntry : Button
         this.UpdateUI();
     }
 
+    /// <summary>
+    ///     Updates the data currently displayed on the button.
+    /// </summary>
     public void UpdateUI()
     {
         if (Profile.Exists(this.ProfileID))

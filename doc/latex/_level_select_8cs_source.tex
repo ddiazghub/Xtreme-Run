@@ -1,0 +1,59 @@
+\hypertarget{_level_select_8cs_source}{}\doxysection{Level\+Select.\+cs}
+\label{_level_select_8cs_source}\index{src/Scenes/LevelSelect.cs@{src/Scenes/LevelSelect.cs}}
+\mbox{\hyperlink{_level_select_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00004}\mbox{\hyperlink{class_level_select}{00004}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_level_select}{LevelSelect}} : Node2D}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00006}00006     \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00007}00007 \textcolor{comment}{    private Button returnButton;}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00008}00008 \textcolor{comment}{    private Button level1Button;}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00009}00009 \textcolor{comment}{    private Button level2Button;}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00010}00010 \textcolor{comment}{    private Button level3Button;}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00011}00011 \textcolor{comment}{    private Button level4Button;}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00012}00012 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00013}00013 \textcolor{comment}{    public override void \_Ready()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00014}00014 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00015}00015 \textcolor{comment}{        this.returnButton = this.GetNode<Button>("{}GUI/ReturnButton"{});}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00016}00016 \textcolor{comment}{        this.level1Button = this.GetNode<Button>("{}GUI/Level1Button"{});}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00017}00017 \textcolor{comment}{        this.level2Button = this.GetNode<Button>("{}GUI/Level2Button"{});}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00018}00018 \textcolor{comment}{        this.level3Button = this.GetNode<Button>("{}GUI/Level3Button"{});}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00019}00019 \textcolor{comment}{        this.level4Button = this.GetNode<Button>("{}GUI/Level4Button"{});}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00020}00020 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00021}00021 \textcolor{comment}{        this.returnButton.Connect("{}pressed"{}, this, nameof(this.OnReturnButtonPressed));}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00022}00022 \textcolor{comment}{        this.level1Button.Connect("{}pressed"{}, this, nameof(this.OnLevel1ButtonPressed));}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00023}00023 \textcolor{comment}{        this.level2Button.Connect("{}pressed"{}, this, nameof(this.OnLevel2ButtonPressed));}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00024}00024 \textcolor{comment}{        this.level3Button.Connect("{}pressed"{}, this, nameof(this.OnLevel3ButtonPressed));}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00025}00025 \textcolor{comment}{        this.level4Button.Connect("{}pressed"{}, this, nameof(this.OnLevel4ButtonPressed));}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00026}00026 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00027}00027 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00028}00028 \textcolor{comment}{    public void OnReturnButtonPressed()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00029}00029 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00030}00030 \textcolor{comment}{        this.GetParent<Main>().ChangeScene(GameScenes.MAIN\_MENU);}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00031}00031 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00032}00032 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00033}00033 \textcolor{comment}{    public void OnLevel1ButtonPressed()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00034}00034 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00035}00035 \textcolor{comment}{        this.GetParent<Main>().ChangeScene(GameScenes.LEVEL1);}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00036}00036 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00037}00037 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00038}00038 \textcolor{comment}{    public void OnLevel2ButtonPressed()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00039}00039 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00040}00040 \textcolor{comment}{        this.GetParent<Main>().ChangeScene(GameScenes.LEVEL2);}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00041}00041 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00042}00042 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00043}00043 \textcolor{comment}{    public void OnLevel3ButtonPressed()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00044}00044 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00045}00045 \textcolor{comment}{        this.GetParent<Main>().ChangeScene(GameScenes.LEVEL3);}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00046}00046 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00047}00047 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00048}00048 \textcolor{comment}{    public void OnLevel4ButtonPressed()}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00049}00049 \textcolor{comment}{    \{}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00050}00050 \textcolor{comment}{        this.GetParent<Main>().ChangeScene(GameScenes.LEVEL4);}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00051}00051 \textcolor{comment}{    \}}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00052}00052 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_level_select_8cs_source_l00053}00053 \}}
+
+\end{DoxyCode}

@@ -1,8 +1,15 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Platforms that the player can spawn with the spawn platforms secondary action.
+///     They destroy themselves after half a second.
+/// </summary>
 public class SpawnedPlatform : StaticBody2D
 {
+    /// <summary>
+    ///     The timer for destruction.
+    /// </summary>
     private Timer destroyTimer;
 
     public override void _Ready()
@@ -16,10 +23,4 @@ public class SpawnedPlatform : StaticBody2D
     {
         this.QueueFree();
     }
-
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
 }

@@ -1,21 +1,27 @@
 using Godot;
 using System;
 
+/// <summary>
+///     The player node.
+///     It is a state machine that executes 3 states at each given time.
+///     The first state is a physical state (On ground, on air), while the other 2 are actions that the player can perform at a given time (Kind of like powers).
+/// </summary>
 public class Player : KinematicBody2D
 {
-    [Export] public int jumpForce = 1280;
-    [Export] public int movementSpeed = 700;
-    [Export] public float maxJumpTime = 0.04f;
-    [Export] public float maxFallSpeed = 1280;
-    [Export] public int gravity = 210;
+    [Export] public int JumpForce = 1280;
+    [Export] public int MovementSpeed = 700;
+    [Export] public float MaxJumpTime = 0.04f;
+    [Export] public float MaxFallSpeed = 1280;
+    [Export] public int Gravity = 210;
+
+    [Signal]
+    public delegate void Dead();
+
     public Area2D jumpObjectCollisionCheck;
     public Area2D teleportCollisionCheck;
     public Timer secondaryActionTimer;
     public Timer mainActionTimer;
     public Timer startTimer;
-    public bool blocked;
-    public bool invertedGravity = false;
-    public bool invincible;
     public AnimatedSprite animation;
     public PersistentState persistentState;
     public MainAction mainAction;
@@ -31,8 +37,10 @@ public class Player : KinematicBody2D
     public PlayerMainAction mainActionType;
     public PlayerSecondaryAction secondaryActionType;
 
-    [Signal]
-    public delegate void Dead();
+    public bool Blocked { get; set; }
+    public bool InvertedGravity { get; set; } = false;
+    public bool Invincible { get; set; }
+
 
     public override void _Ready()
     {
@@ -54,17 +62,17 @@ public class Player : KinematicBody2D
 
         this.startTimer.Start();
 
-        if (this.invertedGravity)
-            this.invertGravity();
+        if (this.InvertedGravity)
+            this.InvertGravity();
             
         this.Visible = true;
-        this.blocked = true;
-        this.invincible = false;
-        this.jumpForce = this.DEFAULT_JUMPFORCE;
-        this.maxFallSpeed = this.DEFAULT_JUMPFORCE;
-        this.gravity = this.DEFAULT_GRAVITY;
-        this.maxJumpTime = this.DEFAULT_MAX_JUMP_TIME;
-        this.movementSpeed = this.DEFAULT_MOVEMENT_SPEED;
+        this.Blocked = true;
+        this.Invincible = false;
+        this.JumpForce = this.DEFAULT_JUMPFORCE;
+        this.MaxFallSpeed = this.DEFAULT_JUMPFORCE;
+        this.Gravity = this.DEFAULT_GRAVITY;
+        this.MaxJumpTime = this.DEFAULT_MAX_JUMP_TIME;
+        this.MovementSpeed = this.DEFAULT_MOVEMENT_SPEED;
         this.linearVelocity = new Vector2(0, 0);
     }
 
@@ -74,12 +82,16 @@ public class Player : KinematicBody2D
         this.mainAction._StatePhysicsProcess(delta);
         this.secondaryAction._StatePhysicsProcess(delta);
 
-        if (this.invertedGravity)
+        if (this.InvertedGravity)
             this.MoveAndSlide(this.linearVelocity, Vector2.Down, floorMaxAngle: Mathf.Deg2Rad(60));
         else
             this.MoveAndSlide(this.linearVelocity, Vector2.Up, floorMaxAngle: Mathf.Deg2Rad(60));
     }
 
+    /// <summary>
+    ///     Changes the current persistent state.
+    /// </summary>
+    /// <param name="state">The new state.</param>
     public void ChangePersistentState(PlayerPersistentState state)
     {
         if (this.persistentState != null)
@@ -92,6 +104,10 @@ public class Player : KinematicBody2D
         this.persistentState.Setup();
     }
 
+    /// <summary>
+    ///     Changes the current main action the player can perform.
+    /// </summary>
+    /// <param name="state">The new action.</param>
     public void ChangeMainAction(PlayerMainAction action)
     {
         if (this.mainAction != null)
@@ -105,6 +121,10 @@ public class Player : KinematicBody2D
         this.mainAction.Setup();
     }
 
+    /// <summary>
+    ///     Changes the current secondary action the player can perform.
+    /// </summary>
+    /// <param name="state">The new action.</param>
     public void ChangeSecondaryAction(PlayerSecondaryAction action)
     {
         if (this.secondaryAction != null)
@@ -118,14 +138,17 @@ public class Player : KinematicBody2D
         this.secondaryAction.Setup();
     }
 
-    public void invertGravity()
+    /// <summary>
+    ///     Invert's the player's gravity.
+    /// </summary>
+    public void InvertGravity()
     {
         this.animation.FlipV = !this.animation.FlipV;
-        this.invertedGravity = !this.invertedGravity;
+        this.InvertedGravity = !this.InvertedGravity;
         this.runningCollision.Position = new Vector2(this.runningCollision.Position.x, -this.runningCollision.Position.y);
         this.rollingCollision.Position = new Vector2(this.rollingCollision.Position.x, -this.rollingCollision.Position.y);
-        this.jumpForce = -this.jumpForce;
-        this.gravity = -this.gravity;
+        this.JumpForce = -this.JumpForce;
+        this.Gravity = -this.Gravity;
 
         if (this.mainAction is Teleport)
         {
@@ -133,6 +156,10 @@ public class Player : KinematicBody2D
         }
     }
 
+    /// <summary>
+    ///     Sets a hitbox on the player depending on the state.
+    /// </summary>
+    /// <param name="state">The player's state.</param>
     public void SetHitbox(PlayerPersistentState state) {
         switch (state) {
             case PlayerPersistentState.ON_GROUND:
@@ -154,7 +181,7 @@ public class Player : KinematicBody2D
     }
 
     public void OnStartTimerTimeout() {
-        this.blocked = false;
+        this.Blocked = false;
         this.startTimer.Stop();
     }
 }

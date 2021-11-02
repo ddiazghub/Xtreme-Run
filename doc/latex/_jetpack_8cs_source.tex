@@ -1,0 +1,66 @@
+\hypertarget{_jetpack_8cs_source}{}\doxysection{Jetpack.\+cs}
+\label{_jetpack_8cs_source}\index{src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs@{src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs}}
+\mbox{\hyperlink{_jetpack_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00008}\mbox{\hyperlink{class_jetpack}{00008}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_jetpack}{Jetpack}}: \mbox{\hyperlink{class_main_action}{MainAction}} \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00009}00009     \textcolor{comment}{// Jetpack action constants.}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00010}00010     \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} JETPACK\_JUMPFORCE = 350;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00011}00011     \textcolor{keyword}{private} readonly \textcolor{keywordtype}{float} JETPACK\_MAX\_JUMP\_TIME = 0.4f;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00012}00012     \textcolor{keyword}{private} readonly \textcolor{keywordtype}{int} JETPACK\_MAX\_FALL\_SPEED = 900;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00017}00017     \textcolor{keyword}{private} \textcolor{keywordtype}{bool} onAutoJump = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00019}\mbox{\hyperlink{class_jetpack_a71bdeb3eeccdbca43f304ae31b5c206b}{00019}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jetpack_a71bdeb3eeccdbca43f304ae31b5c206b}{\_Init}}()}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00021}00021         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_afa430a3e8bae8353eb0ed928c9919c95}{Gravity}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aaa96158303a2e4619809dd824b6002ec}{DEFAULT\_GRAVITY}};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00022}00022         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{JumpForce}} = this.JETPACK\_JUMPFORCE;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00023}00023         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a55a2743162dfad1ccf058979e3454cf0}{MaxJumpTime}} = this.JETPACK\_MAX\_JUMP\_TIME;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00024}00024         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_af93facbeac2019c5bc7bfb2493041109}{MaxFallSpeed}} = this.JETPACK\_MAX\_FALL\_SPEED;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00025}00025     }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00026}00026         base.\_Init();}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00029}\mbox{\hyperlink{class_jetpack_a66a6e0bb7ff231a6e843f9f67a4d7642}{00029}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jetpack_a66a6e0bb7ff231a6e843f9f67a4d7642}{\_ActionReleased}}()}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00030}00030     \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00031}00031         base.\_ActionReleased();}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00033}00033         \textcolor{keywordflow}{if} (!this.onAutoJump)}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00034}00034             this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00037}\mbox{\hyperlink{class_jetpack_a2f099459f3cdeef59c2a73a86edb334c}{00037}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jetpack_a2f099459f3cdeef59c2a73a86edb334c}{\_ActionProcess}}(\textcolor{keywordtype}{float} delta)}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00039}00039         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_adfe24c4a8a6124eef02a636f042917dd}{linearVelocity}}.y -\/= this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{JumpForce}};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00040}00040     \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00042}\mbox{\hyperlink{class_jetpack_a1a4d6a6693480ef6ed70627399da3e25}{00042}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jetpack_a1a4d6a6693480ef6ed70627399da3e25}{OnMainActionObjectCollisionCheckAreaEntered}}(Area2D area)}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00044}00044         \textcolor{keywordflow}{if} (area.IsInGroup(\textcolor{stringliteral}{"{}jump\_auto"{}}))}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00045}00045         \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00046}00046             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{JumpForce}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}{DEFAULT\_JUMPFORCE}};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00047}00047             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a0bb14eb9e541dc0cabe7e067931e2cde}{mainActionTimer}}.WaitTime = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_ae354c1568fb2f116e290e1a8fde5271a}{DEFAULT\_MAX\_JUMP\_TIME}};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00048}00048             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_af93facbeac2019c5bc7bfb2493041109}{MaxFallSpeed}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}{DEFAULT\_JUMPFORCE}};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00049}00049             this.onAutoJump = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00050}00050         \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00052}00052         base.OnMainActionObjectCollisionCheckAreaEntered(area);}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00053}00053     \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00055}\mbox{\hyperlink{class_jetpack_ae5d732914ec97154f9f14d12e96730d3}{00055}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_jetpack_ae5d732914ec97154f9f14d12e96730d3}{OnMainActionTimerTimeout}}()}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00057}00057         base.OnMainActionTimerTimeout();}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00059}00059         \textcolor{keywordflow}{if} (this.onAutoJump)}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00061}00061             this.onAutoJump = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00062}00062             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{JumpForce}} = this.JETPACK\_JUMPFORCE;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00063}00063             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a55a2743162dfad1ccf058979e3454cf0}{MaxJumpTime}} = this.JETPACK\_MAX\_JUMP\_TIME;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00064}00064             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_af93facbeac2019c5bc7bfb2493041109}{MaxFallSpeed}} = this.JETPACK\_MAX\_FALL\_SPEED;}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00065}00065         \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00066}00066     \}}
+\DoxyCodeLine{\Hypertarget{_jetpack_8cs_source_l00067}00067 \}}
+
+\end{DoxyCode}

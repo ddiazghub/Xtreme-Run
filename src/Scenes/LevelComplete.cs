@@ -1,8 +1,14 @@
 using Godot;
 using System;
 
-public class LevelComplete : NinePatchRect
-{
+/// <summary>
+///     Menu that will be shown when a level is completed.
+/// </summary>
+public class LevelComplete : NinePatchRect {
+
+    /// <summary>
+    ///     Signal that will be emitted when the restart button is pressed.
+    /// </summary>
     [Signal]
     public delegate void RestartPressed();
 
@@ -16,6 +22,9 @@ public class LevelComplete : NinePatchRect
         this.GetNode("Quit").Connect("pressed", this, nameof(this.OnQuitPressed));
     }
 
+    /// <summary>
+    ///     Pauses the game and shows this menu.
+    /// </summary>
     public void ShowMenu()
     {
         this.Show();
@@ -33,7 +42,7 @@ public class LevelComplete : NinePatchRect
     {
         this.GetTree().Paused = false;
         this.EmitSignal("QuitPressed");
-        ((Level) this.GetTree().Root.GetNode<Main>("Main").currentScene).SaveData();
+        ((Level) this.GetTree().Root.GetNode<Main>("Main").Scene).SaveData();
         this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.MAIN_MENU);
     }
 }

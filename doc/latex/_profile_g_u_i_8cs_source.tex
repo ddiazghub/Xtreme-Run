@@ -1,0 +1,49 @@
+\hypertarget{_profile_g_u_i_8cs_source}{}\doxysection{Profile\+GUI.\+cs}
+\label{_profile_g_u_i_8cs_source}\index{src/Scenes/ProfileGUI.cs@{src/Scenes/ProfileGUI.cs}}
+\mbox{\hyperlink{_profile_g_u_i_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00007}\mbox{\hyperlink{class_profile_g_u_i}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_profile_g_u_i}{ProfileGUI}} : NinePatchRect \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00012}00012     [Signal]}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00013}\mbox{\hyperlink{class_profile_g_u_i_a1cae5c390923b22eafb7abfa81a74767}{00013}}     \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a1cae5c390923b22eafb7abfa81a74767}{ShopPressed}}();}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00018}00018     [Signal]}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00019}\mbox{\hyperlink{class_profile_g_u_i_a8c249c532bd0f7b6814dc4c6875d9050}{00019}}     \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a8c249c532bd0f7b6814dc4c6875d9050}{EditPressed}}();}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00021}\mbox{\hyperlink{class_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a6dc0dca54016fefc6c4919a7e372cf6e}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00023}00023         this.GetNode(\textcolor{stringliteral}{"{}Shop"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4}{OnShopPressed}}));}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00024}00024         this.GetNode(\textcolor{stringliteral}{"{}LogOut"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770}{OnLogOutPressed}}));}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00025}00025         this.GetNode(\textcolor{stringliteral}{"{}Edit"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b}{OnEditPressed}}));}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00027}00027         this.\mbox{\hyperlink{class_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6}{UpdateUI}}();}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00028}00028     \}}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00033}\mbox{\hyperlink{class_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6}{00033}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a63df12299905cd375c56ba1e2292dcd6}{UpdateUI}}()}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00034}00034     \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00035}00035         this.GetNode<Label>(\textcolor{stringliteral}{"{}Completed"{}}).Text = \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_a9bcca121ff10dd2e8874e112bbf4efd5}{CompletedLevels}}.Count + \textcolor{stringliteral}{"{}/3 completado"{}};}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00036}00036         this.GetNode<Label>(\textcolor{stringliteral}{"{}ProfileName"{}}).Text = \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_af1ba331b8cf5fd72c3810474cd8398e7}{Name}};}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00037}00037         this.GetNode<TextureRect>(\textcolor{stringliteral}{"{}Avatar"{}}).Texture = \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}.\mbox{\hyperlink{class_profile_info_aeecc75ddc542bf84ec93284c40ff76e1}{Avatar}}.\mbox{\hyperlink{class_avatar_a556317afdd76c7884ae0197014a7459a}{ToTexture}}();}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00040}\mbox{\hyperlink{class_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4}{00040}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a590b9e765f2e1a195e65235798dd5fa4}{OnShopPressed}}()}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00041}00041     \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00042}00042         this.EmitSignal(\textcolor{stringliteral}{"{}ShopPressed"{}});}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00043}00043     \}}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00045}\mbox{\hyperlink{class_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b}{00045}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_a7ce6425fc897f70f57a3a342e699a72b}{OnEditPressed}}()}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00046}00046     \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00047}00047         this.EmitSignal(\textcolor{stringliteral}{"{}EditPressed"{}});}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00050}\mbox{\hyperlink{class_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770}{00050}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_profile_g_u_i_ad835b6812c257c3f5c9c6a23892e0770}{OnLogOutPressed}}()}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00051}00051     \{}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00052}00052         \mbox{\hyperlink{class_profile}{Profile}}.\mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{CurrentSession}}.\mbox{\hyperlink{class_profile_a8fa9b755af65c98f5ce709c749579ab5}{LogOut}}();}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00053}00053         this.GetTree().Root.GetNode<\mbox{\hyperlink{class_main}{Main}}>(\textcolor{stringliteral}{"{}Main"{}}).ChangeScene(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.PROFILE\_SELECT);}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00054}00054     \}}
+\DoxyCodeLine{\Hypertarget{_profile_g_u_i_8cs_source_l00055}00055 \}}
+
+\end{DoxyCode}

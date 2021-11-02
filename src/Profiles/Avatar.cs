@@ -2,64 +2,107 @@ using System;
 using Godot;
 using System.Collections.Generic;
 
+/// <summary>
+///     This class represents a customizable player avatar.
+/// </summary>
 public class Avatar {
-    public bool male;
-    public int skinColor;
-    public int topColor;
-    public int bottomColor;
 
+    /// <summary>
+    ///     The avatar's Gender. True if male, false if female.
+    /// </summary>
+    public bool Male { get; set; }
+
+    /// <summary>
+    ///     Id of the avatar's skin color.
+    /// </summary>
+    public int SkinColor;
+
+    /// <summary>
+    ///     Id of the avatar's bottom color.
+    /// </summary>
+    public int TopColor;
+
+    /// <summary>
+    ///     Id of the avatar's top color.
+    /// </summary>
+    public int BottomColor;
+
+    /// <summary>
+    ///     Default avatar for non-created profiles.
+    /// </summary>
     public static readonly Texture EMPTY_SAVE_AVATAR = ResourceLoader.Load<Texture>("res://res/Sprites/player/shadow.png");
 
+    /// <summary>
+    ///     Creates a new avatar from the supplied data.
+    /// </summary>
+    /// <param name="male">The avatar's Gender. True if male, false if female.</param>
+    /// <param name="skinColor">Id of the avatar's skin color.</param>
+    /// <param name="topColor">Id of the avatar's bottom color.</param>
+    /// <param name="bottomColor">Default avatar for non-created profiles.</param>
     public Avatar(bool male, int skinColor, int topColor, int bottomColor)
     {
-        this.male = male;
-        this.skinColor = skinColor;
-        this.topColor = topColor;
-        this.bottomColor = bottomColor;
+        this.Male = male;
+        this.SkinColor = skinColor;
+        this.TopColor = topColor;
+        this.BottomColor = bottomColor;
     }
 
+    /// <summary>
+    ///     Gets one of the avatar's colors from a given string.
+    /// </summary>
+    /// <param name="key">Can be Skin, Top or Bottom.</param>
+    /// <returns>The color corresponding to the string.</returns>
     public int GetColor(string key)
     {
         switch (key)
         {
             case "Skin":
-                return this.skinColor;
+                return this.SkinColor;
 
             case "Top":
-                return this.topColor;
+                return this.TopColor;
             
             case "Bottom":
-                return this.bottomColor;
+                return this.BottomColor;
             
             default:
                 return -1;
         }
     }
 
+    /// <summary>
+    ///     Sets one of the avatar's colors from a given string.
+    /// </summary>
+    /// <param name="key">Can be Skin, Top or Bottom.</param>
     public void SetColor(string key, int color)
     {
         switch (key)
         {
             case "Skin":
-                this.skinColor = color;
+                this.SkinColor = color;
                 break;
 
             case "Top":
-                this.topColor = color;
+                this.TopColor = color;
                 break;
             
             case "Bottom":
-                this.bottomColor = color;
+                this.BottomColor = color;
                 break;
         }
     }
 
+    /// <summary>
+    ///     Performs a palette swap on the default avatar, swapping the default colors for the colors specified in each property.
+    ///     Converts the avatar into an image texture.
+    /// </summary>
+    /// <returns>The avatar as an image texture.</returns>
     public Texture ToTexture()
     {
         string pathToImage;
         Dictionary<string, Color[]> colors;
 
-        if (this.male)
+        if (this.Male)
         {
             pathToImage = "res://res/Sprites/player/idle.png";
             colors = Palette.DEFAULT_COLORS_MALE;
@@ -90,16 +133,12 @@ public class Avatar {
         return avatarTexture;
     }
 
+    /// <summary>
+    ///     Clones the avatar.
+    /// </summary>
+    /// <returns>A copy of the avatar.</returns>
     public Avatar Clone()
     {
-        return new Avatar(this.male, this.skinColor, this.topColor, this.bottomColor);
-    }
-
-    public void Print()
-    {
-        GD.Print("Male: " + this.male);
-        GD.Print("Skin Color: " + this.skinColor);
-        GD.Print("Top Color: " + this.topColor);
-        GD.Print("Bottom Color: " + this.bottomColor);
+        return new Avatar(this.Male, this.SkinColor, this.TopColor, this.BottomColor);
     }
 }

@@ -1,0 +1,74 @@
+\hypertarget{_teleport_8cs_source}{}\doxysection{Teleport.\+cs}
+\label{_teleport_8cs_source}\index{src/Entities/Player/PlayerStates/Action/Main/Teleport.cs@{src/Entities/Player/PlayerStates/Action/Main/Teleport.cs}}
+\mbox{\hyperlink{_teleport_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00007}\mbox{\hyperlink{class_teleport}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_teleport}{Teleport}}: \mbox{\hyperlink{class_main_action}{MainAction}} \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00008}00008     }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00012}\mbox{\hyperlink{class_teleport_a4262864228863630057ea5411f0b992b}{00012}}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_teleport_a4262864228863630057ea5411f0b992b}{TELEPORT\_DISTANCE}} = 256;}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00013}\mbox{\hyperlink{class_teleport_ac3436447bedf6cb700213b8c7f9641df}{00013}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_ac3436447bedf6cb700213b8c7f9641df}{\_Init}}()}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00015}00015         \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a9c06a72ba615b0e764ad4ff428e8119d}{InvertedGravity}})}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00016}00016         \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00017}00017             this.TELEPORT\_DISTANCE = -\/this.\mbox{\hyperlink{class_teleport_a4262864228863630057ea5411f0b992b}{TELEPORT\_DISTANCE}}; }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00018}00018         \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00020}00020         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_acf06cc8b10f69a33e33f0750443e09bc}{JumpForce}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}{DEFAULT\_JUMPFORCE}};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00021}00021         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a55a2743162dfad1ccf058979e3454cf0}{MaxJumpTime}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_ae354c1568fb2f116e290e1a8fde5271a}{DEFAULT\_MAX\_JUMP\_TIME}};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00022}00022         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_af93facbeac2019c5bc7bfb2493041109}{MaxFallSpeed}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a79a2bd665eb8c1be87d3c4d16c7a17ca}{DEFAULT\_JUMPFORCE}};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00023}00023         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_afa430a3e8bae8353eb0ed928c9919c95}{Gravity}} = this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aaa96158303a2e4619809dd824b6002ec}{DEFAULT\_GRAVITY}};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00024}00024     }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00025}00025         base.\_Init();}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00028}\mbox{\hyperlink{class_teleport_aa1335939a5f0597c9bf0cbb0ff418220}{00028}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_aa1335939a5f0597c9bf0cbb0ff418220}{\_ActionOnGround}}()}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00029}00029     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00030}00030         \textcolor{keywordflow}{if} (!this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}})}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00031}00031         \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00032}00032             this.\mbox{\hyperlink{class_player}{Player}}.Position = \textcolor{keyword}{new} Vector2(this.\mbox{\hyperlink{class_player}{Player}}.Position.x, \textcolor{keyword}{this}.Player.Position.y -\/ \textcolor{keyword}{this}.TELEPORT\_DISTANCE);}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00033}00033             this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00037}\mbox{\hyperlink{class_teleport_a0e8ff81f32dd5408d50ab5881fe6a2f6}{00037}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_a0e8ff81f32dd5408d50ab5881fe6a2f6}{\_ActionOnAir}}()}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00038}00038     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00039}00039         \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_main_action_a2149878bc7d0a4debaf0692581b990d4}{OnActionPad}} \&\& this.\mbox{\hyperlink{class_main_action_a94fb5bad42a45b95401d737c0b4ebb22}{CanUseActionPad}} \&\& !this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}}) \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00040}00040             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_adfe24c4a8a6124eef02a636f042917dd}{linearVelocity}}.y = 3000;}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00041}00041             this.\mbox{\hyperlink{class_player}{Player}}.Position = \textcolor{keyword}{new} Vector2(this.\mbox{\hyperlink{class_player}{Player}}.Position.x, \textcolor{keyword}{this}.Player.Position.y -\/ \textcolor{keyword}{this}.TELEPORT\_DISTANCE);}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00042}00042             this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00043}00043             this.\mbox{\hyperlink{class_main_action_a2149878bc7d0a4debaf0692581b990d4}{OnActionPad}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00044}00044             this.\mbox{\hyperlink{class_main_action_a94fb5bad42a45b95401d737c0b4ebb22}{CanUseActionPad}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00045}00045         \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00048}\mbox{\hyperlink{class_teleport_a777418072ec29926a6c0bb7596782952}{00048}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_a777418072ec29926a6c0bb7596782952}{\_ActionReleased}}()}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00049}00049     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00050}00050         this.\mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{PerformingAction}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00052}\mbox{\hyperlink{class_teleport_ab64216d083c55dfc26ed7f236ed34a03}{00052}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_ab64216d083c55dfc26ed7f236ed34a03}{\_ActionProcess}}(\textcolor{keywordtype}{float} delta)}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00053}00053     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00055}00055     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00057}\mbox{\hyperlink{class_teleport_ae1d16e9d16358e23e6ae55b942d1f312}{00057}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_ae1d16e9d16358e23e6ae55b942d1f312}{OnMainActionObjectCollisionCheckAreaEntered}}(Area2D area)}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00058}00058     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00059}00059         \textcolor{keywordflow}{if} (area.IsInGroup(\textcolor{stringliteral}{"{}jump"{}}))}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00060}00060         \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00061}00061             this.\mbox{\hyperlink{class_main_action_a2149878bc7d0a4debaf0692581b990d4}{OnActionPad}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00064}00064         \textcolor{keywordflow}{if} (area.IsInGroup(\textcolor{stringliteral}{"{}jump\_auto"{}}))}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00065}00065         \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00066}00066             this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_adfe24c4a8a6124eef02a636f042917dd}{linearVelocity}}.y = 3000;}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00067}00067             this.\mbox{\hyperlink{class_player}{Player}}.Position = \textcolor{keyword}{new} Vector2(this.\mbox{\hyperlink{class_player}{Player}}.Position.x, \textcolor{keyword}{this}.Player.Position.y -\/ \textcolor{keyword}{this}.TELEPORT\_DISTANCE);}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00068}00068         \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00069}00069     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00071}\mbox{\hyperlink{class_teleport_ab8724fd67974a34636592398ba31beac}{00071}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_teleport_ab8724fd67974a34636592398ba31beac}{OnMainActionTimerTimeout}}()}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00072}00072     \{}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{_teleport_8cs_source_l00074}00074 \}}
+
+\end{DoxyCode}

@@ -1,33 +1,36 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Secondary action that allows the player to fall faster and dodge obstacles by rolling.
+/// </summary>
 public class FastFallAndRoll: SecondaryAction {
     public override void _ActionOnGround()
     {
-        this.player.mainAction.Block();
-        this.player.animation.Play("sliding");
-        this.player.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
-        this.player.secondaryActionTimer.WaitTime = 0.6f;
+        this.Player.mainAction.Blocked = true;
+        this.Player.animation.Play("sliding");
+        this.Player.SetHitbox(PlayerPersistentState.SECONDARY_ACTION);
+        this.Player.secondaryActionTimer.WaitTime = 0.6f;
         base._ActionOnGround();
     }
 
     public override void _ActionOnAir()
     {
-        this.player.maxFallSpeed = 1.5f * this.player.DEFAULT_JUMPFORCE;
+        this.Player.MaxFallSpeed = 1.5f * this.Player.DEFAULT_JUMPFORCE;
 
-        if (this.player.invertedGravity)
-            this.player.linearVelocity.y = -1.5f * this.player.DEFAULT_JUMPFORCE;
+        if (this.Player.InvertedGravity)
+            this.Player.linearVelocity.y = -1.5f * this.Player.DEFAULT_JUMPFORCE;
         else
-            this.player.linearVelocity.y = 1.5f * this.player.DEFAULT_JUMPFORCE;
-        this.player.secondaryActionTimer.WaitTime = 0.1f;
-        this.player.secondaryActionTimer.Start();
+            this.Player.linearVelocity.y = 1.5f * this.Player.DEFAULT_JUMPFORCE;
+        this.Player.secondaryActionTimer.WaitTime = 0.1f;
+        this.Player.secondaryActionTimer.Start();
     }
 
     public override void OnSecondaryActionTimerTimeout()
     {
         base.OnSecondaryActionTimerTimeout();
 
-        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
-        this.player.SetHitbox(PlayerPersistentState.ON_GROUND);
+        this.Player.MaxFallSpeed = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.SetHitbox(PlayerPersistentState.ON_GROUND);
     }
 }

@@ -1,0 +1,320 @@
+\hypertarget{class_main_action}{}\doxysection{Main\+Action Class Reference}
+\label{class_main_action}\index{MainAction@{MainAction}}
+
+
+Class that represents an action the player can perform as main action.  
+
+
+Inheritance diagram for Main\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_main_action}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95}{\+\_\+\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Setups the state and initializes it. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_main_action_ab2261aec55fea5dc4490545410b8b279}{\+\_\+\+State\+Physics\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The physics process that will be called each frame for the state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_main_action_a0d3e4403cb876a28ae3383daba402fce}{\+\_\+\+Action\+On\+Ground}} ()
+\item 
+virtual void \mbox{\hyperlink{class_main_action_a61b3c6152e024c014e7d810feb94fc74}{\+\_\+\+Action\+On\+Air}} ()
+\item 
+virtual void \mbox{\hyperlink{class_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f}{\+\_\+\+Action\+Released}} ()
+\item 
+abstract void \mbox{\hyperlink{class_main_action_abad27d048abd3f377cf7f2e1e15f6975}{\+\_\+\+Action\+Process}} (float delta)
+\begin{DoxyCompactList}\small\item\em The process that will be executed each frame while the action is being performed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_main_action_a17693bd0c6cc2a114af83d0f843baaa4}{On\+Main\+Action\+Timer\+Timeout}} ()
+\item 
+virtual void \mbox{\hyperlink{class_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68}{On\+Main\+Action\+Object\+Collision\+Check\+Area\+Entered}} (Area2D area)
+\item 
+virtual void \mbox{\hyperlink{class_main_action_a2cb93724e1d5758c7544649f39bdcb67}{On\+Main\+Action\+Object\+Collision\+Check\+Area\+Exited}} (Area2D area)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_main_action_a9f2f79c690df2047472ab6e4936b354d}{Get\+Type\+As\+String}} (\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Gets the given action\textquotesingle{}s type as a string. This is because the player animations corresponding to each action has these names. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_main_action_aa5e2b5f2a44a4d622e64878af6240e99}{Get\+Type\+As\+String\+Esp}} (\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Gets the given action\textquotesingle{}s type as a string in spanish. This is for displaying on the GUI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_main_action_a94fb5bad42a45b95401d737c0b4ebb22}{Can\+Use\+Action\+Pad}} = true
+\begin{DoxyCompactList}\small\item\em True if the player can use jump pads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_main_action_a2149878bc7d0a4debaf0692581b990d4}{On\+Action\+Pad}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the player is currently on a jump pad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}{Performing\+Action}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True if the player is currently performing a main action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_main_action_af4f38ae5810abac472752ba286622566}{Blocked}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that represents an action the player can perform as main action. 
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00007}{7}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_action_a61b3c6152e024c014e7d810feb94fc74}\label{class_main_action_a61b3c6152e024c014e7d810feb94fc74}} 
+\index{MainAction@{MainAction}!\_ActionOnAir@{\_ActionOnAir}}
+\index{\_ActionOnAir@{\_ActionOnAir}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnAir()}{\_ActionOnAir()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+\_\+\+Action\+On\+Air (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_glide_a701b0bc067e81b3d3fca24aaf4293088}{Glide}}, and \mbox{\hyperlink{class_teleport_a0e8ff81f32dd5408d50ab5881fe6a2f6}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00074}{74}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a0d3e4403cb876a28ae3383daba402fce}\label{class_main_action_a0d3e4403cb876a28ae3383daba402fce}} 
+\index{MainAction@{MainAction}!\_ActionOnGround@{\_ActionOnGround}}
+\index{\_ActionOnGround@{\_ActionOnGround}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionOnGround()}{\_ActionOnGround()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+\_\+\+Action\+On\+Ground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_glide_a807e0e90013a5c0f6b509a565efeff27}{Glide}}, and \mbox{\hyperlink{class_teleport_aa1335939a5f0597c9bf0cbb0ff418220}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_abad27d048abd3f377cf7f2e1e15f6975}\label{class_main_action_abad27d048abd3f377cf7f2e1e15f6975}} 
+\index{MainAction@{MainAction}!\_ActionProcess@{\_ActionProcess}}
+\index{\_ActionProcess@{\_ActionProcess}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionProcess()}{\_ActionProcess()}}
+{\footnotesize\ttfamily abstract void Main\+Action.\+\_\+\+Action\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The process that will be executed each frame while the action is being performed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_glide_a14d5f2b568b6a3573166ffe8384a5be5}{Glide}}, \mbox{\hyperlink{class_jetpack_a2f099459f3cdeef59c2a73a86edb334c}{Jetpack}}, \mbox{\hyperlink{class_jump_a44577960ec4edd622c95a6f5b76dfacb}{Jump}}, and \mbox{\hyperlink{class_teleport_ab64216d083c55dfc26ed7f236ed34a03}{Teleport}}.
+
+\mbox{\Hypertarget{class_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f}\label{class_main_action_a9b80ccc09b82cb5b35dc22a1a6f9b85f}} 
+\index{MainAction@{MainAction}!\_ActionReleased@{\_ActionReleased}}
+\index{\_ActionReleased@{\_ActionReleased}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_ActionReleased()}{\_ActionReleased()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+\_\+\+Action\+Released (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_glide_a2353d380d6897004724d34c31838f798}{Glide}}, \mbox{\hyperlink{class_jetpack_a66a6e0bb7ff231a6e843f9f67a4d7642}{Jetpack}}, and \mbox{\hyperlink{class_teleport_a777418072ec29926a6c0bb7596782952}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00085}{85}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95}\label{class_main_action_a5d77225f0db8bd9c5a5c1f120ef3ce95}} 
+\index{MainAction@{MainAction}!\_Init@{\_Init}}
+\index{\_Init@{\_Init}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_Init()}{\_Init()}}
+{\footnotesize\ttfamily override void Main\+Action.\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Setups the state and initializes it. 
+
+
+
+Implements \mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{Player\+State}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_teleport_ac3436447bedf6cb700213b8c7f9641df}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_ab2261aec55fea5dc4490545410b8b279}\label{class_main_action_ab2261aec55fea5dc4490545410b8b279}} 
+\index{MainAction@{MainAction}!\_StatePhysicsProcess@{\_StatePhysicsProcess}}
+\index{\_StatePhysicsProcess@{\_StatePhysicsProcess}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{\_StatePhysicsProcess()}{\_StatePhysicsProcess()}}
+{\footnotesize\ttfamily override void Main\+Action.\+\_\+\+State\+Physics\+Process (\begin{DoxyParamCaption}\item[{float}]{delta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The physics process that will be called each frame for the state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta} & Time since the last frame.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{Player\+State}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a9f2f79c690df2047472ab6e4936b354d}\label{class_main_action_a9f2f79c690df2047472ab6e4936b354d}} 
+\index{MainAction@{MainAction}!GetTypeAsString@{GetTypeAsString}}
+\index{GetTypeAsString@{GetTypeAsString}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{GetTypeAsString()}{GetTypeAsString()}}
+{\footnotesize\ttfamily static string Main\+Action.\+Get\+Type\+As\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the given action\textquotesingle{}s type as a string. This is because the player animations corresponding to each action has these names. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The enum value of the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string depending on the action type.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_aa5e2b5f2a44a4d622e64878af6240e99}\label{class_main_action_aa5e2b5f2a44a4d622e64878af6240e99}} 
+\index{MainAction@{MainAction}!GetTypeAsStringEsp@{GetTypeAsStringEsp}}
+\index{GetTypeAsStringEsp@{GetTypeAsStringEsp}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{GetTypeAsStringEsp()}{GetTypeAsStringEsp()}}
+{\footnotesize\ttfamily static string Main\+Action.\+Get\+Type\+As\+String\+Esp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_main_action_8cs_adbd1afd3268279088266e6463135cac9}{Player\+Main\+Action}}}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the given action\textquotesingle{}s type as a string in spanish. This is for displaying on the GUI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The enum value of the action\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string in spanish depending on the action type.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00129}{129}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68}\label{class_main_action_a7171ab2e310ea4e2b6de08ca9e7c8a68}} 
+\index{MainAction@{MainAction}!OnMainActionObjectCollisionCheckAreaEntered@{OnMainActionObjectCollisionCheckAreaEntered}}
+\index{OnMainActionObjectCollisionCheckAreaEntered@{OnMainActionObjectCollisionCheckAreaEntered}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{OnMainActionObjectCollisionCheckAreaEntered()}{OnMainActionObjectCollisionCheckAreaEntered()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+On\+Main\+Action\+Object\+Collision\+Check\+Area\+Entered (\begin{DoxyParamCaption}\item[{Area2D}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_glide_ac7d01853752f27addde9526b665b3d62}{Glide}}, \mbox{\hyperlink{class_jetpack_a1a4d6a6693480ef6ed70627399da3e25}{Jetpack}}, and \mbox{\hyperlink{class_teleport_ae1d16e9d16358e23e6ae55b942d1f312}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00156}{156}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a2cb93724e1d5758c7544649f39bdcb67}\label{class_main_action_a2cb93724e1d5758c7544649f39bdcb67}} 
+\index{MainAction@{MainAction}!OnMainActionObjectCollisionCheckAreaExited@{OnMainActionObjectCollisionCheckAreaExited}}
+\index{OnMainActionObjectCollisionCheckAreaExited@{OnMainActionObjectCollisionCheckAreaExited}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{OnMainActionObjectCollisionCheckAreaExited()}{OnMainActionObjectCollisionCheckAreaExited()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+On\+Main\+Action\+Object\+Collision\+Check\+Area\+Exited (\begin{DoxyParamCaption}\item[{Area2D}]{area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00171}{171}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a17693bd0c6cc2a114af83d0f843baaa4}\label{class_main_action_a17693bd0c6cc2a114af83d0f843baaa4}} 
+\index{MainAction@{MainAction}!OnMainActionTimerTimeout@{OnMainActionTimerTimeout}}
+\index{OnMainActionTimerTimeout@{OnMainActionTimerTimeout}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{OnMainActionTimerTimeout()}{OnMainActionTimerTimeout()}}
+{\footnotesize\ttfamily virtual void Main\+Action.\+On\+Main\+Action\+Timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_glide_a721ca45c8d7ddfeb0b25f726540c770d}{Glide}}, \mbox{\hyperlink{class_jetpack_ae5d732914ec97154f9f14d12e96730d3}{Jetpack}}, and \mbox{\hyperlink{class_teleport_ab8724fd67974a34636592398ba31beac}{Teleport}}.
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00150}{150}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_action_a94fb5bad42a45b95401d737c0b4ebb22}\label{class_main_action_a94fb5bad42a45b95401d737c0b4ebb22}} 
+\index{MainAction@{MainAction}!CanUseActionPad@{CanUseActionPad}}
+\index{CanUseActionPad@{CanUseActionPad}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{CanUseActionPad}{CanUseActionPad}}
+{\footnotesize\ttfamily bool Main\+Action.\+Can\+Use\+Action\+Pad = true}
+
+
+
+True if the player can use jump pads. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_main_action_af4f38ae5810abac472752ba286622566}\label{class_main_action_af4f38ae5810abac472752ba286622566}} 
+\index{MainAction@{MainAction}!Blocked@{Blocked}}
+\index{Blocked@{Blocked}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{Blocked}{Blocked}}
+{\footnotesize\ttfamily bool Main\+Action.\+Blocked = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00028}{28}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_a2149878bc7d0a4debaf0692581b990d4}\label{class_main_action_a2149878bc7d0a4debaf0692581b990d4}} 
+\index{MainAction@{MainAction}!OnActionPad@{OnActionPad}}
+\index{OnActionPad@{OnActionPad}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{OnActionPad}{OnActionPad}}
+{\footnotesize\ttfamily bool Main\+Action.\+On\+Action\+Pad = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [protected]}}
+
+
+
+True if the player is currently on a jump pad. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+\mbox{\Hypertarget{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}\label{class_main_action_ae2d814bd2f2c5225e6c26fce2780accc}} 
+\index{MainAction@{MainAction}!PerformingAction@{PerformingAction}}
+\index{PerformingAction@{PerformingAction}!MainAction@{MainAction}}
+\doxysubsubsection{\texorpdfstring{PerformingAction}{PerformingAction}}
+{\footnotesize\ttfamily bool Main\+Action.\+Performing\+Action = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+True if the player is currently performing a main action. 
+
+
+
+Definition at line \mbox{\hyperlink{_main_action_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_main_action_8cs_source}{Main\+Action.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Entities/\+Player/\+Player\+States/\+Action/\+Main/\mbox{\hyperlink{_main_action_8cs}{Main\+Action.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\hypertarget{_scene_factory_8cs_source}{}\doxysection{Scene\+Factory.\+cs}
+\label{_scene_factory_8cs_source}\index{src/SceneFactory.cs@{src/SceneFactory.cs}}
+\mbox{\hyperlink{_scene_factory_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00008}\mbox{\hyperlink{class_scene_factory}{00008}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_scene_factory}{SceneFactory}} \{}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00013}00013     \textcolor{keyword}{private} Dictionary<GameScenes, PackedScene> scenes;}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00018}\mbox{\hyperlink{class_scene_factory_a079c0b6302987a374a561495752bfdc7}{00018}}     \textcolor{keyword}{public} \mbox{\hyperlink{class_scene_factory_a079c0b6302987a374a561495752bfdc7}{SceneFactory}}()}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00020}00020         this.scenes = \textcolor{keyword}{new} Dictionary<GameScenes, PackedScene>();}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00021}00021         this.scenes.Add(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.PROFILE\_SELECT, ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Scenes/ProfileSelect.tscn"{}}));}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00022}00022         this.scenes.Add(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.MAIN\_MENU, ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Scenes/MainMenu.tscn"{}}));}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00023}00023         this.scenes.Add(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.LEVEL1, ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Maps/Level1.tscn"{}}));}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00024}00024         this.scenes.Add(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.LEVEL2, ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Maps/Level2.tscn"{}}));}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00025}00025         this.scenes.Add(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.LEVEL3, ResourceLoader.Load<PackedScene>(\textcolor{stringliteral}{"{}res://src/Maps/Level3.tscn"{}}));}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00027}00027     \}}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00034}\mbox{\hyperlink{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}{00034}}     \textcolor{keyword}{public} Node2D \mbox{\hyperlink{class_scene_factory_aa71c8ef1cc97cc029f7b54512187ae7d}{New}}(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}} scene)}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00035}00035     \{}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00036}00036         \textcolor{keywordflow}{return} this.scenes[scene].Instance<Node2D>();}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_scene_factory_8cs_source_l00038}00038 \}}
+
+\end{DoxyCode}

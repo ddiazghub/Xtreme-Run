@@ -1,0 +1,99 @@
+\hypertarget{_secondary_action_8cs_source}{}\doxysection{Secondary\+Action.\+cs}
+\label{_secondary_action_8cs_source}\index{src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs@{src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs}}
+\mbox{\hyperlink{_secondary_action_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00007}\mbox{\hyperlink{class_secondary_action}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{class_secondary_action}{SecondaryAction}}: \mbox{\hyperlink{class_player_state}{PlayerState}} \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00013}\mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{00013}}     \textcolor{keyword}{public} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{Blocked}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00015}\mbox{\hyperlink{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_a82ec8c6b3487e5507aa926f412d76945}{\_Init}}()}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00017}00017         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondaryActionTimer}}.Stop();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00018}00018         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondaryActionTimer}}.Connect(\textcolor{stringliteral}{"{}timeout"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_secondary_action_ab1436a4c4523473d3199412de76ec830}{OnSecondaryActionTimerTimeout}}));}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00021}\mbox{\hyperlink{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}{00021}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_a91411ef181aa4993006fcb37cc70225d}{\_StatePhysicsProcess}}(\textcolor{keywordtype}{float} delta)}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00022}00022     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00023}00023         \textcolor{keywordflow}{if} (Input.IsActionJustReleased(\textcolor{stringliteral}{"{}action\_secondary"{}}) \&\& \textcolor{keyword}{this}.Blocked) \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00024}00024             this.\mbox{\hyperlink{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}{\_ActionReleased}}();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00027}00027         \textcolor{keywordflow}{if} (Input.IsActionPressed(\textcolor{stringliteral}{"{}action\_secondary"{}}) \&\& !(\textcolor{keyword}{this}.Blocked || \textcolor{keyword}{this}.Player.Blocked))}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00028}00028         \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00029}00029             \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a6e483237354681df23922459b1f4f5f1}{persistentState}} is \mbox{\hyperlink{class_on_ground_state}{OnGroundState}}) \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00030}00030                 this.\mbox{\hyperlink{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}{\_ActionOnGround}}();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00031}00031             \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00033}00033             \textcolor{keywordflow}{if} (this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a6e483237354681df23922459b1f4f5f1}{persistentState}} is \mbox{\hyperlink{class_on_air_state}{OnAirState}}) \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00034}00034                 this.\mbox{\hyperlink{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}{\_ActionOnAir}}();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00035}00035             \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00042}\mbox{\hyperlink{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}{00042}}     \textcolor{keyword}{public} \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_a2d779a636107f20c7b8566d359d47e2c}{\_ActionOnGround}}()}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00044}00044         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondaryActionTimer}}.Start();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00045}00045         this.\mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{Blocked}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00047}00047         }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00051}\mbox{\hyperlink{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}{00051}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_a70a639090f6e4f4b92b0116a21484673}{\_ActionOnAir}}();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00056}\mbox{\hyperlink{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}{00056}}     \textcolor{keyword}{public} \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_a167568a42e1a355f2d49b5a9dcfd4baf}{\_ActionReleased}}()}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00057}00057     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00058}00058         this.\mbox{\hyperlink{class_secondary_action_a6234d64fc4dbfb25eb8791f0e5cd470d}{Blocked}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00067}\mbox{\hyperlink{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}{00067}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_secondary_action_ad95829ffc55ac6b517a5fe37eb282f4d}{GetTypeAsString}}(\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}} action)}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00068}00068     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00069}00069         \textcolor{keywordflow}{switch} (action)}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00070}00070         \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00071}00071             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.FASTFALL\_AND\_ROLL:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00072}00072                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}roll"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00073}00073             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00074}00074             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.SWITCH\_GRAVITY:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00075}00075                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}switchGravity"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00076}00076             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00077}00077             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.TELEPORT\_AND\_SWITCH\_GRAVITY:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00078}00078                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}tpAndSwitchGravity"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00080}00080             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.SPAWN\_PLATFORMS:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00081}00081                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}spawnPlatforms"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00082}00082             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00083}00083             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00084}00084                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}roll"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00085}00085         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00086}00086     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00094}\mbox{\hyperlink{class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83}{00094}}     \textcolor{keyword}{public} \textcolor{keyword}{static} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_secondary_action_ad8f2e602a06f1350c9bc0a5b25ff5c83}{GetTypeAsStringEsp}}(\mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}} action)}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00095}00095     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00096}00096         \textcolor{keywordflow}{switch} (action)}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00097}00097         \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00098}00098             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.FASTFALL\_AND\_ROLL:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00099}00099                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Caer/Esquivar"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00100}00100             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00101}00101             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.SWITCH\_GRAVITY:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00102}00102                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Cambiar Gravedad"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00103}00103             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00104}00104             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.TELEPORT\_AND\_SWITCH\_GRAVITY:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00105}00105                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}TP/Cambiar Gravedad"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00107}00107             \textcolor{keywordflow}{case} \mbox{\hyperlink{_player_secondary_action_8cs_a92b46946fafc071a922f285614a74b88}{PlayerSecondaryAction}}.SPAWN\_PLATFORMS:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00108}00108                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Crear Plataformas"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00109}00109             }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00110}00110             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00111}00111                 \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Caer/Esquivar"{}};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00112}00112         \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00115}\mbox{\hyperlink{class_secondary_action_ab1436a4c4523473d3199412de76ec830}{00115}}     \textcolor{keyword}{public} \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_secondary_action_ab1436a4c4523473d3199412de76ec830}{OnSecondaryActionTimerTimeout}}()}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00116}00116     \{}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00117}00117         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a8fc34dcdff8f033cb587661d07f13fa5}{animation}}.Play(\textcolor{stringliteral}{"{}running"{}});}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00118}00118         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_a3f11ade4b7fa1b93671326424ff0f1db}{mainAction}}.\mbox{\hyperlink{class_main_action_af4f38ae5810abac472752ba286622566}{Blocked}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00119}00119         this.\mbox{\hyperlink{class_player}{Player}}.\mbox{\hyperlink{class_player_aa8a2d620862a3bff5e279a59eb8e1433}{secondaryActionTimer}}.Stop();}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00120}00120     \}}
+\DoxyCodeLine{\Hypertarget{_secondary_action_8cs_source_l00121}00121 \}}
+
+\end{DoxyCode}

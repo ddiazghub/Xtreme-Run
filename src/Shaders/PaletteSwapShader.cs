@@ -2,9 +2,19 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+///     "Shader" for swapping colors in game textures.
+/// </summary>
 public class PaletteSwapShader {
     private static PaletteSwapShader instance;
 
+    /// <summary>
+    ///     Performs a palette swap on the given image by calculating the difference between each pixel's color and the target colors to swap.
+    ///     Swaps each color whose difference with the target colors is smaller than the threshold.
+    /// </summary>
+    /// <param name="image">The image in which to swap colors.</param>
+    /// <param name="swaps">A list of the colors that will be swapped.</param>
+    /// <returns></returns>
     public Image PaletteSwap(Image image, List<PaletteSwapEntry> swaps)
     {
         Image modified = new Image();
@@ -49,6 +59,10 @@ public class PaletteSwapShader {
 
         return modified;
     }
+
+    /// <summary>
+    ///     Gets the shader instance.
+    /// </summary>
     public static PaletteSwapShader Instance
     {
         get

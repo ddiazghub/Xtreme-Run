@@ -1,11 +1,14 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Secondary action that allows the player to invert the direction of gravity.
+/// </summary>
 public class SwitchGravity: SecondaryAction {
     public override void _Init()
     {
         base._Init();
-        this.player.secondaryActionTimer.WaitTime = 0.3f;
+        this.Player.secondaryActionTimer.WaitTime = 0.3f;
     }
 
     public override void _StatePhysicsProcess(float delta)
@@ -14,7 +17,7 @@ public class SwitchGravity: SecondaryAction {
     }
     public override void _ActionOnGround()
     {
-        this.player.linearVelocity.y = -2 * this.player.gravity;
+        this.Player.linearVelocity.y = -2 * this.Player.Gravity;
         this.invertGravity();
         base._ActionOnGround();
     }
@@ -30,24 +33,27 @@ public class SwitchGravity: SecondaryAction {
     }
     public override void OnSecondaryActionTimerTimeout()
     {
-        if (this.player.invertedGravity)
-            this.player.gravity = -this.player.DEFAULT_GRAVITY;
+        if (this.Player.InvertedGravity)
+            this.Player.Gravity = -this.Player.DEFAULT_GRAVITY;
         else
-            this.player.gravity = this.player.DEFAULT_GRAVITY;
+            this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
 
-        this.player.secondaryActionTimer.Stop();
+        this.Player.secondaryActionTimer.Stop();
     }
 
+    /// <summary>
+    ///     Invert's the player's gravity.
+    /// </summary>
     public void invertGravity()
     {
-        this.player.invertGravity();
-        this.player.secondaryActionTimer.Start();
+        this.Player.InvertGravity();
+        this.Player.secondaryActionTimer.Start();
 
-        if (this.player.invertedGravity)
-            this.player.gravity = -this.player.DEFAULT_GRAVITY + 50;
+        if (this.Player.InvertedGravity)
+            this.Player.Gravity = -this.Player.DEFAULT_GRAVITY + 50;
         else
-            this.player.gravity = this.player.DEFAULT_GRAVITY - 50;
+            this.Player.Gravity = this.Player.DEFAULT_GRAVITY - 50;
 
-        this.blocked = true;
+        this.Blocked = true;
     }
 }

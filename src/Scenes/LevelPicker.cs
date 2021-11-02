@@ -1,11 +1,20 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Node for picking a level on the main menu.
+/// </summary>
 public class LevelPicker : SpinBox
 {
+    /// <summary>
+    ///     Emitted when the player changes the value on this picker.
+    /// </summary>
     [Signal]
     public delegate void ValueChanged();
 
+    /// <summary>
+    ///     The current value.
+    /// </summary>
     private double currentValue;
 
     public override void _Ready()

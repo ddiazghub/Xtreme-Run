@@ -1,4 +1,13 @@
+/// <summary>
+///     This class generates states for the main class.
+/// </summary>
 public class PlayerStateFactory {
+
+    /// <summary>
+    ///     Creates a new persistent state from the given enum value.
+    /// </summary>
+    /// <param name="state">The value of the new state.</param>
+    /// <returns>A new instance of a player persistent state.</returns>
     public PersistentState New(PlayerPersistentState state)
     {
         PersistentState newState = null;
@@ -17,6 +26,11 @@ public class PlayerStateFactory {
         return newState;
     }
 
+    /// <summary>
+    ///     Creates a new player primary action from the given enum value.
+    /// </summary>
+    /// <param name="state">The value of the new primary action.</param>
+    /// <returns>A new instance of a player primary action.</returns>
     public MainAction New(PlayerMainAction state)
     {
         MainAction newState = null;
@@ -43,6 +57,11 @@ public class PlayerStateFactory {
         return newState;
     }
 
+    /// <summary>
+    ///     Creates a new secondary action from the given enum value.
+    /// </summary>
+    /// <param name="state">The value of the new secondary action.</param>
+    /// <returns>A new instance of a player secondary action.</returns>
     public SecondaryAction New(PlayerSecondaryAction state)
     {
         SecondaryAction newState = null;

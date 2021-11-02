@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Node for displaying the number of times the player has attempted a level.
+/// </summary>
 public class AttemptsCounter : Label
 {
     private Vector2 initialPosition;
@@ -14,6 +17,10 @@ public class AttemptsCounter : Label
         this.rectInitialPosition = this.rect.RectPosition;
     }
 
+    /// <summary>
+    ///     Sets a new number of attempts.
+    /// </summary>
+    /// <param name="attempts">New number of attempts.</param>
     public void Set(int attempts)
     {
         this.RectSize = new Vector2(97, 28);

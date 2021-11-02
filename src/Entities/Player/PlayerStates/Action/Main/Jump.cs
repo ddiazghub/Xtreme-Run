@@ -1,19 +1,22 @@
 using Godot;
 using System;
 
+/// <summary>
+///     Main action that allows the player to jump.
+/// </summary>
 public class Jump: MainAction {
     public override void _Init()
     {
-        this.player.jumpForce = this.player.DEFAULT_JUMPFORCE;
-        this.player.maxJumpTime = this.player.DEFAULT_MAX_JUMP_TIME;
-        this.player.maxFallSpeed = this.player.DEFAULT_JUMPFORCE;
-        this.player.gravity = this.player.DEFAULT_GRAVITY;
+        this.Player.JumpForce = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.MaxJumpTime = this.Player.DEFAULT_MAX_JUMP_TIME;
+        this.Player.MaxFallSpeed = this.Player.DEFAULT_JUMPFORCE;
+        this.Player.Gravity = this.Player.DEFAULT_GRAVITY;
 
         base._Init();
     }
     
     public override void _ActionProcess(float delta)
     {
-        this.player.linearVelocity.y -= this.player.jumpForce;
+        this.Player.linearVelocity.y -= this.Player.JumpForce;
     }
 }

@@ -1,0 +1,57 @@
+\hypertarget{_pause_menu_8cs_source}{}\doxysection{Pause\+Menu.\+cs}
+\label{_pause_menu_8cs_source}\index{src/Scenes/PauseMenu.cs@{src/Scenes/PauseMenu.cs}}
+\mbox{\hyperlink{_pause_menu_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00007}\mbox{\hyperlink{class_pause_menu}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_pause_menu}{PauseMenu}} : NinePatchRect \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00012}00012     [Signal]}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00013}\mbox{\hyperlink{class_pause_menu_a25d039f5d70d38933bdfe437a3e1c36c}{00013}}     \textcolor{keyword}{public} delegate \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_a25d039f5d70d38933bdfe437a3e1c36c}{RestartPressed}}();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00015}\mbox{\hyperlink{class_pause_menu_a4cc5227b00082bc3ea16922842ed6295}{00015}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_a4cc5227b00082bc3ea16922842ed6295}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00017}00017         this.Hide();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00018}00018         this.PauseMode = PauseModeEnum.Process;}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00019}00019         this.RectGlobalPosition = (\mbox{\hyperlink{class_main}{Main}}.\mbox{\hyperlink{class_main_aa2f640712c026469e26fc7954f11be5d}{WINDOW\_SIZE}} / 2) -\/ (this.RectSize / 2);}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00021}00021         this.GetNode<TextureButton>(\textcolor{stringliteral}{"{}Cancel"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_pause_menu_a6329bddee55d0fb4211804e28c1d3a71}{OnCancelPressed}}));}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00022}00022         this.GetNode(\textcolor{stringliteral}{"{}Continue"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_pause_menu_ad9b30c3c2ba00ffd78fe82e6592d30cc}{OnContinuePressed}}));}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00023}00023         this.GetNode(\textcolor{stringliteral}{"{}Restart"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_pause_menu_a09b3095bfba6adfdf6511c6284653a5b}{OnRestartPressed}}));}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00024}00024         this.GetNode(\textcolor{stringliteral}{"{}Quit"{}}).Connect(\textcolor{stringliteral}{"{}pressed"{}}, \textcolor{keyword}{this}, nameof(this.\mbox{\hyperlink{class_pause_menu_a2738ef11851cc818743920726ca7c148}{OnQuitPressed}}));}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00030}\mbox{\hyperlink{class_pause_menu_aae0eb58374e364f7b34d0750be250efa}{00030}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_aae0eb58374e364f7b34d0750be250efa}{ShowMenu}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00031}00031     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00032}00032         this.Show();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00033}00033         this.GetTree().Paused = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00034}00034     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00036}\mbox{\hyperlink{class_pause_menu_a6329bddee55d0fb4211804e28c1d3a71}{00036}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_a6329bddee55d0fb4211804e28c1d3a71}{OnCancelPressed}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00037}00037     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00038}00038         this.\mbox{\hyperlink{class_pause_menu_ad9b30c3c2ba00ffd78fe82e6592d30cc}{OnContinuePressed}}();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00039}00039     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00041}\mbox{\hyperlink{class_pause_menu_ad9b30c3c2ba00ffd78fe82e6592d30cc}{00041}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_ad9b30c3c2ba00ffd78fe82e6592d30cc}{OnContinuePressed}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00042}00042     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00043}00043         this.GetTree().Paused = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00044}00044         this.Hide();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00047}\mbox{\hyperlink{class_pause_menu_a09b3095bfba6adfdf6511c6284653a5b}{00047}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_a09b3095bfba6adfdf6511c6284653a5b}{OnRestartPressed}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00049}00049         this.EmitSignal(\textcolor{stringliteral}{"{}RestartPressed"{}});}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00050}00050         this.GetTree().Paused = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00051}00051         this.Hide();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00052}00052     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00054}\mbox{\hyperlink{class_pause_menu_a2738ef11851cc818743920726ca7c148}{00054}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pause_menu_a2738ef11851cc818743920726ca7c148}{OnQuitPressed}}()}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00055}00055     \{}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00056}00056         this.GetTree().Paused = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00057}00057         ((\mbox{\hyperlink{class_level}{Level}}) this.GetTree().Root.GetNode<\mbox{\hyperlink{class_main}{Main}}>(\textcolor{stringliteral}{"{}Main"{}}).Scene).SaveData();}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00058}00058         this.GetTree().Root.GetNode<\mbox{\hyperlink{class_main}{Main}}>(\textcolor{stringliteral}{"{}Main"{}}).ChangeScene(\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{GameScenes}}.MAIN\_MENU);}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00059}00059     \}}
+\DoxyCodeLine{\Hypertarget{_pause_menu_8cs_source_l00060}00060 \}}
+
+\end{DoxyCode}

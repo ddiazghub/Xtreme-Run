@@ -1,0 +1,24 @@
+\hypertarget{_player_state_8cs_source}{}\doxysection{Player\+State.\+cs}
+\label{_player_state_8cs_source}\index{src/Entities/Player/PlayerStates/PlayerState.cs@{src/Entities/Player/PlayerStates/PlayerState.cs}}
+\mbox{\hyperlink{_player_state_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00002}00002 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00007}\mbox{\hyperlink{class_player_state}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keyword}{class }\mbox{\hyperlink{class_player_state}{PlayerState}}: Node2D \{}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00008}00008     }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00012}\mbox{\hyperlink{class_player_state_a8fc13ad7ffde3b39b92acddabf17dc7b}{00012}}     \textcolor{keyword}{protected} \mbox{\hyperlink{class_player}{Player}} \mbox{\hyperlink{class_player}{Player}} \{ \textcolor{keyword}{get}; \textcolor{keyword}{set}; \}}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00017}\mbox{\hyperlink{class_player_state_a104dd6b861334c1c4f9cb2a9d322403c}{00017}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_state_a104dd6b861334c1c4f9cb2a9d322403c}{Setup}}()}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00019}00019         this.\mbox{\hyperlink{class_player}{Player}} = this.GetParent<Player>();}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00021}00021         this.\mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{\_Init}}();}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00028}\mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{00028}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_state_a1bddd210d96db25cb49b3a0b3edd5265}{\_StatePhysicsProcess}}(\textcolor{keywordtype}{float} delta);}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00033}\mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{00033}}     \textcolor{keyword}{public} \textcolor{keyword}{abstract} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_state_a7c94c3f0cc97f388f281c524523d311e}{\_Init}}();}
+\DoxyCodeLine{\Hypertarget{_player_state_8cs_source_l00034}00034 \}}
+
+\end{DoxyCode}

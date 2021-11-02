@@ -3,38 +3,65 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
+/// <summary>
+///     Class that contains the information of a player profile.
+/// </summary>
 public class ProfileInfo {
+
+    /// <summary>
+    ///     The profile id. Can be any number between 0 and 5.
+    /// </summary>
     public int ID {
         get;
         set;
     }
 
+    /// <summary>
+    ///     The profile name.
+    /// </summary>
     public string Name {
         get;
         set;
     }
 
+    /// <summary>
+    ///     The profile's avatar.
+    /// </summary>
     public Avatar Avatar
     {
         get;
     }
 
+    /// <summary>
+    ///     The number of points that the profile currently owns.
+    /// </summary>
     public UInt32 Points
     {
         get;
         set;
     }
 
+    /// <summary>
+    ///     An array of booleans in which each index corresponds to a store item's id.
+    ///     Each element is true if the item was bought from the store and is currently owned and false otherwise.
+    /// </summary>
     public bool[] OwnedItems
     {
         get;
     }
 
+    /// <summary>
+    ///     An array of ints that contains the maximum percent of progress the player has reached in each level.
+    ///     Element 0 is level 1, element 1 is level 2 and element 2 is level 3.
+    /// </summary>
     public int[] LevelProgress
     {
         get;
     }
 
+    /// <summary>
+    ///     The level the player is currently in, that being the first level the player hasn't completed or level 3 if all have been completed.
+    /// </summary>
     public int CurrentLevel
     {
         get
@@ -49,6 +76,9 @@ public class ProfileInfo {
         }
     }
 
+    /// <summary>
+    ///     A list of the levels the player has completed.
+    /// </summary>
     public List<int> CompletedLevels
     {
         get
@@ -68,6 +98,9 @@ public class ProfileInfo {
         }
     }
 
+    /// <summary>
+    ///     The number of items the player has bought from the store.
+    /// </summary>
     public int NumberOfOwnedItems
     {
         get
@@ -84,12 +117,24 @@ public class ProfileInfo {
         }
     }
 
+    /// <summary>
+    ///     Loads an existing profile from a file.
+    ///     If the profile doesn't exist or the save file is corrupted, returns a profile with an id of 6.
+    /// </summary>
+    /// <param name="saveFilePath">Path to the file where the profile is saved.</param>
     public ProfileInfo(string saveFilePath)
     {
         this.ID = Convert.ToInt32(Path.GetFileNameWithoutExtension(saveFilePath));
+
+        if (!Profile.Exists(this.ID))
+        {
+            this.ID = 6;
+            return;
+        }
+
         byte[] buffer = File.ReadAllBytes(saveFilePath);
 
-        if (buffer.Length != SaveFileInfo.SIZE)
+        if (buffer.Length != SaveFileInfo.FILE_SIZE)
         {
             Profile.Delete(this.ID);
             this.ID = 6;
@@ -120,15 +165,19 @@ public class ProfileInfo {
         };
     }
 
+    /// <summary>
+    ///     Writes the profile data to an array of bytes for saving in a file.
+    /// </summary>
+    /// <returns>A byte buffer containing the profile data</returns>
     public byte[] ToBytes()
     {
-        byte[] buffer = new byte[SaveFileInfo.SIZE];
+        byte[] buffer = new byte[SaveFileInfo.FILE_SIZE];
 
         Encoding.ASCII.GetBytes(this.Name.PadRight(SaveFileInfo.PROFILE_NAME_MAX_SIZE)).CopyTo(buffer, SaveFileInfo.PROFILE_NAME);
-        buffer[SaveFileInfo.AVATAR_GENDER] = Convert.ToByte(this.Avatar.male);
-        buffer[SaveFileInfo.AVATAR_COLOR_SKIN] = (byte) this.Avatar.skinColor;
-        buffer[SaveFileInfo.AVATAR_COLOR_TOP] = (byte) this.Avatar.topColor;
-        buffer[SaveFileInfo.AVATAR_COLOR_BOTTOM] = (byte) this.Avatar.bottomColor;
+        buffer[SaveFileInfo.AVATAR_GENDER] = Convert.ToByte(this.Avatar.Male);
+        buffer[SaveFileInfo.AVATAR_COLOR_SKIN] = (byte) this.Avatar.SkinColor;
+        buffer[SaveFileInfo.AVATAR_COLOR_TOP] = (byte) this.Avatar.TopColor;
+        buffer[SaveFileInfo.AVATAR_COLOR_BOTTOM] = (byte) this.Avatar.BottomColor;
 
         BitConverter.GetBytes(this.Points).CopyTo(buffer, SaveFileInfo.POINTS);
 
@@ -148,6 +197,11 @@ public class ProfileInfo {
         return buffer;
     }
 
+    /// <summary>
+    ///     Checks if the level is unlocked, that is if the level's key has been bought from the store.
+    /// </summary>
+    /// <param name="level">The level's number.</param>
+    /// <returns>True if the level is unlocked, else false.</returns>
     public bool LevelIsUnlocked(int level)
     {
         switch (level)

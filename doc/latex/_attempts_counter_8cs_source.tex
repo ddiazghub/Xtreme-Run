@@ -1,0 +1,37 @@
+\hypertarget{_attempts_counter_8cs_source}{}\doxysection{Attempts\+Counter.\+cs}
+\label{_attempts_counter_8cs_source}\index{src/Scenes/AttemptsCounter.cs@{src/Scenes/AttemptsCounter.cs}}
+\mbox{\hyperlink{_attempts_counter_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00001}00001 \textcolor{keyword}{using} Godot;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00002}00002 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00007}\mbox{\hyperlink{class_attempts_counter}{00007}} \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{class_attempts_counter}{AttemptsCounter}} : Label}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00009}00009     \textcolor{keyword}{private} Vector2 initialPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00010}00010     \textcolor{keyword}{private} Vector2 rectInitialPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00011}00011     \textcolor{keyword}{private} NinePatchRect rect;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00013}\mbox{\hyperlink{class_attempts_counter_a99139deffda97733aace251332587621}{00013}}     \textcolor{keyword}{public} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attempts_counter_a99139deffda97733aace251332587621}{\_Ready}}()}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00014}00014     \{}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00015}00015         this.initialPosition = this.RectPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00016}00016         this.rect = this.GetNode<NinePatchRect>(\textcolor{stringliteral}{"{}NinePatchRect"{}});}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00017}00017         this.rectInitialPosition = this.rect.RectPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00018}00018     \}}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00024}\mbox{\hyperlink{class_attempts_counter_a4cdb5bb63a2ef619112652644b397be7}{00024}}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_attempts_counter_a4cdb5bb63a2ef619112652644b397be7}{Set}}(\textcolor{keywordtype}{int} attempts)}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00025}00025     \{}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00026}00026         this.RectSize = \textcolor{keyword}{new} Vector2(97, 28);}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00027}00027         this.RectPosition = this.initialPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00028}00028         this.rect.RectPosition = this.rectInitialPosition;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00030}00030         \textcolor{keywordtype}{string} text = attempts.ToString();}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00031}00031         DynamicFont font = \textcolor{keyword}{new} DynamicFont();}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00032}00032         font.FontData = ResourceLoader.Load<DynamicFontData>(\textcolor{stringliteral}{"{}res://res/Fonts/Xolonium-\/Regular.ttf"{}});}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00033}00033         font.Size = 24;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00034}00034         \textcolor{keywordtype}{float} displacement = font.GetStringSize(text).x / 2;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00035}00035         this.Text = \textcolor{stringliteral}{"{}Intento "{}} + text;}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00036}00036         this.RectPosition += \textcolor{keyword}{new} Vector2(-\/displacement, 0);}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00037}00037     \}}
+\DoxyCodeLine{\Hypertarget{_attempts_counter_8cs_source_l00038}00038 \}}
+
+\end{DoxyCode}
