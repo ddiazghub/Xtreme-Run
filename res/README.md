@@ -1,3 +1,5 @@
 # Resources
 
-THIS FOLDER IS A HUGE MESS, I'M REALLY SORRY
+Game assets and stuff.
+
+**THIS FOLDER IS A HUGE MESS, I'M REALLY SORRY.**
