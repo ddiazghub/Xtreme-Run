@@ -3,7 +3,7 @@
 PC game developed on Godot with C#.
 
 
-## Assets Links
+## Assets Sources
 
 ### Music
 - [Menu loop](https://opengameart.org/content/menu-loop)
