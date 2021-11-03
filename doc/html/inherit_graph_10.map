@@ -1,7 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node1" href="$class_node2_d.html" title=" " alt="" coords="5,157,73,184"/>
-<area shape="rect" id="node2" href="$class_level.html" title="Base node for a game level scene." alt="" coords="143,31,194,57"/>
-<area shape="rect" id="node3" href="$class_level_select.html" title=" " alt="" coords="125,81,213,108"/>
+<area shape="rect" id="node2" href="$class_game_audio.html" title="Node for playing audio globally in the game." alt="" coords="123,31,214,57"/>
+<area shape="rect" id="node3" href="$class_level.html" title="Base node for a game level scene." alt="" coords="143,81,194,108"/>
 <area shape="rect" id="node4" href="$class_main.html" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="143,132,194,159"/>
 <area shape="rect" id="node5" href="$class_main_menu.html" title="The main menu of the game." alt="" coords="127,183,210,209"/>
 <area shape="rect" id="node6" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="123,233,214,260"/>

@@ -89,20 +89,20 @@ $(document).ready(function(){initNavTree('class_profile.html',''); initResizable
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_profile-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Profile Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class that contains the the currently active profile.  
+<p>Class that represents and contains the data of a player's profile.  
  <a href="class_profile.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Profile:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_profile__coll__graph.png" border="0" usemap="#a_profile_coll__map" alt="Collaboration graph"/></div>
 <map name="a_profile_coll__map" id="a_profile_coll__map">
-<area shape="rect" title="Class that contains the the currently active profile." alt="" coords="61,145,260,413"/>
+<area shape="rect" title="Class that represents and contains the data of a player&#39;s profile." alt="" coords="63,145,258,531"/>
 <area shape="rect" title=" " alt="" coords="5,5,148,83"/>
 <area shape="rect" title=" " alt="" coords="227,5,265,83"/>
 </map>
@@ -110,21 +110,18 @@ Collaboration diagram for Profile:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab295a3d5ae7494b681e0333bb4166516"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#ab295a3d5ae7494b681e0333bb4166516">Load</a> (int id)</td></tr>
-<tr class="memdesc:ab295a3d5ae7494b681e0333bb4166516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a profile with the given id and makes it the active profile.  <a href="class_profile.html#ab295a3d5ae7494b681e0333bb4166516">More...</a><br /></td></tr>
-<tr class="separator:ab295a3d5ae7494b681e0333bb4166516"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad59913a6e988fd89cc483dc9edaeeeb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8">Save</a> ()</td></tr>
-<tr class="memdesc:ad59913a6e988fd89cc483dc9edaeeeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the the currently active profile by writing to the save file.  <a href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8">More...</a><br /></td></tr>
-<tr class="separator:ad59913a6e988fd89cc483dc9edaeeeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fa9b755af65c98f5ce709c749579ab5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a8fa9b755af65c98f5ce709c749579ab5">LogOut</a> ()</td></tr>
-<tr class="memdesc:a8fa9b755af65c98f5ce709c749579ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs out of the current profile.  <a href="class_profile.html#a8fa9b755af65c98f5ce709c749579ab5">More...</a><br /></td></tr>
-<tr class="separator:a8fa9b755af65c98f5ce709c749579ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18281b870e1b5bb7aebc9bab50aa2272"><td class="memItemLeft" align="right" valign="top">byte[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a18281b870e1b5bb7aebc9bab50aa2272">ToBytes</a> ()</td></tr>
+<tr class="memdesc:a18281b870e1b5bb7aebc9bab50aa2272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the profile data to an array of bytes for saving in a file.  <a href="class_profile.html#a18281b870e1b5bb7aebc9bab50aa2272">More...</a><br /></td></tr>
+<tr class="separator:a18281b870e1b5bb7aebc9bab50aa2272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb3883e0f9a606c7e60b29dd2a41d8a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#adb3883e0f9a606c7e60b29dd2a41d8a0">LevelIsUnlocked</a> (int level)</td></tr>
+<tr class="memdesc:adb3883e0f9a606c7e60b29dd2a41d8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the level is unlocked, that is if the level's key has been bought from the store.  <a href="class_profile.html#adb3883e0f9a606c7e60b29dd2a41d8a0">More...</a><br /></td></tr>
+<tr class="separator:adb3883e0f9a606c7e60b29dd2a41d8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a7070938f6f0941e62f75fb916b13c36c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_profile_info.html">ProfileInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c">Get</a> (int id)</td></tr>
-<tr class="memdesc:a7070938f6f0941e62f75fb916b13c36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the profile with the given id and returns it's data.  <a href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c">More...</a><br /></td></tr>
-<tr class="separator:a7070938f6f0941e62f75fb916b13c36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c359996b22ff324708c48445c067f5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_profile.html">Profile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#af0c359996b22ff324708c48445c067f5">Get</a> (int id)</td></tr>
+<tr class="memdesc:af0c359996b22ff324708c48445c067f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that encapsulates the profile's class constructor. Loads the profile with the given id and returns it's data, returning null if the profile doesn't exist. This is used instead of the constructor because constructors can't return null.  <a href="class_profile.html#af0c359996b22ff324708c48445c067f5">More...</a><br /></td></tr>
+<tr class="separator:af0c359996b22ff324708c48445c067f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35fe897f5723f01593341c9c39d8e3e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#ac35fe897f5723f01593341c9c39d8e3e">Create</a> (int id, string name)</td></tr>
 <tr class="memdesc:ac35fe897f5723f01593341c9c39d8e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new profile.  <a href="class_profile.html#ac35fe897f5723f01593341c9c39d8e3e">More...</a><br /></td></tr>
 <tr class="separator:ac35fe897f5723f01593341c9c39d8e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,22 +146,107 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a0b5da2ac9e62cb58447b86877389aa9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_profile_info.html">ProfileInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a0b5da2ac9e62cb58447b86877389aa9e">Info</a><code> [getprivate set]</code></td></tr>
-<tr class="memdesc:a0b5da2ac9e62cb58447b86877389aa9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data of the active profile.  <a href="class_profile.html#a0b5da2ac9e62cb58447b86877389aa9e">More...</a><br /></td></tr>
-<tr class="separator:a0b5da2ac9e62cb58447b86877389aa9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ea31d4b345ebc63cc9933453eee20e6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_profile.html">Profile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a9ea31d4b345ebc63cc9933453eee20e6">CurrentSession</a><code> [get]</code></td></tr>
-<tr class="memdesc:a9ea31d4b345ebc63cc9933453eee20e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of the currently active profile.  <a href="class_profile.html#a9ea31d4b345ebc63cc9933453eee20e6">More...</a><br /></td></tr>
-<tr class="separator:a9ea31d4b345ebc63cc9933453eee20e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8907ef1053fdebaeb5322e09ffe38128"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a8907ef1053fdebaeb5322e09ffe38128">ID</a><code> [getset]</code></td></tr>
+<tr class="memdesc:a8907ef1053fdebaeb5322e09ffe38128"><td class="mdescLeft">&#160;</td><td class="mdescRight">The profile id. Can be any number between 0 and 5.  <a href="class_profile.html#a8907ef1053fdebaeb5322e09ffe38128">More...</a><br /></td></tr>
+<tr class="separator:a8907ef1053fdebaeb5322e09ffe38128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e50ac0f5032687e6083e99749fcd199"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a0e50ac0f5032687e6083e99749fcd199">Name</a><code> [getset]</code></td></tr>
+<tr class="memdesc:a0e50ac0f5032687e6083e99749fcd199"><td class="mdescLeft">&#160;</td><td class="mdescRight">The profile name.  <a href="class_profile.html#a0e50ac0f5032687e6083e99749fcd199">More...</a><br /></td></tr>
+<tr class="separator:a0e50ac0f5032687e6083e99749fcd199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307f6749c751e25cef64f85b07f02514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_avatar.html">Avatar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a307f6749c751e25cef64f85b07f02514">Avatar</a><code> [get]</code></td></tr>
+<tr class="memdesc:a307f6749c751e25cef64f85b07f02514"><td class="mdescLeft">&#160;</td><td class="mdescRight">The profile's avatar.  <a href="class_profile.html#a307f6749c751e25cef64f85b07f02514">More...</a><br /></td></tr>
+<tr class="separator:a307f6749c751e25cef64f85b07f02514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87d47cc73db8b55b24e5ab547534272"><td class="memItemLeft" align="right" valign="top">UInt32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#af87d47cc73db8b55b24e5ab547534272">Points</a><code> [getset]</code></td></tr>
+<tr class="memdesc:af87d47cc73db8b55b24e5ab547534272"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of points that the profile currently owns.  <a href="class_profile.html#af87d47cc73db8b55b24e5ab547534272">More...</a><br /></td></tr>
+<tr class="separator:af87d47cc73db8b55b24e5ab547534272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baa1f0b2ddbf6902dfdf4e06db2621a"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a3baa1f0b2ddbf6902dfdf4e06db2621a">OwnedItems</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3baa1f0b2ddbf6902dfdf4e06db2621a"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of booleans in which each index corresponds to a store item's id. Each element is true if the item was bought from the store and is currently owned and false otherwise.  <a href="class_profile.html#a3baa1f0b2ddbf6902dfdf4e06db2621a">More...</a><br /></td></tr>
+<tr class="separator:a3baa1f0b2ddbf6902dfdf4e06db2621a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dd8c4295cf725a680ea5cb5e937137"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a63dd8c4295cf725a680ea5cb5e937137">LevelProgress</a><code> [get]</code></td></tr>
+<tr class="memdesc:a63dd8c4295cf725a680ea5cb5e937137"><td class="mdescLeft">&#160;</td><td class="mdescRight">An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3.  <a href="class_profile.html#a63dd8c4295cf725a680ea5cb5e937137">More...</a><br /></td></tr>
+<tr class="separator:a63dd8c4295cf725a680ea5cb5e937137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabba37c3975118edacf08f6f51e9252d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#aabba37c3975118edacf08f6f51e9252d">CurrentLevel</a><code> [get]</code></td></tr>
+<tr class="memdesc:aabba37c3975118edacf08f6f51e9252d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The level the player is currently in, that being the first level the player hasn't completed or level 3 if all have been completed.  <a href="class_profile.html#aabba37c3975118edacf08f6f51e9252d">More...</a><br /></td></tr>
+<tr class="separator:aabba37c3975118edacf08f6f51e9252d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f4969aeceaac4db0be879867e71fe3"><td class="memItemLeft" align="right" valign="top">List&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a54f4969aeceaac4db0be879867e71fe3">CompletedLevels</a><code> [get]</code></td></tr>
+<tr class="memdesc:a54f4969aeceaac4db0be879867e71fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of the levels the player has completed.  <a href="class_profile.html#a54f4969aeceaac4db0be879867e71fe3">More...</a><br /></td></tr>
+<tr class="separator:a54f4969aeceaac4db0be879867e71fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf86441cdfa02d937270c3cd466e2f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#adaf86441cdfa02d937270c3cd466e2f8">NumberOfOwnedItems</a><code> [get]</code></td></tr>
+<tr class="memdesc:adaf86441cdfa02d937270c3cd466e2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of items the player has bought from the store.  <a href="class_profile.html#adaf86441cdfa02d937270c3cd466e2f8">More...</a><br /></td></tr>
+<tr class="separator:adaf86441cdfa02d937270c3cd466e2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a20e872388fa79e657a2bd86ad28d46a5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_profile.html">Profile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a20e872388fa79e657a2bd86ad28d46a5">session</a></td></tr>
-<tr class="memdesc:a20e872388fa79e657a2bd86ad28d46a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton instance.  <a href="class_profile.html#a20e872388fa79e657a2bd86ad28d46a5">More...</a><br /></td></tr>
-<tr class="separator:a20e872388fa79e657a2bd86ad28d46a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a390b2643abb820e749741eb38206666d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_profile.html#a390b2643abb820e749741eb38206666d">Profile</a> (int id)</td></tr>
+<tr class="memdesc:a390b2643abb820e749741eb38206666d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads an existing profile from a file by the profile's id. If the profile doesn't exist or the save file is corrupted, returns a profile with an id of 6.  <a href="class_profile.html#a390b2643abb820e749741eb38206666d">More...</a><br /></td></tr>
+<tr class="separator:a390b2643abb820e749741eb38206666d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Class that contains the the currently active profile. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p >Class that represents and contains the data of a player's profile. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a390b2643abb820e749741eb38206666d" name="a390b2643abb820e749741eb38206666d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a390b2643abb820e749741eb38206666d">&#9670;&nbsp;</a></span>Profile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Profile.Profile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads an existing profile from a file by the profile's id. If the profile doesn't exist or the save file is corrupted, returns a profile with an id of 6. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of the profile to load.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_a390b2643abb820e749741eb38206666d_cgraph.png" border="0" usemap="#aclass_profile_a390b2643abb820e749741eb38206666d_cgraph" alt=""/></div>
+<map name="aclass_profile_a390b2643abb820e749741eb38206666d_cgraph" id="aclass_profile_a390b2643abb820e749741eb38206666d_cgraph">
+<area shape="rect" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="5,31,104,57"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="152,5,251,32"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="152,56,251,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_a390b2643abb820e749741eb38206666d_icgraph.png" border="0" usemap="#aclass_profile_a390b2643abb820e749741eb38206666d_icgraph" alt=""/></div>
+<map name="aclass_profile_a390b2643abb820e749741eb38206666d_icgraph" id="aclass_profile_a390b2643abb820e749741eb38206666d_icgraph">
+<area shape="rect" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="813,119,912,145"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="683,119,765,145"/>
+<area shape="rect" href="class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="474,119,613,145"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,64,622,91"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,181,635,208"/>
+<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,57,399,98"/>
+<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,123,401,149"/>
+<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,57,149,98"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,174,146,215"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,5,404,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,174,396,215"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac35fe897f5723f01593341c9c39d8e3e" name="ac35fe897f5723f01593341c9c39d8e3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac35fe897f5723f01593341c9c39d8e3e">&#9670;&nbsp;</a></span>Create()</h2>
 
@@ -203,7 +285,7 @@ Static Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The id of the new profile.</td></tr>
-    <tr><td class="paramname">name</td><td>The profile name.</td></tr>
+    <tr><td class="paramname">name</td><td>The profile's name.</td></tr>
   </table>
   </dd>
 </dl>
@@ -256,10 +338,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_profile_a65e989b8d3b98a068c286831391f5e6b_icgraph.png" border="0" usemap="#aclass_profile_a65e989b8d3b98a068c286831391f5e6b_icgraph" alt=""/></div>
 <map name="aclass_profile_a65e989b8d3b98a068c286831391f5e6b_icgraph" id="aclass_profile_a65e989b8d3b98a068c286831391f5e6b_icgraph">
-<area shape="rect" title="Deletes an existing profile save file." alt="" coords="416,42,515,69"/>
-<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="184,5,368,47"/>
-<area shape="rect" href="class_profile_info.html#a64d5028a0453e904021a62e9280060b0" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="207,71,345,98"/>
-<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+<area shape="rect" title="Deletes an existing profile save file." alt="" coords="960,42,1059,69"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,5,396,47"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="813,67,912,94"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,64,146,105"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="683,97,765,123"/>
+<area shape="rect" href="class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="474,122,613,149"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,181,622,207"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,71,635,98"/>
+<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,173,399,215"/>
+<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,122,401,149"/>
+<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,173,149,215"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,239,404,266"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,239,156,266"/>
 </map>
 </div>
 
@@ -302,24 +393,26 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_profile_a1611ed62259b932927164f5bff513c4b_icgraph.png" border="0" usemap="#aclass_profile_a1611ed62259b932927164f5bff513c4b_icgraph" alt=""/></div>
 <map name="aclass_profile_a1611ed62259b932927164f5bff513c4b_icgraph" id="aclass_profile_a1611ed62259b932927164f5bff513c4b_icgraph">
-<area shape="rect" title="Checks if the profile exists." alt="" coords="683,147,781,174"/>
-<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,71,622,98"/>
-<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,122,401,149"/>
-<area shape="rect" href="class_profile_info.html#a64d5028a0453e904021a62e9280060b0" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="474,173,613,199"/>
-<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,223,635,250"/>
-<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,5,399,47"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,71,404,98"/>
-<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,5,149,47"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,71,156,98"/>
-<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,165,146,207"/>
-<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,224,396,265"/>
+<area shape="rect" title="Checks if the profile exists." alt="" coords="960,97,1059,124"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,21,622,48"/>
+<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,123,401,149"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="813,72,912,99"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,173,635,200"/>
+<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,57,399,98"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,5,404,32"/>
+<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,57,149,98"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,166,146,207"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="683,72,765,99"/>
+<area shape="rect" href="class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="474,72,613,99"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,225,396,266"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7070938f6f0941e62f75fb916b13c36c" name="a7070938f6f0941e62f75fb916b13c36c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7070938f6f0941e62f75fb916b13c36c">&#9670;&nbsp;</a></span>Get()</h2>
+<a id="af0c359996b22ff324708c48445c067f5" name="af0c359996b22ff324708c48445c067f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c359996b22ff324708c48445c067f5">&#9670;&nbsp;</a></span>Get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +421,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_profile_info.html">ProfileInfo</a> Profile.Get </td>
+          <td class="memname">static <a class="el" href="class_profile.html">Profile</a> Profile.Get </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
@@ -342,95 +435,78 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Loads the profile with the given id and returns it's data. </p>
+<p>Method that encapsulates the profile's class constructor. Loads the profile with the given id and returns it's data, returning null if the profile doesn't exist. This is used instead of the constructor because constructors can't return null. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>The id of the profile to get.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The profile's data, null if the profile doesn't exist.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The profile's data or null if the profile doesn't exist.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_profile_af0c359996b22ff324708c48445c067f5_cgraph.png" border="0" usemap="#aclass_profile_af0c359996b22ff324708c48445c067f5_cgraph" alt=""/></div>
+<map name="aclass_profile_af0c359996b22ff324708c48445c067f5_cgraph" id="aclass_profile_af0c359996b22ff324708c48445c067f5_cgraph">
+<area shape="rect" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="5,31,88,57"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="136,31,235,57"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="283,5,381,32"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="283,56,381,83"/>
+</map>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph.png" border="0" usemap="#aclass_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph" alt=""/></div>
-<map name="aclass_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph" id="aclass_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph">
-<area shape="rect" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="683,97,765,123"/>
-<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,71,622,98"/>
-<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,122,635,149"/>
-<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,5,399,47"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,71,404,98"/>
-<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,5,149,47"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,71,156,98"/>
-<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,148,146,189"/>
-<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,173,396,215"/>
+<div class="center"><img src="class_profile_af0c359996b22ff324708c48445c067f5_icgraph.png" border="0" usemap="#aclass_profile_af0c359996b22ff324708c48445c067f5_icgraph" alt=""/></div>
+<map name="aclass_profile_af0c359996b22ff324708c48445c067f5_icgraph" id="aclass_profile_af0c359996b22ff324708c48445c067f5_icgraph">
+<area shape="rect" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="683,119,765,145"/>
+<area shape="rect" href="class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="474,119,613,145"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,64,622,91"/>
+<area shape="rect" href="class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,181,635,208"/>
+<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,57,399,98"/>
+<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,123,401,149"/>
+<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,57,149,98"/>
+<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,174,146,215"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,5,404,32"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" href="class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,174,396,215"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab295a3d5ae7494b681e0333bb4166516" name="ab295a3d5ae7494b681e0333bb4166516"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab295a3d5ae7494b681e0333bb4166516">&#9670;&nbsp;</a></span>Load()</h2>
+<a id="adb3883e0f9a606c7e60b29dd2a41d8a0" name="adb3883e0f9a606c7e60b29dd2a41d8a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb3883e0f9a606c7e60b29dd2a41d8a0">&#9670;&nbsp;</a></span>LevelIsUnlocked()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Profile.Load </td>
+          <td class="memname">bool Profile.LevelIsUnlocked </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Loads a profile with the given id and makes it the active profile. </p>
+<p>Checks if the level is unlocked, that is if the level's key has been bought from the store. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>The id of the profile to load.</td></tr>
+    <tr><td class="paramname">level</td><td>The level's number.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the level is unlocked, else false.</dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph.png" border="0" usemap="#aclass_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph" alt=""/></div>
-<map name="aclass_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph" id="aclass_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph">
-<area shape="rect" title="Loads a profile with the given id and makes it the active profile." alt="" coords="432,46,523,73"/>
-<area shape="rect" href="class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="191,8,382,49"/>
-<area shape="rect" href="class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="189,75,384,102"/>
-<area shape="rect" href="class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="5,5,141,47"/>
-<area shape="rect" href="class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="8,71,139,112"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a8fa9b755af65c98f5ce709c749579ab5" name="a8fa9b755af65c98f5ce709c749579ab5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fa9b755af65c98f5ce709c749579ab5">&#9670;&nbsp;</a></span>LogOut()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Profile.LogOut </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Logs out of the current profile. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph.png" border="0" usemap="#aclass_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph" alt=""/></div>
-<map name="aclass_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph" id="aclass_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph">
-<area shape="rect" title="Logs out of the current profile." alt="" coords="420,5,524,32"/>
-<area shape="rect" href="class_profile_g_u_i.html#ad835b6812c257c3f5c9c6a23892e0770" title=" " alt="" coords="181,5,372,32"/>
-<area shape="rect" href="class_profile_g_u_i.html#a6dc0dca54016fefc6c4919a7e372cf6e" title=" " alt="" coords="5,5,133,32"/>
+<div class="center"><img src="class_profile_adb3883e0f9a606c7e60b29dd2a41d8a0_icgraph.png" border="0" usemap="#aclass_profile_adb3883e0f9a606c7e60b29dd2a41d8a0_icgraph" alt=""/></div>
+<map name="aclass_profile_adb3883e0f9a606c7e60b29dd2a41d8a0_icgraph" id="aclass_profile_adb3883e0f9a606c7e60b29dd2a41d8a0_icgraph">
+<area shape="rect" title="Checks if the level is unlocked, that is if the level&#39;s key has been bought from the store." alt="" coords="431,5,585,32"/>
+<area shape="rect" href="class_level_picker.html#a1b5abdf1b94c7fe1410ca560a3eb247e" title=" " alt="" coords="189,5,383,32"/>
+<area shape="rect" href="class_level_picker.html#ac7749c15e37c52ad6d6ba7c1aaec7474" title=" " alt="" coords="5,5,141,32"/>
 </map>
 </div>
 
@@ -474,8 +550,10 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph.png" border="0" usemap="#aclass_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph" alt=""/></div>
 <map name="aclass_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph" id="aclass_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph">
 <area shape="rect" title="Checks if a profile name is available." alt="" coords="5,31,163,57"/>
-<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="211,5,309,32"/>
-<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="219,56,301,83"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="488,5,587,32"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="211,56,293,83"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="341,56,440,83"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="488,56,587,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -493,14 +571,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad59913a6e988fd89cc483dc9edaeeeb8" name="ad59913a6e988fd89cc483dc9edaeeeb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad59913a6e988fd89cc483dc9edaeeeb8">&#9670;&nbsp;</a></span>Save()</h2>
+<a id="a18281b870e1b5bb7aebc9bab50aa2272" name="a18281b870e1b5bb7aebc9bab50aa2272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18281b870e1b5bb7aebc9bab50aa2272">&#9670;&nbsp;</a></span>ToBytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Profile.Save </td>
+          <td class="memname">byte[] Profile.ToBytes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -508,24 +586,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Saves the the currently active profile by writing to the save file. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph.png" border="0" usemap="#aclass_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph" alt=""/></div>
-<map name="aclass_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph" id="aclass_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph">
-<area shape="rect" title="Saves the the currently active profile by writing to the save file." alt="" coords="829,56,920,83"/>
-<area shape="rect" href="class_shop_g_u_i.html#ac7b20c05193df04c7c0d9387823a11cf" title=" " alt="" coords="598,5,765,32"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="581,56,781,83"/>
-<area shape="rect" href="class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="626,107,737,133"/>
-<area shape="rect" href="class_shop_g_u_i.html#a070d5686e3639f599db4dad0ac5675f1" title=" " alt="" coords="397,5,519,32"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="383,56,533,83"/>
-<area shape="rect" href="class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="409,107,507,133"/>
-<area shape="rect" href="class_level.html#a9b982efc154865a30a5c589d72f0a900" title=" " alt="" coords="5,48,104,75"/>
-<area shape="rect" href="class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="152,70,335,111"/>
-<area shape="rect" href="class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="174,136,313,163"/>
-</map>
-</div>
+<p>Writes the profile data to an array of bytes for saving in a file. </p>
+<dl class="section return"><dt>Returns</dt><dd>A byte buffer containing the profile data</dd></dl>
 
 </div>
 </div>
@@ -578,33 +640,9 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a20e872388fa79e657a2bd86ad28d46a5" name="a20e872388fa79e657a2bd86ad28d46a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20e872388fa79e657a2bd86ad28d46a5">&#9670;&nbsp;</a></span>session</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_profile.html">Profile</a> Profile.session</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Singleton instance. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Property Documentation</h2>
-<a id="a9ea31d4b345ebc63cc9933453eee20e6" name="a9ea31d4b345ebc63cc9933453eee20e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ea31d4b345ebc63cc9933453eee20e6">&#9670;&nbsp;</a></span>CurrentSession</h2>
+<a id="a307f6749c751e25cef64f85b07f02514" name="a307f6749c751e25cef64f85b07f02514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307f6749c751e25cef64f85b07f02514">&#9670;&nbsp;</a></span>Avatar</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,22 +651,22 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_profile.html">Profile</a> Profile.CurrentSession</td>
+          <td class="memname"><a class="el" href="class_avatar.html">Avatar</a> Profile.Avatar</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Gets the singleton instance of the currently active profile. </p>
+<p>The profile's avatar. </p>
 
 </div>
 </div>
-<a id="a0b5da2ac9e62cb58447b86877389aa9e" name="a0b5da2ac9e62cb58447b86877389aa9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b5da2ac9e62cb58447b86877389aa9e">&#9670;&nbsp;</a></span>Info</h2>
+<a id="a54f4969aeceaac4db0be879867e71fe3" name="a54f4969aeceaac4db0be879867e71fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54f4969aeceaac4db0be879867e71fe3">&#9670;&nbsp;</a></span>CompletedLevels</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,17 +675,185 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_profile_info.html">ProfileInfo</a> Profile.Info</td>
+          <td class="memname">List&lt;int&gt; Profile.CompletedLevels</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">private set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Data of the active profile. </p>
+<p>A list of the levels the player has completed. </p>
+
+</div>
+</div>
+<a id="aabba37c3975118edacf08f6f51e9252d" name="aabba37c3975118edacf08f6f51e9252d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabba37c3975118edacf08f6f51e9252d">&#9670;&nbsp;</a></span>CurrentLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Profile.CurrentLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The level the player is currently in, that being the first level the player hasn't completed or level 3 if all have been completed. </p>
+
+</div>
+</div>
+<a id="a8907ef1053fdebaeb5322e09ffe38128" name="a8907ef1053fdebaeb5322e09ffe38128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8907ef1053fdebaeb5322e09ffe38128">&#9670;&nbsp;</a></span>ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Profile.ID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The profile id. Can be any number between 0 and 5. </p>
+
+</div>
+</div>
+<a id="a63dd8c4295cf725a680ea5cb5e937137" name="a63dd8c4295cf725a680ea5cb5e937137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63dd8c4295cf725a680ea5cb5e937137">&#9670;&nbsp;</a></span>LevelProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] Profile.LevelProgress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. </p>
+
+</div>
+</div>
+<a id="a0e50ac0f5032687e6083e99749fcd199" name="a0e50ac0f5032687e6083e99749fcd199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e50ac0f5032687e6083e99749fcd199">&#9670;&nbsp;</a></span>Name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Profile.Name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The profile name. </p>
+
+</div>
+</div>
+<a id="adaf86441cdfa02d937270c3cd466e2f8" name="adaf86441cdfa02d937270c3cd466e2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf86441cdfa02d937270c3cd466e2f8">&#9670;&nbsp;</a></span>NumberOfOwnedItems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Profile.NumberOfOwnedItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of items the player has bought from the store. </p>
+
+</div>
+</div>
+<a id="a3baa1f0b2ddbf6902dfdf4e06db2621a" name="a3baa1f0b2ddbf6902dfdf4e06db2621a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3baa1f0b2ddbf6902dfdf4e06db2621a">&#9670;&nbsp;</a></span>OwnedItems</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] Profile.OwnedItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An array of booleans in which each index corresponds to a store item's id. Each element is true if the item was bought from the store and is currently owned and false otherwise. </p>
+
+</div>
+</div>
+<a id="af87d47cc73db8b55b24e5ab547534272" name="af87d47cc73db8b55b24e5ab547534272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87d47cc73db8b55b24e5ab547534272">&#9670;&nbsp;</a></span>Points</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UInt32 Profile.Points</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of points that the profile currently owns. </p>
 
 </div>
 </div>

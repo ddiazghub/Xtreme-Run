@@ -31,7 +31,7 @@ Collaboration diagram for Main\+:
 override void \mbox{\hyperlink{class_main_afa38a52a0b6f8e0362539aea9114f285}{\+\_\+\+Ready}} ()
 \item 
 void \mbox{\hyperlink{class_main_aff56bc272e79a2419d64fd18356b052b}{Change\+Scene}} (\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}} scene)
-\begin{DoxyCompactList}\small\item\em Changes the currently active game scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Changes the currently active game scene and modifies the sounds currently being played accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -44,6 +44,8 @@ static readonly Vector2 \mbox{\hyperlink{class_main_aa2f640712c026469e26fc7954f1
 \begin{DoxyCompactList}\small\item\em The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_audio}{Game\+Audio}} \mbox{\hyperlink{class_main_ad75fdbc3f038e099f973477222fe3461}{game\+Audio}}
 \item 
 \mbox{\hyperlink{class_scene_factory}{Scene\+Factory}} \mbox{\hyperlink{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}{scene\+Factory}}
 \begin{DoxyCompactList}\small\item\em Factory for creating new scene instances. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -75,7 +77,7 @@ Here is the call graph for this function\+:
 
 
 
-Changes the currently active game scene. 
+Changes the currently active game scene and modifies the sounds currently being played accordingly. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -87,7 +89,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=316pt]{class_main_aff56bc272e79a2419d64fd18356b052b_cgraph}
+\includegraphics[width=338pt]{class_main_aff56bc272e79a2419d64fd18356b052b_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -101,6 +103,12 @@ Here is the caller graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_ad75fdbc3f038e099f973477222fe3461}\label{class_main_ad75fdbc3f038e099f973477222fe3461}} 
+\index{Main@{Main}!gameAudio@{gameAudio}}
+\index{gameAudio@{gameAudio}!Main@{Main}}
+\doxysubsubsection{\texorpdfstring{gameAudio}{gameAudio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_audio}{Game\+Audio}} Main.\+game\+Audio\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}\label{class_main_a4e01ee6e74012ec1eebf4744eb2640ad}} 
 \index{Main@{Main}!sceneFactory@{sceneFactory}}
 \index{sceneFactory@{sceneFactory}!Main@{Main}}

@@ -94,7 +94,7 @@ public class ShopGUI : NinePatchRect
 
                 button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
 
-                if (Profile.CurrentSession.Info.OwnedItems[i])
+                if (PlayerSession.ActiveSession.Profile.OwnedItems[i])
                 {
                     TextureRect textureRect = new TextureRect();
                     textureRect.Texture = this.checkTick;
@@ -138,11 +138,11 @@ public class ShopGUI : NinePatchRect
             return;
         }
 
-        if (Profile.CurrentSession.Info.Points >= this.itemCost[this.selected])
+        if (PlayerSession.ActiveSession.Profile.Points >= this.itemCost[this.selected])
         {
-            Profile.CurrentSession.Info.Points = Profile.CurrentSession.Info.Points - (UInt32) this.itemCost[this.selected];
-            Profile.CurrentSession.Info.OwnedItems[this.selected] = true;
-            Profile.CurrentSession.Save();
+            PlayerSession.ActiveSession.Profile.Points = PlayerSession.ActiveSession.Profile.Points - (UInt32) this.itemCost[this.selected];
+            PlayerSession.ActiveSession.Profile.OwnedItems[this.selected] = true;
+            PlayerSession.ActiveSession.Save();
 
             TextureRect textureRect = new TextureRect();
             TextureButton button;

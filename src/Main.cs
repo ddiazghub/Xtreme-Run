@@ -21,6 +21,8 @@ public class Main : Node2D {
         private set;
     }
 
+    private GameAudio gameAudio;
+
     /// <summary>
     ///     Factory for creating new scene instances.
     /// </summary>
@@ -28,23 +30,36 @@ public class Main : Node2D {
 
     public override void _Ready()
     {
-        this.GetTree().DebugCollisionsHint = true;
         this.sceneFactory = new SceneFactory();
+        this.gameAudio = this.GetNode<GameAudio>("GameAudio");
+
+        this.GetTree().DebugCollisionsHint = true;
         this.ChangeScene(GameScenes.PROFILE_SELECT);
     }
 
     /// <summary>
-    ///     Changes the currently active game scene.
+    ///     Changes the currently active game scene and modifies the sounds currently being played accordingly.
     /// </summary>
     /// <param name="scene">The new scene.</param>
     public void ChangeScene(GameScenes scene)
     {
         if (this.Scene != null)
         {
+            this.gameAudio.SetMusic(scene);
+
+            if ((this.Scene is ProfileSelect && scene == GameScenes.MAIN_MENU) ||
+                (this.Scene is MainMenu && (scene == GameScenes.LEVEL1 || scene == GameScenes.LEVEL2 || scene == GameScenes.LEVEL3)))
+            {
+                this.gameAudio.PlayAccept();
+            }
+            else if ((this.Scene is MainMenu && scene == GameScenes.PROFILE_SELECT) || (this.Scene is Level && scene == GameScenes.MAIN_MENU))
+            {
+                this.gameAudio.PlayCancel();
+            }
+
             this.Scene.QueueFree();
         }
 
-        this.GetNode<GameAudio>("GameAudio").SetMusic(scene);
         this.Scene = this.sceneFactory.New(scene);
         this.AddChild(this.Scene);
     }

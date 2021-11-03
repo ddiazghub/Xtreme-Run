@@ -16,6 +16,8 @@ var searchData=
   ['max_5fnumber_5fof_5fsaves_13',['MAX_NUMBER_OF_SAVES',['../class_profile.html#a0603d28949b8c323d8bae91ea138d6f7',1,'Profile']]],
   ['maxfallspeed_14',['MaxFallSpeed',['../class_player.html#af93facbeac2019c5bc7bfb2493041109',1,'Player']]],
   ['maxjumptime_15',['MaxJumpTime',['../class_player.html#a55a2743162dfad1ccf058979e3454cf0',1,'Player']]],
-  ['movementspeed_16',['MovementSpeed',['../class_player.html#a5a0c8762d9753c0108e520d2cd4c4194',1,'Player']]],
-  ['moveviewport_17',['MoveViewPort',['../class_level.html#a37da9eda7a3cd74e5a8c4d5e92e83b18',1,'Level']]]
+  ['menumusic_16',['MenuMusic',['../class_game_audio.html#a20ac51641bd1520e7e2f98256ced7da4',1,'GameAudio']]],
+  ['movementspeed_17',['MovementSpeed',['../class_player.html#a5a0c8762d9753c0108e520d2cd4c4194',1,'Player']]],
+  ['moveviewport_18',['MoveViewPort',['../class_level.html#a37da9eda7a3cd74e5a8c4d5e92e83b18',1,'Level']]],
+  ['music_19',['music',['../class_game_audio.html#a3bc9feb323ef58de07fdbfb7781dc1e4',1,'GameAudio']]]
 ];

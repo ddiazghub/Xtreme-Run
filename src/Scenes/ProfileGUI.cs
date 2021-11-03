@@ -32,9 +32,9 @@ public class ProfileGUI : NinePatchRect {
     /// </summary>
     public void UpdateUI()
     {
-        this.GetNode<Label>("Completed").Text = Profile.CurrentSession.Info.CompletedLevels.Count + "/3 completado";
-        this.GetNode<Label>("ProfileName").Text = Profile.CurrentSession.Info.Name;
-        this.GetNode<TextureRect>("Avatar").Texture = Profile.CurrentSession.Info.Avatar.ToTexture();
+        this.GetNode<Label>("Completed").Text = PlayerSession.ActiveSession.Profile.CompletedLevels.Count + "/3 completado";
+        this.GetNode<Label>("ProfileName").Text = PlayerSession.ActiveSession.Profile.Name;
+        this.GetNode<TextureRect>("Avatar").Texture = PlayerSession.ActiveSession.Profile.Avatar.ToTexture();
     }
 
     public void OnShopPressed()
@@ -49,7 +49,7 @@ public class ProfileGUI : NinePatchRect {
 
     public void OnLogOutPressed()
     {
-        Profile.CurrentSession.LogOut();
+        PlayerSession.ActiveSession.LogOut();
         this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.PROFILE_SELECT);
     }
 }

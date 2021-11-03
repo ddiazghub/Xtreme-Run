@@ -24,8 +24,8 @@ var hierarchy =
       [ "TileSetMaker", "class_tile_set_maker.html", null ]
     ] ],
     [ "Node2D", "class_node2_d.html", [
+      [ "GameAudio", "class_game_audio.html", null ],
       [ "Level", "class_level.html", null ],
-      [ "LevelSelect", "class_level_select.html", null ],
       [ "Main", "class_main.html", null ],
       [ "MainMenu", "class_main_menu.html", null ],
       [ "PlayerState", "class_player_state.html", [
@@ -51,9 +51,9 @@ var hierarchy =
     [ "Palette", "class_palette.html", null ],
     [ "PaletteSwapEntry", "class_palette_swap_entry.html", null ],
     [ "PaletteSwapShader", "class_palette_swap_shader.html", null ],
+    [ "PlayerSession", "class_player_session.html", null ],
     [ "PlayerStateFactory", "class_player_state_factory.html", null ],
     [ "Profile", "class_profile.html", null ],
-    [ "ProfileInfo", "class_profile_info.html", null ],
     [ "SaveFileInfo", "class_save_file_info.html", null ],
     [ "SceneFactory", "class_scene_factory.html", null ],
     [ "SpinBox", "class_spin_box.html", [

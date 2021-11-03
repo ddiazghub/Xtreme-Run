@@ -1,0 +1,152 @@
+\hypertarget{class_player_session}{}\doxysection{Player\+Session Class Reference}
+\label{class_player_session}\index{PlayerSession@{PlayerSession}}
+
+
+Class that contains the the currently active profile.  
+
+
+
+
+Collaboration diagram for Player\+Session\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_player_session__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_player_session_a819cebf72563f1e27a78962f82fb9c72}{Load}} (int id)
+\begin{DoxyCompactList}\small\item\em Loads a profile with the given id and makes it the active profile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_session_a8522ef9c8fc11562857f5a4a7955cca7}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the the currently active profile by writing to the save file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_session_a65808546d8278d30ee26af807c62051f}{Log\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Logs out of the current profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_player_session_a986345ec97ef2443cec013da3ae5b994}{Profile}}\hspace{0.3cm}{\ttfamily  \mbox{[}getprivate set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Data of the active profile. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_player_session}{Player\+Session}} \mbox{\hyperlink{class_player_session_acb357efd7543bd1dee781de31e01e470}{Active\+Session}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the currently active profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_player_session}{Player\+Session}} \mbox{\hyperlink{class_player_session_abfa60705cc632ddb82a3d5f604f7d24e}{active\+Session}}
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that contains the the currently active profile. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_session_a819cebf72563f1e27a78962f82fb9c72}\label{class_player_session_a819cebf72563f1e27a78962f82fb9c72}} 
+\index{PlayerSession@{PlayerSession}!Load@{Load}}
+\index{Load@{Load}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Player\+Session.\+Load (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Loads a profile with the given id and makes it the active profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the profile to load.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_session_a819cebf72563f1e27a78962f82fb9c72_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_session_a819cebf72563f1e27a78962f82fb9c72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_session_a65808546d8278d30ee26af807c62051f}\label{class_player_session_a65808546d8278d30ee26af807c62051f}} 
+\index{PlayerSession@{PlayerSession}!LogOut@{LogOut}}
+\index{LogOut@{LogOut}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{LogOut()}{LogOut()}}
+{\footnotesize\ttfamily void Player\+Session.\+Log\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Logs out of the current profile. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_session_a65808546d8278d30ee26af807c62051f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_player_session_a8522ef9c8fc11562857f5a4a7955cca7}\label{class_player_session_a8522ef9c8fc11562857f5a4a7955cca7}} 
+\index{PlayerSession@{PlayerSession}!Save@{Save}}
+\index{Save@{Save}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
+{\footnotesize\ttfamily void Player\+Session.\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the the currently active profile by writing to the save file. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_player_session_a8522ef9c8fc11562857f5a4a7955cca7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_session_abfa60705cc632ddb82a3d5f604f7d24e}\label{class_player_session_abfa60705cc632ddb82a3d5f604f7d24e}} 
+\index{PlayerSession@{PlayerSession}!activeSession@{activeSession}}
+\index{activeSession@{activeSession}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{activeSession}{activeSession}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_session}{Player\+Session}} Player\+Session.\+active\+Session\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Singleton instance. 
+
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_player_session_acb357efd7543bd1dee781de31e01e470}\label{class_player_session_acb357efd7543bd1dee781de31e01e470}} 
+\index{PlayerSession@{PlayerSession}!ActiveSession@{ActiveSession}}
+\index{ActiveSession@{ActiveSession}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{ActiveSession}{ActiveSession}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player_session}{Player\+Session}} Player\+Session.\+Active\+Session\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Gets the singleton instance of the currently active profile. 
+
+\mbox{\Hypertarget{class_player_session_a986345ec97ef2443cec013da3ae5b994}\label{class_player_session_a986345ec97ef2443cec013da3ae5b994}} 
+\index{PlayerSession@{PlayerSession}!Profile@{Profile}}
+\index{Profile@{Profile}!PlayerSession@{PlayerSession}}
+\doxysubsubsection{\texorpdfstring{Profile}{Profile}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_profile}{Profile}} Player\+Session.\+Profile\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Data of the active profile. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Profiles/\mbox{\hyperlink{_player_session_8cs}{Player\+Session.\+cs}}\end{DoxyCompactItemize}

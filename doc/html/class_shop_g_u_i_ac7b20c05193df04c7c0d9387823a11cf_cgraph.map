@@ -1,4 +1,4 @@
 <map id="ShopGUI.OnBuyPressed" name="ShopGUI.OnBuyPressed">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,172,32"/>
-<area shape="rect" id="node2" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="220,5,311,32"/>
+<area shape="rect" id="node2" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="220,5,359,32"/>
 </map>

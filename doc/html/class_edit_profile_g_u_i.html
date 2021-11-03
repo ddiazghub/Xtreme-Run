@@ -148,7 +148,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab36def60f18be3b0682a8ce7bc77b84d"><td class="memItemLeft" align="right" valign="top">Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d">lockSprite</a> = ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/lock.png&quot;)</td></tr>
 <tr class="memdesc:ab36def60f18be3b0682a8ce7bc77b84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite for labeling items which have not been unlocked yet.  <a href="class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d">More...</a><br /></td></tr>
 <tr class="separator:ab36def60f18be3b0682a8ce7bc77b84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae13ff8ee928424405695287532c2eef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_avatar.html">Avatar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">editedAvatar</a> = Profile.CurrentSession.Info.Avatar.Clone()</td></tr>
+<tr class="memitem:ae13ff8ee928424405695287532c2eef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_avatar.html">Avatar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">editedAvatar</a> = PlayerSession.ActiveSession.Profile.Avatar.Clone()</td></tr>
 <tr class="memdesc:ae13ff8ee928424405695287532c2eef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A copy of the player's avatar which will be edited.  <a href="class_edit_profile_g_u_i.html#ae13ff8ee928424405695287532c2eef8">More...</a><br /></td></tr>
 <tr class="separator:ae13ff8ee928424405695287532c2eef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae220751a04eedbf192ff9df579fbbcc6"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_edit_profile_g_u_i.html#ae220751a04eedbf192ff9df579fbbcc6">keys</a></td></tr>
@@ -218,21 +218,23 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph.png" border="0" usemap="#aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph" alt=""/></div>
 <map name="aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph" id="aclass_edit_profile_g_u_i_a2708ce86420d102c0f76583100611d32_cgraph">
-<area shape="rect" title=" " alt="" coords="5,177,156,204"/>
-<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="913,54,1026,81"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#ae62a6598f2588467732b64a847b40bde" title=" " alt="" coords="204,76,416,102"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="209,126,411,153"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="464,134,648,161"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="215,228,405,270"/>
-<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="210,294,410,321"/>
-<area shape="rect" href="class_palette.html#ab973750bb28f3de18132de170c08c092" title="Creates a rectangular shape and fills it with the color with the given id." alt="" coords="225,345,395,372"/>
-<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="699,84,811,110"/>
-<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="696,134,815,161"/>
-<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="863,134,1076,161"/>
-<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="477,269,635,296"/>
-<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="511,320,601,346"/>
-<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="706,244,805,270"/>
-<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="714,294,797,321"/>
+<area shape="rect" title=" " alt="" coords="5,178,156,205"/>
+<area shape="rect" href="class_avatar.html#afe361a71356eeb5a67ce7974bd8881d7" title="Gets one of the avatar&#39;s colors from a given string." alt="" coords="913,51,1026,78"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#ae62a6598f2588467732b64a847b40bde" title=" " alt="" coords="204,77,416,103"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#aa1f1583bb34d1d218900d1904098d98b" title=" " alt="" coords="209,127,411,154"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a0c57b976943d328fb48bf697c18d386a" title="Updates the data of the avatar being edited depending on user input. Displays the new avatar." alt="" coords="464,153,648,179"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#abe027814d99058c40f06aa61ecbef381" title=" " alt="" coords="215,229,405,271"/>
+<area shape="rect" href="class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="210,295,410,322"/>
+<area shape="rect" href="class_palette.html#ab973750bb28f3de18132de170c08c092" title="Creates a rectangular shape and fills it with the color with the given id." alt="" coords="225,346,395,373"/>
+<area shape="rect" href="class_avatar.html#a27818736da2c886b8a891d3009b43752" title="Sets one of the avatar&#39;s colors from a given string." alt="" coords="699,102,811,129"/>
+<area shape="rect" href="class_avatar.html#a556317afdd76c7884ae0197014a7459a" title="Performs a palette swap on the default avatar, swapping the default colors for the colors specified i..." alt="" coords="696,153,815,179"/>
+<area shape="rect" href="class_palette_swap_shader.html#ae747173cd2a85fa21e35129e67630275" title="Performs a palette swap on the given image by calculating the difference between each pixel&#39;s color a..." alt="" coords="863,153,1076,179"/>
+<area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="477,270,635,297"/>
+<area shape="rect" href="class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="487,321,625,347"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="1124,262,1223,289"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="714,313,797,339"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="920,313,1019,339"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="1124,313,1223,339"/>
 </map>
 </div>
 
@@ -364,9 +366,11 @@ Here is the call graph for this function:</div>
 <map name="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph" id="aclass_edit_profile_g_u_i_a4b00cca39e0201eff072264a55291a35_cgraph">
 <area shape="rect" title=" " alt="" coords="5,56,205,83"/>
 <area shape="rect" href="class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="253,31,411,57"/>
-<area shape="rect" href="class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="287,81,377,108"/>
-<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="459,5,557,32"/>
-<area shape="rect" href="class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="467,56,549,83"/>
+<area shape="rect" href="class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="263,81,401,108"/>
+<area shape="rect" href="class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="736,5,835,32"/>
+<area shape="rect" href="class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="459,56,541,83"/>
+<area shape="rect" href="class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="589,56,688,83"/>
+<area shape="rect" href="class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="736,56,835,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -532,7 +536,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_avatar.html">Avatar</a> EditProfileGUI.editedAvatar = Profile.CurrentSession.Info.Avatar.Clone()</td>
+          <td class="memname"><a class="el" href="class_avatar.html">Avatar</a> EditProfileGUI.editedAvatar = PlayerSession.ActiveSession.Profile.Avatar.Clone()</td>
         </tr>
       </table>
   </td>

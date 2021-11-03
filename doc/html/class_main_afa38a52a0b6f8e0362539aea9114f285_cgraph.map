@@ -1,5 +1,8 @@
 <map id="Main._Ready" name="Main._Ready">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene." alt="" coords="152,5,287,32"/>
-<area shape="rect" id="node3" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="335,5,467,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,81,287,108"/>
+<area shape="rect" id="node3" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="349,5,481,32"/>
+<area shape="rect" id="node4" href="$class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02" title="Plays the accept audio effect." alt="" coords="335,56,496,83"/>
+<area shape="rect" id="node5" href="$class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8" title="Plays the cancel audio effect." alt="" coords="335,107,495,133"/>
+<area shape="rect" id="node6" href="$class_game_audio.html#ac494431eace52893c1a35c662e74dee2" title="Sets a new music track, depending on the scene." alt="" coords="341,157,490,184"/>
 </map>

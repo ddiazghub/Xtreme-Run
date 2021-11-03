@@ -31,7 +31,7 @@ public class ProfileSelectEntry : Button {
     {
         if (Profile.Exists(this.ProfileID))
         {
-            ProfileInfo save = Profile.Get(this.ProfileID);
+            Profile save = Profile.Get(this.ProfileID);
 
             this.GetNode<Label>("Completed").Text = save.CompletedLevels.Count + "/3 completado";
             this.GetNode<Label>("Objects").Text = save.NumberOfOwnedItems + "/17 objetos";
@@ -68,7 +68,7 @@ public class ProfileSelectEntry : Button {
     {
         if (Profile.Exists(this.ProfileID))
         {
-            Profile.CurrentSession.Load(this.ProfileID);
+            PlayerSession.ActiveSession.Load(this.ProfileID);
             this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.MAIN_MENU);
         }
         else

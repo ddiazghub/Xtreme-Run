@@ -42,7 +42,7 @@ public class CreateProfileDialog : ConfirmationDialog {
         }
 
         Profile.Create(this.profileID, name);
-        Profile.CurrentSession.Load(this.profileID);
+        PlayerSession.ActiveSession.Load(this.profileID);
         this.GetTree().Root.GetNode<Main>("Main").ChangeScene(GameScenes.MAIN_MENU);
     }
 

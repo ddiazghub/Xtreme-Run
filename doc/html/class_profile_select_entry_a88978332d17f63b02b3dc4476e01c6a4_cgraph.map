@@ -1,5 +1,8 @@
 <map id="ProfileSelectEntry.OnPressed" name="ProfileSelectEntry.OnPressed">
 <area shape="rect" id="node1" title=" " alt="" coords="5,31,200,57"/>
-<area shape="rect" id="node2" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="248,5,347,32"/>
-<area shape="rect" id="node3" href="$class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="252,56,343,83"/>
+<area shape="rect" id="node2" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="712,5,811,32"/>
+<area shape="rect" id="node3" href="$class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="248,56,387,83"/>
+<area shape="rect" id="node4" href="$class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="435,56,517,83"/>
+<area shape="rect" id="node5" href="$class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="565,56,664,83"/>
+<area shape="rect" id="node6" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="712,56,811,83"/>
 </map>

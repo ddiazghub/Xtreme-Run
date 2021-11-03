@@ -1,7 +1,0 @@
-<map id="Profile.Load" name="Profile.Load">
-<area shape="rect" id="node1" title="Loads a profile with the given id and makes it the active profile." alt="" coords="432,46,523,73"/>
-<area shape="rect" id="node2" href="$class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="191,8,382,49"/>
-<area shape="rect" id="node4" href="$class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="189,75,384,102"/>
-<area shape="rect" id="node3" href="$class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="5,5,141,47"/>
-<area shape="rect" id="node5" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="8,71,139,112"/>
-</map>

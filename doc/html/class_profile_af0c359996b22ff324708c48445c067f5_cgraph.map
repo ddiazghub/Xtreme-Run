@@ -1,0 +1,6 @@
+<map id="Profile.Get" name="Profile.Get">
+<area shape="rect" id="node1" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="5,31,88,57"/>
+<area shape="rect" id="node2" href="$class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="136,31,235,57"/>
+<area shape="rect" id="node3" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="283,5,381,32"/>
+<area shape="rect" id="node4" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="283,56,381,83"/>
+</map>

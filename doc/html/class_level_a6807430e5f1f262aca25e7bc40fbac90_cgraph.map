@@ -3,6 +3,6 @@
 <area shape="rect" id="node2" href="$class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="192,56,289,83"/>
 <area shape="rect" id="node3" href="$class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="363,31,473,57"/>
 <area shape="rect" id="node6" href="$class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="337,81,499,108"/>
-<area shape="rect" id="node4" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="547,5,660,32"/>
-<area shape="rect" id="node5" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="558,56,649,83"/>
+<area shape="rect" id="node4" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="559,5,673,32"/>
+<area shape="rect" id="node5" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="547,56,685,83"/>
 </map>

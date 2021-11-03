@@ -1,0 +1,271 @@
+\hypertarget{class_game_audio}{}\doxysection{Game\+Audio Class Reference}
+\label{class_game_audio}\index{GameAudio@{GameAudio}}
+
+
+\mbox{\hyperlink{class_node}{Node}} for playing audio globally in the game.  
+
+
+
+
+Inheritance diagram for Game\+Audio\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_game_audio__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+Audio\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_game_audio_af4311a2ca53fd2ba2e1eabd38e10c6f0}{\+\_\+\+Ready}} ()
+\item 
+void \mbox{\hyperlink{class_game_audio_ac494431eace52893c1a35c662e74dee2}{Set\+Music}} (\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}} scene)
+\begin{DoxyCompactList}\small\item\em Sets a new music track, depending on the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_aec65bb06501eeacbc6ae63f764ed2d02}{Play\+Accept}} ()
+\begin{DoxyCompactList}\small\item\em Plays the accept audio effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8}{Play\+Cancel}} ()
+\begin{DoxyCompactList}\small\item\em Plays the cancel audio effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_a6df13bded33b7c1ae4efa1d2d5b0eef2}{On\+Music\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_game_audio_addcf597b4df4aba37d5bee5be86a476e}{On\+Sfx\+Finished}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_a20ac51641bd1520e7e2f98256ced7da4}{Menu\+Music}}
+\begin{DoxyCompactList}\small\item\em Music to play on menus. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_acb552d42a8760720c6f3fe39dce1bee1}{Level1\+Music}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_level}{Level}} 1 music. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_a13fe2789ea3a9ebdadfb82447958be08}{Level2\+Music}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_level}{Level}} 2 music. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_ac66409802e2533dafa25f107a458c8d5}{Level3\+Music}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_level}{Level}} 3 music. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_a45bab24c53b73c4aca26066bfd55292d}{Accept\+SFX}}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when clicking an accept button. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_a3d83cb6ed0d90390c4c52773c849e4cc}{Cancel\+SFX}}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when clicking an cancel/back button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ \mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}, Audio\+Stream $>$ \mbox{\hyperlink{class_game_audio_ad7935f43253880f7afac2f9f5e8bf4fb}{scene\+Music}}
+\begin{DoxyCompactList}\small\item\em Dictionary mapping each game scene to a background music track. \end{DoxyCompactList}\item 
+Audio\+Stream\+Player \mbox{\hyperlink{class_game_audio_a3bc9feb323ef58de07fdbfb7781dc1e4}{music}}
+\begin{DoxyCompactList}\small\item\em The audio player for background music. \end{DoxyCompactList}\item 
+Audio\+Stream\+Player \mbox{\hyperlink{class_game_audio_a13e9f2d30ac410e89e3adc323da02525}{sfx}}
+\begin{DoxyCompactList}\small\item\em The audio player for audio effects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_node}{Node}} for playing audio globally in the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_audio_af4311a2ca53fd2ba2e1eabd38e10c6f0}\label{class_game_audio_af4311a2ca53fd2ba2e1eabd38e10c6f0}} 
+\index{GameAudio@{GameAudio}!\_Ready@{\_Ready}}
+\index{\_Ready@{\_Ready}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{\_Ready()}{\_Ready()}}
+{\footnotesize\ttfamily override void Game\+Audio.\+\_\+\+Ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_af4311a2ca53fd2ba2e1eabd38e10c6f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_a6df13bded33b7c1ae4efa1d2d5b0eef2}\label{class_game_audio_a6df13bded33b7c1ae4efa1d2d5b0eef2}} 
+\index{GameAudio@{GameAudio}!OnMusicFinished@{OnMusicFinished}}
+\index{OnMusicFinished@{OnMusicFinished}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{OnMusicFinished()}{OnMusicFinished()}}
+{\footnotesize\ttfamily void Game\+Audio.\+On\+Music\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_a6df13bded33b7c1ae4efa1d2d5b0eef2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_addcf597b4df4aba37d5bee5be86a476e}\label{class_game_audio_addcf597b4df4aba37d5bee5be86a476e}} 
+\index{GameAudio@{GameAudio}!OnSfxFinished@{OnSfxFinished}}
+\index{OnSfxFinished@{OnSfxFinished}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{OnSfxFinished()}{OnSfxFinished()}}
+{\footnotesize\ttfamily void Game\+Audio.\+On\+Sfx\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_addcf597b4df4aba37d5bee5be86a476e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_aec65bb06501eeacbc6ae63f764ed2d02}\label{class_game_audio_aec65bb06501eeacbc6ae63f764ed2d02}} 
+\index{GameAudio@{GameAudio}!PlayAccept@{PlayAccept}}
+\index{PlayAccept@{PlayAccept}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PlayAccept()}{PlayAccept()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Play\+Accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the accept audio effect. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_aec65bb06501eeacbc6ae63f764ed2d02_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8}\label{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8}} 
+\index{GameAudio@{GameAudio}!PlayCancel@{PlayCancel}}
+\index{PlayCancel@{PlayCancel}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PlayCancel()}{PlayCancel()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Play\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the cancel audio effect. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_ac494431eace52893c1a35c662e74dee2}\label{class_game_audio_ac494431eace52893c1a35c662e74dee2}} 
+\index{GameAudio@{GameAudio}!SetMusic@{SetMusic}}
+\index{SetMusic@{SetMusic}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{SetMusic()}{SetMusic()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Set\+Music (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}}]{scene }\end{DoxyParamCaption})}
+
+
+
+Sets a new music track, depending on the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & The new scene executed by the main scene.\\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_ac494431eace52893c1a35c662e74dee2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_audio_a45bab24c53b73c4aca26066bfd55292d}\label{class_game_audio_a45bab24c53b73c4aca26066bfd55292d}} 
+\index{GameAudio@{GameAudio}!AcceptSFX@{AcceptSFX}}
+\index{AcceptSFX@{AcceptSFX}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{AcceptSFX}{AcceptSFX}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Accept\+SFX}
+
+
+
+Audio effect to play when clicking an accept button. 
+
+\mbox{\Hypertarget{class_game_audio_a3d83cb6ed0d90390c4c52773c849e4cc}\label{class_game_audio_a3d83cb6ed0d90390c4c52773c849e4cc}} 
+\index{GameAudio@{GameAudio}!CancelSFX@{CancelSFX}}
+\index{CancelSFX@{CancelSFX}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{CancelSFX}{CancelSFX}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Cancel\+SFX}
+
+
+
+Audio effect to play when clicking an cancel/back button. 
+
+\mbox{\Hypertarget{class_game_audio_acb552d42a8760720c6f3fe39dce1bee1}\label{class_game_audio_acb552d42a8760720c6f3fe39dce1bee1}} 
+\index{GameAudio@{GameAudio}!Level1Music@{Level1Music}}
+\index{Level1Music@{Level1Music}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{Level1Music}{Level1Music}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Level1\+Music}
+
+
+
+\mbox{\hyperlink{class_level}{Level}} 1 music. 
+
+\mbox{\Hypertarget{class_game_audio_a13fe2789ea3a9ebdadfb82447958be08}\label{class_game_audio_a13fe2789ea3a9ebdadfb82447958be08}} 
+\index{GameAudio@{GameAudio}!Level2Music@{Level2Music}}
+\index{Level2Music@{Level2Music}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{Level2Music}{Level2Music}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Level2\+Music}
+
+
+
+\mbox{\hyperlink{class_level}{Level}} 2 music. 
+
+\mbox{\Hypertarget{class_game_audio_ac66409802e2533dafa25f107a458c8d5}\label{class_game_audio_ac66409802e2533dafa25f107a458c8d5}} 
+\index{GameAudio@{GameAudio}!Level3Music@{Level3Music}}
+\index{Level3Music@{Level3Music}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{Level3Music}{Level3Music}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Level3\+Music}
+
+
+
+\mbox{\hyperlink{class_level}{Level}} 3 music. 
+
+\mbox{\Hypertarget{class_game_audio_a20ac51641bd1520e7e2f98256ced7da4}\label{class_game_audio_a20ac51641bd1520e7e2f98256ced7da4}} 
+\index{GameAudio@{GameAudio}!MenuMusic@{MenuMusic}}
+\index{MenuMusic@{MenuMusic}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{MenuMusic}{MenuMusic}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Menu\+Music}
+
+
+
+Music to play on menus. 
+
+\mbox{\Hypertarget{class_game_audio_a3bc9feb323ef58de07fdbfb7781dc1e4}\label{class_game_audio_a3bc9feb323ef58de07fdbfb7781dc1e4}} 
+\index{GameAudio@{GameAudio}!music@{music}}
+\index{music@{music}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{music}{music}}
+{\footnotesize\ttfamily Audio\+Stream\+Player Game\+Audio.\+music\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The audio player for background music. 
+
+\mbox{\Hypertarget{class_game_audio_ad7935f43253880f7afac2f9f5e8bf4fb}\label{class_game_audio_ad7935f43253880f7afac2f9f5e8bf4fb}} 
+\index{GameAudio@{GameAudio}!sceneMusic@{sceneMusic}}
+\index{sceneMusic@{sceneMusic}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{sceneMusic}{sceneMusic}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{_game_scenes_8cs_a0687e907db3af3681f90377d69f32090}{Game\+Scenes}}, Audio\+Stream$>$ Game\+Audio.\+scene\+Music\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dictionary mapping each game scene to a background music track. 
+
+\mbox{\Hypertarget{class_game_audio_a13e9f2d30ac410e89e3adc323da02525}\label{class_game_audio_a13e9f2d30ac410e89e3adc323da02525}} 
+\index{GameAudio@{GameAudio}!sfx@{sfx}}
+\index{sfx@{sfx}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{sfx}{sfx}}
+{\footnotesize\ttfamily Audio\+Stream\+Player Game\+Audio.\+sfx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The audio player for audio effects. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Audio/\mbox{\hyperlink{_game_audio_8cs}{Game\+Audio.\+cs}}\end{DoxyCompactItemize}

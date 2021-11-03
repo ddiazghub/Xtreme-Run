@@ -2,7 +2,7 @@
 \label{class_profile}\index{Profile@{Profile}}
 
 
-Class that contains the the currently active profile.  
+Class that represents and contains the data of a player\textquotesingle{}s profile.  
 
 
 
@@ -18,17 +18,15 @@ Collaboration diagram for Profile\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_profile_ab295a3d5ae7494b681e0333bb4166516}{Load}} (int id)
-\begin{DoxyCompactList}\small\item\em Loads a profile with the given id and makes it the active profile. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}{Save}} ()
-\begin{DoxyCompactList}\small\item\em Saves the the currently active profile by writing to the save file. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_profile_a8fa9b755af65c98f5ce709c749579ab5}{Log\+Out}} ()
-\begin{DoxyCompactList}\small\item\em Logs out of the current profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+byte\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_a18281b870e1b5bb7aebc9bab50aa2272}{To\+Bytes}} ()
+\begin{DoxyCompactList}\small\item\em Writes the profile data to an array of bytes for saving in a file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_profile_adb3883e0f9a606c7e60b29dd2a41d8a0}{Level\+Is\+Unlocked}} (int level)
+\begin{DoxyCompactList}\small\item\em Checks if the level is unlocked, that is if the level\textquotesingle{}s key has been bought from the store. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_profile_info}{Profile\+Info}} \mbox{\hyperlink{class_profile_a7070938f6f0941e62f75fb916b13c36c}{Get}} (int id)
-\begin{DoxyCompactList}\small\item\em Loads the profile with the given id and returns it\textquotesingle{}s data. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_af0c359996b22ff324708c48445c067f5}{Get}} (int id)
+\begin{DoxyCompactList}\small\item\em Method that encapsulates the profile\textquotesingle{}s class constructor. Loads the profile with the given id and returns it\textquotesingle{}s data, returning null if the profile doesn\textquotesingle{}t exist. This is used instead of the constructor because constructors can\textquotesingle{}t return null. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_profile_ac35fe897f5723f01593341c9c39d8e3e}{Create}} (int id, string name)
 \begin{DoxyCompactList}\small\item\em Creates a new profile. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{class_profile_a65e989b8d3b98a068c286831391f5e6b}{Delete}} (int id)
@@ -47,19 +45,67 @@ static readonly int \mbox{\hyperlink{class_profile_a0603d28949b8c323d8bae91ea138
 \doxysubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_profile_info}{Profile\+Info}} \mbox{\hyperlink{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}{Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}getprivate set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Data of the active profile. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}{Current\+Session}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the currently active profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Static Private Attributes}
+int \mbox{\hyperlink{class_profile_a8907ef1053fdebaeb5322e09ffe38128}{ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile id. Can be any number between 0 and 5. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_profile_a0e50ac0f5032687e6083e99749fcd199}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_profile_a307f6749c751e25cef64f85b07f02514}{Avatar}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The profile\textquotesingle{}s avatar. \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_profile_af87d47cc73db8b55b24e5ab547534272}{Points}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of points that the profile currently owns. \end{DoxyCompactList}\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_a3baa1f0b2ddbf6902dfdf4e06db2621a}{Owned\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of booleans in which each index corresponds to a store item\textquotesingle{}s id. Each element is true if the item was bought from the store and is currently owned and false otherwise. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_profile_a63dd8c4295cf725a680ea5cb5e937137}{Level\+Progress}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_profile_aabba37c3975118edacf08f6f51e9252d}{Current\+Level}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The level the player is currently in, that being the first level the player hasn\textquotesingle{}t completed or level 3 if all have been completed. \end{DoxyCompactList}\item 
+List$<$ int $>$ \mbox{\hyperlink{class_profile_a54f4969aeceaac4db0be879867e71fe3}{Completed\+Levels}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A list of the levels the player has completed. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_profile_adaf86441cdfa02d937270c3cd466e2f8}{Number\+Of\+Owned\+Items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The number of items the player has bought from the store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_profile}{Profile}} \mbox{\hyperlink{class_profile_a20e872388fa79e657a2bd86ad28d46a5}{session}}
-\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_profile_a390b2643abb820e749741eb38206666d}{Profile}} (int id)
+\begin{DoxyCompactList}\small\item\em Loads an existing profile from a file by the profile\textquotesingle{}s id. If the profile doesn\textquotesingle{}t exist or the save file is corrupted, returns a profile with an id of 6. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class that contains the the currently active profile. 
+Class that represents and contains the data of a player\textquotesingle{}s profile. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_profile_a390b2643abb820e749741eb38206666d}\label{class_profile_a390b2643abb820e749741eb38206666d}} 
+\index{Profile@{Profile}!Profile@{Profile}}
+\index{Profile@{Profile}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{Profile()}{Profile()}}
+{\footnotesize\ttfamily Profile.\+Profile (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads an existing profile from a file by the profile\textquotesingle{}s id. If the profile doesn\textquotesingle{}t exist or the save file is corrupted, returns a profile with an id of 6. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID of the profile to load.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{class_profile_a390b2643abb820e749741eb38206666d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_a390b2643abb820e749741eb38206666d_icgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_profile_ac35fe897f5723f01593341c9c39d8e3e}\label{class_profile_ac35fe897f5723f01593341c9c39d8e3e}} 
@@ -76,7 +122,7 @@ Creates a new profile.
 \begin{DoxyParams}{Parameters}
 {\em id} & The id of the new profile.\\
 \hline
-{\em name} & The profile name.\\
+{\em name} & The profile\textquotesingle{}s name.\\
 \hline
 \end{DoxyParams}
 Here is the caller graph for this function\+:
@@ -136,15 +182,15 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_profile_a1611ed62259b932927164f5bff513c4b_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_profile_a7070938f6f0941e62f75fb916b13c36c}\label{class_profile_a7070938f6f0941e62f75fb916b13c36c}} 
+\mbox{\Hypertarget{class_profile_af0c359996b22ff324708c48445c067f5}\label{class_profile_af0c359996b22ff324708c48445c067f5}} 
 \index{Profile@{Profile}!Get@{Get}}
 \index{Get@{Get}!Profile@{Profile}}
 \doxysubsubsection{\texorpdfstring{Get()}{Get()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_profile_info}{Profile\+Info}} Profile.\+Get (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_profile}{Profile}} Profile.\+Get (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Loads the profile with the given id and returns it\textquotesingle{}s data. 
+Method that encapsulates the profile\textquotesingle{}s class constructor. Loads the profile with the given id and returns it\textquotesingle{}s data, returning null if the profile doesn\textquotesingle{}t exist. This is used instead of the constructor because constructors can\textquotesingle{}t return null. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -152,55 +198,48 @@ Loads the profile with the given id and returns it\textquotesingle{}s data.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The profile\textquotesingle{}s data, null if the profile doesn\textquotesingle{}t exist.
+The profile\textquotesingle{}s data or null if the profile doesn\textquotesingle{}t exist.
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_af0c359996b22ff324708c48445c067f5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_profile_af0c359996b22ff324708c48445c067f5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_profile_adb3883e0f9a606c7e60b29dd2a41d8a0}\label{class_profile_adb3883e0f9a606c7e60b29dd2a41d8a0}} 
+\index{Profile@{Profile}!LevelIsUnlocked@{LevelIsUnlocked}}
+\index{LevelIsUnlocked@{LevelIsUnlocked}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{LevelIsUnlocked()}{LevelIsUnlocked()}}
+{\footnotesize\ttfamily bool Profile.\+Level\+Is\+Unlocked (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Checks if the level is unlocked, that is if the level\textquotesingle{}s key has been bought from the store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level\textquotesingle{}s number.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the level is unlocked, else false.
 \end{DoxyReturn}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_profile_a7070938f6f0941e62f75fb916b13c36c_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_profile_ab295a3d5ae7494b681e0333bb4166516}\label{class_profile_ab295a3d5ae7494b681e0333bb4166516}} 
-\index{Profile@{Profile}!Load@{Load}}
-\index{Load@{Load}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
-{\footnotesize\ttfamily void Profile.\+Load (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
-
-
-
-Loads a profile with the given id and makes it the active profile. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em id} & The id of the profile to load.\\
-\hline
-\end{DoxyParams}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_profile_ab295a3d5ae7494b681e0333bb4166516_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{class_profile_a8fa9b755af65c98f5ce709c749579ab5}\label{class_profile_a8fa9b755af65c98f5ce709c749579ab5}} 
-\index{Profile@{Profile}!LogOut@{LogOut}}
-\index{LogOut@{LogOut}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{LogOut()}{LogOut()}}
-{\footnotesize\ttfamily void Profile.\+Log\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Logs out of the current profile. 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_profile_a8fa9b755af65c98f5ce709c749579ab5_icgraph}
+\includegraphics[width=350pt]{class_profile_adb3883e0f9a606c7e60b29dd2a41d8a0_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{class_profile_af591c1206e6be7fadaa7cd33086158c2}\label{class_profile_af591c1206e6be7fadaa7cd33086158c2}} 
@@ -226,7 +265,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=308pt]{class_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph}
+\includegraphics[width=350pt]{class_profile_af591c1206e6be7fadaa7cd33086158c2_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -237,24 +276,19 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_profile_af591c1206e6be7fadaa7cd33086158c2_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}\label{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8}} 
-\index{Profile@{Profile}!Save@{Save}}
-\index{Save@{Save}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{Save()}{Save()}}
-{\footnotesize\ttfamily void Profile.\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_profile_a18281b870e1b5bb7aebc9bab50aa2272}\label{class_profile_a18281b870e1b5bb7aebc9bab50aa2272}} 
+\index{Profile@{Profile}!ToBytes@{ToBytes}}
+\index{ToBytes@{ToBytes}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{ToBytes()}{ToBytes()}}
+{\footnotesize\ttfamily byte\mbox{[}$\,$\mbox{]} Profile.\+To\+Bytes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Saves the the currently active profile by writing to the save file. 
+Writes the profile data to an array of bytes for saving in a file. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{class_profile_ad59913a6e988fd89cc483dc9edaeeeb8_icgraph}
-\end{center}
-\end{figure}
+\begin{DoxyReturn}{Returns}
+A byte buffer containing the profile data
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
@@ -278,38 +312,98 @@ Maximum number of profiles that can be saved.
 
 Directory where the profiles will be stored. 
 
-\mbox{\Hypertarget{class_profile_a20e872388fa79e657a2bd86ad28d46a5}\label{class_profile_a20e872388fa79e657a2bd86ad28d46a5}} 
-\index{Profile@{Profile}!session@{session}}
-\index{session@{session}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{session}{session}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_profile}{Profile}} Profile.\+session\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Singleton instance. 
-
 
 
 \doxysubsection{Property Documentation}
-\mbox{\Hypertarget{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}\label{class_profile_a9ea31d4b345ebc63cc9933453eee20e6}} 
-\index{Profile@{Profile}!CurrentSession@{CurrentSession}}
-\index{CurrentSession@{CurrentSession}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{CurrentSession}{CurrentSession}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_profile}{Profile}} Profile.\+Current\+Session\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+\mbox{\Hypertarget{class_profile_a307f6749c751e25cef64f85b07f02514}\label{class_profile_a307f6749c751e25cef64f85b07f02514}} 
+\index{Profile@{Profile}!Avatar@{Avatar}}
+\index{Avatar@{Avatar}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{Avatar}{Avatar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avatar}{Avatar}} Profile.\+Avatar\hspace{0.3cm}{\ttfamily [get]}}
 
 
 
-Gets the singleton instance of the currently active profile. 
+The profile\textquotesingle{}s avatar. 
 
-\mbox{\Hypertarget{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}\label{class_profile_a0b5da2ac9e62cb58447b86877389aa9e}} 
-\index{Profile@{Profile}!Info@{Info}}
-\index{Info@{Info}!Profile@{Profile}}
-\doxysubsubsection{\texorpdfstring{Info}{Info}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_profile_info}{Profile\+Info}} Profile.\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
+\mbox{\Hypertarget{class_profile_a54f4969aeceaac4db0be879867e71fe3}\label{class_profile_a54f4969aeceaac4db0be879867e71fe3}} 
+\index{Profile@{Profile}!CompletedLevels@{CompletedLevels}}
+\index{CompletedLevels@{CompletedLevels}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{CompletedLevels}{CompletedLevels}}
+{\footnotesize\ttfamily List$<$int$>$ Profile.\+Completed\+Levels\hspace{0.3cm}{\ttfamily [get]}}
 
 
 
-Data of the active profile. 
+A list of the levels the player has completed. 
+
+\mbox{\Hypertarget{class_profile_aabba37c3975118edacf08f6f51e9252d}\label{class_profile_aabba37c3975118edacf08f6f51e9252d}} 
+\index{Profile@{Profile}!CurrentLevel@{CurrentLevel}}
+\index{CurrentLevel@{CurrentLevel}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{CurrentLevel}{CurrentLevel}}
+{\footnotesize\ttfamily int Profile.\+Current\+Level\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The level the player is currently in, that being the first level the player hasn\textquotesingle{}t completed or level 3 if all have been completed. 
+
+\mbox{\Hypertarget{class_profile_a8907ef1053fdebaeb5322e09ffe38128}\label{class_profile_a8907ef1053fdebaeb5322e09ffe38128}} 
+\index{Profile@{Profile}!ID@{ID}}
+\index{ID@{ID}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Profile.\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The profile id. Can be any number between 0 and 5. 
+
+\mbox{\Hypertarget{class_profile_a63dd8c4295cf725a680ea5cb5e937137}\label{class_profile_a63dd8c4295cf725a680ea5cb5e937137}} 
+\index{Profile@{Profile}!LevelProgress@{LevelProgress}}
+\index{LevelProgress@{LevelProgress}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{LevelProgress}{LevelProgress}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Profile.\+Level\+Progress\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. 
+
+\mbox{\Hypertarget{class_profile_a0e50ac0f5032687e6083e99749fcd199}\label{class_profile_a0e50ac0f5032687e6083e99749fcd199}} 
+\index{Profile@{Profile}!Name@{Name}}
+\index{Name@{Name}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Profile.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The profile name. 
+
+\mbox{\Hypertarget{class_profile_adaf86441cdfa02d937270c3cd466e2f8}\label{class_profile_adaf86441cdfa02d937270c3cd466e2f8}} 
+\index{Profile@{Profile}!NumberOfOwnedItems@{NumberOfOwnedItems}}
+\index{NumberOfOwnedItems@{NumberOfOwnedItems}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{NumberOfOwnedItems}{NumberOfOwnedItems}}
+{\footnotesize\ttfamily int Profile.\+Number\+Of\+Owned\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The number of items the player has bought from the store. 
+
+\mbox{\Hypertarget{class_profile_a3baa1f0b2ddbf6902dfdf4e06db2621a}\label{class_profile_a3baa1f0b2ddbf6902dfdf4e06db2621a}} 
+\index{Profile@{Profile}!OwnedItems@{OwnedItems}}
+\index{OwnedItems@{OwnedItems}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{OwnedItems}{OwnedItems}}
+{\footnotesize\ttfamily bool \mbox{[}$\,$\mbox{]} Profile.\+Owned\+Items\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+An array of booleans in which each index corresponds to a store item\textquotesingle{}s id. Each element is true if the item was bought from the store and is currently owned and false otherwise. 
+
+\mbox{\Hypertarget{class_profile_af87d47cc73db8b55b24e5ab547534272}\label{class_profile_af87d47cc73db8b55b24e5ab547534272}} 
+\index{Profile@{Profile}!Points@{Points}}
+\index{Points@{Points}!Profile@{Profile}}
+\doxysubsubsection{\texorpdfstring{Points}{Points}}
+{\footnotesize\ttfamily UInt32 Profile.\+Points\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The number of points that the profile currently owns. 
 
 
 

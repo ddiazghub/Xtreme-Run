@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['levelisunlocked_0',['LevelIsUnlocked',['../class_profile_info.html#a81e55ae4a4e4b6d23593a365d61c8104',1,'ProfileInfo']]],
-  ['load_1',['Load',['../class_profile.html#ab295a3d5ae7494b681e0333bb4166516',1,'Profile']]],
-  ['logout_2',['LogOut',['../class_profile.html#a8fa9b755af65c98f5ce709c749579ab5',1,'Profile']]]
+  ['levelisunlocked_0',['LevelIsUnlocked',['../class_profile.html#adb3883e0f9a606c7e60b29dd2a41d8a0',1,'Profile']]],
+  ['load_1',['Load',['../class_player_session.html#a819cebf72563f1e27a78962f82fb9c72',1,'PlayerSession']]],
+  ['logout_2',['LogOut',['../class_player_session.html#a65808546d8278d30ee26af807c62051f',1,'PlayerSession']]]
 ];

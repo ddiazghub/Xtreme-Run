@@ -101,7 +101,7 @@ Inheritance diagram for Main:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main__inherit__graph.png" border="0" usemap="#a_main_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_main_inherit__map" id="a_main_inherit__map">
-<area shape="rect" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="5,131,229,281"/>
+<area shape="rect" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="5,131,229,296"/>
 <area shape="rect" href="class_node2_d.html" title=" " alt="" coords="83,5,151,83"/>
 </map>
 </div>
@@ -110,11 +110,14 @@ Collaboration diagram for Main:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main__coll__graph.png" border="0" usemap="#a_main_coll__map" alt="Collaboration graph"/></div>
 <map name="a_main_coll__map" id="a_main_coll__map">
-<area shape="rect" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="19,315,243,421"/>
-<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="5,160,73,237"/>
-<area shape="rect" title=" " alt="" coords="98,160,165,237"/>
-<area shape="rect" href="class_scene_factory.html" title="This class generates scenes for the main class." alt="" coords="189,145,381,252"/>
-<area shape="rect" title=" " alt="" coords="241,5,329,83"/>
+<area shape="rect" title="The main Node of the game. It is a state machine that executes a single scene at a time." alt="" coords="213,447,437,553"/>
+<area shape="rect" href="class_node2_d.html" title=" " alt="" coords="5,5,73,83"/>
+<area shape="rect" href="class_game_audio.html" title="Node for playing audio globally in the game." alt="" coords="115,219,313,384"/>
+<area shape="rect" title=" " alt="" coords="554,263,621,340"/>
+<area shape="rect" title=" " alt="" coords="256,5,353,83"/>
+<area shape="rect" title=" " alt="" coords="397,5,485,83"/>
+<area shape="rect" href="class_scene_factory.html" title="This class generates scenes for the main class." alt="" coords="338,248,530,355"/>
+<area shape="rect" title=" " alt="" coords="97,5,232,83"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -123,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa38a52a0b6f8e0362539aea9114f285"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main.html#afa38a52a0b6f8e0362539aea9114f285">_Ready</a> ()</td></tr>
 <tr class="separator:afa38a52a0b6f8e0362539aea9114f285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff56bc272e79a2419d64fd18356b052b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main.html#aff56bc272e79a2419d64fd18356b052b">ChangeScene</a> (<a class="el" href="_game_scenes_8cs.html#a0687e907db3af3681f90377d69f32090">GameScenes</a> scene)</td></tr>
-<tr class="memdesc:aff56bc272e79a2419d64fd18356b052b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the currently active game scene.  <a href="class_main.html#aff56bc272e79a2419d64fd18356b052b">More...</a><br /></td></tr>
+<tr class="memdesc:aff56bc272e79a2419d64fd18356b052b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the currently active game scene and modifies the sounds currently being played accordingly.  <a href="class_main.html#aff56bc272e79a2419d64fd18356b052b">More...</a><br /></td></tr>
 <tr class="separator:aff56bc272e79a2419d64fd18356b052b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
@@ -140,6 +143,8 @@ Properties</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ad75fdbc3f038e099f973477222fe3461"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_audio.html">GameAudio</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main.html#ad75fdbc3f038e099f973477222fe3461">gameAudio</a></td></tr>
+<tr class="separator:ad75fdbc3f038e099f973477222fe3461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e01ee6e74012ec1eebf4744eb2640ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_scene_factory.html">SceneFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main.html#a4e01ee6e74012ec1eebf4744eb2640ad">sceneFactory</a></td></tr>
 <tr class="memdesc:a4e01ee6e74012ec1eebf4744eb2640ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory for creating new scene instances.  <a href="class_main.html#a4e01ee6e74012ec1eebf4744eb2640ad">More...</a><br /></td></tr>
 <tr class="separator:a4e01ee6e74012ec1eebf4744eb2640ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,9 +171,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_afa38a52a0b6f8e0362539aea9114f285_cgraph.png" border="0" usemap="#aclass_main_afa38a52a0b6f8e0362539aea9114f285_cgraph" alt=""/></div>
 <map name="aclass_main_afa38a52a0b6f8e0362539aea9114f285_cgraph" id="aclass_main_afa38a52a0b6f8e0362539aea9114f285_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,104,32"/>
-<area shape="rect" href="class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene." alt="" coords="152,5,287,32"/>
-<area shape="rect" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="335,5,467,32"/>
+<area shape="rect" title=" " alt="" coords="5,81,104,108"/>
+<area shape="rect" href="class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,81,287,108"/>
+<area shape="rect" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="349,5,481,32"/>
+<area shape="rect" href="class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02" title="Plays the accept audio effect." alt="" coords="335,56,496,83"/>
+<area shape="rect" href="class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8" title="Plays the cancel audio effect." alt="" coords="335,107,495,133"/>
+<area shape="rect" href="class_game_audio.html#ac494431eace52893c1a35c662e74dee2" title="Sets a new music track, depending on the scene." alt="" coords="341,157,490,184"/>
 </map>
 </div>
 
@@ -190,7 +198,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Changes the currently active game scene. </p>
+<p>Changes the currently active game scene and modifies the sounds currently being played accordingly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scene</td><td>The new scene.</td></tr>
@@ -202,8 +210,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_aff56bc272e79a2419d64fd18356b052b_cgraph.png" border="0" usemap="#aclass_main_aff56bc272e79a2419d64fd18356b052b_cgraph" alt=""/></div>
 <map name="aclass_main_aff56bc272e79a2419d64fd18356b052b_cgraph" id="aclass_main_aff56bc272e79a2419d64fd18356b052b_cgraph">
-<area shape="rect" title="Changes the currently active game scene." alt="" coords="5,5,140,32"/>
-<area shape="rect" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="188,5,320,32"/>
+<area shape="rect" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="5,81,140,108"/>
+<area shape="rect" href="class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="203,5,335,32"/>
+<area shape="rect" href="class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02" title="Plays the accept audio effect." alt="" coords="188,56,349,83"/>
+<area shape="rect" href="class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8" title="Plays the cancel audio effect." alt="" coords="189,107,349,133"/>
+<area shape="rect" href="class_game_audio.html#ac494431eace52893c1a35c662e74dee2" title="Sets a new music track, depending on the scene." alt="" coords="194,157,343,184"/>
 </map>
 </div>
 <div class="dynheader">
@@ -211,7 +222,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_main_aff56bc272e79a2419d64fd18356b052b_icgraph.png" border="0" usemap="#aclass_main_aff56bc272e79a2419d64fd18356b052b_icgraph" alt=""/></div>
 <map name="aclass_main_aff56bc272e79a2419d64fd18356b052b_icgraph" id="aclass_main_aff56bc272e79a2419d64fd18356b052b_icgraph">
-<area shape="rect" title="Changes the currently active game scene." alt="" coords="152,5,287,32"/>
+<area shape="rect" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,5,287,32"/>
 <area shape="rect" href="class_main.html#afa38a52a0b6f8e0362539aea9114f285" title=" " alt="" coords="5,5,104,32"/>
 </map>
 </div>
@@ -219,6 +230,28 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad75fdbc3f038e099f973477222fe3461" name="ad75fdbc3f038e099f973477222fe3461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75fdbc3f038e099f973477222fe3461">&#9670;&nbsp;</a></span>gameAudio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_audio.html">GameAudio</a> Main.gameAudio</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4e01ee6e74012ec1eebf4744eb2640ad" name="a4e01ee6e74012ec1eebf4744eb2640ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e01ee6e74012ec1eebf4744eb2640ad">&#9670;&nbsp;</a></span>sceneFactory</h2>
 

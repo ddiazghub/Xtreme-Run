@@ -1,5 +1,5 @@
 <map id="Level.SaveData" name="Level.SaveData">
 <area shape="rect" id="node1" title="Saves the player&#39;s progress." alt="" coords="5,31,116,57"/>
-<area shape="rect" id="node2" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="164,5,277,32"/>
-<area shape="rect" id="node3" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="175,56,266,83"/>
+<area shape="rect" id="node2" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="177,5,290,32"/>
+<area shape="rect" id="node3" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="164,56,303,83"/>
 </map>

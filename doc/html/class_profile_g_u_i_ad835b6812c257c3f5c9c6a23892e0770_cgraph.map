@@ -1,4 +1,4 @@
 <map id="ProfileGUI.OnLogOutPressed" name="ProfileGUI.OnLogOutPressed">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,196,32"/>
-<area shape="rect" id="node2" href="$class_profile.html#a8fa9b755af65c98f5ce709c749579ab5" title="Logs out of the current profile." alt="" coords="244,5,348,32"/>
+<area shape="rect" id="node2" href="$class_player_session.html#a65808546d8278d30ee26af807c62051f" title="Logs out of the current profile." alt="" coords="244,5,396,32"/>
 </map>

@@ -167,7 +167,7 @@ public class Level : Node2D
     /// <returns></returns>
     public int GetPoints()
     {
-        return Mathf.Clamp((int) (this.progress - Profile.CurrentSession.Info.LevelProgress[this.LevelNumber]), 0, 100) * (int) (100 * this.pointsMultiplier);
+        return Mathf.Clamp((int) (this.progress - PlayerSession.ActiveSession.Profile.LevelProgress[this.LevelNumber]), 0, 100) * (int) (100 * this.pointsMultiplier);
     }
 
     /// <summary>
@@ -204,11 +204,11 @@ public class Level : Node2D
     /// </summary>
     public void SaveData()
     {
-        if (this.progress > Profile.CurrentSession.Info.LevelProgress[this.LevelNumber])
+        if (this.progress > PlayerSession.ActiveSession.Profile.LevelProgress[this.LevelNumber])
         {
-            Profile.CurrentSession.Info.Points += (UInt32) this.GetPoints();
-            Profile.CurrentSession.Info.LevelProgress[this.LevelNumber] = (int) this.progress;
-            Profile.CurrentSession.Save();
+            PlayerSession.ActiveSession.Profile.Points += (UInt32) this.GetPoints();
+            PlayerSession.ActiveSession.Profile.LevelProgress[this.LevelNumber] = (int) this.progress;
+            PlayerSession.ActiveSession.Save();
         }
     }
 

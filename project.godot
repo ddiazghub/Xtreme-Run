@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Plaformer Parkour Videogame"
+config/description="If I change the godot project name it just stops working for some reason."
 run/main_scene="res://src/Main.tscn"
 config/icon="res://icon.png"
 

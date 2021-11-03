@@ -1,5 +1,0 @@
-<map id="ProfileInfo.ProfileInfo" name="ProfileInfo.ProfileInfo">
-<area shape="rect" id="node1" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="5,31,144,57"/>
-<area shape="rect" id="node2" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="192,5,291,32"/>
-<area shape="rect" id="node3" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="192,56,291,83"/>
-</map>

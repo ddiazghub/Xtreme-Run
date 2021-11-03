@@ -1,6 +1,15 @@
 <map id="Profile.Delete" name="Profile.Delete">
-<area shape="rect" id="node1" title="Deletes an existing profile save file." alt="" coords="416,42,515,69"/>
-<area shape="rect" id="node2" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="184,5,368,47"/>
-<area shape="rect" id="node4" href="$class_profile_info.html#a64d5028a0453e904021a62e9280060b0" title="Loads an existing profile from a file. If the profile doesn&#39;t exist or the save file is corrupted,..." alt="" coords="207,71,345,98"/>
-<area shape="rect" id="node3" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="5,5,136,47"/>
+<area shape="rect" id="node1" title="Deletes an existing profile save file." alt="" coords="960,42,1059,69"/>
+<area shape="rect" id="node2" href="$class_profile_select_entry.html#ae2810d40cdca8a83f0cf442006bfaa9e" title=" " alt="" coords="212,5,396,47"/>
+<area shape="rect" id="node4" href="$class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="813,67,912,94"/>
+<area shape="rect" id="node3" href="$class_profile_select_entry.html#a3dc12cffc1e411b67207e361ce674692" title=" " alt="" coords="15,64,146,105"/>
+<area shape="rect" id="node5" href="$class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="683,97,765,123"/>
+<area shape="rect" id="node6" href="$class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="474,122,613,149"/>
+<area shape="rect" id="node10" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="465,181,622,207"/>
+<area shape="rect" id="node13" href="$class_profile_select_entry.html#a455e5a4a8662aea7e31b6492fb437b50" title="Updates the data currently displayed on the button." alt="" coords="452,71,635,98"/>
+<area shape="rect" id="node7" href="$class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="209,173,399,215"/>
+<area shape="rect" id="node9" href="$class_profile_select_entry.html#a88978332d17f63b02b3dc4476e01c6a4" title=" " alt="" coords="207,122,401,149"/>
+<area shape="rect" id="node8" href="$class_create_profile_dialog.html#a107ddac39ac301541def8b5b8cea85b9" title=" " alt="" coords="13,173,149,215"/>
+<area shape="rect" id="node11" href="$class_edit_profile_g_u_i.html#a4b00cca39e0201eff072264a55291a35" title=" " alt="" coords="204,239,404,266"/>
+<area shape="rect" id="node12" href="$class_edit_profile_g_u_i.html#a2708ce86420d102c0f76583100611d32" title=" " alt="" coords="5,239,156,266"/>
 </map>

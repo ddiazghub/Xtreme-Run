@@ -3,8 +3,10 @@
 <area shape="rect" id="node2" href="$class_create_profile_dialog.html#a804665f81f54d577fd173054c5ec87bb" title=" " alt="" coords="189,5,380,47"/>
 <area shape="rect" id="node3" href="$class_create_profile_dialog.html#a49bc2876b4cb7a3ae6d76b836b406849" title=" " alt="" coords="189,71,380,112"/>
 <area shape="rect" id="node4" href="$class_profile.html#ac35fe897f5723f01593341c9c39d8e3e" title="Creates a new profile." alt="" coords="457,27,557,54"/>
-<area shape="rect" id="node5" href="$class_profile.html#ab295a3d5ae7494b681e0333bb4166516" title="Loads a profile with the given id and makes it the active profile." alt="" coords="461,78,552,105"/>
-<area shape="rect" id="node6" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="428,129,585,155"/>
-<area shape="rect" id="node7" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="633,103,732,130"/>
-<area shape="rect" id="node8" href="$class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="641,154,724,181"/>
+<area shape="rect" id="node5" href="$class_player_session.html#a819cebf72563f1e27a78962f82fb9c72" title="Loads a profile with the given id and makes it the active profile." alt="" coords="437,78,576,105"/>
+<area shape="rect" id="node10" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="428,129,585,155"/>
+<area shape="rect" id="node6" href="$class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="633,78,716,105"/>
+<area shape="rect" id="node7" href="$class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="764,78,863,105"/>
+<area shape="rect" id="node8" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="911,78,1009,105"/>
+<area shape="rect" id="node9" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="911,129,1009,155"/>
 </map>

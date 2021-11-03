@@ -1,0 +1,4 @@
+<map id="GameAudio" name="GameAudio">
+<area shape="rect" id="node1" title="Node for playing audio globally in the game." alt="" coords="5,131,204,428"/>
+<area shape="rect" id="node2" href="$class_node2_d.html" title=" " alt="" coords="71,5,139,83"/>
+</map>

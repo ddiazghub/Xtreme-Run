@@ -1,7 +1,9 @@
 <map id="EditProfileGUI.OnSavePressed" name="EditProfileGUI.OnSavePressed">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,205,83"/>
 <area shape="rect" id="node2" href="$class_profile.html#af591c1206e6be7fadaa7cd33086158c2" title="Checks if a profile name is available." alt="" coords="253,31,411,57"/>
-<area shape="rect" id="node5" href="$class_profile.html#ad59913a6e988fd89cc483dc9edaeeeb8" title="Saves the the currently active profile by writing to the save file." alt="" coords="287,81,377,108"/>
-<area shape="rect" id="node3" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="459,5,557,32"/>
-<area shape="rect" id="node4" href="$class_profile.html#a7070938f6f0941e62f75fb916b13c36c" title="Loads the profile with the given id and returns it&#39;s data." alt="" coords="467,56,549,83"/>
+<area shape="rect" id="node7" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="263,81,401,108"/>
+<area shape="rect" id="node3" href="$class_profile.html#a1611ed62259b932927164f5bff513c4b" title="Checks if the profile exists." alt="" coords="736,5,835,32"/>
+<area shape="rect" id="node4" href="$class_profile.html#af0c359996b22ff324708c48445c067f5" title="Method that encapsulates the profile&#39;s class constructor. Loads the profile with the given id and ret..." alt="" coords="459,56,541,83"/>
+<area shape="rect" id="node5" href="$class_profile.html#a390b2643abb820e749741eb38206666d" title="Loads an existing profile from a file by the profile&#39;s id. If the profile doesn&#39;t exist or the save f..." alt="" coords="589,56,688,83"/>
+<area shape="rect" id="node6" href="$class_profile.html#a65e989b8d3b98a068c286831391f5e6b" title="Deletes an existing profile save file." alt="" coords="736,56,835,83"/>
 </map>

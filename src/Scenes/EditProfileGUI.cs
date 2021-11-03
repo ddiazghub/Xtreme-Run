@@ -21,7 +21,7 @@ public class EditProfileGUI : NinePatchRect {
     /// <summary>
     ///     A copy of the player's avatar which will be edited.
     /// </summary>
-    private Avatar editedAvatar = Profile.CurrentSession.Info.Avatar.Clone();
+    private Avatar editedAvatar = PlayerSession.ActiveSession.Profile.Avatar.Clone();
 
     /// <summary>
     ///     Keys for labeling colors.
@@ -66,8 +66,8 @@ public class EditProfileGUI : NinePatchRect {
             this.GetNode<TextureButton>("Panel/" + key + "/" + DEFAULT_COLOR).Connect("pressed", this, nameof(this.OnColorPressed));
         }
         
-        this.GetNode<LineEdit>("LineEdit").Text = Profile.CurrentSession.Info.Name;
-        this.GetNode<OptionButton>("Panel/Gender").Selected = Convert.ToInt32(Profile.CurrentSession.Info.Avatar.Male);
+        this.GetNode<LineEdit>("LineEdit").Text = PlayerSession.ActiveSession.Profile.Name;
+        this.GetNode<OptionButton>("Panel/Gender").Selected = Convert.ToInt32(PlayerSession.ActiveSession.Profile.Avatar.Male);
 
         foreach (string key in this.keys)
         {
@@ -93,7 +93,7 @@ public class EditProfileGUI : NinePatchRect {
 
                 button.Connect("pressed", this, nameof(this.OnColorPressed));
 
-                if (Profile.CurrentSession.Info.Avatar.GetColor(key) == i)
+                if (PlayerSession.ActiveSession.Profile.Avatar.GetColor(key) == i)
                     this.selected[key] = i;
             }
         }
@@ -117,7 +117,7 @@ public class EditProfileGUI : NinePatchRect {
                 if (button.GetChildCount() == 0 && button.Name.ToInt() == this.selected[key])
                     this.colorSelectors[key].RectGlobalPosition = button.RectGlobalPosition - new Vector2(5, 5);
                 
-                if (!(button.Name.ToInt() == 15 || button.Name.ToInt() == 16) && !Profile.CurrentSession.Info.OwnedItems[button.Name.ToInt()] && button.GetChildCount() == 0)
+                if (!(button.Name.ToInt() == 15 || button.Name.ToInt() == 16) && !PlayerSession.ActiveSession.Profile.OwnedItems[button.Name.ToInt()] && button.GetChildCount() == 0)
                 {
                     TextureRect textureRect = new TextureRect();
                     textureRect.Texture = this.lockSprite;
@@ -125,7 +125,7 @@ public class EditProfileGUI : NinePatchRect {
                     button.AddChild(textureRect);
                 }
 
-                if (Profile.CurrentSession.Info.OwnedItems[button.Name.ToInt()] && !(button.GetChildCount() == 0))
+                if (PlayerSession.ActiveSession.Profile.OwnedItems[button.Name.ToInt()] && !(button.GetChildCount() == 0))
                     button.GetNode("Lock").QueueFree();
             }
         }
@@ -145,7 +145,7 @@ public class EditProfileGUI : NinePatchRect {
     /// <returns>True if the changes are unsaved, false otherwise.</returns>
     public bool UnsavedChanges()
     {
-        ProfileInfo profile = Profile.CurrentSession.Info;
+        Profile profile = PlayerSession.ActiveSession.Profile;
 
         if (!profile.Name.Equals(this.GetNode<LineEdit>("LineEdit").Text) ||
             !(this.editedAvatar.Male == profile.Avatar.Male))
@@ -211,7 +211,7 @@ public class EditProfileGUI : NinePatchRect {
 
     public void OnSavePressed()
     {
-        ProfileInfo profile = Profile.CurrentSession.Info;
+        Profile profile = PlayerSession.ActiveSession.Profile;
         string newName = this.GetNode<LineEdit>("LineEdit").Text;
         
         if (!profile.Name.Equals(newName))
@@ -233,7 +233,7 @@ public class EditProfileGUI : NinePatchRect {
             profile.Avatar.SetColor(key, this.selected[key]);
         }
 
-        Profile.CurrentSession.Save();
+        PlayerSession.ActiveSession.Save();
         
         this.GetNode<AcceptDialog>("SavedAlert").PopupCentered();
         this.EmitSignal("ProfileChanged");

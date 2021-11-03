@@ -40,7 +40,7 @@ public class MainMenu : Node2D
 
     public void UpdateUI()
     {
-        this.GetNode<PointsCounter>("GUI/PointsCounter").Set(Profile.CurrentSession.Info.Points);
+        this.GetNode<PointsCounter>("GUI/PointsCounter").Set(PlayerSession.ActiveSession.Profile.Points);
         this.GetNode<ProfileGUI>("GUI/ProfileGUI").UpdateUI();
     }
 

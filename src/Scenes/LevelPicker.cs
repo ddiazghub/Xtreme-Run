@@ -19,7 +19,7 @@ public class LevelPicker : SpinBox
 
     public override void _Ready()
     {
-        this.Value = Profile.CurrentSession.Info.CurrentLevel;
+        this.Value = PlayerSession.ActiveSession.Profile.CurrentLevel;
         currentValue = this.Value;
 
         this.Connect("value_changed", this, nameof(this.OnValueChanged));
@@ -29,17 +29,17 @@ public class LevelPicker : SpinBox
 
     public void OnValueChanged(double value)
     {
-        if (this.currentValue == 2 && !Profile.CurrentSession.Info.LevelIsUnlocked((int) value))
+        if (this.currentValue == 2 && !PlayerSession.ActiveSession.Profile.LevelIsUnlocked((int) value))
         {
             this.Value = this.currentValue;
         }
-        else if (this.currentValue == 3 && !Profile.CurrentSession.Info.LevelIsUnlocked((int) value))
+        else if (this.currentValue == 3 && !PlayerSession.ActiveSession.Profile.LevelIsUnlocked((int) value))
         {
             this.Value = 1;      
         }
-        else if (this.currentValue == 1 && !Profile.CurrentSession.Info.LevelIsUnlocked((int) value))
+        else if (this.currentValue == 1 && !PlayerSession.ActiveSession.Profile.LevelIsUnlocked((int) value))
         {
-            if (Profile.CurrentSession.Info.LevelIsUnlocked(3))
+            if (PlayerSession.ActiveSession.Profile.LevelIsUnlocked(3))
                 this.Value = 3;
             else
                 this.Value = this.currentValue;

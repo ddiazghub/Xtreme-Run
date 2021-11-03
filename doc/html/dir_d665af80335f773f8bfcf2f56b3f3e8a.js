@@ -21,9 +21,6 @@ var dir_d665af80335f773f8bfcf2f56b3f3e8a =
     [ "LevelPicker.cs", "_level_picker_8cs.html", [
       [ "LevelPicker", "class_level_picker.html", "class_level_picker" ]
     ] ],
-    [ "LevelSelect.cs", "_level_select_8cs.html", [
-      [ "LevelSelect", "class_level_select.html", null ]
-    ] ],
     [ "MainMenu.cs", "_main_menu_8cs.html", [
       [ "MainMenu", "class_main_menu.html", "class_main_menu" ]
     ] ],
