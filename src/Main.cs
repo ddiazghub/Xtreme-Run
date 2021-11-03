@@ -44,6 +44,7 @@ public class Main : Node2D {
             this.Scene.QueueFree();
         }
 
+        this.GetNode<GameAudio>("GameAudio").SetMusic(scene);
         this.Scene = this.sceneFactory.New(scene);
         this.AddChild(this.Scene);
     }

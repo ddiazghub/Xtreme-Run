@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://res/Sounds/menu/music/menu.wav" type="AudioStream" id=1]
+[ext_resource path="res://res/Sounds/menu/music/12 final battle.ogg" type="AudioStream" id=2]
+[ext_resource path="res://res/Sounds/menu/music/airship.mp3" type="AudioStream" id=3]
+[ext_resource path="res://res/Sounds/menu/music/07 high in the mountains.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Audio/GameAudio.cs" type="Script" id=5]
+
+[node name="GameAudio" type="Node2D"]
+script = ExtResource( 5 )
+MenuMusic = ExtResource( 1 )
+Level1Music = ExtResource( 3 )
+Level2Music = ExtResource( 4 )
+Level3Music = ExtResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 17.547
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]

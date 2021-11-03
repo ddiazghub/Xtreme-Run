@@ -17,7 +17,7 @@ public class Level : Node2D
     ///     The level's number.
     /// </summary>
     [Export]
-    int LevelNumber = 0;
+    public int LevelNumber = 0;
 
     /// <summary>
     ///     A value that will be multiplied with the points earned.

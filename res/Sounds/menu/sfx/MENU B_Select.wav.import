@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MENU B_Select.wav-577342c0a1b442a6e491be3159166831.sample"
+
+[deps]
+
+source_file="res://res/Sounds/menu/sfx/MENU B_Select.wav"
+dest_files=[ "res://.import/MENU B_Select.wav-577342c0a1b442a6e491be3159166831.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

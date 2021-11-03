@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ALERT_Appear.wav-e38a3b5e5e09f4f024b808ba33a34c2f.sample"
+
+[deps]
+
+source_file="res://res/Sounds/menu/sfx/ALERT_Appear.wav"
+dest_files=[ "res://.import/ALERT_Appear.wav-e38a3b5e5e09f4f024b808ba33a34c2f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
