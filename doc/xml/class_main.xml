@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_main" kind="class" language="C#" prot="public">
+    <compoundname>Main</compoundname>
+    <basecompoundref refid="class_node2_d" prot="public" virt="non-virtual">Node2D</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_main_1aa2f640712c026469e26fc7954f11be5d" prot="public" static="yes" mutable="no">
+        <type>readonly Vector2</type>
+        <definition>readonly Vector2 Main.WINDOW_SIZE</definition>
+        <argsstring></argsstring>
+        <name>WINDOW_SIZE</name>
+        <initializer>= new Vector2(1280, 720)</initializer>
+        <briefdescription>
+<para>Size of the game&apos;s window. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="13" column="36" bodyfile="src/Main.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_level_complete_1a8397e21dbd05d0c9bc69478135237be5" compoundref="_level_complete_8cs" startline="15" endline="23">LevelComplete._Ready</referencedby>
+        <referencedby refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" compoundref="_pause_menu_8cs" startline="15" endline="25">PauseMenu._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_node2_d" kindref="compound">Node2D</ref></type>
+        <definition>Node2D Main.Scene</definition>
+        <argsstring></argsstring>
+        <name>Scene</name>
+        <briefdescription>
+<para>The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="18" column="19" bodyfile="src/Main.cs" bodystart="19" bodyend="22"/>
+        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">ChangeScene</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_1ad75fdbc3f038e099f973477222fe3461" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_audio" kindref="compound">GameAudio</ref></type>
+        <definition>GameAudio Main.gameAudio</definition>
+        <argsstring></argsstring>
+        <name>gameAudio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="24" column="23" bodyfile="src/Main.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_1a4e01ee6e74012ec1eebf4744eb2640ad" prot="private" static="no" mutable="no">
+        <type><ref refid="class_scene_factory" kindref="compound">SceneFactory</ref></type>
+        <definition>SceneFactory Main.sceneFactory</definition>
+        <argsstring></argsstring>
+        <name>sceneFactory</name>
+        <briefdescription>
+<para>Factory for creating new scene instances. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="29" column="26" bodyfile="src/Main.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_1afa38a52a0b6f8e0362539aea9114f285" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Main._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="31" column="26" bodyfile="src/Main.cs" bodystart="31" bodyend="38"/>
+        <references refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">ChangeScene</references>
+      </memberdef>
+      <memberdef kind="function" id="class_main_1aff56bc272e79a2419d64fd18356b052b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Main.ChangeScene</definition>
+        <argsstring>(GameScenes scene)</argsstring>
+        <name>ChangeScene</name>
+        <param>
+          <type><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref></type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+<para>Changes the currently active game scene and modifies the sounds currently being played accordingly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new scene.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Main.cs" line="44" column="17" bodyfile="src/Main.cs" bodystart="44" bodyend="65"/>
+        <references refid="class_scene_factory_1aa71c8ef1cc97cc029f7b54512187ae7d" compoundref="_scene_factory_8cs" startline="34" endline="37">SceneFactory.New</references>
+        <references refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" compoundref="_game_audio_8cs" startline="98" endline="102">GameAudio.PlayAccept</references>
+        <references refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" compoundref="_game_audio_8cs" startline="107" endline="111">GameAudio.PlayCancel</references>
+        <references refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" compoundref="_main_8cs" startline="19" endline="22">Scene</references>
+        <references refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" compoundref="_game_audio_8cs" startline="84" endline="93">GameAudio.SetMusic</references>
+        <referencedby refid="class_main_1afa38a52a0b6f8e0362539aea9114f285" compoundref="_main_8cs" startline="31" endline="38">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The main <ref refid="class_node" kindref="compound">Node</ref> of the game. It is a state machine that executes a single scene at a time. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Main</label>
+        <link refid="class_main"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>AudioStream</label>
+      </node>
+      <node id="7">
+        <label>AudioStreamPlayer</label>
+      </node>
+      <node id="6">
+        <label>Dictionary&lt;</label>
+      </node>
+      <node id="4">
+        <label>GameAudio</label>
+        <link refid="class_game_audio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+AcceptSFX</edgelabel>
+          <edgelabel>+CancelSFX</edgelabel>
+          <edgelabel>+Level1Music</edgelabel>
+          <edgelabel>+Level2Music</edgelabel>
+          <edgelabel>+Level3Music</edgelabel>
+          <edgelabel>+MenuMusic</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-sceneMusic</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-music</edgelabel>
+          <edgelabel>-sfx</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Main</label>
+        <link refid="class_main"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+WINDOW_SIZE</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-gameAudio</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-sceneFactory</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="8">
+        <label>SceneFactory</label>
+        <link refid="class_scene_factory"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-scenes</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Vector2</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Main.cs" line="8" column="7" bodyfile="src/Main.cs" bodystart="8" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_main_1afa38a52a0b6f8e0362539aea9114f285" prot="public" virt="non-virtual"><scope>Main</scope><name>_Ready</name></member>
+      <member refid="class_main_1aff56bc272e79a2419d64fd18356b052b" prot="public" virt="non-virtual"><scope>Main</scope><name>ChangeScene</name></member>
+      <member refid="class_main_1ad75fdbc3f038e099f973477222fe3461" prot="private" virt="non-virtual"><scope>Main</scope><name>gameAudio</name></member>
+      <member refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" prot="public" virt="non-virtual"><scope>Main</scope><name>Scene</name></member>
+      <member refid="class_main_1a4e01ee6e74012ec1eebf4744eb2640ad" prot="private" virt="non-virtual"><scope>Main</scope><name>sceneFactory</name></member>
+      <member refid="class_main_1aa2f640712c026469e26fc7954f11be5d" prot="public" virt="non-virtual"><scope>Main</scope><name>WINDOW_SIZE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

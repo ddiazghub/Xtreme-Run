@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_7eab064448c74c1c23112f854d7aad53" kind="dir">
+    <compoundname>src/Entities/Player/Enums</compoundname>
+    <innerfile refid="_player_main_action_8cs">PlayerMainAction.cs</innerfile>
+    <innerfile refid="_player_persistent_state_8cs">PlayerPersistentState.cs</innerfile>
+    <innerfile refid="_player_secondary_action_8cs">PlayerSecondaryAction.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/Enums/"/>
+  </compounddef>
+</doxygen>

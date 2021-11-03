@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_2582fa7f01d6ff46c81a2436e4756629" kind="dir">
+    <compoundname>src/Entities/Pickups</compoundname>
+    <innerfile refid="_main_action_pickup_8cs">MainActionPickup.cs</innerfile>
+    <innerfile refid="_secondary_action_pickup_8cs">SecondaryActionPickup.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Pickups/"/>
+  </compounddef>
+</doxygen>

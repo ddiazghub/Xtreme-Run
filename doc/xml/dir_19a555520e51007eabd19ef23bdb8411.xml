@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_19a555520e51007eabd19ef23bdb8411" kind="dir">
+    <compoundname>src/Entities/Player/PlayerStates/Action</compoundname>
+    <innerdir refid="dir_793e871d0342b2873ee313c75e79e3ca">src/Entities/Player/PlayerStates/Action/Main</innerdir>
+    <innerdir refid="dir_544d41eebbd898c6ca4e87a94b852234">src/Entities/Player/PlayerStates/Action/Secondary</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/PlayerStates/Action/"/>
+  </compounddef>
+</doxygen>

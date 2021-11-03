@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_player_state_factory" kind="class" language="C#" prot="public">
+    <compoundname>PlayerStateFactory</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_state_factory_1acd77aae65440dedcd2c6d26f3aedc985" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_persistent_state" kindref="compound">PersistentState</ref></type>
+        <definition>PersistentState PlayerStateFactory.New</definition>
+        <argsstring>(PlayerPersistentState state)</argsstring>
+        <name>New</name>
+        <param>
+          <type><ref refid="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83" kindref="member">PlayerPersistentState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new persistent state from the given enum value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new state.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance of a player persistent state.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStateFactory.cs" line="11" column="28" bodyfile="src/Entities/Player/PlayerStateFactory.cs" bodystart="11" bodyend="27"/>
+        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="205" endline="216">Player.ChangeMainAction</referencedby>
+        <referencedby refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="189" endline="199">Player.ChangePersistentState</referencedby>
+        <referencedby refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="222" endline="233">Player.ChangeSecondaryAction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_state_factory_1ae6483f2ac3c4da7bb66d9e137048a18e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_main_action" kindref="compound">MainAction</ref></type>
+        <definition>MainAction PlayerStateFactory.New</definition>
+        <argsstring>(PlayerMainAction state)</argsstring>
+        <name>New</name>
+        <param>
+          <type><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new player primary action from the given enum value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new primary action.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance of a player primary action.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStateFactory.cs" line="34" column="23" bodyfile="src/Entities/Player/PlayerStateFactory.cs" bodystart="34" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_state_factory_1aabb3a8e0a40778ad8605262070ad0e79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_secondary_action" kindref="compound">SecondaryAction</ref></type>
+        <definition>SecondaryAction PlayerStateFactory.New</definition>
+        <argsstring>(PlayerSecondaryAction state)</argsstring>
+        <name>New</name>
+        <param>
+          <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new secondary action from the given enum value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new secondary action.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A new instance of a player secondary action.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStateFactory.cs" line="65" column="28" bodyfile="src/Entities/Player/PlayerStateFactory.cs" bodystart="65" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class generates states for the main class. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PlayerStateFactory</label>
+        <link refid="class_player_state_factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStateFactory.cs" line="4" column="7" bodyfile="src/Entities/Player/PlayerStateFactory.cs" bodystart="4" bodyend="90"/>
+    <listofallmembers>
+      <member refid="class_player_state_factory_1acd77aae65440dedcd2c6d26f3aedc985" prot="public" virt="non-virtual"><scope>PlayerStateFactory</scope><name>New</name></member>
+      <member refid="class_player_state_factory_1ae6483f2ac3c4da7bb66d9e137048a18e" prot="public" virt="non-virtual"><scope>PlayerStateFactory</scope><name>New</name></member>
+      <member refid="class_player_state_factory_1aabb3a8e0a40778ad8605262070ad0e79" prot="public" virt="non-virtual"><scope>PlayerStateFactory</scope><name>New</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

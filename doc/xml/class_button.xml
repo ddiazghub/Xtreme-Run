@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_button" kind="class" language="C#" prot="public">
+    <compoundname>Button</compoundname>
+    <derivedcompoundref refid="class_profile_select_entry" prot="public" virt="non-virtual">ProfileSelectEntry</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Button</label>
+        <link refid="class_button"/>
+      </node>
+      <node id="2">
+        <label>ProfileSelectEntry</label>
+        <link refid="class_profile_select_entry"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Button</label>
+        <link refid="class_button"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ProfileSelectEntry.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

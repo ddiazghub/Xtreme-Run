@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_confirmation_dialog" kind="class" language="C#" prot="public">
+    <compoundname>ConfirmationDialog</compoundname>
+    <derivedcompoundref refid="class_create_profile_dialog" prot="public" virt="non-virtual">CreateProfileDialog</derivedcompoundref>
+    <derivedcompoundref refid="class_exit_game_popup" prot="public" virt="non-virtual">ExitGamePopup</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="2">
+        <label>CreateProfileDialog</label>
+        <link refid="class_create_profile_dialog"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ExitGamePopup</label>
+        <link refid="class_exit_game_popup"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/CreateProfileDialog.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_pause_menu" kind="class" language="C#" prot="public">
+    <compoundname>PauseMenu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NinePatchRect</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pause_menu_1a25d039f5d70d38933bdfe437a3e1c36c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void PauseMenu.RestartPressed</definition>
+        <argsstring>()</argsstring>
+        <name>RestartPressed</name>
+        <briefdescription>
+<para>Signal that will be emitted when the restart button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void PauseMenu._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="15" column="26" bodyfile="src/Scenes/PauseMenu.cs" bodystart="15" bodyend="25"/>
+        <references refid="class_pause_menu_1a6329bddee55d0fb4211804e28c1d3a71" compoundref="_pause_menu_8cs" startline="36" endline="39">OnCancelPressed</references>
+        <references refid="class_pause_menu_1ad9b30c3c2ba00ffd78fe82e6592d30cc" compoundref="_pause_menu_8cs" startline="41" endline="45">OnContinuePressed</references>
+        <references refid="class_pause_menu_1a2738ef11851cc818743920726ca7c148" compoundref="_pause_menu_8cs" startline="54" endline="59">OnQuitPressed</references>
+        <references refid="class_pause_menu_1a09b3095bfba6adfdf6511c6284653a5b" compoundref="_pause_menu_8cs" startline="47" endline="52">OnRestartPressed</references>
+        <references refid="class_main_1aa2f640712c026469e26fc7954f11be5d" compoundref="_main_8cs" startline="13">Main.WINDOW_SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1aae0eb58374e364f7b34d0750be250efa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.ShowMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMenu</name>
+        <briefdescription>
+<para>Pauses the game and shows this menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="30" column="17" bodyfile="src/Scenes/PauseMenu.cs" bodystart="30" bodyend="34"/>
+        <referencedby refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" compoundref="_level_8cs" startline="197" endline="200">Level.Pause</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1a6329bddee55d0fb4211804e28c1d3a71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.OnCancelPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnCancelPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="36" column="17" bodyfile="src/Scenes/PauseMenu.cs" bodystart="36" bodyend="39"/>
+        <references refid="class_pause_menu_1ad9b30c3c2ba00ffd78fe82e6592d30cc" compoundref="_pause_menu_8cs" startline="41" endline="45">OnContinuePressed</references>
+        <referencedby refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" compoundref="_pause_menu_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1ad9b30c3c2ba00ffd78fe82e6592d30cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.OnContinuePressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnContinuePressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="41" column="17" bodyfile="src/Scenes/PauseMenu.cs" bodystart="41" bodyend="45"/>
+        <referencedby refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" compoundref="_pause_menu_8cs" startline="15" endline="25">_Ready</referencedby>
+        <referencedby refid="class_pause_menu_1a6329bddee55d0fb4211804e28c1d3a71" compoundref="_pause_menu_8cs" startline="36" endline="39">OnCancelPressed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1a09b3095bfba6adfdf6511c6284653a5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.OnRestartPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnRestartPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="47" column="17" bodyfile="src/Scenes/PauseMenu.cs" bodystart="47" bodyend="52"/>
+        <referencedby refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" compoundref="_pause_menu_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_pause_menu_1a2738ef11851cc818743920726ca7c148" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PauseMenu.OnQuitPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnQuitPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PauseMenu.cs" line="54" column="17" bodyfile="src/Scenes/PauseMenu.cs" bodystart="54" bodyend="59"/>
+        <referencedby refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" compoundref="_pause_menu_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Menu that will be shown on pause. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>PauseMenu</label>
+        <link refid="class_pause_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>PauseMenu</label>
+        <link refid="class_pause_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/PauseMenu.cs" line="7" column="7" bodyfile="src/Scenes/PauseMenu.cs" bodystart="7" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_pause_menu_1a4cc5227b00082bc3ea16922842ed6295" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>_Ready</name></member>
+      <member refid="class_pause_menu_1a6329bddee55d0fb4211804e28c1d3a71" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>OnCancelPressed</name></member>
+      <member refid="class_pause_menu_1ad9b30c3c2ba00ffd78fe82e6592d30cc" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>OnContinuePressed</name></member>
+      <member refid="class_pause_menu_1a2738ef11851cc818743920726ca7c148" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>OnQuitPressed</name></member>
+      <member refid="class_pause_menu_1a09b3095bfba6adfdf6511c6284653a5b" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>OnRestartPressed</name></member>
+      <member refid="class_pause_menu_1a25d039f5d70d38933bdfe437a3e1c36c" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>RestartPressed</name></member>
+      <member refid="class_pause_menu_1aae0eb58374e364f7b34d0750be250efa" prot="public" virt="non-virtual"><scope>PauseMenu</scope><name>ShowMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

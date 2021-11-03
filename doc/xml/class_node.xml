@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_node" kind="class" language="C#" prot="public">
+    <compoundname>Node</compoundname>
+    <derivedcompoundref refid="class_tile_set_maker" prot="public" virt="non-virtual">TileSetMaker</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Node</label>
+        <link refid="class_node"/>
+      </node>
+      <node id="2">
+        <label>TileSetMaker</label>
+        <link refid="class_tile_set_maker"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Node</label>
+        <link refid="class_node"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Maps/Tiles/TileSetMaker.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

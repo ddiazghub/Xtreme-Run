@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_secondary_action" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>SecondaryAction</compoundname>
+    <basecompoundref refid="class_player_state" prot="public" virt="non-virtual">PlayerState</basecompoundref>
+    <derivedcompoundref refid="class_fast_fall_and_roll" prot="public" virt="non-virtual">FastFallAndRoll</derivedcompoundref>
+    <derivedcompoundref refid="class_spawn_platforms" prot="public" virt="non-virtual">SpawnPlatforms</derivedcompoundref>
+    <derivedcompoundref refid="class_switch_gravity" prot="public" virt="non-virtual">SwitchGravity</derivedcompoundref>
+    <derivedcompoundref refid="class_teleport_and_switch_gravity" prot="public" virt="non-virtual">TeleportAndSwitchGravity</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool SecondaryAction.Blocked</definition>
+        <argsstring></argsstring>
+        <name>Blocked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="13" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="13" bodyend="13"/>
+        <referencedby refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" compoundref="_spawn_platforms_8cs" startline="25" endline="42">SpawnPlatforms._ActionOnAir</referencedby>
+        <referencedby refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" compoundref="_secondary_action_8cs" startline="42" endline="46">_ActionOnGround</referencedby>
+        <referencedby refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf" compoundref="_secondary_action_8cs" startline="56" endline="59">_ActionReleased</referencedby>
+        <referencedby refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">SwitchGravity.invertGravity</referencedby>
+        <referencedby refid="class_teleport_and_switch_gravity_1a49809a107376cd8ad243ca3631c258a4" compoundref="_teleport_and_switch_gravity_8cs" startline="47" endline="53">TeleportAndSwitchGravity.invertGravity</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SecondaryAction._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_player_state_1a7c94c3f0cc97f388f281c524523d311e">_Init</reimplements>
+        <reimplementedby refid="class_spawn_platforms_1a223516f8a535749e901f616dd804bb4f">_Init</reimplementedby>
+        <reimplementedby refid="class_switch_gravity_1ae2eeee76ac6fd739b6181e1d80bcf54b">_Init</reimplementedby>
+        <reimplementedby refid="class_teleport_and_switch_gravity_1a5a48df9387198b5ea63957f884a513f8">_Init</reimplementedby>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="15" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="15" bodyend="19"/>
+        <references refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" compoundref="_secondary_action_8cs" startline="115" endline="120">OnSecondaryActionTimerTimeout</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SecondaryAction._StatePhysicsProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_StatePhysicsProcess</name>
+        <reimplements refid="class_player_state_1a1bddd210d96db25cb49b3a0b3edd5265">_StatePhysicsProcess</reimplements>
+        <reimplementedby refid="class_switch_gravity_1a2d96d7d7d7c08aed0d22908002299ddc">_StatePhysicsProcess</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The physics process that will be called each frame for the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="21" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="21" bodyend="37"/>
+        <references refid="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673">_ActionOnAir</references>
+        <references refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" compoundref="_secondary_action_8cs" startline="42" endline="46">_ActionOnGround</references>
+        <references refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf" compoundref="_secondary_action_8cs" startline="56" endline="59">_ActionReleased</references>
+        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="101" endline="101">Player.PersistentState</references>
+        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="173" endline="183">Player._PhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SecondaryAction._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplementedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a">_ActionOnGround</reimplementedby>
+        <reimplementedby refid="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847">_ActionOnGround</reimplementedby>
+        <reimplementedby refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8">_ActionOnGround</reimplementedby>
+        <reimplementedby refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791">_ActionOnGround</reimplementedby>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on ground. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="42" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="42" bodyend="46"/>
+        <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">Blocked</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <referencedby refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void SecondaryAction._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplementedby refid="class_fast_fall_and_roll_1a63c245a9215306232f86d96c50b9fb20">_ActionOnAir</reimplementedby>
+        <reimplementedby refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8">_ActionOnAir</reimplementedby>
+        <reimplementedby refid="class_switch_gravity_1a79517966cb67a2f3282bdcaf1fbaaf76">_ActionOnAir</reimplementedby>
+        <reimplementedby refid="class_teleport_and_switch_gravity_1ad74396e09855f299b756fd9a11ea95b9">_ActionOnAir</reimplementedby>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on air. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="51" column="26"/>
+        <referencedby refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SecondaryAction._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplementedby refid="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e">_ActionReleased</reimplementedby>
+        <reimplementedby refid="class_switch_gravity_1a21fcb39af6df6d3786a2843d1e7cfcbb">_ActionReleased</reimplementedby>
+        <reimplementedby refid="class_teleport_and_switch_gravity_1ab8ef1a89a937fb3a90c88b65d4c028bb">_ActionReleased</reimplementedby>
+        <briefdescription>
+<para>The action that will be executed once the player stops pressing the action&apos;s input keyboard/mouse buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="56" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="56" bodyend="59"/>
+        <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">Blocked</references>
+        <referencedby refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SecondaryAction.OnSecondaryActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnSecondaryActionTimerTimeout</name>
+        <reimplementedby refid="class_fast_fall_and_roll_1a4ee1aec7ed7f5bfe9ec6bf798a16023d">OnSecondaryActionTimerTimeout</reimplementedby>
+        <reimplementedby refid="class_spawn_platforms_1a6c1b2b02211d0597d497209ae78ddca0">OnSecondaryActionTimerTimeout</reimplementedby>
+        <reimplementedby refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6">OnSecondaryActionTimerTimeout</reimplementedby>
+        <reimplementedby refid="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53">OnSecondaryActionTimerTimeout</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="115" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="115" bodyend="120"/>
+        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="70">Player.animation</references>
+        <references refid="class_main_action_1af4f38ae5810abac472752ba286622566" compoundref="_main_action_8cs" startline="28" endline="28">MainAction.Blocked</references>
+        <references refid="class_player_1ab8b54cc99ed363971d75ab6c506016be" compoundref="_player_8cs" startline="106" endline="106">Player.MainAction</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <referencedby refid="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945" compoundref="_secondary_action_8cs" startline="15" endline="19">_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_secondary_action_1ad95829ffc55ac6b517a5fe37eb282f4d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SecondaryAction.GetTypeAsString</definition>
+        <argsstring>(PlayerSecondaryAction action)</argsstring>
+        <name>GetTypeAsString</name>
+        <param>
+          <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Gets the given action&apos;s type as a string. This is because the player animations corresponding to each action has these names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value of the action.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string depending on the action type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="67" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="67" bodyend="86"/>
+        <referencedby refid="class_secondary_action_pickup_1ac6f8adbcf3675f978c5467ea06ae6ea8" compoundref="_secondary_action_pickup_8cs" startline="32" endline="35">SecondaryActionPickup._Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string SecondaryAction.GetTypeAsStringEsp</definition>
+        <argsstring>(PlayerSecondaryAction action)</argsstring>
+        <name>GetTypeAsStringEsp</name>
+        <param>
+          <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Gets the given action&apos;s type as a string in spanish. This is for displaying on the GUI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value of the action</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string in spanish depending on the action type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="94" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="94" bodyend="113"/>
+        <referencedby refid="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" compoundref="_game_h_u_d_8cs" startline="66" endline="79">GameHUD.SetActions</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that represents an action the player can perform as secondary action. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>FastFallAndRoll</label>
+        <link refid="class_fast_fall_and_roll"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="2">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SpawnPlatforms</label>
+        <link refid="class_spawn_platforms"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SwitchGravity</label>
+        <link refid="class_switch_gravity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>TeleportAndSwitchGravity</label>
+        <link refid="class_teleport_and_switch_gravity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="2">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="7" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="7" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673" prot="public" virt="pure-virtual"><scope>SecondaryAction</scope><name>_ActionOnAir</name></member>
+      <member refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" prot="public" virt="virtual"><scope>SecondaryAction</scope><name>_ActionOnGround</name></member>
+      <member refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf" prot="public" virt="virtual"><scope>SecondaryAction</scope><name>_ActionReleased</name></member>
+      <member refid="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945" prot="public" virt="virtual"><scope>SecondaryAction</scope><name>_Init</name></member>
+      <member refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" prot="public" virt="virtual"><scope>SecondaryAction</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" prot="public" virt="non-virtual"><scope>SecondaryAction</scope><name>Blocked</name></member>
+      <member refid="class_secondary_action_1ad95829ffc55ac6b517a5fe37eb282f4d" prot="public" virt="non-virtual"><scope>SecondaryAction</scope><name>GetTypeAsString</name></member>
+      <member refid="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" prot="public" virt="non-virtual"><scope>SecondaryAction</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" prot="public" virt="virtual"><scope>SecondaryAction</scope><name>OnSecondaryActionTimerTimeout</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>SecondaryAction</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>SecondaryAction</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_jump_8cs" kind="file" language="C#">
+    <compoundname>Jump.cs</compoundname>
+    <innerclass refid="class_jump" prot="public">Jump</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_jump" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_jump" kindref="compound">Jump</ref>:<sp/><ref refid="class_main_action" kindref="compound">MainAction</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="class_jump_1a1c628cf6144679785b27250e8b496234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_jump_1a1c628cf6144679785b27250e8b496234" kindref="member">_Init</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" kindref="member">JumpForce</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" kindref="member">DEFAULT_JUMPFORCE</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" kindref="member">MaxJumpTime</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" kindref="member">DEFAULT_MAX_JUMP_TIME</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1af93facbeac2019c5bc7bfb2493041109" kindref="member">MaxFallSpeed</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" kindref="member">DEFAULT_JUMPFORCE</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aaa96158303a2e4619809dd824b6002ec" kindref="member">DEFAULT_GRAVITY</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._Init();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="class_jump_1a44577960ec4edd622c95a6f5b76dfacb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_jump_1a44577960ec4edd622c95a6f5b76dfacb" kindref="member">_ActionProcess</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" kindref="member">linearVelocity</ref>.y<sp/>-=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" kindref="member">JumpForce</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/Jump.cs"/>
+  </compounddef>
+</doxygen>

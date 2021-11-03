@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_544d41eebbd898c6ca4e87a94b852234" kind="dir">
+    <compoundname>src/Entities/Player/PlayerStates/Action/Secondary</compoundname>
+    <innerfile refid="_fastfall_and_roll_8cs">FastfallAndRoll.cs</innerfile>
+    <innerfile refid="_secondary_action_8cs">SecondaryAction.cs</innerfile>
+    <innerfile refid="_spawn_platforms_8cs">SpawnPlatforms.cs</innerfile>
+    <innerfile refid="_switch_gravity_8cs">SwitchGravity.cs</innerfile>
+    <innerfile refid="_teleport_and_switch_gravity_8cs">TeleportAndSwitchGravity.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/"/>
+  </compounddef>
+</doxygen>

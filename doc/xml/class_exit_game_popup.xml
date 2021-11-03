@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_exit_game_popup" kind="class" language="C#" prot="public">
+    <compoundname>ExitGamePopup</compoundname>
+    <basecompoundref refid="class_confirmation_dialog" prot="public" virt="non-virtual">ConfirmationDialog</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_exit_game_popup_1a18cc2ab5c871235f3049d1f8f036606d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ExitGamePopup._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ExitGamePopup.cs" line="9" column="26" bodyfile="src/Scenes/ExitGamePopup.cs" bodystart="9" bodyend="15"/>
+        <references refid="class_exit_game_popup_1ae3860bc0823259a74c9a13bcecea801a" compoundref="_exit_game_popup_8cs" startline="17" endline="20">OnExitGamePopupConfirmed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_exit_game_popup_1ae3860bc0823259a74c9a13bcecea801a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExitGamePopup.OnExitGamePopupConfirmed</definition>
+        <argsstring>()</argsstring>
+        <name>OnExitGamePopupConfirmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ExitGamePopup.cs" line="17" column="17" bodyfile="src/Scenes/ExitGamePopup.cs" bodystart="17" bodyend="20"/>
+        <referencedby refid="class_exit_game_popup_1a18cc2ab5c871235f3049d1f8f036606d" compoundref="_exit_game_popup_8cs" startline="9" endline="15">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Confirms if the player wants to exit the game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="1">
+        <label>ExitGamePopup</label>
+        <link refid="class_exit_game_popup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="1">
+        <label>ExitGamePopup</label>
+        <link refid="class_exit_game_popup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ExitGamePopup.cs" line="7" column="7" bodyfile="src/Scenes/ExitGamePopup.cs" bodystart="8" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_exit_game_popup_1a18cc2ab5c871235f3049d1f8f036606d" prot="public" virt="non-virtual"><scope>ExitGamePopup</scope><name>_Ready</name></member>
+      <member refid="class_exit_game_popup_1ae3860bc0823259a74c9a13bcecea801a" prot="public" virt="non-virtual"><scope>ExitGamePopup</scope><name>OnExitGamePopupConfirmed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

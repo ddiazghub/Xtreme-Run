@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_node2_d" kind="class" language="C#" prot="public">
+    <compoundname>Node2D</compoundname>
+    <derivedcompoundref refid="class_game_audio" prot="public" virt="non-virtual">GameAudio</derivedcompoundref>
+    <derivedcompoundref refid="class_level" prot="public" virt="non-virtual">Level</derivedcompoundref>
+    <derivedcompoundref refid="class_main" prot="public" virt="non-virtual">Main</derivedcompoundref>
+    <derivedcompoundref refid="class_main_menu" prot="public" virt="non-virtual">MainMenu</derivedcompoundref>
+    <derivedcompoundref refid="class_player_state" prot="public" virt="non-virtual">PlayerState</derivedcompoundref>
+    <derivedcompoundref refid="class_profile_select" prot="public" virt="non-virtual">ProfileSelect</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="16">
+        <label>FastFallAndRoll</label>
+        <link refid="class_fast_fall_and_roll"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GameAudio</label>
+        <link refid="class_game_audio"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Glide</label>
+        <link refid="class_glide"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Jetpack</label>
+        <link refid="class_jetpack"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Jump</label>
+        <link refid="class_jump"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Level</label>
+        <link refid="class_level"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Main</label>
+        <link refid="class_main"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="13">
+        <label>OnAirState</label>
+        <link refid="class_on_air_state"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>OnGroundState</label>
+        <link refid="class_on_ground_state"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>PersistentState</label>
+        <link refid="class_persistent_state"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>ProfileSelect</label>
+        <link refid="class_profile_select"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SpawnPlatforms</label>
+        <link refid="class_spawn_platforms"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SwitchGravity</label>
+        <link refid="class_switch_gravity"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Teleport</label>
+        <link refid="class_teleport"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>TeleportAndSwitchGravity</label>
+        <link refid="class_teleport_and_switch_gravity"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Audio/GameAudio.cs" line="8" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

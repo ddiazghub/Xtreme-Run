@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_486d78f8fcda2a8d777ab0e319a6a5c2" kind="dir">
+    <compoundname>src/Entities/Player/PlayerStates/Persistent</compoundname>
+    <innerfile refid="_on_air_state_8cs">OnAirState.cs</innerfile>
+    <innerfile refid="_on_ground_state_8cs">OnGroundState.cs</innerfile>
+    <innerfile refid="_persistent_state_8cs">PersistentState.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/PlayerStates/Persistent/"/>
+  </compounddef>
+</doxygen>

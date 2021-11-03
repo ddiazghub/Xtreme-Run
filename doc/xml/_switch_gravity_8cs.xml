@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_switch_gravity_8cs" kind="file" language="C#">
+    <compoundname>SwitchGravity.cs</compoundname>
+    <innerclass refid="class_switch_gravity" prot="public">SwitchGravity</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_switch_gravity" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_switch_gravity" kindref="compound">SwitchGravity</ref>:<sp/><ref refid="class_secondary_action" kindref="compound">SecondaryAction</ref><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="class_switch_gravity_1ae2eeee76ac6fd739b6181e1d80bcf54b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1ae2eeee76ac6fd739b6181e1d80bcf54b" kindref="member">_Init</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._Init();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" kindref="member">secondaryActionTimer</ref>.WaitTime<sp/>=<sp/>0.3f;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_switch_gravity_1a2d96d7d7d7c08aed0d22908002299ddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1a2d96d7d7d7c08aed0d22908002299ddc" kindref="member">_StatePhysicsProcess</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._StatePhysicsProcess(delta);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18" refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8" kindref="member">_ActionOnGround</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" kindref="member">linearVelocity</ref>.y<sp/>=<sp/>-2<sp/>*<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" kindref="member">invertGravity</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._ActionOnGround();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_switch_gravity_1a79517966cb67a2f3282bdcaf1fbaaf76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1a79517966cb67a2f3282bdcaf1fbaaf76" kindref="member">_ActionOnAir</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" kindref="member">invertGravity</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_switch_gravity_1a21fcb39af6df6d3786a2843d1e7cfcbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1a21fcb39af6df6d3786a2843d1e7cfcbb" kindref="member">_ActionReleased</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._ActionReleased();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34" refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6" kindref="member">OnSecondaryActionTimerTimeout</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" kindref="member">InvertedGravity</ref>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref><sp/>=<sp/>-this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aaa96158303a2e4619809dd824b6002ec" kindref="member">DEFAULT_GRAVITY</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aaa96158303a2e4619809dd824b6002ec" kindref="member">DEFAULT_GRAVITY</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" kindref="member">secondaryActionTimer</ref>.Stop();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" kindref="member">invertGravity</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1ad50972081bd91a62aa2c099b27462d37" kindref="member">InvertGravity</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" kindref="member">secondaryActionTimer</ref>.Start();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" kindref="member">InvertedGravity</ref>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref><sp/>=<sp/>-this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aaa96158303a2e4619809dd824b6002ec" kindref="member">DEFAULT_GRAVITY</ref><sp/>+<sp/>50;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kindref="member">Gravity</ref><sp/>=<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aaa96158303a2e4619809dd824b6002ec" kindref="member">DEFAULT_GRAVITY</ref><sp/>-<sp/>50;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" kindref="member">Blocked</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs"/>
+  </compounddef>
+</doxygen>

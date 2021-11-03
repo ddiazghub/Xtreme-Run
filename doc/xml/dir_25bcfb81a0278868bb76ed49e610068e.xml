@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_25bcfb81a0278868bb76ed49e610068e" kind="dir">
+    <compoundname>src/Entities/Player/SpawnedPlatform</compoundname>
+    <innerfile refid="_spawned_platform_8cs">SpawnedPlatform.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/SpawnedPlatform/"/>
+  </compounddef>
+</doxygen>

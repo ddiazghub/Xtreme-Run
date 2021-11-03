@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_save_file_info" kind="class" language="C#" prot="public">
+    <compoundname>SaveFileInfo</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.FILE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>FILE_SIZE</name>
+        <initializer>= 48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="7" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="7" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a79f57147d656897bffc591effa801806" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.PROFILE_NAME_MAX_SIZE</definition>
+        <argsstring></argsstring>
+        <name>PROFILE_NAME_MAX_SIZE</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="8" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a7ae7464cc54480d6bf1914000d8f60a9" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH</definition>
+        <argsstring></argsstring>
+        <name>OWNED_ITEMS_BUFFER_LENGTH</name>
+        <initializer>= 17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="9" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.PROFILE_NAME</definition>
+        <argsstring></argsstring>
+        <name>PROFILE_NAME</name>
+        <initializer>= 0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="12" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.AVATAR_GENDER</definition>
+        <argsstring></argsstring>
+        <name>AVATAR_GENDER</name>
+        <initializer>= 0x14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="13" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.AVATAR_COLOR_SKIN</definition>
+        <argsstring></argsstring>
+        <name>AVATAR_COLOR_SKIN</name>
+        <initializer>= 0x15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="14" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.AVATAR_COLOR_TOP</definition>
+        <argsstring></argsstring>
+        <name>AVATAR_COLOR_TOP</name>
+        <initializer>= 0x16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="15" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1abc5665de7ee4d5eacd4f5c46ebc04774" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.AVATAR_COLOR_BOTTOM</definition>
+        <argsstring></argsstring>
+        <name>AVATAR_COLOR_BOTTOM</name>
+        <initializer>= 0x17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="16" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a9e0844e2686e0945287c6f69f6995e75" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.POINTS</definition>
+        <argsstring></argsstring>
+        <name>POINTS</name>
+        <initializer>= 0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="17" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1aae1fcea482e56652da383883a158f46a" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.OWNED_ITEMS</definition>
+        <argsstring></argsstring>
+        <name>OWNED_ITEMS</name>
+        <initializer>= 0x1C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="18" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a88826262dbf83ff99c49406bf9ac8d28" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.LEVEL1_PROGRESS</definition>
+        <argsstring></argsstring>
+        <name>LEVEL1_PROGRESS</name>
+        <initializer>= 0x2D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="19" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1a95bbf967cf5a874f60264ddbc48d20f1" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.LEVEL2_PROGRESS</definition>
+        <argsstring></argsstring>
+        <name>LEVEL2_PROGRESS</name>
+        <initializer>= 0x2E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="20" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_save_file_info_1ad37b953d2a3e25a86487c40f6d439612" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int SaveFileInfo.LEVEL3_PROGRESS</definition>
+        <argsstring></argsstring>
+        <name>LEVEL3_PROGRESS</name>
+        <initializer>= 0x2F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/SaveFileInfo.cs" line="21" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Static class that contains some constants about save file structure. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>SaveFileInfo</label>
+        <link refid="class_save_file_info"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+AVATAR_COLOR_BOTTOM</edgelabel>
+          <edgelabel>+AVATAR_COLOR_SKIN</edgelabel>
+          <edgelabel>+AVATAR_COLOR_TOP</edgelabel>
+          <edgelabel>+AVATAR_GENDER</edgelabel>
+          <edgelabel>+FILE_SIZE</edgelabel>
+          <edgelabel>+LEVEL1_PROGRESS</edgelabel>
+          <edgelabel>+LEVEL2_PROGRESS</edgelabel>
+          <edgelabel>+LEVEL3_PROGRESS</edgelabel>
+          <edgelabel>+OWNED_ITEMS</edgelabel>
+          <edgelabel>+OWNED_ITEMS_BUFFER_LENGTH</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Profiles/SaveFileInfo.cs" line="4" column="15" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="5" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_save_file_info_1abc5665de7ee4d5eacd4f5c46ebc04774" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>AVATAR_COLOR_BOTTOM</name></member>
+      <member refid="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>AVATAR_COLOR_SKIN</name></member>
+      <member refid="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>AVATAR_COLOR_TOP</name></member>
+      <member refid="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>AVATAR_GENDER</name></member>
+      <member refid="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>FILE_SIZE</name></member>
+      <member refid="class_save_file_info_1a88826262dbf83ff99c49406bf9ac8d28" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>LEVEL1_PROGRESS</name></member>
+      <member refid="class_save_file_info_1a95bbf967cf5a874f60264ddbc48d20f1" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>LEVEL2_PROGRESS</name></member>
+      <member refid="class_save_file_info_1ad37b953d2a3e25a86487c40f6d439612" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>LEVEL3_PROGRESS</name></member>
+      <member refid="class_save_file_info_1aae1fcea482e56652da383883a158f46a" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>OWNED_ITEMS</name></member>
+      <member refid="class_save_file_info_1a7ae7464cc54480d6bf1914000d8f60a9" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>OWNED_ITEMS_BUFFER_LENGTH</name></member>
+      <member refid="class_save_file_info_1a9e0844e2686e0945287c6f69f6995e75" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>POINTS</name></member>
+      <member refid="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>PROFILE_NAME</name></member>
+      <member refid="class_save_file_info_1a79f57147d656897bffc591effa801806" prot="public" virt="non-virtual"><scope>SaveFileInfo</scope><name>PROFILE_NAME_MAX_SIZE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

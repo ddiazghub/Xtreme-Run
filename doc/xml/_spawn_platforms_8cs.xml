@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_spawn_platforms_8cs" kind="file" language="C#">
+    <compoundname>SpawnPlatforms.cs</compoundname>
+    <innerclass refid="class_spawn_platforms" prot="public">SpawnPlatforms</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_spawn_platforms" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_spawn_platforms" kindref="compound">SpawnPlatforms</ref>:<sp/><ref refid="class_secondary_action" kindref="compound">SecondaryAction</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_spawn_platforms_1a907b6a7456095772af3765d68af5cdc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>[Export]<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>PackedScene<sp/><ref refid="class_spawn_platforms_1a907b6a7456095772af3765d68af5cdc4" kindref="member">PlatformScene</ref><sp/>=<sp/>ResourceLoader.Load&lt;PackedScene&gt;(</highlight><highlight class="stringliteral">&quot;res://src/Entities/Player/SpawnedPlatform/SpawnedPlatform.tscn&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="class_spawn_platforms_1a223516f8a535749e901f616dd804bb4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spawn_platforms_1a223516f8a535749e901f616dd804bb4f" kindref="member">_Init</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._Init();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" kindref="member">secondaryActionTimer</ref>.WaitTime<sp/>=<sp/>1f;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847" kindref="member">_ActionOnGround</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" kindref="member">_ActionOnAir</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_spawned_platform" kindref="compound">SpawnedPlatform</ref><sp/>platform<sp/>=<sp/>this.PlatformScene.Instance&lt;<ref refid="class_spawned_platform" kindref="compound">SpawnedPlatform</ref>&gt;();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verticalSpace<sp/>=<sp/>30;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" kindref="member">InvertedGravity</ref>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>platform.Position<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.Position.x<sp/>+<sp/>1.2f<sp/>*<sp/>((RectangleShape2D)<sp/>platform.GetNode&lt;CollisionShape2D&gt;(</highlight><highlight class="stringliteral">&quot;CollisionShape2D&quot;</highlight><highlight class="normal">).Shape).Extents.x,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Player.Position.y<sp/>-<sp/>(((CapsuleShape2D)<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Player.runningCollision.Shape).Height<sp/>/<sp/>2<sp/>+<sp/>verticalSpace));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>platform.Position<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(<sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.Position.x<sp/>+<sp/>1.2f<sp/>*<sp/>((RectangleShape2D)<sp/>platform.GetNode&lt;CollisionShape2D&gt;(</highlight><highlight class="stringliteral">&quot;CollisionShape2D&quot;</highlight><highlight class="normal">).Shape).Extents.x,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Player.Position.y<sp/>+<sp/>(((CapsuleShape2D)<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Player.runningCollision.Shape).Height<sp/>/<sp/>2<sp/>+<sp/>verticalSpace));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.GetParent().AddChild(platform);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" kindref="member">Blocked</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e" kindref="member">_ActionReleased</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base._ActionReleased();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48" refid="class_spawn_platforms_1a6c1b2b02211d0597d497209ae78ddca0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_spawn_platforms_1a6c1b2b02211d0597d497209ae78ddca0" kindref="member">OnSecondaryActionTimerTimeout</ref>()</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs"/>
+  </compounddef>
+</doxygen>

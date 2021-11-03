@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_33fbb4c4c3eef080cac8ffb50fbf7f72" kind="dir">
+    <compoundname>src/Shaders</compoundname>
+    <innerfile refid="_palette_8cs">Palette.cs</innerfile>
+    <innerfile refid="_palette_swap_entry_8cs">PaletteSwapEntry.cs</innerfile>
+    <innerfile refid="_palette_swap_shader_8cs">PaletteSwapShader.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Shaders/"/>
+  </compounddef>
+</doxygen>

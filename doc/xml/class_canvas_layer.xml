@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_canvas_layer" kind="class" language="C#" prot="public">
+    <compoundname>CanvasLayer</compoundname>
+    <derivedcompoundref refid="class_game_h_u_d" prot="public" virt="non-virtual">GameHUD</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CanvasLayer</label>
+        <link refid="class_canvas_layer"/>
+      </node>
+      <node id="2">
+        <label>GameHUD</label>
+        <link refid="class_game_h_u_d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CanvasLayer</label>
+        <link refid="class_canvas_layer"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/GameHUD.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_secondary_action_pickup" kind="class" language="C#" prot="public">
+    <compoundname>SecondaryActionPickup</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Area2D</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_secondary_action_pickup_1a81545c9e563205381baaef594a5ca747" prot="private" static="no" mutable="no">
+        <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+        <definition>PlayerSecondaryAction SecondaryActionPickup.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <initializer>= <ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88afc48036436ec734942514222eb39baed" kindref="member">PlayerSecondaryAction.FASTFALL_AND_ROLL</ref></initializer>
+        <briefdescription>
+<para>The pickup&apos;s type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Pickups/SecondaryActionPickup.cs" line="12" column="35" bodyfile="src/Entities/Pickups/SecondaryActionPickup.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_secondary_action_pickup_1a0a202dab78d2f57ab0fc26ee01c74db2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+        <definition>PlayerSecondaryAction SecondaryActionPickup.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+<para>The pickup&apos;s type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Pickups/SecondaryActionPickup.cs" line="18" column="34" bodyfile="src/Entities/Pickups/SecondaryActionPickup.cs" bodystart="19" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_secondary_action_pickup_1ac6f8adbcf3675f978c5467ea06ae6ea8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SecondaryActionPickup._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Pickups/SecondaryActionPickup.cs" line="32" column="26" bodyfile="src/Entities/Pickups/SecondaryActionPickup.cs" bodystart="32" bodyend="35"/>
+        <references refid="class_secondary_action_1ad95829ffc55ac6b517a5fe37eb282f4d" compoundref="_secondary_action_8cs" startline="67" endline="86">SecondaryAction.GetTypeAsString</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Pickup for player secondary action. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Area2D</label>
+      </node>
+      <node id="1">
+        <label>SecondaryActionPickup</label>
+        <link refid="class_secondary_action_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Area2D</label>
+      </node>
+      <node id="3">
+        <label>PlayerSecondaryAction</label>
+      </node>
+      <node id="1">
+        <label>SecondaryActionPickup</label>
+        <link refid="class_secondary_action_pickup"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-type</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Pickups/SecondaryActionPickup.cs" line="7" column="7" bodyfile="src/Entities/Pickups/SecondaryActionPickup.cs" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_secondary_action_pickup_1ac6f8adbcf3675f978c5467ea06ae6ea8" prot="public" virt="non-virtual"><scope>SecondaryActionPickup</scope><name>_Ready</name></member>
+      <member refid="class_secondary_action_pickup_1a81545c9e563205381baaef594a5ca747" prot="private" virt="non-virtual"><scope>SecondaryActionPickup</scope><name>type</name></member>
+      <member refid="class_secondary_action_pickup_1a0a202dab78d2f57ab0fc26ee01c74db2" prot="public" virt="non-virtual"><scope>SecondaryActionPickup</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

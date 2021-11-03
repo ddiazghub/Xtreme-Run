@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_level_complete" kind="class" language="C#" prot="public">
+    <compoundname>LevelComplete</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NinePatchRect</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_level_complete_1a33f5684ecb7cf313659bfb2d058278b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void LevelComplete.RestartPressed</definition>
+        <argsstring>()</argsstring>
+        <name>RestartPressed</name>
+        <briefdescription>
+<para>Signal that will be emitted when the restart button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelComplete.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_complete_1a8397e21dbd05d0c9bc69478135237be5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void LevelComplete._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelComplete.cs" line="15" column="26" bodyfile="src/Scenes/LevelComplete.cs" bodystart="15" bodyend="23"/>
+        <references refid="class_level_complete_1ae371e0c7856213db9dcf898b0282d600" compoundref="_level_complete_8cs" startline="41" endline="47">OnQuitPressed</references>
+        <references refid="class_level_complete_1a736a76d796cb5d33260b3d1cf3fabf5e" compoundref="_level_complete_8cs" startline="34" endline="39">OnRestartPressed</references>
+        <references refid="class_main_1aa2f640712c026469e26fc7954f11be5d" compoundref="_main_8cs" startline="13">Main.WINDOW_SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_level_complete_1a09a2c3c46fd610cd3796d716414b91f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelComplete.ShowMenu</definition>
+        <argsstring>()</argsstring>
+        <name>ShowMenu</name>
+        <briefdescription>
+<para>Pauses the game and shows this menu. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelComplete.cs" line="28" column="17" bodyfile="src/Scenes/LevelComplete.cs" bodystart="28" bodyend="32"/>
+        <referencedby refid="class_level_1aa0e6bfa6d80ec968a1995f395e016a0b" compoundref="_level_8cs" startline="240" endline="246">Level.OnEndPositionBodyEntered</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_level_complete_1a736a76d796cb5d33260b3d1cf3fabf5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelComplete.OnRestartPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnRestartPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelComplete.cs" line="34" column="17" bodyfile="src/Scenes/LevelComplete.cs" bodystart="34" bodyend="39"/>
+        <referencedby refid="class_level_complete_1a8397e21dbd05d0c9bc69478135237be5" compoundref="_level_complete_8cs" startline="15" endline="23">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_level_complete_1ae371e0c7856213db9dcf898b0282d600" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelComplete.OnQuitPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnQuitPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelComplete.cs" line="41" column="17" bodyfile="src/Scenes/LevelComplete.cs" bodystart="41" bodyend="47"/>
+        <referencedby refid="class_level_complete_1a8397e21dbd05d0c9bc69478135237be5" compoundref="_level_complete_8cs" startline="15" endline="23">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Menu that will be shown when a level is completed. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LevelComplete</label>
+        <link refid="class_level_complete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LevelComplete</label>
+        <link refid="class_level_complete"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/LevelComplete.cs" line="7" column="7" bodyfile="src/Scenes/LevelComplete.cs" bodystart="7" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_level_complete_1a8397e21dbd05d0c9bc69478135237be5" prot="public" virt="non-virtual"><scope>LevelComplete</scope><name>_Ready</name></member>
+      <member refid="class_level_complete_1ae371e0c7856213db9dcf898b0282d600" prot="public" virt="non-virtual"><scope>LevelComplete</scope><name>OnQuitPressed</name></member>
+      <member refid="class_level_complete_1a736a76d796cb5d33260b3d1cf3fabf5e" prot="public" virt="non-virtual"><scope>LevelComplete</scope><name>OnRestartPressed</name></member>
+      <member refid="class_level_complete_1a33f5684ecb7cf313659bfb2d058278b9" prot="public" virt="non-virtual"><scope>LevelComplete</scope><name>RestartPressed</name></member>
+      <member refid="class_level_complete_1a09a2c3c46fd610cd3796d716414b91f9" prot="public" virt="non-virtual"><scope>LevelComplete</scope><name>ShowMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -9,6 +9,7 @@ var searchData=
   ['pausepressed_6',['PausePressed',['../class_game_h_u_d.html#ac09e85b7ce65957efbd8bbdfdd4b8a26',1,'GameHUD']]],
   ['playaccept_7',['PlayAccept',['../class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02',1,'GameAudio']]],
   ['playcancel_8',['PlayCancel',['../class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8',1,'GameAudio']]],
-  ['profile_9',['Profile',['../class_profile.html#a390b2643abb820e749741eb38206666d',1,'Profile']]],
-  ['profilechanged_10',['ProfileChanged',['../class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2',1,'EditProfileGUI.ProfileChanged()'],['../class_shop_g_u_i.html#a3afd1cedc36ef4900dcd83db77fc50d9',1,'ShopGUI.ProfileChanged()']]]
+  ['playersession_9',['PlayerSession',['../class_player_session.html#a0bbdc5bc26709a61c653e0b494c1901a',1,'PlayerSession']]],
+  ['profile_10',['Profile',['../class_profile.html#a390b2643abb820e749741eb38206666d',1,'Profile']]],
+  ['profilechanged_11',['ProfileChanged',['../class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2',1,'EditProfileGUI.ProfileChanged()'],['../class_shop_g_u_i.html#a3afd1cedc36ef4900dcd83db77fc50d9',1,'ShopGUI.ProfileChanged()']]]
 ];

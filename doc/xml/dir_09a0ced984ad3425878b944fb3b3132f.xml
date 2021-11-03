@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_09a0ced984ad3425878b944fb3b3132f" kind="dir">
+    <compoundname>src/Maps/Tiles</compoundname>
+    <innerfile refid="_tile_set_maker_8cs">TileSetMaker.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Maps/Tiles/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_label" kind="class" language="C#" prot="public">
+    <compoundname>Label</compoundname>
+    <derivedcompoundref refid="class_attempts_counter" prot="public" virt="non-virtual">AttemptsCounter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AttemptsCounter</label>
+        <link refid="class_attempts_counter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Label</label>
+        <link refid="class_label"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Label</label>
+        <link refid="class_label"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/AttemptsCounter.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

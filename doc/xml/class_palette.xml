@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_palette" kind="class" language="C#" prot="public">
+    <compoundname>Palette</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_palette_1a19b0a9a61540107b15f065154ba3db1f" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_palette" kindref="compound">Palette</ref></type>
+        <definition>Palette Palette.instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <briefdescription>
+<para>Singleton instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="12" column="28" bodyfile="src/Shaders/Palette.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_palette_1a881cd59cc1cc4f18f383bba4bc9c7857" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Palette.NUMBER_OF_COLORS</definition>
+        <argsstring></argsstring>
+        <name>NUMBER_OF_COLORS</name>
+        <initializer>= 15</initializer>
+        <briefdescription>
+<para>The number of available colors for the player&apos;s avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="17" column="32" bodyfile="src/Shaders/Palette.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_palette_1a120e25208802689792e39b37283dea4c" compoundref="_palette_8cs" startline="82" endline="100">Palette</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_palette_1a44a68690ee2f0d0a89d0e8198644b80e" prot="public" static="yes" mutable="no">
+        <type>readonly Color</type>
+        <definition>readonly Color Palette.DEFAULT_THRESHOLD</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_THRESHOLD</name>
+        <initializer>= new Color(0.1f, 0.1f, 0.1f)</initializer>
+        <briefdescription>
+<para>The default threshold difference for doing a palette swap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="22" column="34" bodyfile="src/Shaders/Palette.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_palette_1a83dcff72ec74e3643896ae30fda9efb8" prot="public" static="yes" mutable="no">
+        <type>readonly Dictionary&lt; string, Color[]&gt;</type>
+        <definition>readonly Dictionary&lt;string, Color[]&gt; Palette.DEFAULT_COLORS_MALE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_COLORS_MALE</name>
+        <initializer>= new Dictionary&lt;string, Color[]&gt;()
+    {
+        [&quot;Skin&quot;] = new Color[] {
+            new Color(223, 161, 113) / 255,
+            new Color (220, 126, 82) / 255,
+            new Color (220, 191, 165) / 255,
+            new Color (245, 156, 120) / 255,
+        },
+
+        [&quot;Top&quot;] = new Color[] {
+            new Color(42, 90, 57) / 255,
+            new Color (30, 53, 52) / 255,
+            new Color (53, 81, 67) / 255,
+        },
+
+        [&quot;Bottom&quot;] = new Color[] {
+            new Color(158, 77, 82) / 255,
+            new Color (82, 59, 64) / 255
+        }
+    }</initializer>
+        <briefdescription>
+<para>Default skin, top and bottom colors for male avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="27" column="39" bodyfile="src/Shaders/Palette.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_palette_1abbd927c544d691dd9cd193d0f2d733e4" prot="public" static="yes" mutable="no">
+        <type>readonly Dictionary&lt; string, Color[]&gt;</type>
+        <definition>readonly Dictionary&lt;string, Color[]&gt; Palette.DEFAULT_COLORS_FEMALE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_COLORS_FEMALE</name>
+        <initializer>= new Dictionary&lt;string, Color[]&gt;()
+    {
+        [&quot;Skin&quot;] = new Color[] {
+            new Color(223, 161, 113) / 255,
+            new Color (248, 179, 123) / 255,
+            new Color (204, 118, 79) / 255,
+            new Color (192, 112, 77) / 255
+        },
+
+        [&quot;Top&quot;] = new Color[] {
+            new Color(88, 128, 204) / 255
+        },
+
+        [&quot;Bottom&quot;] = new Color[] {
+            new Color(96, 96, 96) / 255,
+            new Color (154, 133, 113) / 255
+        }
+    }</initializer>
+        <briefdescription>
+<para>Default skin, top and bottom colors for female avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="51" column="39" bodyfile="src/Shaders/Palette.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>Color[]</type>
+        <definition>Color [] Palette.PaletteColors</definition>
+        <argsstring></argsstring>
+        <name>PaletteColors</name>
+        <briefdescription>
+<para>The available colors for avatar customization. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="73" column="18" bodyfile="src/Shaders/Palette.cs" bodystart="74" bodyend="77"/>
+        <referencedby refid="class_palette_1a120e25208802689792e39b37283dea4c" compoundref="_palette_8cs" startline="82" endline="100">Palette</referencedby>
+        <referencedby refid="class_palette_1ab973750bb28f3de18132de170c08c092" compoundref="_palette_8cs" startline="122" endline="132">TextureFromColor</referencedby>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_palette_1a25336192634062811d8659ee0ad065c6" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_palette" kindref="compound">Palette</ref></type>
+        <definition>Palette Palette.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>Gets the game&apos;s palette. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="105" column="27" bodyfile="src/Shaders/Palette.cs" bodystart="106" bodyend="114"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_palette_1a120e25208802689792e39b37283dea4c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Palette.Palette</definition>
+        <argsstring>()</argsstring>
+        <name>Palette</name>
+        <briefdescription>
+<para>Loads palettes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="82" column="13" bodyfile="src/Shaders/Palette.cs" bodystart="82" bodyend="100"/>
+        <references refid="class_palette_1a881cd59cc1cc4f18f383bba4bc9c7857" compoundref="_palette_8cs" startline="17">NUMBER_OF_COLORS</references>
+        <references refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" compoundref="_palette_8cs" startline="74" endline="77">PaletteColors</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_palette_1ab973750bb28f3de18132de170c08c092" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Texture</type>
+        <definition>Texture Palette.TextureFromColor</definition>
+        <argsstring>(int id, Vector2 size)</argsstring>
+        <name>TextureFromColor</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>Vector2</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Creates a rectangular shape and fills it with the color with the given id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color&apos;s id.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rectangle&apos;s size.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An rectangular image texture filled with the color.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/Palette.cs" line="122" column="20" bodyfile="src/Shaders/Palette.cs" bodystart="122" bodyend="132"/>
+        <references refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" compoundref="_palette_8cs" startline="74" endline="77">PaletteColors</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that contains data related to colors. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Dictionary&lt;</label>
+      </node>
+      <node id="1">
+        <label>Palette</label>
+        <link refid="class_palette"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+NUMBER_OF_COLORS</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+DEFAULT_THRESHOLD</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+DEFAULT_COLORS_FEMALE</edgelabel>
+          <edgelabel>+DEFAULT_COLORS_MALE</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="3">
+        <label>static readonly Color</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Shaders/Palette.cs" line="8" column="7" bodyfile="src/Shaders/Palette.cs" bodystart="8" bodyend="133"/>
+    <listofallmembers>
+      <member refid="class_palette_1abbd927c544d691dd9cd193d0f2d733e4" prot="public" virt="non-virtual"><scope>Palette</scope><name>DEFAULT_COLORS_FEMALE</name></member>
+      <member refid="class_palette_1a83dcff72ec74e3643896ae30fda9efb8" prot="public" virt="non-virtual"><scope>Palette</scope><name>DEFAULT_COLORS_MALE</name></member>
+      <member refid="class_palette_1a44a68690ee2f0d0a89d0e8198644b80e" prot="public" virt="non-virtual"><scope>Palette</scope><name>DEFAULT_THRESHOLD</name></member>
+      <member refid="class_palette_1a19b0a9a61540107b15f065154ba3db1f" prot="private" virt="non-virtual"><scope>Palette</scope><name>instance</name></member>
+      <member refid="class_palette_1a25336192634062811d8659ee0ad065c6" prot="public" virt="non-virtual"><scope>Palette</scope><name>Instance</name></member>
+      <member refid="class_palette_1a881cd59cc1cc4f18f383bba4bc9c7857" prot="public" virt="non-virtual"><scope>Palette</scope><name>NUMBER_OF_COLORS</name></member>
+      <member refid="class_palette_1a120e25208802689792e39b37283dea4c" prot="private" virt="non-virtual"><scope>Palette</scope><name>Palette</name></member>
+      <member refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" prot="public" virt="non-virtual"><scope>Palette</scope><name>PaletteColors</name></member>
+      <member refid="class_palette_1ab973750bb28f3de18132de170c08c092" prot="public" virt="non-virtual"><scope>Palette</scope><name>TextureFromColor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

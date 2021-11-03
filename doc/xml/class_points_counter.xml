@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_points_counter" kind="class" language="C#" prot="public">
+    <compoundname>PointsCounter</compoundname>
+    <basecompoundref refid="class_margin_container" prot="public" virt="non-virtual">MarginContainer</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 PointsCounter.initialPosition</definition>
+        <argsstring></argsstring>
+        <name>initialPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PointsCounter.cs" line="9" column="21" bodyfile="src/Scenes/PointsCounter.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" compoundref="_points_counter_8cs" startline="22" endline="40">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" prot="private" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 PointsCounter.iconInitialPosition</definition>
+        <argsstring></argsstring>
+        <name>iconInitialPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PointsCounter.cs" line="10" column="21" bodyfile="src/Scenes/PointsCounter.cs" bodystart="10" bodyend="-1"/>
+        <referencedby refid="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" compoundref="_points_counter_8cs" startline="22" endline="40">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_points_counter_1a8e42096db3443ca5a566f1d6741f7c65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void PointsCounter._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PointsCounter.cs" line="12" column="26" bodyfile="src/Scenes/PointsCounter.cs" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PointsCounter.Set</definition>
+        <argsstring>(UInt32 points)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>UInt32</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Sets a new number of points to display. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of points.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/PointsCounter.cs" line="22" column="17" bodyfile="src/Scenes/PointsCounter.cs" bodystart="22" bodyend="40"/>
+        <references refid="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" compoundref="_points_counter_8cs" startline="10">iconInitialPosition</references>
+        <references refid="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" compoundref="_points_counter_8cs" startline="9">initialPosition</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_node" kindref="compound">Node</ref> for displaying a number of points. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MarginContainer</label>
+        <link refid="class_margin_container"/>
+      </node>
+      <node id="1">
+        <label>PointsCounter</label>
+        <link refid="class_points_counter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MarginContainer</label>
+        <link refid="class_margin_container"/>
+      </node>
+      <node id="1">
+        <label>PointsCounter</label>
+        <link refid="class_points_counter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-iconInitialPosition</edgelabel>
+          <edgelabel>-initialPosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Vector2</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/PointsCounter.cs" line="7" column="7" bodyfile="src/Scenes/PointsCounter.cs" bodystart="8" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_points_counter_1a8e42096db3443ca5a566f1d6741f7c65" prot="public" virt="non-virtual"><scope>PointsCounter</scope><name>_Ready</name></member>
+      <member refid="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" prot="private" virt="non-virtual"><scope>PointsCounter</scope><name>iconInitialPosition</name></member>
+      <member refid="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" prot="private" virt="non-virtual"><scope>PointsCounter</scope><name>initialPosition</name></member>
+      <member refid="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" prot="public" virt="non-virtual"><scope>PointsCounter</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_level_picker" kind="class" language="C#" prot="public">
+    <compoundname>LevelPicker</compoundname>
+    <basecompoundref refid="class_spin_box" prot="public" virt="non-virtual">SpinBox</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_level_picker_1a04127c209f65cf36607f0dc4c5310d2a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double LevelPicker.currentValue</definition>
+        <argsstring></argsstring>
+        <name>currentValue</name>
+        <briefdescription>
+<para>The current value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelPicker.cs" line="18" column="20" bodyfile="src/Scenes/LevelPicker.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" compoundref="_level_picker_8cs" startline="20" endline="28">_Ready</referencedby>
+        <referencedby refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" compoundref="_level_picker_8cs" startline="30" endline="66">OnValueChanged</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_level_picker_1a84f75f77f3eee12ae2d7af73710cc673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void LevelPicker.ValueChanged</definition>
+        <argsstring>()</argsstring>
+        <name>ValueChanged</name>
+        <briefdescription>
+<para>Emitted when the player changes the value on this picker. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelPicker.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void LevelPicker._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelPicker.cs" line="20" column="26" bodyfile="src/Scenes/LevelPicker.cs" bodystart="20" bodyend="28"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1aabba37c3975118edacf08f6f51e9252d" compoundref="_profile_8cs" startline="66" endline="77">Profile.CurrentLevel</references>
+        <references refid="class_level_picker_1a04127c209f65cf36607f0dc4c5310d2a" compoundref="_level_picker_8cs" startline="18">currentValue</references>
+        <references refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" compoundref="_level_picker_8cs" startline="30" endline="66">OnValueChanged</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+      </memberdef>
+      <memberdef kind="function" id="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LevelPicker.OnValueChanged</definition>
+        <argsstring>(double value)</argsstring>
+        <name>OnValueChanged</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/LevelPicker.cs" line="30" column="17" bodyfile="src/Scenes/LevelPicker.cs" bodystart="30" bodyend="66"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_level_picker_1a04127c209f65cf36607f0dc4c5310d2a" compoundref="_level_picker_8cs" startline="18">currentValue</references>
+        <references refid="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" compoundref="_profile_8cs" startline="216" endline="232">Profile.LevelIsUnlocked</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <referencedby refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" compoundref="_level_picker_8cs" startline="20" endline="28">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_node" kindref="compound">Node</ref> for picking a level on the main menu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>LevelPicker</label>
+        <link refid="class_level_picker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpinBox</label>
+        <link refid="class_spin_box"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>LevelPicker</label>
+        <link refid="class_level_picker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-currentValue</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SpinBox</label>
+        <link refid="class_spin_box"/>
+      </node>
+      <node id="3">
+        <label>double</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/LevelPicker.cs" line="7" column="7" bodyfile="src/Scenes/LevelPicker.cs" bodystart="8" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" prot="public" virt="non-virtual"><scope>LevelPicker</scope><name>_Ready</name></member>
+      <member refid="class_level_picker_1a04127c209f65cf36607f0dc4c5310d2a" prot="private" virt="non-virtual"><scope>LevelPicker</scope><name>currentValue</name></member>
+      <member refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" prot="public" virt="non-virtual"><scope>LevelPicker</scope><name>OnValueChanged</name></member>
+      <member refid="class_level_picker_1a84f75f77f3eee12ae2d7af73710cc673" prot="public" virt="non-virtual"><scope>LevelPicker</scope><name>ValueChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

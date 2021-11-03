@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_profile_select" kind="class" language="C#" prot="public">
+    <compoundname>ProfileSelect</compoundname>
+    <basecompoundref refid="class_node2_d" prot="public" virt="non-virtual">Node2D</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_profile_select_1a9968abb4c478c9600d4d8ba90b680245" prot="private" static="no" mutable="no">
+        <type><ref refid="class_exit_game_popup" kindref="compound">ExitGamePopup</ref></type>
+        <definition>ExitGamePopup ProfileSelect.exitPopup</definition>
+        <argsstring></argsstring>
+        <name>exitPopup</name>
+        <briefdescription>
+<para>Popups that confirms if the player wants to quit the game. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelect.cs" line="12" column="27" bodyfile="src/Scenes/ProfileSelect.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_profile_select_1a515df791d64afdf822a4b385694808f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ProfileSelect._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelect.cs" line="14" column="26" bodyfile="src/Scenes/ProfileSelect.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_1a7a6b440025c061ead559d5a832a4ed42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ProfileSelect._Process</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_Process</name>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelect.cs" line="19" column="26" bodyfile="src/Scenes/ProfileSelect.cs" bodystart="19" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Scene that displays a menu where profiles can be created, loaded and deleted. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="1">
+        <label>ProfileSelect</label>
+        <link refid="class_profile_select"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="3">
+        <label>ExitGamePopup</label>
+        <link refid="class_exit_game_popup"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="1">
+        <label>ProfileSelect</label>
+        <link refid="class_profile_select"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-exitPopup</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ProfileSelect.cs" line="7" column="7" bodyfile="src/Scenes/ProfileSelect.cs" bodystart="8" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_profile_select_1a7a6b440025c061ead559d5a832a4ed42" prot="public" virt="non-virtual"><scope>ProfileSelect</scope><name>_Process</name></member>
+      <member refid="class_profile_select_1a515df791d64afdf822a4b385694808f2" prot="public" virt="non-virtual"><scope>ProfileSelect</scope><name>_Ready</name></member>
+      <member refid="class_profile_select_1a9968abb4c478c9600d4d8ba90b680245" prot="private" virt="non-virtual"><scope>ProfileSelect</scope><name>exitPopup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

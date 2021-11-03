@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_tile_set_maker" kind="class" language="C#" prot="public">
+    <compoundname>TileSetMaker</compoundname>
+    <basecompoundref refid="class_node" prot="public" virt="non-virtual">Node</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_tile_set_maker_1add080d0b5e2582cd3bfe8b7a534ea7a3" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 TileSetMaker.TileSize</definition>
+        <argsstring></argsstring>
+        <name>TileSize</name>
+        <initializer>= new Vector2(64, 64)</initializer>
+        <briefdescription>
+<para>The size of each tile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Tiles/TileSetMaker.cs" line="13" column="20" bodyfile="src/Maps/Tiles/TileSetMaker.cs" bodystart="13" bodyend="-1"/>
+        <referencedby refid="class_tile_set_maker_1ac9c5ff19e7996d296485ecd5a440ec13" compoundref="_tile_set_maker_8cs" startline="27" endline="58">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_set_maker_1a9150369a075015feebbf166531104343" prot="public" static="no" mutable="no">
+        <type>Texture</type>
+        <definition>Texture TileSetMaker.Texture</definition>
+        <argsstring></argsstring>
+        <name>Texture</name>
+        <briefdescription>
+<para>The image texture from which to create the tileset. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Tiles/TileSetMaker.cs" line="19" column="20" bodyfile="src/Maps/Tiles/TileSetMaker.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_tile_set_maker_1a7d9c284c8bd5000e02f397ea7e424d05" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string TileSetMaker.FilePath</definition>
+        <argsstring></argsstring>
+        <name>FilePath</name>
+        <initializer>= &quot;res://src/Maps/Tiles/tiles.tres&quot;</initializer>
+        <briefdescription>
+<para>The path where the tileset will be save. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Tiles/TileSetMaker.cs" line="25" column="19" bodyfile="src/Maps/Tiles/TileSetMaker.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tile_set_maker_1ac9c5ff19e7996d296485ecd5a440ec13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void TileSetMaker._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Tiles/TileSetMaker.cs" line="27" column="26" bodyfile="src/Maps/Tiles/TileSetMaker.cs" bodystart="27" bodyend="58"/>
+        <references refid="class_tile_set_maker_1add080d0b5e2582cd3bfe8b7a534ea7a3" compoundref="_tile_set_maker_8cs" startline="13">TileSize</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_node" kindref="compound">Node</ref> for making tilesets from an image. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Node</label>
+        <link refid="class_node"/>
+      </node>
+      <node id="1">
+        <label>TileSetMaker</label>
+        <link refid="class_tile_set_maker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Node</label>
+        <link refid="class_node"/>
+      </node>
+      <node id="4">
+        <label>Texture</label>
+      </node>
+      <node id="1">
+        <label>TileSetMaker</label>
+        <link refid="class_tile_set_maker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+TileSize</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+Texture</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+FilePath</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Vector2</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Maps/Tiles/TileSetMaker.cs" line="7" column="7" bodyfile="src/Maps/Tiles/TileSetMaker.cs" bodystart="8" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_tile_set_maker_1ac9c5ff19e7996d296485ecd5a440ec13" prot="public" virt="non-virtual"><scope>TileSetMaker</scope><name>_Ready</name></member>
+      <member refid="class_tile_set_maker_1a7d9c284c8bd5000e02f397ea7e424d05" prot="public" virt="non-virtual"><scope>TileSetMaker</scope><name>FilePath</name></member>
+      <member refid="class_tile_set_maker_1a9150369a075015feebbf166531104343" prot="public" virt="non-virtual"><scope>TileSetMaker</scope><name>Texture</name></member>
+      <member refid="class_tile_set_maker_1add080d0b5e2582cd3bfe8b7a534ea7a3" prot="public" virt="non-virtual"><scope>TileSetMaker</scope><name>TileSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

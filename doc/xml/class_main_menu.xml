@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_main_menu" kind="class" language="C#" prot="public">
+    <compoundname>MainMenu</compoundname>
+    <basecompoundref refid="class_node2_d" prot="public" virt="non-virtual">Node2D</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_menu_1a7b25973d3c9841a4af05e4029ee6bacc" prot="private" static="no" mutable="no">
+        <type>PackedScene</type>
+        <definition>PackedScene MainMenu.editProfile</definition>
+        <argsstring></argsstring>
+        <name>editProfile</name>
+        <initializer>= ResourceLoader.Load&lt;PackedScene&gt;(&quot;res://src/Scenes/EditProfileGUI.tscn&quot;)</initializer>
+        <briefdescription>
+<para>The panel for editing the player&apos;s profile. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="12" column="25" bodyfile="src/Scenes/MainMenu.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_1a670bcafdf8f5e35b41e31c08fb26fbbd" prot="private" static="no" mutable="no">
+        <type>PackedScene</type>
+        <definition>PackedScene MainMenu.shop</definition>
+        <argsstring></argsstring>
+        <name>shop</name>
+        <initializer>= ResourceLoader.Load&lt;PackedScene&gt;(&quot;res://src/Scenes/ShopGUI.tscn&quot;)</initializer>
+        <briefdescription>
+<para>The panel that contains the game&apos;s shop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="17" column="25" bodyfile="src/Scenes/MainMenu.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MainMenu._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="19" column="26" bodyfile="src/Scenes/MainMenu.cs" bodystart="19" bodyend="31"/>
+        <references refid="class_main_menu_1af8ed217d174c1df8bb007112303ec7fb" compoundref="_main_menu_8cs" startline="66" endline="69">OnExitButtonPressed</references>
+        <references refid="class_main_menu_1a40a69fad4764d8777974773aad65fae5" compoundref="_main_menu_8cs" startline="76" endline="79">OnLevelPickerValueChanged</references>
+        <references refid="class_main_menu_1a87e8abea9896111e446f12ac5acdb9db" compoundref="_main_menu_8cs" startline="47" endline="50">OnPlayButtonPressed</references>
+        <references refid="class_main_menu_1a7910c71982c6ae2e599b4ef8c7e5fed2" compoundref="_main_menu_8cs" startline="59" endline="64">OnProfileGUIEditPressed</references>
+        <references refid="class_main_menu_1a63d071fa78d43ba97f5f1044d43f952b" compoundref="_main_menu_8cs" startline="52" endline="57">OnProfileGUIShopPressed</references>
+        <references refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">UpdateUI</references>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a35a95291fb13d88d38f491c5a10fbd7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void MainMenu._Process</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_Process</name>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="33" column="26" bodyfile="src/Scenes/MainMenu.cs" bodystart="33" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.UpdateUI</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateUI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="41" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="41" bodyend="45"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1af87d47cc73db8b55b24e5ab547534272" compoundref="_profile_8cs" startline="39" endline="42">Profile.Points</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+        <referencedby refid="class_main_menu_1a399217040b4956e00f8983443bf18c83" compoundref="_main_menu_8cs" startline="71" endline="74">OnProfileChanged</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a87e8abea9896111e446f12ac5acdb9db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnPlayButtonPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnPlayButtonPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="47" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="47" bodyend="50"/>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a63d071fa78d43ba97f5f1044d43f952b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnProfileGUIShopPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnProfileGUIShopPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="52" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="52" bodyend="57"/>
+        <references refid="class_main_menu_1a399217040b4956e00f8983443bf18c83" compoundref="_main_menu_8cs" startline="71" endline="74">OnProfileChanged</references>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a7910c71982c6ae2e599b4ef8c7e5fed2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnProfileGUIEditPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnProfileGUIEditPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="59" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="59" bodyend="64"/>
+        <references refid="class_main_menu_1a399217040b4956e00f8983443bf18c83" compoundref="_main_menu_8cs" startline="71" endline="74">OnProfileChanged</references>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1af8ed217d174c1df8bb007112303ec7fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnExitButtonPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnExitButtonPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="66" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="66" bodyend="69"/>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a399217040b4956e00f8983443bf18c83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnProfileChanged</definition>
+        <argsstring>()</argsstring>
+        <name>OnProfileChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="71" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="71" bodyend="74"/>
+        <references refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">UpdateUI</references>
+        <referencedby refid="class_main_menu_1a7910c71982c6ae2e599b4ef8c7e5fed2" compoundref="_main_menu_8cs" startline="59" endline="64">OnProfileGUIEditPressed</referencedby>
+        <referencedby refid="class_main_menu_1a63d071fa78d43ba97f5f1044d43f952b" compoundref="_main_menu_8cs" startline="52" endline="57">OnProfileGUIShopPressed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a40a69fad4764d8777974773aad65fae5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu.OnLevelPickerValueChanged</definition>
+        <argsstring>()</argsstring>
+        <name>OnLevelPickerValueChanged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/MainMenu.cs" line="76" column="17" bodyfile="src/Scenes/MainMenu.cs" bodystart="76" bodyend="79"/>
+        <referencedby refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" compoundref="_main_menu_8cs" startline="19" endline="31">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The main menu of the game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-editProfile</edgelabel>
+          <edgelabel>-shop</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PackedScene</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/MainMenu.cs" line="7" column="7" bodyfile="src/Scenes/MainMenu.cs" bodystart="8" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_main_menu_1a35a95291fb13d88d38f491c5a10fbd7a" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>_Process</name></member>
+      <member refid="class_main_menu_1a6e4d205f960117692bcee0d9708b3709" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>_Ready</name></member>
+      <member refid="class_main_menu_1a7b25973d3c9841a4af05e4029ee6bacc" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>editProfile</name></member>
+      <member refid="class_main_menu_1af8ed217d174c1df8bb007112303ec7fb" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnExitButtonPressed</name></member>
+      <member refid="class_main_menu_1a40a69fad4764d8777974773aad65fae5" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnLevelPickerValueChanged</name></member>
+      <member refid="class_main_menu_1a87e8abea9896111e446f12ac5acdb9db" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnPlayButtonPressed</name></member>
+      <member refid="class_main_menu_1a399217040b4956e00f8983443bf18c83" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnProfileChanged</name></member>
+      <member refid="class_main_menu_1a7910c71982c6ae2e599b4ef8c7e5fed2" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnProfileGUIEditPressed</name></member>
+      <member refid="class_main_menu_1a63d071fa78d43ba97f5f1044d43f952b" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>OnProfileGUIShopPressed</name></member>
+      <member refid="class_main_menu_1a670bcafdf8f5e35b41e31c08fb26fbbd" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>shop</name></member>
+      <member refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>UpdateUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_glide" kind="class" language="C#" prot="public">
+    <compoundname>Glide</compoundname>
+    <basecompoundref refid="class_main_action" prot="public" virt="non-virtual">MainAction</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_glide_1a2e178dffa2e63a3e1864b5780c9180ab" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>GlideStates</name>
+        <enumvalue id="class_glide_1a2e178dffa2e63a3e1864b5780c9180aba6de49bfda8068b7bc3b0c0e3d2e43134" prot="private">
+          <name>JUMPING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_glide_1a2e178dffa2e63a3e1864b5780c9180aba8697250efc73639dd2a6e7da243ac68b" prot="private">
+          <name>NOTHING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_glide_1a2e178dffa2e63a3e1864b5780c9180abaf0bb30216c1f38016933af24760ba484" prot="private">
+          <name>CAN_GLIDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_glide_1a2e178dffa2e63a3e1864b5780c9180abafe1be88ff013c34439fb744090049407" prot="private">
+          <name>GLIDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_glide_1a2e178dffa2e63a3e1864b5780c9180aba67171b8a3b8ff04a4b645a2b200593dd" prot="private">
+          <name>NOTHING2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Each state that the glide action can have. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="12" column="12" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="12" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_glide_1aa63b3baef2fcfcc7606a987b09dcf4c0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_glide_1a2e178dffa2e63a3e1864b5780c9180ab" kindref="member">GlideStates</ref></type>
+        <definition>GlideStates Glide.state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <initializer>= <ref refid="class_glide_1a2e178dffa2e63a3e1864b5780c9180aba8697250efc73639dd2a6e7da243ac68b" kindref="member">GlideStates.NOTHING</ref></initializer>
+        <briefdescription>
+<para>The state in which the glide action is currently. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="23" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_glide_1a12360a9f1b649403f8e018ba7347ed76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_player_state_1a7c94c3f0cc97f388f281c524523d311e">_Init</reimplements>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="25" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="25" bodyend="33"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
+        <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._StatePhysicsProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_StatePhysicsProcess</name>
+        <reimplements refid="class_player_state_1a1bddd210d96db25cb49b3a0b3edd5265">_StatePhysicsProcess</reimplements>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The physics process that will be called each frame for the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="35" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="35" bodyend="67"/>
+        <references refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">_ActionOnAir</references>
+        <references refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="74">_ActionOnGround</references>
+        <references refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="123" endline="135">_ActionProcess</references>
+        <references refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">_ActionReleased</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="101" endline="101">Player.PersistentState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1a807e0e90013a5c0f6b509a565efeff27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplements refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce">_ActionOnGround</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="69" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="69" bodyend="74"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplements refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74">_ActionOnAir</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="75" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="75" bodyend="101"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+        <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1a2353d380d6897004724d34c31838f798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplements refid="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f">_ActionReleased</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="102" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="102" bodyend="122"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+        <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide._ActionProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_ActionProcess</name>
+        <reimplements refid="class_main_action_1abad27d048abd3f377cf7f2e1e15f6975">_ActionProcess</reimplements>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The process that will be executed each frame while the action is being performed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="123" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="123" bodyend="135"/>
+        <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide.OnMainActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnMainActionTimerTimeout</name>
+        <reimplements refid="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4">OnMainActionTimerTimeout</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="137" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="137" bodyend="155"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+      </memberdef>
+      <memberdef kind="function" id="class_glide_1ac7d01853752f27addde9526b665b3d62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Glide.OnMainActionObjectCollisionCheckAreaEntered</definition>
+        <argsstring>(Area2D area)</argsstring>
+        <name>OnMainActionObjectCollisionCheckAreaEntered</name>
+        <reimplements refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68">OnMainActionObjectCollisionCheckAreaEntered</reimplements>
+        <param>
+          <type>Area2D</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="157" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="157" bodyend="172"/>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_main" kindref="compound">Main</ref> action that allows the player to glide for some time. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><linebreak/>
+ </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Glide</label>
+        <link refid="class_glide"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Glide</label>
+        <link refid="class_glide"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-state</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>GlideStates</label>
+      </node>
+      <node id="2">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+CanUseActionPad</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="7" bodyend="173"/>
+    <listofallmembers>
+      <member refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionOnAir</name></member>
+      <member refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionOnGround</name></member>
+      <member refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionProcess</name></member>
+      <member refid="class_glide_1a2353d380d6897004724d34c31838f798" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionReleased</name></member>
+      <member refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" prot="public" virt="virtual"><scope>Glide</scope><name>_Init</name></member>
+      <member refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" prot="public" virt="virtual"><scope>Glide</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Glide</scope><name>Blocked</name></member>
+      <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Glide</scope><name>CanUseActionPad</name></member>
+      <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Glide</scope><name>GetTypeAsString</name></member>
+      <member refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" prot="public" virt="non-virtual"><scope>Glide</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_glide_1a2e178dffa2e63a3e1864b5780c9180ab" prot="private" virt="non-virtual"><scope>Glide</scope><name>GlideStates</name></member>
+      <member refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" prot="protected" virt="non-virtual"><scope>Glide</scope><name>OnActionPad</name></member>
+      <member refid="class_glide_1ac7d01853752f27addde9526b665b3d62" prot="public" virt="virtual"><scope>Glide</scope><name>OnMainActionObjectCollisionCheckAreaEntered</name></member>
+      <member refid="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" prot="public" virt="virtual"><scope>Glide</scope><name>OnMainActionObjectCollisionCheckAreaExited</name></member>
+      <member refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" prot="public" virt="virtual"><scope>Glide</scope><name>OnMainActionTimerTimeout</name></member>
+      <member refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" prot="public" virt="non-virtual"><scope>Glide</scope><name>PerformingAction</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>Glide</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>Glide</scope><name>Setup</name></member>
+      <member refid="class_glide_1aa63b3baef2fcfcc7606a987b09dcf4c0" prot="private" virt="non-virtual"><scope>Glide</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

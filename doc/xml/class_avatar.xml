@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_avatar" kind="class" language="C#" prot="public">
+    <compoundname>Avatar</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_avatar_1ac867c076ca88765a4601c440687a42c9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool Avatar.Male</definition>
+        <argsstring></argsstring>
+        <name>Male</name>
+        <briefdescription>
+<para>The avatar&apos;s Gender. True if male, false if female. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="13" column="17" bodyfile="src/Profiles/Avatar.cs" bodystart="13" bodyend="13"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</referencedby>
+        <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1abe027814d99058c40f06aa61ecbef381" compoundref="_edit_profile_g_u_i_8cs" startline="201" endline="205">EditProfileGUI.OnGenderItemSelected</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">ToTexture</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">EditProfileGUI.UpdateAvatar</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Avatar.SkinColor</definition>
+        <argsstring></argsstring>
+        <name>SkinColor</name>
+        <briefdescription>
+<para>Id of the avatar&apos;s skin color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="18" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Avatar.TopColor</definition>
+        <argsstring></argsstring>
+        <name>TopColor</name>
+        <briefdescription>
+<para>Id of the avatar&apos;s bottom color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="23" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_avatar_1af14516033bd4b5bcb567506d3e480dca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Avatar.BottomColor</definition>
+        <argsstring></argsstring>
+        <name>BottomColor</name>
+        <briefdescription>
+<para>Id of the avatar&apos;s top color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="28" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_avatar_1aadcbb7a0039fa394ff780e83b53fb811" prot="public" static="yes" mutable="no">
+        <type>readonly Texture</type>
+        <definition>readonly Texture Avatar.EMPTY_SAVE_AVATAR</definition>
+        <argsstring></argsstring>
+        <name>EMPTY_SAVE_AVATAR</name>
+        <initializer>= ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/shadow.png&quot;)</initializer>
+        <briefdescription>
+<para>Default avatar for non-created profiles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="33" column="36" bodyfile="src/Profiles/Avatar.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Avatar.Avatar</definition>
+        <argsstring>(bool male, int skinColor, int topColor, int bottomColor)</argsstring>
+        <name>Avatar</name>
+        <param>
+          <type>bool</type>
+          <declname>male</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>skinColor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>topColor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bottomColor</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new avatar from the supplied data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>male</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The avatar&apos;s Gender. True if male, false if female.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>skinColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the avatar&apos;s skin color.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>topColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Id of the avatar&apos;s bottom color.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottomColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default avatar for non-created profiles.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="42" column="12" bodyfile="src/Profiles/Avatar.cs" bodystart="42" bodyend="48"/>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Male</references>
+        <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Avatar.GetColor</definition>
+        <argsstring>(string key)</argsstring>
+        <name>GetColor</name>
+        <param>
+          <type>string</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Gets one of the avatar&apos;s colors from a given string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can be Skin, Top or Bottom.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The color corresponding to the string.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="55" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="55" bodyend="71"/>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28">BottomColor</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18">SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23">TopColor</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">ToTexture</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_avatar_1a27818736da2c886b8a891d3009b43752" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Avatar.SetColor</definition>
+        <argsstring>(string key, int color)</argsstring>
+        <name>SetColor</name>
+        <param>
+          <type>string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Sets one of the avatar&apos;s colors from a given string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Can be Skin, Top or Bottom.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="77" column="17" bodyfile="src/Profiles/Avatar.cs" bodystart="77" bodyend="93"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">EditProfileGUI.UpdateAvatar</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_avatar_1a556317afdd76c7884ae0197014a7459a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Texture</type>
+        <definition>Texture Avatar.ToTexture</definition>
+        <argsstring>()</argsstring>
+        <name>ToTexture</name>
+        <briefdescription>
+<para>Performs a palette swap on the default avatar, swapping the default colors for the colors specified in each property. Converts the avatar into an image texture. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The avatar as an image texture.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="100" column="20" bodyfile="src/Profiles/Avatar.cs" bodystart="100" bodyend="134"/>
+        <references refid="class_palette_1abbd927c544d691dd9cd193d0f2d733e4" compoundref="_palette_8cs" startline="51">Palette.DEFAULT_COLORS_FEMALE</references>
+        <references refid="class_palette_1a83dcff72ec74e3643896ae30fda9efb8" compoundref="_palette_8cs" startline="27">Palette.DEFAULT_COLORS_MALE</references>
+        <references refid="class_palette_1a44a68690ee2f0d0a89d0e8198644b80e" compoundref="_palette_8cs" startline="22">Palette.DEFAULT_THRESHOLD</references>
+        <references refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</references>
+        <references refid="class_palette_1a25336192634062811d8659ee0ad065c6" compoundref="_palette_8cs" startline="106" endline="114">Palette.Instance</references>
+        <references refid="class_palette_swap_shader_1a339e9ac1c07f19e42fa8d80870566c83" compoundref="_palette_swap_shader_8cs" startline="67" endline="75">PaletteSwapShader.Instance</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Male</references>
+        <references refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" compoundref="_palette_8cs" startline="74" endline="77">Palette.PaletteColors</references>
+        <references refid="class_palette_swap_shader_1ae747173cd2a85fa21e35129e67630275" compoundref="_palette_swap_shader_8cs" startline="18" endline="61">PaletteSwapShader.PaletteSwap</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">EditProfileGUI.UpdateAvatar</referencedby>
+        <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_avatar" kindref="compound">Avatar</ref></type>
+        <definition>Avatar Avatar.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <briefdescription>
+<para>Clones the avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A copy of the avatar.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Avatar.cs" line="140" column="19" bodyfile="src/Profiles/Avatar.cs" bodystart="140" bodyend="143"/>
+        <references refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Male</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents a customizable player avatar. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Avatar</label>
+        <link refid="class_avatar"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+BottomColor</edgelabel>
+          <edgelabel>+SkinColor</edgelabel>
+          <edgelabel>+TopColor</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+EMPTY_SAVE_AVATAR</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="3">
+        <label>static readonly Texture</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Profiles/Avatar.cs" line="8" column="7" bodyfile="src/Profiles/Avatar.cs" bodystart="8" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" prot="public" virt="non-virtual"><scope>Avatar</scope><name>Avatar</name></member>
+      <member refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" prot="public" virt="non-virtual"><scope>Avatar</scope><name>BottomColor</name></member>
+      <member refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" prot="public" virt="non-virtual"><scope>Avatar</scope><name>Clone</name></member>
+      <member refid="class_avatar_1aadcbb7a0039fa394ff780e83b53fb811" prot="public" virt="non-virtual"><scope>Avatar</scope><name>EMPTY_SAVE_AVATAR</name></member>
+      <member refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" prot="public" virt="non-virtual"><scope>Avatar</scope><name>GetColor</name></member>
+      <member refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" prot="public" virt="non-virtual"><scope>Avatar</scope><name>Male</name></member>
+      <member refid="class_avatar_1a27818736da2c886b8a891d3009b43752" prot="public" virt="non-virtual"><scope>Avatar</scope><name>SetColor</name></member>
+      <member refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" prot="public" virt="non-virtual"><scope>Avatar</scope><name>SkinColor</name></member>
+      <member refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" prot="public" virt="non-virtual"><scope>Avatar</scope><name>TopColor</name></member>
+      <member refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" prot="public" virt="non-virtual"><scope>Avatar</scope><name>ToTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

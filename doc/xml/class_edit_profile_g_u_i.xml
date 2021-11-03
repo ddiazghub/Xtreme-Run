@@ -1,0 +1,373 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_edit_profile_g_u_i" kind="class" language="C#" prot="public">
+    <compoundname>EditProfileGUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NinePatchRect</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1ab36def60f18be3b0682a8ce7bc77b84d" prot="private" static="no" mutable="no">
+        <type>Texture</type>
+        <definition>Texture EditProfileGUI.lockSprite</definition>
+        <argsstring></argsstring>
+        <name>lockSprite</name>
+        <initializer>= ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/lock.png&quot;)</initializer>
+        <briefdescription>
+<para>Sprite for labeling items which have not been unlocked yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="19" column="21" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">_Process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1ae13ff8ee928424405695287532c2eef8" prot="private" static="no" mutable="no">
+        <type><ref refid="class_avatar" kindref="compound">Avatar</ref></type>
+        <definition>Avatar EditProfileGUI.editedAvatar</definition>
+        <argsstring></argsstring>
+        <name>editedAvatar</name>
+        <initializer>= PlayerSession.ActiveSession.Profile.Avatar.Clone()</initializer>
+        <briefdescription>
+<para>A copy of the player&apos;s avatar which will be edited. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="24" column="20" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1ae220751a04eedbf192ff9df579fbbcc6" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] EditProfileGUI.keys</definition>
+        <argsstring></argsstring>
+        <name>keys</name>
+        <initializer>= {
+        &quot;Skin&quot;,
+        &quot;Top&quot;,
+        &quot;Bottom&quot;
+    }</initializer>
+        <briefdescription>
+<para>Keys for labeling colors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="29" column="20" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1a7784b52bb3c578a7fe5cfa36832b9d53" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; EditProfileGUI.selected</definition>
+        <argsstring></argsstring>
+        <name>selected</name>
+        <briefdescription>
+<para>The ids of the currently selected colors for skin, top, and bottom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="38" column="24" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1ac7f99f4c653484ff65acfc1cd5812bf2" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, TextureRect &gt;</type>
+        <definition>Dictionary&lt;string, TextureRect&gt; EditProfileGUI.colorSelectors</definition>
+        <argsstring></argsstring>
+        <name>colorSelectors</name>
+        <briefdescription>
+<para>Icons for labeling the currently selected colors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>/ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="43" column="24" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_edit_profile_g_u_i_1ab865259bc1415523fd4089d94aab1173" prot="private" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int EditProfileGUI.DEFAULT_COLOR</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_COLOR</name>
+        <initializer>= 15</initializer>
+        <briefdescription>
+<para>The id of the avatar default colors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="48" column="26" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1af257feffa6ba5f4681f5d315059f4cd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void EditProfileGUI.ProfileChanged</definition>
+        <argsstring>()</argsstring>
+        <name>ProfileChanged</name>
+        <briefdescription>
+<para>Emitted if the user profile&apos;s data was modified. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="14" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EditProfileGUI._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="50" column="26" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="50" bodyend="106"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_edit_profile_g_u_i_1ab865259bc1415523fd4089d94aab1173" compoundref="_edit_profile_g_u_i_8cs" startline="48">DEFAULT_COLOR</references>
+        <references refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">Avatar.GetColor</references>
+        <references refid="class_palette_1a25336192634062811d8659ee0ad065c6" compoundref="_palette_8cs" startline="106" endline="114">Palette.Instance</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Profile.Name</references>
+        <references refid="class_edit_profile_g_u_i_1ae62a6598f2588467732b64a847b40bde" compoundref="_edit_profile_g_u_i_8cs" startline="207" endline="210">OnCancelPressed</references>
+        <references refid="class_edit_profile_g_u_i_1aa1f1583bb34d1d218900d1904098d98b" compoundref="_edit_profile_g_u_i_8cs" startline="182" endline="199">OnColorPressed</references>
+        <references refid="class_edit_profile_g_u_i_1abe027814d99058c40f06aa61ecbef381" compoundref="_edit_profile_g_u_i_8cs" startline="201" endline="205">OnGenderItemSelected</references>
+        <references refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">OnSavePressed</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_palette_1ab973750bb28f3de18132de170c08c092" compoundref="_palette_8cs" startline="122" endline="132">Palette.TextureFromColor</references>
+        <references refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">UpdateAvatar</references>
+        <references refid="class_main_1aa2f640712c026469e26fc7954f11be5d" compoundref="_main_8cs" startline="13">Main.WINDOW_SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EditProfileGUI._Process</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_Process</name>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="108" column="26" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="108" bodyend="140"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_edit_profile_g_u_i_1ab36def60f18be3b0682a8ce7bc77b84d" compoundref="_edit_profile_g_u_i_8cs" startline="19">lockSprite</references>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">Profile.OwnedItems</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">UnsavedChanges</references>
+        <references refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">UpdateAvatar</references>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EditProfileGUI.UnsavedChanges</definition>
+        <argsstring>()</argsstring>
+        <name>UnsavedChanges</name>
+        <briefdescription>
+<para>Checks if the player has edited their avatar and the changes haven&apos;t been saved. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the changes are unsaved, false otherwise.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="146" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="146" bodyend="165"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Profile.Name</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">_Process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EditProfileGUI.UpdateAvatar</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateAvatar</name>
+        <briefdescription>
+<para>Updates the data of the avatar being edited depending on user input. Displays the new avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="170" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="170" bodyend="180"/>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_avatar_1a27818736da2c886b8a891d3009b43752" compoundref="_avatar_8cs" startline="77" endline="93">Avatar.SetColor</references>
+        <references refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">_Process</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1aa1f1583bb34d1d218900d1904098d98b" compoundref="_edit_profile_g_u_i_8cs" startline="182" endline="199">OnColorPressed</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1abe027814d99058c40f06aa61ecbef381" compoundref="_edit_profile_g_u_i_8cs" startline="201" endline="205">OnGenderItemSelected</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1aa1f1583bb34d1d218900d1904098d98b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EditProfileGUI.OnColorPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnColorPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="182" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="182" bodyend="199"/>
+        <references refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">UpdateAvatar</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1abe027814d99058c40f06aa61ecbef381" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EditProfileGUI.OnGenderItemSelected</definition>
+        <argsstring>(int index)</argsstring>
+        <name>OnGenderItemSelected</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="201" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="201" bodyend="205"/>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">UpdateAvatar</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1ae62a6598f2588467732b64a847b40bde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EditProfileGUI.OnCancelPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnCancelPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="207" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="207" bodyend="210"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void EditProfileGUI.OnSavePressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnSavePressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/EditProfileGUI.cs" line="212" column="17" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="212" bodyend="240"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Profile.Name</references>
+        <references refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" compoundref="_profile_8cs" startline="301" endline="315">Profile.NameIsAvailable</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_player_session_1a8522ef9c8fc11562857f5a4a7955cca7" compoundref="_player_session_8cs" startline="43" endline="46">PlayerSession.Save</references>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GUI that allows the player to edit their profile data and customize their avatar. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>EditProfileGUI</label>
+        <link refid="class_edit_profile_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Avatar</label>
+        <link refid="class_avatar"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+BottomColor</edgelabel>
+          <edgelabel>+SkinColor</edgelabel>
+          <edgelabel>+TopColor</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+EMPTY_SAVE_AVATAR</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Dictionary&lt;</label>
+      </node>
+      <node id="1">
+        <label>EditProfileGUI</label>
+        <link refid="class_edit_profile_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-lockSprite</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-editedAvatar</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-keys</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-colorSelectors</edgelabel>
+          <edgelabel>-selected</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-DEFAULT_COLOR</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="3">
+        <label>Texture</label>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="6">
+        <label>static readonly Texture</label>
+      </node>
+      <node id="7">
+        <label>string[]</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/EditProfileGUI.cs" line="8" column="7" bodyfile="src/Scenes/EditProfileGUI.cs" bodystart="8" bodyend="241"/>
+    <listofallmembers>
+      <member refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>_Process</name></member>
+      <member refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>_Ready</name></member>
+      <member refid="class_edit_profile_g_u_i_1ac7f99f4c653484ff65acfc1cd5812bf2" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>colorSelectors</name></member>
+      <member refid="class_edit_profile_g_u_i_1ab865259bc1415523fd4089d94aab1173" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>DEFAULT_COLOR</name></member>
+      <member refid="class_edit_profile_g_u_i_1ae13ff8ee928424405695287532c2eef8" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>editedAvatar</name></member>
+      <member refid="class_edit_profile_g_u_i_1ae220751a04eedbf192ff9df579fbbcc6" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>keys</name></member>
+      <member refid="class_edit_profile_g_u_i_1ab36def60f18be3b0682a8ce7bc77b84d" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>lockSprite</name></member>
+      <member refid="class_edit_profile_g_u_i_1ae62a6598f2588467732b64a847b40bde" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>OnCancelPressed</name></member>
+      <member refid="class_edit_profile_g_u_i_1aa1f1583bb34d1d218900d1904098d98b" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>OnColorPressed</name></member>
+      <member refid="class_edit_profile_g_u_i_1abe027814d99058c40f06aa61ecbef381" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>OnGenderItemSelected</name></member>
+      <member refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>OnSavePressed</name></member>
+      <member refid="class_edit_profile_g_u_i_1af257feffa6ba5f4681f5d315059f4cd2" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>ProfileChanged</name></member>
+      <member refid="class_edit_profile_g_u_i_1a7784b52bb3c578a7fe5cfa36832b9d53" prot="private" virt="non-virtual"><scope>EditProfileGUI</scope><name>selected</name></member>
+      <member refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>UnsavedChanges</name></member>
+      <member refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" prot="public" virt="non-virtual"><scope>EditProfileGUI</scope><name>UpdateAvatar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

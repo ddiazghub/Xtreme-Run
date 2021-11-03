@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_spawned_platform" kind="class" language="C#" prot="public">
+    <compoundname>SpawnedPlatform</compoundname>
+    <basecompoundref refid="class_static_body2_d" prot="public" virt="non-virtual">StaticBody2D</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spawned_platform_1ae7e460e4480e4df9ef220ae4850fd017" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer SpawnedPlatform.destroyTimer</definition>
+        <argsstring></argsstring>
+        <name>destroyTimer</name>
+        <briefdescription>
+<para>The timer for destruction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" line="13" column="19" bodyfile="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawned_platform_1a5e915c7b81f6b338b20e3fd92c7bcad5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SpawnedPlatform._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" line="15" column="26" bodyfile="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" bodystart="15" bodyend="20"/>
+        <references refid="class_spawned_platform_1a68da967a2be8ba98d0909e05304ba71f" compoundref="_spawned_platform_8cs" startline="22" endline="25">OnDestroyTimerTimeout</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawned_platform_1a68da967a2be8ba98d0909e05304ba71f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpawnedPlatform.OnDestroyTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroyTimerTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" line="22" column="17" bodyfile="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" bodystart="22" bodyend="25"/>
+        <referencedby refid="class_spawned_platform_1a5e915c7b81f6b338b20e3fd92c7bcad5" compoundref="_spawned_platform_8cs" startline="15" endline="20">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Platforms that the player can spawn with the spawn platforms secondary action. They destroy themselves after half a second. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SpawnedPlatform</label>
+        <link refid="class_spawned_platform"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>StaticBody2D</label>
+        <link refid="class_static_body2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SpawnedPlatform</label>
+        <link refid="class_spawned_platform"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-destroyTimer</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>StaticBody2D</label>
+        <link refid="class_static_body2_d"/>
+      </node>
+      <node id="3">
+        <label>Timer</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" line="8" column="7" bodyfile="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" bodystart="9" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_spawned_platform_1a5e915c7b81f6b338b20e3fd92c7bcad5" prot="public" virt="non-virtual"><scope>SpawnedPlatform</scope><name>_Ready</name></member>
+      <member refid="class_spawned_platform_1ae7e460e4480e4df9ef220ae4850fd017" prot="private" virt="non-virtual"><scope>SpawnedPlatform</scope><name>destroyTimer</name></member>
+      <member refid="class_spawned_platform_1a68da967a2be8ba98d0909e05304ba71f" prot="public" virt="non-virtual"><scope>SpawnedPlatform</scope><name>OnDestroyTimerTimeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

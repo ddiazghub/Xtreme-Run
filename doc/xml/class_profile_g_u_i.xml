@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_profile_g_u_i" kind="class" language="C#" prot="public">
+    <compoundname>ProfileGUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NinePatchRect</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_profile_g_u_i_1a1cae5c390923b22eafb7abfa81a74767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void ProfileGUI.ShopPressed</definition>
+        <argsstring>()</argsstring>
+        <name>ShopPressed</name>
+        <briefdescription>
+<para>Emitted when the shop button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1a8c249c532bd0f7b6814dc4c6875d9050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void ProfileGUI.EditPressed</definition>
+        <argsstring>()</argsstring>
+        <name>EditPressed</name>
+        <briefdescription>
+<para>Emitted when the edit profile button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="19" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ProfileGUI._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="21" column="26" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_profile_g_u_i_1a7ce6425fc897f70f57a3a342e699a72b" compoundref="_profile_g_u_i_8cs" startline="45" endline="48">OnEditPressed</references>
+        <references refid="class_profile_g_u_i_1ad835b6812c257c3f5c9c6a23892e0770" compoundref="_profile_g_u_i_8cs" startline="50" endline="54">OnLogOutPressed</references>
+        <references refid="class_profile_g_u_i_1a590b9e765f2e1a195e65235798dd5fa4" compoundref="_profile_g_u_i_8cs" startline="40" endline="43">OnShopPressed</references>
+        <references refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">UpdateUI</references>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileGUI.UpdateUI</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateUI</name>
+        <briefdescription>
+<para>Updates the information currently displayed on the GUI. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="33" column="17" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="33" bodyend="38"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_profile_1a54f4969aeceaac4db0be879867e71fe3" compoundref="_profile_8cs" startline="83" endline="99">Profile.CompletedLevels</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Profile.Name</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</references>
+        <referencedby refid="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" compoundref="_profile_g_u_i_8cs" startline="21" endline="28">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1a590b9e765f2e1a195e65235798dd5fa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileGUI.OnShopPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnShopPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="40" column="17" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="40" bodyend="43"/>
+        <referencedby refid="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" compoundref="_profile_g_u_i_8cs" startline="21" endline="28">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1a7ce6425fc897f70f57a3a342e699a72b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileGUI.OnEditPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnEditPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="45" column="17" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="45" bodyend="48"/>
+        <referencedby refid="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" compoundref="_profile_g_u_i_8cs" startline="21" endline="28">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_g_u_i_1ad835b6812c257c3f5c9c6a23892e0770" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileGUI.OnLogOutPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnLogOutPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileGUI.cs" line="50" column="17" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="50" bodyend="54"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_player_session_1a65808546d8278d30ee26af807c62051f" compoundref="_player_session_8cs" startline="51" endline="54">PlayerSession.LogOut</references>
+        <referencedby refid="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" compoundref="_profile_g_u_i_8cs" startline="21" endline="28">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Panel that displays the data of the currently active profile. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>ProfileGUI</label>
+        <link refid="class_profile_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>ProfileGUI</label>
+        <link refid="class_profile_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ProfileGUI.cs" line="7" column="7" bodyfile="src/Scenes/ProfileGUI.cs" bodystart="7" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_profile_g_u_i_1a6dc0dca54016fefc6c4919a7e372cf6e" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>_Ready</name></member>
+      <member refid="class_profile_g_u_i_1a8c249c532bd0f7b6814dc4c6875d9050" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>EditPressed</name></member>
+      <member refid="class_profile_g_u_i_1a7ce6425fc897f70f57a3a342e699a72b" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>OnEditPressed</name></member>
+      <member refid="class_profile_g_u_i_1ad835b6812c257c3f5c9c6a23892e0770" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>OnLogOutPressed</name></member>
+      <member refid="class_profile_g_u_i_1a590b9e765f2e1a195e65235798dd5fa4" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>OnShopPressed</name></member>
+      <member refid="class_profile_g_u_i_1a1cae5c390923b22eafb7abfa81a74767" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>ShopPressed</name></member>
+      <member refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" prot="public" virt="non-virtual"><scope>ProfileGUI</scope><name>UpdateUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

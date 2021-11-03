@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_static_body2_d" kind="class" language="C#" prot="public">
+    <compoundname>StaticBody2D</compoundname>
+    <derivedcompoundref refid="class_spawned_platform" prot="public" virt="non-virtual">SpawnedPlatform</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>SpawnedPlatform</label>
+        <link refid="class_spawned_platform"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>StaticBody2D</label>
+        <link refid="class_static_body2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>StaticBody2D</label>
+        <link refid="class_static_body2_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/SpawnedPlatform/SpawnedPlatform.cs" line="8" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_game_audio" kind="class" language="C#" prot="public">
+    <compoundname>GameAudio</compoundname>
+    <basecompoundref refid="class_node2_d" prot="public" virt="non-virtual">Node2D</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_audio_1a20ac51641bd1520e7e2f98256ced7da4" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.MenuMusic</definition>
+        <argsstring></argsstring>
+        <name>MenuMusic</name>
+        <briefdescription>
+<para>Music to play on menus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="14" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="14" bodyend="-1"/>
+        <referencedby refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" compoundref="_game_audio_8cs" startline="61" endline="78">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1acb552d42a8760720c6f3fe39dce1bee1" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.Level1Music</definition>
+        <argsstring></argsstring>
+        <name>Level1Music</name>
+        <briefdescription>
+<para><ref refid="class_level" kindref="compound">Level</ref> 1 music. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="20" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1a13fe2789ea3a9ebdadfb82447958be08" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.Level2Music</definition>
+        <argsstring></argsstring>
+        <name>Level2Music</name>
+        <briefdescription>
+<para><ref refid="class_level" kindref="compound">Level</ref> 2 music. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="26" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1ac66409802e2533dafa25f107a458c8d5" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.Level3Music</definition>
+        <argsstring></argsstring>
+        <name>Level3Music</name>
+        <briefdescription>
+<para><ref refid="class_level" kindref="compound">Level</ref> 3 music. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="32" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.AcceptSFX</definition>
+        <argsstring></argsstring>
+        <name>AcceptSFX</name>
+        <briefdescription>
+<para>Audio effect to play when clicking an accept button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="38" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" compoundref="_game_audio_8cs" startline="98" endline="102">PlayAccept</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" prot="public" static="no" mutable="no">
+        <type>AudioStream</type>
+        <definition>AudioStream GameAudio.CancelSFX</definition>
+        <argsstring></argsstring>
+        <name>CancelSFX</name>
+        <briefdescription>
+<para>Audio effect to play when clicking an cancel/back button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="44" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" compoundref="_game_audio_8cs" startline="107" endline="111">PlayCancel</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; <ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>, AudioStream &gt;</type>
+        <definition>Dictionary&lt;GameScenes, AudioStream&gt; GameAudio.sceneMusic</definition>
+        <argsstring></argsstring>
+        <name>sceneMusic</name>
+        <briefdescription>
+<para>Dictionary mapping each game scene to a background music track. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="49" column="24" bodyfile="src/Audio/GameAudio.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" prot="private" static="no" mutable="no">
+        <type>AudioStreamPlayer</type>
+        <definition>AudioStreamPlayer GameAudio.music</definition>
+        <argsstring></argsstring>
+        <name>music</name>
+        <briefdescription>
+<para>The audio player for background music. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="54" column="31" bodyfile="src/Audio/GameAudio.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" prot="private" static="no" mutable="no">
+        <type>AudioStreamPlayer</type>
+        <definition>AudioStreamPlayer GameAudio.sfx</definition>
+        <argsstring></argsstring>
+        <name>sfx</name>
+        <briefdescription>
+<para>The audio player for audio effects. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="59" column="31" bodyfile="src/Audio/GameAudio.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void GameAudio._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="61" column="26" bodyfile="src/Audio/GameAudio.cs" bodystart="61" bodyend="78"/>
+        <references refid="class_game_audio_1a20ac51641bd1520e7e2f98256ced7da4" compoundref="_game_audio_8cs" startline="14">MenuMusic</references>
+        <references refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" compoundref="_game_audio_8cs" startline="113" endline="116">OnMusicFinished</references>
+        <references refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" compoundref="_game_audio_8cs" startline="118" endline="121">OnSfxFinished</references>
+      </memberdef>
+      <memberdef kind="function" id="class_game_audio_1ac494431eace52893c1a35c662e74dee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameAudio.SetMusic</definition>
+        <argsstring>(GameScenes scene)</argsstring>
+        <name>SetMusic</name>
+        <param>
+          <type><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref></type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+<para>Sets a new music track, depending on the scene. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scene</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new scene executed by the main scene.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="84" column="17" bodyfile="src/Audio/GameAudio.cs" bodystart="84" bodyend="93"/>
+        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">Main.ChangeScene</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameAudio.PlayAccept</definition>
+        <argsstring>()</argsstring>
+        <name>PlayAccept</name>
+        <briefdescription>
+<para>Plays the accept audio effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="98" column="17" bodyfile="src/Audio/GameAudio.cs" bodystart="98" bodyend="102"/>
+        <references refid="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" compoundref="_game_audio_8cs" startline="38">AcceptSFX</references>
+        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">Main.ChangeScene</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameAudio.PlayCancel</definition>
+        <argsstring>()</argsstring>
+        <name>PlayCancel</name>
+        <briefdescription>
+<para>Plays the cancel audio effect. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="107" column="17" bodyfile="src/Audio/GameAudio.cs" bodystart="107" bodyend="111"/>
+        <references refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" compoundref="_game_audio_8cs" startline="44">CancelSFX</references>
+        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">Main.ChangeScene</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameAudio.OnMusicFinished</definition>
+        <argsstring>()</argsstring>
+        <name>OnMusicFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="113" column="17" bodyfile="src/Audio/GameAudio.cs" bodystart="113" bodyend="116"/>
+        <referencedby refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" compoundref="_game_audio_8cs" startline="61" endline="78">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameAudio.OnSfxFinished</definition>
+        <argsstring>()</argsstring>
+        <name>OnSfxFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Audio/GameAudio.cs" line="118" column="17" bodyfile="src/Audio/GameAudio.cs" bodystart="118" bodyend="121"/>
+        <referencedby refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" compoundref="_game_audio_8cs" startline="61" endline="78">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_node" kindref="compound">Node</ref> for playing audio globally in the game. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>GameAudio</label>
+        <link refid="class_game_audio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>AudioStream</label>
+      </node>
+      <node id="5">
+        <label>AudioStreamPlayer</label>
+      </node>
+      <node id="4">
+        <label>Dictionary&lt;</label>
+      </node>
+      <node id="1">
+        <label>GameAudio</label>
+        <link refid="class_game_audio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+AcceptSFX</edgelabel>
+          <edgelabel>+CancelSFX</edgelabel>
+          <edgelabel>+Level1Music</edgelabel>
+          <edgelabel>+Level2Music</edgelabel>
+          <edgelabel>+Level3Music</edgelabel>
+          <edgelabel>+MenuMusic</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-sceneMusic</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-music</edgelabel>
+          <edgelabel>-sfx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Audio/GameAudio.cs" line="8" column="7" bodyfile="src/Audio/GameAudio.cs" bodystart="9" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>_Ready</name></member>
+      <member refid="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>AcceptSFX</name></member>
+      <member refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>CancelSFX</name></member>
+      <member refid="class_game_audio_1acb552d42a8760720c6f3fe39dce1bee1" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>Level1Music</name></member>
+      <member refid="class_game_audio_1a13fe2789ea3a9ebdadfb82447958be08" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>Level2Music</name></member>
+      <member refid="class_game_audio_1ac66409802e2533dafa25f107a458c8d5" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>Level3Music</name></member>
+      <member refid="class_game_audio_1a20ac51641bd1520e7e2f98256ced7da4" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>MenuMusic</name></member>
+      <member refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" prot="private" virt="non-virtual"><scope>GameAudio</scope><name>music</name></member>
+      <member refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>OnMusicFinished</name></member>
+      <member refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>OnSfxFinished</name></member>
+      <member refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>PlayAccept</name></member>
+      <member refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>PlayCancel</name></member>
+      <member refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" prot="private" virt="non-virtual"><scope>GameAudio</scope><name>sceneMusic</name></member>
+      <member refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" prot="public" virt="non-virtual"><scope>GameAudio</scope><name>SetMusic</name></member>
+      <member refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" prot="private" virt="non-virtual"><scope>GameAudio</scope><name>sfx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_main_8cs" kind="file" language="C#">
+    <compoundname>Main.cs</compoundname>
+    <innerclass refid="class_main" prot="public">Main</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_main" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_main" kindref="compound">Main</ref><sp/>:<sp/><ref refid="class_node2_d" kindref="compound">Node2D</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_main_1aa2f640712c026469e26fc7954f11be5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>readonly<sp/>Vector2<sp/><ref refid="class_main_1aa2f640712c026469e26fc7954f11be5d" kindref="member">WINDOW_SIZE</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(1280,<sp/>720);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_node2_d" kindref="compound">Node2D</ref><sp/><ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_main_1ad75fdbc3f038e099f973477222fe3461" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_game_audio" kindref="compound">GameAudio</ref><sp/><ref refid="class_main_1ad75fdbc3f038e099f973477222fe3461" kindref="member">gameAudio</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_main_1a4e01ee6e74012ec1eebf4744eb2640ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_scene_factory" kindref="compound">SceneFactory</ref><sp/><ref refid="class_main_1a4e01ee6e74012ec1eebf4744eb2640ad" kindref="member">sceneFactory</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_main_1afa38a52a0b6f8e0362539aea9114f285" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_1afa38a52a0b6f8e0362539aea9114f285" kindref="member">_Ready</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneFactory<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_scene_factory" kindref="compound">SceneFactory</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.gameAudio<sp/>=<sp/>this.GetNode&lt;GameAudio&gt;(</highlight><highlight class="stringliteral">&quot;GameAudio&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetTree().DebugCollisionsHint<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_main_1aff56bc272e79a2419d64fd18356b052b" kindref="member">ChangeScene</ref>(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.PROFILE_SELECT);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_main_1aff56bc272e79a2419d64fd18356b052b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_1aff56bc272e79a2419d64fd18356b052b" kindref="member">ChangeScene</ref>(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref><sp/>scene)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.gameAudio.<ref refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" kindref="member">SetMusic</ref>(scene);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref><sp/>is<sp/><ref refid="class_profile_select" kindref="compound">ProfileSelect</ref><sp/>&amp;&amp;<sp/>scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.MAIN_MENU)<sp/>||</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">.Scene<sp/>is<sp/><ref refid="class_main_menu" kindref="compound">MainMenu</ref><sp/>&amp;&amp;<sp/>(scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL1<sp/>||<sp/>scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL2<sp/>||<sp/>scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL3)))</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.gameAudio.<ref refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" kindref="member">PlayAccept</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref><sp/>is<sp/><ref refid="class_main_menu" kindref="compound">MainMenu</ref><sp/>&amp;&amp;<sp/>scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.PROFILE_SELECT)<sp/>||<sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">.Scene<sp/>is<sp/><ref refid="class_level" kindref="compound">Level</ref><sp/>&amp;&amp;<sp/>scene<sp/>==<sp/><ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.MAIN_MENU))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.gameAudio.<ref refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" kindref="member">PlayCancel</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref>.QueueFree();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref><sp/>=<sp/>this.sceneFactory.<ref refid="class_scene_factory_1aa71c8ef1cc97cc029f7b54512187ae7d" kindref="member">New</ref>(scene);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.AddChild(this.<ref refid="class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff" kindref="member">Scene</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Main.cs"/>
+  </compounddef>
+</doxygen>

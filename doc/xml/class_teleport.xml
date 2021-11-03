@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_teleport" kind="class" language="C#" prot="public">
+    <compoundname>Teleport</compoundname>
+    <basecompoundref refid="class_main_action" prot="public" virt="non-virtual">MainAction</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_teleport_1a4262864228863630057ea5411f0b992b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Teleport.TELEPORT_DISTANCE</definition>
+        <argsstring></argsstring>
+        <name>TELEPORT_DISTANCE</name>
+        <initializer>= 256</initializer>
+        <briefdescription>
+<para>Default teleport distance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="12" column="16" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95">_Init</reimplements>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="13" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="13" bodyend="26"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
+        <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+        <references refid="class_teleport_1a4262864228863630057ea5411f0b992b" compoundref="_teleport_8cs" startline="12">TELEPORT_DISTANCE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1aa1335939a5f0597c9bf0cbb0ff418220" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplements refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce">_ActionOnGround</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="28" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="28" bodyend="35"/>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplements refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74">_ActionOnAir</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="37" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="37" bodyend="46"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1a777418072ec29926a6c0bb7596782952" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplements refid="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f">_ActionReleased</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="48" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="48" bodyend="51"/>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1ab64216d083c55dfc26ed7f236ed34a03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport._ActionProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_ActionProcess</name>
+        <reimplements refid="class_main_action_1abad27d048abd3f377cf7f2e1e15f6975">_ActionProcess</reimplements>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The process that will be executed each frame while the action is being performed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="52" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport.OnMainActionObjectCollisionCheckAreaEntered</definition>
+        <argsstring>(Area2D area)</argsstring>
+        <name>OnMainActionObjectCollisionCheckAreaEntered</name>
+        <reimplements refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68">OnMainActionObjectCollisionCheckAreaEntered</reimplements>
+        <param>
+          <type>Area2D</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="57" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="57" bodyend="69"/>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_1ab8724fd67974a34636592398ba31beac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void Teleport.OnMainActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnMainActionTimerTimeout</name>
+        <reimplements refid="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4">OnMainActionTimerTimeout</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="71" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_main" kindref="compound">Main</ref> action that allows the player to teleport a small distance above them. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Teleport</label>
+        <link refid="class_teleport"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+CanUseActionPad</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Teleport</label>
+        <link refid="class_teleport"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+TELEPORT_DISTANCE</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>bool</label>
+      </node>
+      <node id="6">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="7" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionOnAir</name></member>
+      <member refid="class_teleport_1aa1335939a5f0597c9bf0cbb0ff418220" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionOnGround</name></member>
+      <member refid="class_teleport_1ab64216d083c55dfc26ed7f236ed34a03" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionProcess</name></member>
+      <member refid="class_teleport_1a777418072ec29926a6c0bb7596782952" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionReleased</name></member>
+      <member refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" prot="public" virt="virtual"><scope>Teleport</scope><name>_Init</name></member>
+      <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" virt="virtual"><scope>Teleport</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Teleport</scope><name>Blocked</name></member>
+      <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Teleport</scope><name>CanUseActionPad</name></member>
+      <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Teleport</scope><name>GetTypeAsString</name></member>
+      <member refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" prot="public" virt="non-virtual"><scope>Teleport</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" prot="protected" virt="non-virtual"><scope>Teleport</scope><name>OnActionPad</name></member>
+      <member refid="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" prot="public" virt="virtual"><scope>Teleport</scope><name>OnMainActionObjectCollisionCheckAreaEntered</name></member>
+      <member refid="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" prot="public" virt="virtual"><scope>Teleport</scope><name>OnMainActionObjectCollisionCheckAreaExited</name></member>
+      <member refid="class_teleport_1ab8724fd67974a34636592398ba31beac" prot="public" virt="virtual"><scope>Teleport</scope><name>OnMainActionTimerTimeout</name></member>
+      <member refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" prot="public" virt="non-virtual"><scope>Teleport</scope><name>PerformingAction</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>Teleport</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>Teleport</scope><name>Setup</name></member>
+      <member refid="class_teleport_1a4262864228863630057ea5411f0b992b" prot="public" virt="non-virtual"><scope>Teleport</scope><name>TELEPORT_DISTANCE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

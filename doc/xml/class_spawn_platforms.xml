@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_spawn_platforms" kind="class" language="C#" prot="public">
+    <compoundname>SpawnPlatforms</compoundname>
+    <basecompoundref refid="class_secondary_action" prot="public" virt="non-virtual">SecondaryAction</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_spawn_platforms_1a907b6a7456095772af3765d68af5cdc4" prot="public" static="no" mutable="no">
+        <type>PackedScene</type>
+        <definition>PackedScene SpawnPlatforms.PlatformScene</definition>
+        <argsstring></argsstring>
+        <name>PlatformScene</name>
+        <initializer>= ResourceLoader.Load&lt;PackedScene&gt;(&quot;res://src/Entities/<ref refid="class_player" kindref="compound">Player</ref>/<ref refid="class_spawned_platform" kindref="compound">SpawnedPlatform</ref>/SpawnedPlatform.tscn&quot;)</initializer>
+        <briefdescription>
+<para>The platforms that can be spawned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="12" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spawn_platforms_1a223516f8a535749e901f616dd804bb4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SpawnPlatforms._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945">_Init</reimplements>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="14" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="14" bodyend="18"/>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SpawnPlatforms._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplements refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c">_ActionOnGround</reimplements>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on ground. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="20" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SpawnPlatforms._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplements refid="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673">_ActionOnAir</reimplements>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on air. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="25" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="25" bodyend="42"/>
+        <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">SecondaryAction.Blocked</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SpawnPlatforms._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplements refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf">_ActionReleased</reimplements>
+        <briefdescription>
+<para>The action that will be executed once the player stops pressing the action&apos;s input keyboard/mouse buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="44" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spawn_platforms_1a6c1b2b02211d0597d497209ae78ddca0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void SpawnPlatforms.OnSecondaryActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnSecondaryActionTimerTimeout</name>
+        <reimplements refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830">OnSecondaryActionTimerTimeout</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="48" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="48" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Secondary action that allows the player to spawn platforms while on air. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpawnPlatforms</label>
+        <link refid="class_spawn_platforms"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="5">
+        <label>PackedScene</label>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SpawnPlatforms</label>
+        <link refid="class_spawn_platforms"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+PlatformScene</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="7" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>_ActionOnAir</name></member>
+      <member refid="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>_ActionOnGround</name></member>
+      <member refid="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>_ActionReleased</name></member>
+      <member refid="class_spawn_platforms_1a223516f8a535749e901f616dd804bb4f" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>_Init</name></member>
+      <member refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" prot="public" virt="non-virtual"><scope>SpawnPlatforms</scope><name>Blocked</name></member>
+      <member refid="class_secondary_action_1ad95829ffc55ac6b517a5fe37eb282f4d" prot="public" virt="non-virtual"><scope>SpawnPlatforms</scope><name>GetTypeAsString</name></member>
+      <member refid="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" prot="public" virt="non-virtual"><scope>SpawnPlatforms</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_spawn_platforms_1a6c1b2b02211d0597d497209ae78ddca0" prot="public" virt="virtual"><scope>SpawnPlatforms</scope><name>OnSecondaryActionTimerTimeout</name></member>
+      <member refid="class_spawn_platforms_1a907b6a7456095772af3765d68af5cdc4" prot="public" virt="non-virtual"><scope>SpawnPlatforms</scope><name>PlatformScene</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>SpawnPlatforms</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>SpawnPlatforms</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

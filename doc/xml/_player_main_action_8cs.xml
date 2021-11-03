@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_player_main_action_8cs" kind="file" language="C#">
+    <compoundname>PlayerMainAction.cs</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerMainAction</name>
+        <enumvalue id="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a40222410c7347ec4b6bcaba3bcb21f3b" prot="public">
+          <name>JUMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9ac09e5fe838864a6dd40e886135d0dc97" prot="public">
+          <name>JETPACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a8163acad1c5fcd3bd5f60596bbd7bfbc" prot="public">
+          <name>GLIDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a54860528fc735ef260c3f89b6520d3af" prot="public">
+          <name>TELEPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of actions that the player can perform as main action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Enums/PlayerMainAction.cs" line="4" column="7" bodyfile="src/Entities/Player/Enums/PlayerMainAction.cs" bodystart="4" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4" refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" refkind="member"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a40222410c7347ec4b6bcaba3bcb21f3b" kindref="member">JUMP</ref>,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9ac09e5fe838864a6dd40e886135d0dc97" kindref="member">JETPACK</ref>,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a8163acad1c5fcd3bd5f60596bbd7bfbc" kindref="member">GLIDE</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9a54860528fc735ef260c3f89b6520d3af" kindref="member">TELEPORT</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Entities/Player/Enums/PlayerMainAction.cs"/>
+  </compounddef>
+</doxygen>

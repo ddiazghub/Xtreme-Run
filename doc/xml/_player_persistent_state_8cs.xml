@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_player_persistent_state_8cs" kind="file" language="C#">
+    <compoundname>PlayerPersistentState.cs</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerPersistentState</name>
+        <enumvalue id="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83a1f318f91e5ed96e34964105b41b19d1a" prot="public">
+          <name>ON_GROUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83ae3f1ff649ef0732c2ba1f5da8e97581a" prot="public">
+          <name>ON_AIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>List of persistent states the player have. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Enums/PlayerPersistentState.cs" line="4" column="7" bodyfile="src/Entities/Player/Enums/PlayerPersistentState.cs" bodystart="4" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4" refid="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83" refkind="member"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83" kindref="member">PlayerPersistentState</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83a1f318f91e5ed96e34964105b41b19d1a" kindref="member">ON_GROUND</ref>,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83ae3f1ff649ef0732c2ba1f5da8e97581a" kindref="member">ON_AIR</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Entities/Player/Enums/PlayerPersistentState.cs"/>
+  </compounddef>
+</doxygen>

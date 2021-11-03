@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_shop_g_u_i" kind="class" language="C#" prot="public">
+    <compoundname>ShopGUI</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NinePatchRect</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_shop_g_u_i_1a8bf98d564883ae5927975a1790027d45" prot="private" static="no" mutable="no">
+        <type>UInt32[]</type>
+        <definition>UInt32 [] ShopGUI.itemCost</definition>
+        <argsstring></argsstring>
+        <name>itemCost</name>
+        <briefdescription>
+<para>Array containing the cost of each item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="18" column="20" bodyfile="src/Scenes/ShopGUI.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_shop_g_u_i_1ab34b159241bbb12917f9a4dc4bbef6ff" prot="private" static="no" mutable="no">
+        <type>Texture</type>
+        <definition>Texture ShopGUI.checkTick</definition>
+        <argsstring></argsstring>
+        <name>checkTick</name>
+        <initializer>= ResourceLoader.Load&lt;Texture&gt;(&quot;res://res/Sprites/player/level_keys/store_check.png&quot;)</initializer>
+        <briefdescription>
+<para>Image texture of the check for labeling owned items. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="23" column="21" bodyfile="src/Scenes/ShopGUI.cs" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">_Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">OnBuyPressed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shop_g_u_i_1a22cf6ed357c8d2aa5fa9f56212f0cf6e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ShopGUI.selected</definition>
+        <argsstring></argsstring>
+        <name>selected</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>The currently selected item. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="28" column="17" bodyfile="src/Scenes/ShopGUI.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">OnBuyPressed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_shop_g_u_i_1ab49dca7c086e1c7e21895a0517192bdc" prot="private" static="no" mutable="no">
+        <type>string[]</type>
+        <definition>string [] ShopGUI.keys</definition>
+        <argsstring></argsstring>
+        <name>keys</name>
+        <initializer>= {
+        &quot;Skin&quot;,
+        &quot;Clothing&quot;,
+        &quot;Keys&quot;
+    }</initializer>
+        <briefdescription>
+<para>Keys for labeling items. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="33" column="20" bodyfile="src/Scenes/ShopGUI.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_shop_g_u_i_1a3afd1cedc36ef4900dcd83db77fc50d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void ShopGUI.ProfileChanged</definition>
+        <argsstring>()</argsstring>
+        <name>ProfileChanged</name>
+        <briefdescription>
+<para>Emitted if the player profile changed. (If an item was bought) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ShopGUI._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="39" column="26" bodyfile="src/Scenes/ShopGUI.cs" bodystart="39" bodyend="107"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_shop_g_u_i_1ab34b159241bbb12917f9a4dc4bbef6ff" compoundref="_shop_g_u_i_8cs" startline="23">checkTick</references>
+        <references refid="class_palette_1a25336192634062811d8659ee0ad065c6" compoundref="_palette_8cs" startline="106" endline="114">Palette.Instance</references>
+        <references refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">OnBuyPressed</references>
+        <references refid="class_shop_g_u_i_1ab993141e4f22e2df8e1c7239da6f4828" compoundref="_shop_g_u_i_8cs" startline="129" endline="132">OnCancelPressed</references>
+        <references refid="class_shop_g_u_i_1a16b59adaaf6be46aaf26fd1ae39bf982" compoundref="_shop_g_u_i_8cs" startline="109" endline="127">OnItemButtonPressed</references>
+        <references refid="class_save_file_info_1a7ae7464cc54480d6bf1914000d8f60a9" compoundref="_save_file_info_8cs" startline="9">SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH</references>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">Profile.OwnedItems</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_palette_1ab973750bb28f3de18132de170c08c092" compoundref="_palette_8cs" startline="122" endline="132">Palette.TextureFromColor</references>
+        <references refid="class_main_1aa2f640712c026469e26fc7954f11be5d" compoundref="_main_8cs" startline="13">Main.WINDOW_SIZE</references>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_g_u_i_1a16b59adaaf6be46aaf26fd1ae39bf982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopGUI.OnItemButtonPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnItemButtonPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="109" column="17" bodyfile="src/Scenes/ShopGUI.cs" bodystart="109" bodyend="127"/>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_g_u_i_1ab993141e4f22e2df8e1c7239da6f4828" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopGUI.OnCancelPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnCancelPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="129" column="17" bodyfile="src/Scenes/ShopGUI.cs" bodystart="129" bodyend="132"/>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ShopGUI.OnBuyPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnBuyPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ShopGUI.cs" line="134" column="17" bodyfile="src/Scenes/ShopGUI.cs" bodystart="134" bodyend="169"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_shop_g_u_i_1ab34b159241bbb12917f9a4dc4bbef6ff" compoundref="_shop_g_u_i_8cs" startline="23">checkTick</references>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">Profile.OwnedItems</references>
+        <references refid="class_profile_1af87d47cc73db8b55b24e5ab547534272" compoundref="_profile_8cs" startline="39" endline="42">Profile.Points</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_player_session_1a8522ef9c8fc11562857f5a4a7955cca7" compoundref="_player_session_8cs" startline="43" endline="46">PlayerSession.Save</references>
+        <references refid="class_shop_g_u_i_1a22cf6ed357c8d2aa5fa9f56212f0cf6e" compoundref="_shop_g_u_i_8cs" startline="28">selected</references>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The shop from which the player can buy items. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>ShopGUI</label>
+        <link refid="class_shop_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>NinePatchRect</label>
+      </node>
+      <node id="1">
+        <label>ShopGUI</label>
+        <link refid="class_shop_g_u_i"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-itemCost</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-checkTick</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-selected</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-keys</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Texture</label>
+      </node>
+      <node id="3">
+        <label>UInt32[]</label>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="6">
+        <label>string[]</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ShopGUI.cs" line="7" column="7" bodyfile="src/Scenes/ShopGUI.cs" bodystart="8" bodyend="170"/>
+    <listofallmembers>
+      <member refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" prot="public" virt="non-virtual"><scope>ShopGUI</scope><name>_Ready</name></member>
+      <member refid="class_shop_g_u_i_1ab34b159241bbb12917f9a4dc4bbef6ff" prot="private" virt="non-virtual"><scope>ShopGUI</scope><name>checkTick</name></member>
+      <member refid="class_shop_g_u_i_1a8bf98d564883ae5927975a1790027d45" prot="private" virt="non-virtual"><scope>ShopGUI</scope><name>itemCost</name></member>
+      <member refid="class_shop_g_u_i_1ab49dca7c086e1c7e21895a0517192bdc" prot="private" virt="non-virtual"><scope>ShopGUI</scope><name>keys</name></member>
+      <member refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" prot="public" virt="non-virtual"><scope>ShopGUI</scope><name>OnBuyPressed</name></member>
+      <member refid="class_shop_g_u_i_1ab993141e4f22e2df8e1c7239da6f4828" prot="public" virt="non-virtual"><scope>ShopGUI</scope><name>OnCancelPressed</name></member>
+      <member refid="class_shop_g_u_i_1a16b59adaaf6be46aaf26fd1ae39bf982" prot="public" virt="non-virtual"><scope>ShopGUI</scope><name>OnItemButtonPressed</name></member>
+      <member refid="class_shop_g_u_i_1a3afd1cedc36ef4900dcd83db77fc50d9" prot="public" virt="non-virtual"><scope>ShopGUI</scope><name>ProfileChanged</name></member>
+      <member refid="class_shop_g_u_i_1a22cf6ed357c8d2aa5fa9f56212f0cf6e" prot="private" virt="non-virtual"><scope>ShopGUI</scope><name>selected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

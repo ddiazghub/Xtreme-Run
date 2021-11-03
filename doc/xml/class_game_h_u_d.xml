@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_game_h_u_d" kind="class" language="C#" prot="public">
+    <compoundname>GameHUD</compoundname>
+    <basecompoundref refid="class_canvas_layer" prot="public" virt="non-virtual">CanvasLayer</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_h_u_d_1ac09e85b7ce65957efbd8bbdfdd4b8a26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void GameHUD.PausePressed</definition>
+        <argsstring>()</argsstring>
+        <name>PausePressed</name>
+        <briefdescription>
+<para>Signal emitted when the pause button is pressed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1afcc3b8e708e40ba3ff8e8307c8d80ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void GameHUD.PauseMouseEntered</definition>
+        <argsstring>()</argsstring>
+        <name>PauseMouseEntered</name>
+        <briefdescription>
+<para>Signal emitted when the mouse enters the pause button area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="19" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a90646dbfe93e9d42dc67db2f4b8ee7a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void GameHUD.PauseMouseExited</definition>
+        <argsstring>()</argsstring>
+        <name>PauseMouseExited</name>
+        <briefdescription>
+<para>Signal emitted when the mouse exits the pause button area. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="25" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1ae27ae16bd96db64b23a7df4d83f08026" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void GameHUD._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="27" column="26" bodyfile="src/Scenes/GameHUD.cs" bodystart="27" bodyend="32"/>
+        <references refid="class_game_h_u_d_1a0d307f074a3fc08d2d46626445ca8041" compoundref="_game_h_u_d_8cs" startline="86" endline="89">OnPauseMouseEntered</references>
+        <references refid="class_game_h_u_d_1a182e186269a8e128619312c89dca36fd" compoundref="_game_h_u_d_8cs" startline="91" endline="94">OnPauseMouseExited</references>
+        <references refid="class_game_h_u_d_1a317071a9133c94c6efcbe8c81ee17516" compoundref="_game_h_u_d_8cs" startline="81" endline="84">OnPausePressed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a511dd4c57dc75287bfa056bdbba46d95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.SetPoints</definition>
+        <argsstring>(int points)</argsstring>
+        <name>SetPoints</name>
+        <param>
+          <type>int</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of points to display in the points counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new number of points to display.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="38" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="38" bodyend="41"/>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1ad76c722e11f1eae273e8096f843646fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.SetProgress</definition>
+        <argsstring>(double percent)</argsstring>
+        <name>SetProgress</name>
+        <param>
+          <type>double</type>
+          <declname>percent</declname>
+        </param>
+        <briefdescription>
+<para>Sets the progress to display in the level progress bar. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>percent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player&apos;s new progress.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="47" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="47" bodyend="50"/>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a1b64a3c74071717408c1c809a4a6804a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.SetAttempts</definition>
+        <argsstring>(int number)</argsstring>
+        <name>SetAttempts</name>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Sets the number of attempts to display on the attempts counter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The player&apos;s new number of attempts.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="56" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="56" bodyend="59"/>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Level.Restart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.SetActions</definition>
+        <argsstring>(PlayerMainAction main, PlayerSecondaryAction secondary)</argsstring>
+        <name>SetActions</name>
+        <param>
+          <type><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref></type>
+          <declname>main</declname>
+        </param>
+        <param>
+          <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
+          <declname>secondary</declname>
+        </param>
+        <briefdescription>
+<para>Sets the player actions to display on the hud. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>main</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The main action the player currently has.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The secondary action the player currently has.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="66" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="66" bodyend="79"/>
+        <references refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" compoundref="_main_action_8cs" startline="129" endline="148">MainAction.GetTypeAsStringEsp</references>
+        <references refid="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" compoundref="_secondary_action_8cs" startline="94" endline="113">SecondaryAction.GetTypeAsStringEsp</references>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a317071a9133c94c6efcbe8c81ee17516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.OnPausePressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnPausePressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="81" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="81" bodyend="84"/>
+        <referencedby refid="class_game_h_u_d_1ae27ae16bd96db64b23a7df4d83f08026" compoundref="_game_h_u_d_8cs" startline="27" endline="32">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a0d307f074a3fc08d2d46626445ca8041" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.OnPauseMouseEntered</definition>
+        <argsstring>()</argsstring>
+        <name>OnPauseMouseEntered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="86" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="86" bodyend="89"/>
+        <referencedby refid="class_game_h_u_d_1ae27ae16bd96db64b23a7df4d83f08026" compoundref="_game_h_u_d_8cs" startline="27" endline="32">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_h_u_d_1a182e186269a8e128619312c89dca36fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameHUD.OnPauseMouseExited</definition>
+        <argsstring>()</argsstring>
+        <name>OnPauseMouseExited</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/GameHUD.cs" line="91" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="91" bodyend="94"/>
+        <referencedby refid="class_game_h_u_d_1ae27ae16bd96db64b23a7df4d83f08026" compoundref="_game_h_u_d_8cs" startline="27" endline="32">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The hud that shows when the player is in a level. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CanvasLayer</label>
+        <link refid="class_canvas_layer"/>
+      </node>
+      <node id="1">
+        <label>GameHUD</label>
+        <link refid="class_game_h_u_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CanvasLayer</label>
+        <link refid="class_canvas_layer"/>
+      </node>
+      <node id="1">
+        <label>GameHUD</label>
+        <link refid="class_game_h_u_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/GameHUD.cs" line="7" column="7" bodyfile="src/Scenes/GameHUD.cs" bodystart="8" bodyend="95"/>
+    <listofallmembers>
+      <member refid="class_game_h_u_d_1ae27ae16bd96db64b23a7df4d83f08026" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>_Ready</name></member>
+      <member refid="class_game_h_u_d_1a0d307f074a3fc08d2d46626445ca8041" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>OnPauseMouseEntered</name></member>
+      <member refid="class_game_h_u_d_1a182e186269a8e128619312c89dca36fd" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>OnPauseMouseExited</name></member>
+      <member refid="class_game_h_u_d_1a317071a9133c94c6efcbe8c81ee17516" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>OnPausePressed</name></member>
+      <member refid="class_game_h_u_d_1afcc3b8e708e40ba3ff8e8307c8d80ae5" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>PauseMouseEntered</name></member>
+      <member refid="class_game_h_u_d_1a90646dbfe93e9d42dc67db2f4b8ee7a8" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>PauseMouseExited</name></member>
+      <member refid="class_game_h_u_d_1ac09e85b7ce65957efbd8bbdfdd4b8a26" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>PausePressed</name></member>
+      <member refid="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>SetActions</name></member>
+      <member refid="class_game_h_u_d_1a1b64a3c74071717408c1c809a4a6804a" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>SetAttempts</name></member>
+      <member refid="class_game_h_u_d_1a511dd4c57dc75287bfa056bdbba46d95" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>SetPoints</name></member>
+      <member refid="class_game_h_u_d_1ad76c722e11f1eae273e8096f843646fb" prot="public" virt="non-virtual"><scope>GameHUD</scope><name>SetProgress</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_teleport_and_switch_gravity" kind="class" language="C#" prot="public">
+    <compoundname>TeleportAndSwitchGravity</compoundname>
+    <basecompoundref refid="class_secondary_action" prot="public" virt="non-virtual">SecondaryAction</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1a5a48df9387198b5ea63957f884a513f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TeleportAndSwitchGravity._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945">_Init</reimplements>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="8" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="8" bodyend="12"/>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TeleportAndSwitchGravity._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplements refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c">_ActionOnGround</reimplements>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on ground. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="14" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="14" bodyend="23"/>
+        <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
+        <references refid="class_teleport_and_switch_gravity_1a49809a107376cd8ad243ca3631c258a4" compoundref="_teleport_and_switch_gravity_8cs" startline="47" endline="53">invertGravity</references>
+        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="136" endline="136">Player.Invincible</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1ad74396e09855f299b756fd9a11ea95b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TeleportAndSwitchGravity._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplements refid="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673">_ActionOnAir</reimplements>
+        <briefdescription>
+<para>The action that will be executed if the player inputs the action&apos;s keys and the player&apos;s persistent state is on air. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="25" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1ab8ef1a89a937fb3a90c88b65d4c028bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TeleportAndSwitchGravity._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplements refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf">_ActionReleased</reimplements>
+        <briefdescription>
+<para>The action that will be executed once the player stops pressing the action&apos;s input keyboard/mouse buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="30" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void TeleportAndSwitchGravity.OnSecondaryActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnSecondaryActionTimerTimeout</name>
+        <reimplements refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830">OnSecondaryActionTimerTimeout</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="35" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="35" bodyend="42"/>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="136" endline="136">Player.Invincible</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_teleport_and_switch_gravity_1a49809a107376cd8ad243ca3631c258a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TeleportAndSwitchGravity.invertGravity</definition>
+        <argsstring>()</argsstring>
+        <name>invertGravity</name>
+        <briefdescription>
+<para>Invert&apos;s the player&apos;s gravity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="47" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="47" bodyend="53"/>
+        <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">SecondaryAction.Blocked</references>
+        <references refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">Player.InvertGravity</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <referencedby refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" compoundref="_teleport_and_switch_gravity_8cs" startline="14" endline="23">_ActionOnGround</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Secondary action that allows the player to teleport and invert the direction of gravity. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TeleportAndSwitchGravity</label>
+        <link refid="class_teleport_and_switch_gravity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="3">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SecondaryAction</label>
+        <link refid="class_secondary_action"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TeleportAndSwitchGravity</label>
+        <link refid="class_teleport_and_switch_gravity"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/TeleportAndSwitchGravity.cs" bodystart="7" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_teleport_and_switch_gravity_1ad74396e09855f299b756fd9a11ea95b9" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>_ActionOnAir</name></member>
+      <member refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>_ActionOnGround</name></member>
+      <member refid="class_teleport_and_switch_gravity_1ab8ef1a89a937fb3a90c88b65d4c028bb" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>_ActionReleased</name></member>
+      <member refid="class_teleport_and_switch_gravity_1a5a48df9387198b5ea63957f884a513f8" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>_Init</name></member>
+      <member refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" prot="public" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>Blocked</name></member>
+      <member refid="class_secondary_action_1ad95829ffc55ac6b517a5fe37eb282f4d" prot="public" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>GetTypeAsString</name></member>
+      <member refid="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" prot="public" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_teleport_and_switch_gravity_1a49809a107376cd8ad243ca3631c258a4" prot="public" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>invertGravity</name></member>
+      <member refid="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53" prot="public" virt="virtual"><scope>TeleportAndSwitchGravity</scope><name>OnSecondaryActionTimerTimeout</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>TeleportAndSwitchGravity</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -23,6 +23,11 @@ public class PlayerSession
         private set;
     }
 
+    private PlayerSession()
+    {
+
+    }
+
     /// <summary>
     ///     Loads a profile with the given id and makes it the active profile.
     /// </summary>

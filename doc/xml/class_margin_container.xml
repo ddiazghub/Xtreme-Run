@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_margin_container" kind="class" language="C#" prot="public">
+    <compoundname>MarginContainer</compoundname>
+    <derivedcompoundref refid="class_points_counter" prot="public" virt="non-virtual">PointsCounter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MarginContainer</label>
+        <link refid="class_margin_container"/>
+      </node>
+      <node id="2">
+        <label>PointsCounter</label>
+        <link refid="class_points_counter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MarginContainer</label>
+        <link refid="class_margin_container"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/PointsCounter.cs" line="7" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

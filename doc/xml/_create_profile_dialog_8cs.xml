@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_create_profile_dialog_8cs" kind="file" language="C#">
+    <compoundname>CreateProfileDialog.cs</compoundname>
+    <innerclass refid="class_create_profile_dialog" prot="public">CreateProfileDialog</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_create_profile_dialog" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_create_profile_dialog" kindref="compound">CreateProfileDialog</ref><sp/>:<sp/><ref refid="class_confirmation_dialog" kindref="compound">ConfirmationDialog</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>[Signal]</highlight></codeline>
+<codeline lineno="13" refid="class_create_profile_dialog_1aaee4a09777e0914a99edf9637301e617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>delegate<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_create_profile_dialog_1aaee4a09777e0914a99edf9637301e617" kindref="member">CreationFailed</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_create_profile_dialog_1a3a907d3b5f0b25c8760135a75ab67c16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_create_profile_dialog_1a3a907d3b5f0b25c8760135a75ab67c16" kindref="member">profileID</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" kindref="member">_Ready</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.GetParent()<sp/>is<sp/><ref refid="class_profile_select_entry" kindref="compound">ProfileSelectEntry</ref>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.profileID<sp/>=<sp/>this.GetParent&lt;ProfileSelectEntry&gt;().ProfileID;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetOk().Text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Confirmar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetCancel().Text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Cancelar&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Connect(</highlight><highlight class="stringliteral">&quot;confirmed&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" kindref="member">OnCreateProfileDialogConfirmed</ref>));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Connect(</highlight><highlight class="stringliteral">&quot;about_to_show&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" kindref="member">OnCreateProfileDialogAboutToShow</ref>));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" kindref="member">OnCreateProfileDialogConfirmed</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/>this.GetNode&lt;LineEdit&gt;(</highlight><highlight class="stringliteral">&quot;LineEdit&quot;</highlight><highlight class="normal">).Text;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_profile" kindref="compound">Profile</ref>.<ref refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" kindref="member">NameIsAvailable</ref>(name))</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.EmitSignal(</highlight><highlight class="stringliteral">&quot;CreationFailed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetCancel().Pressed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_profile" kindref="compound">Profile</ref>.<ref refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" kindref="member">Create</ref>(this.profileID,<sp/>name);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_session" kindref="compound">PlayerSession</ref>.<ref refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" kindref="member">ActiveSession</ref>.<ref refid="class_player_session_1a819cebf72563f1e27a78962f82fb9c72" kindref="member">Load</ref>(this.profileID);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetTree().Root.GetNode&lt;<ref refid="class_main" kindref="compound">Main</ref>&gt;(</highlight><highlight class="stringliteral">&quot;Main&quot;</highlight><highlight class="normal">).ChangeScene(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.MAIN_MENU);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" kindref="member">OnCreateProfileDialogAboutToShow</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetNode&lt;LineEdit&gt;(</highlight><highlight class="stringliteral">&quot;LineEdit&quot;</highlight><highlight class="normal">).Clear();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Scenes/CreateProfileDialog.cs"/>
+  </compounddef>
+</doxygen>

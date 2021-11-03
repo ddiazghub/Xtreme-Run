@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_a2841f49aeb4083c1257cdcc6d581e19" kind="dir">
+    <compoundname>src/Profiles</compoundname>
+    <innerfile refid="_avatar_8cs">Avatar.cs</innerfile>
+    <innerfile refid="_player_session_8cs">PlayerSession.cs</innerfile>
+    <innerfile refid="_profile_8cs">Profile.cs</innerfile>
+    <innerfile refid="_save_file_info_8cs">SaveFileInfo.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Profiles/"/>
+  </compounddef>
+</doxygen>

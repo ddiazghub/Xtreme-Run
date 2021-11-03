@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_profile" kind="class" language="C#" prot="public">
+    <compoundname>Profile</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_profile_1a8907ef1053fdebaeb5322e09ffe38128" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Profile.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+<para>The profile id. Can be any number between 0 and 5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="14" column="16" bodyfile="src/Profiles/Profile.cs" bodystart="14" bodyend="17"/>
+        <referencedby refid="class_profile_1af0c359996b22ff324708c48445c067f5" compoundref="_profile_8cs" startline="242" endline="250">Get</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1a0e50ac0f5032687e6083e99749fcd199" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Profile.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <briefdescription>
+<para>The profile name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="22" column="19" bodyfile="src/Profiles/Profile.cs" bodystart="22" bodyend="25"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" compoundref="_profile_8cs" startline="301" endline="315">NameIsAvailable</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">ToBytes</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
+        <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1a307f6749c751e25cef64f85b07f02514" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_avatar" kindref="compound">Avatar</ref></type>
+        <definition>Avatar Profile.Avatar</definition>
+        <argsstring></argsstring>
+        <name>Avatar</name>
+        <briefdescription>
+<para>The profile&apos;s avatar. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="30" column="19" bodyfile="src/Profiles/Profile.cs" bodystart="31" bodyend="33"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
+        <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1af87d47cc73db8b55b24e5ab547534272" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>UInt32</type>
+        <definition>UInt32 Profile.Points</definition>
+        <argsstring></argsstring>
+        <name>Points</name>
+        <briefdescription>
+<para>The number of points that the profile currently owns. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="38" column="19" bodyfile="src/Profiles/Profile.cs" bodystart="39" bodyend="42"/>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">MainMenu.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool[]</type>
+        <definition>bool [] Profile.OwnedItems</definition>
+        <argsstring></argsstring>
+        <name>OwnedItems</name>
+        <briefdescription>
+<para>An array of booleans in which each index corresponds to a store item&apos;s id. Each element is true if the item was bought from the store and is currently owned and false otherwise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="48" column="17" bodyfile="src/Profiles/Profile.cs" bodystart="49" bodyend="51"/>
+        <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">EditProfileGUI._Process</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" compoundref="_profile_8cs" startline="216" endline="232">LevelIsUnlocked</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int[]</type>
+        <definition>int [] Profile.LevelProgress</definition>
+        <argsstring></argsstring>
+        <name>LevelProgress</name>
+        <briefdescription>
+<para>An array of ints that contains the maximum percent of progress the player has reached in each level. Element 0 is level 1, element 1 is level 2 and element 2 is level 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="57" column="16" bodyfile="src/Profiles/Profile.cs" bodystart="58" bodyend="60"/>
+        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">Level.GetPoints</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">ToBytes</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1aabba37c3975118edacf08f6f51e9252d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Profile.CurrentLevel</definition>
+        <argsstring></argsstring>
+        <name>CurrentLevel</name>
+        <briefdescription>
+<para>The level the player is currently in, that being the first level the player hasn&apos;t completed or level 3 if all have been completed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="65" column="16" bodyfile="src/Profiles/Profile.cs" bodystart="66" bodyend="77"/>
+        <referencedby refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" compoundref="_level_picker_8cs" startline="20" endline="28">LevelPicker._Ready</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1a54f4969aeceaac4db0be879867e71fe3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; Profile.CompletedLevels</definition>
+        <argsstring></argsstring>
+        <name>CompletedLevels</name>
+        <briefdescription>
+<para>A list of the levels the player has completed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="82" column="17" bodyfile="src/Profiles/Profile.cs" bodystart="83" bodyend="99"/>
+        <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_profile_1adaf86441cdfa02d937270c3cd466e2f8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Profile.NumberOfOwnedItems</definition>
+        <argsstring></argsstring>
+        <name>NumberOfOwnedItems</name>
+        <briefdescription>
+<para>The number of items the player has bought from the store. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="104" column="16" bodyfile="src/Profiles/Profile.cs" bodystart="105" bodyend="118"/>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" prot="public" static="yes" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string Profile.SAVES_DIRECTORY</definition>
+        <argsstring></argsstring>
+        <name>SAVES_DIRECTORY</name>
+        <initializer>= Path.Combine(Environment.GetEnvironmentVariable(&quot;HOMEPATH&quot;), &quot;XtremeRun&quot;, &quot;Saves&quot;)</initializer>
+        <briefdescription>
+<para>Directory where the profiles will be stored. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="123" column="35" bodyfile="src/Profiles/Profile.cs" bodystart="123" bodyend="-1"/>
+        <referencedby refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Create</referencedby>
+        <referencedby refid="class_profile_1a65e989b8d3b98a068c286831391f5e6b" compoundref="_profile_8cs" startline="281" endline="284">Delete</referencedby>
+        <referencedby refid="class_profile_1a1611ed62259b932927164f5bff513c4b" compoundref="_profile_8cs" startline="291" endline="294">Exists</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_player_session_1a8522ef9c8fc11562857f5a4a7955cca7" compoundref="_player_session_8cs" startline="43" endline="46">PlayerSession.Save</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_profile_1a0603d28949b8c323d8bae91ea138d6f7" prot="public" static="yes" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int Profile.MAX_NUMBER_OF_SAVES</definition>
+        <argsstring></argsstring>
+        <name>MAX_NUMBER_OF_SAVES</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+<para>Maximum number of profiles that can be saved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="128" column="32" bodyfile="src/Profiles/Profile.cs" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_profile_1a390b2643abb820e749741eb38206666d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Profile.Profile</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Profile</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Loads an existing profile from a file by the profile&apos;s id. If the profile doesn&apos;t exist or the save file is corrupted, returns a profile with an id of 6. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the profile to load.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="135" column="13" bodyfile="src/Profiles/Profile.cs" bodystart="135" bodyend="177"/>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Avatar</references>
+        <references refid="class_save_file_info_1abc5665de7ee4d5eacd4f5c46ebc04774" compoundref="_save_file_info_8cs" startline="16">SaveFileInfo.AVATAR_COLOR_BOTTOM</references>
+        <references refid="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" compoundref="_save_file_info_8cs" startline="14">SaveFileInfo.AVATAR_COLOR_SKIN</references>
+        <references refid="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" compoundref="_save_file_info_8cs" startline="15">SaveFileInfo.AVATAR_COLOR_TOP</references>
+        <references refid="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" compoundref="_save_file_info_8cs" startline="13">SaveFileInfo.AVATAR_GENDER</references>
+        <references refid="class_profile_1a65e989b8d3b98a068c286831391f5e6b" compoundref="_profile_8cs" startline="281" endline="284">Delete</references>
+        <references refid="class_profile_1a1611ed62259b932927164f5bff513c4b" compoundref="_profile_8cs" startline="291" endline="294">Exists</references>
+        <references refid="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" compoundref="_save_file_info_8cs" startline="7">SaveFileInfo.FILE_SIZE</references>
+        <references refid="class_profile_1a8907ef1053fdebaeb5322e09ffe38128" compoundref="_profile_8cs" startline="14" endline="17">ID</references>
+        <references refid="class_save_file_info_1a88826262dbf83ff99c49406bf9ac8d28" compoundref="_save_file_info_8cs" startline="19">SaveFileInfo.LEVEL1_PROGRESS</references>
+        <references refid="class_save_file_info_1a95bbf967cf5a874f60264ddbc48d20f1" compoundref="_save_file_info_8cs" startline="20">SaveFileInfo.LEVEL2_PROGRESS</references>
+        <references refid="class_save_file_info_1ad37b953d2a3e25a86487c40f6d439612" compoundref="_save_file_info_8cs" startline="21">SaveFileInfo.LEVEL3_PROGRESS</references>
+        <references refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" compoundref="_profile_8cs" startline="58" endline="60">LevelProgress</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Name</references>
+        <references refid="class_save_file_info_1aae1fcea482e56652da383883a158f46a" compoundref="_save_file_info_8cs" startline="18">SaveFileInfo.OWNED_ITEMS</references>
+        <references refid="class_save_file_info_1a7ae7464cc54480d6bf1914000d8f60a9" compoundref="_save_file_info_8cs" startline="9">SaveFileInfo.OWNED_ITEMS_BUFFER_LENGTH</references>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">OwnedItems</references>
+        <references refid="class_profile_1af87d47cc73db8b55b24e5ab547534272" compoundref="_profile_8cs" startline="39" endline="42">Points</references>
+        <references refid="class_save_file_info_1a9e0844e2686e0945287c6f69f6995e75" compoundref="_save_file_info_8cs" startline="17">SaveFileInfo.POINTS</references>
+        <references refid="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" compoundref="_save_file_info_8cs" startline="12">SaveFileInfo.PROFILE_NAME</references>
+        <references refid="class_save_file_info_1a79f57147d656897bffc591effa801806" compoundref="_save_file_info_8cs" startline="8">SaveFileInfo.PROFILE_NAME_MAX_SIZE</references>
+        <references refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" compoundref="_profile_8cs" startline="123">SAVES_DIRECTORY</references>
+        <referencedby refid="class_profile_1af0c359996b22ff324708c48445c067f5" compoundref="_profile_8cs" startline="242" endline="250">Get</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>byte[]</type>
+        <definition>byte[] Profile.ToBytes</definition>
+        <argsstring>()</argsstring>
+        <name>ToBytes</name>
+        <briefdescription>
+<para>Writes the profile data to an array of bytes for saving in a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A byte buffer containing the profile data</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="183" column="17" bodyfile="src/Profiles/Profile.cs" bodystart="183" bodyend="209"/>
+        <references refid="class_save_file_info_1abc5665de7ee4d5eacd4f5c46ebc04774" compoundref="_save_file_info_8cs" startline="16">SaveFileInfo.AVATAR_COLOR_BOTTOM</references>
+        <references refid="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" compoundref="_save_file_info_8cs" startline="14">SaveFileInfo.AVATAR_COLOR_SKIN</references>
+        <references refid="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" compoundref="_save_file_info_8cs" startline="15">SaveFileInfo.AVATAR_COLOR_TOP</references>
+        <references refid="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" compoundref="_save_file_info_8cs" startline="13">SaveFileInfo.AVATAR_GENDER</references>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28">Avatar.BottomColor</references>
+        <references refid="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" compoundref="_save_file_info_8cs" startline="7">SaveFileInfo.FILE_SIZE</references>
+        <references refid="class_save_file_info_1a88826262dbf83ff99c49406bf9ac8d28" compoundref="_save_file_info_8cs" startline="19">SaveFileInfo.LEVEL1_PROGRESS</references>
+        <references refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" compoundref="_profile_8cs" startline="58" endline="60">LevelProgress</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Name</references>
+        <references refid="class_save_file_info_1aae1fcea482e56652da383883a158f46a" compoundref="_save_file_info_8cs" startline="18">SaveFileInfo.OWNED_ITEMS</references>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">OwnedItems</references>
+        <references refid="class_save_file_info_1a9e0844e2686e0945287c6f69f6995e75" compoundref="_save_file_info_8cs" startline="17">SaveFileInfo.POINTS</references>
+        <references refid="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" compoundref="_save_file_info_8cs" startline="12">SaveFileInfo.PROFILE_NAME</references>
+        <references refid="class_save_file_info_1a79f57147d656897bffc591effa801806" compoundref="_save_file_info_8cs" startline="8">SaveFileInfo.PROFILE_NAME_MAX_SIZE</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18">Avatar.SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23">Avatar.TopColor</references>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Profile.LevelIsUnlocked</definition>
+        <argsstring>(int level)</argsstring>
+        <name>LevelIsUnlocked</name>
+        <param>
+          <type>int</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the level is unlocked, that is if the level&apos;s key has been bought from the store. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The level&apos;s number.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the level is unlocked, else false.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="216" column="17" bodyfile="src/Profiles/Profile.cs" bodystart="216" bodyend="232"/>
+        <references refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" compoundref="_profile_8cs" startline="49" endline="51">OwnedItems</references>
+        <referencedby refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" compoundref="_level_picker_8cs" startline="30" endline="66">LevelPicker.OnValueChanged</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_profile_1af0c359996b22ff324708c48445c067f5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_profile" kindref="compound">Profile</ref></type>
+        <definition>static Profile Profile.Get</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Method that encapsulates the profile&apos;s class constructor. Loads the profile with the given id and returns it&apos;s data, returning null if the profile doesn&apos;t exist. This is used instead of the constructor because constructors can&apos;t return null. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the profile to get.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The profile&apos;s data or null if the profile doesn&apos;t exist.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="242" column="27" bodyfile="src/Profiles/Profile.cs" bodystart="242" bodyend="250"/>
+        <references refid="class_profile_1a8907ef1053fdebaeb5322e09ffe38128" compoundref="_profile_8cs" startline="14" endline="17">ID</references>
+        <references refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</references>
+        <referencedby refid="class_player_session_1a819cebf72563f1e27a78962f82fb9c72" compoundref="_player_session_8cs" startline="35" endline="38">PlayerSession.Load</referencedby>
+        <referencedby refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" compoundref="_profile_8cs" startline="301" endline="315">NameIsAvailable</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Profile.Create</definition>
+        <argsstring>(int id, string name)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new profile. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the new profile.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The profile&apos;s name.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="257" column="24" bodyfile="src/Profiles/Profile.cs" bodystart="257" bodyend="275"/>
+        <references refid="class_save_file_info_1abc5665de7ee4d5eacd4f5c46ebc04774" compoundref="_save_file_info_8cs" startline="16">SaveFileInfo.AVATAR_COLOR_BOTTOM</references>
+        <references refid="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" compoundref="_save_file_info_8cs" startline="14">SaveFileInfo.AVATAR_COLOR_SKIN</references>
+        <references refid="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" compoundref="_save_file_info_8cs" startline="15">SaveFileInfo.AVATAR_COLOR_TOP</references>
+        <references refid="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" compoundref="_save_file_info_8cs" startline="13">SaveFileInfo.AVATAR_GENDER</references>
+        <references refid="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" compoundref="_save_file_info_8cs" startline="7">SaveFileInfo.FILE_SIZE</references>
+        <references refid="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" compoundref="_save_file_info_8cs" startline="12">SaveFileInfo.PROFILE_NAME</references>
+        <references refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" compoundref="_profile_8cs" startline="123">SAVES_DIRECTORY</references>
+        <referencedby refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" compoundref="_create_profile_dialog_8cs" startline="32" endline="47">CreateProfileDialog.OnCreateProfileDialogConfirmed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_1a65e989b8d3b98a068c286831391f5e6b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Profile.Delete</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Deletes an existing profile save file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The profile&apos;s id.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="281" column="24" bodyfile="src/Profiles/Profile.cs" bodystart="281" bodyend="284"/>
+        <references refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" compoundref="_profile_8cs" startline="123">SAVES_DIRECTORY</references>
+        <referencedby refid="class_profile_select_entry_1ae2810d40cdca8a83f0cf442006bfaa9e" compoundref="_profile_select_entry_8cs" startline="56" endline="60">ProfileSelectEntry.OnDeleteDialogConfirmed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_1a1611ed62259b932927164f5bff513c4b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Profile.Exists</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the profile exists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The profile&apos;s id.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="291" column="24" bodyfile="src/Profiles/Profile.cs" bodystart="291" bodyend="294"/>
+        <references refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" compoundref="_profile_8cs" startline="123">SAVES_DIRECTORY</references>
+        <referencedby refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" compoundref="_profile_8cs" startline="301" endline="315">NameIsAvailable</referencedby>
+        <referencedby refid="class_profile_select_entry_1a88978332d17f63b02b3dc4476e01c6a4" compoundref="_profile_select_entry_8cs" startline="67" endline="78">ProfileSelectEntry.OnPressed</referencedby>
+        <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
+        <referencedby refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">ProfileSelectEntry.UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_1af591c1206e6be7fadaa7cd33086158c2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Profile.NameIsAvailable</definition>
+        <argsstring>(string name)</argsstring>
+        <name>NameIsAvailable</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Checks if a profile name is available. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The profile name</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if no profile has the name already, else false.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Profiles/Profile.cs" line="301" column="24" bodyfile="src/Profiles/Profile.cs" bodystart="301" bodyend="315"/>
+        <references refid="class_profile_1a1611ed62259b932927164f5bff513c4b" compoundref="_profile_8cs" startline="291" endline="294">Exists</references>
+        <references refid="class_profile_1af0c359996b22ff324708c48445c067f5" compoundref="_profile_8cs" startline="242" endline="250">Get</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Name</references>
+        <referencedby refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" compoundref="_create_profile_dialog_8cs" startline="32" endline="47">CreateProfileDialog.OnCreateProfileDialogConfirmed</referencedby>
+        <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that represents and contains the data of a player&apos;s profile. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Profile</label>
+        <link refid="class_profile"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+SAVES_DIRECTORY</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+MAX_NUMBER_OF_SAVES</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>static readonly string</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Profiles/Profile.cs" line="9" column="7" bodyfile="src/Profiles/Profile.cs" bodystart="9" bodyend="317"/>
+    <listofallmembers>
+      <member refid="class_profile_1a307f6749c751e25cef64f85b07f02514" prot="public" virt="non-virtual"><scope>Profile</scope><name>Avatar</name></member>
+      <member refid="class_profile_1a54f4969aeceaac4db0be879867e71fe3" prot="public" virt="non-virtual"><scope>Profile</scope><name>CompletedLevels</name></member>
+      <member refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" prot="public" virt="non-virtual"><scope>Profile</scope><name>Create</name></member>
+      <member refid="class_profile_1aabba37c3975118edacf08f6f51e9252d" prot="public" virt="non-virtual"><scope>Profile</scope><name>CurrentLevel</name></member>
+      <member refid="class_profile_1a65e989b8d3b98a068c286831391f5e6b" prot="public" virt="non-virtual"><scope>Profile</scope><name>Delete</name></member>
+      <member refid="class_profile_1a1611ed62259b932927164f5bff513c4b" prot="public" virt="non-virtual"><scope>Profile</scope><name>Exists</name></member>
+      <member refid="class_profile_1af0c359996b22ff324708c48445c067f5" prot="public" virt="non-virtual"><scope>Profile</scope><name>Get</name></member>
+      <member refid="class_profile_1a8907ef1053fdebaeb5322e09ffe38128" prot="public" virt="non-virtual"><scope>Profile</scope><name>ID</name></member>
+      <member refid="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" prot="public" virt="non-virtual"><scope>Profile</scope><name>LevelIsUnlocked</name></member>
+      <member refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" prot="public" virt="non-virtual"><scope>Profile</scope><name>LevelProgress</name></member>
+      <member refid="class_profile_1a0603d28949b8c323d8bae91ea138d6f7" prot="public" virt="non-virtual"><scope>Profile</scope><name>MAX_NUMBER_OF_SAVES</name></member>
+      <member refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" prot="public" virt="non-virtual"><scope>Profile</scope><name>Name</name></member>
+      <member refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" prot="public" virt="non-virtual"><scope>Profile</scope><name>NameIsAvailable</name></member>
+      <member refid="class_profile_1adaf86441cdfa02d937270c3cd466e2f8" prot="public" virt="non-virtual"><scope>Profile</scope><name>NumberOfOwnedItems</name></member>
+      <member refid="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" prot="public" virt="non-virtual"><scope>Profile</scope><name>OwnedItems</name></member>
+      <member refid="class_profile_1af87d47cc73db8b55b24e5ab547534272" prot="public" virt="non-virtual"><scope>Profile</scope><name>Points</name></member>
+      <member refid="class_profile_1a390b2643abb820e749741eb38206666d" prot="private" virt="non-virtual"><scope>Profile</scope><name>Profile</name></member>
+      <member refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" prot="public" virt="non-virtual"><scope>Profile</scope><name>SAVES_DIRECTORY</name></member>
+      <member refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" prot="public" virt="non-virtual"><scope>Profile</scope><name>ToBytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

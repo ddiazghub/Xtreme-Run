@@ -1,5 +1,6 @@
 var class_player_session =
 [
+    [ "PlayerSession", "class_player_session.html#a0bbdc5bc26709a61c653e0b494c1901a", null ],
     [ "Load", "class_player_session.html#a819cebf72563f1e27a78962f82fb9c72", null ],
     [ "LogOut", "class_player_session.html#a65808546d8278d30ee26af807c62051f", null ],
     [ "Save", "class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7", null ],

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_12b8dafc1cc11d1f355623056571a98f" kind="dir">
+    <compoundname>src/Entities/Player</compoundname>
+    <innerdir refid="dir_7eab064448c74c1c23112f854d7aad53">src/Entities/Player/Enums</innerdir>
+    <innerdir refid="dir_57cfa09641873c83fbdb90ef6ec95c7d">src/Entities/Player/PlayerStates</innerdir>
+    <innerdir refid="dir_25bcfb81a0278868bb76ed49e610068e">src/Entities/Player/SpawnedPlatform</innerdir>
+    <innerfile refid="_player_8cs">Player.cs</innerfile>
+    <innerfile refid="_player_state_factory_8cs">PlayerStateFactory.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Entities/Player/"/>
+  </compounddef>
+</doxygen>

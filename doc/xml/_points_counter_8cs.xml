@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_points_counter_8cs" kind="file" language="C#">
+    <compoundname>PointsCounter.cs</compoundname>
+    <innerclass refid="class_points_counter" prot="public">PointsCounter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Godot;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_points_counter" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_points_counter" kindref="compound">PointsCounter</ref><sp/>:<sp/><ref refid="class_margin_container" kindref="compound">MarginContainer</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Vector2<sp/><ref refid="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" kindref="member">initialPosition</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Vector2<sp/><ref refid="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" kindref="member">iconInitialPosition</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_points_counter_1a8e42096db3443ca5a566f1d6741f7c65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_points_counter_1a8e42096db3443ca5a566f1d6741f7c65" kindref="member">_Ready</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.initialPosition<sp/>=<sp/>this.RectPosition;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.iconInitialPosition<sp/>=<sp/>this.GetNode&lt;TextureRect&gt;(</highlight><highlight class="stringliteral">&quot;Background/Icon&quot;</highlight><highlight class="normal">).RectPosition;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_points_counter_1a30a660fc6cb45333b015d6439bd7bc87" kindref="member">Set</ref>(UInt32<sp/>points)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.RectSize<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(104,<sp/>46);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.RectPosition<sp/>=<sp/>this.<ref refid="class_points_counter_1aa547f9078e67d490f2fbaeace187ab1f" kindref="member">initialPosition</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.GetNode&lt;TextureRect&gt;(</highlight><highlight class="stringliteral">&quot;Background/Icon&quot;</highlight><highlight class="normal">).RectPosition<sp/>=<sp/>this.<ref refid="class_points_counter_1a560f1efcaf2f41e051be47247c799d31" kindref="member">iconInitialPosition</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>text<sp/>=<sp/>points.ToString();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_label" kindref="compound">Label</ref><sp/>label<sp/>=<sp/>this.GetNode&lt;Label&gt;(</highlight><highlight class="stringliteral">&quot;Background/Label&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextureRect<sp/>icon<sp/>=<sp/>this.GetNode&lt;TextureRect&gt;(</highlight><highlight class="stringliteral">&quot;Background/Icon&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DynamicFont<sp/>font<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DynamicFont();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.FontData<sp/>=<sp/>ResourceLoader.Load&lt;DynamicFontData&gt;(</highlight><highlight class="stringliteral">&quot;res://res/Fonts/Xolonium-Regular.ttf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font.Size<sp/>=<sp/>24;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>labelSize<sp/>=<sp/>font.GetStringSize(text).x;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.RectSize<sp/>+=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(labelSize,<sp/>0);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.RectPosition<sp/>+=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(-labelSize,<sp/>0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>icon.RectPosition<sp/>+=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Vector2(labelSize,<sp/>0);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label.Text<sp/>=<sp/>text;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Scenes/PointsCounter.cs"/>
+  </compounddef>
+</doxygen>

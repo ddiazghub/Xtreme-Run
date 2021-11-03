@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_palette_swap_entry" kind="class" language="C#" prot="public">
+    <compoundname>PaletteSwapEntry</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_palette_swap_entry_1ac2f6caf7822e94b37b9f480901e2c813" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color PaletteSwapEntry.original</definition>
+        <argsstring></argsstring>
+        <name>original</name>
+        <briefdescription>
+<para>Original target color. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapEntry.cs" line="12" column="18" bodyfile="src/Shaders/PaletteSwapEntry.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_palette_swap_shader_1ae747173cd2a85fa21e35129e67630275" compoundref="_palette_swap_shader_8cs" startline="18" endline="61">PaletteSwapShader.PaletteSwap</referencedby>
+        <referencedby refid="class_palette_swap_entry_1a893a091f4487224ab631cfcc08d346c1" compoundref="_palette_swap_entry_8cs" startline="30" endline="35">PaletteSwapEntry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_palette_swap_entry_1afd787e859a6e32067d6203f78b95e457" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color PaletteSwapEntry.newColor</definition>
+        <argsstring></argsstring>
+        <name>newColor</name>
+        <briefdescription>
+<para>The color that the original will be swapped for. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapEntry.cs" line="17" column="18" bodyfile="src/Shaders/PaletteSwapEntry.cs" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_palette_swap_entry_1a893a091f4487224ab631cfcc08d346c1" compoundref="_palette_swap_entry_8cs" startline="30" endline="35">PaletteSwapEntry</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_palette_swap_entry_1a98f303ecceb89ffec4c538c48269a4ec" prot="public" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color PaletteSwapEntry.threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <briefdescription>
+<para>The threshold for swapping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapEntry.cs" line="22" column="18" bodyfile="src/Shaders/PaletteSwapEntry.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_palette_swap_shader_1ae747173cd2a85fa21e35129e67630275" compoundref="_palette_swap_shader_8cs" startline="18" endline="61">PaletteSwapShader.PaletteSwap</referencedby>
+        <referencedby refid="class_palette_swap_entry_1a893a091f4487224ab631cfcc08d346c1" compoundref="_palette_swap_entry_8cs" startline="30" endline="35">PaletteSwapEntry</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_palette_swap_entry_1a893a091f4487224ab631cfcc08d346c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PaletteSwapEntry.PaletteSwapEntry</definition>
+        <argsstring>(Color original, Color newColor, Color threshold)</argsstring>
+        <name>PaletteSwapEntry</name>
+        <param>
+          <type>Color</type>
+          <declname>original</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>newColor</declname>
+        </param>
+        <param>
+          <type>Color</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new palette swap entry. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Original target color.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The threshold for swapping.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Creates a new palette swap entry.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapEntry.cs" line="30" column="12" bodyfile="src/Shaders/PaletteSwapEntry.cs" bodystart="30" bodyend="35"/>
+        <references refid="class_palette_swap_entry_1afd787e859a6e32067d6203f78b95e457" compoundref="_palette_swap_entry_8cs" startline="17">newColor</references>
+        <references refid="class_palette_swap_entry_1ac2f6caf7822e94b37b9f480901e2c813" compoundref="_palette_swap_entry_8cs" startline="12">original</references>
+        <references refid="class_palette_swap_entry_1a98f303ecceb89ffec4c538c48269a4ec" compoundref="_palette_swap_entry_8cs" startline="22">threshold</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that contains fields needed for <ref refid="class_palette" kindref="compound">Palette</ref> swapping. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Color</label>
+      </node>
+      <node id="1">
+        <label>PaletteSwapEntry</label>
+        <link refid="class_palette_swap_entry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+newColor</edgelabel>
+          <edgelabel>+original</edgelabel>
+          <edgelabel>+threshold</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Shaders/PaletteSwapEntry.cs" line="7" column="7" bodyfile="src/Shaders/PaletteSwapEntry.cs" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_palette_swap_entry_1afd787e859a6e32067d6203f78b95e457" prot="public" virt="non-virtual"><scope>PaletteSwapEntry</scope><name>newColor</name></member>
+      <member refid="class_palette_swap_entry_1ac2f6caf7822e94b37b9f480901e2c813" prot="public" virt="non-virtual"><scope>PaletteSwapEntry</scope><name>original</name></member>
+      <member refid="class_palette_swap_entry_1a893a091f4487224ab631cfcc08d346c1" prot="public" virt="non-virtual"><scope>PaletteSwapEntry</scope><name>PaletteSwapEntry</name></member>
+      <member refid="class_palette_swap_entry_1a98f303ecceb89ffec4c538c48269a4ec" prot="public" virt="non-virtual"><scope>PaletteSwapEntry</scope><name>threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

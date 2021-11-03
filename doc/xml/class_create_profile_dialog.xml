@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_create_profile_dialog" kind="class" language="C#" prot="public">
+    <compoundname>CreateProfileDialog</compoundname>
+    <basecompoundref refid="class_confirmation_dialog" prot="public" virt="non-virtual">ConfirmationDialog</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_create_profile_dialog_1a3a907d3b5f0b25c8760135a75ab67c16" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CreateProfileDialog.profileID</definition>
+        <argsstring></argsstring>
+        <name>profileID</name>
+        <briefdescription>
+<para>The id of the profile to create. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/CreateProfileDialog.cs" line="18" column="17" bodyfile="src/Scenes/CreateProfileDialog.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_create_profile_dialog_1aaee4a09777e0914a99edf9637301e617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void CreateProfileDialog.CreationFailed</definition>
+        <argsstring>()</argsstring>
+        <name>CreationFailed</name>
+        <briefdescription>
+<para>Emitted if the profiled wasn&apos;t created succesfully. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/CreateProfileDialog.cs" line="13" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CreateProfileDialog._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/CreateProfileDialog.cs" line="20" column="26" bodyfile="src/Scenes/CreateProfileDialog.cs" bodystart="20" bodyend="30"/>
+        <references refid="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" compoundref="_create_profile_dialog_8cs" startline="49" endline="52">OnCreateProfileDialogAboutToShow</references>
+        <references refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" compoundref="_create_profile_dialog_8cs" startline="32" endline="47">OnCreateProfileDialogConfirmed</references>
+      </memberdef>
+      <memberdef kind="function" id="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateProfileDialog.OnCreateProfileDialogConfirmed</definition>
+        <argsstring>()</argsstring>
+        <name>OnCreateProfileDialogConfirmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/CreateProfileDialog.cs" line="32" column="17" bodyfile="src/Scenes/CreateProfileDialog.cs" bodystart="32" bodyend="47"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1ac35fe897f5723f01593341c9c39d8e3e" compoundref="_profile_8cs" startline="257" endline="275">Profile.Create</references>
+        <references refid="class_player_session_1a819cebf72563f1e27a78962f82fb9c72" compoundref="_player_session_8cs" startline="35" endline="38">PlayerSession.Load</references>
+        <references refid="class_profile_1af591c1206e6be7fadaa7cd33086158c2" compoundref="_profile_8cs" startline="301" endline="315">Profile.NameIsAvailable</references>
+        <referencedby refid="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" compoundref="_create_profile_dialog_8cs" startline="20" endline="30">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CreateProfileDialog.OnCreateProfileDialogAboutToShow</definition>
+        <argsstring>()</argsstring>
+        <name>OnCreateProfileDialogAboutToShow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/CreateProfileDialog.cs" line="49" column="17" bodyfile="src/Scenes/CreateProfileDialog.cs" bodystart="49" bodyend="52"/>
+        <referencedby refid="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" compoundref="_create_profile_dialog_8cs" startline="20" endline="30">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Popup for the creation of new profiles. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="1">
+        <label>CreateProfileDialog</label>
+        <link refid="class_create_profile_dialog"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ConfirmationDialog</label>
+        <link refid="class_confirmation_dialog"/>
+      </node>
+      <node id="1">
+        <label>CreateProfileDialog</label>
+        <link refid="class_create_profile_dialog"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-profileID</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/CreateProfileDialog.cs" line="7" column="7" bodyfile="src/Scenes/CreateProfileDialog.cs" bodystart="7" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_create_profile_dialog_1a107ddac39ac301541def8b5b8cea85b9" prot="public" virt="non-virtual"><scope>CreateProfileDialog</scope><name>_Ready</name></member>
+      <member refid="class_create_profile_dialog_1aaee4a09777e0914a99edf9637301e617" prot="public" virt="non-virtual"><scope>CreateProfileDialog</scope><name>CreationFailed</name></member>
+      <member refid="class_create_profile_dialog_1a804665f81f54d577fd173054c5ec87bb" prot="public" virt="non-virtual"><scope>CreateProfileDialog</scope><name>OnCreateProfileDialogAboutToShow</name></member>
+      <member refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" prot="public" virt="non-virtual"><scope>CreateProfileDialog</scope><name>OnCreateProfileDialogConfirmed</name></member>
+      <member refid="class_create_profile_dialog_1a3a907d3b5f0b25c8760135a75ab67c16" prot="private" virt="non-virtual"><scope>CreateProfileDialog</scope><name>profileID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

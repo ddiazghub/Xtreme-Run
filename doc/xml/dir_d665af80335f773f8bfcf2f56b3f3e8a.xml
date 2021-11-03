@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="dir_d665af80335f773f8bfcf2f56b3f3e8a" kind="dir">
+    <compoundname>src/Scenes</compoundname>
+    <innerfile refid="_attempts_counter_8cs">AttemptsCounter.cs</innerfile>
+    <innerfile refid="_create_profile_dialog_8cs">CreateProfileDialog.cs</innerfile>
+    <innerfile refid="_edit_profile_g_u_i_8cs">EditProfileGUI.cs</innerfile>
+    <innerfile refid="_exit_game_popup_8cs">ExitGamePopup.cs</innerfile>
+    <innerfile refid="_game_h_u_d_8cs">GameHUD.cs</innerfile>
+    <innerfile refid="_level_complete_8cs">LevelComplete.cs</innerfile>
+    <innerfile refid="_level_picker_8cs">LevelPicker.cs</innerfile>
+    <innerfile refid="_main_menu_8cs">MainMenu.cs</innerfile>
+    <innerfile refid="_pause_menu_8cs">PauseMenu.cs</innerfile>
+    <innerfile refid="_points_counter_8cs">PointsCounter.cs</innerfile>
+    <innerfile refid="_profile_g_u_i_8cs">ProfileGUI.cs</innerfile>
+    <innerfile refid="_profile_select_8cs">ProfileSelect.cs</innerfile>
+    <innerfile refid="_profile_select_entry_8cs">ProfileSelectEntry.cs</innerfile>
+    <innerfile refid="_shop_g_u_i_8cs">ShopGUI.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Scenes/"/>
+  </compounddef>
+</doxygen>

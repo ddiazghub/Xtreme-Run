@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_profile_select_entry" kind="class" language="C#" prot="public">
+    <compoundname>ProfileSelectEntry</compoundname>
+    <basecompoundref refid="class_button" prot="public" virt="non-virtual">Button</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_profile_select_entry_1a1f010ec4952fdc771b4e352c84d4087e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProfileSelectEntry.ProfileID</definition>
+        <argsstring></argsstring>
+        <name>ProfileID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The profile&apos;s id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="13" column="16" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ProfileSelectEntry._Ready</definition>
+        <argsstring>()</argsstring>
+        <name>_Ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="15" column="26" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="15" bodyend="25"/>
+        <references refid="class_profile_select_entry_1abf344a648fc7e68522a3181a6664c26c" compoundref="_profile_select_entry_8cs" startline="62" endline="65">OnCreateDialogCreationFailed</references>
+        <references refid="class_profile_select_entry_1ae2810d40cdca8a83f0cf442006bfaa9e" compoundref="_profile_select_entry_8cs" startline="56" endline="60">OnDeleteDialogConfirmed</references>
+        <references refid="class_profile_select_entry_1adadc348a0e9eb9a3c0cc64417b66f0a4" compoundref="_profile_select_entry_8cs" startline="51" endline="54">OnDeletePressed</references>
+        <references refid="class_profile_select_entry_1a88978332d17f63b02b3dc4476e01c6a4" compoundref="_profile_select_entry_8cs" startline="67" endline="78">OnPressed</references>
+        <references refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">UpdateUI</references>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileSelectEntry.UpdateUI</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateUI</name>
+        <briefdescription>
+<para>Updates the data currently displayed on the button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="30" column="17" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="30" bodyend="49"/>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_profile_1a54f4969aeceaac4db0be879867e71fe3" compoundref="_profile_8cs" startline="83" endline="99">Profile.CompletedLevels</references>
+        <references refid="class_avatar_1aadcbb7a0039fa394ff780e83b53fb811" compoundref="_avatar_8cs" startline="33">Avatar.EMPTY_SAVE_AVATAR</references>
+        <references refid="class_profile_1a1611ed62259b932927164f5bff513c4b" compoundref="_profile_8cs" startline="291" endline="294">Profile.Exists</references>
+        <references refid="class_profile_1af0c359996b22ff324708c48445c067f5" compoundref="_profile_8cs" startline="242" endline="250">Profile.Get</references>
+        <references refid="class_profile_1a0e50ac0f5032687e6083e99749fcd199" compoundref="_profile_8cs" startline="22" endline="25">Profile.Name</references>
+        <references refid="class_profile_1adaf86441cdfa02d937270c3cd466e2f8" compoundref="_profile_8cs" startline="105" endline="118">Profile.NumberOfOwnedItems</references>
+        <references refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</references>
+        <referencedby refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" compoundref="_profile_select_entry_8cs" startline="15" endline="25">_Ready</referencedby>
+        <referencedby refid="class_profile_select_entry_1ae2810d40cdca8a83f0cf442006bfaa9e" compoundref="_profile_select_entry_8cs" startline="56" endline="60">OnDeleteDialogConfirmed</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_entry_1adadc348a0e9eb9a3c0cc64417b66f0a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileSelectEntry.OnDeletePressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnDeletePressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="51" column="17" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="51" bodyend="54"/>
+        <referencedby refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" compoundref="_profile_select_entry_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_entry_1ae2810d40cdca8a83f0cf442006bfaa9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileSelectEntry.OnDeleteDialogConfirmed</definition>
+        <argsstring>()</argsstring>
+        <name>OnDeleteDialogConfirmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="56" column="17" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="56" bodyend="60"/>
+        <references refid="class_profile_1a65e989b8d3b98a068c286831391f5e6b" compoundref="_profile_8cs" startline="281" endline="284">Profile.Delete</references>
+        <references refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" compoundref="_profile_select_entry_8cs" startline="30" endline="49">UpdateUI</references>
+        <referencedby refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" compoundref="_profile_select_entry_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_entry_1abf344a648fc7e68522a3181a6664c26c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileSelectEntry.OnCreateDialogCreationFailed</definition>
+        <argsstring>()</argsstring>
+        <name>OnCreateDialogCreationFailed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="62" column="17" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="62" bodyend="65"/>
+        <referencedby refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" compoundref="_profile_select_entry_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_select_entry_1a88978332d17f63b02b3dc4476e01c6a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileSelectEntry.OnPressed</definition>
+        <argsstring>()</argsstring>
+        <name>OnPressed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Scenes/ProfileSelectEntry.cs" line="67" column="17" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="67" bodyend="78"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a1611ed62259b932927164f5bff513c4b" compoundref="_profile_8cs" startline="291" endline="294">Profile.Exists</references>
+        <references refid="class_player_session_1a819cebf72563f1e27a78962f82fb9c72" compoundref="_player_session_8cs" startline="35" endline="38">PlayerSession.Load</references>
+        <referencedby refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" compoundref="_profile_select_entry_8cs" startline="15" endline="25">_Ready</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_button" kindref="compound">Button</ref> that and allows the profile to be selected and displays a profile&apos;s data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Button</label>
+        <link refid="class_button"/>
+      </node>
+      <node id="1">
+        <label>ProfileSelectEntry</label>
+        <link refid="class_profile_select_entry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Button</label>
+        <link refid="class_button"/>
+      </node>
+      <node id="1">
+        <label>ProfileSelectEntry</label>
+        <link refid="class_profile_select_entry"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+ProfileID</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Scenes/ProfileSelectEntry.cs" line="7" column="7" bodyfile="src/Scenes/ProfileSelectEntry.cs" bodystart="7" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_profile_select_entry_1a3dc12cffc1e411b67207e361ce674692" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>_Ready</name></member>
+      <member refid="class_profile_select_entry_1abf344a648fc7e68522a3181a6664c26c" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>OnCreateDialogCreationFailed</name></member>
+      <member refid="class_profile_select_entry_1ae2810d40cdca8a83f0cf442006bfaa9e" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>OnDeleteDialogConfirmed</name></member>
+      <member refid="class_profile_select_entry_1adadc348a0e9eb9a3c0cc64417b66f0a4" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>OnDeletePressed</name></member>
+      <member refid="class_profile_select_entry_1a88978332d17f63b02b3dc4476e01c6a4" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>OnPressed</name></member>
+      <member refid="class_profile_select_entry_1a1f010ec4952fdc771b4e352c84d4087e" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>ProfileID</name></member>
+      <member refid="class_profile_select_entry_1a455e5a4a8662aea7e31b6492fb437b50" prot="public" virt="non-virtual"><scope>ProfileSelectEntry</scope><name>UpdateUI</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_main_action" kind="class" language="C#" prot="public" abstract="yes">
+    <compoundname>MainAction</compoundname>
+    <basecompoundref refid="class_player_state" prot="public" virt="non-virtual">PlayerState</basecompoundref>
+    <derivedcompoundref refid="class_glide" prot="public" virt="non-virtual">Glide</derivedcompoundref>
+    <derivedcompoundref refid="class_jetpack" prot="public" virt="non-virtual">Jetpack</derivedcompoundref>
+    <derivedcompoundref refid="class_jump" prot="public" virt="non-virtual">Jump</derivedcompoundref>
+    <derivedcompoundref refid="class_teleport" prot="public" virt="non-virtual">Teleport</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" prot="protected" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MainAction.OnActionPad</definition>
+        <argsstring></argsstring>
+        <name>OnActionPad</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>True if the player is currently on a jump pad. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="12" column="20" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="12" bodyend="12"/>
+        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">Glide._ActionOnAir</referencedby>
+        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="74" endline="83">_ActionOnAir</referencedby>
+        <referencedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" compoundref="_teleport_8cs" startline="37" endline="46">Teleport._ActionOnAir</referencedby>
+        <referencedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62" compoundref="_glide_8cs" startline="157" endline="172">Glide.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="156" endline="169">OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" compoundref="_teleport_8cs" startline="57" endline="69">Teleport.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" compoundref="_main_action_8cs" startline="171" endline="177">OnMainActionObjectCollisionCheckAreaExited</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MainAction.PerformingAction</definition>
+        <argsstring></argsstring>
+        <name>PerformingAction</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>True if the player is currently performing a main action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="17" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="17" bodyend="17"/>
+        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="74" endline="83">_ActionOnAir</referencedby>
+        <referencedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" compoundref="_teleport_8cs" startline="37" endline="46">Teleport._ActionOnAir</referencedby>
+        <referencedby refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="66" endline="72">_ActionOnGround</referencedby>
+        <referencedby refid="class_teleport_1aa1335939a5f0597c9bf0cbb0ff418220" compoundref="_teleport_8cs" startline="28" endline="35">Teleport._ActionOnGround</referencedby>
+        <referencedby refid="class_jetpack_1a66a6e0bb7ff231a6e843f9f67a4d7642" compoundref="_jetpack_8cs" startline="29" endline="35">Jetpack._ActionReleased</referencedby>
+        <referencedby refid="class_teleport_1a777418072ec29926a6c0bb7596782952" compoundref="_teleport_8cs" startline="48" endline="51">Teleport._ActionReleased</referencedby>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">_StatePhysicsProcess</referencedby>
+        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="156" endline="169">OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4" compoundref="_main_action_8cs" startline="150" endline="153">OnMainActionTimerTimeout</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool MainAction.Blocked</definition>
+        <argsstring></argsstring>
+        <name>Blocked</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Checks if the current action is blocked/disabled. If true, the action will not be performed on input events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="28" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="28" bodyend="28"/>
+        <referencedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a" compoundref="_fastfall_and_roll_8cs" startline="8" endline="15">FastFallAndRoll._ActionOnGround</referencedby>
+        <referencedby refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" compoundref="_secondary_action_8cs" startline="115" endline="120">SecondaryAction.OnSecondaryActionTimerTimeout</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MainAction.CanUseActionPad</definition>
+        <argsstring></argsstring>
+        <name>CanUseActionPad</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>True if the player can use jump pads. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="22" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">Glide._ActionOnAir</referencedby>
+        <referencedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" compoundref="_teleport_8cs" startline="37" endline="46">Teleport._ActionOnAir</referencedby>
+        <referencedby refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="74">Glide._ActionOnGround</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MainAction._Init</definition>
+        <argsstring>()</argsstring>
+        <name>_Init</name>
+        <reimplements refid="class_player_state_1a7c94c3f0cc97f388f281c524523d311e">_Init</reimplements>
+        <reimplementedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df">_Init</reimplementedby>
+        <briefdescription>
+<para>Setups the state and initializes it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="30" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="30" bodyend="38"/>
+        <references refid="class_player_1a4d70330236aa5cff44570ad6063433f0" compoundref="_player_8cs" startline="45">Player.jumpObjectCollisionCheck</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
+        <references refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="156" endline="169">OnMainActionObjectCollisionCheckAreaEntered</references>
+        <references refid="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" compoundref="_main_action_8cs" startline="171" endline="177">OnMainActionObjectCollisionCheckAreaExited</references>
+        <references refid="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4" compoundref="_main_action_8cs" startline="150" endline="153">OnMainActionTimerTimeout</references>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void MainAction._StatePhysicsProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_StatePhysicsProcess</name>
+        <reimplements refid="class_player_state_1a1bddd210d96db25cb49b3a0b3edd5265">_StatePhysicsProcess</reimplements>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The physics process that will be called each frame for the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since the last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="40" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="40" bodyend="64"/>
+        <references refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="74" endline="83">_ActionOnAir</references>
+        <references refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="66" endline="72">_ActionOnGround</references>
+        <references refid="class_main_action_1abad27d048abd3f377cf7f2e1e15f6975">_ActionProcess</references>
+        <references refid="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f" compoundref="_main_action_8cs" startline="85" endline="88">_ActionReleased</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">PerformingAction</references>
+        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="101" endline="101">Player.PersistentState</references>
+        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="173" endline="183">Player._PhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction._ActionOnGround</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnGround</name>
+        <reimplementedby refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27">_ActionOnGround</reimplementedby>
+        <reimplementedby refid="class_teleport_1aa1335939a5f0597c9bf0cbb0ff418220">_ActionOnGround</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="66" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="66" bodyend="72"/>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">PerformingAction</references>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction._ActionOnAir</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionOnAir</name>
+        <reimplementedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088">_ActionOnAir</reimplementedby>
+        <reimplementedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6">_ActionOnAir</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="74" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="74" bodyend="83"/>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">OnActionPad</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">PerformingAction</references>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction._ActionReleased</definition>
+        <argsstring>()</argsstring>
+        <name>_ActionReleased</name>
+        <reimplementedby refid="class_glide_1a2353d380d6897004724d34c31838f798">_ActionReleased</reimplementedby>
+        <reimplementedby refid="class_jetpack_1a66a6e0bb7ff231a6e843f9f67a4d7642">_ActionReleased</reimplementedby>
+        <reimplementedby refid="class_teleport_1a777418072ec29926a6c0bb7596782952">_ActionReleased</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="85" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="85" bodyend="88"/>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1abad27d048abd3f377cf7f2e1e15f6975" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>abstract void</type>
+        <definition>abstract void MainAction._ActionProcess</definition>
+        <argsstring>(float delta)</argsstring>
+        <name>_ActionProcess</name>
+        <reimplementedby refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5">_ActionProcess</reimplementedby>
+        <reimplementedby refid="class_jetpack_1a2f099459f3cdeef59c2a73a86edb334c">_ActionProcess</reimplementedby>
+        <reimplementedby refid="class_jump_1a44577960ec4edd622c95a6f5b76dfacb">_ActionProcess</reimplementedby>
+        <reimplementedby refid="class_teleport_1ab64216d083c55dfc26ed7f236ed34a03">_ActionProcess</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>The process that will be executed each frame while the action is being performed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time since last frame.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="94" column="26"/>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">_StatePhysicsProcess</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction.OnMainActionTimerTimeout</definition>
+        <argsstring>()</argsstring>
+        <name>OnMainActionTimerTimeout</name>
+        <reimplementedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d">OnMainActionTimerTimeout</reimplementedby>
+        <reimplementedby refid="class_jetpack_1ae5d732914ec97154f9f14d12e96730d3">OnMainActionTimerTimeout</reimplementedby>
+        <reimplementedby refid="class_teleport_1ab8724fd67974a34636592398ba31beac">OnMainActionTimerTimeout</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="150" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="150" bodyend="153"/>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">PerformingAction</references>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction.OnMainActionObjectCollisionCheckAreaEntered</definition>
+        <argsstring>(Area2D area)</argsstring>
+        <name>OnMainActionObjectCollisionCheckAreaEntered</name>
+        <reimplementedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62">OnMainActionObjectCollisionCheckAreaEntered</reimplementedby>
+        <reimplementedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25">OnMainActionObjectCollisionCheckAreaEntered</reimplementedby>
+        <reimplementedby refid="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312">OnMainActionObjectCollisionCheckAreaEntered</reimplementedby>
+        <param>
+          <type>Area2D</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="156" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="156" bodyend="169"/>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">OnActionPad</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">PerformingAction</references>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void MainAction.OnMainActionObjectCollisionCheckAreaExited</definition>
+        <argsstring>(Area2D area)</argsstring>
+        <name>OnMainActionObjectCollisionCheckAreaExited</name>
+        <param>
+          <type>Area2D</type>
+          <declname>area</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="171" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="171" bodyend="177"/>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">OnActionPad</references>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">_Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string MainAction.GetTypeAsString</definition>
+        <argsstring>(PlayerMainAction action)</argsstring>
+        <name>GetTypeAsString</name>
+        <param>
+          <type><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Gets the given action&apos;s type as a string. This is because the player animations corresponding to each action has these names. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value of the action.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string depending on the action type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="102" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="102" bodyend="121"/>
+        <referencedby refid="class_main_action_pickup_1ace99a7be9c5d758c06c29cc28de73802" compoundref="_main_action_pickup_8cs" startline="31" endline="34">MainActionPickup._Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>static string MainAction.GetTypeAsStringEsp</definition>
+        <argsstring>(PlayerMainAction action)</argsstring>
+        <name>GetTypeAsStringEsp</name>
+        <param>
+          <type><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref></type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Gets the given action&apos;s type as a string in spanish. This is for displaying on the GUI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The enum value of the action</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string in spanish depending on the action type.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="129" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="129" bodyend="148"/>
+        <referencedby refid="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" compoundref="_game_h_u_d_8cs" startline="66" endline="79">GameHUD.SetActions</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class that represents an action the player can perform as main action. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>Glide</label>
+        <link refid="class_glide"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Jetpack</label>
+        <link refid="class_jetpack"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Jump</label>
+        <link refid="class_jump"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="2">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Teleport</label>
+        <link refid="class_teleport"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainAction</label>
+        <link refid="class_main_action"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+CanUseActionPad</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Node2D</label>
+        <link refid="class_node2_d"/>
+      </node>
+      <node id="2">
+        <label>PlayerState</label>
+        <link refid="class_player_state"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" line="7" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Main/MainAction.cs" bodystart="7" bodyend="178"/>
+    <listofallmembers>
+      <member refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" prot="public" virt="virtual"><scope>MainAction</scope><name>_ActionOnAir</name></member>
+      <member refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" prot="public" virt="virtual"><scope>MainAction</scope><name>_ActionOnGround</name></member>
+      <member refid="class_main_action_1abad27d048abd3f377cf7f2e1e15f6975" prot="public" virt="pure-virtual"><scope>MainAction</scope><name>_ActionProcess</name></member>
+      <member refid="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f" prot="public" virt="virtual"><scope>MainAction</scope><name>_ActionReleased</name></member>
+      <member refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" prot="public" virt="virtual"><scope>MainAction</scope><name>_Init</name></member>
+      <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" virt="virtual"><scope>MainAction</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>MainAction</scope><name>Blocked</name></member>
+      <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>MainAction</scope><name>CanUseActionPad</name></member>
+      <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>MainAction</scope><name>GetTypeAsString</name></member>
+      <member refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" prot="public" virt="non-virtual"><scope>MainAction</scope><name>GetTypeAsStringEsp</name></member>
+      <member refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" prot="protected" virt="non-virtual"><scope>MainAction</scope><name>OnActionPad</name></member>
+      <member refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" prot="public" virt="virtual"><scope>MainAction</scope><name>OnMainActionObjectCollisionCheckAreaEntered</name></member>
+      <member refid="class_main_action_1a2cb93724e1d5758c7544649f39bdcb67" prot="public" virt="virtual"><scope>MainAction</scope><name>OnMainActionObjectCollisionCheckAreaExited</name></member>
+      <member refid="class_main_action_1a17693bd0c6cc2a114af83d0f843baaa4" prot="public" virt="virtual"><scope>MainAction</scope><name>OnMainActionTimerTimeout</name></member>
+      <member refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" prot="public" virt="non-virtual"><scope>MainAction</scope><name>PerformingAction</name></member>
+      <member refid="class_player_state_1a8fc13ad7ffde3b39b92acddabf17dc7b" prot="protected" virt="non-virtual"><scope>MainAction</scope><name>Player</name></member>
+      <member refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" prot="public" virt="non-virtual"><scope>MainAction</scope><name>Setup</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_palette_swap_shader" kind="class" language="C#" prot="public">
+    <compoundname>PaletteSwapShader</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_palette_swap_shader_1a7e478f9c7aacb5f6ec83042378d6095e" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_palette_swap_shader" kindref="compound">PaletteSwapShader</ref></type>
+        <definition>PaletteSwapShader PaletteSwapShader.instance</definition>
+        <argsstring></argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapShader.cs" line="9" column="38" bodyfile="src/Shaders/PaletteSwapShader.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_palette_swap_shader_1a339e9ac1c07f19e42fa8d80870566c83" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_palette_swap_shader" kindref="compound">PaletteSwapShader</ref></type>
+        <definition>PaletteSwapShader PaletteSwapShader.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>Gets the shader instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapShader.cs" line="66" column="37" bodyfile="src/Shaders/PaletteSwapShader.cs" bodystart="67" bodyend="75"/>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_palette_swap_shader_1ae747173cd2a85fa21e35129e67630275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Image</type>
+        <definition>Image PaletteSwapShader.PaletteSwap</definition>
+        <argsstring>(Image image, List&lt; PaletteSwapEntry &gt; swaps)</argsstring>
+        <name>PaletteSwap</name>
+        <param>
+          <type>Image</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="class_palette_swap_entry" kindref="compound">PaletteSwapEntry</ref> &gt;</type>
+          <declname>swaps</declname>
+        </param>
+        <briefdescription>
+<para>Performs a palette swap on the given image by calculating the difference between each pixel&apos;s color and the target colors to swap. Swaps each color whose difference with the target colors is smaller than the threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image in which to swap colors.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>swaps</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A list of the colors that will be swapped.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Shaders/PaletteSwapShader.cs" line="18" column="18" bodyfile="src/Shaders/PaletteSwapShader.cs" bodystart="18" bodyend="61"/>
+        <references refid="class_palette_swap_entry_1ac2f6caf7822e94b37b9f480901e2c813" compoundref="_palette_swap_entry_8cs" startline="12">PaletteSwapEntry.original</references>
+        <references refid="class_palette_swap_entry_1a98f303ecceb89ffec4c538c48269a4ec" compoundref="_palette_swap_entry_8cs" startline="22">PaletteSwapEntry.threshold</references>
+        <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&quot;Shader&quot; for swapping colors in game textures. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PaletteSwapShader</label>
+        <link refid="class_palette_swap_shader"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Shaders/PaletteSwapShader.cs" line="8" column="7" bodyfile="src/Shaders/PaletteSwapShader.cs" bodystart="8" bodyend="76"/>
+    <listofallmembers>
+      <member refid="class_palette_swap_shader_1a7e478f9c7aacb5f6ec83042378d6095e" prot="private" virt="non-virtual"><scope>PaletteSwapShader</scope><name>instance</name></member>
+      <member refid="class_palette_swap_shader_1a339e9ac1c07f19e42fa8d80870566c83" prot="public" virt="non-virtual"><scope>PaletteSwapShader</scope><name>Instance</name></member>
+      <member refid="class_palette_swap_shader_1ae747173cd2a85fa21e35129e67630275" prot="public" virt="non-virtual"><scope>PaletteSwapShader</scope><name>PaletteSwap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
