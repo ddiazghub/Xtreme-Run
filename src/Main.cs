@@ -32,8 +32,6 @@ public class Main : Node2D {
     {
         this.sceneFactory = new SceneFactory();
         this.gameAudio = this.GetNode<GameAudio>("GameAudio");
-
-        this.GetTree().DebugCollisionsHint = true;
         this.ChangeScene(GameScenes.PROFILE_SELECT);
     }
 

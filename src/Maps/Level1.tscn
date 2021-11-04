@@ -11,7 +11,7 @@ Player = ExtResource( 5 )
 pointsMultiplier = 0.948
 
 [node name="Start" parent="." index="2"]
-position = Vector2( -936, 632 )
+position = Vector2( -968, 648 )
 
 [node name="End" parent="." index="3"]
 position = Vector2( 40056, 168 )
