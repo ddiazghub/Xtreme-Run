@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/07 high in the mountains.wav-438544bb66d1fd7f6d2d0fc34e356b9a.sample"
+
+[deps]
+
+source_file="res://res/Sounds/sfx/07 high in the mountains.wav"
+dest_files=[ "res://.import/07 high in the mountains.wav-438544bb66d1fd7f6d2d0fc34e356b9a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

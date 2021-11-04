@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/12 final battle.wav-a77e196216f6b33ac2ae7a5a92f6b12e.sample"
+
+[deps]
+
+source_file="res://res/Sounds/sfx/12 final battle.wav"
+dest_files=[ "res://.import/12 final battle.wav-a77e196216f6b33ac2ae7a5a92f6b12e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

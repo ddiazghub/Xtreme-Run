@@ -10,7 +10,12 @@ public class OnAirState: PersistentState {
     public override void _Init()
     {
         base._Init();
-        this.Player.animation.Play("running");
+
+        if (this.Player.MainAction.PerformingAction)
+            this.Player.animation.Play("jumping");
+        else
+            this.Player.animation.Play("running");
+            
         this.Player.SetHitbox(PlayerPersistentState.ON_AIR);
     }
 

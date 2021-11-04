@@ -202,7 +202,7 @@ public class Profile {
 
         for (int i = 0; i < this.LevelProgress.Length; i++)
         {
-            buffer[SaveFileInfo.LEVEL1_PROGRESS + i] = (byte) this.LevelProgress[0];
+            buffer[SaveFileInfo.LEVEL1_PROGRESS + i] = (byte) this.LevelProgress[i];
         }
 
         return buffer;

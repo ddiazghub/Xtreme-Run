@@ -62,5 +62,28 @@ public class Main : Node2D {
 
         this.Scene = this.sceneFactory.New(scene);
         this.AddChild(this.Scene);
+
+        if (this.Scene is Level)
+        {
+            this.Scene.Connect("PlayerDead", this, nameof(this.OnPlayerDead));
+            this.Scene.Connect("PlayerPickup", this, nameof(this.OnPlayerPickup));
+            this.Scene.Connect("PlayerPerformedMainAction", this, nameof(this.OnPlayerPerformedMainAction));
+            
+        }
+    }
+
+    public void OnPlayerDead()
+    {
+        this.gameAudio.PlayDeath();
+    }
+
+    public void OnPlayerPickup()
+    {
+        this.gameAudio.PlayPickup();
+    }
+
+    public void OnPlayerPerformedMainAction()
+    {
+        this.gameAudio.PlayJump();
     }
 }

@@ -44,6 +44,24 @@ public class GameAudio : Node2D
     public AudioStream CancelSFX;
 
     /// <summary>
+    ///     Audio effect to play when the player dies.
+    /// </summary>
+    [Export]
+    public AudioStream DeathSFX;
+
+    /// <summary>
+    ///     Audio effect to play when the player jumps.
+    /// </summary>
+    [Export]
+    public AudioStream JumpSFX;
+
+    /// <summary>
+    ///     Audio effect to play when player comes in contact with an action pickup.
+    /// </summary>
+    [Export]
+    public AudioStream PickupSFX;
+
+    /// <summary>
     ///     Dictionary mapping each game scene to a background music track.
     /// </summary>
     private Dictionary<GameScenes, AudioStream> sceneMusic;
@@ -107,6 +125,33 @@ public class GameAudio : Node2D
     public void PlayCancel()
     {
         this.sfx.Stream = this.CancelSFX;
+        this.sfx.Play();
+    }
+
+    /// <summary>
+    ///     Plays the death sound effect.
+    /// </summary>
+    public void PlayDeath()
+    {
+        this.sfx.Stream = this.DeathSFX;
+        this.sfx.Play();
+    }
+
+    /// <summary>
+    ///     Plays the pickup sound effect.
+    /// </summary>
+    public void PlayPickup()
+    {
+        this.sfx.Stream = this.PickupSFX;
+        this.sfx.Play();
+    }
+
+    /// <summary>
+    ///     Plays the jump sound effect.
+    /// </summary>
+    public void PlayJump()
+    {
+        this.sfx.Stream = this.JumpSFX;
         this.sfx.Play();
     }
 

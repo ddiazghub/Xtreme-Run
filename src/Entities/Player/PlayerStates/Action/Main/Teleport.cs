@@ -27,6 +27,8 @@ public class Teleport: MainAction {
 
     public override void _ActionOnGround()
     {
+        this.EmitSignal("Action");
+        
         if (!this.PerformingAction)
         {
             this.Player.Position = new Vector2(this.Player.Position.x, this.Player.Position.y - this.TELEPORT_DISTANCE);

@@ -26,6 +26,24 @@ public class Level : Node2D
     float pointsMultiplier = 1f;
 
     /// <summary>
+    ///     Emitted when the player dies.
+    /// </summary>
+    [Signal]
+    public delegate void PlayerDead();
+
+    /// <summary>
+    ///     Emitted when the player performs a main action.
+    /// </summary>
+    [Signal]
+    public delegate void PlayerPerformedMainAction();
+
+    /// <summary>
+    ///     Emitted when the player pickups an action.
+    /// </summary>
+    [Signal]
+    public delegate void PlayerPickup();
+
+    /// <summary>
     ///     The currently active player in the level.
     /// </summary>
     private Player player;
@@ -146,6 +164,8 @@ public class Level : Node2D
         this.positions.Clear();
 
         this.player.Connect("Dead", this, nameof(this.OnPlayerDead));
+        this.player.Connect("Pickup", this, nameof(this.OnPlayerPickup));
+        this.player.Connect("PerformedMainAction", this, nameof(this.OnPlayerPerformedMainAction));
     }
 
     /// <summary>
@@ -215,6 +235,17 @@ public class Level : Node2D
     public void OnPlayerDead()
     {
         this.Restart();
+        this.EmitSignal("PlayerDead");
+    }
+
+    public void OnPlayerPickup()
+    {
+        this.EmitSignal("PlayerPickup");
+    }
+
+    public void OnPlayerPerformedMainAction()
+    {
+        this.EmitSignal("PlayerPerformedMainAction");
     }
 
     public void OnHudPausePressed()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://res/Sounds/music/menu.wav" type="AudioStream" id=1]
 [ext_resource path="res://res/Sounds/sfx/MENU B_Select.wav" type="AudioStream" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://src/Audio/GameAudio.cs" type="Script" id=5]
 [ext_resource path="res://res/Sounds/music/07 high in the mountains.ogg" type="AudioStream" id=6]
 [ext_resource path="res://res/Sounds/music/12 final battle.ogg" type="AudioStream" id=7]
+[ext_resource path="res://res/Sounds/sfx/bonk.wav" type="AudioStream" id=8]
+[ext_resource path="res://res/Sounds/sfx/jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://res/Sounds/sfx/pickup.wav" type="AudioStream" id=10]
 
 [node name="GameAudio" type="Node2D"]
 script = ExtResource( 5 )
@@ -16,6 +19,9 @@ Level2Music = ExtResource( 6 )
 Level3Music = ExtResource( 7 )
 AcceptSFX = ExtResource( 2 )
 CancelSFX = ExtResource( 3 )
+DeathSFX = ExtResource( 8 )
+JumpSFX = ExtResource( 9 )
+PickupSFX = ExtResource( 10 )
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )

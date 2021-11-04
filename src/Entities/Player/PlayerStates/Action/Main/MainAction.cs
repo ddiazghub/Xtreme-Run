@@ -7,6 +7,12 @@ using System;
 public abstract class MainAction: PlayerState {
 
     /// <summary>
+    ///     Emitted if the player performs a main action.
+    /// </summary>
+    [Signal]
+    public delegate void Action();
+
+    /// <summary>
     ///     True if the player is currently on a jump pad.
     /// </summary>
     protected bool OnActionPad { get; set; } = false;
@@ -65,6 +71,7 @@ public abstract class MainAction: PlayerState {
 
     public virtual void _ActionOnGround()
     {
+        this.EmitSignal("Action");
         this.PerformingAction = true;
         this.Player.mainActionTimer.Start();
         this.CanUseActionPad = false;

@@ -42,12 +42,14 @@ public abstract class PersistentState: PlayerState {
     {
         if (area.IsInGroup("pickup_main"))
         {
-            this.Player.ChangeMainAction(((MainActionPickup) area).Type);   
+            this.Player.ChangeMainAction(((MainActionPickup) area).Type);
+            this.Player.EmitSignal("Pickup");
         }
 
         if (area.IsInGroup("pickup_secondary"))
         {
             this.Player.ChangeSecondaryAction(((SecondaryActionPickup) area).Type);
+            this.Player.EmitSignal("Pickup");
         }
     }
 }

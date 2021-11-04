@@ -21,6 +21,11 @@ public class ShopGUI : NinePatchRect
     ///     Image texture of the check for labeling owned items.
     /// </summary>
     private Texture checkTick = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/store_check.png");
+
+    /// <summary>
+    ///     Image texture of the lock for labeling locked items.
+    /// </summary>
+    private Texture lockSprite = ResourceLoader.Load<Texture>("res://res/Sprites/player/level_keys/lock_big.png");
     
     /// <summary>
     ///     The currently selected item.
@@ -48,7 +53,7 @@ public class ShopGUI : NinePatchRect
             else if (i == 15)
                 this.itemCost[i] = 5000;
             else if (i == 16)
-                this.itemCost[i] = 7500;
+                this.itemCost[i] = 15000;
         }
 
         this.GetNode<TextureRect>("StoreSelect").Hide();
@@ -89,11 +94,17 @@ public class ShopGUI : NinePatchRect
                     button.Name = i.ToString();
                     button.TextureNormal = Palette.Instance.TextureFromColor(i, new Vector2(64, 64));
 
+                    if (!PlayerSession.ActiveSession.Profile.OwnedItems[16])
+                    {
+                        TextureRect textureRect = new TextureRect();
+                        textureRect.Texture = this.lockSprite;
+                        button.AddChild(textureRect);
+                    }
+                    
                     this.GetNode(key + "/Buttons").AddChild(button);
                 }
 
                 button.Connect("pressed", this, nameof(this.OnItemButtonPressed));
-
                 if (PlayerSession.ActiveSession.Profile.OwnedItems[i])
                 {
                     TextureRect textureRect = new TextureRect();

@@ -15,17 +15,17 @@ public class Avatar {
     /// <summary>
     ///     Id of the avatar's skin color.
     /// </summary>
-    public int SkinColor;
+    public int SkinColor { get; set; }
 
     /// <summary>
     ///     Id of the avatar's bottom color.
     /// </summary>
-    public int TopColor;
+    public int TopColor { get; set; }
 
     /// <summary>
     ///     Id of the avatar's top color.
     /// </summary>
-    public int BottomColor;
+    public int BottomColor { get; set; }
 
     /// <summary>
     ///     Default avatar for non-created profiles.

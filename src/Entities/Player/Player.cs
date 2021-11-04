@@ -34,10 +34,32 @@ public class Player : KinematicBody2D
     [Export] public int Gravity = 210;
 
     /// <summary>
+    ///     Male character animations
+    /// </summary>
+    [Export] public SpriteFrames MaleAnimation;
+
+    /// <summary>
+    ///     Female character animations
+    /// </summary>
+    [Export] public SpriteFrames FemaleAnimation;
+
+    /// <summary>
     ///     Emitted if the player dies.
     /// </summary>
     [Signal]
     public delegate void Dead();
+
+    /// <summary>
+    ///     Emitted when the player performs a main action.
+    /// </summary>
+    [Signal]
+    public delegate void PerformedMainAction();
+
+    /// <summary>
+    ///     Emitted when the player comes in contact with a pickup.
+    /// </summary>
+    [Signal]
+    public delegate void Pickup();
 
     /// <summary>
     ///     Area2D to check if the player has entered any jump objects.
@@ -149,6 +171,16 @@ public class Player : KinematicBody2D
 
         this.startTimer.Connect("timeout", this, nameof(this.OnStartTimerTimeout));
 
+        if (PlayerSession.ActiveSession.Profile.Avatar.Male)
+            this.animation.Frames = this.MaleAnimation;
+        else
+            this.animation.Frames = this.FemaleAnimation;
+
+        if (PlayerSession.ActiveSession.Profile.Avatar.TopColor != 15)
+            this.animation.Modulate = Palette.Instance.PaletteColors[PlayerSession.ActiveSession.Profile.Avatar.TopColor];
+        else if (PlayerSession.ActiveSession.Profile.Avatar.BottomColor != 15)
+            this.animation.Modulate = Palette.Instance.PaletteColors[PlayerSession.ActiveSession.Profile.Avatar.BottomColor];
+
         this.stateFactory = new PlayerStateFactory();
         this.ChangePersistentState(PlayerPersistentState.ON_GROUND);
         this.ChangeMainAction(PlayerMainAction.JUMP);
@@ -213,6 +245,7 @@ public class Player : KinematicBody2D
         this.MainAction = this.stateFactory.New(action);
         this.AddChild(this.MainAction);
         this.MainAction.Setup();
+        this.MainAction.Connect("Action", this, nameof(this.OnMainAction));
     }
 
     /// <summary>
@@ -271,5 +304,10 @@ public class Player : KinematicBody2D
     public void OnStartTimerTimeout() {
         this.Blocked = false;
         this.startTimer.Stop();
+    }
+
+    public void OnMainAction()
+    {
+        this.EmitSignal("PerformedMainAction");
     }
 }

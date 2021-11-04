@@ -68,6 +68,7 @@ public class Glide: MainAction {
 
     public override void _ActionOnGround()
     {
+        this.EmitSignal("Action");
         this.state = GlideStates.JUMPING;
         this.Player.mainActionTimer.Start();
         this.CanUseActionPad = false;
