@@ -8,9 +8,8 @@ var searchData=
   ['selected_5',['selected',['../class_edit_profile_g_u_i.html#a7784b52bb3c578a7fe5cfa36832b9d53',1,'EditProfileGUI.selected()'],['../class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e',1,'ShopGUI.selected()']]],
   ['sfx_6',['sfx',['../class_game_audio.html#a13e9f2d30ac410e89e3adc323da02525',1,'GameAudio']]],
   ['shop_7',['shop',['../class_main_menu.html#a670bcafdf8f5e35b41e31c08fb26fbbd',1,'MainMenu']]],
-  ['skincolor_8',['SkinColor',['../class_avatar.html#a267cad98d66d8c4cb7008c967f9dd176',1,'Avatar']]],
-  ['startposition_9',['startPosition',['../class_level.html#af314bba2710e5eedac3985ca0c726ac4',1,'Level']]],
-  ['starttimer_10',['startTimer',['../class_player.html#ab41212894186e98612be4e15d08ad121',1,'Player']]],
-  ['state_11',['state',['../class_glide.html#aa63b3baef2fcfcc7606a987b09dcf4c0',1,'Glide']]],
-  ['statefactory_12',['stateFactory',['../class_player.html#a4580768fe6a6cb084e2e987588682d2c',1,'Player']]]
+  ['startposition_8',['startPosition',['../class_level.html#af314bba2710e5eedac3985ca0c726ac4',1,'Level']]],
+  ['starttimer_9',['startTimer',['../class_player.html#ab41212894186e98612be4e15d08ad121',1,'Player']]],
+  ['state_10',['state',['../class_glide.html#aa63b3baef2fcfcc7606a987b09dcf4c0',1,'Glide']]],
+  ['statefactory_11',['stateFactory',['../class_player.html#a4580768fe6a6cb084e2e987588682d2c',1,'Player']]]
 ];

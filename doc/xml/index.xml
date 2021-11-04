@@ -9,9 +9,9 @@
   </compound>
   <compound refid="class_avatar" kind="class"><name>Avatar</name>
     <member refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" kind="property"><name>Male</name></member>
-    <member refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" kind="variable"><name>SkinColor</name></member>
-    <member refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" kind="variable"><name>TopColor</name></member>
-    <member refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" kind="variable"><name>BottomColor</name></member>
+    <member refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" kind="property"><name>SkinColor</name></member>
+    <member refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" kind="property"><name>TopColor</name></member>
+    <member refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" kind="property"><name>BottomColor</name></member>
     <member refid="class_avatar_1aadcbb7a0039fa394ff780e83b53fb811" kind="variable"><name>EMPTY_SAVE_AVATAR</name></member>
     <member refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" kind="function"><name>Avatar</name></member>
     <member refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" kind="function"><name>GetColor</name></member>
@@ -65,6 +65,9 @@
     <member refid="class_game_audio_1ac66409802e2533dafa25f107a458c8d5" kind="variable"><name>Level3Music</name></member>
     <member refid="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" kind="variable"><name>AcceptSFX</name></member>
     <member refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" kind="variable"><name>CancelSFX</name></member>
+    <member refid="class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098" kind="variable"><name>DeathSFX</name></member>
+    <member refid="class_game_audio_1ab05094f6a17b0e8355112a6024cae50c" kind="variable"><name>JumpSFX</name></member>
+    <member refid="class_game_audio_1ab8e43f74aa38d82514d3025e0833033d" kind="variable"><name>PickupSFX</name></member>
     <member refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" kind="variable"><name>sceneMusic</name></member>
     <member refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" kind="variable"><name>music</name></member>
     <member refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" kind="variable"><name>sfx</name></member>
@@ -72,6 +75,9 @@
     <member refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" kind="function"><name>SetMusic</name></member>
     <member refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" kind="function"><name>PlayAccept</name></member>
     <member refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" kind="function"><name>PlayCancel</name></member>
+    <member refid="class_game_audio_1aeaebd5d3ac12494cb693a2e7ea233246" kind="function"><name>PlayDeath</name></member>
+    <member refid="class_game_audio_1a5bb181af6c57c5794a624890e967782c" kind="function"><name>PlayPickup</name></member>
+    <member refid="class_game_audio_1afd92bfe560ae4047f75e9165d0a935da" kind="function"><name>PlayJump</name></member>
     <member refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" kind="function"><name>OnMusicFinished</name></member>
     <member refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" kind="function"><name>OnSfxFinished</name></member>
   </compound>
@@ -139,6 +145,9 @@
     <member refid="class_level_1abc95c07752147fca666c789118606a4e" kind="variable"><name>progress</name></member>
     <member refid="class_level_1a08e6603e6ab77dc1ca2d58c2ed8221a0" kind="variable"><name>LevelNumber</name></member>
     <member refid="class_level_1a68bdb4fa6a0a7d317daaaf44c06599f2" kind="variable"><name>positions</name></member>
+    <member refid="class_level_1a963f02696507398ac850dcaee43ff321" kind="function"><name>PlayerDead</name></member>
+    <member refid="class_level_1a9cb1b65bbf3e9ff796adf998f7b748d3" kind="function"><name>PlayerPerformedMainAction</name></member>
+    <member refid="class_level_1afec3b7fef9b7c0c9e590b2ca2a47245c" kind="function"><name>PlayerPickup</name></member>
     <member refid="class_level_1a9b982efc154865a30a5c589d72f0a900" kind="function"><name>_Ready</name></member>
     <member refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" kind="function"><name>_Process</name></member>
     <member refid="class_level_1ab147d68f7a06156f6a0cd595bf58f75d" kind="function"><name>_Draw</name></member>
@@ -149,6 +158,8 @@
     <member refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" kind="function"><name>Pause</name></member>
     <member refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" kind="function"><name>SaveData</name></member>
     <member refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" kind="function"><name>OnPlayerDead</name></member>
+    <member refid="class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5" kind="function"><name>OnPlayerPickup</name></member>
+    <member refid="class_level_1a89dbf1585c31caa958aa431823f2f4f7" kind="function"><name>OnPlayerPerformedMainAction</name></member>
     <member refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" kind="function"><name>OnHudPausePressed</name></member>
     <member refid="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" kind="function"><name>OnHudPauseMouseEntered</name></member>
     <member refid="class_level_1a462cabf043b2870fda20d5a7c25e6d40" kind="function"><name>OnHudPauseMouseExited</name></member>
@@ -175,12 +186,16 @@
     <member refid="class_main_1a4e01ee6e74012ec1eebf4744eb2640ad" kind="variable"><name>sceneFactory</name></member>
     <member refid="class_main_1afa38a52a0b6f8e0362539aea9114f285" kind="function"><name>_Ready</name></member>
     <member refid="class_main_1aff56bc272e79a2419d64fd18356b052b" kind="function"><name>ChangeScene</name></member>
+    <member refid="class_main_1a2d291164de57045d25f001c67e755396" kind="function"><name>OnPlayerDead</name></member>
+    <member refid="class_main_1a5f0ade85d9f0190041de5c60d550a155" kind="function"><name>OnPlayerPickup</name></member>
+    <member refid="class_main_1a40bec5344f137c03de6931c55fe19060" kind="function"><name>OnPlayerPerformedMainAction</name></member>
   </compound>
   <compound refid="class_main_action" kind="class"><name>MainAction</name>
     <member refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" kind="property"><name>OnActionPad</name></member>
     <member refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" kind="property"><name>PerformingAction</name></member>
     <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" kind="property"><name>Blocked</name></member>
     <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" kind="variable"><name>CanUseActionPad</name></member>
+    <member refid="class_main_action_1a673b3a967faefc189251e4470b944fd4" kind="function"><name>Action</name></member>
     <member refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" kind="function"><name>_Init</name></member>
     <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" kind="function"><name>_StatePhysicsProcess</name></member>
     <member refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" kind="function"><name>_ActionOnGround</name></member>
@@ -267,6 +282,8 @@
     <member refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" kind="variable"><name>MaxJumpTime</name></member>
     <member refid="class_player_1af93facbeac2019c5bc7bfb2493041109" kind="variable"><name>MaxFallSpeed</name></member>
     <member refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" kind="variable"><name>Gravity</name></member>
+    <member refid="class_player_1a28f9ab1a1e2354fcb49c99fd618cf189" kind="variable"><name>MaleAnimation</name></member>
+    <member refid="class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2" kind="variable"><name>FemaleAnimation</name></member>
     <member refid="class_player_1a4d70330236aa5cff44570ad6063433f0" kind="variable"><name>jumpObjectCollisionCheck</name></member>
     <member refid="class_player_1a4d0da6c92bf522df4a9d0b97b209b09b" kind="variable"><name>teleportCollisionCheck</name></member>
     <member refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" kind="variable"><name>secondaryActionTimer</name></member>
@@ -290,6 +307,8 @@
     <member refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" kind="property"><name>InvertedGravity</name></member>
     <member refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" kind="property"><name>Invincible</name></member>
     <member refid="class_player_1ad26d3c4010754f6af7948560a2a233c8" kind="function"><name>Dead</name></member>
+    <member refid="class_player_1ab320c041982d83b5c79173ad1064f7be" kind="function"><name>PerformedMainAction</name></member>
+    <member refid="class_player_1ac428e6908dd8a937cd060ec9f7d62814" kind="function"><name>Pickup</name></member>
     <member refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" kind="function"><name>_Ready</name></member>
     <member refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" kind="function"><name>_PhysicsProcess</name></member>
     <member refid="class_player_1ae2226638af8907c89812bdb4b7eefede" kind="function"><name>ChangePersistentState</name></member>
@@ -298,6 +317,7 @@
     <member refid="class_player_1ad50972081bd91a62aa2c099b27462d37" kind="function"><name>InvertGravity</name></member>
     <member refid="class_player_1a4d955d72d1768541f5ac99f19ffe1381" kind="function"><name>SetHitbox</name></member>
     <member refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" kind="function"><name>OnStartTimerTimeout</name></member>
+    <member refid="class_player_1a04fe5bcf48f86e0a09f15e4ee623862a" kind="function"><name>OnMainAction</name></member>
   </compound>
   <compound refid="class_player_session" kind="class"><name>PlayerSession</name>
     <member refid="class_player_session_1abfa60705cc632ddb82a3d5f604f7d24e" kind="variable"><name>activeSession</name></member>
@@ -408,6 +428,7 @@
   <compound refid="class_shop_g_u_i" kind="class"><name>ShopGUI</name>
     <member refid="class_shop_g_u_i_1a8bf98d564883ae5927975a1790027d45" kind="variable"><name>itemCost</name></member>
     <member refid="class_shop_g_u_i_1ab34b159241bbb12917f9a4dc4bbef6ff" kind="variable"><name>checkTick</name></member>
+    <member refid="class_shop_g_u_i_1adf5deadd4fdd72b2e957730293479f87" kind="variable"><name>lockSprite</name></member>
     <member refid="class_shop_g_u_i_1a22cf6ed357c8d2aa5fa9f56212f0cf6e" kind="variable"><name>selected</name></member>
     <member refid="class_shop_g_u_i_1ab49dca7c086e1c7e21895a0517192bdc" kind="variable"><name>keys</name></member>
     <member refid="class_shop_g_u_i_1a3afd1cedc36ef4900dcd83db77fc50d9" kind="function"><name>ProfileChanged</name></member>
@@ -557,6 +578,8 @@
   </compound>
   <compound refid="_save_file_info_8cs" kind="file"><name>SaveFileInfo.cs</name>
   </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
   <compound refid="_scene_factory_8cs" kind="file"><name>SceneFactory.cs</name>
   </compound>
   <compound refid="_attempts_counter_8cs" kind="file"><name>AttemptsCounter.cs</name>
@@ -592,6 +615,8 @@
   <compound refid="_palette_swap_entry_8cs" kind="file"><name>PaletteSwapEntry.cs</name>
   </compound>
   <compound refid="_palette_swap_shader_8cs" kind="file"><name>PaletteSwapShader.cs</name>
+  </compound>
+  <compound refid="md_src__r_e_a_d_m_e" kind="page"><name>md_src_README</name>
   </compound>
   <compound refid="dir_19a555520e51007eabd19ef23bdb8411" kind="dir"><name>src/Entities/Player/PlayerStates/Action</name>
   </compound>

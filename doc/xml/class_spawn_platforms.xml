@@ -35,7 +35,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="14" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="14" bodyend="18"/>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
       </memberdef>
       <memberdef kind="function" id="class_spawn_platforms_1a2a9b1a8f7dc1af458b60059ba08bc847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -67,7 +67,7 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" line="25" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SpawnPlatforms.cs" bodystart="25" bodyend="42"/>
         <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">SecondaryAction.Blocked</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
       </memberdef>
       <memberdef kind="function" id="class_spawn_platforms_1a3eeaa79c708598234334fda9cb7f156e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>

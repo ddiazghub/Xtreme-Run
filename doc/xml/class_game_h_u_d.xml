@@ -89,7 +89,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Scenes/GameHUD.cs" line="38" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="38" bodyend="41"/>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">Level._Process</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_game_h_u_d_1ad76c722e11f1eae273e8096f843646fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Scenes/GameHUD.cs" line="47" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="47" bodyend="50"/>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">Level._Process</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_game_h_u_d_1a1b64a3c74071717408c1c809a4a6804a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -147,7 +147,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Scenes/GameHUD.cs" line="56" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="56" bodyend="59"/>
-        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Level.Restart</referencedby>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Level.Restart</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -188,9 +188,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Scenes/GameHUD.cs" line="66" column="17" bodyfile="src/Scenes/GameHUD.cs" bodystart="66" bodyend="79"/>
-        <references refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" compoundref="_main_action_8cs" startline="129" endline="148">MainAction.GetTypeAsStringEsp</references>
+        <references refid="class_main_action_1aa5e2b5f2a44a4d622e64878af6240e99" compoundref="_main_action_8cs" startline="136" endline="155">MainAction.GetTypeAsStringEsp</references>
         <references refid="class_secondary_action_1ad8f2e602a06f1350c9bc0a5b25ff5c83" compoundref="_secondary_action_8cs" startline="94" endline="113">SecondaryAction.GetTypeAsStringEsp</references>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">Level._Process</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_game_h_u_d_1a317071a9133c94c6efcbe8c81ee17516" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

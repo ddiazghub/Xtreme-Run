@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Source<sp/>Code</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>node&apos;s<sp/>script<sp/>is<sp/>located<sp/>in<sp/>this<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Audio</highlight></codeline>
+<codeline><highlight class="normal">Global<sp/>audio<sp/>player.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Entities</highlight></codeline>
+<codeline><highlight class="normal">Player,<sp/>pickups<sp/>and<sp/>jump<sp/>pads.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Maps</highlight></codeline>
+<codeline><highlight class="normal">Levels<sp/>and<sp/>tiles.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Profiles</highlight></codeline>
+<codeline><highlight class="normal">Code<sp/>for<sp/>save<sp/>system<sp/>implementation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Scenes</highlight></codeline>
+<codeline><highlight class="normal">Menus<sp/>and<sp/>UI<sp/>elements.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Shaders</highlight></codeline>
+<codeline><highlight class="normal">Palette<sp/>swap<sp/>for<sp/>sprites.</highlight></codeline>
+    </programlisting>
+    <location file="src/README.md"/>
+  </compounddef>
+</doxygen>

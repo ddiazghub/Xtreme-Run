@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="31" column="20" bodyfile="src/Maps/Level.cs" bodystart="31" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="49" column="20" bodyfile="src/Maps/Level.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a025cdb541293de7e6c481f39fd78f0d2" prot="private" static="no" mutable="no">
         <type>Camera2D</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="36" column="22" bodyfile="src/Maps/Level.cs" bodystart="36" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="54" column="22" bodyfile="src/Maps/Level.cs" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a8135b0cfe9ef72bb2c97d548a357e28f" prot="private" static="no" mutable="no">
         <type>AnimatedSprite</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="41" column="28" bodyfile="src/Maps/Level.cs" bodystart="41" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="59" column="28" bodyfile="src/Maps/Level.cs" bodystart="59" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a414b9257e19142655a85889f1fbda951" prot="private" static="no" mutable="no">
         <type><ref refid="class_pause_menu" kindref="compound">PauseMenu</ref></type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="46" column="23" bodyfile="src/Maps/Level.cs" bodystart="46" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="64" column="23" bodyfile="src/Maps/Level.cs" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a84ddf86ee474ffdfd98cc2b1aa43814b" prot="private" static="no" mutable="no">
         <type><ref refid="class_level_complete" kindref="compound">LevelComplete</ref></type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="51" column="27" bodyfile="src/Maps/Level.cs" bodystart="51" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="69" column="27" bodyfile="src/Maps/Level.cs" bodystart="69" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1ab4df515c7712f237f0b4b326cff89aed" prot="private" static="no" mutable="no">
         <type><ref refid="class_game_h_u_d" kindref="compound">GameHUD</ref></type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="56" column="21" bodyfile="src/Maps/Level.cs" bodystart="56" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="74" column="21" bodyfile="src/Maps/Level.cs" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1af314bba2710e5eedac3985ca0c726ac4" prot="private" static="no" mutable="no">
         <type>Position2D</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="61" column="24" bodyfile="src/Maps/Level.cs" bodystart="61" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="79" column="24" bodyfile="src/Maps/Level.cs" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1afcebe2e8e72888d60547614609520969" prot="private" static="no" mutable="no">
         <type>Area2D</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="66" column="20" bodyfile="src/Maps/Level.cs" bodystart="66" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="84" column="20" bodyfile="src/Maps/Level.cs" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1ab66639867e8a2ed0cd9ed25ecc518461" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="74" column="17" bodyfile="src/Maps/Level.cs" bodystart="74" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="92" column="17" bodyfile="src/Maps/Level.cs" bodystart="92" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_level_1abc95c07752147fca666c789118606a4e" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="79" column="20" bodyfile="src/Maps/Level.cs" bodystart="79" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="97" column="20" bodyfile="src/Maps/Level.cs" bodystart="97" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -191,7 +191,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Maps/Level.cs" line="20" column="16" bodyfile="src/Maps/Level.cs" bodystart="20" bodyend="-1"/>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">SaveData</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_level_1a68bdb4fa6a0a7d317daaaf44c06599f2" prot="public" static="no" mutable="no">
         <type>List&lt; Vector2 &gt;</type>
@@ -205,10 +205,52 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="69" column="17" bodyfile="src/Maps/Level.cs" bodystart="69" bodyend="-1"/>
+        <location file="src/Maps/Level.cs" line="87" column="17" bodyfile="src/Maps/Level.cs" bodystart="87" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_level_1a963f02696507398ac850dcaee43ff321" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Level.PlayerDead</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerDead</name>
+        <briefdescription>
+<para>Emitted when the player dies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Level.cs" line="32" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a9cb1b65bbf3e9ff796adf998f7b748d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Level.PlayerPerformedMainAction</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerPerformedMainAction</name>
+        <briefdescription>
+<para>Emitted when the player performs a main action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Level.cs" line="38" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1afec3b7fef9b7c0c9e590b2ca2a47245c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Level.PlayerPickup</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerPickup</name>
+        <briefdescription>
+<para>Emitted when the player pickups an action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Level.cs" line="44" column="26"/>
+      </memberdef>
       <memberdef kind="function" id="class_level_1a9b982efc154865a30a5c589d72f0a900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
         <definition>override void Level._Ready</definition>
@@ -220,13 +262,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="81" column="26" bodyfile="src/Maps/Level.cs" bodystart="81" bodyend="100"/>
-        <references refid="class_level_1aa0e6bfa6d80ec968a1995f395e016a0b" compoundref="_level_8cs" startline="240" endline="246">OnEndPositionBodyEntered</references>
-        <references refid="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" compoundref="_level_8cs" startline="225" endline="228">OnHudPauseMouseEntered</references>
-        <references refid="class_level_1a462cabf043b2870fda20d5a7c25e6d40" compoundref="_level_8cs" startline="230" endline="233">OnHudPauseMouseExited</references>
-        <references refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" compoundref="_level_8cs" startline="220" endline="223">OnHudPausePressed</references>
-        <references refid="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" compoundref="_level_8cs" startline="235" endline="238">OnPauseMenuRestartPressed</references>
-        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Restart</references>
+        <location file="src/Maps/Level.cs" line="99" column="26" bodyfile="src/Maps/Level.cs" bodystart="99" bodyend="118"/>
+        <references refid="class_level_1aa0e6bfa6d80ec968a1995f395e016a0b" compoundref="_level_8cs" startline="271" endline="277">OnEndPositionBodyEntered</references>
+        <references refid="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" compoundref="_level_8cs" startline="256" endline="259">OnHudPauseMouseEntered</references>
+        <references refid="class_level_1a462cabf043b2870fda20d5a7c25e6d40" compoundref="_level_8cs" startline="261" endline="264">OnHudPauseMouseExited</references>
+        <references refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" compoundref="_level_8cs" startline="251" endline="254">OnHudPausePressed</references>
+        <references refid="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" compoundref="_level_8cs" startline="266" endline="269">OnPauseMenuRestartPressed</references>
+        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</references>
       </memberdef>
       <memberdef kind="function" id="class_level_1adf87a658b5a922295a3bbab87f5820b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -243,15 +285,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="102" column="26" bodyfile="src/Maps/Level.cs" bodystart="102" bodyend="116"/>
-        <references refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">GetPoints</references>
-        <references refid="class_player_1aa2d4269e3e9b3042032012c05502ff76" compoundref="_player_8cs" startline="116" endline="116">Player.MainActionType</references>
-        <references refid="class_level_1a37da9eda7a3cd74e5a8c4d5e92e83b18" compoundref="_level_8cs" startline="176" endline="192">MoveViewPort</references>
-        <references refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" compoundref="_level_8cs" startline="197" endline="200">Pause</references>
+        <location file="src/Maps/Level.cs" line="120" column="26" bodyfile="src/Maps/Level.cs" bodystart="120" bodyend="134"/>
+        <references refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="188" endline="191">GetPoints</references>
+        <references refid="class_player_1aa2d4269e3e9b3042032012c05502ff76" compoundref="_player_8cs" startline="138" endline="138">Player.MainActionType</references>
+        <references refid="class_level_1a37da9eda7a3cd74e5a8c4d5e92e83b18" compoundref="_level_8cs" startline="196" endline="212">MoveViewPort</references>
+        <references refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" compoundref="_level_8cs" startline="217" endline="220">Pause</references>
         <references refid="class_game_h_u_d_1aca0c2fc700f10a3aed6b1f65c13bfadd" compoundref="_game_h_u_d_8cs" startline="66" endline="79">GameHUD.SetActions</references>
         <references refid="class_game_h_u_d_1a511dd4c57dc75287bfa056bdbba46d95" compoundref="_game_h_u_d_8cs" startline="38" endline="41">GameHUD.SetPoints</references>
         <references refid="class_game_h_u_d_1ad76c722e11f1eae273e8096f843646fb" compoundref="_game_h_u_d_8cs" startline="47" endline="50">GameHUD.SetProgress</references>
-        <references refid="class_level_1a209b18b3eef463ac8dc4caf19d869f11" compoundref="_level_8cs" startline="154" endline="162">UpdateProgress</references>
+        <references refid="class_level_1a209b18b3eef463ac8dc4caf19d869f11" compoundref="_level_8cs" startline="174" endline="182">UpdateProgress</references>
       </memberdef>
       <memberdef kind="function" id="class_level_1ab147d68f7a06156f6a0cd595bf58f75d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -264,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="118" column="26" bodyfile="src/Maps/Level.cs" bodystart="118" bodyend="124"/>
+        <location file="src/Maps/Level.cs" line="136" column="26" bodyfile="src/Maps/Level.cs" bodystart="136" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="class_level_1a20b2f496054effcd20120b8cb37c14dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -278,13 +320,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="129" column="17" bodyfile="src/Maps/Level.cs" bodystart="129" bodyend="149"/>
-        <references refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" compoundref="_level_8cs" startline="215" endline="218">OnPlayerDead</references>
-        <references refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">SaveData</references>
+        <location file="src/Maps/Level.cs" line="147" column="17" bodyfile="src/Maps/Level.cs" bodystart="147" bodyend="169"/>
+        <references refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" compoundref="_level_8cs" startline="235" endline="239">OnPlayerDead</references>
+        <references refid="class_level_1a89dbf1585c31caa958aa431823f2f4f7" compoundref="_level_8cs" startline="246" endline="249">OnPlayerPerformedMainAction</references>
+        <references refid="class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5" compoundref="_level_8cs" startline="241" endline="244">OnPlayerPickup</references>
+        <references refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">SaveData</references>
         <references refid="class_game_h_u_d_1a1b64a3c74071717408c1c809a4a6804a" compoundref="_game_h_u_d_8cs" startline="56" endline="59">GameHUD.SetAttempts</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
-        <referencedby refid="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" compoundref="_level_8cs" startline="235" endline="238">OnPauseMenuRestartPressed</referencedby>
-        <referencedby refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" compoundref="_level_8cs" startline="215" endline="218">OnPlayerDead</referencedby>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
+        <referencedby refid="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" compoundref="_level_8cs" startline="266" endline="269">OnPauseMenuRestartPressed</referencedby>
+        <referencedby refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" compoundref="_level_8cs" startline="235" endline="239">OnPlayerDead</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a209b18b3eef463ac8dc4caf19d869f11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -298,8 +342,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="154" column="17" bodyfile="src/Maps/Level.cs" bodystart="154" bodyend="162"/>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">_Process</referencedby>
+        <location file="src/Maps/Level.cs" line="174" column="17" bodyfile="src/Maps/Level.cs" bodystart="174" bodyend="182"/>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">_Process</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -316,12 +360,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="168" column="16" bodyfile="src/Maps/Level.cs" bodystart="168" bodyend="171"/>
+        <location file="src/Maps/Level.cs" line="188" column="16" bodyfile="src/Maps/Level.cs" bodystart="188" bodyend="191"/>
         <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
         <references refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" compoundref="_profile_8cs" startline="58" endline="60">Profile.LevelProgress</references>
         <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">_Process</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">SaveData</referencedby>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">_Process</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">SaveData</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a37da9eda7a3cd74e5a8c4d5e92e83b18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -335,8 +379,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="176" column="17" bodyfile="src/Maps/Level.cs" bodystart="176" bodyend="192"/>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">_Process</referencedby>
+        <location file="src/Maps/Level.cs" line="196" column="17" bodyfile="src/Maps/Level.cs" bodystart="196" bodyend="212"/>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">_Process</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -350,10 +394,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="197" column="17" bodyfile="src/Maps/Level.cs" bodystart="197" bodyend="200"/>
+        <location file="src/Maps/Level.cs" line="217" column="17" bodyfile="src/Maps/Level.cs" bodystart="217" bodyend="220"/>
         <references refid="class_pause_menu_1aae0eb58374e364f7b34d0750be250efa" compoundref="_pause_menu_8cs" startline="30" endline="34">PauseMenu.ShowMenu</references>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">_Process</referencedby>
-        <referencedby refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" compoundref="_level_8cs" startline="220" endline="223">OnHudPausePressed</referencedby>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">_Process</referencedby>
+        <referencedby refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" compoundref="_level_8cs" startline="251" endline="254">OnHudPausePressed</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -367,15 +411,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="205" column="17" bodyfile="src/Maps/Level.cs" bodystart="205" bodyend="213"/>
+        <location file="src/Maps/Level.cs" line="225" column="17" bodyfile="src/Maps/Level.cs" bodystart="225" bodyend="233"/>
         <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
-        <references refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">GetPoints</references>
+        <references refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="188" endline="191">GetPoints</references>
         <references refid="class_level_1a08e6603e6ab77dc1ca2d58c2ed8221a0" compoundref="_level_8cs" startline="20">LevelNumber</references>
         <references refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" compoundref="_profile_8cs" startline="58" endline="60">Profile.LevelProgress</references>
         <references refid="class_profile_1af87d47cc73db8b55b24e5ab547534272" compoundref="_profile_8cs" startline="39" endline="42">Profile.Points</references>
         <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
         <references refid="class_player_session_1a8522ef9c8fc11562857f5a4a7955cca7" compoundref="_player_session_8cs" startline="43" endline="46">PlayerSession.Save</references>
-        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Restart</referencedby>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a6807430e5f1f262aca25e7bc40fbac90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -388,9 +432,37 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="215" column="17" bodyfile="src/Maps/Level.cs" bodystart="215" bodyend="218"/>
-        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Restart</references>
-        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Restart</referencedby>
+        <location file="src/Maps/Level.cs" line="235" column="17" bodyfile="src/Maps/Level.cs" bodystart="235" bodyend="239"/>
+        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</references>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Level.OnPlayerPickup</definition>
+        <argsstring>()</argsstring>
+        <name>OnPlayerPickup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Level.cs" line="241" column="17" bodyfile="src/Maps/Level.cs" bodystart="241" bodyend="244"/>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_level_1a89dbf1585c31caa958aa431823f2f4f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Level.OnPlayerPerformedMainAction</definition>
+        <argsstring>()</argsstring>
+        <name>OnPlayerPerformedMainAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Maps/Level.cs" line="246" column="17" bodyfile="src/Maps/Level.cs" bodystart="246" bodyend="249"/>
+        <referencedby refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -403,9 +475,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="220" column="17" bodyfile="src/Maps/Level.cs" bodystart="220" bodyend="223"/>
-        <references refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" compoundref="_level_8cs" startline="197" endline="200">Pause</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
+        <location file="src/Maps/Level.cs" line="251" column="17" bodyfile="src/Maps/Level.cs" bodystart="251" bodyend="254"/>
+        <references refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" compoundref="_level_8cs" startline="217" endline="220">Pause</references>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -418,9 +490,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="225" column="17" bodyfile="src/Maps/Level.cs" bodystart="225" bodyend="228"/>
-        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="126" endline="126">Player.Blocked</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
+        <location file="src/Maps/Level.cs" line="256" column="17" bodyfile="src/Maps/Level.cs" bodystart="256" bodyend="259"/>
+        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="148" endline="148">Player.Blocked</references>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a462cabf043b2870fda20d5a7c25e6d40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -433,9 +505,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="230" column="17" bodyfile="src/Maps/Level.cs" bodystart="230" bodyend="233"/>
-        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="126" endline="126">Player.Blocked</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
+        <location file="src/Maps/Level.cs" line="261" column="17" bodyfile="src/Maps/Level.cs" bodystart="261" bodyend="264"/>
+        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="148" endline="148">Player.Blocked</references>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -448,9 +520,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="235" column="17" bodyfile="src/Maps/Level.cs" bodystart="235" bodyend="238"/>
-        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="129" endline="149">Restart</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
+        <location file="src/Maps/Level.cs" line="266" column="17" bodyfile="src/Maps/Level.cs" bodystart="266" bodyend="269"/>
+        <references refid="class_level_1a20b2f496054effcd20120b8cb37c14dc" compoundref="_level_8cs" startline="147" endline="169">Restart</references>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_level_1aa0e6bfa6d80ec968a1995f395e016a0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -467,9 +539,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Maps/Level.cs" line="240" column="17" bodyfile="src/Maps/Level.cs" bodystart="240" bodyend="246"/>
+        <location file="src/Maps/Level.cs" line="271" column="17" bodyfile="src/Maps/Level.cs" bodystart="271" bodyend="277"/>
         <references refid="class_level_complete_1a09a2c3c46fd610cd3796d716414b91f9" compoundref="_level_complete_8cs" startline="28" endline="32">LevelComplete.ShowMenu</references>
-        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="81" endline="100">_Ready</referencedby>
+        <referencedby refid="class_level_1a9b982efc154865a30a5c589d72f0a900" compoundref="_level_8cs" startline="99" endline="118">_Ready</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -490,26 +562,26 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10">
+      <node id="11">
         <label>AnimatedSprite</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>Area2D</label>
       </node>
-      <node id="14">
+      <node id="15">
         <label>Camera2D</label>
       </node>
-      <node id="19">
+      <node id="20">
         <label>CanvasLayer</label>
         <link refid="class_canvas_layer"/>
       </node>
-      <node id="11">
+      <node id="12">
         <label>CollisionShape2D</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>GameHUD</label>
         <link refid="class_game_h_u_d"/>
-        <childnode refid="19" relation="public-inheritance">
+        <childnode refid="20" relation="public-inheritance">
         </childnode>
       </node>
       <node id="7">
@@ -534,44 +606,44 @@
         <childnode refid="6" relation="usage">
           <edgelabel>-player</edgelabel>
         </childnode>
-        <childnode refid="14" relation="usage">
+        <childnode refid="15" relation="usage">
           <edgelabel>-camera</edgelabel>
         </childnode>
-        <childnode refid="10" relation="usage">
+        <childnode refid="11" relation="usage">
           <edgelabel>-background</edgelabel>
         </childnode>
-        <childnode refid="15" relation="usage">
+        <childnode refid="16" relation="usage">
           <edgelabel>-pauseMenu</edgelabel>
         </childnode>
-        <childnode refid="17" relation="usage">
+        <childnode refid="18" relation="usage">
           <edgelabel>-levelCompleteMenu</edgelabel>
         </childnode>
-        <childnode refid="18" relation="usage">
+        <childnode refid="19" relation="usage">
           <edgelabel>-hud</edgelabel>
         </childnode>
-        <childnode refid="20" relation="usage">
+        <childnode refid="21" relation="usage">
           <edgelabel>-startPosition</edgelabel>
         </childnode>
-        <childnode refid="8" relation="usage">
+        <childnode refid="9" relation="usage">
           <edgelabel>-endPosition</edgelabel>
         </childnode>
-        <childnode refid="21" relation="usage">
+        <childnode refid="22" relation="usage">
           <edgelabel>+positions</edgelabel>
         </childnode>
-        <childnode refid="22" relation="usage">
+        <childnode refid="23" relation="usage">
           <edgelabel>-progress</edgelabel>
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>LevelComplete</label>
         <link refid="class_level_complete"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="17" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="21">
+      <node id="22">
         <label>List&lt;</label>
       </node>
-      <node id="16">
+      <node id="17">
         <label>NinePatchRect</label>
       </node>
       <node id="2">
@@ -581,10 +653,10 @@
       <node id="3">
         <label>PackedScene</label>
       </node>
-      <node id="15">
+      <node id="16">
         <label>PauseMenu</label>
         <link refid="class_pause_menu"/>
-        <childnode refid="16" relation="public-inheritance">
+        <childnode refid="17" relation="public-inheritance">
         </childnode>
       </node>
       <node id="6">
@@ -606,42 +678,49 @@
           <edgelabel>+MaxJumpTime</edgelabel>
         </childnode>
         <childnode refid="8" relation="usage">
+          <edgelabel>+FemaleAnimation</edgelabel>
+          <edgelabel>+MaleAnimation</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
           <edgelabel>+jumpObjectCollisionCheck</edgelabel>
           <edgelabel>+teleportCollisionCheck</edgelabel>
         </childnode>
-        <childnode refid="9" relation="usage">
+        <childnode refid="10" relation="usage">
           <edgelabel>+mainActionTimer</edgelabel>
           <edgelabel>+secondaryActionTimer</edgelabel>
           <edgelabel>+startTimer</edgelabel>
         </childnode>
-        <childnode refid="10" relation="usage">
+        <childnode refid="11" relation="usage">
           <edgelabel>+animation</edgelabel>
         </childnode>
-        <childnode refid="11" relation="usage">
+        <childnode refid="12" relation="usage">
           <edgelabel>+rollingCollision</edgelabel>
           <edgelabel>+runningCollision</edgelabel>
         </childnode>
-        <childnode refid="12" relation="usage">
+        <childnode refid="13" relation="usage">
           <edgelabel>+linearVelocity</edgelabel>
         </childnode>
-        <childnode refid="13" relation="usage">
+        <childnode refid="14" relation="usage">
           <edgelabel>-stateFactory</edgelabel>
         </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>PlayerStateFactory</label>
         <link refid="class_player_state_factory"/>
       </node>
-      <node id="20">
+      <node id="21">
         <label>Position2D</label>
       </node>
-      <node id="9">
+      <node id="8">
+        <label>SpriteFrames</label>
+      </node>
+      <node id="10">
         <label>Timer</label>
       </node>
-      <node id="12">
+      <node id="13">
         <label>Vector2</label>
       </node>
-      <node id="22">
+      <node id="23">
         <label>double</label>
       </node>
       <node id="5">
@@ -651,7 +730,7 @@
         <label>int</label>
       </node>
     </collaborationgraph>
-    <location file="src/Maps/Level.cs" line="8" column="7" bodyfile="src/Maps/Level.cs" bodystart="9" bodyend="247"/>
+    <location file="src/Maps/Level.cs" line="8" column="7" bodyfile="src/Maps/Level.cs" bodystart="9" bodyend="278"/>
     <listofallmembers>
       <member refid="class_level_1ab147d68f7a06156f6a0cd595bf58f75d" prot="public" virt="non-virtual"><scope>Level</scope><name>_Draw</name></member>
       <member refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" prot="public" virt="non-virtual"><scope>Level</scope><name>_Process</name></member>
@@ -671,10 +750,15 @@
       <member refid="class_level_1a08ef0cf0dd18af04729d4d01deaeea66" prot="public" virt="non-virtual"><scope>Level</scope><name>OnHudPausePressed</name></member>
       <member refid="class_level_1a4ecafdfb8a186ec3bffe2cae913616f8" prot="public" virt="non-virtual"><scope>Level</scope><name>OnPauseMenuRestartPressed</name></member>
       <member refid="class_level_1a6807430e5f1f262aca25e7bc40fbac90" prot="public" virt="non-virtual"><scope>Level</scope><name>OnPlayerDead</name></member>
+      <member refid="class_level_1a89dbf1585c31caa958aa431823f2f4f7" prot="public" virt="non-virtual"><scope>Level</scope><name>OnPlayerPerformedMainAction</name></member>
+      <member refid="class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5" prot="public" virt="non-virtual"><scope>Level</scope><name>OnPlayerPickup</name></member>
       <member refid="class_level_1ae81c01f79951151a432bbdbf1cdb3dd8" prot="public" virt="non-virtual"><scope>Level</scope><name>Pause</name></member>
       <member refid="class_level_1a414b9257e19142655a85889f1fbda951" prot="private" virt="non-virtual"><scope>Level</scope><name>pauseMenu</name></member>
-      <member refid="class_level_1a5d1b3eb59f1d1ce798aac611dceb8e46" prot="private" virt="non-virtual"><scope>Level</scope><name>Player</name></member>
       <member refid="class_level_1afc1da9f25bc1fc21e1be996b75c04db0" prot="private" virt="non-virtual"><scope>Level</scope><name>player</name></member>
+      <member refid="class_level_1a5d1b3eb59f1d1ce798aac611dceb8e46" prot="private" virt="non-virtual"><scope>Level</scope><name>Player</name></member>
+      <member refid="class_level_1a963f02696507398ac850dcaee43ff321" prot="public" virt="non-virtual"><scope>Level</scope><name>PlayerDead</name></member>
+      <member refid="class_level_1a9cb1b65bbf3e9ff796adf998f7b748d3" prot="public" virt="non-virtual"><scope>Level</scope><name>PlayerPerformedMainAction</name></member>
+      <member refid="class_level_1afec3b7fef9b7c0c9e590b2ca2a47245c" prot="public" virt="non-virtual"><scope>Level</scope><name>PlayerPickup</name></member>
       <member refid="class_level_1af8c0b7dafc8db3cd326e0a572d7ad9d1" prot="private" virt="non-virtual"><scope>Level</scope><name>pointsMultiplier</name></member>
       <member refid="class_level_1a68bdb4fa6a0a7d317daaaf44c06599f2" prot="public" virt="non-virtual"><scope>Level</scope><name>positions</name></member>
       <member refid="class_level_1abc95c07752147fca666c789118606a4e" prot="private" virt="non-virtual"><scope>Level</scope><name>progress</name></member>

@@ -49,7 +49,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/SaveFileInfo.cs" line="9" column="32" bodyfile="src/Profiles/SaveFileInfo.cs" bodystart="9" bodyend="-1"/>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
         <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile.Profile</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" prot="public" static="yes" mutable="no">

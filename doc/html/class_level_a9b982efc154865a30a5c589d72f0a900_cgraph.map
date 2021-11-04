@@ -5,13 +5,15 @@
 <area shape="rect" id="node5" href="$class_level.html#a462cabf043b2870fda20d5a7c25e6d40" title=" " alt="" coords="157,107,365,133"/>
 <area shape="rect" id="node6" href="$class_level.html#a08ef0cf0dd18af04729d4d01deaeea66" title=" " alt="" coords="171,157,351,184"/>
 <area shape="rect" id="node9" href="$class_level.html#a4ecafdfb8a186ec3bffe2cae913616f8" title=" " alt="" coords="169,209,352,250"/>
-<area shape="rect" id="node10" href="$class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="456,256,553,283"/>
+<area shape="rect" id="node10" href="$class_level.html#a20b2f496054effcd20120b8cb37c14dc" title="Restarts the level, resets the player&#39;s position and the hud." alt="" coords="456,271,553,297"/>
 <area shape="rect" id="node3" href="$class_level_complete.html#a09a2c3c46fd610cd3796d716414b91f9" title="Pauses the game and shows this menu." alt="" coords="417,5,592,32"/>
 <area shape="rect" id="node7" href="$class_level.html#ae81c01f79951151a432bbdbf1cdb3dd8" title="Pauses the game." alt="" coords="459,157,551,184"/>
-<area shape="rect" id="node8" href="$class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="641,157,800,184"/>
-<area shape="rect" id="node11" href="$class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="651,227,790,253"/>
-<area shape="rect" id="node12" href="$class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="665,277,776,304"/>
-<area shape="rect" id="node15" href="$class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="640,328,801,355"/>
-<area shape="rect" id="node13" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="862,252,975,279"/>
-<area shape="rect" id="node14" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="849,303,988,329"/>
+<area shape="rect" id="node8" href="$class_pause_menu.html#aae0eb58374e364f7b34d0750be250efa" title="Pauses the game and shows this menu." alt="" coords="659,157,817,184"/>
+<area shape="rect" id="node11" href="$class_level.html#a6807430e5f1f262aca25e7bc40fbac90" title=" " alt="" coords="669,209,807,236"/>
+<area shape="rect" id="node12" href="$class_level.html#a89dbf1585c31caa958aa431823f2f4f7" title=" " alt="" coords="640,261,836,302"/>
+<area shape="rect" id="node13" href="$class_level.html#a7c2ac37de0d423fa6c95bbce4b0eebf5" title=" " alt="" coords="663,327,813,353"/>
+<area shape="rect" id="node14" href="$class_level.html#a4bb15a932ab317c90d5de0623b9f8d88" title="Saves the player&#39;s progress." alt="" coords="683,377,793,404"/>
+<area shape="rect" id="node17" href="$class_game_h_u_d.html#a1b64a3c74071717408c1c809a4a6804a" title="Sets the number of attempts to display on the attempts counter." alt="" coords="657,428,819,455"/>
+<area shape="rect" id="node15" href="$class_level.html#a866f3830aa6da6db116ecd9204b1b7a6" title="Gets the number of points that the player has earned on the current run." alt="" coords="897,352,1010,379"/>
+<area shape="rect" id="node16" href="$class_player_session.html#a8522ef9c8fc11562857f5a4a7955cca7" title="Saves the the currently active profile by writing to the save file." alt="" coords="884,403,1023,429"/>
 </map>

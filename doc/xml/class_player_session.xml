@@ -33,14 +33,15 @@
         </inbodydescription>
         <location file="src/Profiles/PlayerSession.cs" line="20" column="20" bodyfile="src/Profiles/PlayerSession.cs" bodystart="21" bodyend="24"/>
         <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">EditProfileGUI._Process</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
         <referencedby refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" compoundref="_level_picker_8cs" startline="20" endline="28">LevelPicker._Ready</referencedby>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
-        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">Level.GetPoints</referencedby>
-        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="188" endline="191">Level.GetPoints</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="145" endline="180">ShopGUI.OnBuyPressed</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
         <referencedby refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" compoundref="_level_picker_8cs" startline="30" endline="66">LevelPicker.OnValueChanged</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">Level.SaveData</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
         <referencedby refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">MainMenu.UpdateUI</referencedby>
         <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
@@ -59,17 +60,18 @@
         </inbodydescription>
         <location file="src/Profiles/PlayerSession.cs" line="59" column="33" bodyfile="src/Profiles/PlayerSession.cs" bodystart="60" bodyend="70"/>
         <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">EditProfileGUI._Process</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
         <referencedby refid="class_level_picker_1ac7749c15e37c52ad6d6ba7c1aaec7474" compoundref="_level_picker_8cs" startline="20" endline="28">LevelPicker._Ready</referencedby>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
-        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">Level.GetPoints</referencedby>
-        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="188" endline="191">Level.GetPoints</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="145" endline="180">ShopGUI.OnBuyPressed</referencedby>
         <referencedby refid="class_create_profile_dialog_1a49bc2876b4cb7a3ae6d76b836b406849" compoundref="_create_profile_dialog_8cs" startline="32" endline="47">CreateProfileDialog.OnCreateProfileDialogConfirmed</referencedby>
         <referencedby refid="class_profile_g_u_i_1ad835b6812c257c3f5c9c6a23892e0770" compoundref="_profile_g_u_i_8cs" startline="50" endline="54">ProfileGUI.OnLogOutPressed</referencedby>
         <referencedby refid="class_profile_select_entry_1a88978332d17f63b02b3dc4476e01c6a4" compoundref="_profile_select_entry_8cs" startline="67" endline="78">ProfileSelectEntry.OnPressed</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
         <referencedby refid="class_level_picker_1a1b5abdf1b94c7fe1410ca560a3eb247e" compoundref="_level_picker_8cs" startline="30" endline="66">LevelPicker.OnValueChanged</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">Level.SaveData</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
         <referencedby refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">MainMenu.UpdateUI</referencedby>
         <referencedby refid="class_profile_g_u_i_1a63df12299905cd375c56ba1e2292dcd6" compoundref="_profile_g_u_i_8cs" startline="33" endline="38">ProfileGUI.UpdateUI</referencedby>
@@ -136,9 +138,9 @@
         </inbodydescription>
         <location file="src/Profiles/PlayerSession.cs" line="43" column="17" bodyfile="src/Profiles/PlayerSession.cs" bodystart="43" bodyend="46"/>
         <references refid="class_profile_1a60b5ca4f4cd43bd91af9f5ac46f6c647" compoundref="_profile_8cs" startline="123">Profile.SAVES_DIRECTORY</references>
-        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="145" endline="180">ShopGUI.OnBuyPressed</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">Level.SaveData</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_player_session_1a65808546d8278d30ee26af807c62051f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>

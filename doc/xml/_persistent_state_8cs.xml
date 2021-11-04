@@ -48,15 +48,17 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(area.IsInGroup(</highlight><highlight class="stringliteral">&quot;pickup_main&quot;</highlight><highlight class="normal">))</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" kindref="member">ChangeMainAction</ref>(((<ref refid="class_main_action_pickup" kindref="compound">MainActionPickup</ref>)<sp/>area).Type);<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(area.IsInGroup(</highlight><highlight class="stringliteral">&quot;pickup_secondary&quot;</highlight><highlight class="normal">))</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" kindref="member">ChangeSecondaryAction</ref>(((<ref refid="class_secondary_action_pickup" kindref="compound">SecondaryActionPickup</ref>)<sp/>area).Type);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" kindref="member">ChangeMainAction</ref>(((<ref refid="class_main_action_pickup" kindref="compound">MainActionPickup</ref>)<sp/>area).Type);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.EmitSignal(</highlight><highlight class="stringliteral">&quot;Pickup&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(area.IsInGroup(</highlight><highlight class="stringliteral">&quot;pickup_secondary&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.<ref refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" kindref="member">ChangeSecondaryAction</ref>(((<ref refid="class_secondary_action_pickup" kindref="compound">SecondaryActionPickup</ref>)<sp/>area).Type);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.<ref refid="class_player" kindref="compound">Player</ref>.EmitSignal(</highlight><highlight class="stringliteral">&quot;Pickup&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs"/>
   </compounddef>

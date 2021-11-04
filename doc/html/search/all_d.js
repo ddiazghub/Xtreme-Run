@@ -12,12 +12,13 @@ var searchData=
   ['mainmenu_9',['MainMenu',['../class_main_menu.html',1,'']]],
   ['mainmenu_2ecs_10',['MainMenu.cs',['../_main_menu_8cs.html',1,'']]],
   ['male_11',['Male',['../class_avatar.html#ac867c076ca88765a4601c440687a42c9',1,'Avatar']]],
-  ['margincontainer_12',['MarginContainer',['../class_margin_container.html',1,'']]],
-  ['max_5fnumber_5fof_5fsaves_13',['MAX_NUMBER_OF_SAVES',['../class_profile.html#a0603d28949b8c323d8bae91ea138d6f7',1,'Profile']]],
-  ['maxfallspeed_14',['MaxFallSpeed',['../class_player.html#af93facbeac2019c5bc7bfb2493041109',1,'Player']]],
-  ['maxjumptime_15',['MaxJumpTime',['../class_player.html#a55a2743162dfad1ccf058979e3454cf0',1,'Player']]],
-  ['menumusic_16',['MenuMusic',['../class_game_audio.html#a20ac51641bd1520e7e2f98256ced7da4',1,'GameAudio']]],
-  ['movementspeed_17',['MovementSpeed',['../class_player.html#a5a0c8762d9753c0108e520d2cd4c4194',1,'Player']]],
-  ['moveviewport_18',['MoveViewPort',['../class_level.html#a37da9eda7a3cd74e5a8c4d5e92e83b18',1,'Level']]],
-  ['music_19',['music',['../class_game_audio.html#a3bc9feb323ef58de07fdbfb7781dc1e4',1,'GameAudio']]]
+  ['maleanimation_12',['MaleAnimation',['../class_player.html#a28f9ab1a1e2354fcb49c99fd618cf189',1,'Player']]],
+  ['margincontainer_13',['MarginContainer',['../class_margin_container.html',1,'']]],
+  ['max_5fnumber_5fof_5fsaves_14',['MAX_NUMBER_OF_SAVES',['../class_profile.html#a0603d28949b8c323d8bae91ea138d6f7',1,'Profile']]],
+  ['maxfallspeed_15',['MaxFallSpeed',['../class_player.html#af93facbeac2019c5bc7bfb2493041109',1,'Player']]],
+  ['maxjumptime_16',['MaxJumpTime',['../class_player.html#a55a2743162dfad1ccf058979e3454cf0',1,'Player']]],
+  ['menumusic_17',['MenuMusic',['../class_game_audio.html#a20ac51641bd1520e7e2f98256ced7da4',1,'GameAudio']]],
+  ['movementspeed_18',['MovementSpeed',['../class_player.html#a5a0c8762d9753c0108e520d2cd4c4194',1,'Player']]],
+  ['moveviewport_19',['MoveViewPort',['../class_level.html#a37da9eda7a3cd74e5a8c4d5e92e83b18',1,'Level']]],
+  ['music_20',['music',['../class_game_audio.html#a3bc9feb323ef58de07fdbfb7781dc1e4',1,'GameAudio']]]
 ];

@@ -5,6 +5,5 @@ var searchData=
   ['texture_2',['Texture',['../class_tile_set_maker.html#a9150369a075015feebbf166531104343',1,'TileSetMaker']]],
   ['threshold_3',['threshold',['../class_palette_swap_entry.html#a98f303ecceb89ffec4c538c48269a4ec',1,'PaletteSwapEntry']]],
   ['tilesize_4',['TileSize',['../class_tile_set_maker.html#add080d0b5e2582cd3bfe8b7a534ea7a3',1,'TileSetMaker']]],
-  ['topcolor_5',['TopColor',['../class_avatar.html#ab97d2d7a4d5aaf7c767eeb4852ad1c49',1,'Avatar']]],
-  ['type_6',['type',['../class_main_action_pickup.html#aefe07e06bcc922e7f7c6104885dd9636',1,'MainActionPickup.type()'],['../class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747',1,'SecondaryActionPickup.type()']]]
+  ['type_5',['type',['../class_main_action_pickup.html#aefe07e06bcc922e7f7c6104885dd9636',1,'MainActionPickup.type()'],['../class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747',1,'SecondaryActionPickup.type()']]]
 ];

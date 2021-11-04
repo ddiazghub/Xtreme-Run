@@ -36,6 +36,12 @@ void \mbox{\hyperlink{class_game_audio_aec65bb06501eeacbc6ae63f764ed2d02}{Play\+
 \begin{DoxyCompactList}\small\item\em Plays the accept audio effect. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8}{Play\+Cancel}} ()
 \begin{DoxyCompactList}\small\item\em Plays the cancel audio effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_aeaebd5d3ac12494cb693a2e7ea233246}{Play\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Plays the death sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_a5bb181af6c57c5794a624890e967782c}{Play\+Pickup}} ()
+\begin{DoxyCompactList}\small\item\em Plays the pickup sound effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_audio_afd92bfe560ae4047f75e9165d0a935da}{Play\+Jump}} ()
+\begin{DoxyCompactList}\small\item\em Plays the jump sound effect. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_audio_a6df13bded33b7c1ae4efa1d2d5b0eef2}{On\+Music\+Finished}} ()
 \item 
 void \mbox{\hyperlink{class_game_audio_addcf597b4df4aba37d5bee5be86a476e}{On\+Sfx\+Finished}} ()
@@ -54,7 +60,13 @@ Audio\+Stream \mbox{\hyperlink{class_game_audio_ac66409802e2533dafa25f107a458c8d
 Audio\+Stream \mbox{\hyperlink{class_game_audio_a45bab24c53b73c4aca26066bfd55292d}{Accept\+SFX}}
 \begin{DoxyCompactList}\small\item\em Audio effect to play when clicking an accept button. \end{DoxyCompactList}\item 
 Audio\+Stream \mbox{\hyperlink{class_game_audio_a3d83cb6ed0d90390c4c52773c849e4cc}{Cancel\+SFX}}
-\begin{DoxyCompactList}\small\item\em Audio effect to play when clicking an cancel/back button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when clicking an cancel/back button. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_a1b3ec5e7aebb587bc735b76026c4f098}{Death\+SFX}}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when the player dies. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_ab05094f6a17b0e8355112a6024cae50c}{Jump\+SFX}}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when the player jumps. \end{DoxyCompactList}\item 
+Audio\+Stream \mbox{\hyperlink{class_game_audio_ab8e43f74aa38d82514d3025e0833033d}{Pickup\+SFX}}
+\begin{DoxyCompactList}\small\item\em Audio effect to play when player comes in contact with an action pickup. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -148,6 +160,60 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_game_audio_ae5d1e42bdbddd5e804a9201ded74f7d8_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_game_audio_aeaebd5d3ac12494cb693a2e7ea233246}\label{class_game_audio_aeaebd5d3ac12494cb693a2e7ea233246}} 
+\index{GameAudio@{GameAudio}!PlayDeath@{PlayDeath}}
+\index{PlayDeath@{PlayDeath}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PlayDeath()}{PlayDeath()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Play\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the death sound effect. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_aeaebd5d3ac12494cb693a2e7ea233246_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_afd92bfe560ae4047f75e9165d0a935da}\label{class_game_audio_afd92bfe560ae4047f75e9165d0a935da}} 
+\index{GameAudio@{GameAudio}!PlayJump@{PlayJump}}
+\index{PlayJump@{PlayJump}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PlayJump()}{PlayJump()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Play\+Jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the jump sound effect. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_afd92bfe560ae4047f75e9165d0a935da_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_audio_a5bb181af6c57c5794a624890e967782c}\label{class_game_audio_a5bb181af6c57c5794a624890e967782c}} 
+\index{GameAudio@{GameAudio}!PlayPickup@{PlayPickup}}
+\index{PlayPickup@{PlayPickup}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PlayPickup()}{PlayPickup()}}
+{\footnotesize\ttfamily void Game\+Audio.\+Play\+Pickup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the pickup sound effect. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_audio_a5bb181af6c57c5794a624890e967782c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_game_audio_ac494431eace52893c1a35c662e74dee2}\label{class_game_audio_ac494431eace52893c1a35c662e74dee2}} 
 \index{GameAudio@{GameAudio}!SetMusic@{SetMusic}}
 \index{SetMusic@{SetMusic}!GameAudio@{GameAudio}}
@@ -193,6 +259,26 @@ Audio effect to play when clicking an accept button.
 
 
 Audio effect to play when clicking an cancel/back button. 
+
+\mbox{\Hypertarget{class_game_audio_a1b3ec5e7aebb587bc735b76026c4f098}\label{class_game_audio_a1b3ec5e7aebb587bc735b76026c4f098}} 
+\index{GameAudio@{GameAudio}!DeathSFX@{DeathSFX}}
+\index{DeathSFX@{DeathSFX}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{DeathSFX}{DeathSFX}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Death\+SFX}
+
+
+
+Audio effect to play when the player dies. 
+
+\mbox{\Hypertarget{class_game_audio_ab05094f6a17b0e8355112a6024cae50c}\label{class_game_audio_ab05094f6a17b0e8355112a6024cae50c}} 
+\index{GameAudio@{GameAudio}!JumpSFX@{JumpSFX}}
+\index{JumpSFX@{JumpSFX}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{JumpSFX}{JumpSFX}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Jump\+SFX}
+
+
+
+Audio effect to play when the player jumps. 
 
 \mbox{\Hypertarget{class_game_audio_acb552d42a8760720c6f3fe39dce1bee1}\label{class_game_audio_acb552d42a8760720c6f3fe39dce1bee1}} 
 \index{GameAudio@{GameAudio}!Level1Music@{Level1Music}}
@@ -243,6 +329,16 @@ Music to play on menus.
 
 
 The audio player for background music. 
+
+\mbox{\Hypertarget{class_game_audio_ab8e43f74aa38d82514d3025e0833033d}\label{class_game_audio_ab8e43f74aa38d82514d3025e0833033d}} 
+\index{GameAudio@{GameAudio}!PickupSFX@{PickupSFX}}
+\index{PickupSFX@{PickupSFX}!GameAudio@{GameAudio}}
+\doxysubsubsection{\texorpdfstring{PickupSFX}{PickupSFX}}
+{\footnotesize\ttfamily Audio\+Stream Game\+Audio.\+Pickup\+SFX}
+
+
+
+Audio effect to play when player comes in contact with an action pickup. 
 
 \mbox{\Hypertarget{class_game_audio_ad7935f43253880f7afac2f9f5e8bf4fb}\label{class_game_audio_ad7935f43253880f7afac2f9f5e8bf4fb}} 
 \index{GameAudio@{GameAudio}!sceneMusic@{sceneMusic}}

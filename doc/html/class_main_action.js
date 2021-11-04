@@ -6,6 +6,7 @@ var class_main_action =
     [ "_ActionReleased", "class_main_action.html#a9b80ccc09b82cb5b35dc22a1a6f9b85f", null ],
     [ "_Init", "class_main_action.html#a5d77225f0db8bd9c5a5c1f120ef3ce95", null ],
     [ "_StatePhysicsProcess", "class_main_action.html#ab2261aec55fea5dc4490545410b8b279", null ],
+    [ "Action", "class_main_action.html#a673b3a967faefc189251e4470b944fd4", null ],
     [ "GetTypeAsString", "class_main_action.html#a9f2f79c690df2047472ab6e4936b354d", null ],
     [ "GetTypeAsStringEsp", "class_main_action.html#aa5e2b5f2a44a4d622e64878af6240e99", null ],
     [ "OnMainActionObjectCollisionCheckAreaEntered", "class_main_action.html#a7171ab2e310ea4e2b6de08ca9e7c8a68", null ],

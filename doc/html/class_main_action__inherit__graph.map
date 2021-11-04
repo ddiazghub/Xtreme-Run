@@ -1,9 +1,9 @@
 <map id="MainAction" name="MainAction">
-<area shape="rect" id="node1" title="Class that represents an action the player can perform as main action." alt="" coords="364,300,583,700"/>
-<area shape="rect" id="node4" href="$class_glide.html" title="Main action that allows the player to glide for some time." alt="" coords="5,763,224,1016"/>
-<area shape="rect" id="node5" href="$class_jetpack.html" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="248,748,467,1031"/>
-<area shape="rect" id="node6" href="$class_jump.html" title="Main action that allows the player to jump." alt="" coords="491,836,691,943"/>
-<area shape="rect" id="node7" href="$class_teleport.html" title="Main action that allows the player to teleport a small distance above them." alt="" coords="715,777,933,1001"/>
+<area shape="rect" id="node1" title="Class that represents an action the player can perform as main action." alt="" coords="364,300,583,715"/>
+<area shape="rect" id="node4" href="$class_glide.html" title="Main action that allows the player to glide for some time." alt="" coords="5,777,224,1031"/>
+<area shape="rect" id="node5" href="$class_jetpack.html" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="248,763,467,1045"/>
+<area shape="rect" id="node6" href="$class_jump.html" title="Main action that allows the player to jump." alt="" coords="491,851,691,957"/>
+<area shape="rect" id="node7" href="$class_teleport.html" title="Main action that allows the player to teleport a small distance above them." alt="" coords="715,792,933,1016"/>
 <area shape="rect" id="node2" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="375,131,571,252"/>
 <area shape="rect" id="node3" href="$class_node2_d.html" title=" " alt="" coords="439,5,507,83"/>
 </map>

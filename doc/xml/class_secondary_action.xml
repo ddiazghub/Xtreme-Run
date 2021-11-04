@@ -48,7 +48,7 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="15" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="15" bodyend="19"/>
         <references refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" compoundref="_secondary_action_8cs" startline="115" endline="120">OnSecondaryActionTimerTimeout</references>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
       </memberdef>
       <memberdef kind="function" id="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -82,8 +82,8 @@
         <references refid="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673">_ActionOnAir</references>
         <references refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" compoundref="_secondary_action_8cs" startline="42" endline="46">_ActionOnGround</references>
         <references refid="class_secondary_action_1a167568a42e1a355f2d49b5a9dcfd4baf" compoundref="_secondary_action_8cs" startline="56" endline="59">_ActionReleased</references>
-        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="101" endline="101">Player.PersistentState</references>
-        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="173" endline="183">Player._PhysicsProcess</referencedby>
+        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="123" endline="123">Player.PersistentState</references>
+        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="205" endline="215">Player._PhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="42" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="42" bodyend="46"/>
         <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">Blocked</references>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
         <referencedby refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">_StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_secondary_action_1a70a639090f6e4f4b92b0116a21484673" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
@@ -160,10 +160,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" line="115" column="25" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SecondaryAction.cs" bodystart="115" bodyend="120"/>
-        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="70">Player.animation</references>
-        <references refid="class_main_action_1af4f38ae5810abac472752ba286622566" compoundref="_main_action_8cs" startline="28" endline="28">MainAction.Blocked</references>
-        <references refid="class_player_1ab8b54cc99ed363971d75ab6c506016be" compoundref="_player_8cs" startline="106" endline="106">Player.MainAction</references>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="92">Player.animation</references>
+        <references refid="class_main_action_1af4f38ae5810abac472752ba286622566" compoundref="_main_action_8cs" startline="34" endline="34">MainAction.Blocked</references>
+        <references refid="class_player_1ab8b54cc99ed363971d75ab6c506016be" compoundref="_player_8cs" startline="128" endline="128">Player.MainAction</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
         <referencedby refid="class_secondary_action_1a82ec8c6b3487e5507aa926f412d76945" compoundref="_secondary_action_8cs" startline="15" endline="19">_Init</referencedby>
       </memberdef>
       </sectiondef>

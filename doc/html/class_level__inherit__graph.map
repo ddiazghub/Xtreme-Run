@@ -1,4 +1,4 @@
 <map id="Level" name="Level">
-<area shape="rect" id="node1" title="Base node for a game level scene." alt="" coords="5,131,249,633"/>
+<area shape="rect" id="node1" title="Base node for a game level scene." alt="" coords="5,131,249,736"/>
 <area shape="rect" id="node2" href="$class_node2_d.html" title=" " alt="" coords="93,5,161,83"/>
 </map>

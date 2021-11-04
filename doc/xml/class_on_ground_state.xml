@@ -18,9 +18,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Persistent/OnGroundState.cs" line="10" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnGroundState.cs" bodystart="10" bodyend="18"/>
-        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="70">Player.animation</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
-        <references refid="class_player_1a4d955d72d1768541f5ac99f19ffe1381" compoundref="_player_8cs" startline="257" endline="269">Player.SetHitbox</references>
+        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="92">Player.animation</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
+        <references refid="class_player_1a4d955d72d1768541f5ac99f19ffe1381" compoundref="_player_8cs" startline="290" endline="302">Player.SetHitbox</references>
       </memberdef>
       <memberdef kind="function" id="class_on_ground_state_1ab00fe4c5fbbe3d27cf9e7cdf726e2614" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -50,7 +50,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Persistent/OnGroundState.cs" line="20" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnGroundState.cs" bodystart="20" bodyend="28"/>
-        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="189" endline="199">Player.ChangePersistentState</references>
+        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="221" endline="231">Player.ChangePersistentState</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

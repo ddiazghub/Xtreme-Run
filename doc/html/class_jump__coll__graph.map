@@ -1,6 +1,6 @@
 <map id="Jump" name="Jump">
-<area shape="rect" id="node1" title="Main action that allows the player to jump." alt="" coords="111,751,311,857"/>
-<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="102,316,321,701"/>
+<area shape="rect" id="node1" title="Main action that allows the player to jump." alt="" coords="111,765,311,872"/>
+<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="102,316,321,716"/>
 <area shape="rect" id="node3" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="5,132,201,253"/>
 <area shape="rect" id="node4" href="$class_node2_d.html" title=" " alt="" coords="69,5,137,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="225,154,272,231"/>

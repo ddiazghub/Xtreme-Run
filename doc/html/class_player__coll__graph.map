@@ -1,12 +1,13 @@
 <map id="Player" name="Player">
-<area shape="rect" id="node1" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="701,321,935,736"/>
+<area shape="rect" id="node1" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="747,321,980,795"/>
 <area shape="rect" id="node2" href="$class_kinematic_body2_d.html" title=" " alt="" coords="5,57,132,134"/>
 <area shape="rect" id="node3" title=" " alt="" coords="156,57,195,134"/>
 <area shape="rect" id="node4" title=" " alt="" coords="384,57,431,134"/>
-<area shape="rect" id="node5" title=" " alt="" coords="589,57,655,134"/>
-<area shape="rect" id="node6" title=" " alt="" coords="791,57,845,134"/>
-<area shape="rect" id="node7" title=" " alt="" coords="895,57,1005,134"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1029,57,1153,134"/>
-<area shape="rect" id="node9" title=" " alt="" coords="1183,57,1250,134"/>
-<area shape="rect" id="node10" href="$class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="1274,5,1471,185"/>
+<area shape="rect" id="node5" title=" " alt="" coords="572,57,672,134"/>
+<area shape="rect" id="node6" title=" " alt="" coords="733,57,799,134"/>
+<area shape="rect" id="node7" title=" " alt="" coords="935,57,989,134"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1039,57,1149,134"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1173,57,1297,134"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1327,57,1394,134"/>
+<area shape="rect" id="node11" href="$class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="1418,5,1615,185"/>
 </map>

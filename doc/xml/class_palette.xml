@@ -134,6 +134,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Shaders/Palette.cs" line="73" column="18" bodyfile="src/Shaders/Palette.cs" bodystart="74" bodyend="77"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_palette_1a120e25208802689792e39b37283dea4c" compoundref="_palette_8cs" startline="82" endline="100">Palette</referencedby>
         <referencedby refid="class_palette_1ab973750bb28f3de18132de170c08c092" compoundref="_palette_8cs" startline="122" endline="132">TextureFromColor</referencedby>
         <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
@@ -151,8 +152,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Shaders/Palette.cs" line="105" column="27" bodyfile="src/Shaders/Palette.cs" bodystart="106" bodyend="114"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
         <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">Avatar.ToTexture</referencedby>
       </memberdef>
       </sectiondef>
@@ -218,7 +220,7 @@
         <location file="src/Shaders/Palette.cs" line="122" column="20" bodyfile="src/Shaders/Palette.cs" bodystart="122" bodyend="132"/>
         <references refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" compoundref="_palette_8cs" startline="74" endline="77">PaletteColors</references>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

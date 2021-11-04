@@ -1,0 +1,5 @@
+<map id="Main.OnPlayerPickup" name="Main.OnPlayerPickup">
+<area shape="rect" id="node1" title=" " alt="" coords="335,5,483,32"/>
+<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,5,287,32"/>
+<area shape="rect" id="node3" href="$class_main.html#afa38a52a0b6f8e0362539aea9114f285" title=" " alt="" coords="5,5,104,32"/>
+</map>

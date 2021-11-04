@@ -11,5 +11,6 @@ var searchData=
   ['jump_2ecs_8',['Jump.cs',['../_jump_8cs.html',1,'']]],
   ['jumpforce_9',['JumpForce',['../class_player.html#acf06cc8b10f69a33e33f0750443e09bc',1,'Player']]],
   ['jumping_10',['JUMPING',['../class_glide.html#a2e178dffa2e63a3e1864b5780c9180aba6de49bfda8068b7bc3b0c0e3d2e43134',1,'Glide']]],
-  ['jumpobjectcollisioncheck_11',['jumpObjectCollisionCheck',['../class_player.html#a4d70330236aa5cff44570ad6063433f0',1,'Player']]]
+  ['jumpobjectcollisioncheck_11',['jumpObjectCollisionCheck',['../class_player.html#a4d70330236aa5cff44570ad6063433f0',1,'Player']]],
+  ['jumpsfx_12',['JumpSFX',['../class_game_audio.html#ab05094f6a17b0e8355112a6024cae50c',1,'GameAudio']]]
 ];

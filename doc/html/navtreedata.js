@@ -25,6 +25,14 @@
 var NAVTREE =
 [
   [ "Xtreme Run", "index.html", [
+    [ "Source Code", "md_src__r_e_a_d_m_e.html", [
+      [ "Audio", "md_src__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Entities", "md_src__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Maps", "md_src__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Profiles", "md_src__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Scenes", "md_src__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "Shaders", "md_src__r_e_a_d_m_e.html#autotoc_md6", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -50,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_attempts_counter_8cs.html",
-"class_main_menu.html#a63d071fa78d43ba97f5f1044d43f952b",
-"functions.html"
+"class_main_action.html#a9f2f79c690df2047472ab6e4936b354d",
+"class_tile_set_maker.html#add080d0b5e2582cd3bfe8b7a534ea7a3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

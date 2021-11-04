@@ -12,7 +12,7 @@ Collaboration diagram for Avatar\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=299pt]{class_avatar__coll__graph}
+\includegraphics[width=266pt]{class_avatar__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -28,15 +28,6 @@ Texture \mbox{\hyperlink{class_avatar_a556317afdd76c7884ae0197014a7459a}{To\+Tex
 \begin{DoxyCompactList}\small\item\em Performs a palette swap on the default avatar, swapping the default colors for the colors specified in each property. Converts the avatar into an image texture. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_avatar}{Avatar}} \mbox{\hyperlink{class_avatar_a6a7e03a2e5274437e9d3d819c830f372}{Clone}} ()
 \begin{DoxyCompactList}\small\item\em Clones the avatar. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-int \mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{Skin\+Color}}
-\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s skin color. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{Top\+Color}}
-\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s bottom color. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{Bottom\+Color}}
-\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s top color. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +37,13 @@ static readonly Texture \mbox{\hyperlink{class_avatar_aadcbb7a0039fa394ff780e83b
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_avatar_ac867c076ca88765a4601c440687a42c9}{Male}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
-\begin{DoxyCompactList}\small\item\em The avatar\textquotesingle{}s Gender. True if male, false if female. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The avatar\textquotesingle{}s Gender. True if male, false if female. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}{Skin\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s skin color. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}{Top\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s bottom color. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_avatar_af14516033bd4b5bcb567506d3e480dca}{Bottom\+Color}}\hspace{0.3cm}{\ttfamily  \mbox{[}getset\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Id of the avatar\textquotesingle{}s top color. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -187,16 +184,6 @@ Here is the caller graph for this function\+:
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_avatar_af14516033bd4b5bcb567506d3e480dca}\label{class_avatar_af14516033bd4b5bcb567506d3e480dca}} 
-\index{Avatar@{Avatar}!BottomColor@{BottomColor}}
-\index{BottomColor@{BottomColor}!Avatar@{Avatar}}
-\doxysubsubsection{\texorpdfstring{BottomColor}{BottomColor}}
-{\footnotesize\ttfamily int Avatar.\+Bottom\+Color}
-
-
-
-Id of the avatar\textquotesingle{}s top color. 
-
 \mbox{\Hypertarget{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}\label{class_avatar_aadcbb7a0039fa394ff780e83b53fb811}} 
 \index{Avatar@{Avatar}!EMPTY\_SAVE\_AVATAR@{EMPTY\_SAVE\_AVATAR}}
 \index{EMPTY\_SAVE\_AVATAR@{EMPTY\_SAVE\_AVATAR}!Avatar@{Avatar}}
@@ -207,29 +194,19 @@ Id of the avatar\textquotesingle{}s top color.
 
 Default avatar for non-\/created profiles. 
 
-\mbox{\Hypertarget{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}\label{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}} 
-\index{Avatar@{Avatar}!SkinColor@{SkinColor}}
-\index{SkinColor@{SkinColor}!Avatar@{Avatar}}
-\doxysubsubsection{\texorpdfstring{SkinColor}{SkinColor}}
-{\footnotesize\ttfamily int Avatar.\+Skin\+Color}
-
-
-
-Id of the avatar\textquotesingle{}s skin color. 
-
-\mbox{\Hypertarget{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}\label{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}} 
-\index{Avatar@{Avatar}!TopColor@{TopColor}}
-\index{TopColor@{TopColor}!Avatar@{Avatar}}
-\doxysubsubsection{\texorpdfstring{TopColor}{TopColor}}
-{\footnotesize\ttfamily int Avatar.\+Top\+Color}
-
-
-
-Id of the avatar\textquotesingle{}s bottom color. 
-
 
 
 \doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_avatar_af14516033bd4b5bcb567506d3e480dca}\label{class_avatar_af14516033bd4b5bcb567506d3e480dca}} 
+\index{Avatar@{Avatar}!BottomColor@{BottomColor}}
+\index{BottomColor@{BottomColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{BottomColor}{BottomColor}}
+{\footnotesize\ttfamily int Avatar.\+Bottom\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Id of the avatar\textquotesingle{}s top color. 
+
 \mbox{\Hypertarget{class_avatar_ac867c076ca88765a4601c440687a42c9}\label{class_avatar_ac867c076ca88765a4601c440687a42c9}} 
 \index{Avatar@{Avatar}!Male@{Male}}
 \index{Male@{Male}!Avatar@{Avatar}}
@@ -239,6 +216,26 @@ Id of the avatar\textquotesingle{}s bottom color.
 
 
 The avatar\textquotesingle{}s Gender. True if male, false if female. 
+
+\mbox{\Hypertarget{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}\label{class_avatar_a267cad98d66d8c4cb7008c967f9dd176}} 
+\index{Avatar@{Avatar}!SkinColor@{SkinColor}}
+\index{SkinColor@{SkinColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{SkinColor}{SkinColor}}
+{\footnotesize\ttfamily int Avatar.\+Skin\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Id of the avatar\textquotesingle{}s skin color. 
+
+\mbox{\Hypertarget{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}\label{class_avatar_ab97d2d7a4d5aaf7c767eeb4852ad1c49}} 
+\index{Avatar@{Avatar}!TopColor@{TopColor}}
+\index{TopColor@{TopColor}!Avatar@{Avatar}}
+\doxysubsubsection{\texorpdfstring{TopColor}{TopColor}}
+{\footnotesize\ttfamily int Avatar.\+Top\+Color\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Id of the avatar\textquotesingle{}s bottom color. 
 
 
 

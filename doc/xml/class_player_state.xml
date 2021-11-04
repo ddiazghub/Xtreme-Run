@@ -37,9 +37,9 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/PlayerState.cs" line="17" column="17" bodyfile="src/Entities/Player/PlayerStates/PlayerState.cs" bodystart="17" bodyend="22"/>
         <references refid="class_player_state_1a7c94c3f0cc97f388f281c524523d311e">_Init</references>
-        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="205" endline="216">Player.ChangeMainAction</referencedby>
-        <referencedby refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="189" endline="199">Player.ChangePersistentState</referencedby>
-        <referencedby refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="222" endline="233">Player.ChangeSecondaryAction</referencedby>
+        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="237" endline="249">Player.ChangeMainAction</referencedby>
+        <referencedby refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="221" endline="231">Player.ChangePersistentState</referencedby>
+        <referencedby refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="255" endline="266">Player.ChangeSecondaryAction</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_player_state_1a1bddd210d96db25cb49b3a0b3edd5265" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>abstract void</type>

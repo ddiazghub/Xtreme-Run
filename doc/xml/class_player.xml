@@ -18,15 +18,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/Player.cs" line="14" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="14" bodyend="-1"/>
-        <referencedby refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="123" endline="135">Glide._ActionProcess</referencedby>
+        <referencedby refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="124" endline="136">Glide._ActionProcess</referencedby>
         <referencedby refid="class_jetpack_1a2f099459f3cdeef59c2a73a86edb334c" compoundref="_jetpack_8cs" startline="37" endline="40">Jetpack._ActionProcess</referencedby>
         <referencedby refid="class_jump_1a44577960ec4edd622c95a6f5b76dfacb" compoundref="_jump_8cs" startline="18" endline="21">Jump._ActionProcess</referencedby>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" compoundref="_jetpack_8cs" startline="19" endline="27">Jetpack._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">InvertGravity</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="271" endline="284">InvertGravity</referencedby>
         <referencedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" compoundref="_jetpack_8cs" startline="42" endline="53">Jetpack.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
         <referencedby refid="class_jetpack_1ae5d732914ec97154f9f14d12e96730d3" compoundref="_jetpack_8cs" startline="55" endline="66">Jetpack.OnMainActionTimerTimeout</referencedby>
       </memberdef>
@@ -60,15 +60,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/Player.cs" line="24" column="19" bodyfile="src/Entities/Player/Player.cs" bodystart="24" bodyend="-1"/>
-        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">Glide._ActionOnAir</referencedby>
-        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">Glide._ActionReleased</referencedby>
+        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="76" endline="102">Glide._ActionOnAir</referencedby>
+        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">Glide._ActionReleased</referencedby>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" compoundref="_jetpack_8cs" startline="19" endline="27">Jetpack._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
-        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">MainAction._Init</referencedby>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="36" endline="44">MainAction._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62" compoundref="_glide_8cs" startline="157" endline="172">Glide.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
-        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="137" endline="155">Glide.OnMainActionTimerTimeout</referencedby>
+        <referencedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62" compoundref="_glide_8cs" startline="158" endline="173">Glide.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="138" endline="156">Glide.OnMainActionTimerTimeout</referencedby>
         <referencedby refid="class_jetpack_1ae5d732914ec97154f9f14d12e96730d3" compoundref="_jetpack_8cs" startline="55" endline="66">Jetpack.OnMainActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1af93facbeac2019c5bc7bfb2493041109" prot="public" static="no" mutable="no">
@@ -91,7 +91,7 @@
         <referencedby refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" compoundref="_jetpack_8cs" startline="19" endline="27">Jetpack._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
         <referencedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" compoundref="_jetpack_8cs" startline="42" endline="53">Jetpack.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
         <referencedby refid="class_jetpack_1ae5d732914ec97154f9f14d12e96730d3" compoundref="_jetpack_8cs" startline="55" endline="66">Jetpack.OnMainActionTimerTimeout</referencedby>
         <referencedby refid="class_fast_fall_and_roll_1a4ee1aec7ed7f5bfe9ec6bf798a16023d" compoundref="_fastfall_and_roll_8cs" startline="29" endline="35">FastFallAndRoll.OnSecondaryActionTimerTimeout</referencedby>
@@ -111,20 +111,50 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/Player.cs" line="34" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="34" bodyend="-1"/>
-        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">Glide._ActionOnAir</referencedby>
+        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="76" endline="102">Glide._ActionOnAir</referencedby>
         <referencedby refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8" compoundref="_switch_gravity_8cs" startline="18" endline="23">SwitchGravity._ActionOnGround</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" compoundref="_teleport_and_switch_gravity_8cs" startline="14" endline="23">TeleportAndSwitchGravity._ActionOnGround</referencedby>
-        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">Glide._ActionReleased</referencedby>
+        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">Glide._ActionReleased</referencedby>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" compoundref="_jetpack_8cs" startline="19" endline="27">Jetpack._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">Glide._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">InvertGravity</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="271" endline="284">InvertGravity</referencedby>
         <referencedby refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">SwitchGravity.invertGravity</referencedby>
-        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="137" endline="155">Glide.OnMainActionTimerTimeout</referencedby>
+        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="138" endline="156">Glide.OnMainActionTimerTimeout</referencedby>
         <referencedby refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6" compoundref="_switch_gravity_8cs" startline="34" endline="42">SwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a28f9ab1a1e2354fcb49c99fd618cf189" prot="public" static="no" mutable="no">
+        <type>SpriteFrames</type>
+        <definition>SpriteFrames Player.MaleAnimation</definition>
+        <argsstring></argsstring>
+        <name>MaleAnimation</name>
+        <briefdescription>
+<para>Male character animations </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Player.cs" line="39" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2" prot="public" static="no" mutable="no">
+        <type>SpriteFrames</type>
+        <definition>SpriteFrames Player.FemaleAnimation</definition>
+        <argsstring></argsstring>
+        <name>FemaleAnimation</name>
+        <briefdescription>
+<para>Female character animations </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Player.cs" line="44" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a4d70330236aa5cff44570ad6063433f0" prot="public" static="no" mutable="no">
         <type>Area2D</type>
@@ -138,8 +168,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="45" column="19" bodyfile="src/Entities/Player/Player.cs" bodystart="45" bodyend="-1"/>
-        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">MainAction._Init</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="67" column="19" bodyfile="src/Entities/Player/Player.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="36" endline="44">MainAction._Init</referencedby>
         <referencedby refid="class_persistent_state_1aa3bb922abb6c7a699b5990b1b9d83afc" compoundref="_persistent_state_8cs" startline="11" endline="14">PersistentState._Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a4d0da6c92bf522df4a9d0b97b209b09b" prot="public" static="no" mutable="no">
@@ -154,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="50" column="19" bodyfile="src/Entities/Player/Player.cs" bodystart="50" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="72" column="19" bodyfile="src/Entities/Player/Player.cs" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" prot="public" static="no" mutable="no">
         <type>Timer</type>
@@ -168,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="55" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="55" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="77" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="77" bodyend="-1"/>
         <referencedby refid="class_fast_fall_and_roll_1a63c245a9215306232f86d96c50b9fb20" compoundref="_fastfall_and_roll_8cs" startline="17" endline="27">FastFallAndRoll._ActionOnAir</referencedby>
         <referencedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a" compoundref="_fastfall_and_roll_8cs" startline="8" endline="15">FastFallAndRoll._ActionOnGround</referencedby>
         <referencedby refid="class_secondary_action_1a2d779a636107f20c7b8566d359d47e2c" compoundref="_secondary_action_8cs" startline="42" endline="46">SecondaryAction._ActionOnGround</referencedby>
@@ -195,17 +225,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="60" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="60" bodyend="-1"/>
-        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">Glide._ActionOnAir</referencedby>
-        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="74" endline="83">MainAction._ActionOnAir</referencedby>
-        <referencedby refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="74">Glide._ActionOnGround</referencedby>
-        <referencedby refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="66" endline="72">MainAction._ActionOnGround</referencedby>
-        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">Glide._ActionReleased</referencedby>
-        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="30" endline="38">MainAction._Init</referencedby>
-        <referencedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62" compoundref="_glide_8cs" startline="157" endline="172">Glide.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="82" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="76" endline="102">Glide._ActionOnAir</referencedby>
+        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="81" endline="90">MainAction._ActionOnAir</referencedby>
+        <referencedby refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="75">Glide._ActionOnGround</referencedby>
+        <referencedby refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="72" endline="79">MainAction._ActionOnGround</referencedby>
+        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">Glide._ActionReleased</referencedby>
+        <referencedby refid="class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95" compoundref="_main_action_8cs" startline="36" endline="44">MainAction._Init</referencedby>
+        <referencedby refid="class_glide_1ac7d01853752f27addde9526b665b3d62" compoundref="_glide_8cs" startline="158" endline="173">Glide.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
         <referencedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" compoundref="_jetpack_8cs" startline="42" endline="53">Jetpack.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
-        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="156" endline="169">MainAction.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
-        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="137" endline="155">Glide.OnMainActionTimerTimeout</referencedby>
+        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="163" endline="176">MainAction.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="138" endline="156">Glide.OnMainActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1ab41212894186e98612be4e15d08ad121" prot="public" static="no" mutable="no">
         <type>Timer</type>
@@ -219,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="65" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="65" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="87" column="18" bodyfile="src/Entities/Player/Player.cs" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" prot="public" static="no" mutable="no">
         <type>AnimatedSprite</type>
@@ -233,9 +263,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="70" column="27" bodyfile="src/Entities/Player/Player.cs" bodystart="70" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="92" column="27" bodyfile="src/Entities/Player/Player.cs" bodystart="92" bodyend="-1"/>
         <referencedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a" compoundref="_fastfall_and_roll_8cs" startline="8" endline="15">FastFallAndRoll._ActionOnGround</referencedby>
-        <referencedby refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" compoundref="_on_air_state_8cs" startline="10" endline="15">OnAirState._Init</referencedby>
+        <referencedby refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" compoundref="_on_air_state_8cs" startline="10" endline="20">OnAirState._Init</referencedby>
         <referencedby refid="class_on_ground_state_1af9b72404be0c026cc9da18396aa214d2" compoundref="_on_ground_state_8cs" startline="10" endline="18">OnGroundState._Init</referencedby>
         <referencedby refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" compoundref="_secondary_action_8cs" startline="115" endline="120">SecondaryAction.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
@@ -251,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="75" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="75" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="97" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1ab5f7f8e003fed1e7b293f5b6f069648b" prot="public" static="no" mutable="no">
         <type>CollisionShape2D</type>
@@ -265,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="80" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="80" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="102" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="102" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_player_1adfe24c4a8a6124eef02a636f042917dd" prot="public" static="no" mutable="no">
         <type>Vector2</type>
@@ -280,21 +310,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="85" column="20" bodyfile="src/Entities/Player/Player.cs" bodystart="85" bodyend="-1"/>
-        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="74" endline="83">MainAction._ActionOnAir</referencedby>
-        <referencedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" compoundref="_teleport_8cs" startline="37" endline="46">Teleport._ActionOnAir</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="107" column="20" bodyfile="src/Entities/Player/Player.cs" bodystart="107" bodyend="-1"/>
+        <referencedby refid="class_main_action_1a61b3c6152e024c014e7d810feb94fc74" compoundref="_main_action_8cs" startline="81" endline="90">MainAction._ActionOnAir</referencedby>
+        <referencedby refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" compoundref="_teleport_8cs" startline="39" endline="48">Teleport._ActionOnAir</referencedby>
         <referencedby refid="class_fast_fall_and_roll_1a63c245a9215306232f86d96c50b9fb20" compoundref="_fastfall_and_roll_8cs" startline="17" endline="27">FastFallAndRoll._ActionOnAir</referencedby>
-        <referencedby refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="66" endline="72">MainAction._ActionOnGround</referencedby>
+        <referencedby refid="class_main_action_1a0d3e4403cb876a28ae3383daba402fce" compoundref="_main_action_8cs" startline="72" endline="79">MainAction._ActionOnGround</referencedby>
         <referencedby refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8" compoundref="_switch_gravity_8cs" startline="18" endline="23">SwitchGravity._ActionOnGround</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" compoundref="_teleport_and_switch_gravity_8cs" startline="14" endline="23">TeleportAndSwitchGravity._ActionOnGround</referencedby>
-        <referencedby refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="123" endline="135">Glide._ActionProcess</referencedby>
+        <referencedby refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="124" endline="136">Glide._ActionProcess</referencedby>
         <referencedby refid="class_jetpack_1a2f099459f3cdeef59c2a73a86edb334c" compoundref="_jetpack_8cs" startline="37" endline="40">Jetpack._ActionProcess</referencedby>
         <referencedby refid="class_jump_1a44577960ec4edd622c95a6f5b76dfacb" compoundref="_jump_8cs" startline="18" endline="21">Jump._ActionProcess</referencedby>
         <referencedby refid="class_on_ground_state_1af9b72404be0c026cc9da18396aa214d2" compoundref="_on_ground_state_8cs" startline="10" endline="18">OnGroundState._Init</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
         <referencedby refid="class_persistent_state_1a197779850b8a9fbef055982249582ef3" compoundref="_persistent_state_8cs" startline="16" endline="39">PersistentState._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="156" endline="169">MainAction.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
-        <referencedby refid="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" compoundref="_teleport_8cs" startline="57" endline="69">Teleport.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_main_action_1a7171ab2e310ea4e2b6de08ca9e7c8a68" compoundref="_main_action_8cs" startline="163" endline="176">MainAction.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" compoundref="_teleport_8cs" startline="59" endline="71">Teleport.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53" compoundref="_teleport_and_switch_gravity_8cs" startline="35" endline="42">TeleportAndSwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" prot="public" static="no" mutable="no">
@@ -309,12 +339,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="88" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="88" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="110" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="110" bodyend="-1"/>
         <referencedby refid="class_fast_fall_and_roll_1a63c245a9215306232f86d96c50b9fb20" compoundref="_fastfall_and_roll_8cs" startline="17" endline="27">FastFallAndRoll._ActionOnAir</referencedby>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" compoundref="_jetpack_8cs" startline="42" endline="53">Jetpack.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
         <referencedby refid="class_fast_fall_and_roll_1a4ee1aec7ed7f5bfe9ec6bf798a16023d" compoundref="_fastfall_and_roll_8cs" startline="29" endline="35">FastFallAndRoll.OnSecondaryActionTimerTimeout</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53" compoundref="_teleport_and_switch_gravity_8cs" startline="35" endline="42">TeleportAndSwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
@@ -331,16 +361,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="89" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="89" bodyend="-1"/>
-        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">Glide._ActionReleased</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="111" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="111" bodyend="-1"/>
+        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">Glide._ActionReleased</referencedby>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" compoundref="_jetpack_8cs" startline="19" endline="27">Jetpack._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">Glide._StatePhysicsProcess</referencedby>
         <referencedby refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">SwitchGravity.invertGravity</referencedby>
-        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="137" endline="155">Glide.OnMainActionTimerTimeout</referencedby>
+        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="138" endline="156">Glide.OnMainActionTimerTimeout</referencedby>
         <referencedby refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6" compoundref="_switch_gravity_8cs" startline="34" endline="42">SwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1a1a02648b66f2ff24777751e242a260c0" prot="public" static="no" mutable="no">
@@ -355,8 +385,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="90" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="90" bodyend="-1"/>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="112" column="25" bodyfile="src/Entities/Player/Player.cs" bodystart="112" bodyend="-1"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_player_1ae354c1568fb2f116e290e1a8fde5271a" prot="public" static="no" mutable="no">
         <type>readonly float</type>
@@ -370,11 +400,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="91" column="27" bodyfile="src/Entities/Player/Player.cs" bodystart="91" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="113" column="27" bodyfile="src/Entities/Player/Player.cs" bodystart="113" bodyend="-1"/>
         <referencedby refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" compoundref="_glide_8cs" startline="25" endline="33">Glide._Init</referencedby>
         <referencedby refid="class_jump_1a1c628cf6144679785b27250e8b496234" compoundref="_jump_8cs" startline="8" endline="16">Jump._Init</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" compoundref="_jetpack_8cs" startline="42" endline="53">Jetpack.OnMainActionObjectCollisionCheckAreaEntered</referencedby>
       </memberdef>
       </sectiondef>
@@ -391,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="96" column="32" bodyfile="src/Entities/Player/Player.cs" bodystart="96" bodyend="-1"/>
+        <location file="src/Entities/Player/Player.cs" line="118" column="32" bodyfile="src/Entities/Player/Player.cs" bodystart="118" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="property">
@@ -407,9 +437,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="101" column="28" bodyfile="src/Entities/Player/Player.cs" bodystart="101" bodyend="101"/>
+        <location file="src/Entities/Player/Player.cs" line="123" column="28" bodyfile="src/Entities/Player/Player.cs" bodystart="123" bodyend="123"/>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">Glide._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">MainAction._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="46" endline="70">MainAction._StatePhysicsProcess</referencedby>
         <referencedby refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">SecondaryAction._StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1ab8b54cc99ed363971d75ab6c506016be" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
@@ -424,8 +454,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="106" column="23" bodyfile="src/Entities/Player/Player.cs" bodystart="106" bodyend="106"/>
+        <location file="src/Entities/Player/Player.cs" line="128" column="23" bodyfile="src/Entities/Player/Player.cs" bodystart="128" bodyend="128"/>
         <referencedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a" compoundref="_fastfall_and_roll_8cs" startline="8" endline="15">FastFallAndRoll._ActionOnGround</referencedby>
+        <referencedby refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" compoundref="_on_air_state_8cs" startline="10" endline="20">OnAirState._Init</referencedby>
         <referencedby refid="class_secondary_action_1ab1436a4c4523473d3199412de76ec830" compoundref="_secondary_action_8cs" startline="115" endline="120">SecondaryAction.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1aa21dcf6dffae0e8c8575890e4d8e6d07" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
@@ -440,7 +471,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="111" column="28" bodyfile="src/Entities/Player/Player.cs" bodystart="111" bodyend="111"/>
+        <location file="src/Entities/Player/Player.cs" line="133" column="28" bodyfile="src/Entities/Player/Player.cs" bodystart="133" bodyend="133"/>
       </memberdef>
       <memberdef kind="property" id="class_player_1aa2d4269e3e9b3042032012c05502ff76" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="_player_main_action_8cs_1adbd1afd3268279088266e6463135cac9" kindref="member">PlayerMainAction</ref></type>
@@ -454,9 +485,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="116" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="116" bodyend="116"/>
-        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="102" endline="116">Level._Process</referencedby>
-        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="205" endline="216">ChangeMainAction</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="138" column="29" bodyfile="src/Entities/Player/Player.cs" bodystart="138" bodyend="138"/>
+        <referencedby refid="class_level_1adf87a658b5a922295a3bbab87f5820b5" compoundref="_level_8cs" startline="120" endline="134">Level._Process</referencedby>
+        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="237" endline="249">ChangeMainAction</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1ac3acd90d6c0eb2ee07ccec066d448cf7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type><ref refid="_player_secondary_action_8cs_1a92b46946fafc071a922f285614a74b88" kindref="member">PlayerSecondaryAction</ref></type>
@@ -470,8 +501,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="121" column="34" bodyfile="src/Entities/Player/Player.cs" bodystart="121" bodyend="121"/>
-        <referencedby refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="222" endline="233">ChangeSecondaryAction</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="143" column="34" bodyfile="src/Entities/Player/Player.cs" bodystart="143" bodyend="143"/>
+        <referencedby refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="255" endline="266">ChangeSecondaryAction</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1a94853daaad74e83561ada70dc0c4e92e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -485,11 +516,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="126" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="126" bodyend="126"/>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
-        <referencedby refid="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" compoundref="_level_8cs" startline="225" endline="228">Level.OnHudPauseMouseEntered</referencedby>
-        <referencedby refid="class_level_1a462cabf043b2870fda20d5a7c25e6d40" compoundref="_level_8cs" startline="230" endline="233">Level.OnHudPauseMouseExited</referencedby>
-        <referencedby refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" compoundref="_player_8cs" startline="271" endline="274">OnStartTimerTimeout</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="148" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="148" bodyend="148"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+        <referencedby refid="class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae" compoundref="_level_8cs" startline="256" endline="259">Level.OnHudPauseMouseEntered</referencedby>
+        <referencedby refid="class_level_1a462cabf043b2870fda20d5a7c25e6d40" compoundref="_level_8cs" startline="261" endline="264">Level.OnHudPauseMouseExited</referencedby>
+        <referencedby refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" compoundref="_player_8cs" startline="304" endline="307">OnStartTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>bool</type>
@@ -504,18 +535,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="131" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="131" bodyend="131"/>
+        <location file="src/Entities/Player/Player.cs" line="153" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="153" bodyend="153"/>
         <referencedby refid="class_fast_fall_and_roll_1a63c245a9215306232f86d96c50b9fb20" compoundref="_fastfall_and_roll_8cs" startline="17" endline="27">FastFallAndRoll._ActionOnAir</referencedby>
         <referencedby refid="class_spawn_platforms_1ae11d1949e82b9a316f530ac977d432b8" compoundref="_spawn_platforms_8cs" startline="25" endline="42">SpawnPlatforms._ActionOnAir</referencedby>
-        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">Glide._ActionReleased</referencedby>
+        <referencedby refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">Glide._ActionReleased</referencedby>
         <referencedby refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" compoundref="_teleport_8cs" startline="13" endline="26">Teleport._Init</referencedby>
-        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="173" endline="183">_PhysicsProcess</referencedby>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="205" endline="215">_PhysicsProcess</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">Glide._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
-        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">InvertGravity</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="271" endline="284">InvertGravity</referencedby>
         <referencedby refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">SwitchGravity.invertGravity</referencedby>
-        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="137" endline="155">Glide.OnMainActionTimerTimeout</referencedby>
+        <referencedby refid="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" compoundref="_glide_8cs" startline="138" endline="156">Glide.OnMainActionTimerTimeout</referencedby>
         <referencedby refid="class_switch_gravity_1a92a60def3fa4553e04f9511c3e892be6" compoundref="_switch_gravity_8cs" startline="34" endline="42">SwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_player_1af9af5996f690a82ffea195f2c9a46d0c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
@@ -531,9 +562,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="136" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="136" bodyend="136"/>
+        <location file="src/Entities/Player/Player.cs" line="158" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="158" bodyend="158"/>
         <referencedby refid="class_teleport_and_switch_gravity_1aa307d371dea032532bf619e102972791" compoundref="_teleport_and_switch_gravity_8cs" startline="14" endline="23">TeleportAndSwitchGravity._ActionOnGround</referencedby>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_persistent_state_1a197779850b8a9fbef055982249582ef3" compoundref="_persistent_state_8cs" startline="16" endline="39">PersistentState._StatePhysicsProcess</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1afb088693fcb444dc8a536a1f37988a53" compoundref="_teleport_and_switch_gravity_8cs" startline="35" endline="42">TeleportAndSwitchGravity.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
@@ -551,7 +582,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="40" column="26"/>
+        <location file="src/Entities/Player/Player.cs" line="50" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1ab320c041982d83b5c79173ad1064f7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Player.PerformedMainAction</definition>
+        <argsstring>()</argsstring>
+        <name>PerformedMainAction</name>
+        <briefdescription>
+<para>Emitted when the player performs a main action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Player.cs" line="56" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1ac428e6908dd8a937cd060ec9f7d62814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void Player.Pickup</definition>
+        <argsstring>()</argsstring>
+        <name>Pickup</name>
+        <briefdescription>
+<para>Emitted when the player comes in contact with a pickup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Player.cs" line="62" column="26"/>
       </memberdef>
       <memberdef kind="function" id="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -564,19 +623,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="139" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="139" bodyend="171"/>
-        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="126" endline="126">Blocked</references>
-        <references refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="205" endline="216">ChangeMainAction</references>
-        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="189" endline="199">ChangePersistentState</references>
-        <references refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="222" endline="233">ChangeSecondaryAction</references>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">DEFAULT_GRAVITY</references>
-        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">DEFAULT_JUMPFORCE</references>
-        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">DEFAULT_MAX_JUMP_TIME</references>
-        <references refid="class_player_1a1a02648b66f2ff24777751e242a260c0" compoundref="_player_8cs" startline="90">DEFAULT_MOVEMENT_SPEED</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">InvertedGravity</references>
-        <references refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">InvertGravity</references>
-        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="136" endline="136">Invincible</references>
-        <references refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" compoundref="_player_8cs" startline="271" endline="274">OnStartTimerTimeout</references>
+        <location file="src/Entities/Player/Player.cs" line="161" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="161" bodyend="203"/>
+        <references refid="class_player_session_1acb357efd7543bd1dee781de31e01e470" compoundref="_player_session_8cs" startline="60" endline="70">PlayerSession.ActiveSession</references>
+        <references refid="class_profile_1a307f6749c751e25cef64f85b07f02514" compoundref="_profile_8cs" startline="31" endline="33">Profile.Avatar</references>
+        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="148" endline="148">Blocked</references>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">Avatar.BottomColor</references>
+        <references refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="237" endline="249">ChangeMainAction</references>
+        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="221" endline="231">ChangePersistentState</references>
+        <references refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="255" endline="266">ChangeSecondaryAction</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="110">DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="113">DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1a1a02648b66f2ff24777751e242a260c0" compoundref="_player_8cs" startline="112">DEFAULT_MOVEMENT_SPEED</references>
+        <references refid="class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2" compoundref="_player_8cs" startline="44">FemaleAnimation</references>
+        <references refid="class_palette_1a25336192634062811d8659ee0ad065c6" compoundref="_palette_8cs" startline="106" endline="114">Palette.Instance</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">InvertedGravity</references>
+        <references refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="271" endline="284">InvertGravity</references>
+        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="158" endline="158">Invincible</references>
+        <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Avatar.Male</references>
+        <references refid="class_player_1a28f9ab1a1e2354fcb49c99fd618cf189" compoundref="_player_8cs" startline="39">MaleAnimation</references>
+        <references refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" compoundref="_player_8cs" startline="304" endline="307">OnStartTimerTimeout</references>
+        <references refid="class_palette_1ac5cd23ad275bc2a794539c1208fb5318" compoundref="_palette_8cs" startline="74" endline="77">Palette.PaletteColors</references>
+        <references refid="class_player_session_1a986345ec97ef2443cec013da3ae5b994" compoundref="_player_session_8cs" startline="21" endline="24">PlayerSession.Profile</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">Avatar.TopColor</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>override void</type>
@@ -593,11 +662,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="173" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="173" bodyend="183"/>
-        <references refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="40" endline="64">MainAction._StatePhysicsProcess</references>
+        <location file="src/Entities/Player/Player.cs" line="205" column="26" bodyfile="src/Entities/Player/Player.cs" bodystart="205" bodyend="215"/>
+        <references refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" compoundref="_main_action_8cs" startline="46" endline="70">MainAction._StatePhysicsProcess</references>
         <references refid="class_secondary_action_1a91411ef181aa4993006fcb37cc70225d" compoundref="_secondary_action_8cs" startline="21" endline="37">SecondaryAction._StatePhysicsProcess</references>
         <references refid="class_persistent_state_1a197779850b8a9fbef055982249582ef3" compoundref="_persistent_state_8cs" startline="16" endline="39">PersistentState._StatePhysicsProcess</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">InvertedGravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">InvertedGravity</references>
       </memberdef>
       <memberdef kind="function" id="class_player_1ae2226638af8907c89812bdb4b7eefede" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -625,11 +694,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="189" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="189" bodyend="199"/>
+        <location file="src/Entities/Player/Player.cs" line="221" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="221" bodyend="231"/>
         <references refid="class_player_state_factory_1acd77aae65440dedcd2c6d26f3aedc985" compoundref="_player_state_factory_8cs" startline="11" endline="27">PlayerStateFactory.New</references>
         <references refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" compoundref="_player_state_8cs" startline="17" endline="22">PlayerState.Setup</references>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
-        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="17" endline="47">OnAirState._StatePhysicsProcess</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+        <referencedby refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" compoundref="_on_air_state_8cs" startline="22" endline="52">OnAirState._StatePhysicsProcess</referencedby>
         <referencedby refid="class_on_ground_state_1ab00fe4c5fbbe3d27cf9e7cdf726e2614" compoundref="_on_ground_state_8cs" startline="20" endline="28">OnGroundState._StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_player_1a383ca70b33e3f3a19573dc0c260c1150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -658,12 +727,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="205" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="205" bodyend="216"/>
-        <references refid="class_player_1aa2d4269e3e9b3042032012c05502ff76" compoundref="_player_8cs" startline="116" endline="116">MainActionType</references>
+        <location file="src/Entities/Player/Player.cs" line="237" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="237" bodyend="249"/>
+        <references refid="class_player_1aa2d4269e3e9b3042032012c05502ff76" compoundref="_player_8cs" startline="138" endline="138">MainActionType</references>
         <references refid="class_player_state_factory_1acd77aae65440dedcd2c6d26f3aedc985" compoundref="_player_state_factory_8cs" startline="11" endline="27">PlayerStateFactory.New</references>
+        <references refid="class_player_1a04fe5bcf48f86e0a09f15e4ee623862a" compoundref="_player_8cs" startline="309" endline="312">OnMainAction</references>
         <references refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" compoundref="_player_state_8cs" startline="17" endline="22">PlayerState.Setup</references>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
-        <referencedby refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="52">PersistentState.OnActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+        <referencedby refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="54">PersistentState.OnActionObjectCollisionCheckAreaEntered</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_player_1aa90d185e163489f864480c9c72b7fbb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -691,12 +761,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="222" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="222" bodyend="233"/>
+        <location file="src/Entities/Player/Player.cs" line="255" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="255" bodyend="266"/>
         <references refid="class_player_state_factory_1acd77aae65440dedcd2c6d26f3aedc985" compoundref="_player_state_factory_8cs" startline="11" endline="27">PlayerStateFactory.New</references>
-        <references refid="class_player_1ac3acd90d6c0eb2ee07ccec066d448cf7" compoundref="_player_8cs" startline="121" endline="121">SecondaryActionType</references>
+        <references refid="class_player_1ac3acd90d6c0eb2ee07ccec066d448cf7" compoundref="_player_8cs" startline="143" endline="143">SecondaryActionType</references>
         <references refid="class_player_state_1a104dd6b861334c1c4f9cb2a9d322403c" compoundref="_player_state_8cs" startline="17" endline="22">PlayerState.Setup</references>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
-        <referencedby refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="52">PersistentState.OnActionObjectCollisionCheckAreaEntered</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+        <referencedby refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="54">PersistentState.OnActionObjectCollisionCheckAreaEntered</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_player_1ad50972081bd91a62aa2c099b27462d37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -710,11 +780,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="238" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="238" bodyend="251"/>
+        <location file="src/Entities/Player/Player.cs" line="271" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="271" bodyend="284"/>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">InvertedGravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">InvertedGravity</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">JumpForce</references>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
         <referencedby refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">SwitchGravity.invertGravity</referencedby>
         <referencedby refid="class_teleport_and_switch_gravity_1a49809a107376cd8ad243ca3631c258a4" compoundref="_teleport_and_switch_gravity_8cs" startline="47" endline="53">TeleportAndSwitchGravity.invertGravity</referencedby>
       </memberdef>
@@ -744,9 +814,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="257" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="257" bodyend="269"/>
+        <location file="src/Entities/Player/Player.cs" line="290" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="290" bodyend="302"/>
         <referencedby refid="class_fast_fall_and_roll_1a677376011ccf63f6cf5408f52275d48a" compoundref="_fastfall_and_roll_8cs" startline="8" endline="15">FastFallAndRoll._ActionOnGround</referencedby>
-        <referencedby refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" compoundref="_on_air_state_8cs" startline="10" endline="15">OnAirState._Init</referencedby>
+        <referencedby refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" compoundref="_on_air_state_8cs" startline="10" endline="20">OnAirState._Init</referencedby>
         <referencedby refid="class_on_ground_state_1af9b72404be0c026cc9da18396aa214d2" compoundref="_on_ground_state_8cs" startline="10" endline="18">OnGroundState._Init</referencedby>
         <referencedby refid="class_fast_fall_and_roll_1a4ee1aec7ed7f5bfe9ec6bf798a16023d" compoundref="_fastfall_and_roll_8cs" startline="29" endline="35">FastFallAndRoll.OnSecondaryActionTimerTimeout</referencedby>
       </memberdef>
@@ -761,9 +831,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/Player.cs" line="271" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="271" bodyend="274"/>
-        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="126" endline="126">Blocked</references>
-        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="139" endline="171">_Ready</referencedby>
+        <location file="src/Entities/Player/Player.cs" line="304" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="304" bodyend="307"/>
+        <references refid="class_player_1a94853daaad74e83561ada70dc0c4e92e" compoundref="_player_8cs" startline="148" endline="148">Blocked</references>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">_Ready</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a04fe5bcf48f86e0a09f15e4ee623862a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player.OnMainAction</definition>
+        <argsstring>()</argsstring>
+        <name>OnMainAction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Entities/Player/Player.cs" line="309" column="17" bodyfile="src/Entities/Player/Player.cs" bodystart="309" bodyend="312"/>
+        <referencedby refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="237" endline="249">ChangeMainAction</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -784,13 +868,13 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7">
+      <node id="8">
         <label>AnimatedSprite</label>
       </node>
-      <node id="5">
+      <node id="6">
         <label>Area2D</label>
       </node>
-      <node id="8">
+      <node id="9">
         <label>CollisionShape2D</label>
       </node>
       <node id="2">
@@ -816,36 +900,43 @@
           <edgelabel>+MaxJumpTime</edgelabel>
         </childnode>
         <childnode refid="5" relation="usage">
+          <edgelabel>+FemaleAnimation</edgelabel>
+          <edgelabel>+MaleAnimation</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
           <edgelabel>+jumpObjectCollisionCheck</edgelabel>
           <edgelabel>+teleportCollisionCheck</edgelabel>
         </childnode>
-        <childnode refid="6" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>+mainActionTimer</edgelabel>
           <edgelabel>+secondaryActionTimer</edgelabel>
           <edgelabel>+startTimer</edgelabel>
         </childnode>
-        <childnode refid="7" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>+animation</edgelabel>
         </childnode>
-        <childnode refid="8" relation="usage">
+        <childnode refid="9" relation="usage">
           <edgelabel>+rollingCollision</edgelabel>
           <edgelabel>+runningCollision</edgelabel>
         </childnode>
-        <childnode refid="9" relation="usage">
+        <childnode refid="10" relation="usage">
           <edgelabel>+linearVelocity</edgelabel>
         </childnode>
-        <childnode refid="10" relation="usage">
+        <childnode refid="11" relation="usage">
           <edgelabel>-stateFactory</edgelabel>
         </childnode>
       </node>
-      <node id="10">
+      <node id="11">
         <label>PlayerStateFactory</label>
         <link refid="class_player_state_factory"/>
       </node>
-      <node id="6">
+      <node id="5">
+        <label>SpriteFrames</label>
+      </node>
+      <node id="7">
         <label>Timer</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>Vector2</label>
       </node>
       <node id="4">
@@ -855,7 +946,7 @@
         <label>int</label>
       </node>
     </collaborationgraph>
-    <location file="src/Entities/Player/Player.cs" line="9" column="7" bodyfile="src/Entities/Player/Player.cs" bodystart="10" bodyend="275"/>
+    <location file="src/Entities/Player/Player.cs" line="9" column="7" bodyfile="src/Entities/Player/Player.cs" bodystart="10" bodyend="313"/>
     <listofallmembers>
       <member refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" prot="public" virt="non-virtual"><scope>Player</scope><name>_PhysicsProcess</name></member>
       <member refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" prot="public" virt="non-virtual"><scope>Player</scope><name>_Ready</name></member>
@@ -869,6 +960,7 @@
       <member refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" prot="public" virt="non-virtual"><scope>Player</scope><name>DEFAULT_JUMPFORCE</name></member>
       <member refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" prot="public" virt="non-virtual"><scope>Player</scope><name>DEFAULT_MAX_JUMP_TIME</name></member>
       <member refid="class_player_1a1a02648b66f2ff24777751e242a260c0" prot="public" virt="non-virtual"><scope>Player</scope><name>DEFAULT_MOVEMENT_SPEED</name></member>
+      <member refid="class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2" prot="public" virt="non-virtual"><scope>Player</scope><name>FemaleAnimation</name></member>
       <member refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" prot="public" virt="non-virtual"><scope>Player</scope><name>Gravity</name></member>
       <member refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" prot="public" virt="non-virtual"><scope>Player</scope><name>InvertedGravity</name></member>
       <member refid="class_player_1ad50972081bd91a62aa2c099b27462d37" prot="public" virt="non-virtual"><scope>Player</scope><name>InvertGravity</name></member>
@@ -879,11 +971,15 @@
       <member refid="class_player_1ab8b54cc99ed363971d75ab6c506016be" prot="public" virt="non-virtual"><scope>Player</scope><name>MainAction</name></member>
       <member refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" prot="public" virt="non-virtual"><scope>Player</scope><name>mainActionTimer</name></member>
       <member refid="class_player_1aa2d4269e3e9b3042032012c05502ff76" prot="public" virt="non-virtual"><scope>Player</scope><name>MainActionType</name></member>
+      <member refid="class_player_1a28f9ab1a1e2354fcb49c99fd618cf189" prot="public" virt="non-virtual"><scope>Player</scope><name>MaleAnimation</name></member>
       <member refid="class_player_1af93facbeac2019c5bc7bfb2493041109" prot="public" virt="non-virtual"><scope>Player</scope><name>MaxFallSpeed</name></member>
       <member refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" prot="public" virt="non-virtual"><scope>Player</scope><name>MaxJumpTime</name></member>
       <member refid="class_player_1a5a0c8762d9753c0108e520d2cd4c4194" prot="public" virt="non-virtual"><scope>Player</scope><name>MovementSpeed</name></member>
+      <member refid="class_player_1a04fe5bcf48f86e0a09f15e4ee623862a" prot="public" virt="non-virtual"><scope>Player</scope><name>OnMainAction</name></member>
       <member refid="class_player_1a48409f2ac61578d5ed6a8acab3990da4" prot="public" virt="non-virtual"><scope>Player</scope><name>OnStartTimerTimeout</name></member>
+      <member refid="class_player_1ab320c041982d83b5c79173ad1064f7be" prot="public" virt="non-virtual"><scope>Player</scope><name>PerformedMainAction</name></member>
       <member refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" prot="public" virt="non-virtual"><scope>Player</scope><name>PersistentState</name></member>
+      <member refid="class_player_1ac428e6908dd8a937cd060ec9f7d62814" prot="public" virt="non-virtual"><scope>Player</scope><name>Pickup</name></member>
       <member refid="class_player_1ab5f7f8e003fed1e7b293f5b6f069648b" prot="public" virt="non-virtual"><scope>Player</scope><name>rollingCollision</name></member>
       <member refid="class_player_1aa1f1a3e2e5bc1c6267dadd817f00af5d" prot="public" virt="non-virtual"><scope>Player</scope><name>runningCollision</name></member>
       <member refid="class_player_1aa21dcf6dffae0e8c8575890e4d8e6d07" prot="public" virt="non-virtual"><scope>Player</scope><name>SecondaryAction</name></member>

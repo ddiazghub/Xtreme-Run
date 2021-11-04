@@ -18,9 +18,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jump.cs" line="8" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jump.cs" bodystart="8" bodyend="16"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
-        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
-        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="110">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="113">Player.DEFAULT_MAX_JUMP_TIME</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
         <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
@@ -55,7 +55,7 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jump.cs" line="18" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jump.cs" bodystart="18" bodyend="21"/>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,6 +125,7 @@
       <member refid="class_main_action_1a9b80ccc09b82cb5b35dc22a1a6f9b85f" prot="public" virt="virtual"><scope>Jump</scope><name>_ActionReleased</name></member>
       <member refid="class_jump_1a1c628cf6144679785b27250e8b496234" prot="public" virt="virtual"><scope>Jump</scope><name>_Init</name></member>
       <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" virt="virtual"><scope>Jump</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1a673b3a967faefc189251e4470b944fd4" prot="public" virt="non-virtual"><scope>Jump</scope><name>Action</name></member>
       <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Jump</scope><name>Blocked</name></member>
       <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Jump</scope><name>CanUseActionPad</name></member>
       <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Jump</scope><name>GetTypeAsString</name></member>

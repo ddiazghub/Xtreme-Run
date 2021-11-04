@@ -1,4 +1,4 @@
 <map id="ShopGUI" name="ShopGUI">
-<area shape="rect" id="node1" title="The shop from which the player can buy items." alt="" coords="5,131,213,311"/>
+<area shape="rect" id="node1" title="The shop from which the player can buy items." alt="" coords="5,131,213,325"/>
 <area shape="rect" id="node2" title=" " alt="" coords="55,5,164,83"/>
 </map>

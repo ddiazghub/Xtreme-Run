@@ -35,64 +35,91 @@
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>[Export]</highlight></codeline>
 <codeline lineno="44" refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioStream<sp/><ref refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" kindref="member">CancelSFX</ref>;</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49" refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Dictionary&lt;GameScenes,<sp/>AudioStream&gt;<sp/><ref refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" kindref="member">sceneMusic</ref>;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54" refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>AudioStreamPlayer<sp/><ref refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" kindref="member">music</ref>;</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>AudioStreamPlayer<sp/><ref refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" kindref="member">sfx</ref>;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61" refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" kindref="member">_Ready</ref>()</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Dictionary&lt;GameScenes,<sp/>AudioStream&gt;();</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.MAIN_MENU,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.MenuMusic);</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.PROFILE_SELECT,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.MenuMusic);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL1,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level1Music);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL2,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level2Music);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL3,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level3Music);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music<sp/>=<sp/>this.GetNode&lt;AudioStreamPlayer&gt;(</highlight><highlight class="stringliteral">&quot;Music&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx<sp/>=<sp/>this.GetNode&lt;AudioStreamPlayer&gt;(</highlight><highlight class="stringliteral">&quot;SFX&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Connect(</highlight><highlight class="stringliteral">&quot;finished&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" kindref="member">OnMusicFinished</ref>));</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Connect(</highlight><highlight class="stringliteral">&quot;finished&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" kindref="member">OnSfxFinished</ref>));</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a20ac51641bd1520e7e2f98256ced7da4" kindref="member">MenuMusic</ref>;</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84" refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" kindref="member">SetMusic</ref>(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref><sp/>scene)</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AudioStream<sp/>stream<sp/>=<sp/>this.sceneMusic[scene];</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>[Export]</highlight></codeline>
+<codeline lineno="50" refid="class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioStream<sp/><ref refid="class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098" kindref="member">DeathSFX</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>[Export]</highlight></codeline>
+<codeline lineno="56" refid="class_game_audio_1ab05094f6a17b0e8355112a6024cae50c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioStream<sp/><ref refid="class_game_audio_1ab05094f6a17b0e8355112a6024cae50c" kindref="member">JumpSFX</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>[Export]</highlight></codeline>
+<codeline lineno="62" refid="class_game_audio_1ab8e43f74aa38d82514d3025e0833033d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AudioStream<sp/><ref refid="class_game_audio_1ab8e43f74aa38d82514d3025e0833033d" kindref="member">PickupSFX</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Dictionary&lt;GameScenes,<sp/>AudioStream&gt;<sp/><ref refid="class_game_audio_1ad7935f43253880f7afac2f9f5e8bf4fb" kindref="member">sceneMusic</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>AudioStreamPlayer<sp/><ref refid="class_game_audio_1a3bc9feb323ef58de07fdbfb7781dc1e4" kindref="member">music</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>AudioStreamPlayer<sp/><ref refid="class_game_audio_1a13e9f2d30ac410e89e3adc323da02525" kindref="member">sfx</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0" kindref="member">_Ready</ref>()</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Dictionary&lt;GameScenes,<sp/>AudioStream&gt;();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.MAIN_MENU,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.MenuMusic);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.PROFILE_SELECT,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.MenuMusic);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL1,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level1Music);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL2,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level2Music);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sceneMusic.Add(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref>.LEVEL3,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">.Level3Music);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stream<sp/>==<sp/>this.music.Stream)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music<sp/>=<sp/>this.GetNode&lt;AudioStreamPlayer&gt;(</highlight><highlight class="stringliteral">&quot;Music&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx<sp/>=<sp/>this.GetNode&lt;AudioStreamPlayer&gt;(</highlight><highlight class="stringliteral">&quot;SFX&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Stream<sp/>=<sp/>stream;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98" refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" kindref="member">PlayAccept</ref>()</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" kindref="member">AcceptSFX</ref>;</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107" refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" kindref="member">PlayCancel</ref>()</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" kindref="member">CancelSFX</ref>;</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Connect(</highlight><highlight class="stringliteral">&quot;finished&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" kindref="member">OnMusicFinished</ref>));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Connect(</highlight><highlight class="stringliteral">&quot;finished&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>nameof(this.<ref refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" kindref="member">OnSfxFinished</ref>));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a20ac51641bd1520e7e2f98256ced7da4" kindref="member">MenuMusic</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1ac494431eace52893c1a35c662e74dee2" kindref="member">SetMusic</ref>(<ref refid="_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090" kindref="member">GameScenes</ref><sp/>scene)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AudioStream<sp/>stream<sp/>=<sp/>this.sceneMusic[scene];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stream<sp/>==<sp/>this.music.Stream)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Stream<sp/>=<sp/>stream;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113" refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" kindref="member">OnMusicFinished</ref>()</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118" refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" kindref="member">OnSfxFinished</ref>()</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stop();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116" refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02" kindref="member">PlayAccept</ref>()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a45bab24c53b73c4aca26066bfd55292d" kindref="member">AcceptSFX</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8" kindref="member">PlayCancel</ref>()</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc" kindref="member">CancelSFX</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_game_audio_1aeaebd5d3ac12494cb693a2e7ea233246" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1aeaebd5d3ac12494cb693a2e7ea233246" kindref="member">PlayDeath</ref>()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098" kindref="member">DeathSFX</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="class_game_audio_1a5bb181af6c57c5794a624890e967782c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1a5bb181af6c57c5794a624890e967782c" kindref="member">PlayPickup</ref>()</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1ab8e43f74aa38d82514d3025e0833033d" kindref="member">PickupSFX</ref>;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_game_audio_1afd92bfe560ae4047f75e9165d0a935da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1afd92bfe560ae4047f75e9165d0a935da" kindref="member">PlayJump</ref>()</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stream<sp/>=<sp/>this.<ref refid="class_game_audio_1ab05094f6a17b0e8355112a6024cae50c" kindref="member">JumpSFX</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Play();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2" kindref="member">OnMusicFinished</ref>()</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.music.Play();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_audio_1addcf597b4df4aba37d5bee5be86a476e" kindref="member">OnSfxFinished</ref>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.sfx.Stop();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/Audio/GameAudio.cs"/>
   </compounddef>

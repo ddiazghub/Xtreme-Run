@@ -22,6 +22,6 @@ var searchData=
   ['levelprogress_19',['LevelProgress',['../class_profile.html#a63dd8c4295cf725a680ea5cb5e937137',1,'Profile']]],
   ['linearvelocity_20',['linearVelocity',['../class_player.html#adfe24c4a8a6124eef02a636f042917dd',1,'Player']]],
   ['load_21',['Load',['../class_player_session.html#a819cebf72563f1e27a78962f82fb9c72',1,'PlayerSession']]],
-  ['locksprite_22',['lockSprite',['../class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d',1,'EditProfileGUI']]],
+  ['locksprite_22',['lockSprite',['../class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d',1,'EditProfileGUI.lockSprite()'],['../class_shop_g_u_i.html#adf5deadd4fdd72b2e957730293479f87',1,'ShopGUI.lockSprite()']]],
   ['logout_23',['LogOut',['../class_player_session.html#a65808546d8278d30ee26af807c62051f',1,'PlayerSession']]]
 ];

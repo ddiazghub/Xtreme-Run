@@ -84,9 +84,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="25" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="25" bodyend="33"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
-        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
-        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="110">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="113">Player.DEFAULT_MAX_JUMP_TIME</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
         <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
@@ -120,14 +120,14 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="35" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="35" bodyend="67"/>
-        <references refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="75" endline="101">_ActionOnAir</references>
-        <references refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="74">_ActionOnGround</references>
-        <references refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="123" endline="135">_ActionProcess</references>
-        <references refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="102" endline="122">_ActionReleased</references>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" compoundref="_glide_8cs" startline="76" endline="102">_ActionOnAir</references>
+        <references refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" compoundref="_glide_8cs" startline="69" endline="75">_ActionOnGround</references>
+        <references refid="class_glide_1a14d5f2b568b6a3573166ffe8384a5be5" compoundref="_glide_8cs" startline="124" endline="136">_ActionProcess</references>
+        <references refid="class_glide_1a2353d380d6897004724d34c31838f798" compoundref="_glide_8cs" startline="103" endline="123">_ActionReleased</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
-        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="101" endline="101">Player.PersistentState</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
+        <references refid="class_player_1a9cb4641c4d481f73d88fb07d479f4c84" compoundref="_player_8cs" startline="123" endline="123">Player.PersistentState</references>
       </memberdef>
       <memberdef kind="function" id="class_glide_1a807e0e90013a5c0f6b509a565efeff27" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -141,9 +141,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="69" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="69" bodyend="74"/>
-        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="69" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="69" bodyend="75"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="28">MainAction.CanUseActionPad</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
@@ -158,12 +158,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="75" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="75" bodyend="101"/>
-        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="76" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="76" bodyend="102"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="28">MainAction.CanUseActionPad</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
-        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="18" endline="18">MainAction.OnActionPad</references>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_glide_1a2353d380d6897004724d34c31838f798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
@@ -178,11 +178,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="102" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="102" bodyend="122"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="103" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="103" bodyend="123"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
       </memberdef>
@@ -213,9 +213,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="123" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="123" bodyend="135"/>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="124" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="124" bodyend="136"/>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
         <referencedby refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" compoundref="_glide_8cs" startline="35" endline="67">_StatePhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_glide_1a721ca45c8d7ddfeb0b25f726540c770d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
@@ -230,11 +230,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="137" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="137" bodyend="155"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="138" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="138" bodyend="156"/>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
       </memberdef>
       <memberdef kind="function" id="class_glide_1ac7d01853752f27addde9526b665b3d62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
@@ -253,10 +253,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="157" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="157" bodyend="172"/>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="158" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="158" bodyend="173"/>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
-        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="18" endline="18">MainAction.OnActionPad</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -326,7 +326,7 @@
         <label>bool</label>
       </node>
     </collaborationgraph>
-    <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="7" bodyend="173"/>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Glide.cs" bodystart="7" bodyend="174"/>
     <listofallmembers>
       <member refid="class_glide_1a701b0bc067e81b3d3fca24aaf4293088" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionOnAir</name></member>
       <member refid="class_glide_1a807e0e90013a5c0f6b509a565efeff27" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionOnGround</name></member>
@@ -334,6 +334,7 @@
       <member refid="class_glide_1a2353d380d6897004724d34c31838f798" prot="public" virt="virtual"><scope>Glide</scope><name>_ActionReleased</name></member>
       <member refid="class_glide_1a12360a9f1b649403f8e018ba7347ed76" prot="public" virt="virtual"><scope>Glide</scope><name>_Init</name></member>
       <member refid="class_glide_1aa56164cb76d7401b99ab8f2ba5dcc397" prot="public" virt="virtual"><scope>Glide</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1a673b3a967faefc189251e4470b944fd4" prot="public" virt="non-virtual"><scope>Glide</scope><name>Action</name></member>
       <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Glide</scope><name>Blocked</name></member>
       <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Glide</scope><name>CanUseActionPad</name></member>
       <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Glide</scope><name>GetTypeAsString</name></member>

@@ -302,15 +302,10 @@
         <label>Avatar</label>
         <link refid="class_avatar"/>
         <childnode refid="5" relation="usage">
-          <edgelabel>+BottomColor</edgelabel>
-          <edgelabel>+SkinColor</edgelabel>
-          <edgelabel>+TopColor</edgelabel>
-        </childnode>
-        <childnode refid="6" relation="usage">
           <edgelabel>+EMPTY_SAVE_AVATAR</edgelabel>
         </childnode>
       </node>
-      <node id="8">
+      <node id="7">
         <label>Dictionary&lt;</label>
       </node>
       <node id="1">
@@ -324,14 +319,14 @@
         <childnode refid="4" relation="usage">
           <edgelabel>-editedAvatar</edgelabel>
         </childnode>
-        <childnode refid="7" relation="usage">
+        <childnode refid="6" relation="usage">
           <edgelabel>-keys</edgelabel>
         </childnode>
-        <childnode refid="8" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>-colorSelectors</edgelabel>
           <edgelabel>-selected</edgelabel>
         </childnode>
-        <childnode refid="5" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>-DEFAULT_COLOR</edgelabel>
         </childnode>
       </node>
@@ -341,13 +336,13 @@
       <node id="3">
         <label>Texture</label>
       </node>
-      <node id="5">
+      <node id="8">
         <label>int</label>
       </node>
-      <node id="6">
+      <node id="5">
         <label>static readonly Texture</label>
       </node>
-      <node id="7">
+      <node id="6">
         <label>string[]</label>
       </node>
     </collaborationgraph>

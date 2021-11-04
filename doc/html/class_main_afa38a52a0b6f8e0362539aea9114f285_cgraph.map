@@ -1,8 +1,14 @@
 <map id="Main._Ready" name="Main._Ready">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,104,108"/>
-<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,81,287,108"/>
-<area shape="rect" id="node3" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="349,5,481,32"/>
-<area shape="rect" id="node4" href="$class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02" title="Plays the accept audio effect." alt="" coords="335,56,496,83"/>
-<area shape="rect" id="node5" href="$class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8" title="Plays the cancel audio effect." alt="" coords="335,107,495,133"/>
-<area shape="rect" id="node6" href="$class_game_audio.html#ac494431eace52893c1a35c662e74dee2" title="Sets a new music track, depending on the scene." alt="" coords="341,157,490,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,173,104,200"/>
+<area shape="rect" id="node2" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,173,287,200"/>
+<area shape="rect" id="node3" href="$class_scene_factory.html#aa71c8ef1cc97cc029f7b54512187ae7d" title="Creates a new scene." alt="" coords="366,5,498,32"/>
+<area shape="rect" id="node4" href="$class_main.html#a2d291164de57045d25f001c67e755396" title=" " alt="" coords="363,56,501,83"/>
+<area shape="rect" id="node6" href="$class_main.html#a40bec5344f137c03de6931c55fe19060" title=" " alt="" coords="335,107,529,149"/>
+<area shape="rect" id="node8" href="$class_main.html#a5f0ade85d9f0190041de5c60d550a155" title=" " alt="" coords="358,173,506,200"/>
+<area shape="rect" id="node10" href="$class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02" title="Plays the accept audio effect." alt="" coords="351,224,513,251"/>
+<area shape="rect" id="node11" href="$class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8" title="Plays the cancel audio effect." alt="" coords="352,275,512,301"/>
+<area shape="rect" id="node12" href="$class_game_audio.html#ac494431eace52893c1a35c662e74dee2" title="Sets a new music track, depending on the scene." alt="" coords="357,325,507,352"/>
+<area shape="rect" id="node5" href="$class_game_audio.html#aeaebd5d3ac12494cb693a2e7ea233246" title="Plays the death sound effect." alt="" coords="580,56,735,83"/>
+<area shape="rect" id="node7" href="$class_game_audio.html#afd92bfe560ae4047f75e9165d0a935da" title="Plays the jump sound effect." alt="" coords="582,115,733,141"/>
+<area shape="rect" id="node9" href="$class_game_audio.html#a5bb181af6c57c5794a624890e967782c" title="Plays the pickup sound effect." alt="" coords="577,173,737,200"/>
 </map>

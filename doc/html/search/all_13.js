@@ -17,6 +17,6 @@ var searchData=
   ['tobytes_14',['ToBytes',['../class_profile.html#a18281b870e1b5bb7aebc9bab50aa2272',1,'Profile']]],
   ['topcolor_15',['TopColor',['../class_avatar.html#ab97d2d7a4d5aaf7c767eeb4852ad1c49',1,'Avatar']]],
   ['totexture_16',['ToTexture',['../class_avatar.html#a556317afdd76c7884ae0197014a7459a',1,'Avatar']]],
-  ['type_17',['type',['../class_main_action_pickup.html#aefe07e06bcc922e7f7c6104885dd9636',1,'MainActionPickup.type()'],['../class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747',1,'SecondaryActionPickup.type()']]],
-  ['type_18',['Type',['../class_main_action_pickup.html#a5fa73166a0ebf78db9eeb2221284b5e3',1,'MainActionPickup.Type()'],['../class_secondary_action_pickup.html#a0a202dab78d2f57ab0fc26ee01c74db2',1,'SecondaryActionPickup.Type()']]]
+  ['type_17',['Type',['../class_main_action_pickup.html#a5fa73166a0ebf78db9eeb2221284b5e3',1,'MainActionPickup.Type()'],['../class_secondary_action_pickup.html#a0a202dab78d2f57ab0fc26ee01c74db2',1,'SecondaryActionPickup.Type()']]],
+  ['type_18',['type',['../class_main_action_pickup.html#aefe07e06bcc922e7f7c6104885dd9636',1,'MainActionPickup.type()'],['../class_secondary_action_pickup.html#a81545c9e563205381baaef594a5ca747',1,'SecondaryActionPickup.type()']]]
 ];

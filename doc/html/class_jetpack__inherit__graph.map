@@ -1,6 +1,6 @@
 <map id="Jetpack" name="Jetpack">
-<area shape="rect" id="node1" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="5,748,224,1031"/>
-<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="5,300,224,700"/>
+<area shape="rect" id="node1" title="Main action that allows the player to control to fly in a jetpack. This allows them to jump higher an..." alt="" coords="5,763,224,1045"/>
+<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="5,300,224,715"/>
 <area shape="rect" id="node3" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
 <area shape="rect" id="node4" href="$class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
 </map>

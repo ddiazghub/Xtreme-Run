@@ -1,0 +1,7 @@
+<map id="Player.OnMainAction" name="Player.OnMainAction">
+<area shape="rect" id="node1" title=" " alt="" coords="680,35,825,61"/>
+<area shape="rect" id="node2" href="$class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="460,35,632,61"/>
+<area shape="rect" id="node3" href="$class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="249,5,356,32"/>
+<area shape="rect" id="node4" href="$class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,57,412,98"/>
+<area shape="rect" id="node5" href="$class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,64,145,91"/>
+</map>

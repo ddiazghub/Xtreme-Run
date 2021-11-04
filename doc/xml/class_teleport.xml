@@ -36,11 +36,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="13" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="13" bodyend="26"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
-        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
-        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="110">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="113">Player.DEFAULT_MAX_JUMP_TIME</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
         <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
         <references refid="class_player_1a55a2743162dfad1ccf058979e3454cf0" compoundref="_player_8cs" startline="24">Player.MaxJumpTime</references>
@@ -58,8 +58,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="28" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="28" bodyend="35"/>
-        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="28" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="28" bodyend="37"/>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="23" endline="23">MainAction.PerformingAction</references>
       </memberdef>
       <memberdef kind="function" id="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -73,11 +73,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="37" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="37" bodyend="46"/>
-        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="22">MainAction.CanUseActionPad</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
-        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
-        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="39" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="39" bodyend="48"/>
+        <references refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" compoundref="_main_action_8cs" startline="28">MainAction.CanUseActionPad</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="18" endline="18">MainAction.OnActionPad</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="23" endline="23">MainAction.PerformingAction</references>
       </memberdef>
       <memberdef kind="function" id="class_teleport_1a777418072ec29926a6c0bb7596782952" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -91,8 +91,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="48" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="48" bodyend="51"/>
-        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="50" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="50" bodyend="53"/>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="23" endline="23">MainAction.PerformingAction</references>
       </memberdef>
       <memberdef kind="function" id="class_teleport_1ab64216d083c55dfc26ed7f236ed34a03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="52" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="52" bodyend="55"/>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="54" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="54" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="class_teleport_1ae1d16e9d16358e23e6ae55b942d1f312" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -139,9 +139,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="57" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="57" bodyend="69"/>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
-        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="12" endline="12">MainAction.OnActionPad</references>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="59" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="59" bodyend="71"/>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
+        <references refid="class_main_action_1a2149878bc7d0a4debaf0692581b990d4" compoundref="_main_action_8cs" startline="18" endline="18">MainAction.OnActionPad</references>
       </memberdef>
       <memberdef kind="function" id="class_teleport_1ab8724fd67974a34636592398ba31beac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -155,7 +155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="71" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="71" bodyend="73"/>
+        <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="73" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="73" bodyend="75"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -223,7 +223,7 @@
         <label>int</label>
       </node>
     </collaborationgraph>
-    <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="7" bodyend="74"/>
+    <location file="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Teleport.cs" bodystart="7" bodyend="76"/>
     <listofallmembers>
       <member refid="class_teleport_1a0e8ff81f32dd5408d50ab5881fe6a2f6" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionOnAir</name></member>
       <member refid="class_teleport_1aa1335939a5f0597c9bf0cbb0ff418220" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionOnGround</name></member>
@@ -231,6 +231,7 @@
       <member refid="class_teleport_1a777418072ec29926a6c0bb7596782952" prot="public" virt="virtual"><scope>Teleport</scope><name>_ActionReleased</name></member>
       <member refid="class_teleport_1ac3436447bedf6cb700213b8c7f9641df" prot="public" virt="virtual"><scope>Teleport</scope><name>_Init</name></member>
       <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" virt="virtual"><scope>Teleport</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1a673b3a967faefc189251e4470b944fd4" prot="public" virt="non-virtual"><scope>Teleport</scope><name>Action</name></member>
       <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Teleport</scope><name>Blocked</name></member>
       <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Teleport</scope><name>CanUseActionPad</name></member>
       <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Teleport</scope><name>GetTypeAsString</name></member>

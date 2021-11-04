@@ -7,9 +7,17 @@ var searchData=
   ['pausemouseentered_4',['PauseMouseEntered',['../class_game_h_u_d.html#afcc3b8e708e40ba3ff8e8307c8d80ae5',1,'GameHUD']]],
   ['pausemouseexited_5',['PauseMouseExited',['../class_game_h_u_d.html#a90646dbfe93e9d42dc67db2f4b8ee7a8',1,'GameHUD']]],
   ['pausepressed_6',['PausePressed',['../class_game_h_u_d.html#ac09e85b7ce65957efbd8bbdfdd4b8a26',1,'GameHUD']]],
-  ['playaccept_7',['PlayAccept',['../class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02',1,'GameAudio']]],
-  ['playcancel_8',['PlayCancel',['../class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8',1,'GameAudio']]],
-  ['playersession_9',['PlayerSession',['../class_player_session.html#a0bbdc5bc26709a61c653e0b494c1901a',1,'PlayerSession']]],
-  ['profile_10',['Profile',['../class_profile.html#a390b2643abb820e749741eb38206666d',1,'Profile']]],
-  ['profilechanged_11',['ProfileChanged',['../class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2',1,'EditProfileGUI.ProfileChanged()'],['../class_shop_g_u_i.html#a3afd1cedc36ef4900dcd83db77fc50d9',1,'ShopGUI.ProfileChanged()']]]
+  ['performedmainaction_7',['PerformedMainAction',['../class_player.html#ab320c041982d83b5c79173ad1064f7be',1,'Player']]],
+  ['pickup_8',['Pickup',['../class_player.html#ac428e6908dd8a937cd060ec9f7d62814',1,'Player']]],
+  ['playaccept_9',['PlayAccept',['../class_game_audio.html#aec65bb06501eeacbc6ae63f764ed2d02',1,'GameAudio']]],
+  ['playcancel_10',['PlayCancel',['../class_game_audio.html#ae5d1e42bdbddd5e804a9201ded74f7d8',1,'GameAudio']]],
+  ['playdeath_11',['PlayDeath',['../class_game_audio.html#aeaebd5d3ac12494cb693a2e7ea233246',1,'GameAudio']]],
+  ['playerdead_12',['PlayerDead',['../class_level.html#a963f02696507398ac850dcaee43ff321',1,'Level']]],
+  ['playerperformedmainaction_13',['PlayerPerformedMainAction',['../class_level.html#a9cb1b65bbf3e9ff796adf998f7b748d3',1,'Level']]],
+  ['playerpickup_14',['PlayerPickup',['../class_level.html#afec3b7fef9b7c0c9e590b2ca2a47245c',1,'Level']]],
+  ['playersession_15',['PlayerSession',['../class_player_session.html#a0bbdc5bc26709a61c653e0b494c1901a',1,'PlayerSession']]],
+  ['playjump_16',['PlayJump',['../class_game_audio.html#afd92bfe560ae4047f75e9165d0a935da',1,'GameAudio']]],
+  ['playpickup_17',['PlayPickup',['../class_game_audio.html#a5bb181af6c57c5794a624890e967782c',1,'GameAudio']]],
+  ['profile_18',['Profile',['../class_profile.html#a390b2643abb820e749741eb38206666d',1,'Profile']]],
+  ['profilechanged_19',['ProfileChanged',['../class_edit_profile_g_u_i.html#af257feffa6ba5f4681f5d315059f4cd2',1,'EditProfileGUI.ProfileChanged()'],['../class_shop_g_u_i.html#a3afd1cedc36ef4900dcd83db77fc50d9',1,'ShopGUI.ProfileChanged()']]]
 ];

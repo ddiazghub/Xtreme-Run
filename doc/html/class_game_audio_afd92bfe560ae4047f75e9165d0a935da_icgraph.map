@@ -1,0 +1,6 @@
+<map id="GameAudio.PlayJump" name="GameAudio.PlayJump">
+<area shape="rect" id="node1" title="Plays the jump sound effect." alt="" coords="577,13,728,39"/>
+<area shape="rect" id="node2" href="$class_main.html#a40bec5344f137c03de6931c55fe19060" title=" " alt="" coords="335,5,529,47"/>
+<area shape="rect" id="node3" href="$class_main.html#aff56bc272e79a2419d64fd18356b052b" title="Changes the currently active game scene and modifies the sounds currently being played accordingly." alt="" coords="152,13,287,39"/>
+<area shape="rect" id="node4" href="$class_main.html#afa38a52a0b6f8e0362539aea9114f285" title=" " alt="" coords="5,13,104,39"/>
+</map>

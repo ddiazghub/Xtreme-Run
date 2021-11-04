@@ -8,5 +8,6 @@ var class_shop_g_u_i =
     [ "checkTick", "class_shop_g_u_i.html#ab34b159241bbb12917f9a4dc4bbef6ff", null ],
     [ "itemCost", "class_shop_g_u_i.html#a8bf98d564883ae5927975a1790027d45", null ],
     [ "keys", "class_shop_g_u_i.html#ab49dca7c086e1c7e21895a0517192bdc", null ],
+    [ "lockSprite", "class_shop_g_u_i.html#adf5deadd4fdd72b2e957730293479f87", null ],
     [ "selected", "class_shop_g_u_i.html#a22cf6ed357c8d2aa5fa9f56212f0cf6e", null ]
 ];

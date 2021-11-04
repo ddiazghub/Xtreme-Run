@@ -9,5 +9,5 @@ var searchData=
   ['levelcompletemenu_6',['levelCompleteMenu',['../class_level.html#a84ddf86ee474ffdfd98cc2b1aa43814b',1,'Level']]],
   ['levelnumber_7',['LevelNumber',['../class_level.html#a08e6603e6ab77dc1ca2d58c2ed8221a0',1,'Level']]],
   ['linearvelocity_8',['linearVelocity',['../class_player.html#adfe24c4a8a6124eef02a636f042917dd',1,'Player']]],
-  ['locksprite_9',['lockSprite',['../class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d',1,'EditProfileGUI']]]
+  ['locksprite_9',['lockSprite',['../class_edit_profile_g_u_i.html#ab36def60f18be3b0682a8ce7bc77b84d',1,'EditProfileGUI.lockSprite()'],['../class_shop_g_u_i.html#adf5deadd4fdd72b2e957730293479f87',1,'ShopGUI.lockSprite()']]]
 ];

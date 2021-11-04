@@ -18,7 +18,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" line="8" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" bodystart="8" bodyend="12"/>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
       </memberdef>
       <memberdef kind="function" id="class_switch_gravity_1a2d96d7d7d7c08aed0d22908002299ddc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -65,7 +65,7 @@
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" line="18" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" bodystart="18" bodyend="23"/>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
         <references refid="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" compoundref="_switch_gravity_8cs" startline="47" endline="58">invertGravity</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
       </memberdef>
       <memberdef kind="function" id="class_switch_gravity_1a79517966cb67a2f3282bdcaf1fbaaf76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -111,10 +111,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" line="34" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" bodystart="34" bodyend="42"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
       </memberdef>
       <memberdef kind="function" id="class_switch_gravity_1abe70d5f88766890c9a0dc52de21e931b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -130,11 +130,11 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" line="47" column="17" bodyfile="src/Entities/Player/PlayerStates/Action/Secondary/SwitchGravity.cs" bodystart="47" bodyend="58"/>
         <references refid="class_secondary_action_1a6234d64fc4dbfb25eb8791f0e5cd470d" compoundref="_secondary_action_8cs" startline="13" endline="13">SecondaryAction.Blocked</references>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
-        <references refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="238" endline="251">Player.InvertGravity</references>
-        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="55">Player.secondaryActionTimer</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
+        <references refid="class_player_1ad50972081bd91a62aa2c099b27462d37" compoundref="_player_8cs" startline="271" endline="284">Player.InvertGravity</references>
+        <references refid="class_player_1aa8a2d620862a3bff5e279a59eb8e1433" compoundref="_player_8cs" startline="77">Player.secondaryActionTimer</references>
         <referencedby refid="class_switch_gravity_1a79517966cb67a2f3282bdcaf1fbaaf76" compoundref="_switch_gravity_8cs" startline="25" endline="28">_ActionOnAir</referencedby>
         <referencedby refid="class_switch_gravity_1a3266c22e1cce5dfc640584b53dcd31d8" compoundref="_switch_gravity_8cs" startline="18" endline="23">_ActionOnGround</referencedby>
       </memberdef>

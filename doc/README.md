@@ -96,9 +96,9 @@ This class represents a customizable player avatar.
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `{property} bool `[`Male`](#class_avatar_1ac867c076ca88765a4601c440687a42c9) | The avatar's Gender. True if male, false if female.
-`public int `[`SkinColor`](#class_avatar_1a267cad98d66d8c4cb7008c967f9dd176) | Id of the avatar's skin color.
-`public int `[`TopColor`](#class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49) | Id of the avatar's bottom color.
-`public int `[`BottomColor`](#class_avatar_1af14516033bd4b5bcb567506d3e480dca) | Id of the avatar's top color.
+`{property} int `[`SkinColor`](#class_avatar_1a267cad98d66d8c4cb7008c967f9dd176) | Id of the avatar's skin color.
+`{property} int `[`TopColor`](#class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49) | Id of the avatar's bottom color.
+`{property} int `[`BottomColor`](#class_avatar_1af14516033bd4b5bcb567506d3e480dca) | Id of the avatar's top color.
 `public inline  `[`Avatar`](#class_avatar_1a05399ad1121eec3010368f54ca8ad9fc)`(bool male,int skinColor,int topColor,int bottomColor)` | Creates a new avatar from the supplied data.
 `public inline int `[`GetColor`](#class_avatar_1afe361a71356eeb5a67ce7974bd8881d7)`(string key)` | Gets one of the avatar's colors from a given string.
 `public inline void `[`SetColor`](#class_avatar_1a27818736da2c886b8a891d3009b43752)`(string key,int color)` | Sets one of the avatar's colors from a given string.
@@ -111,15 +111,15 @@ This class represents a customizable player avatar.
 
 The avatar's Gender. True if male, false if female.
 
-#### `public int `[`SkinColor`](#class_avatar_1a267cad98d66d8c4cb7008c967f9dd176) 
+#### `{property} int `[`SkinColor`](#class_avatar_1a267cad98d66d8c4cb7008c967f9dd176) 
 
 Id of the avatar's skin color.
 
-#### `public int `[`TopColor`](#class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49) 
+#### `{property} int `[`TopColor`](#class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49) 
 
 Id of the avatar's bottom color.
 
-#### `public int `[`BottomColor`](#class_avatar_1af14516033bd4b5bcb567506d3e480dca) 
+#### `{property} int `[`BottomColor`](#class_avatar_1af14516033bd4b5bcb567506d3e480dca) 
 
 Id of the avatar's top color.
 
@@ -346,10 +346,16 @@ class GameAudio
 `public AudioStream `[`Level3Music`](#class_game_audio_1ac66409802e2533dafa25f107a458c8d5) | [Level](#class_level) 3 music.
 `public AudioStream `[`AcceptSFX`](#class_game_audio_1a45bab24c53b73c4aca26066bfd55292d) | Audio effect to play when clicking an accept button.
 `public AudioStream `[`CancelSFX`](#class_game_audio_1a3d83cb6ed0d90390c4c52773c849e4cc) | Audio effect to play when clicking an cancel/back button.
+`public AudioStream `[`DeathSFX`](#class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098) | Audio effect to play when the player dies.
+`public AudioStream `[`JumpSFX`](#class_game_audio_1ab05094f6a17b0e8355112a6024cae50c) | Audio effect to play when the player jumps.
+`public AudioStream `[`PickupSFX`](#class_game_audio_1ab8e43f74aa38d82514d3025e0833033d) | Audio effect to play when player comes in contact with an action pickup.
 `public inline override void `[`_Ready`](#class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0)`()` | 
 `public inline void `[`SetMusic`](#class_game_audio_1ac494431eace52893c1a35c662e74dee2)`(`[`GameScenes`](#_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090)` scene)` | Sets a new music track, depending on the scene.
 `public inline void `[`PlayAccept`](#class_game_audio_1aec65bb06501eeacbc6ae63f764ed2d02)`()` | Plays the accept audio effect.
 `public inline void `[`PlayCancel`](#class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8)`()` | Plays the cancel audio effect.
+`public inline void `[`PlayDeath`](#class_game_audio_1aeaebd5d3ac12494cb693a2e7ea233246)`()` | Plays the death sound effect.
+`public inline void `[`PlayPickup`](#class_game_audio_1a5bb181af6c57c5794a624890e967782c)`()` | Plays the pickup sound effect.
+`public inline void `[`PlayJump`](#class_game_audio_1afd92bfe560ae4047f75e9165d0a935da)`()` | Plays the jump sound effect.
 `public inline void `[`OnMusicFinished`](#class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2)`()` | 
 `public inline void `[`OnSfxFinished`](#class_game_audio_1addcf597b4df4aba37d5bee5be86a476e)`()` | 
 
@@ -379,6 +385,18 @@ Audio effect to play when clicking an accept button.
 
 Audio effect to play when clicking an cancel/back button.
 
+#### `public AudioStream `[`DeathSFX`](#class_game_audio_1a1b3ec5e7aebb587bc735b76026c4f098) 
+
+Audio effect to play when the player dies.
+
+#### `public AudioStream `[`JumpSFX`](#class_game_audio_1ab05094f6a17b0e8355112a6024cae50c) 
+
+Audio effect to play when the player jumps.
+
+#### `public AudioStream `[`PickupSFX`](#class_game_audio_1ab8e43f74aa38d82514d3025e0833033d) 
+
+Audio effect to play when player comes in contact with an action pickup.
+
 #### `public inline override void `[`_Ready`](#class_game_audio_1af4311a2ca53fd2ba2e1eabd38e10c6f0)`()` 
 
 #### `public inline void `[`SetMusic`](#class_game_audio_1ac494431eace52893c1a35c662e74dee2)`(`[`GameScenes`](#_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090)` scene)` 
@@ -395,6 +413,18 @@ Plays the accept audio effect.
 #### `public inline void `[`PlayCancel`](#class_game_audio_1ae5d1e42bdbddd5e804a9201ded74f7d8)`()` 
 
 Plays the cancel audio effect.
+
+#### `public inline void `[`PlayDeath`](#class_game_audio_1aeaebd5d3ac12494cb693a2e7ea233246)`()` 
+
+Plays the death sound effect.
+
+#### `public inline void `[`PlayPickup`](#class_game_audio_1a5bb181af6c57c5794a624890e967782c)`()` 
+
+Plays the pickup sound effect.
+
+#### `public inline void `[`PlayJump`](#class_game_audio_1afd92bfe560ae4047f75e9165d0a935da)`()` 
+
+Plays the jump sound effect.
 
 #### `public inline void `[`OnMusicFinished`](#class_game_audio_1a6df13bded33b7c1ae4efa1d2d5b0eef2)`()` 
 
@@ -629,6 +659,9 @@ Base node for a game level scene.
 --------------------------------|---------------------------------------------
 `public int `[`LevelNumber`](#class_level_1a08e6603e6ab77dc1ca2d58c2ed8221a0) | The level's number.
 `public List< Vector2 > `[`positions`](#class_level_1a68bdb4fa6a0a7d317daaaf44c06599f2) | 
+`public delegate void `[`PlayerDead`](#class_level_1a963f02696507398ac850dcaee43ff321)`()` | Emitted when the player dies.
+`public delegate void `[`PlayerPerformedMainAction`](#class_level_1a9cb1b65bbf3e9ff796adf998f7b748d3)`()` | Emitted when the player performs a main action.
+`public delegate void `[`PlayerPickup`](#class_level_1afec3b7fef9b7c0c9e590b2ca2a47245c)`()` | Emitted when the player pickups an action.
 `public inline override void `[`_Ready`](#class_level_1a9b982efc154865a30a5c589d72f0a900)`()` | 
 `public inline override void `[`_Process`](#class_level_1adf87a658b5a922295a3bbab87f5820b5)`(float delta)` | 
 `public inline override void `[`_Draw`](#class_level_1ab147d68f7a06156f6a0cd595bf58f75d)`()` | 
@@ -639,6 +672,8 @@ Base node for a game level scene.
 `public inline void `[`Pause`](#class_level_1ae81c01f79951151a432bbdbf1cdb3dd8)`()` | Pauses the game.
 `public inline void `[`SaveData`](#class_level_1a4bb15a932ab317c90d5de0623b9f8d88)`()` | Saves the player's progress.
 `public inline void `[`OnPlayerDead`](#class_level_1a6807430e5f1f262aca25e7bc40fbac90)`()` | 
+`public inline void `[`OnPlayerPickup`](#class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5)`()` | 
+`public inline void `[`OnPlayerPerformedMainAction`](#class_level_1a89dbf1585c31caa958aa431823f2f4f7)`()` | 
 `public inline void `[`OnHudPausePressed`](#class_level_1a08ef0cf0dd18af04729d4d01deaeea66)`()` | 
 `public inline void `[`OnHudPauseMouseEntered`](#class_level_1a2cd7ebf61994f7cc65f672f8cc0b20ae)`()` | 
 `public inline void `[`OnHudPauseMouseExited`](#class_level_1a462cabf043b2870fda20d5a7c25e6d40)`()` | 
@@ -652,6 +687,18 @@ Base node for a game level scene.
 The level's number.
 
 #### `public List< Vector2 > `[`positions`](#class_level_1a68bdb4fa6a0a7d317daaaf44c06599f2) 
+
+#### `public delegate void `[`PlayerDead`](#class_level_1a963f02696507398ac850dcaee43ff321)`()` 
+
+Emitted when the player dies.
+
+#### `public delegate void `[`PlayerPerformedMainAction`](#class_level_1a9cb1b65bbf3e9ff796adf998f7b748d3)`()` 
+
+Emitted when the player performs a main action.
+
+#### `public delegate void `[`PlayerPickup`](#class_level_1afec3b7fef9b7c0c9e590b2ca2a47245c)`()` 
+
+Emitted when the player pickups an action.
 
 #### `public inline override void `[`_Ready`](#class_level_1a9b982efc154865a30a5c589d72f0a900)`()` 
 
@@ -686,6 +733,10 @@ Pauses the game.
 Saves the player's progress.
 
 #### `public inline void `[`OnPlayerDead`](#class_level_1a6807430e5f1f262aca25e7bc40fbac90)`()` 
+
+#### `public inline void `[`OnPlayerPickup`](#class_level_1a7c2ac37de0d423fa6c95bbce4b0eebf5)`()` 
+
+#### `public inline void `[`OnPlayerPerformedMainAction`](#class_level_1a89dbf1585c31caa958aa431823f2f4f7)`()` 
 
 #### `public inline void `[`OnHudPausePressed`](#class_level_1a08ef0cf0dd18af04729d4d01deaeea66)`()` 
 
@@ -775,6 +826,9 @@ The main [Node](#class_node) of the game. It is a state machine that executes a 
 `{property} `[`Node2D`](#class_node2_d)` `[`Scene`](#class_main_1a9a9683bfcc0bfd6ab74ca38a1b6ad1ff) | The scene currently being executed. Can be profile select, main menu, level 1, level 2 or level 3.
 `public inline override void `[`_Ready`](#class_main_1afa38a52a0b6f8e0362539aea9114f285)`()` | 
 `public inline void `[`ChangeScene`](#class_main_1aff56bc272e79a2419d64fd18356b052b)`(`[`GameScenes`](#_game_scenes_8cs_1a0687e907db3af3681f90377d69f32090)` scene)` | Changes the currently active game scene and modifies the sounds currently being played accordingly.
+`public inline void `[`OnPlayerDead`](#class_main_1a2d291164de57045d25f001c67e755396)`()` | 
+`public inline void `[`OnPlayerPickup`](#class_main_1a5f0ade85d9f0190041de5c60d550a155)`()` | 
+`public inline void `[`OnPlayerPerformedMainAction`](#class_main_1a40bec5344f137c03de6931c55fe19060)`()` | 
 
 ## Members
 
@@ -790,6 +844,12 @@ Changes the currently active game scene and modifies the sounds currently being 
 
 #### Parameters
 * `scene` The new scene.
+
+#### `public inline void `[`OnPlayerDead`](#class_main_1a2d291164de57045d25f001c67e755396)`()` 
+
+#### `public inline void `[`OnPlayerPickup`](#class_main_1a5f0ade85d9f0190041de5c60d550a155)`()` 
+
+#### `public inline void `[`OnPlayerPerformedMainAction`](#class_main_1a40bec5344f137c03de6931c55fe19060)`()` 
 
 # class `MainAction` 
 
@@ -808,6 +868,7 @@ Class that represents an action the player can perform as main action.
 `{property} bool `[`PerformingAction`](#class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc) | True if the player is currently performing a main action.
 `{property} bool `[`Blocked`](#class_main_action_1af4f38ae5810abac472752ba286622566) | Checks if the current action is blocked/disabled. If true, the action will not be performed on input events.
 `public bool `[`CanUseActionPad`](#class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22) | True if the player can use jump pads.
+`public delegate void `[`Action`](#class_main_action_1a673b3a967faefc189251e4470b944fd4)`()` | Emitted if the player performs a main action.
 `public inline virtual override void `[`_Init`](#class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95)`()` | Setups the state and initializes it.
 `public inline virtual override void `[`_StatePhysicsProcess`](#class_main_action_1ab2261aec55fea5dc4490545410b8b279)`(float delta)` | The physics process that will be called each frame for the state.
 `public inline virtual void `[`_ActionOnGround`](#class_main_action_1a0d3e4403cb876a28ae3383daba402fce)`()` | 
@@ -835,6 +896,10 @@ Checks if the current action is blocked/disabled. If true, the action will not b
 #### `public bool `[`CanUseActionPad`](#class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22) 
 
 True if the player can use jump pads.
+
+#### `public delegate void `[`Action`](#class_main_action_1a673b3a967faefc189251e4470b944fd4)`()` 
+
+Emitted if the player performs a main action.
 
 #### `public inline virtual override void `[`_Init`](#class_main_action_1a5d77225f0db8bd9c5a5c1f120ef3ce95)`()` 
 
@@ -1217,6 +1282,8 @@ The player node. It is a state machine that executes 3 states at each given time
 `public float `[`MaxJumpTime`](#class_player_1a55a2743162dfad1ccf058979e3454cf0) | The maximum duration of the player's jump.
 `public float `[`MaxFallSpeed`](#class_player_1af93facbeac2019c5bc7bfb2493041109) | The maximum falling speed of the player.
 `public int `[`Gravity`](#class_player_1afa430a3e8bae8353eb0ed928c9919c95) | The player's gravity. This gets added each frame to the player's vertical linear velocity.
+`public SpriteFrames `[`MaleAnimation`](#class_player_1a28f9ab1a1e2354fcb49c99fd618cf189) | Male character animations
+`public SpriteFrames `[`FemaleAnimation`](#class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2) | Female character animations
 `public Area2D `[`jumpObjectCollisionCheck`](#class_player_1a4d70330236aa5cff44570ad6063433f0) | Area2D to check if the player has entered any jump objects.
 `public Area2D `[`teleportCollisionCheck`](#class_player_1a4d0da6c92bf522df4a9d0b97b209b09b) | Area2D to check if the player will die on teleport.
 `public Timer `[`secondaryActionTimer`](#class_player_1aa8a2d620862a3bff5e279a59eb8e1433) | Timer to perform event after a secondary action was executed.
@@ -1231,6 +1298,8 @@ The player node. It is a state machine that executes 3 states at each given time
 `public readonly int `[`DEFAULT_MOVEMENT_SPEED`](#class_player_1a1a02648b66f2ff24777751e242a260c0) | 
 `public readonly float `[`DEFAULT_MAX_JUMP_TIME`](#class_player_1ae354c1568fb2f116e290e1a8fde5271a) | 
 `public delegate void `[`Dead`](#class_player_1ad26d3c4010754f6af7948560a2a233c8)`()` | Emitted if the player dies.
+`public delegate void `[`PerformedMainAction`](#class_player_1ab320c041982d83b5c79173ad1064f7be)`()` | Emitted when the player performs a main action.
+`public delegate void `[`Pickup`](#class_player_1ac428e6908dd8a937cd060ec9f7d62814)`()` | Emitted when the player comes in contact with a pickup.
 `public inline override void `[`_Ready`](#class_player_1ae192a478a80f0e93e01339d62cdd6f6d)`()` | 
 `public inline override void `[`_PhysicsProcess`](#class_player_1a5c41f7a6b92001f593ccb5d8574371e5)`(float delta)` | 
 `public inline void `[`ChangePersistentState`](#class_player_1ae2226638af8907c89812bdb4b7eefede)`(`[`PlayerPersistentState`](#_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83)` state)` | Changes the current persistent state.
@@ -1239,6 +1308,7 @@ The player node. It is a state machine that executes 3 states at each given time
 `public inline void `[`InvertGravity`](#class_player_1ad50972081bd91a62aa2c099b27462d37)`()` | Invert's the player's gravity.
 `public inline void `[`SetHitbox`](#class_player_1a4d955d72d1768541f5ac99f19ffe1381)`(`[`PlayerPersistentState`](#_player_persistent_state_8cs_1ac15b5e32be30dad517e8866c7eb9af83)` state)` | Sets a hitbox on the player depending on the state.
 `public inline void `[`OnStartTimerTimeout`](#class_player_1a48409f2ac61578d5ed6a8acab3990da4)`()` | 
+`public inline void `[`OnMainAction`](#class_player_1a04fe5bcf48f86e0a09f15e4ee623862a)`()` | 
 
 ## Members
 
@@ -1294,6 +1364,14 @@ The maximum falling speed of the player.
 
 The player's gravity. This gets added each frame to the player's vertical linear velocity.
 
+#### `public SpriteFrames `[`MaleAnimation`](#class_player_1a28f9ab1a1e2354fcb49c99fd618cf189) 
+
+Male character animations
+
+#### `public SpriteFrames `[`FemaleAnimation`](#class_player_1a85fa6d18dc73ec6589821ac7dc59e9d2) 
+
+Female character animations
+
 #### `public Area2D `[`jumpObjectCollisionCheck`](#class_player_1a4d70330236aa5cff44570ad6063433f0) 
 
 Area2D to check if the player has entered any jump objects.
@@ -1342,6 +1420,14 @@ The player's linear velocity vector.
 
 Emitted if the player dies.
 
+#### `public delegate void `[`PerformedMainAction`](#class_player_1ab320c041982d83b5c79173ad1064f7be)`()` 
+
+Emitted when the player performs a main action.
+
+#### `public delegate void `[`Pickup`](#class_player_1ac428e6908dd8a937cd060ec9f7d62814)`()` 
+
+Emitted when the player comes in contact with a pickup.
+
 #### `public inline override void `[`_Ready`](#class_player_1ae192a478a80f0e93e01339d62cdd6f6d)`()` 
 
 #### `public inline override void `[`_PhysicsProcess`](#class_player_1a5c41f7a6b92001f593ccb5d8574371e5)`(float delta)` 
@@ -1379,6 +1465,8 @@ Sets a hitbox on the player depending on the state.
 * `state` The player's state.
 
 #### `public inline void `[`OnStartTimerTimeout`](#class_player_1a48409f2ac61578d5ed6a8acab3990da4)`()` 
+
+#### `public inline void `[`OnMainAction`](#class_player_1a04fe5bcf48f86e0a09f15e4ee623862a)`()` 
 
 # class `PlayerSession` 
 

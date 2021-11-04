@@ -16,6 +16,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Avatar.cs" line="13" column="17" bodyfile="src/Profiles/Avatar.cs" bodystart="13" bodyend="13"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
         <referencedby refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</referencedby>
         <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
@@ -26,9 +27,7 @@
         <referencedby refid="class_edit_profile_g_u_i_1a54726f386c9921c011c5defc5341c644" compoundref="_edit_profile_g_u_i_8cs" startline="146" endline="165">EditProfileGUI.UnsavedChanges</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">EditProfileGUI.UpdateAvatar</referencedby>
       </memberdef>
-      </sectiondef>
-      <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" prot="public" static="no" mutable="no">
+      <memberdef kind="property" id="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
         <definition>int Avatar.SkinColor</definition>
         <argsstring></argsstring>
@@ -40,11 +39,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Profiles/Avatar.cs" line="18" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="18" bodyend="-1"/>
+        <location file="src/Profiles/Avatar.cs" line="18" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="18" bodyend="18"/>
+        <referencedby refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</referencedby>
+        <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
         <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_avatar_1a27818736da2c886b8a891d3009b43752" compoundref="_avatar_8cs" startline="77" endline="93">SetColor</referencedby>
         <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" prot="public" static="no" mutable="no">
+      <memberdef kind="property" id="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
         <definition>int Avatar.TopColor</definition>
         <argsstring></argsstring>
@@ -56,11 +58,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Profiles/Avatar.cs" line="23" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="23" bodyend="-1"/>
+        <location file="src/Profiles/Avatar.cs" line="23" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="23" bodyend="23"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
+        <referencedby refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</referencedby>
+        <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
         <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_avatar_1a27818736da2c886b8a891d3009b43752" compoundref="_avatar_8cs" startline="77" endline="93">SetColor</referencedby>
         <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_avatar_1af14516033bd4b5bcb567506d3e480dca" prot="public" static="no" mutable="no">
+      <memberdef kind="property" id="class_avatar_1af14516033bd4b5bcb567506d3e480dca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
         <definition>int Avatar.BottomColor</definition>
         <argsstring></argsstring>
@@ -72,8 +78,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Profiles/Avatar.cs" line="28" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="28" bodyend="-1"/>
+        <location file="src/Profiles/Avatar.cs" line="28" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="28" bodyend="28"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
+        <referencedby refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</referencedby>
+        <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
         <referencedby refid="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" compoundref="_avatar_8cs" startline="55" endline="71">GetColor</referencedby>
+        <referencedby refid="class_avatar_1a27818736da2c886b8a891d3009b43752" compoundref="_avatar_8cs" startline="77" endline="93">SetColor</referencedby>
         <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">Profile.ToBytes</referencedby>
       </memberdef>
       </sectiondef>
@@ -159,7 +169,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Avatar.cs" line="42" column="12" bodyfile="src/Profiles/Avatar.cs" bodystart="42" bodyend="48"/>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">BottomColor</references>
         <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Male</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18" endline="18">SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">TopColor</references>
         <referencedby refid="class_avatar_1a6a7e03a2e5274437e9d3d819c830f372" compoundref="_avatar_8cs" startline="140" endline="143">Clone</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_avatar_1afe361a71356eeb5a67ce7974bd8881d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -191,9 +204,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Avatar.cs" line="55" column="16" bodyfile="src/Profiles/Avatar.cs" bodystart="55" bodyend="71"/>
-        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28">BottomColor</references>
-        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18">SkinColor</references>
-        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23">TopColor</references>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">BottomColor</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18" endline="18">SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">TopColor</references>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
         <referencedby refid="class_avatar_1a556317afdd76c7884ae0197014a7459a" compoundref="_avatar_8cs" startline="100" endline="134">ToTexture</referencedby>
       </memberdef>
@@ -228,6 +241,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Avatar.cs" line="77" column="17" bodyfile="src/Profiles/Avatar.cs" bodystart="77" bodyend="93"/>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">BottomColor</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18" endline="18">SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">TopColor</references>
         <referencedby refid="class_edit_profile_g_u_i_1a0c57b976943d328fb48bf697c18d386a" compoundref="_edit_profile_g_u_i_8cs" startline="170" endline="180">EditProfileGUI.UpdateAvatar</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_avatar_1a556317afdd76c7884ae0197014a7459a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -276,7 +292,10 @@
         </inbodydescription>
         <location file="src/Profiles/Avatar.cs" line="140" column="19" bodyfile="src/Profiles/Avatar.cs" bodystart="140" bodyend="143"/>
         <references refid="class_avatar_1a05399ad1121eec3010368f54ca8ad9fc" compoundref="_avatar_8cs" startline="42" endline="48">Avatar</references>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">BottomColor</references>
         <references refid="class_avatar_1ac867c076ca88765a4601c440687a42c9" compoundref="_avatar_8cs" startline="13" endline="13">Male</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18" endline="18">SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">TopColor</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -289,18 +308,10 @@
         <label>Avatar</label>
         <link refid="class_avatar"/>
         <childnode refid="2" relation="usage">
-          <edgelabel>+BottomColor</edgelabel>
-          <edgelabel>+SkinColor</edgelabel>
-          <edgelabel>+TopColor</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
           <edgelabel>+EMPTY_SAVE_AVATAR</edgelabel>
         </childnode>
       </node>
       <node id="2">
-        <label>int</label>
-      </node>
-      <node id="3">
         <label>static readonly Texture</label>
       </node>
     </collaborationgraph>

@@ -20,8 +20,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="11" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="11" bodyend="14"/>
-        <references refid="class_player_1a4d70330236aa5cff44570ad6063433f0" compoundref="_player_8cs" startline="45">Player.jumpObjectCollisionCheck</references>
-        <references refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="52">OnActionObjectCollisionCheckAreaEntered</references>
+        <references refid="class_player_1a4d70330236aa5cff44570ad6063433f0" compoundref="_player_8cs" startline="67">Player.jumpObjectCollisionCheck</references>
+        <references refid="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" compoundref="_persistent_state_8cs" startline="41" endline="54">OnActionObjectCollisionCheckAreaEntered</references>
       </memberdef>
       <memberdef kind="function" id="class_persistent_state_1a197779850b8a9fbef055982249582ef3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -51,10 +51,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="16" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="16" bodyend="39"/>
-        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="136" endline="136">Player.Invincible</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1af9af5996f690a82ffea195f2c9a46d0c" compoundref="_player_8cs" startline="158" endline="158">Player.Invincible</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
         <references refid="class_player_1a5a0c8762d9753c0108e520d2cd4c4194" compoundref="_player_8cs" startline="19">Player.MovementSpeed</references>
-        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="173" endline="183">Player._PhysicsProcess</referencedby>
+        <referencedby refid="class_player_1a5c41f7a6b92001f593ccb5d8574371e5" compoundref="_player_8cs" startline="205" endline="215">Player._PhysicsProcess</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_persistent_state_1ae3c6d56cc272ef31022f735aa4888b86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -71,9 +71,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="41" column="17" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="41" bodyend="52"/>
-        <references refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="205" endline="216">Player.ChangeMainAction</references>
-        <references refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="222" endline="233">Player.ChangeSecondaryAction</references>
+        <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="41" column="17" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="41" bodyend="54"/>
+        <references refid="class_player_1a383ca70b33e3f3a19573dc0c260c1150" compoundref="_player_8cs" startline="237" endline="249">Player.ChangeMainAction</references>
+        <references refid="class_player_1aa90d185e163489f864480c9c72b7fbb8" compoundref="_player_8cs" startline="255" endline="266">Player.ChangeSecondaryAction</references>
         <referencedby refid="class_persistent_state_1aa3bb922abb6c7a699b5990b1b9d83afc" compoundref="_persistent_state_8cs" startline="11" endline="14">_Init</referencedby>
       </memberdef>
       </sectiondef>
@@ -130,7 +130,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="8" column="17" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="8" bodyend="53"/>
+    <location file="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" line="8" column="17" bodyfile="src/Entities/Player/PlayerStates/Persistent/PersistentState.cs" bodystart="8" bodyend="55"/>
     <listofallmembers>
       <member refid="class_persistent_state_1aa3bb922abb6c7a699b5990b1b9d83afc" prot="public" virt="virtual"><scope>PersistentState</scope><name>_Init</name></member>
       <member refid="class_persistent_state_1a197779850b8a9fbef055982249582ef3" prot="public" virt="virtual"><scope>PersistentState</scope><name>_StatePhysicsProcess</name></member>

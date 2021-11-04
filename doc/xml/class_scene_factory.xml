@@ -62,7 +62,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/SceneFactory.cs" line="34" column="19" bodyfile="src/SceneFactory.cs" bodystart="34" bodyend="37"/>
-        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="44" endline="65">Main.ChangeScene</referencedby>
+        <referencedby refid="class_main_1aff56bc272e79a2419d64fd18356b052b" compoundref="_main_8cs" startline="42" endline="71">Main.ChangeScene</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

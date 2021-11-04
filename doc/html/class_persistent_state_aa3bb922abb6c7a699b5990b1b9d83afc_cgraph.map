@@ -1,9 +1,10 @@
 <map id="PersistentState._Init" name="PersistentState._Init">
 <area shape="rect" id="node1" title="Setups the state and initializes it." alt="" coords="5,31,145,57"/>
 <area shape="rect" id="node2" href="$class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,23,412,65"/>
-<area shape="rect" id="node3" href="$class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="477,5,649,32"/>
-<area shape="rect" id="node7" href="$class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="460,56,667,83"/>
-<area shape="rect" id="node4" href="$class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="715,5,877,32"/>
-<area shape="rect" id="node5" href="$class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="732,56,860,83"/>
-<area shape="rect" id="node6" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="925,56,1044,83"/>
+<area shape="rect" id="node3" href="$class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="477,56,649,83"/>
+<area shape="rect" id="node8" href="$class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="460,5,667,32"/>
+<area shape="rect" id="node4" href="$class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="715,56,877,83"/>
+<area shape="rect" id="node5" href="$class_player.html#a04fe5bcf48f86e0a09f15e4ee623862a" title=" " alt="" coords="723,107,869,133"/>
+<area shape="rect" id="node6" href="$class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="732,5,860,32"/>
+<area shape="rect" id="node7" href="$class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="925,5,1044,32"/>
 </map>

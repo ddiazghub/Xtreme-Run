@@ -1,6 +1,6 @@
 <map id="Teleport" name="Teleport">
-<area shape="rect" id="node1" title="Main action that allows the player to teleport a small distance above them." alt="" coords="5,748,224,972"/>
-<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="5,300,224,700"/>
+<area shape="rect" id="node1" title="Main action that allows the player to teleport a small distance above them." alt="" coords="5,763,224,987"/>
+<area shape="rect" id="node2" href="$class_main_action.html" title="Class that represents an action the player can perform as main action." alt="" coords="5,300,224,715"/>
 <area shape="rect" id="node3" href="$class_player_state.html" title="Class that contains the base structure for a state that the player can have." alt="" coords="17,131,213,252"/>
 <area shape="rect" id="node4" href="$class_node2_d.html" title=" " alt="" coords="81,5,149,83"/>
 </map>

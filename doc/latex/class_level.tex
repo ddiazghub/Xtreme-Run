@@ -28,6 +28,12 @@ Collaboration diagram for Level\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+delegate void \mbox{\hyperlink{class_level_a963f02696507398ac850dcaee43ff321}{Player\+Dead}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the player dies. \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{class_level_a9cb1b65bbf3e9ff796adf998f7b748d3}{Player\+Performed\+Main\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the player performs a main action. \end{DoxyCompactList}\item 
+delegate void \mbox{\hyperlink{class_level_afec3b7fef9b7c0c9e590b2ca2a47245c}{Player\+Pickup}} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the player pickups an action. \end{DoxyCompactList}\item 
 override void \mbox{\hyperlink{class_level_a9b982efc154865a30a5c589d72f0a900}{\+\_\+\+Ready}} ()
 \item 
 override void \mbox{\hyperlink{class_level_adf87a658b5a922295a3bbab87f5820b5}{\+\_\+\+Process}} (float delta)
@@ -47,6 +53,10 @@ void \mbox{\hyperlink{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}{Pause}} ()
 void \mbox{\hyperlink{class_level_a4bb15a932ab317c90d5de0623b9f8d88}{Save\+Data}} ()
 \begin{DoxyCompactList}\small\item\em Saves the player\textquotesingle{}s progress. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_level_a6807430e5f1f262aca25e7bc40fbac90}{On\+Player\+Dead}} ()
+\item 
+void \mbox{\hyperlink{class_level_a7c2ac37de0d423fa6c95bbce4b0eebf5}{On\+Player\+Pickup}} ()
+\item 
+void \mbox{\hyperlink{class_level_a89dbf1585c31caa958aa431823f2f4f7}{On\+Player\+Performed\+Main\+Action}} ()
 \item 
 void \mbox{\hyperlink{class_level_a08ef0cf0dd18af04729d4d01deaeea66}{On\+Hud\+Pause\+Pressed}} ()
 \item 
@@ -287,6 +297,34 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_level_a6807430e5f1f262aca25e7bc40fbac90_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_level_a89dbf1585c31caa958aa431823f2f4f7}\label{class_level_a89dbf1585c31caa958aa431823f2f4f7}} 
+\index{Level@{Level}!OnPlayerPerformedMainAction@{OnPlayerPerformedMainAction}}
+\index{OnPlayerPerformedMainAction@{OnPlayerPerformedMainAction}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnPlayerPerformedMainAction()}{OnPlayerPerformedMainAction()}}
+{\footnotesize\ttfamily void Level.\+On\+Player\+Performed\+Main\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a89dbf1585c31caa958aa431823f2f4f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_level_a7c2ac37de0d423fa6c95bbce4b0eebf5}\label{class_level_a7c2ac37de0d423fa6c95bbce4b0eebf5}} 
+\index{Level@{Level}!OnPlayerPickup@{OnPlayerPickup}}
+\index{OnPlayerPickup@{OnPlayerPickup}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{OnPlayerPickup()}{OnPlayerPickup()}}
+{\footnotesize\ttfamily void Level.\+On\+Player\+Pickup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_level_a7c2ac37de0d423fa6c95bbce4b0eebf5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}\label{class_level_ae81c01f79951151a432bbdbf1cdb3dd8}} 
 \index{Level@{Level}!Pause@{Pause}}
 \index{Pause@{Pause}!Level@{Level}}
@@ -313,6 +351,36 @@ Here is the caller graph for this function\+:
 \includegraphics[width=350pt]{class_level_ae81c01f79951151a432bbdbf1cdb3dd8_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{class_level_a963f02696507398ac850dcaee43ff321}\label{class_level_a963f02696507398ac850dcaee43ff321}} 
+\index{Level@{Level}!PlayerDead@{PlayerDead}}
+\index{PlayerDead@{PlayerDead}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{PlayerDead()}{PlayerDead()}}
+{\footnotesize\ttfamily delegate void Level.\+Player\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emitted when the player dies. 
+
+\mbox{\Hypertarget{class_level_a9cb1b65bbf3e9ff796adf998f7b748d3}\label{class_level_a9cb1b65bbf3e9ff796adf998f7b748d3}} 
+\index{Level@{Level}!PlayerPerformedMainAction@{PlayerPerformedMainAction}}
+\index{PlayerPerformedMainAction@{PlayerPerformedMainAction}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{PlayerPerformedMainAction()}{PlayerPerformedMainAction()}}
+{\footnotesize\ttfamily delegate void Level.\+Player\+Performed\+Main\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emitted when the player performs a main action. 
+
+\mbox{\Hypertarget{class_level_afec3b7fef9b7c0c9e590b2ca2a47245c}\label{class_level_afec3b7fef9b7c0c9e590b2ca2a47245c}} 
+\index{Level@{Level}!PlayerPickup@{PlayerPickup}}
+\index{PlayerPickup@{PlayerPickup}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{PlayerPickup()}{PlayerPickup()}}
+{\footnotesize\ttfamily delegate void Level.\+Player\+Pickup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Emitted when the player pickups an action. 
+
 \mbox{\Hypertarget{class_level_a20b2f496054effcd20120b8cb37c14dc}\label{class_level_a20b2f496054effcd20120b8cb37c14dc}} 
 \index{Level@{Level}!Restart@{Restart}}
 \index{Restart@{Restart}!Level@{Level}}

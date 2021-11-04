@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="md_src__r_e_a_d_m_e" kind="page">
+    <compoundname>md_src_README</compoundname>
+    <title>Source Code</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The main node&apos;s script is located in this directory.</para>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md1">
+<title>Audio</title>
+<para>Global audio player.</para>
+</sect1>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md2">
+<title>Entities</title>
+<para><ref refid="class_player" kindref="compound">Player</ref>, pickups and jump pads.</para>
+</sect1>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md3">
+<title>Maps</title>
+<para>Levels and tiles.</para>
+</sect1>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md4">
+<title>Profiles</title>
+<para>Code for save system implementation.</para>
+</sect1>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md5">
+<title>Scenes</title>
+<para>Menus and UI elements.</para>
+</sect1>
+<sect1 id="md_src__r_e_a_d_m_e_1autotoc_md6">
+<title>Shaders</title>
+<para><ref refid="class_palette" kindref="compound">Palette</ref> swap for sprites. </para>
+</sect1>
+    </detaileddescription>
+    <location file="src/README.md"/>
+  </compounddef>
+</doxygen>

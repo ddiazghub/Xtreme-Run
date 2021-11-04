@@ -17,9 +17,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="10" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="10" bodyend="15"/>
-        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="70">Player.animation</references>
-        <references refid="class_player_1a4d955d72d1768541f5ac99f19ffe1381" compoundref="_player_8cs" startline="257" endline="269">Player.SetHitbox</references>
+        <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="10" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="10" bodyend="20"/>
+        <references refid="class_player_1a8fc34dcdff8f033cb587661d07f13fa5" compoundref="_player_8cs" startline="92">Player.animation</references>
+        <references refid="class_player_1ab8b54cc99ed363971d75ab6c506016be" compoundref="_player_8cs" startline="128" endline="128">Player.MainAction</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="23" endline="23">MainAction.PerformingAction</references>
+        <references refid="class_player_1a4d955d72d1768541f5ac99f19ffe1381" compoundref="_player_8cs" startline="290" endline="302">Player.SetHitbox</references>
       </memberdef>
       <memberdef kind="function" id="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -48,12 +50,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="17" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="17" bodyend="47"/>
-        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="189" endline="199">Player.ChangePersistentState</references>
+        <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="22" column="26" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="22" bodyend="52"/>
+        <references refid="class_player_1ae2226638af8907c89812bdb4b7eefede" compoundref="_player_8cs" startline="221" endline="231">Player.ChangePersistentState</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
-        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="131" endline="131">Player.InvertedGravity</references>
+        <references refid="class_player_1a9c06a72ba615b0e764ad4ff428e8119d" compoundref="_player_8cs" startline="153" endline="153">Player.InvertedGravity</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
         <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
       </memberdef>
       </sectiondef>
@@ -110,7 +112,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="7" bodyend="48"/>
+    <location file="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" line="7" column="7" bodyfile="src/Entities/Player/PlayerStates/Persistent/OnAirState.cs" bodystart="7" bodyend="53"/>
     <listofallmembers>
       <member refid="class_on_air_state_1a4981def48203f62c802d6803e829fbbb" prot="public" virt="virtual"><scope>OnAirState</scope><name>_Init</name></member>
       <member refid="class_on_air_state_1a8fc8b56eac0dd06f4976543b32420f57" prot="public" virt="virtual"><scope>OnAirState</scope><name>_StatePhysicsProcess</name></member>

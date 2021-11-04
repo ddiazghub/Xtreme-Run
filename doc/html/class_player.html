@@ -101,7 +101,7 @@ Inheritance diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__inherit__graph.png" border="0" usemap="#a_player_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_player_inherit__map" id="a_player_inherit__map">
-<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="5,131,239,956"/>
+<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="5,131,239,1044"/>
 <area shape="rect" href="class_kinematic_body2_d.html" title=" " alt="" coords="59,5,185,83"/>
 </map>
 </div>
@@ -110,16 +110,17 @@ Collaboration diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player__coll__graph.png" border="0" usemap="#a_player_coll__map" alt="Collaboration graph"/></div>
 <map name="a_player_coll__map" id="a_player_coll__map">
-<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="701,321,935,736"/>
+<area shape="rect" title="The player node. It is a state machine that executes 3 states at each given time. The first state is ..." alt="" coords="747,321,980,795"/>
 <area shape="rect" href="class_kinematic_body2_d.html" title=" " alt="" coords="5,57,132,134"/>
 <area shape="rect" title=" " alt="" coords="156,57,195,134"/>
 <area shape="rect" title=" " alt="" coords="384,57,431,134"/>
-<area shape="rect" title=" " alt="" coords="589,57,655,134"/>
-<area shape="rect" title=" " alt="" coords="791,57,845,134"/>
-<area shape="rect" title=" " alt="" coords="895,57,1005,134"/>
-<area shape="rect" title=" " alt="" coords="1029,57,1153,134"/>
-<area shape="rect" title=" " alt="" coords="1183,57,1250,134"/>
-<area shape="rect" href="class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="1274,5,1471,185"/>
+<area shape="rect" title=" " alt="" coords="572,57,672,134"/>
+<area shape="rect" title=" " alt="" coords="733,57,799,134"/>
+<area shape="rect" title=" " alt="" coords="935,57,989,134"/>
+<area shape="rect" title=" " alt="" coords="1039,57,1149,134"/>
+<area shape="rect" title=" " alt="" coords="1173,57,1297,134"/>
+<area shape="rect" title=" " alt="" coords="1327,57,1394,134"/>
+<area shape="rect" href="class_player_state_factory.html" title="This class generates states for the main class." alt="" coords="1418,5,1615,185"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -128,6 +129,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad26d3c4010754f6af7948560a2a233c8"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ad26d3c4010754f6af7948560a2a233c8">Dead</a> ()</td></tr>
 <tr class="memdesc:ad26d3c4010754f6af7948560a2a233c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted if the player dies.  <a href="class_player.html#ad26d3c4010754f6af7948560a2a233c8">More...</a><br /></td></tr>
 <tr class="separator:ad26d3c4010754f6af7948560a2a233c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab320c041982d83b5c79173ad1064f7be"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ab320c041982d83b5c79173ad1064f7be">PerformedMainAction</a> ()</td></tr>
+<tr class="memdesc:ab320c041982d83b5c79173ad1064f7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the player performs a main action.  <a href="class_player.html#ab320c041982d83b5c79173ad1064f7be">More...</a><br /></td></tr>
+<tr class="separator:ab320c041982d83b5c79173ad1064f7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac428e6908dd8a937cd060ec9f7d62814"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ac428e6908dd8a937cd060ec9f7d62814">Pickup</a> ()</td></tr>
+<tr class="memdesc:ac428e6908dd8a937cd060ec9f7d62814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the player comes in contact with a pickup.  <a href="class_player.html#ac428e6908dd8a937cd060ec9f7d62814">More...</a><br /></td></tr>
+<tr class="separator:ac428e6908dd8a937cd060ec9f7d62814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae192a478a80f0e93e01339d62cdd6f6d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d">_Ready</a> ()</td></tr>
 <tr class="separator:ae192a478a80f0e93e01339d62cdd6f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c41f7a6b92001f593ccb5d8574371e5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a5c41f7a6b92001f593ccb5d8574371e5">_PhysicsProcess</a> (float delta)</td></tr>
@@ -149,6 +156,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4d955d72d1768541f5ac99f19ffe1381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48409f2ac61578d5ed6a8acab3990da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a48409f2ac61578d5ed6a8acab3990da4">OnStartTimerTimeout</a> ()</td></tr>
 <tr class="separator:a48409f2ac61578d5ed6a8acab3990da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fe5bcf48f86e0a09f15e4ee623862a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a04fe5bcf48f86e0a09f15e4ee623862a">OnMainAction</a> ()</td></tr>
+<tr class="separator:a04fe5bcf48f86e0a09f15e4ee623862a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -167,6 +176,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afa430a3e8bae8353eb0ed928c9919c95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#afa430a3e8bae8353eb0ed928c9919c95">Gravity</a> = 210</td></tr>
 <tr class="memdesc:afa430a3e8bae8353eb0ed928c9919c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The player's gravity. This gets added each frame to the player's vertical linear velocity.  <a href="class_player.html#afa430a3e8bae8353eb0ed928c9919c95">More...</a><br /></td></tr>
 <tr class="separator:afa430a3e8bae8353eb0ed928c9919c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f9ab1a1e2354fcb49c99fd618cf189"><td class="memItemLeft" align="right" valign="top">SpriteFrames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a28f9ab1a1e2354fcb49c99fd618cf189">MaleAnimation</a></td></tr>
+<tr class="memdesc:a28f9ab1a1e2354fcb49c99fd618cf189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Male character animations  <a href="class_player.html#a28f9ab1a1e2354fcb49c99fd618cf189">More...</a><br /></td></tr>
+<tr class="separator:a28f9ab1a1e2354fcb49c99fd618cf189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85fa6d18dc73ec6589821ac7dc59e9d2"><td class="memItemLeft" align="right" valign="top">SpriteFrames&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a85fa6d18dc73ec6589821ac7dc59e9d2">FemaleAnimation</a></td></tr>
+<tr class="memdesc:a85fa6d18dc73ec6589821ac7dc59e9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Female character animations  <a href="class_player.html#a85fa6d18dc73ec6589821ac7dc59e9d2">More...</a><br /></td></tr>
+<tr class="separator:a85fa6d18dc73ec6589821ac7dc59e9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d70330236aa5cff44570ad6063433f0"><td class="memItemLeft" align="right" valign="top">Area2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player.html#a4d70330236aa5cff44570ad6063433f0">jumpObjectCollisionCheck</a></td></tr>
 <tr class="memdesc:a4d70330236aa5cff44570ad6063433f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Area2D to check if the player has entered any jump objects.  <a href="class_player.html#a4d70330236aa5cff44570ad6063433f0">More...</a><br /></td></tr>
 <tr class="separator:a4d70330236aa5cff44570ad6063433f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,14 +310,15 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph.png" border="0" usemap="#aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph" alt=""/></div>
 <map name="aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph" id="aclass_player_ae192a478a80f0e93e01339d62cdd6f6d_cgraph">
 <area shape="rect" title=" " alt="" coords="5,107,112,133"/>
-<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="177,5,349,32"/>
+<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="177,107,349,133"/>
 <area shape="rect" href="class_player.html#ae2226638af8907c89812bdb4b7eefede" title="Changes the current persistent state." alt="" coords="165,56,362,83"/>
-<area shape="rect" href="class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="160,107,367,133"/>
+<area shape="rect" href="class_player.html#aa90d185e163489f864480c9c72b7fbb8" title="Changes the current secondary action the player can perform." alt="" coords="160,5,367,32"/>
 <area shape="rect" href="class_player.html#ad50972081bd91a62aa2c099b27462d37" title="Invert&#39;s the player&#39;s gravity." alt="" coords="197,157,330,184"/>
 <area shape="rect" href="class_player.html#a48409f2ac61578d5ed6a8acab3990da4" title=" " alt="" coords="170,208,357,235"/>
-<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="415,31,577,57"/>
-<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="432,81,560,108"/>
-<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="625,81,744,108"/>
+<area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="415,56,577,83"/>
+<area shape="rect" href="class_player.html#a04fe5bcf48f86e0a09f15e4ee623862a" title=" " alt="" coords="423,107,569,133"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="432,5,560,32"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="625,5,744,32"/>
 </map>
 </div>
 
@@ -336,10 +352,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph.png" border="0" usemap="#aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph" alt=""/></div>
 <map name="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph" id="aclass_player_a383ca70b33e3f3a19573dc0c260c1150_cgraph">
-<area shape="rect" title="Changes the current main action the player can perform." alt="" coords="5,31,177,57"/>
+<area shape="rect" title="Changes the current main action the player can perform." alt="" coords="5,56,177,83"/>
 <area shape="rect" href="class_player_state_factory.html#acd77aae65440dedcd2c6d26f3aedc985" title="Creates a new persistent state from the given enum value." alt="" coords="225,5,388,32"/>
-<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="243,56,371,83"/>
-<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="436,56,555,83"/>
+<area shape="rect" href="class_player.html#a04fe5bcf48f86e0a09f15e4ee623862a" title=" " alt="" coords="234,56,379,83"/>
+<area shape="rect" href="class_player_state.html#a104dd6b861334c1c4f9cb2a9d322403c" title="Setups the state and initializes it." alt="" coords="243,107,371,133"/>
+<area shape="rect" href="class_player_state.html#a7c94c3f0cc97f388f281c524523d311e" title="Setups the state and initializes it." alt="" coords="436,107,555,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -504,6 +521,35 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a04fe5bcf48f86e0a09f15e4ee623862a" name="a04fe5bcf48f86e0a09f15e4ee623862a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fe5bcf48f86e0a09f15e4ee623862a">&#9670;&nbsp;</a></span>OnMainAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player.OnMainAction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_player_a04fe5bcf48f86e0a09f15e4ee623862a_icgraph.png" border="0" usemap="#aclass_player_a04fe5bcf48f86e0a09f15e4ee623862a_icgraph" alt=""/></div>
+<map name="aclass_player_a04fe5bcf48f86e0a09f15e4ee623862a_icgraph" id="aclass_player_a04fe5bcf48f86e0a09f15e4ee623862a_icgraph">
+<area shape="rect" title=" " alt="" coords="680,35,825,61"/>
+<area shape="rect" href="class_player.html#a383ca70b33e3f3a19573dc0c260c1150" title="Changes the current main action the player can perform." alt="" coords="460,35,632,61"/>
+<area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="249,5,356,32"/>
+<area shape="rect" href="class_persistent_state.html#ae3c6d56cc272ef31022f735aa4888b86" title=" " alt="" coords="193,57,412,98"/>
+<area shape="rect" href="class_persistent_state.html#aa3bb922abb6c7a699b5990b1b9d83afc" title="Setups the state and initializes it." alt="" coords="5,64,145,91"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a48409f2ac61578d5ed6a8acab3990da4" name="a48409f2ac61578d5ed6a8acab3990da4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48409f2ac61578d5ed6a8acab3990da4">&#9670;&nbsp;</a></span>OnStartTimerTimeout()</h2>
 
@@ -527,6 +573,44 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_player.html#ae192a478a80f0e93e01339d62cdd6f6d" title=" " alt="" coords="5,5,112,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ab320c041982d83b5c79173ad1064f7be" name="ab320c041982d83b5c79173ad1064f7be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab320c041982d83b5c79173ad1064f7be">&#9670;&nbsp;</a></span>PerformedMainAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void Player.PerformedMainAction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Emitted when the player performs a main action. </p>
+
+</div>
+</div>
+<a id="ac428e6908dd8a937cd060ec9f7d62814" name="ac428e6908dd8a937cd060ec9f7d62814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac428e6908dd8a937cd060ec9f7d62814">&#9670;&nbsp;</a></span>Pickup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void Player.Pickup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Emitted when the player comes in contact with a pickup. </p>
 
 </div>
 </div>
@@ -641,6 +725,22 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a85fa6d18dc73ec6589821ac7dc59e9d2" name="a85fa6d18dc73ec6589821ac7dc59e9d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85fa6d18dc73ec6589821ac7dc59e9d2">&#9670;&nbsp;</a></span>FemaleAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteFrames Player.FemaleAnimation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Female character animations </p>
+
+</div>
+</div>
 <a id="afa430a3e8bae8353eb0ed928c9919c95" name="afa430a3e8bae8353eb0ed928c9919c95"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa430a3e8bae8353eb0ed928c9919c95">&#9670;&nbsp;</a></span>Gravity</h2>
 
@@ -718,6 +818,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Timer to perform event after a main action was executed. </p>
+
+</div>
+</div>
+<a id="a28f9ab1a1e2354fcb49c99fd618cf189" name="a28f9ab1a1e2354fcb49c99fd618cf189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f9ab1a1e2354fcb49c99fd618cf189">&#9670;&nbsp;</a></span>MaleAnimation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SpriteFrames Player.MaleAnimation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Male character animations </p>
 
 </div>
 </div>

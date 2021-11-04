@@ -54,6 +54,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Profile.cs" line="30" column="19" bodyfile="src/Profiles/Profile.cs" bodystart="31" bodyend="33"/>
+        <referencedby refid="class_player_1ae192a478a80f0e93e01339d62cdd6f6d" compoundref="_player_8cs" startline="161" endline="203">Player._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a2708ce86420d102c0f76583100611d32" compoundref="_edit_profile_g_u_i_8cs" startline="50" endline="106">EditProfileGUI._Ready</referencedby>
         <referencedby refid="class_edit_profile_g_u_i_1a4b00cca39e0201eff072264a55291a35" compoundref="_edit_profile_g_u_i_8cs" startline="212" endline="240">EditProfileGUI.OnSavePressed</referencedby>
         <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
@@ -74,9 +75,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Profile.cs" line="38" column="19" bodyfile="src/Profiles/Profile.cs" bodystart="39" bodyend="42"/>
-        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="145" endline="180">ShopGUI.OnBuyPressed</referencedby>
         <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">Level.SaveData</referencedby>
         <referencedby refid="class_main_menu_1a17961f230885c7cb83f86bb88be4973c" compoundref="_main_menu_8cs" startline="41" endline="45">MainMenu.UpdateUI</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_profile_1a3baa1f0b2ddbf6902dfdf4e06db2621a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
@@ -93,9 +94,9 @@
         </inbodydescription>
         <location file="src/Profiles/Profile.cs" line="48" column="17" bodyfile="src/Profiles/Profile.cs" bodystart="49" bodyend="51"/>
         <referencedby refid="class_edit_profile_g_u_i_1a1473f46ade313ff644af04f27f49555e" compoundref="_edit_profile_g_u_i_8cs" startline="108" endline="140">EditProfileGUI._Process</referencedby>
-        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="39" endline="107">ShopGUI._Ready</referencedby>
+        <referencedby refid="class_shop_g_u_i_1a070d5686e3639f599db4dad0ac5675f1" compoundref="_shop_g_u_i_8cs" startline="44" endline="118">ShopGUI._Ready</referencedby>
         <referencedby refid="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" compoundref="_profile_8cs" startline="216" endline="232">LevelIsUnlocked</referencedby>
-        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="134" endline="169">ShopGUI.OnBuyPressed</referencedby>
+        <referencedby refid="class_shop_g_u_i_1ac7b20c05193df04c7c0d9387823a11cf" compoundref="_shop_g_u_i_8cs" startline="145" endline="180">ShopGUI.OnBuyPressed</referencedby>
         <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
         <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">ToBytes</referencedby>
       </memberdef>
@@ -112,9 +113,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Profiles/Profile.cs" line="57" column="16" bodyfile="src/Profiles/Profile.cs" bodystart="58" bodyend="60"/>
-        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="168" endline="171">Level.GetPoints</referencedby>
+        <referencedby refid="class_level_1a866f3830aa6da6db116ecd9204b1b7a6" compoundref="_level_8cs" startline="188" endline="191">Level.GetPoints</referencedby>
         <referencedby refid="class_profile_1a390b2643abb820e749741eb38206666d" compoundref="_profile_8cs" startline="135" endline="177">Profile</referencedby>
-        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="205" endline="213">Level.SaveData</referencedby>
+        <referencedby refid="class_level_1a4bb15a932ab317c90d5de0623b9f8d88" compoundref="_level_8cs" startline="225" endline="233">Level.SaveData</referencedby>
         <referencedby refid="class_profile_1a18281b870e1b5bb7aebc9bab50aa2272" compoundref="_profile_8cs" startline="183" endline="209">ToBytes</referencedby>
       </memberdef>
       <memberdef kind="property" id="class_profile_1aabba37c3975118edacf08f6f51e9252d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
@@ -275,7 +276,7 @@
         <references refid="class_save_file_info_1a1099045cd97ebb17e88a6d1c86814b73" compoundref="_save_file_info_8cs" startline="14">SaveFileInfo.AVATAR_COLOR_SKIN</references>
         <references refid="class_save_file_info_1a01916e8415c2fe39ec87221cd97a6a88" compoundref="_save_file_info_8cs" startline="15">SaveFileInfo.AVATAR_COLOR_TOP</references>
         <references refid="class_save_file_info_1a3a879091bdb902b1800a8c4d5db193f3" compoundref="_save_file_info_8cs" startline="13">SaveFileInfo.AVATAR_GENDER</references>
-        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28">Avatar.BottomColor</references>
+        <references refid="class_avatar_1af14516033bd4b5bcb567506d3e480dca" compoundref="_avatar_8cs" startline="28" endline="28">Avatar.BottomColor</references>
         <references refid="class_save_file_info_1a3c4e6b85015ddeebef746bb0a327b748" compoundref="_save_file_info_8cs" startline="7">SaveFileInfo.FILE_SIZE</references>
         <references refid="class_save_file_info_1a88826262dbf83ff99c49406bf9ac8d28" compoundref="_save_file_info_8cs" startline="19">SaveFileInfo.LEVEL1_PROGRESS</references>
         <references refid="class_profile_1a63dd8c4295cf725a680ea5cb5e937137" compoundref="_profile_8cs" startline="58" endline="60">LevelProgress</references>
@@ -286,8 +287,8 @@
         <references refid="class_save_file_info_1a9e0844e2686e0945287c6f69f6995e75" compoundref="_save_file_info_8cs" startline="17">SaveFileInfo.POINTS</references>
         <references refid="class_save_file_info_1ac86f3be4472c55654a02487258ba7d32" compoundref="_save_file_info_8cs" startline="12">SaveFileInfo.PROFILE_NAME</references>
         <references refid="class_save_file_info_1a79f57147d656897bffc591effa801806" compoundref="_save_file_info_8cs" startline="8">SaveFileInfo.PROFILE_NAME_MAX_SIZE</references>
-        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18">Avatar.SkinColor</references>
-        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23">Avatar.TopColor</references>
+        <references refid="class_avatar_1a267cad98d66d8c4cb7008c967f9dd176" compoundref="_avatar_8cs" startline="18" endline="18">Avatar.SkinColor</references>
+        <references refid="class_avatar_1ab97d2d7a4d5aaf7c767eeb4852ad1c49" compoundref="_avatar_8cs" startline="23" endline="23">Avatar.TopColor</references>
       </memberdef>
       <memberdef kind="function" id="class_profile_1adb3883e0f9a606c7e60b29dd2a41d8a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>

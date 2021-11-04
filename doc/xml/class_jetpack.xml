@@ -83,7 +83,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" line="19" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" bodystart="19" bodyend="27"/>
-        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="89">Player.DEFAULT_GRAVITY</references>
+        <references refid="class_player_1aaa96158303a2e4619809dd824b6002ec" compoundref="_player_8cs" startline="111">Player.DEFAULT_GRAVITY</references>
         <references refid="class_player_1afa430a3e8bae8353eb0ed928c9919c95" compoundref="_player_8cs" startline="34">Player.Gravity</references>
         <references refid="class_jetpack_1a6bc0838d8be006e5e230a933b0fa7846" compoundref="_jetpack_8cs" startline="10">JETPACK_JUMPFORCE</references>
         <references refid="class_jetpack_1a98845c84a1f1c61c5b761e20548a0045" compoundref="_jetpack_8cs" startline="12">JETPACK_MAX_FALL_SPEED</references>
@@ -105,7 +105,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" line="29" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" bodystart="29" bodyend="35"/>
-        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="17" endline="17">MainAction.PerformingAction</references>
+        <references refid="class_main_action_1ae2d814bd2f2c5225e6c26fce2780accc" compoundref="_main_action_8cs" startline="23" endline="23">MainAction.PerformingAction</references>
       </memberdef>
       <memberdef kind="function" id="class_jetpack_1a2f099459f3cdeef59c2a73a86edb334c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -136,7 +136,7 @@
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" line="37" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" bodystart="37" bodyend="40"/>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
-        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="85">Player.linearVelocity</references>
+        <references refid="class_player_1adfe24c4a8a6124eef02a636f042917dd" compoundref="_player_8cs" startline="107">Player.linearVelocity</references>
       </memberdef>
       <memberdef kind="function" id="class_jetpack_1a1a4d6a6693480ef6ed70627399da3e25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>override void</type>
@@ -155,10 +155,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" line="42" column="26" bodyfile="src/Entities/Player/PlayerStates/Action/Main/Jetpack.cs" bodystart="42" bodyend="53"/>
-        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="88">Player.DEFAULT_JUMPFORCE</references>
-        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="91">Player.DEFAULT_MAX_JUMP_TIME</references>
+        <references refid="class_player_1a79a2bd665eb8c1be87d3c4d16c7a17ca" compoundref="_player_8cs" startline="110">Player.DEFAULT_JUMPFORCE</references>
+        <references refid="class_player_1ae354c1568fb2f116e290e1a8fde5271a" compoundref="_player_8cs" startline="113">Player.DEFAULT_MAX_JUMP_TIME</references>
         <references refid="class_player_1acf06cc8b10f69a33e33f0750443e09bc" compoundref="_player_8cs" startline="14">Player.JumpForce</references>
-        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="60">Player.mainActionTimer</references>
+        <references refid="class_player_1a0bb14eb9e541dc0cabe7e067931e2cde" compoundref="_player_8cs" startline="82">Player.mainActionTimer</references>
         <references refid="class_player_1af93facbeac2019c5bc7bfb2493041109" compoundref="_player_8cs" startline="29">Player.MaxFallSpeed</references>
       </memberdef>
       <memberdef kind="function" id="class_jetpack_1ae5d732914ec97154f9f14d12e96730d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
@@ -265,6 +265,7 @@
       <member refid="class_jetpack_1a66a6e0bb7ff231a6e843f9f67a4d7642" prot="public" virt="virtual"><scope>Jetpack</scope><name>_ActionReleased</name></member>
       <member refid="class_jetpack_1a71bdeb3eeccdbca43f304ae31b5c206b" prot="public" virt="virtual"><scope>Jetpack</scope><name>_Init</name></member>
       <member refid="class_main_action_1ab2261aec55fea5dc4490545410b8b279" prot="public" virt="virtual"><scope>Jetpack</scope><name>_StatePhysicsProcess</name></member>
+      <member refid="class_main_action_1a673b3a967faefc189251e4470b944fd4" prot="public" virt="non-virtual"><scope>Jetpack</scope><name>Action</name></member>
       <member refid="class_main_action_1af4f38ae5810abac472752ba286622566" prot="public" virt="non-virtual"><scope>Jetpack</scope><name>Blocked</name></member>
       <member refid="class_main_action_1a94fb5bad42a45b95401d737c0b4ebb22" prot="public" virt="non-virtual"><scope>Jetpack</scope><name>CanUseActionPad</name></member>
       <member refid="class_main_action_1a9f2f79c690df2047472ab6e4936b354d" prot="public" virt="non-virtual"><scope>Jetpack</scope><name>GetTypeAsString</name></member>
