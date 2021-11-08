@@ -1,9 +1,0 @@
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\bin\Debug\Plaformer Parkour Videogame.dll
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\bin\Debug\Plaformer Parkour Videogame.pdb
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.csproj.AssemblyReference.cache
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.AssemblyInfoInputs.cache
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.AssemblyInfo.cs
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.csproj.CoreCompileInputs.cache
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.dll
-C:\Users\david\code\godot\Platformer-Parkour-Videogame\.mono\temp\obj\Debug\Plaformer Parkour Videogame.pdb
